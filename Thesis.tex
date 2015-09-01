@@ -1,0 +1,209 @@
+% ---------------------------------------------------------------------------------
+% Main tex file
+% $Id: Thesis.tex,v 1.55 2012/07/23 16:36:02 matsch Exp $
+
+\documentclass[
+twoside=true,
+headsepline,     % Line under page header
+headings=normal,
+open=right,
+numbers=noenddot, % Otherwise there will be a dot after the chapter numbering in case letters are used somewhere e.g. in the appendix
+a4paper
+]{scrreprt} %report scrreprt
+\addtolength{\topmargin}{-0.2cm}
+\setlength{\textwidth}{15cm}
+\setlength{\textheight}{22.4cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0.85cm} 
+
+\usepackage[automark,headsepline]{scrpage2}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ihead{\headmark}
+\ohead{\pagemark}
+\cfoot{}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Alter some LaTeX defaults for better treatment of figures,
+% from http://mintaka.sdsu.edu/GF/bibliog/latex/floats.html
+% See p.105 of "TeX Unbound" for suggested values.
+% See pp. 199-200 of Lamport's "LaTeX" book for details.
+% General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+% Parameters for TEXT pages (not float pages):
+%\setcounter{topnumber}{2}
+%\setcounter{bottomnumber}{2}
+%\setcounter{totalnumber}{4}     % 2 may work better
+%\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+% Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+% N.B.: floatpagefraction MUST be less than topfraction !!
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+% remember to use [htp] or [htpb] for placement
+
+
+
+\usepackage{amsfonts}
+\usepackage{amsmath}  % Correct size switching in mathmode when using \text{} instead of \textrm{}
+\usepackage{amssymb} 
+\usepackage{amstext} 
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{afterpage}
+% \usepackage{ptdr-definitions}
+
+%\usepackage{setspace}
+%\doublespacing
+
+\hyphenation{Super-sym-me-try}
+\hyphenation{maximum-like-li-hood}
+
+\input{definitions.tex}
+
+\author{Matthias Schr\"oder}
+
+% pdflatex packages
+\usepackage[pdftex]{hyperref}
+% \hypersetup{bookmarks=true}
+\hypersetup{pdfmenubar=true}
+\hypersetup{pdffitwindow=true}
+\hypersetup{unicode=true}
+\hypersetup{colorlinks=true,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=black}
+\hypersetup{pdftitle={A search for for highly ionizing short tracks and a measurement of the jet transverse-momentum resolution at the CMS detector}}
+\hypersetup{pdfauthor={Teresa Lenz}}
+
+\begin{document}
+
+\pagenumbering{roman}
+% ----- Title page ----------------------------------------------------- 
+\begin{titlepage}
+  \begin{center}
+    \thispagestyle{empty}
+    \vspace*{1cm}
+    \begin{doublespace} 
+      \textbf{\huge A search for for highly ionizing short tracks and a measurement of the jet transverse-momentum resolution at the CMS detector}\\
+%       \textbf{\huge short tracks at the CMS detector}\\
+%       \textbf{\huge and}\\
+%       \textbf{\huge jet energy resolution measurement} \\
+      \vskip1.5cm
+      \begin{Large} 
+        \textbf{Dissertation\\
+          zur Erlangung des Doktorgrades\\
+          des Fachbereichs Physik\\
+          der Universit\"{a}t Hamburg\\}
+      \end{Large}
+      \vskip2cm
+      \begin{large}
+        vorgelegt von\\
+        {\bf Teresa Lenz\\
+        aus Zweibr\"{u}cken}
+        \vfill
+        \noindent{Hamburg\\2016}
+      \end{large}
+    \end{doublespace} 
+  \end{center}
+\end{titlepage}
+
+
+\newpage 
+\thispagestyle{empty}
+\quad 
+\newpage
+\thispagestyle{empty}
+
+\quad
+\vfill
+\noindent{
+\begin{tabular}{ll}
+Gutachter der Dissertation:                & Prof.\ Dr.\ Peter Schleper\\ 
+                                           & Dr.\ Isabell-Alissandra Melzer-Pellmann\\
+                                           & Prof.\ Dr.\ Volker B\"uscher \\
+                                           & \\
+Gutachter der Disputation:                 & Prof.\ Dr.\ Robert Klanner\\ 
+                                           & Prof.\ Dr.\ Christian Sander\\
+                                           & \\
+Datum der Disputation:                     & 13. Juli 2012\\
+                                           & \\
+Vorsitzender des Pr\"{u}fungsausschusses:  & Dr.\ Georg Steinbr\"uck\\
+                                           & \\
+Vorsitzender des Promotionsausschusses:    & Prof.\ Dr.\ Peter Hauschildt\\ 
+                                           & \\
+Leiterin des Fachbereichs Physik:          & Prof.\ Dr.\ Daniela Pfannkuche \\
+                                           & \\
+Dekan der Fakult\"{a}t f\"{u}r Mathematik, & \\
+\quad Informatik und Naturwissenschaften:  & Prof.\ Dr.\ Heinrich Graener \\
+\end{tabular}
+}
+
+
+\newpage 
+\thispagestyle{empty}
+\quad 
+\newpage
+% \input{Abstract.tex}
+
+
+\newpage 
+\thispagestyle{empty}
+\quad 
+
+\newpage
+\tableofcontents
+
+\cleardoublepage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{Introduction}
+\input{introduction.tex}
+\gev
+\chapter{The standard model of particle physics and supersymmetric extensions} \label{sec:Theory}
+\input{theory.tex}
+
+\chapter{Experimental setup} \label{sec:Detector}
+\input{detector.tex}
+
+\chapter{Measurement of the jet transverse-momentum resolution} \label{sec:resolution}
+\input{resolution.tex}
+
+\chapter{A search for highly ionizing short tracks at the CMS detector} \label{sec:analysis}
+\input{analysis.tex}
+
+\chapter{Conclusions} \label{sec:Conclusion}
+\input{conclusions.tex}
+
+
+\appendix
+% \input{Appendix.tex}
+
+% \bibliographystyle{lucas_unsrt}
+% \bibliography{Thesis}
+
+
+\cleardoublepage
+\thispagestyle{empty}
+\chapter*{~}
+% \input{Danksagung.tex}
+
+
+\end{document}
+
+% Improvements:
+% - cleardoublepage
+
+

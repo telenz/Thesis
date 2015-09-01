@@ -1,0 +1,328 @@
+% ---------------------------------------------------------------------------------
+% Collection of user-defined commands
+% $Id: definitions.tex,v 1.46 2012/07/23 16:36:01 matsch Exp $
+
+\usepackage{amsmath}
+\usepackage{xspace}
+
+\newcommand{\figmultican}[1]{
+  \centering
+  \includegraphics[width=0.85\textwidth]{figures/#1}
+}
+\newcommand{\figone}[1]{
+  \centering
+  \includegraphics[width=0.49\textwidth]{figures/#1}
+}
+\newcommand{\figtwo}[2]{
+  \centering
+  \begin{tabular}{@{}c@{}p{0.02\textwidth}@{}c@{}}
+    \includegraphics[width=0.49\textwidth]{figures/#1} & &
+    \includegraphics[width=0.49\textwidth]{figures/#2} \\
+  \end{tabular}
+}
+\newcommand{\figthree}[3]{
+  \centering
+  \begin{tabular}{@{}c@{}p{0.02\textwidth}@{}c@{}}
+    \includegraphics[width=0.49\textwidth]{figures/#1} & &
+    \includegraphics[width=0.49\textwidth]{figures/#2} \\
+    \includegraphics[width=0.49\textwidth]{figures/#3} & & \\
+  \end{tabular}
+}
+\newcommand{\figfour}[4]{
+  \centering
+  \begin{tabular}{@{}c@{}p{0.02\textwidth}@{}c@{}}
+    \includegraphics[width=0.49\textwidth]{figures/#1} & &
+    \includegraphics[width=0.49\textwidth]{figures/#2} \\
+    \includegraphics[width=0.49\textwidth]{figures/#3} & &
+    \includegraphics[width=0.49\textwidth]{figures/#4} \\
+  \end{tabular}
+}
+\newcommand{\figfive}[5]{
+  \centering
+  \begin{tabular}{@{}c@{}p{0.2\textwidth}@{}c@{}}
+    \includegraphics[width=0.4\textwidth]{figures/#1} & &
+    \includegraphics[width=0.4\textwidth]{figures/#2} \\
+    \includegraphics[width=0.4\textwidth]{figures/#3} & &
+    \includegraphics[width=0.4\textwidth]{figures/#4} \\
+    \includegraphics[width=0.4\textwidth]{figures/#5} & & \\
+  \end{tabular}
+}
+\newcommand{\figsix}[6]{
+  \centering
+  \begin{tabular}{@{}c@{}p{0.1\textwidth}@{}c@{}}
+    \includegraphics[width=0.4\textwidth]{figures/#1} & &
+    \includegraphics[width=0.4\textwidth]{figures/#2} \\
+    \includegraphics[width=0.4\textwidth]{figures/#3} & &
+    \includegraphics[width=0.4\textwidth]{figures/#4} \\
+    \includegraphics[width=0.4\textwidth]{figures/#5} & &
+    \includegraphics[width=0.4\textwidth]{figures/#6}  \\
+  \end{tabular}
+}
+
+
+\newcommand{\emptybox}[1]{\parbox[c][#1]{0pt}{}}
+
+%\newcommand{\tobechecked}{\textcolor{red}{\textbf{(to be checked)}}}
+%\newcommand{\alreadydefined}[1]{\textcolor{red}{\textbf{(#1 already defined?)}}}
+%\newcommand{\todo}[1]{\textcolor{blue}{{\textbf{TODO: }\textit{#1}}}}
+%\newcommand{\fixme}[1]{\textcolor{red}{{\textbf{FIXME: }\textit{#1}}}}
+%\newcommand{\addref}{\textcolor{blue}{ADD REFERENCE}}
+%\newcommand{\addfig}[1]{\textcolor{red}{\textbf{ADD FIGURE: }\textit{#1}}}
+
+% Sectioning
+\newcommand{\qsec}[1]{Section~\ref{#1}}
+\newcommand{\qsecs}[2]{Sections~\ref{#1} and~\ref{#2}}
+\newcommand{\qsectosec}[2]{Sections~\ref{#1} to~\ref{#2}}
+\newcommand{\cfqsec}[1]{cf.\ Section~\ref{#1}}
+\newcommand{\figs}{Figs.}
+\newcommand{\qfig}[1]{Fig.~\ref{#1}}
+\newcommand{\qfigs}[2]{Figs.~\ref{#1} and~\ref{#2}}
+\newcommand{\qfigtofig}[2]{Figs.~\ref{#1} to~\ref{#2}}
+\newcommand{\cfqfig}[1]{cf.\ Fig.~\ref{#1}}
+\newcommand{\qsubfig}[2]{Fig.~\ref{#1}~(\textit{#2})}
+\newcommand{\qtab}[1]{Table~\ref{#1}}
+\newcommand{\qtabs}[2]{Tables~\ref{#1} and~\ref{#2}}
+\newcommand{\qtabtotab}[2]{Tables~\ref{#1} to~\ref{#2}}
+\newcommand{\cfqtab}[1]{cf.\ Table~\ref{#1}}
+\newcommand{\qeq}[1]{Eq.~\eqref{#1}}
+
+% Units
+\newcommand{\tev}{\ensuremath{\,\text{Te}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\gev}{\ensuremath{\,\text{Ge}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\mev}{\ensuremath{\,\text{Me}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\kev}{\ensuremath{\,\text{ke}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\ev}{\ensuremath{\,\text{e}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\tevnospace}{\ensuremath{\text{Te}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\gevnospace}{\ensuremath{\text{Ge}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\mevnospace}{\ensuremath{\text{Me}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\kevnospace}{\ensuremath{\text{ke}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\evnospace}{\ensuremath{\text{e}\kern-0.06667em\text{V}}\xspace}
+\newcommand{\km}{\ensuremath{\,\text{km}}\xspace}
+\newcommand{\m}{\ensuremath{\,\text{m}}\xspace}
+\newcommand{\cm}{\ensuremath{\,\text{cm}}\xspace}
+\newcommand{\mm}{\ensuremath{\,\text{mm}}\xspace}
+\newcommand{\mum}{\ensuremath{\,\mu\text{m}}\xspace}
+\newcommand{\second}{\ensuremath{\,\text{s}}\xspace}
+\newcommand{\ns}{\ensuremath{\,\text{ns}}\xspace}
+\newcommand{\kg}{\ensuremath{\,\text{kg}}\xspace}
+\newcommand{\tons}{\ensuremath{\,\text{t}}\xspace}
+\newcommand{\tesla}{\ensuremath{\,\text{T}}\xspace}
+\newcommand{\kelvin}{\ensuremath{\,\text{K}}\xspace}
+\newcommand{\mb}{\ensuremath{\,\text{mb}}\xspace}
+\newcommand{\pb}{\ensuremath{\,\text{pb}}\xspace}
+\newcommand{\nbinv}{\ensuremath{\,\text{nb}^{-1}}\xspace}
+\newcommand{\pbinv}{\ensuremath{\,\text{pb}^{-1}}\xspace}
+\newcommand{\pbinvnospace}{\ensuremath{\text{pb}^{-1}}\xspace}
+\newcommand{\fbinv}{\ensuremath{\,\text{fb}^{-1}}\xspace}
+\newcommand{\hz}{\ensuremath{\,\text{Hz}}\xspace}
+\newcommand{\khz}{\ensuremath{\,\text{kHz}}\xspace}
+\newcommand{\mhz}{\ensuremath{\,\text{MHz}}\xspace}
+\newcommand{\dgrc}{\ensuremath{^{\circ}\text{C}}\xspace}
+
+% Quantities
+\newcommand{\et}{\ensuremath{E_{\text{T}}}\xspace}
+\newcommand{\met}{\ensuremath{\slash\mkern-12mu{E}_{\text{T}}}\xspace}
+\newcommand{\metvec}{\ensuremath{\slash\mkern-12mu{\vec{E}}_{\text{T}}}\xspace}
+\newcommand{\HT}{\ensuremath{H_{\text{T}}}\xspace}
+\newcommand{\HTvec}{\ensuremath{\vec{H}_{\text{T}}}\xspace}
+\newcommand{\HThlt}{\ensuremath{H^{\text{HLT}}_{\text{T}}}\xspace}
+\newcommand{\HTlone}{\ensuremath{H^{\text{L1}}_{\text{T}}}\xspace}
+\newcommand{\MHT}{\ensuremath{\slash\mkern-12mu{H}_{\text{T}}}\xspace}
+\newcommand{\MHTvec}{\ensuremath{\slash\mkern-12mu{\vec{H}}_{\text{T}}}\xspace}
+\newcommand{\MHThlt}{\ensuremath{\slash\mkern-12mu{H}^{\text{HLT}}_{\text{T}}}\xspace}
+\newcommand{\pt}{\ensuremath{p_{\text{T}}}\xspace}
+\newcommand{\ptvec}{\ensuremath{\vec{p}_{\text{T}}}\xspace}
+\newcommand{\pti}[1]{\ensuremath{p_{\text{T},#1}}\xspace}
+\newcommand{\ptivec}[1]{\ensuremath{\vec{p}_{\text{T},#1}}\xspace}
+\newcommand{\ptsub}[1]{\ensuremath{p_{\text{T},#1}}\xspace}
+\newcommand{\ptvecsub}[1]{\ensuremath{\vec{p}_{\text{T},#1}}\xspace}
+\newcommand{\ptdijet}{\ensuremath{p^{\text{dijet}}_{\text{T}}}\xspace}
+\newcommand{\ptave}{\ensuremath{p^{\text{ave}}_{\text{T}}}\xspace}
+\newcommand{\ptavei}[1]{\ensuremath{p^{\text{ave}}_{\text{T,#1}}}\xspace}
+\newcommand{\ptavemin}{\ensuremath{p^{\text{ave}}_{\text{T,min}}}\xspace}
+\newcommand{\ptavemax}{\ensuremath{p^{\text{ave}}_{\text{T,max}}}\xspace}
+\newcommand{\ptgen}{\ensuremath{p^{\text{gen}}_{\text{T}}}\xspace}
+\newcommand{\ptgenave}{\ensuremath{p^{\text{gen,ave}}_{\text{T}}}\xspace}
+\newcommand{\ptgeni}[1]{\ensuremath{p^{\text{gen}}_{\text{T},#1}}\xspace}
+\newcommand{\ptgenivec}[1]{\ensuremath{\vec{p}^{\;\text{gen}}_{\text{T},#1}}\xspace}
+\newcommand{\pthat}{\ensuremath{\hat{p}_{\text{T}}}\xspace}
+\newcommand{\pthatmin}{\ensuremath{\hat{p}^{\text{min}}_{\text{T}}}\xspace}
+\newcommand{\pthatmax}{\ensuremath{\hat{p}^{\text{max}}_{\text{T}}}\xspace}
+\newcommand{\pttrue}{\ensuremath{p^{\text{true}_{}}_{\text{T}}}\xspace}
+\newcommand{\pttruei}[1]{\ensuremath{p^{\text{true}_{}}_{\text{T,}#1}}\xspace}
+\newcommand{\ptreco}{\ensuremath{p^{\text{reco}_{}}_{\text{T}}}\xspace}
+\newcommand{\ptmin}{\ensuremath{p^{\text{min}_{}}_{\text{T}}}\xspace}
+\newcommand{\ptmax}{\ensuremath{p^{\text{max}_{}}_{\text{T}}}\xspace}
+\newcommand{\ptparticle}{\ensuremath{p^{\text{particle}_{}}_{\text{T}}}\xspace}
+\newcommand{\ptparton}{\ensuremath{p^{\text{parton}_{}}_{\text{T}}}\xspace}
+\newcommand{\ptref}{\ensuremath{p^{\text{ref}_{}}_{\text{T}}}\xspace}
+\newcommand{\ptavehlt}{\ensuremath{p^{\text{ave}}_{\text{T,HLT}}}\xspace}
+\newcommand{\ptlone}{\ensuremath{p^{\text{L1}}_{\text{T}}}\xspace}
+\newcommand{\ppgen}{\ensuremath{p^{\text{gen}}_{||}}\xspace}
+\newcommand{\ppgeni}[1]{\ensuremath{p^{\text{gen}}_{||,#1}}\xspace}
+\newcommand{\ppi}[1]{\ensuremath{p_{||,#1}}\xspace}
+\newcommand{\ptimbal}{\ensuremath{p^{\text{imbal}}_{\text{T}}}\xspace}
+\newcommand{\ptimbalrel}{\ensuremath{\alpha^{\text{imbal}}}\xspace}
+\newcommand{\etamin}{\ensuremath{\eta^{\text{min}}}\xspace}
+\newcommand{\etamax}{\ensuremath{\eta^{\text{max}}}\xspace}
+\newcommand{\etagen}{\ensuremath{\eta^{\text{gen}}}\xspace}
+\newcommand{\alphat}{\ensuremath{\alpha_{\text{T}}}\xspace}
+\newcommand{\planckscl}{\ensuremath{\Lambda_{\text{P}}}\xspace}
+\newcommand{\xtrue}{\ensuremath{p^{\text{true}}_{\text{T}}}\xspace}
+\newcommand{\meanxtrue}{\ensuremath{\bar{p}^{\text{true}}_{\text{T}}}\xspace}
+\newcommand{\xmeasi}[1]{\pti{#1}}
+\newcommand{\xave}{\ptave}
+\newcommand{\npu}{\ensuremath{N_{\text{PU}}}\xspace}
+\newcommand{\nvtx}{\ensuremath{N_{\text{Vtx}}}\xspace}
+\newcommand{\dex}{\ensuremath{\delta\sigma_{\text{ex}}}\xspace}
+\newcommand{\ptrel}{\ensuremath{\alpha}\xspace}
+\newcommand{\ptrelmax}{\ensuremath{\alpha_{\text{max}}}\xspace}
+\newcommand{\ptrelmaxi}[1]{\ensuremath{\alpha_{\text{max,#1}}}\xspace}
+\newcommand{\ptrelthres}[1]{\mbox{$\ptrel < #1$}\xspace}
+\newcommand{\ptgenrel}{\ensuremath{\alpha^{\text{gen}}}\xspace}
+\newcommand{\ptgenrelmax}{\ensuremath{\alpha^{\text{gen}}_{\text{max}}}\xspace}
+
+% Symbols
+\newcommand{\dif}[1]{\ensuremath{\text{d}#1}\xspace}
+\newcommand{\e}{\,\text{e}}
+\newcommand{\nup}[1]{$^{\text{\scriptsize #1}}$}
+\newcommand{\dgr}{\ensuremath{^{\circ}}\xspace}
+\newcommand{\mean}[1]{\ensuremath{\langle#1\rangle}}
+\newcommand{\gqq}[1]{\ensuremath{\glqq#1\grqq}}
+\newcommand{\rarr}{\ensuremath{\rightarrow}\xspace}
+\newcommand{\ket}[1]{\ensuremath{\left|#1\right>}\xspace}
+\newcommand{\bra}[1]{\ensuremath{\left<#1\right|}\xspace}
+\newcommand{\bracket}[2]{\ensuremath{\left<#2\right|#1\left|#2\right>}\xspace}
+
+% Particles and forces
+\newcommand{\lel}{\ensuremath{e}\xspace}
+\newcommand{\lelr}{\ensuremath{e_{R}}\xspace}
+\newcommand{\lmu}{\ensuremath{\mu}\xspace}
+\newcommand{\ltau}{\ensuremath{\tau}\xspace}
+\newcommand{\nue}{\ensuremath{\nu_{e}}\xspace}
+\newcommand{\nuer}{\ensuremath{\nu_{e,R}}\xspace}
+\newcommand{\numu}{\ensuremath{\nu_{\mu}}\xspace}
+\newcommand{\nutau}{\ensuremath{\nu_{\tau}}\xspace}
+\newcommand{\qu}{\ensuremath{u}\xspace}
+\newcommand{\qd}{\ensuremath{d}\xspace}
+\newcommand{\qc}{\ensuremath{c}\xspace}
+\newcommand{\qs}{\ensuremath{s}\xspace}
+\newcommand{\qt}{\ensuremath{t}\xspace}
+\newcommand{\qb}{\ensuremath{b}\xspace}
+\newcommand{\photon}{\ensuremath{\gamma}\xspace}
+\newcommand{\Z}{\ensuremath{Z}\xspace}
+\newcommand{\W}{\ensuremath{W}\xspace}
+\newcommand{\Wpm}{\ensuremath{W^{\pm}}\xspace}
+\newcommand{\Wp}{\ensuremath{W^{+}}\xspace}
+\newcommand{\Wm}{\ensuremath{W^{-}}\xspace}
+\newcommand{\Hi}{\ensuremath{H}\xspace}
+\newcommand{\alphaem}{\ensuremath{\alpha_{\text{em}}}\xspace}
+\newcommand{\alphas}{\ensuremath{\alpha_{\text{s}}}\xspace}
+\newcommand{\renosc}{\ensuremath{\mu_{R}}\xspace}
+\newcommand{\lambdaqcd}{\ensuremath{\Lambda_{\text{QCD}}}\xspace}
+
+% Processes
+\newcommand{\ZInv}{\ensuremath{Z\rightarrow\nu\bar{\nu}}\xspace}
+\newcommand{\ZInvJets}{\ensuremath{Z\rightarrow\nu\bar{\nu}\,+\,\text{jets}}\xspace}
+\newcommand{\ttbar}{\ensuremath{t\bar{t}}\xspace}
+\newcommand{\WJets}{\ensuremath{W+\text{jets}}\xspace}
+\newcommand{\photonJet}{\ensuremath{\text{photon}+\text{jet}}\xspace}
+\newcommand{\photonJets}{\ensuremath{\text{photon}+\text{jets}}\xspace}
+\newcommand{\ZJet}{\ensuremath{Z+\text{jet}}\xspace}
+\newcommand{\ZJets}{\ensuremath{Z+\text{jets}}\xspace}
+\newcommand{\photonZJet}{\ensuremath{\text{photon}/Z+\text{jet}}\xspace}
+
+% Programmes
+\newcommand{\isajet}{\textsc{IsaJet}\xspace}
+\newcommand{\madgraph}{\textsc{Madgraph}\xspace}
+\newcommand{\prospino}{\textsc{Prospino}\xspace}
+\newcommand{\pythia}{\textsc{Pythia}\xspace}
+\newcommand{\herwig}{\textsc{Herwig++}\xspace}
+\newcommand{\geant}{\textsc{GEANT4}\xspace}
+\newcommand{\lvmini}{\textsc{LVMINI}\xspace}
+\newcommand{\minuit}{\textsc{MINUIT}\xspace}
+
+% Experiments, facilities, and collaborations
+\newcommand{\cern}{CERN\xspace}
+\newcommand{\desy}{DESY\xspace}
+\newcommand{\tevatron}{Tevatron\xspace}
+\newcommand{\lhc}{LHC\xspace}
+\newcommand{\hera}{HERA\xspace}
+\newcommand{\lep}{LEP\xspace}
+\newcommand{\atlas}{ATLAS\xspace}
+\newcommand{\cms}{CMS\xspace}
+\newcommand{\lhcb}{LHCb\xspace}
+\newcommand{\alice}{ALICE\xspace}
+\newcommand{\dzero}{D\O\xspace}
+\newcommand{\cteq}{CTEQ\xspace}
+
+% SUSY related
+\newcommand{\susy}{SUSY\xspace}
+\newcommand{\mssm}{MSSM\xspace}
+\newcommand{\cmssm}{CMSSM\xspace}
+\newcommand{\lsp}{LSP\xspace}
+\newcommand{\mzero}{\ensuremath{m_{0}}\xspace}
+\newcommand{\monehalf}{\ensuremath{m_{1/2}}\xspace}
+\newcommand{\msquark}{\ensuremath{m_{\tilde{q}}}\xspace}
+\newcommand{\mgluino}{\ensuremath{m_{\tilde{g}}}\xspace}
+\newcommand{\tanbeta}{\ensuremath{\tan\beta}\xspace}
+
+% Other words and characters
+\newcommand{\sm}{SM\xspace}
+\newcommand{\dm}{DM\xspace}
+\newcommand{\de}{DE\xspace}
+\newcommand{\CLs}{\ensuremath{\text{CL}_{s}}\xspace}
+\newcommand{\CL}{\ensuremath{\text{CL}}\xspace}
+\newcommand{\cp}{CP\xspace}
+\newcommand{\ratwo}{jets\,+\;\MHT}
+\newcommand{\hadtau}{hadronic-$\tau$\xspace}
+\newcommand{\lostlep}{lost-lepton\xspace}
+\newcommand{\PF}{PF\xspace}
+\newcommand{\calo}{Calo\xspace}
+\newcommand{\jpt}{JPT\xspace}
+\newcommand{\pf}{PF\xspace}
+\newcommand{\antikt}{anti-$k_{T}$\xspace}
+\newcommand{\resp}{\ensuremath{\mathcal{R}}\xspace}
+\newcommand{\asym}{\ensuremath{\mathcal{A}}\xspace}
+\newcommand{\datasimratio}{\ensuremath{\rho}\xspace}
+\newcommand{\coreratio}{\ensuremath{\rho_{\text{res}}}\xspace}
+\newcommand{\RS}{R+S\xspace}%{\ensuremath{\text{R}+\text{S}}\xspace}
+
+% Symbols for tail studies
+\newcommand{\dfex}{\ensuremath{\delta f_{\text{ex}}}\xspace}
+\newcommand{\sigac}{\ensuremath{\sigma_{c}}\xspace}
+\newcommand{\asymmc}{\ensuremath{\mathcal{A}_{\text{MC}}}\xspace}
+\newcommand{\asymdata}{\ensuremath{\mathcal{A}_{\text{data}}}\xspace}
+\newcommand{\asymtail}{\ensuremath{\mathcal{A}_{\text{tail}}}\xspace}
+\newcommand{\asymtaileff}{\ensuremath{\hat{\mathcal{A}}_{\text{tail}}}\xspace}
+\newcommand{\fasym}{\ensuremath{f_{\text{asym}}}\xspace}
+\newcommand{\fasymdata}{\ensuremath{f^{\text{data}}_{\text{asym}}}\xspace}
+\newcommand{\fasymmc}{\ensuremath{f^{\text{mc}}_{\text{asym}}}\xspace}
+\newcommand{\fasymtoy}{\ensuremath{f^{\text{toy}}_{\text{asym}}}\xspace}
+\newcommand{\fasymgauss}{\ensuremath{f^{\text{gauss}}_{\text{asym}}}\xspace}
+\newcommand{\fresp}{\ensuremath{f_{\text{resp}}}\xspace}
+\newcommand{\frespdata}{\ensuremath{f^{\text{data}}_{\text{resp}}}\xspace}
+\newcommand{\frespmc}{\ensuremath{f^{\text{mc}}_{\text{resp}}}\xspace}
+\newcommand{\fresptoy}{\ensuremath{f^{\text{toy}}_{\text{resp}}}\xspace}
+\newcommand{\tailborder}[1]{\mbox{$\asymtail = #1\,\sigac$}\xspace}
+\newcommand{\tailbordernum}[1]{\mbox{$#1\,\sigac$}\xspace}
+\newcommand{\tailratio}{\ensuremath{\rho_{\text{tail}}}\xspace}
+
+% Abbrevations
+\newcommand{\etc}{e.\,t.\,c.\ }
+\newcommand{\wrt}{with respect to\ }%{w.\,r.\,t.\ }
+\newcommand{\cf}{cf.\ }
+\newcommand{\ie}{i.\,e.\ }
+\newcommand{\siehe}{s.\ }
+\newcommand{\zb}{z.\,B.\ }
+\newcommand{\ca}{ca.\ }
+\newcommand{\eg}{e.\,g.\ }
+\newcommand{\vs}{vs.\ }
+
+% Constants
+\newcommand{\lumiratwo}{\ensuremath{4.98\fbinv}\xspace}
+\newcommand{\lumirescore}{\ensuremath{855\pbinv}\xspace}
+\newcommand{\lumirestail}{\ensuremath{4.90\fbinv}\xspace}
+
+
+
