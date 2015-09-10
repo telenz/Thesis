@@ -60,6 +60,7 @@ a4paper
 \usepackage{rotating}
 \usepackage{float}
 \usepackage{afterpage}
+\usepackage{verbatim}
 % \usepackage{ptdr-definitions}
 
 %\usepackage{setspace}
@@ -90,112 +91,112 @@ a4paper
 
 \pagenumbering{roman}
 % ----- Title page ----------------------------------------------------- 
-\begin{titlepage}
-  \begin{center}
-    \thispagestyle{empty}
-    \vspace*{1cm}
-    \begin{doublespace} 
-      \textbf{\huge A search for for highly ionizing short tracks and a measurement of the jet transverse-momentum resolution at the CMS detector}\\
-%       \textbf{\huge short tracks at the CMS detector}\\
-%       \textbf{\huge and}\\
-%       \textbf{\huge jet energy resolution measurement} \\
-      \vskip1.5cm
-      \begin{Large} 
-        \textbf{Dissertation\\
-          zur Erlangung des Doktorgrades\\
-          des Fachbereichs Physik\\
-          der Universit\"{a}t Hamburg\\}
-      \end{Large}
-      \vskip2cm
-      \begin{large}
-        vorgelegt von\\
-        {\bf Teresa Lenz\\
-        aus Zweibr\"{u}cken}
-        \vfill
-        \noindent{Hamburg\\2016}
-      \end{large}
-    \end{doublespace} 
-  \end{center}
-\end{titlepage}
-
-
-\newpage 
-\thispagestyle{empty}
-\quad 
-\newpage
-\thispagestyle{empty}
-
-\quad
-\vfill
-\noindent{
-\begin{tabular}{ll}
-Gutachter der Dissertation:                & Prof.\ Dr.\ Peter Schleper\\ 
-                                           & Dr.\ Isabell-Alissandra Melzer-Pellmann\\
-                                           & Prof.\ Dr.\ Volker B\"uscher \\
-                                           & \\
-Gutachter der Disputation:                 & Prof.\ Dr.\ Robert Klanner\\ 
-                                           & Prof.\ Dr.\ Christian Sander\\
-                                           & \\
-Datum der Disputation:                     & 13. Juli 2012\\
-                                           & \\
-Vorsitzender des Pr\"{u}fungsausschusses:  & Dr.\ Georg Steinbr\"uck\\
-                                           & \\
-Vorsitzender des Promotionsausschusses:    & Prof.\ Dr.\ Peter Hauschildt\\ 
-                                           & \\
-Leiterin des Fachbereichs Physik:          & Prof.\ Dr.\ Daniela Pfannkuche \\
-                                           & \\
-Dekan der Fakult\"{a}t f\"{u}r Mathematik, & \\
-\quad Informatik und Naturwissenschaften:  & Prof.\ Dr.\ Heinrich Graener \\
-\end{tabular}
-}
-
-
-\newpage 
-\thispagestyle{empty}
-\quad 
-\newpage
-% \input{Abstract.tex}
-
-
-\newpage 
-\thispagestyle{empty}
-\quad 
-
-\newpage
+% \begin{titlepage}
+%   \begin{center}
+%     \thispagestyle{empty}
+%     \vspace*{1cm}
+%     \begin{doublespace} 
+%       \textbf{\huge A search for for highly ionizing short tracks and a measurement of the jet transverse-momentum resolution at the CMS detector}\\
+% %       \textbf{\huge short tracks at the CMS detector}\\
+% %       \textbf{\huge and}\\
+% %       \textbf{\huge jet energy resolution measurement} \\
+%       \vskip1.5cm
+%       \begin{Large} 
+%         \textbf{Dissertation\\
+%           zur Erlangung des Doktorgrades\\
+%           des Fachbereichs Physik\\
+%           der Universit\"{a}t Hamburg\\}
+%       \end{Large}
+%       \vskip2cm
+%       \begin{large}
+%         vorgelegt von\\
+%         {\bf Teresa Lenz\\
+%         aus Zweibr\"{u}cken}
+%         \vfill
+%         \noindent{Hamburg\\2016}
+%       \end{large}
+%     \end{doublespace} 
+%   \end{center}
+% \end{titlepage}
+% 
+% 
+% \newpage 
+% \thispagestyle{empty}
+% \quad 
+% \newpage
+% \thispagestyle{empty}
+% 
+% \quad
+% \vfill
+% \noindent{
+% \begin{tabular}{ll}
+% Gutachter der Dissertation:                & Prof.\ Dr.\ Peter Schleper\\ 
+%                                            & Dr.\ Isabell-Alissandra Melzer-Pellmann\\
+%                                            & Prof.\ Dr.\ Volker B\"uscher \\
+%                                            & \\
+% Gutachter der Disputation:                 & Prof.\ Dr.\ Robert Klanner\\ 
+%                                            & Prof.\ Dr.\ Christian Sander\\
+%                                            & \\
+% Datum der Disputation:                     & 13. Juli 2012\\
+%                                            & \\
+% Vorsitzender des Pr\"{u}fungsausschusses:  & Dr.\ Georg Steinbr\"uck\\
+%                                            & \\
+% Vorsitzender des Promotionsausschusses:    & Prof.\ Dr.\ Peter Hauschildt\\ 
+%                                            & \\
+% Leiterin des Fachbereichs Physik:          & Prof.\ Dr.\ Daniela Pfannkuche \\
+%                                            & \\
+% Dekan der Fakult\"{a}t f\"{u}r Mathematik, & \\
+% \quad Informatik und Naturwissenschaften:  & Prof.\ Dr.\ Heinrich Graener \\
+% \end{tabular}
+% }
+% 
+% 
+% \newpage 
+% \thispagestyle{empty}
+% \quad 
+% \newpage
+% % \input{Abstract.tex}
+% 
+% 
+% \newpage 
+% \thispagestyle{empty}
+% \quad 
+% 
+% \newpage
 \tableofcontents
 
-\cleardoublepage
+% \cleardoublepage
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
 \chapter{Introduction}
 \input{introduction.tex}
-\gev
-\chapter{The standard model of particle physics and supersymmetric extensions} \label{sec:Theory}
+
+\chapter{The standard model of particle physics and supersymmetric extensions} \label{ch:Theory}
 \input{theory.tex}
 
-\chapter{Experimental setup} \label{sec:Detector}
+\chapter{Experimental setup/ Experiment and ...} \label{sec:Detector}
 \input{detector.tex}
 
 \chapter{Measurement of the jet transverse-momentum resolution} \label{sec:resolution}
 \input{resolution.tex}
 
-\chapter{A search for highly ionizing short tracks at the CMS detector} \label{sec:analysis}
+\chapter{A search for highly ionizing, short tracks at the CMS detector} \label{sec:analysis}
 \input{analysis.tex}
 
 \chapter{Conclusions} \label{sec:Conclusion}
 \input{conclusions.tex}
 
 
-\appendix
+% \appendix
 % \input{Appendix.tex}
 
 % \bibliographystyle{lucas_unsrt}
 % \bibliography{Thesis}
 
 
-\cleardoublepage
+% \cleardoublepage
 \thispagestyle{empty}
 \chapter*{~}
 % \input{Danksagung.tex}
