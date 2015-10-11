@@ -187,24 +187,108 @@ Also, a muon-veto is applied to make the selection expecially sensitive to very 
 \textcolor{red}{MAYBE} show here already a plot with the number of valid hits distribution to emphasize the importance of lossening the number of hits cut!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{(Improved) dE/dx measurement of short tracks}
+\section{Improved dE/dx measurement of short tracks}
 \label{sec:DeDxMeasurement}
-It was already pointed out, that the inclusion of the pixel measurements for \dedx can increase the sensitivity of a search looking for intermediate lifetimes. 
-Therefore an offine calibration has been conducted.
+It was already pointed out, that the inclusion of the pixel energy measurements can increase the sensitivity when searching especially for short tracks.
+While the silicon strip detetcor has already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, there was never an offline calibration done for the pixel silicon tracker.
+To increase the discrimination power of \dedx, such an calibration procedure was therefore conducted within this PHD thesis.
+ 
 \subsection{Measuring dE/dx}
+The mean energy loss per path length of particles travelling through a layer of material can be described with the Bethe-Bloch formula \cite{bib:Bethe_1930,bib:Bloch_1933}:
+\begin{equation}
+\langle \frac{dE}{dx} \rangle = kz^2\frac{Z}{A}\frac{1}{\beta^2} [ \frac{1}{2} \ln{\frac{2m_e c^2 \beta^2 \gamma^2 T_{\text{max}}}{I^2}} - \beta^2 - \frac{\delta( \beta \gamma )}{2} ].
+\end{equation}
+It is valid, where the main energy loss originates from ionization effects which is in a region between $0.1\lesssim\beta\gamma\lesssim 1000$.
+It is a function of the atomic number ($Z$) and the atomic mass of the absorber ($A$). 
+The mean excitation energy ($I$) for silicon is 173$\pm$3\,eV \cite{?}. 
+$T_{\text{max}}$ stands for the maximum energy transfer in a single collision.
+The relevant particle's properties are the velocity ($\beta$), the lorentz factor ($\gamma$) and the charge (z) of the incident particle.
+The density correction $\delta( \beta \gamma )$ reduces the mean energy loss at high energies because of polarization effects of the material.
 
-\begin{itemize}
-\item The variable dE/dx: General introdution
-\item Bethe-Bloch (difficult concept because of undefined mean of the Landau function)
-\item Landau distribution (no mean)
-\item Most probable energy loss landau vavilov function (show comparison plot Landau, Bethe)
-\item Minimal ionising particles (pt cut) (how dedx for pions CMS 2008)
-\end{itemize}
+Even if widely used, the Bethe-Bloch formula is ill-defined because of the use of the mean energy loss per path length.
+The problem arises when looking at the fluctuations of a particle's energy deposition.
+In case particles cross material layers of moderate sickness, the probability density function of the deposited energy can be described by a Landau function \cite{bib:Landau_1944}. 
+The Landau distribution is a highly asymmetric distribution with a long tail torwards the right end (see Fig.~\ref{fig:landau}).
+Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+  \includegraphics[width=0.5\textwidth]{figures/analysis/landau.png}
+  \end{tabular}
+  \caption{Illustration of a Landau function. Parameters were arbitrarily chosen for this figure.} 
+  \label{fig:landau}
+\end{figure}
+The mean and the variance of a landau distribution are not defined. 
+This is again different for a (limited) measurment, as there it is always possible to calucalute a mean.
+Still, this leads to the fact that the definition of the mean energy loss per path length is a problematic and unstable concept.
+A much better observable is the most probably value (MPV) being the maximum of the landau function, which is much more stable compared to the mean. 
+The most probable energy loss of a charged particle is defined by the Landau-Vavilov-Bichsel equation:
+\begin{equation}
+\Delta_p = \xi \left[ \ln \frac{2mc^2\beta^2\gamma^2}{I}  + \ln\frac{\xi}{I} + j - \beta^2 - \delta(\beta\gamma)  \right],
+\end{equation}
+where $\xi=(K/Z)\langle Z/A \rangle (x/\beta^2)$. 
+The thickness of the absorber $x$ appears explicitly in the Landau-Vavilov-Bichsel equation making the most probable energy loss per path \mbox{length $\frac{\Delta_p}{dx}$} logarithmically dependent on $x$.
+A comparison between the Bethe mean energy loss $\langle \frac{dE}{dx} \rangle$ and the most probable energy loss $\frac{\Delta_p}{dx}$ are shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
+\begin{figure}[!bt]
+  \centering 
+  \begin{tabular}{c}
+  \includegraphics[width=0.5\textwidth]{figures/analysis/dEdx_Bethe_Landau.png}
+  \end{tabular}
+  \caption{Comparison between the Bethe mean energy loss with and without restricted energy loss and the most probable energy loss described by the Landau-Vavilov-Bichsel function for different sizes of thickness. 
+           Taken from \cite{bib:PDG_2014}.} 
+  \label{fig:dEdx_Bethe_Landau}
+\end{figure}
+\\
+
+SM particles as pions and muons are minimal ionising in silicon for $\beta\gamma \sim 4$, dependent on the thickness of the material (see Fig.~\ref{fig:dEdx_Landau_Silicon} ). 
+For higher momenta the deposited energies increase again reaching a plateau at around $\beta\gamma\sim100$. 
+However, new heavy charged particles would mainly be unrelativistic because of their high mass and would therefore deposit much higher energies in the detector.
+This makes the energy deposition per path length to a very well discriminating variable.
+\begin{figure}[!bt]
+  \centering 
+  \begin{tabular}{c}
+  \includegraphics[width=0.5\textwidth]{figures/analysis/dEdx_Landau_Silicon.png}
+  \end{tabular}
+  \caption{Most probable energy loss in silicon, scaled to the mean loss of a minimal ionizing particle (388 eV/$\mu$m). Taken from \cite{bib:PDG_2014}.} 
+  \label{fig:dEdx_Landau_Silicon}
+\end{figure}
+Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles, which are usually unrelativistic because of their high mass.
+
+%\begin{itemize}
+%\item The variable dE/dx: General introdution
+%\item Bethe-Bloch (difficult concept because of undefined mean of the Landau function)
+%\item Landau distribution (no mean)
+%\item Most probable energy loss landau vavilov function (show comparison plot Landau, Bethe)
+%\item Minimal ionising particles (pt cut) (how dedx for pions CMS 2008)
+%\end{itemize}
 
 \subsection{Gain calibration of the silicon pixel tracker}
 
+During Run I in 2012, the pixel silicon detector was continously subjected to an energy calibration, which is called gain calibration.
+Every pixel was calibrated to the same response, such that the whole pixel tracker should be well inter-calibrated.
+Unfortunately, due to imperfect constancy of the reference signal, the approximation of the atan() response with a linear function, and radiation and temperature induces changes, the energy calibration is not adequate to use the emasured energy deposition without further calibration.
+This imperfection of the gain calibration can be seen in Fig.~\ref{fig:dEdx_beforeCalibration}, where the harmonic-2 estimator summed over all tracks  (see \cite{} for a detailed explanation) over time is shown.
+Four different steps can be spotted. The first and the third correspond to a change  in the settings of the tracker, the second and fourth is, where a gain calibration was applied.
+Unfortunately, although a gain calibration was applied (even with delay), it could not bring the average dE/dx to the same level before the change in the setting occured.
+The size of the difference in the dE/dx measurement over time being around 10\% is too large to use the dE/dx out of the box.
+
+\begin{figure}[!bt]
+  \centering 
+  \begin{tabular}{c}
+  \includegraphics[width=0.5\textwidth]{figures/analysis/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
+  \end{tabular}
+  \caption{Sum of all track's dE/dx (harmonic-2 estimator) over the full year 2012. Every data point correspond to one run.} 
+  \label{fig:dEdx_beforeCalibration}
+\end{figure}
+
 \begin{itemize}
-\item Asymmetric Smirnov Discriminator
+\item What kind of calibrations are done with the silicon pixel and strip detectors?
+\item Pixel detector has been calibrated once before ijecting it to CMS
+\item dEdx not stable over time (show plot)
+\item Describe the different levels of calibration (what is calibrated, pixels, what is not calibrated, ROC) (intercalibration of ROCs and a clibration vs. time)
+\item How can the calibration been done (using MIPs, \pt cut, which samples are used - Min Bias samples)
+\item Which validation procedure were conducted?
+\item What are the results of the calibration
 \end{itemize}
 
 \subsection{Asymmetric Smirnov discriminator}
