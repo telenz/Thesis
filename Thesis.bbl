@@ -1,3 +1,66 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{bib:CMS:RA2_8TeV}
+{ CMS} Collaboration, ``{Search for new physics in the multijet and missing
+  transverse momentum final state in proton-proton collisions at $\sqrt{s}$= 8
+  TeV}'', {\em JHEP} {\bf 06} (2014) 055,
+  \href{http://www.arXiv.org/abs/1402.4770}{{\tt arXiv:1402.4770}}.
+\href{http://dx.doi.org/10.1007/JHEP06(2014)055}{{\tt
+  doi:10.1007/JHEP06(2014)055}}.
+%%CITATION = ARXIV:1402.4770;%%.
+
+\bibitem{bib:CMS:MT2_8TeV}
+{ CMS} Collaboration, ``{Searches for Supersymmetry using the M$_{T2}$ Variable
+  in Hadronic Events Produced in pp Collisions at 8 TeV}'', {\em JHEP} {\bf 05}
+  (2015) 078, \href{http://www.arXiv.org/abs/1502.04358}{{\tt
+  arXiv:1502.04358}}.
+\href{http://dx.doi.org/10.1007/JHEP05(2015)078}{{\tt
+  doi:10.1007/JHEP05(2015)078}}.
+%%CITATION = ARXIV:1502.04358;%%.
+
+\bibitem{bib:ATLAS:JetPlusMET_8TeV}
+{ ATLAS} Collaboration, ``{Search for squarks and gluinos with the ATLAS
+  detector in final states with jets and missing transverse momentum using
+  $\sqrt{s}=8$ TeV proton--proton collision data}'', {\em JHEP} {\bf 09} (2014)
+  176, \href{http://www.arXiv.org/abs/1405.7875}{{\tt arXiv:1405.7875}}.
+\href{http://dx.doi.org/10.1007/JHEP09(2014)176}{{\tt
+  doi:10.1007/JHEP09(2014)176}}.
+%%CITATION = ARXIV:1405.7875;%%.
+
+\bibitem{bib:CMS:HSCP_8TeV}
+{ CMS} Collaboration, ``{Searches for long-lived charged particles in pp
+  collisions at $\sqrt{s}$=7 and 8 TeV}'', {\em JHEP} {\bf 07} (2013) 122,
+  \href{http://www.arXiv.org/abs/1305.0491}{{\tt arXiv:1305.0491}}.
+\href{http://dx.doi.org/10.1007/JHEP07(2013)122}{{\tt
+  doi:10.1007/JHEP07(2013)122}}.
+%%CITATION = ARXIV:1305.0491;%%.
+
+\bibitem{bib:CMS:DT_8TeV}
+{ CMS} Collaboration, ``{Search for disappearing tracks in proton-proton
+  collisions at $ \sqrt{s}=8 $ TeV}'', {\em JHEP} {\bf 01} (2015) 096,
+  \href{http://www.arXiv.org/abs/1411.6006}{{\tt arXiv:1411.6006}}.
+\href{http://dx.doi.org/10.1007/JHEP01(2015)096}{{\tt
+  doi:10.1007/JHEP01(2015)096}}.
+%%CITATION = ARXIV:1411.6006;%%.
+
+\bibitem{bib:CMS:HSCPReinterpreation_PAS}
+{ CMS} Collaboration, ``{Reinterpreting the results of the search for
+  long-lived charged particles in the pMSSM and other BSM scenarios}'', {\em
+  CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1648902}{CMS-PAS-EXO-13-006}} (2014).
+
+\bibitem{bib:CMS:pMSSMinterpretation_7TeV_PAS}
+{ CMS} Collaboration, ``{Phenomenological MSSM interpretation of the CMS 2011
+  5fb-1 results}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/155240}{CMS-PAS-SUS-12-030}} (2013).
+
+\bibitem{bib:CMS:tracking_8TeV}
+{ CMS} Collaboration, ``{Description and performance of track and
+  primary-vertex reconstruction with the CMS tracker}'', {\em JINST} {\bf 9}
+  (2014), no.~10, P10009, \href{http://www.arXiv.org/abs/1405.6569}{{\tt
+  arXiv:1405.6569}}.
+\href{http://dx.doi.org/10.1088/1748-0221/9/10/P10009}{{\tt
+  doi:10.1088/1748-0221/9/10/P10009}}.
+%%CITATION = ARXIV:1405.6569;%%.
 
 \end{thebibliography}\endgroup
