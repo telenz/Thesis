@@ -1,3 +1,4 @@
+
 In this chapter a search for highly ionizing, short tracks is presented. The chapter will be structured as follows:
 In \mbox{Sec.~\ref{sec:Motivation}} a motivation will be given, followed by an overview of the general search strategy in \mbox{Sec.~\ref{sec:GeneralSearchStrategy}}.
 As the variable \dedx plays a crucial role in this analysis, a general introduction and different possible parametrizations will be introduced in \mbox{Sec.~\ref{sec:DeDxMeasurement}}.
@@ -44,15 +45,17 @@ The corresponding Feynman diagrams for the tree level production channels are sh
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_GammaZ.pdf}
+    \frame{\includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_GammaZ.pdf}
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_Scalar.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_Squark.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_Squark.pdf}}
   \end{tabular}
   \caption{Main tree level diagrams for chargino pair production.}
   \label{fig:FeynmanDiagramProductionCharginoPair}
 \begin{tabular}{c}
+    \frame{    
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi0_WBoson.pdf}
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi0_Squark.pdf}
+    }
   \end{tabular}
   \caption{Main tree level diagrams for chargino neutralino production.}
   \label{fig:FeynmanDiagramProductionCharginoNeutralino}
@@ -82,24 +85,14 @@ The search for disappearing tracks is sensitive on supersymmetric models with ch
 This analysis is targeting the gap between the disappearing track search (purple area) and the searches which are sensitive to instanteanously decaying charginos (blue area). The idea is to make use of the variable dE/dx which can be very discriminating for particles with high mass.
 The challenges of such a search and the general strategy of this analysis will be presented int the next section.
 
-
-%There are many analyses done at CMS which are in principle sensitive to such a supersymmetric chargino. 
-%This analyis wants to focus on long lifetimes such that the chargino does not directly decay, but reaches at least to first layers of the detector, being the silicon pixel and strip trackers. 
-%On the other hand, it has been designed in a way, that the chargino is not that-lonmg lived, that it travels through the whole detector, but decays at least before the muon chambers, thus is not reconstructed as a muon.
-%There have been analysis at CMS and Atlas looking for such middel-live charginos. 
-%The new aspect of the analysis is the inclusion of the variable dE/dx.
-%The pixel and the silicon tracker at CMS have been calibrated already offline, when building these moduls. Unfortunately it is not so good.
-%The silicon strip tracker has been calibrated in the context of a search for heavy, stable charged particle (cite something).
-%In this analysis, also very short tracks become very important, showing not more than three of four hits. Therfore also the pixel detector needs to bec calibrated in order to increase senssitivy for those short tracks
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{General search strategy}
 \label{sec:GeneralSearchStrategy}
 
 When searching for supersymmetric models with long-lived \chipm, the strategy is of course highly dependent on the actual lifetime of the chargino. 
 For long lifetimes, the chargino can reach the muon chambers and can be reconstructed as a muon (even with a longer time-of-flight). 
-For lower lifetimes, the chargino can already decay inside the detector (e.g. the tracker), thus not leading a reconstructed muon in the event, but only to an isolated track in the tracker. 
+For lower lifetimes, the chargino can already decay inside the detector (e.g. the tracker), thus not leading to a reconstructed muon in the event, but only to an isolated track in the tracker. 
 The detector signatures of these two scenarios are visualised in Fig~\ref{fig:CharginoPaiEventDisplay}, where in a cross-sectional view of the CMS detector simulated chargino-chargino events are shown.
 \begin{figure}[!b]
   \centering 
@@ -147,52 +140,83 @@ Because of the stronger bending, the track reconstruction efficiency decreases f
 
 Taking the hard or even impossible detection of the decay products of the chargino, this lead to the fact, that besides the (short) track of the chargino, nothing can be seen in the detector.
 Unfortunately, there is no dedicated track trigger at CMS, which makes a specific detection of those events with the help of the chargino track impossible.
-To be able to search for these models, one therefore need to take advantage of higher order contributions to the feynman diagrams shown in the previous sections (Figs.~\ref{fig:FeynmanDiagramProductionCharginoPair},\ref{fig:FeynmanDiagramProductionCharginoNeutralino}), resulting in initial state radiation.
-When the initial quarks radiate a high \pt gluon, the resulting jet can be detected and offering a possibility to search for isolated tracks in the tracker.
+To be able to search for these models, one therefore need to take advantage of higher order contributions to the feynman diagrams shown in the previous sections (Figs.~\ref{fig:FeynmanDiagramProductionCharginoPair},\ref{fig:FeynmanDiagramProductionCharginoNeutralino}), resulting in initial state radiation (ISR).
+When the initial quarks radiate a high \pt gluon, the resulting jet can be detected and can offer a possibility to search for isolated tracks in the tracker.
+The non-detection of the chargino's decay products plus a high \pt ISR jet lead additionally to missing transverse energy (MET) in the event. 
+Exploiding these two circumstances, it is possible to detect chargino-pair or chargino-neutralino events with the help of Jet+MET triggers.\\
 
+To select possible charginos in an event, additional requirements for isolated, high \pt tracks are needed.
+Those tracks can be eventually disappearing, which means that the track does not cross the full pixel and strip detector.
+This can happen, when the chargino decays inside the tracker.
+For very low lifetimes, the tracks can be very short and can have only a few hits in the detector. 
+To define a helical path five parameters are needed, therefore a minimum of three hits are required to be able to reconstruct a particle's trajetcory (see \cite{bib:CMS:tracking_8TeV}).
+In this analysis, the massiveness of the charginos shall be exploited, on the one hand by selecting only high \pt tracks, but on the other hand by requiering a high energy deposition per path length (\dedx).
+The energy deposition depends quadratically on the particle's mass for low velocities ($0.2<\beta\gamma<0.9$).
+\begin{equation}
+\langle\frac{dE}{dx}\rangle = K \frac{m^2}{p^2} +C
+\end{equation}
 
+thus constitute a very nice discriminating variable for massive particles. 
+A specific challenge for this analysis is the combinitation of searching for short tracks and utilising the energy deposition of the chargino.
+Unfortunately, the pixel tracker during Run I underwent only a calibration procedure at the very beginning of the start of data taking in 2011.
+Because of various readjustments during the year 2012, this introduced a huge non-calibration over time. 
+In case we want to look at the \dedx of the tracks, there is therefore the need to recalibrate the pixel detector in order to be able to use its energy information in this analysis.
 
-
-
-
-\begin{itemize}
+%\begin{itemize}
 %\item No detection of low momentum fermions possible (fermion pt plot?), no detection of the decay products
 %\item Concentration on intermediate lifetime $\rightarrow$ only a (short) chargino track can be seen.
 %\item Show event displays and sketch for pion decyay!
-\item Detection via ISR 
-\item Event selection by ISR jet and MET
-\item Detection of track (possibly short and disappearing and highly ionizing, not reconstructed as muon)
-\item Short and highly ionizing track $\rightarrow$ inclusion of pixel tracker information 
-\end{itemize}
-
-
+%\item Detection via ISR 
+%\item Event selection by ISR jet and MET
+%\item Detection of track (possibly short and disappearing and highly ionizing, not reconstructed as muon)
+%\item Short and highly ionizing track $\rightarrow$ inclusion of pixel tracker information 
+%\end{itemize}
 
 \subsection{Comparison to existing searches}
-\begin{itemize}
-\item HSCP
-\item Disappearing track
-\item No cut on Nhits
-\item Muon veto + inclusion of dE/dx
-\end{itemize}
-
+As already mentioned before, there were several analyses at CMS, which are sensitive to intermediate lifetime charginos. 
+Most notably, the search for long lived-charged particles \cite{bib:CMS:HSCP_8TeV} and the search for disappering tracks \cite{bib:CMS:DT_8TeV}.
+An improvement in sensitivity to shorter lifetimes compared to these analysis shall be achieved by including also very short tracks in this analysis.
+In \cite{bib:CMS:HSCP_8TeV}, a minimum number of eight hits, whereas in \cite{bib:CMS:DT_8TeV} a minimum of seven hits are required. 
+This can be very unefficient for shorter lifetimes, where most of the charginos decay already after the pixel tracker ($\sim 10\,\text{cm}$).
+Additionally, the search for disappearing tracks does not make use of the high energy deposition of heavy particles. 
+On the other hand is this variable used in the search for long-lived particles, where the sensitiviy decreases much quicker for shorter lifetimes (see Fig~\ref{fig:pMSSMplot}).
+In \cite{bib:CMS:DT_8TeV}, there is a muon-veto exploited to supress SM background coming from processes resulting in one or two muons. 
+Additionnally, it requires missing outer hits in the tracker (disappearing track), which makes this analysis especially sensitive to a shorter tracks.
+In the preseneted analaysis, the stron selection on the number of hits in the tracker shall be lowered and the variable \dedx shall be included to increase sensitiviy.
+Also, a muon-veto is applied to make the selection expecially sensitive to very short lifetimes.
+\textcolor{red}{MAYBE} show here already a plot with the number of valid hits distribution to emphasize the importance of lossening the number of hits cut!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{(Improved) dE/dx measurement of short tracks}
 \label{sec:DeDxMeasurement}
+It was already pointed out, that the inclusion of the pixel measurements for \dedx can increase the sensitivity of a search looking for intermediate lifetimes. 
+Therefore an offine calibration has been conducted.
 \subsection{Measuring dE/dx}
+
 \begin{itemize}
-\item The variable dE/dx: General introdution, Bethe-Bloch, 
+\item The variable dE/dx: General introdution
+\item Bethe-Bloch (difficult concept because of undefined mean of the Landau function)
+\item Landau distribution (no mean)
+\item Most probable energy loss landau vavilov function (show comparison plot Landau, Bethe)
+\item Minimal ionising particles (pt cut) (how dedx for pions CMS 2008)
+\end{itemize}
+
+\subsection{Gain calibration of the silicon pixel tracker}
+
+\begin{itemize}
 \item Asymmetric Smirnov Discriminator
 \end{itemize}
-\subsection{Gain calibration of the silicon pixel tracker}
-\subsection{Asymmetric Smirnov discriminator}
-\subsection{Efficiency improvements}
 
+\subsection{Asymmetric Smirnov discriminator}
+
+\subsection{Efficiency improvements}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Simulated samples}
 \label{sec:SimulatedSamples}
 \subsection{SM samples}
 \subsection{Signal samples}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Event selection}
 \label{sec:EventSelection}
@@ -240,7 +264,7 @@ When the initial quarks radiate a high \pt gluon, the resulting jet can be detec
 \begin{itemize}
 \item How can electrons fake the signal
 \end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background estimation methods}
 \label{sec:BackgroundEstimation}
