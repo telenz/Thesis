@@ -1,4 +1,4 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
 
 \bibitem{bib:CMS:RA2_8TeV}
 { CMS} Collaboration, ``{Search for new physics in the multijet and missing
@@ -62,5 +62,32 @@
 \href{http://dx.doi.org/10.1088/1748-0221/9/10/P10009}{{\tt
   doi:10.1088/1748-0221/9/10/P10009}}.
 %%CITATION = ARXIV:1405.6569;%%.
+
+\bibitem{bib:Bethe_1930}
+H.~Bethe, ``{Theory of the Passage of Fast Corpuscular Rays Through Matter}'',
+  {\em Annalen Phys.} {\bf 5} (1930) 325--400. [Annalen Phys.397,325(1930)].
+\href{http://dx.doi.org/10.1002/andp.19303970303}{{\tt
+  doi:10.1002/andp.19303970303}}.
+%%CITATION = ANPYA,5,325;%%.
+
+\bibitem{bib:Bloch_1933}
+F.~Bloch, ``{On the Stopping of Fast-Moving Particles in Passage through
+  Matter}'', {\em Annalen Phys.} {\bf 408} (1933) 285--320.
+\href{http://dx.doi.org/10.1002/andp.19334080303}{{\tt
+  doi:10.1002/andp.19334080303}}.
+%%CITATION = ANPYA,408,285;%%.
+
+\bibitem{bib:Landau_1944}
+L.~Landau, ``{On the energy loss of fast particles by ionization}'', {\em J.
+  Phys.(USSR)} {\bf 8} (1944)
+201--205.
+%%CITATION = JOPYA,8,201;%%.
+
+\bibitem{bib:PDG_2014}
+{ Particle Data Group} Collaboration, ``{Review of Particle Physics}'', {\em
+  Chin. Phys.} {\bf C38} (2014) 090001.
+\href{http://dx.doi.org/10.1088/1674-1137/38/9/090001}{{\tt
+  doi:10.1088/1674-1137/38/9/090001}}.
+%%CITATION = CHPHD,C38,090001;%%.
 
 \end{thebibliography}\endgroup

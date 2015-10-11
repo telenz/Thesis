@@ -12,45 +12,47 @@ I was expecting a `,' or a `}'---line 110 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 8 entries,
+Warning--I didn't find a database entry for "?"
+Warning--I didn't find a database entry for ""
+You've used 12 entries,
             2369 wiz_defined-function locations,
-            652 strings with 6489 characters,
-and the built_in function-call counts, 2175 in all, are:
-= -- 286
-> -- 8
+            691 strings with 7185 characters,
+and the built_in function-call counts, 3690 in all, are:
+= -- 484
+> -- 24
 < -- 0
-+ -- 8
-- -- 0
-* -- 204
-:= -- 263
-add.period$ -- 20
-call.type$ -- 8
++ -- 15
+- -- 3
+* -- 300
+:= -- 451
+add.period$ -- 32
+call.type$ -- 12
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 144
-empty$ -- 232
-format.name$ -- 0
-if$ -- 610
+cite$ -- 12
+duplicate$ -- 235
+empty$ -- 384
+format.name$ -- 3
+if$ -- 1033
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 24
-newline$ -- 39
-num.names$ -- 0
-pop$ -- 35
+int.to.str$ -- 12
+missing$ -- 36
+newline$ -- 59
+num.names$ -- 3
+pop$ -- 55
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 71
+skip$ -- 131
 stack$ -- 0
-substring$ -- 42
-swap$ -- 50
+substring$ -- 138
+swap$ -- 90
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 6
-width$ -- 9
-write$ -- 99
+while$ -- 16
+width$ -- 14
+write$ -- 147
 (There were 2 error messages)
