@@ -13,46 +13,45 @@ I was expecting a `,' or a `}'---line 110 of file Thesis.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "?"
-Warning--I didn't find a database entry for ""
 You've used 12 entries,
             2369 wiz_defined-function locations,
-            691 strings with 7185 characters,
-and the built_in function-call counts, 3690 in all, are:
-= -- 484
+            689 strings with 7198 characters,
+and the built_in function-call counts, 3457 in all, are:
+= -- 455
 > -- 24
 < -- 0
 + -- 15
 - -- 3
-* -- 300
-:= -- 451
+* -- 279
+:= -- 427
 add.period$ -- 32
 call.type$ -- 12
 change.case$ -- 0
 chr.to.int$ -- 0
 cite$ -- 12
-duplicate$ -- 235
-empty$ -- 384
+duplicate$ -- 222
+empty$ -- 359
 format.name$ -- 3
-if$ -- 1033
+if$ -- 964
 int.to.chr$ -- 0
 int.to.str$ -- 12
-missing$ -- 36
-newline$ -- 59
+missing$ -- 33
+newline$ -- 61
 num.names$ -- 3
-pop$ -- 55
+pop$ -- 54
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 131
+skip$ -- 120
 stack$ -- 0
-substring$ -- 138
-swap$ -- 90
+substring$ -- 110
+swap$ -- 81
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 16
+while$ -- 14
 width$ -- 14
 write$ -- 147
 (There were 2 error messages)

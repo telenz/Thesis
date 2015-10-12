@@ -13,7 +13,7 @@ The chapter concludes by presenting the results of this analysis in Sec.~\ref{se
 \section{Motivation}
 \label{sec:Motivation}
 As it was already pointed out in Chap.~\ref{ch:Theory}, Supersymmetry is able to offer solutions to unexplained phenomena in astrophysics and can solve the shortcomings of the Standard Model of particle physics.
-Unfortunately, due to the unknown mechanism of supersymmetry breaking, the most general parametrization of Supersymmetry introduces over 100 new dimensions which opens up an incredibly huge phenomenalogically rich space, 
+Unfortunately,  the unknown mechanism of supersymmetry breaking, the most general parametrization of Supersymmetry introduces over 100 new dimensions which opens up an incredibly huge phenomenalogically rich space, 
 leading to very different possible signature at particle colliders. 
 During the Phase\,I run at the LHC in 2012, a variety of different seaches, optimized on the hunt for supersymmetry were conducted.
 At the CMS and at the ATLAS experiment, taking data from proton-ptoton collsions, a strong focus was put on the search for hints of SUSY in the strong production sector (e.g. \cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:ATLAS:JetPlusMET_8TeV}).
@@ -194,7 +194,7 @@ While the silicon strip detetcor has already been calibrated as part of the sear
 To increase the discrimination power of \dedx, such an calibration procedure was therefore conducted within this PHD thesis.
  
 \subsection{Measuring dE/dx}
-The mean energy loss per path length of particles travelling through a layer of material can be described with the Bethe-Bloch formula \cite{bib:Bethe_1930,bib:Bloch_1933}:
+The mean energy loss per path length of particles travelling through a layer of material can be described with the Bethe formula \cite{bib:Bethe_1930}:
 \begin{equation}
 \langle \frac{dE}{dx} \rangle = kz^2\frac{Z}{A}\frac{1}{\beta^2} [ \frac{1}{2} \ln{\frac{2m_e c^2 \beta^2 \gamma^2 T_{\text{max}}}{I^2}} - \beta^2 - \frac{\delta( \beta \gamma )}{2} ].
 \end{equation}
@@ -205,9 +205,15 @@ $T_{\text{max}}$ stands for the maximum energy transfer in a single collision.
 The relevant particle's properties are the velocity ($\beta$), the lorentz factor ($\gamma$) and the charge (z) of the incident particle.
 The density correction $\delta( \beta \gamma )$ reduces the mean energy loss at high energies because of polarization effects of the material.
 
-Even if widely used, the Bethe-Bloch formula is ill-defined because of the use of the mean energy loss per path length.
-The problem arises when looking at the fluctuations of a particle's energy deposition.
-In case particles cross material layers of moderate sickness, the probability density function of the deposited energy can be described by a Landau function \cite{bib:Landau_1944}. 
+Even if widely used, the mean energy loss is a quantity which is ``ill-defined experimentally and is not useful for describing energy loss by single particles'' \cite{bib:PDG_2014}.
+The problem is caused by the underlying probability distribution of a single $\Delta E/ \Delta x $ measurement: the Landau distribution \cite{bib:Landau_1944}
+\begin{equation}
+p(x) = \frac{1}{\pi} \int_0^\infty\! e^{-t \log t - x t} \sin(\pi t)\, dt.
+\label{eq:landau}
+\end{equation}
+%Even if widely used, theBethe-Bloch formula is ill-defined because of the use of the mean energy loss per path length.
+%The problem arises when looking at the fluctuations of a particle's energy deposition.
+%In case particles cross material layers of moderate sickness, the probability density function of the deposited energy can be described by a Landau function \cite{bib:Landau_1944}. 
 The Landau distribution is a highly asymmetric distribution with a long tail torwards the right end (see Fig.~\ref{fig:landau}).
 Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
 \begin{figure}[!t]
@@ -218,17 +224,21 @@ Theoretically it extends to infinite energies, however in nature the maximal dep
   \caption{Illustration of a Landau function. Parameters were arbitrarily chosen for this figure.} 
   \label{fig:landau}
 \end{figure}
-The mean and the variance of a landau distribution are not defined. 
-This is again different for a (limited) measurment, as there it is always possible to calucalute a mean.
-Still, this leads to the fact that the definition of the mean energy loss per path length is a problematic and unstable concept.
-A much better observable is the most probably value (MPV) being the maximum of the landau function, which is much more stable compared to the mean. 
+The mean and the variance of a landau distribution are not defined.
+Because of its high assymetry, measurements of $\langle \frac{dE}{dx} \rangle$ with only a few single measurmentse are easily biased torwards high values, making the mean energy loss described by the Bethe formula to a problematic and unstable concept. 
+%This is again different for a (limited) measurment, as there it is always possible to calucalute a mean.
+%Still, this leads to the fact that the definition of the mean energy loss per path length is a problematic and unstable concept.
+
+
+A much better observable is the most probably value (MPV): the maximum of the Landau function.
+The MPV is much more stable compared to the mean and is not as easily biased towards higher \dedx values. 
 The most probable energy loss of a charged particle is defined by the Landau-Vavilov-Bichsel equation:
 \begin{equation}
 \Delta_p = \xi \left[ \ln \frac{2mc^2\beta^2\gamma^2}{I}  + \ln\frac{\xi}{I} + j - \beta^2 - \delta(\beta\gamma)  \right],
 \end{equation}
 where $\xi=(K/Z)\langle Z/A \rangle (x/\beta^2)$. 
 The thickness of the absorber $x$ appears explicitly in the Landau-Vavilov-Bichsel equation making the most probable energy loss per path \mbox{length $\frac{\Delta_p}{dx}$} logarithmically dependent on $x$.
-A comparison between the Bethe mean energy loss $\langle \frac{dE}{dx} \rangle$ and the most probable energy loss $\frac{\Delta_p}{dx}$ are shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
+A comparison between the Bethe mean energy loss $\langle \frac{dE}{dx} \rangle$ and the most probable energy loss $\frac{\Delta_p}{dx}$ is shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
@@ -238,13 +248,23 @@ A comparison between the Bethe mean energy loss $\langle \frac{dE}{dx} \rangle$ 
            Taken from \cite{bib:PDG_2014}.} 
   \label{fig:dEdx_Bethe_Landau}
 \end{figure}
-\\
+However, when measureing tracks with around $\sim$20 hits, it is obviously not too simple to extract the most probable value. 
+Large fluctuations can still lead to biases towards higher value of the most probable \dedx.
+
+There are several "estimators'', which try to suppress as much as possible a bias towards the high end, without introducing a bias to lower values.
+One of the estimator, also used in the next chapter, is the harmonic-2 estimator
+
+\begin{equation}
+I_{h2}=\left( \frac{1}{N}\sum_{i=1}^{N}(\Delta E/\Delta x)_i^2 \right)^{-1/2}
+\end{equation}
+$\Delta E /\Delta x$ correspond to one measurement in one tracker module. 
+The harmonic mean of all $N$ measurements with the power of 2 is then the estimated most probable \dedx.\\
 
 SM particles as pions and muons are minimal ionising in silicon for $\beta\gamma \sim 4$, dependent on the thickness of the material (see Fig.~\ref{fig:dEdx_Landau_Silicon} ). 
 For higher momenta the deposited energies increase again reaching a plateau at around $\beta\gamma\sim100$. 
 However, new heavy charged particles would mainly be unrelativistic because of their high mass and would therefore deposit much higher energies in the detector.
-This makes the energy deposition per path length to a very well discriminating variable.
-\begin{figure}[!bt]
+This makes \dedx  a very well discriminating variable.
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.5\textwidth]{figures/analysis/dEdx_Landau_Silicon.png}
@@ -253,6 +273,9 @@ This makes the energy deposition per path length to a very well discriminating v
   \label{fig:dEdx_Landau_Silicon}
 \end{figure}
 Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles, which are usually unrelativistic because of their high mass.
+
+
+
 
 %\begin{itemize}
 %\item The variable dE/dx: General introdution
@@ -264,32 +287,116 @@ Thus, the energy loss per path length can be used to discriminate between SM par
 
 \subsection{Gain calibration of the silicon pixel tracker}
 
-During Run I in 2012, the pixel silicon detector was continously subjected to an energy calibration, which is called gain calibration.
+During Run I in 2012, the pixel silicon detector was continously subjected to an energy calibration, called gain calibration.
 Every pixel was calibrated to the same response, such that the whole pixel tracker should be well inter-calibrated.
-Unfortunately, due to imperfect constancy of the reference signal, the approximation of the atan() response with a linear function, and radiation and temperature induces changes, the energy calibration is not adequate to use the emasured energy deposition without further calibration.
-This imperfection of the gain calibration can be seen in Fig.~\ref{fig:dEdx_beforeCalibration}, where the harmonic-2 estimator summed over all tracks  (see \cite{} for a detailed explanation) over time is shown.
-Four different steps can be spotted. The first and the third correspond to a change  in the settings of the tracker, the second and fourth is, where a gain calibration was applied.
-Unfortunately, although a gain calibration was applied (even with delay), it could not bring the average dE/dx to the same level before the change in the setting occured.
-The size of the difference in the dE/dx measurement over time being around 10\% is too large to use the dE/dx out of the box.
-
-\begin{figure}[!bt]
+Unfortunately, due to various reasons, such as the imperfect constancy of the reference signal, or radiation and temperature induced changes, the energy calibration was not adequate enough to use the measured energy deposition without a further offline calibration procedure.
+This imperfection of the gain calibration can be seen in Fig.~\ref{fig:StabilityPlot_beforeCalibration}, where the sum of the harmonic-2 estimator for all tracks ($\sum_{\text{all tracks}}I_{h2}$) over time is shown.
+Four different steps can be spotted. 
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.5\textwidth]{figures/analysis/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{Sum of all track's dE/dx (harmonic-2 estimator) over the full year 2012. Every data point correspond to one run.} 
-  \label{fig:dEdx_beforeCalibration}
+  \caption{Sum of all track's dE/dx (harmonic-2 estimator) over the full year 2012. Every data point corresponds to one run.} 
+  \label{fig:StabilityPlot_beforeCalibration}
 \end{figure}
+The first and the third correspond to a change in the settings of the tracker, which needed to be done because of increased radiation damages, etc.
+The second and fourth step show the moment where an online gain calibration was again applied.
+Unfortunately, although a gain calibration was carried out (even with some delay), it could not bring the average dE/dx to the same level before the change in the setting occured.
+The size of the difference in the dE/dx measurement over time being around 15\% is too large to use dE/dx without a further calibration.
+
+In the following section the method of the gain calibration of the pixel silicon tracker explained. 
+Detailed technical information about the pixel tracker can be found in Sec.~\ref{sec:}.
+
+
+\subsubsection*{Method}
+The main goal of the gain calibration is to get a uniform response in \dedx over the full data taking period in 2012.
+To ensure also a uniform response of all modules within one time step, also an inter-calibration on module level was carried out.
+The inter-calibration can in principle be done on various stages: the highest granularity would be a calibration on pixel level, followed by a calibration on ROC-level and then on module-level.
+Lower granularities in descending order are rings (modules with same z-position) and finally layers (3 layers in the barrel and 4 disks in the endcap). 
+It was checked that all pixels and all ROCs (on one module) are well inter-calibrated, such that the inter-calibration was finally done module-wise.
+Of course, as a final step the well inter-calibrated pixel tracker within space and time, needs to be calibrated to the correct energy release of a MIP, to have a meaningful physical quantity.
+Therefore, as a last step an overall calibration factor $c_{\text{strip}}$ was determined to calibrate the average energy deposition (using the harmonic-2 estimator) of all tracks in the pixel tracker to the average energy release 
+in the silicon strip detector.
+This can be done because the strip tracker has already been calibrated in Run I within the following analysis \cite{bib:CMS:HSCP_8TeV}.
+The applied method for the gain calibration of the pixel tracker follows also the described method in \cite{bib:Quertenmont_2010}.
+
+The gain calibration of the pixel silicon tracker has been carried out with the help of minimal ionising particles (MIPs).
+MIPs in this context are not defined as particles depositing a minimum amount of energy, but more general a small amount of energy.
+This denotes all particles located at the plateau of the \dedx distribution vs. momentum (see Fig.~\ref{fig:dEdx_Landau_Silicon}).
+This ensures that all particles deposit a rather similar amount of energy such that the variation due to different momenta is suppressed.
+The small ionisation for particles was ensured with a momentum selection of p$>5\,$\gev.
+For the calibration a sample containg around $~$50 million ``minimum bias'' events was used which is specifically recorded for tracker calibration purposes.
+``Minimum bias`` means the there is neither an online nor offline selection applied. 
+
+
+For every module in the pixel tracker (there are 1440 modules in total), each $\Delta E/\Delta x$ measurement of all particles crossing the module is filled into a histogram. 
+In Fig.~\ref{fig:dEdx_Module} shows an example distribution for one module.
+\begin{figure}[!bt]
+  \centering 
+  \begin{tabular}{c}
+  \includegraphics[width=0.5\textwidth]{figures/analysis/Landau_Module_352476680.pdf}
+  \end{tabular}
+  \caption{An example of the dE/dx distribution measured in ADC count per mm for one module of the CMS pixel tracker. 
+           A landau convoluted with a gaussian is fitted to the core of the distribution in an iterative procedure.} 
+  \label{fig:dEdx_Module}
+\end{figure}
+The underlying Landau distribution can be nicely seen. 
+However the fit was perfomed with a landau convoluted with a gaussian function to increase the fit performance and the stability of the fit.
+The measurement of $\Delta E/\Delta x$ is done in ADC counts per mm. 
+ADC counts are a measure for the deposited charge after digitization. 
+It consists out of a unsigned 16-bit integer (ranging from 0 to 65 535).
+The path length $dx$ is calculated with
+\begin{equation}
+dx = d_{module_i} \cdot \cos(\phi_{track}),
+\end{equation}
+where $d_{module_i}$ is the thickness of module i and $\phi_{track_j}$ is the relative angle of the particle's trajectory to the axis normal of the module.
+With the extracted MPV, for every module an inter-calibration factor is calculated, being
+\begin{equation}
+c_{\text{inter}}=\frac{MPV [\text{ADC/mm}]}{300 \cdot 265 [\text{ADC/mm}]}.
+\end{equation}
+The factor 300 $\cdot$ 265 [ADC/mm] is in principal an abitrary number. 
+However, it was choosen such that it corresponds approximately to the most probably energy deposition of a MIP.
+The calibration factor can then be used to scale every measurement in a module to a calibrated \dedx measurement
+\begin{equation}
+\frac{dE}{dx}_{\text{calibrated}}=\frac{\frac{dE}{dx}_{\text{uncalibrated}}}{c_{\text{inter}}}
+\end{equation}
+The determination of the calibration factor needs to be done for every of the five time steps, shown in Fig.~\ref{fig:StabilityPlot_beforeCalibration} independently, in order to get rid of the time dependency. 
+Finally the overall calibration factor $c_{\text{strip}}$ is determined.
+
+
+%subsubsection*{Validation}
+%There were several validation procedures conducted to ensure that the calibration dis the right thing.
+%First of all
+
+\subsubsection*{Results}
+The final result is $1440\cdot5$ different calibration factors $c_{\text{inter}}$.
+These can be found in Fig.~\ref{fig:CalibrationFactors} for all five different time steps.
 
 \begin{itemize}
-\item What kind of calibrations are done with the silicon pixel and strip detectors?
-\item Pixel detector has been calibrated once before ijecting it to CMS
-\item dEdx not stable over time (show plot)
-\item Describe the different levels of calibration (what is calibrated, pixels, what is not calibrated, ROC) (intercalibration of ROCs and a clibration vs. time)
-\item How can the calibration been done (using MIPs, \pt cut, which samples are used - Min Bias samples)
-\item Which validation procedure were conducted?
-\item What are the results of the calibration
+\item Show stability plot after calibration.
+\item Read Loic's chapter about the gain calibration, maybe there are some interesting aspects
+\item Talk about MC gain calibration
+\item Talk about the total calibration
+\item Show strip plot.
+\item 
 \end{itemize}
+
+\begin{figure}[!bt]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.31\textwidth]{figures/analysis/PixelGain_AB_NEW.pdf}
+    \includegraphics[width=0.31\textwidth]{figures/analysis/PixelGain_C1_NEW.pdf}
+    \includegraphics[width=0.31\textwidth]{figures/analysis/PixelGain_C2_NEW.pdf}
+  \end{tabular}
+  \begin{tabular}{c}
+    \includegraphics[width=0.31\textwidth]{figures/analysis/PixelGain_D1_NEW.pdf}
+    \includegraphics[width=0.31\textwidth]{figures/analysis/PixelGain_D2_NEW.pdf}
+  \end{tabular}
+  \caption{The resulting calibration factors for all five time step (from left top to bottom right in increasing time).} 
+  \label{fig:CalibrationFactors}
+\end{figure}
+
 
 \subsection{Asymmetric Smirnov discriminator}
 
