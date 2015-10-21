@@ -94,6 +94,11 @@ H.~Bethe, ``{Theory of the Passage of Fast Corpuscular Rays Through Matter}'',
   doi:10.1002/andp.19303970303}}.
 %%CITATION = ANPYA,5,325;%%.
 
+\bibitem{bib:NIST}
+``National Institute of Standards and Technology''.
+  \url{http://physics.nist.gov/cgi-bin/Star/compos.pl?mode=text&matno=014}.
+\newblock Accessed: 2015-10-21.
+
 \bibitem{bib:PDG_2014}
 { Particle Data Group} Collaboration, ``{Review of Particle Physics}'', {\em
   Chin. Phys.} {\bf C38} (2014) 090001.
@@ -107,6 +112,13 @@ L.~Landau, ``{On the energy loss of fast particles by ionization}'', {\em J.
 201--205.
 %%CITATION = JOPYA,8,201;%%.
 
+\bibitem{bib:Bichsel:MPV_1988}
+H.~Bichsel, ``{Straggling in Thin Silicon Detectors}'', {\em Rev. Mod. Phys.}
+  {\bf 60} (1988) 663--699.
+\href{http://dx.doi.org/10.1103/RevModPhys.60.663}{{\tt
+  doi:10.1103/RevModPhys.60.663}}.
+%%CITATION = RMPHA,60,663;%%.
+
 \bibitem{bib:Quertenmont_2010}
 L.~Quertenmont, ``{Search for Heavy Stable Charged Particles with the CMS
   detector at the LHC}''.
@@ -114,5 +126,10 @@ L.~Quertenmont, ``{Search for Heavy Stable Charged Particles with the CMS
 2010.
 \newblock
 %%CITATION = CERN-THESIS-2010-236;%%.
+
+\bibitem{bib:Anderson:CramerVonMises_1962}
+T.~W. Anderson, ``On the Distribution of the Two-Sample Cramér-von Mises
+  Criterion'', {\em The Annals of Mathematical Statistics} {\bf 33} (1962),
+  no.~3, pp. 1148--1159.
 
 \end{thebibliography}\endgroup
