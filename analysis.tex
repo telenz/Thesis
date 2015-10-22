@@ -130,7 +130,7 @@ A \pt distribution of the pion for a simulation with $\sqrt{s} = 8\,\tev$ can be
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.6\textwidth]{figures/analysis/ptOfPions.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/PtOfPions.pdf}
   \end{tabular}
   \caption{Transverse momentum distribution of pions coming from chargino decay into a neutralino with a mass gap of 150\mev.}
   \label{fig:ptOfPions}
@@ -221,12 +221,12 @@ p(x) = \frac{1}{\pi} \int_0^\infty\! e^{-t \log t - x t} \sin(\pi t)\, dt.
 \end{equation*}
 The Landau distribution is a highly asymmetric distribution with a long tail torwards the right end (see Fig.~\ref{fig:landau}).
 Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis/Landau.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/Landau.pdf}
   \end{tabular}
-  \caption{Illustration of a Landau function. Parameters were arbitrarily chosen for this figure.} 
+  \caption{Illustration of the shape of a Landau function. Parameters were arbitrarily chosen for this figure.} 
   \label{fig:landau}
 \end{figure}
 The mean and the variance of a landau distribution are not defined.
@@ -299,7 +299,7 @@ Four different steps can be spotted.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
   \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_beforeCalibration}
@@ -338,7 +338,7 @@ Fig.~\ref{fig:dEdx_Module} shows an example distribution for one module.
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis/Landau_Module_352476680.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/Landau_Module_352476680.pdf}
   \end{tabular}
   \caption{An example of the $\Delta E/\Delta x$ distribution measured in ADC count per mm for one module of the CMS pixel tracker. 
            A Landau convoluted with a Gaussian is fitted to the core of the distribution in an iterative procedure.} 
@@ -372,7 +372,7 @@ The variation over time was indeed eridicated, resulting in a maximal time varia
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis/StabilityPlot_Pixel_afterCalibration_withoutStepFits_NEW.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/StabilityPlot_Pixel_afterCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
   \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) over the full year 2012 after applying the calibration factors, resulting in an average $dE/dx$ of 3.51 MeV/cm. Only pixel hits are taken into account. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_afterCalibration}
@@ -403,7 +403,7 @@ c_{\text{absolute}} = \frac{dE/dx_{\text{strip}}}{dE/dx_{\text{pixel}}} = \frac{
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis/StabilityPlot_Strip_afterCalibration_withoutStepFits_NEW.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/StabilityPlot_Strip_afterCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
   \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) measured in the silicon strip detector over the full year 2012. The average most probable $dE/dx$ is $I_{h2}=3.303\,\mev/\cm$. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_Strip}
@@ -418,39 +418,107 @@ As mentioned before, a difficult task when measuring the energy deposition of a 
 The harmonic-2 estimator $I_{h2}$ was already introduced in Sec.~\ref{sec:sub:MeasuringDeDx} in Eq.~\ref{eq:Harmonic2Estimator}.
 It is known as a robust estimator not easily biased by large fluctuation in $\Delta E/ \Delta x$ because of the suppression by a factor of 2.
 
-However, it was shown in \cite{bib:Quertenmont_2010} that a better discrimination between SM particles and possible new heavy particles can be achieved when using likelihood techniques.
-That is, determining the probability that the set of all $\Delta E/ \Delta x$ belonging to one track is actually compatible with the hypothetical probability distribution of a MIP.
-Testing that a measured sample has been drawn from a specific distribution is know as the Cram\'{e}r-von Mises test \cite{bib:Anderson:CramerVonMises_1962}.
-The so-called Smirnov-Cram\'{e}r-von Mises discriminator \cite{blabla} is a discriminator, which is not sensitive to lower or higher values
-\begin{equation*}
-I_s = \frac{3}{N} \cdot \left( \frac{1}{12N} + \sum\limits_{h=1}^N \left[ P_h - \frac{2h-1}{2N} \right]^2 \right).
-\end{equation*}
-Therefore in \cite{bib:Quertenmont_2010} it was a so-called Asymmetric Smirnov-Cram\'{e}r-von Mises discriminator developed, which is only sensitive to incompatibilites to the MIP hypothesis towards higher energy depositions
-\begin{equation*}
-I_{as} = \frac{3}{N} \cdot \left( \frac{1}{12N} + \sum\limits_{h=1}^N \left[ P_h \cdot \left(P_h - \frac{2h-1}{2N} \right)^2 \right] \right).
-\end{equation*}
+However, it was shown in \cite{bib:Quertenmont_2010} that a better discrimination between SM particles and possible new heavy particles can be achieved when using likelihood techniques,
+i.e. determining the probability that the set of all $\Delta E/ \Delta x$ belonging to one track is actually compatible with the hypothetical probability distribution of a MIP.
 
-The underlying propability distribution of the MIP hypothesis was extracted from the same ``Minimum bias'' sample (plus the selection specific for MIPs) used for the pixel energy calibration.
-The probability distribution of the energy deposition for the silicon strip detector was provided by ...
+Testing that a measured sample has been drawn from a specific distribution is know as the Smirnov-Cram\'{e}r-von Mises test \cite{bib:Anderson:CramerVonMises_1962,bib:James:StaticticalMethods_2006},
+which is deduced from the integral of the squared difference of the measured distribution $P_N(x)$ to the hypothesis distribution $P(x)$
+\begin{equation*}
+I_s = \int\limits_{-\infty}^{\infty} \left[P_{N}(x)-P(x)\right]^2 dP(x)
+\end{equation*}
+leading to a test statistics of
+\begin{equation*}
+I_s = \frac{3}{N} \cdot \left( \frac{1}{12N} + \sum\limits_{i=1}^N \left[ P_i - \frac{2i-1}{2N} \right]^2 \right),
+\end{equation*}
+where $P_i$ is the cumulative probability that a MIP would release a $\Delta E/\Delta x$ equal or smaller than the measured $\Delta E/ \Delta x$ with all $P_i$ are arranged in increasing order.
 
+However, this test statistics is not sensitive to whether there are incompatibilities because of higher or lower variations compared to the hypothesis distribution.
+It is therefore not really suitable for the discrimination between MIPs and heavy new particles by $dE/dx$.
+A so-called Asymmetric Smirnov-Cram\'{e}r-von Mises discriminator was developed in \cite{bib:Quertenmont_2010} which is only sensitive to incompatibilites to the MIP hypothesis towards higher energy depositions
+\begin{equation*}
+I_{as} = \frac{3}{N} \cdot \left( \frac{1}{12N} + \sum\limits_{i=1}^N \left[ P_i \cdot \left(P_i - \frac{2i-1}{2N} \right)^2 \right] \right).
+\end{equation*}
+A value of $I_{as}$ close to zero indicates good compatibility with the MIP hypothesis, whereas a value close to one indicates worse compatibility because of too large energy loss.
+
+The underlying probability distribution of the energy release for a given path length in the pixel tracker is extracted from the same ``Minimum bias'' sample used for the pixel energy calibration.
+In total 28 different templates each for a different given path length are created.
+The corresponding templates for the energy release in the silicon strip detector were already built by  \cite{bib:Quertenmont_2010}.
+In Fig.~\ref{fig:ProbabilityTemplate} the probability distribution template for the pixel tracker in data and simulation is shown.
+\begin{figure}[!tb]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Discriminator_template_data_pixel_2012.png}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Discriminator_template_mc_pixel_2012.png}
+  \end{tabular}
+  \caption{Cumulative probability for a MIP to release a $\Delta E/ \Delta x$ (y-axis) vs. the pathlength (x-axis) in data (left) and simulation (right) for the pixel tracker.}
+  \label{fig:ProbabilityTemplate}
+\end{figure}
+The distribution of the Asymmetric Smirnov-Cram\'{e}r-von Mises discriminator $I_{as}$ (for simplicity $I_{as}$ will be just called Asymmetric Smirnov discriminator in the following text) can be found in Fig.~\ref{blbla}, 
+where the energy release per pathlength for MIPs in  data and simulation is drawn.
+It shows good agreement.\\
+
+As already pointed out several times, the goal of including the pixel energy information is to increase the discrimination power of $I_{as}$ between background and signal, especially for short tracks.
+In Fig.~\ref{}, a comparison of the shapes of background tracks and signal tracks in simulated samples without any selection is shown (details on the Simulated samples can be found in Sec.~\ref{sec:SimulatedSamples}).
+It can be seen, that the $I_{as}$ distribution of the signal tracks shows a much longer tails toward the right end of the plot, whereas the background is rather distributed close to zero.
+Not only the mass of the signal track influences the $I_{as}$ distribution but also the number of hits of a signal track which in turn define the influence of fluctuations of single $\Delta E/\Delta x$ measurements on the $I_{as}$ discriminator. 
+This is shown in Fig.~\ref{...}.
+
+
+\subsection{Efficiency improvements}
+In order to quantify the impact of the additional pixel $\Delta E/\Delta x$ information on an analysis selection, the signal selection efficiency over the background selection efficiency for different selection cuts of $I_{as}$ is drawn in Fig.~\ref{blabla}.
+As can be seen, the improved background supression for a given signal selection efficiency depends on the mass and on the lifetime of the chargino.
+For masses of blablab, improvements in the backgorund supression of .... can be achieved.
+For low lifetimes, the additionnaly improves up to a factor of ....
 
 
 \begin{itemize}
-\item Assymetric Smirnov Discriminator
-\item Cite paper for comp exp and theoretically dis
-\item Show a plot of the underlying prop distribution
-\item Not a huge section
-\item Show the templates
-\item Show also distributions of assymetric smirnov discriminator (compare signal to SM)
+\item Show comparison of Ias comparing pixel and strip
+\item Show plot with Ias distribution for bkg and signal (give reference to next chapter)
+\item not a long section
 \end{itemize}
+In Fig.~\ref{blbla}, a comparison between signal sample and background dedx is shown. It can be already seen that $I_{as}$ is well discriminating.
 
-\subsection{Efficiency improvements}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Simulated samples}
 \label{sec:SimulatedSamples}
+
+\begin{itemize}
+\item Event weights applied for correct Pileup modelling
+\item Detailed information can be found in Experimental setup chapter
+\item Think what to write in the detector chapter to be not wiederholend     
+\end{itemize}
+
+Detector chapter:
+\begin{itemize}
+\item THINK!
+\end{itemize}
+
 \subsection{SM samples}
+\begin{itemize}
+\item Title: Background samples
+\item To study the background, following samples were used: ... generated with ...
+\item Not all SM processes samples were availbale
+\item Not so dramatic, because data based bkg estimation method
+\item Main Background are ... ???
+\item Only a few were available and thus processed
+\item Most important sample was included: Wjets
+\item ZoNuNu Backgorund not availbale plays also a role (see DT paper!)
+\item Table of SM samples with cross-sections
+\end{itemize}
+
 \subsection{Signal samples}
+\begin{itemize}
+\item Lifetime reweighting
+\item Simulation of lifetime in Geant
+\item Trigger emulation
+\item What samples are exactly generated.
+\item Madgraph+Pythia
+\item Chargino Pair production + Chargino neutralino production
+\item Table with generated signal samples with cross-sections???? No
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Event selection}
