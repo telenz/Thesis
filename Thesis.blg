@@ -12,10 +12,11 @@ I was expecting a `,' or a `}'---line 200 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "blabla"
 Warning--empty publisher in bib:James:StaticticalMethods_2006
 You've used 19 entries,
             2369 wiz_defined-function locations,
-            746 strings with 8692 characters,
+            747 strings with 8698 characters,
 and the built_in function-call counts, 5854 in all, are:
 = -- 744
 > -- 83
