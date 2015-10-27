@@ -38,21 +38,21 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
   vector<sample> samplesBkg;
   samplesBkg.push_back((TString) "wjets");
 
-  unsigned int nStep = 10;
+  unsigned int nStep = 40;
 
-  double *xNP = new double[nStep];
-  double *x   = new double[nStep];
-  double *yNP = new double[nStep];
-  double *y   = new double[nStep];
+  double *xNP = new double[nStep-1];
+  double *x   = new double[nStep-1];
+  double *yNP = new double[nStep-1];
+  double *y   = new double[nStep-1];
   
   double bkgFullNP    = 0;
   double bkgFull      = 0;
   double signalFullNP = 0;
   double signalFull   = 0;
 
-  for(int j=0; j<10; j++){
+  for(int j=0; j<nStep; j++){
 
-    double cut = j*0.1;
+    double cut = j*0.025;
 
     for(unsigned int i=0; i<samplesSig.size(); i++){
 
@@ -70,16 +70,11 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
       if(j==0){
 	signalFullNP = samplesSig[i].histoNP -> Integral();
 	signalFull   = samplesSig[i].histo   -> Integral();
-	
       }
-
-      cout<<"samplesSig[i].histoNP->Integral() = "<<samplesSig[i].histoNP->Integral()<<endl;
-
-      yNP[j]  = samplesSig[i].histoNP->Integral()/signalFullNP;
-      y[j]    = samplesSig[i].histo->Integral()/signalFull;
-
-      cout<<"yNP["<<j<<"] = "<<yNP[j]<<endl;
-      cout<<"y["<<j<<"]   = "<<y[j]<<endl;
+      else{
+	yNP[j-1]  = samplesSig[i].histoNP->Integral()/signalFullNP;
+	y[j-1]    = samplesSig[i].histo->Integral()/signalFull;
+      }
 
       delete samplesSig[i].histo;
       delete samplesSig[i].histoNP;
@@ -100,13 +95,10 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
 	bkgFullNP      = samplesBkg[i].histoNP->Integral();
 	bkgFull        = samplesBkg[i].histo->Integral();
       }
-
-      xNP[j] = samplesBkg[i].histoNP->Integral()/bkgFullNP;
-      x[j]   = samplesBkg[i].histo->Integral()/bkgFull;
-
-      cout<<"xNP["<<j<<"] = "<<xNP[j]<<endl;
-      cout<<"x["<<j<<"]   = "<<x[j]<<endl;
-
+      else{
+	xNP[j-1] = samplesBkg[i].histoNP->Integral()/bkgFullNP;
+	x[j-1]   = samplesBkg[i].histo->Integral()/bkgFull;
+      }
 
       delete samplesBkg[i].histo;
       delete samplesBkg[i].histoNP;
@@ -122,10 +114,9 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
 
   TCanvas *c = new TCanvas();
   c->cd();
-  c->SetLogx();
 
-  TGraph *gNP = new TGraph(nStep,xNP,yNP);
-  TGraph *g   = new TGraph(nStep,x,y);
+  TGraph *gNP = new TGraph(nStep-1,xNP,yNP);
+  TGraph *g   = new TGraph(nStep-1,x,y);
   
   g   -> SetMarkerColor(2);
   gNP -> SetMarkerColor(1);
@@ -136,7 +127,8 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
   g->Draw("AP");
   gNP->Draw("same P");
 
-
+  c->SetLogx();
+  c->Update();
   TLegend* leg = new TLegend(0.16,0.8,0.65,0.95);
   leg->SetTextSize(0.05);
   //leg->SetTextFont(42);
@@ -149,6 +141,12 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
   info->DrawLatex(0.20,0.7,"m=" + mass + "GeV");
   info->DrawLatex(0.20,0.65,"c#tau=" + ctau + "cm");
 
+  g->GetYaxis()->SetRangeUser(0,1);
+  g->GetXaxis()->SetLimits(0.0001,1);
+  gNP->GetYaxis()->SetRangeUser(0,1);
+  gNP->GetXaxis()->SetLimits(0.0001,1);
+  g->GetYaxis()->SetNdivisions(905);
+  c->Update();
 
   c->SaveAs("output/rocplot_wjets_mass_" + mass + "GeV_ctau_" + ctau + "cm.pdf");
   
