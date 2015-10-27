@@ -28,7 +28,7 @@
 #include "/afs/desy.de/user/t/tlenz/Thesis/rootFiles/plotStyleThesis.h"
 
 
-int makeROCplotForDifferentNHits(TString mass="500", TString ctau="50" ){
+int makeROCplot(TString mass="500", TString ctau="50" ){
 
   TeresaPlottingStyle::init();
 
@@ -150,7 +150,7 @@ int makeROCplotForDifferentNHits(TString mass="500", TString ctau="50" ){
   info->DrawLatex(0.20,0.65,"c#tau=" + ctau + "cm");
 
 
-  c->SaveAs("rocplot_wjets_mass_" + mass + "GeV_ctau_" + ctau + "cm.pdf");
+  c->SaveAs("output/rocplot_wjets_mass_" + mass + "GeV_ctau_" + ctau + "cm.pdf");
   
   return 0;
  
