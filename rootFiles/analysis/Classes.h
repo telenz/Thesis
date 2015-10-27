@@ -11,7 +11,7 @@ public:
   TTree *tree;
 
   TH1D*     histo;
-  TProfile* hprof;
+  TH1D*     histoNP;
 
   int    statistics;
   double purity;
@@ -21,6 +21,7 @@ public:
   vector<double> *trackP;
   vector<double> *trackGenPt;
   vector<double> *trackASmi;
+  vector<double> *trackASmiNP;
   vector<double> *trackHarm2;
   vector<double> *trackCaloIso;
   vector<double> *trackMass;
@@ -65,7 +66,7 @@ public:
     tree=0;
     file=0;
     histo=0;
-    hprof=0;
+    histoNP=0;
     statistics=0;
     purity=0;
 
@@ -75,6 +76,7 @@ public:
     trackP          = 0;
     trackGenPt      = 0;
     trackASmi       = 0;
+    trackASmiNP     = 0;
     trackHarm2      = 0;
     trackCaloIso    = 0;
     trackMass       = 0;
@@ -134,6 +136,8 @@ public:
     tree->SetBranchAddress("trackPt",&trackPt);
     tree->SetBranchStatus("trackDeDxASmi",1);
     tree->SetBranchAddress("trackDeDxASmi",&trackASmi);
+    tree->SetBranchStatus("trackDeDxASmiNP",1);
+    tree->SetBranchAddress("trackDeDxASmiNP",&trackASmiNP);
     tree->SetBranchStatus("trackCaloIsolation",1);
     tree->SetBranchAddress("trackCaloIsolation",&trackCaloIso);
     tree->SetBranchStatus("trackNLostOuter",1);
@@ -153,15 +157,15 @@ public:
   };
 
 
-  void Selection(bool doMatching, int pdgId, double metCut=0, double jetPtCut=0, double ptCutMin=35., double ptCutMax=50.,double iasCutMin=0.0,double iasCutMax=1.0, bool doEcaloCut=0, double ecaloCut=5., bool scaling=0, TString region="CR1"){
+  void Selection(double iasCut){
 
     
-    histo->SetTitle("");
+    histo   -> SetTitle("");
+    histoNP -> SetTitle("");
 
     statistics = 0;
     purity=0;
 
-    //cout<<"doEcaloCut = "<<doEcaloCut<<endl;
     cout<<"Entries = "<<tree->GetEntries()<<endl;
 
 
@@ -170,8 +174,6 @@ public:
       weightReweighting = 1.;
       tree->GetEntry(n);
      
-      //if(met<metCut)                       continue;
-      //if(leadingJetPt<jetPtCut)            continue;
 
       for(unsigned int i=0; i<trackNLostOuter->size(); i++){
 
@@ -182,21 +184,8 @@ public:
 	//if(trackPt->at(i)<ptCutMin)                                     continue;
 	//if(trackPt->at(i)>ptCutMax)                                     continue;
 	//if(trackASmi->at(i)    < iasCutMin)     continue;
-	
-	// Select region of interest
-	
-        // ****************************************** Particle Id **********************************
-	// ****************************************** Particle Id **********************************
-	
-	//histo         -> Fill(0.5);
-	//histo         -> Fill(0.5,weight);
-	//cout<<"trackNValid->at(i) = "<<trackNValid->at(i)<<endl;
-	//histo         -> Fill(trackASmi->at(i),weight*weight_xsec_lumi*weightReweighting);
-	histo         -> Fill(trackNValid->at(i),weight*weight_xsec_lumi*weightReweighting);
-	hprof         -> Fill(trackNValid->at(i),trackASmi->at(i),weight*weight_xsec_lumi*weightReweighting);
-	//if(weight>1) cout<<"weight = "<<weight*weight_xsec_lumi<<endl;
-	//      cout<<"weight_xsec_lumi = "<<weight_xsec_lumi<<endl;
-
+	if(trackASmi -> at(i)>iasCut )   histo         -> Fill(trackASmi   -> at(i),weight*weight_xsec_lumi*weightReweighting);
+	if(trackASmiNP -> at(i)>iasCut ) histoNP       -> Fill(trackASmiNP -> at(i),weight*weight_xsec_lumi*weightReweighting);
 	statistics +=1;
 	//break;
       }
