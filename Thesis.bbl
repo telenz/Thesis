@@ -139,4 +139,23 @@ F.~James, ``{Statistical methods in experimental physics}''.
 \newblock
 %%CITATION = ISBN-9789812567956;%%.
 
+\bibitem{bib:CMS:Tracking_2010}
+{ CMS} Collaboration, ``{Tracking and Vertexing Results from First
+  Collisions}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1258204}{CMS-PAS-TRK-10-001}} (2010).
+
+\bibitem{bib:FEWZ}
+R.~Gavin {et~al.}, ``FEWZ 3.1: A User's Guide''.
+  \url{http://www.hep.anl.gov/fpetriello/FEWZManual_3.1.pdf}.
+\newblock Accessed: 2015-10-27.
+
+\bibitem{bib:ttbar:Czakon_2013}
+M.~Czakon, P.~Fiedler, and A.~Mitov, ``{Total Top-Quark Pair-Production Cross
+  Section at Hadron Colliders Through $O(α\frac{4}{S})$}'', {\em Phys. Rev.
+  Lett.} {\bf 110} (2013) 252004,
+  \href{http://www.arXiv.org/abs/1303.6254}{{\tt arXiv:1303.6254}}.
+\href{http://dx.doi.org/10.1103/PhysRevLett.110.252004}{{\tt
+  doi:10.1103/PhysRevLett.110.252004}}.
+%%CITATION = ARXIV:1303.6254;%%.
+
 \end{thebibliography}\endgroup

@@ -3,19 +3,78 @@
 \section{Simulated samples}
 \label{sec:SimulatedSamples}
 
-\begin{itemize}
-\item Event weights applied for correct Pileup modelling
-\item Detailed information can be found in Experimental setup chapter
-\item Think what to write in the detector chapter to be not wiederholend     
-\end{itemize}
+For the search for chargino-like tracks including the investigation of the various backgrounds to this search, this analysis relies also on simulated sample.
+An extensive introduction to the techniques and tools required for the simulation of SM and beyond SM processes can be found in Section~\ref{blabla}
 
-Detector chapter:
-\begin{itemize}
-\item THINK!
-\end{itemize}
+In the following two sections an overview about the used SM (Section~\ref{sec:SMSamples}) and SUSY samples (Section~\ref{sec:SignalSamples}) is given.
+All samples are reweighted to match the measured distribution of primary vertices in data.
 
-\subsection{SM samples}
+%\begin{itemize}
+%\item Event weights applied for correct Pileup modelling
+%\item Detailed information can be found in Experimental setup chapter
+%\item Think what to write in the detector chapter to be not wiederholend     
+%\end{itemize}
+
+\subsection{SM Background samples}
 \label{sec:SMSamples}
+To investigate the sources of background, various simulated SM samples were used.
+Because of the special format required for the investigation of $dE/dx$ variables, not all SM processes were available.
+As this analysis needs to rely anyways on a data-based background estimation method, 
+this does not constitute a serious problem, but only limit the possibility of an extensive comparison between data and simulation going beyond shape comparisons.
+
+In Table \ref{tab:SMsamples} all SM samples which were available and used in the analysis are listed.
+
+
+\begin{table}[!t]
+\centering
+\caption{Standard Model background samples which were used in the analysis.}
+\label{tab:SMsamples}
+ \makebox[\linewidth]{
+\begin{tabular}{llll}
+\multicolumn{4}{c}{} \\
+\toprule
+ Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ & Size $\left[\text{TB}\right]$\\
+\midrule
+ $W$ + jets                                &  36703.2   &  NNLO \cite{bib:FEWZ} & 70.4 \\
+&&&\\
+ $t\bar{t}$ + jets                         &  245.8    &  NNLO \cite{bib:ttbar:Czakon_2013}& 55.9 \\
+&&&\\
+ Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$) &  3531.9    &  NNLO \cite{bib:FEWZ} & 5.1  \\
+&&&\\
+QCD ($50\gev<\pt<1400\gev$)                &  9374794.2 &  LO   & 44.3\\
+\bottomrule
+\end{tabular}}
+\end{table}  
+
+
+\hspace{5cm}
+
+\renewcommand{\arraystretch}{1.5}
+\setlength{\arrayrulewidth}{1pt}
+\begin{table}[!b]
+\centering
+\caption{Standard Model background samples which were used in the analysis.}
+\label{tab:SMsamples}
+\makebox[\linewidth]{
+\begin{tabular}{llll}
+\multicolumn{4}{c}{} \\
+%\toprule
+ Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ & Size $\left[\text{TB}\right]$\\
+
+\hline\hline
+
+%\midrule
+%\midrule
+ $W$ + jets                                &  36703.2   &  NNLO \cite{bib:FEWZ} & 70.4 \\
+ $t\bar{t}$ + jets                         &  245.8    &  NNLO \cite{bib:ttbar:Czakon_2013}& 55.9 \\
+ Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$) &  3531.9    &  NNLO \cite{bib:FEWZ} & 5.1  \\
+QCD ($50\gev<\pt<1400\gev$)                &  9374794.2 &  LO   & 44.3\\
+%\bottomrule
+\end{tabular}}
+\end{table}  
+Due to the immense size of the samples (between 10 and 80\,TB), a skimming had to be done to make them handable.
+For this a preselection of blabla was applied.
+
 \begin{itemize}
 \item Title: Background samples
 \item To study the background, following samples were used: ... generated with ...
@@ -24,7 +83,7 @@ Detector chapter:
 \item Main Background are ... ???
 \item Only a few were available and thus processed
 \item Most important sample was included: Wjets
-\item ZoNuNu Backgorund not availbale plays also a role (see DT paper!)
+\item ZoNuNu Backgrund not availbale plays also a role (see DT paper!)
 \item Table of SM samples with cross-sections
 \end{itemize}
 
