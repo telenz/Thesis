@@ -9,137 +9,72 @@ An extensive introduction to the techniques and tools required for the simulatio
 In the following two sections an overview about the used SM (Section~\ref{sec:SMSamples}) and SUSY samples (Section~\ref{sec:SignalSamples}) is given.
 All samples are reweighted to match the measured distribution of primary vertices in data.
 
-%\begin{itemize}
-%\item Event weights applied for correct Pileup modelling
-%\item Detailed information can be found in Experimental setup chapter
-%\item Think what to write in the detector chapter to be not wiederholend     
-%\end{itemize}
-
 \subsection{SM Background samples}
 \label{sec:SMSamples}
 To investigate the sources of background, various simulated SM samples were used.
-Because of the special format required for the investigation of $dE/dx$ variables, not all SM processes were available.
-As this analysis needs to rely anyways on a data-based background estimation method, 
+For the investigation of the $dE/dx$ variables, a special data format of the simulated samples is required (called RECO format).
+Unfortunately, not all SM processes were available in the format in which also the information about the energy release in the tracking system is included.
+As this analysis needs to rely anyways on a data-based background estimation method, because of the limited quality of the $dE/dx$ simulation.
 this does not constitute a serious problem, but only limit the possibility of an extensive comparison between data and simulation going beyond shape comparisons.
 
-In Table \ref{tab:SMsamples} all SM samples which were available and used in the analysis are listed.
-
-\newpage
-
+In Table \ref{tab:SMsamples_RECO} all SM samples are listed which were available in the RECO format and are used in the analysis.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!t]
 \centering
-\caption{Standard Model background samples which were used in the analysis.}
-\label{tab:SMsamples}
+\caption{Available and used Standard Model background samples with $\Delta E/\Delta x$ information.}
+\label{tab:SMsamples_RECO}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lll}
 \multicolumn{3}{c}{} \\
 \toprule
  Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ \\%& Size $\left[\text{TB}\right]$\\
 \midrule
-\midrule
- $W$ + jets                                &  36703.2   &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
- $t\bar{t}$ + jets                         &  245.8    &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
- Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$) &  3531.9    &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
- QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)                &  9374794.2 &  LO  \\%% & 44.3\\
+ $W$ + jets                                             &  36703.2     &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
+ $t\bar{t}$ + jets                                      &  245.8       &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
+ Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$)             &  3531.9      &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
+ QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)               &  9374794.2    &  LO  \\%% & 44.3\\
 \bottomrule
 \end{tabular}}
 \end{table}  
+ 
+Due to the immense size of the samples (between 5 and 70\,TB) and in order to match a reasonable storage space a reduction was done by selecting only events with  missing transverse momentum of $MET>50\gev$ 
+and one leading jet with a minimum transeverse momentum of $\pt>70\gev$.
 
+In addition, further simulated samples not containing the energy information were used.
+These are needed for the follwoing purposes:... and are listed in Table~\ref{tab:SMsamples_AOD}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!t]
 \centering
-\caption{Standard Model background samples which were used in the analysis.}
-\label{tab:SMsamples}
+\caption{Used Standard Model background samples without $\Delta E/\Delta x$ information.}
+\label{tab:SMsamples_AOD}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lll}
 \multicolumn{3}{c}{} \\
 \toprule
  Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ \\%& Size $\left[\text{TB}\right]$\\
 \midrule
- $W$ + jets                                &  36703.2   &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
- $t\bar{t}$ + jets                         &  245.8    &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
- Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$) &  3531.9    &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
- QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)                &  9374794.2 &  LO  \\%% & 44.3\\
+ $W$ + jets                                             &  36703.2    &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
+ $t\bar{t}$ + jets                                      &  245.8      &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
+ Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$) + 1         &  3531.9     &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
+ QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)                &  9374794.2  &  LO  \\%% & 44.3\\
 \bottomrule
 \end{tabular}}
 \end{table}  
 
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[!t]
-\centering
-\caption{Standard Model background samples which were used in the analysis.}
-\label{tab:SMsamples}
-\makebox[0.99\textwidth]{
-\begin{tabular}{lll}
-\multicolumn{3}{c}{} \\
-\toprule
- Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ \\%& Size $\left[\text{TB}\right]$\\
-\toprule
- $W$ + jets                                &  36703.2   &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
- $t\bar{t}$ + jets                         &  245.8    &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
- Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$) &  3531.9    &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
- QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)                &  9374794.2 &  LO  \\%% & 44.3\\
-\bottomrule
-\end{tabular}}
-\end{table}  
-
-\newpage
-
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[!t]
-\centering
-\caption{Standard Model background samples which were used in the analysis.}
-\label{tab:SMsamples}
-\makebox[0.99\textwidth]{
-\begin{tabular}{l|l|l}
-\multicolumn{3}{c}{} \\
-\toprule
- Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ \\%& Size $\left[\text{TB}\right]$\\
-\midrule
- $W$ + jets                                &  36703.2   &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
- $t\bar{t}$ + jets                         &  245.8    &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
- Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$) &  3531.9    &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
- QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)                &  9374794.2 &  LO  \\%% & 44.3\\
-\bottomrule
-\end{tabular}}
-\end{table}  
-
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[!t]
-\centering
-\caption{Standard Model background samples which were used in the analysis.}
-\label{tab:SMsamples}
-\begin{tabular}{l|l|l}
-\multicolumn{3}{c}{} \\
-\hline
- Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ \\%& Size $\left[\text{TB}\right]$\\
-\hline
- $W$ + jets                                &  36703.2   &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
- $t\bar{t}$ + jets                         &  245.8    &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
- Z$\rightarrow\ell\ell$ ($\ell=e,\mu,\tau$) &  3531.9    &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
- QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)                &  9374794.2 &  LO  \\%% & 44.3\\
-\hline
-\end{tabular}
-\end{table}  
-
-Due to the immense size of the samples (between 10 and 80\,TB), a skimming had to be done to make them handable.
-For this a preselection of blabla was applied.
-
-\begin{itemize}
-\item Title: Background samples
-\item To study the background, following samples were used: ... generated with ...
-\item Not all SM processes samples were availbale
-\item Not so dramatic, because data based bkg estimation method
-\item Main Background are ... ???
-\item Only a few were available and thus processed
-\item Most important sample was included: Wjets
-\item ZoNuNu Backgrund not availbale plays also a role (see DT paper!)
-\item Table of SM samples with cross-sections
-\end{itemize}
+%\begin{itemize}
+%\item Main Background are ... ???
+%\item Most important sample was included: Wjets
+%\item ZoNuNu Backgrund not availbale plays also a role (see DT paper!)
+%\item Table of SM samples with cross-sections
+%\end{itemize}
 
 \subsection{Signal samples}
 \label{sec:SignalSamples}
+
+For the simulation of the signal samples the matrix-elemt generator \madgraph is used.
+The showering and hadronization is then simulate with Pythia 6.
+The decay of long-lived particles is simulated with \geant.
+
 \begin{itemize}
 \item Lifetime reweighting
 \item Simulation of lifetime in Geant
