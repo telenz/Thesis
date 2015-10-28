@@ -118,36 +118,39 @@ public:
   };
 
   void getTree(TString idir){
-    cout<<"OPEN!"<<endl;
-    cout<<"idir     = "<<idir<<endl;
-    cout<<"filename = "<<filename<<endl;
     TFile *f1 = new TFile(idir + "/" + filename + ".root","READ");
     if(!f1){
       cout<<"File not available: "<<filename<<endl<<endl;
     }
-    f1->GetObject("chiTrackspreselection/Variables",tree);
+    f1->GetObject("chiTracksCandidateTracks/Variables",tree);
   }
   
   void getTreeVariables(){
     tree->SetBranchStatus("*",0);
-    tree->SetBranchStatus("trackEta",1);
-    tree->SetBranchAddress("trackEta",&trackEta);
-    tree->SetBranchStatus("trackPt",1);
-    tree->SetBranchAddress("trackPt",&trackPt);
+    //tree->SetBranchStatus("trackEta",1);
+    //tree->SetBranchAddress("trackEta",&trackEta);
+    tree->SetBranchStatus("trackP",1);
+    tree->SetBranchAddress("trackP",&trackP);
     tree->SetBranchStatus("trackDeDxASmi",1);
     tree->SetBranchAddress("trackDeDxASmi",&trackASmi);
     tree->SetBranchStatus("trackDeDxASmiNP",1);
     tree->SetBranchAddress("trackDeDxASmiNP",&trackASmiNP);
-    tree->SetBranchStatus("trackCaloIsolation",1);
-    tree->SetBranchAddress("trackCaloIsolation",&trackCaloIso);
-    tree->SetBranchStatus("trackNLostOuter",1);
-    tree->SetBranchAddress("trackNLostOuter",&trackNLostOuter);
+    //tree->SetBranchStatus("trackCaloIsolation",1);
+    //tree->SetBranchAddress("trackCaloIsolation",&trackCaloIso);
+    // tree->SetBranchStatus("trackNLostOuter",1);
+    //tree->SetBranchAddress("trackNLostOuter",&trackNLostOuter);
+
+    tree->SetBranchStatus("trackNLostMiddle",1);
+    tree->SetBranchAddress("trackNLostMiddle",&trackNLostMiddle);
+    tree->SetBranchStatus("trackNLostInner",1);
+    tree->SetBranchAddress("trackNLostInner",&trackNLostInner);
+    
     tree->SetBranchStatus("trackNValid",1);
     tree->SetBranchAddress("trackNValid",&trackNValid);
-    tree->SetBranchStatus("MET",1);
-    tree->SetBranchAddress("MET",&met);
-    tree->SetBranchStatus("LeadingJetPt",1);
-    tree->SetBranchAddress("LeadingJetPt",&leadingJetPt);
+    //tree->SetBranchStatus("MET",1);
+    //tree->SetBranchAddress("MET",&met);
+    //tree->SetBranchStatus("LeadingJetPt",1);
+    //tree->SetBranchAddress("LeadingJetPt",&leadingJetPt);
     tree->SetBranchStatus("weight",1);
     tree->SetBranchAddress("weight",&weight);
     tree->SetBranchStatus("weightReweighting",1);
@@ -157,7 +160,7 @@ public:
   };
 
 
-  void Selection(double iasCut){
+  void Selection(int nHitsCut){
 
     
     histo   -> SetTitle("");
@@ -175,19 +178,15 @@ public:
       tree->GetEntry(n);
      
 
-      for(unsigned int i=0; i<trackNLostOuter->size(); i++){
+      for(unsigned int i=0; i<trackASmi->size(); i++){
 
-	//if(trackNValid->at(i)!=15 && trackNValid->at(i)!=16 )                                     continue; 
-	//if(trackNLostOuter->at(i)!=0 )                                     continue; 
-	//if(abs(trackEta->at(i))>0.2)                                 continue;
-	//if(abs(trackEta->at(i))>1.42 && abs(trackEta->at(i))<1.65 )  continue;
-	//if(trackPt->at(i)<ptCutMin)                                     continue;
-	//if(trackPt->at(i)>ptCutMax)                                     continue;
-	//if(trackASmi->at(i)    < iasCutMin)     continue;
-	if(trackASmi -> at(i)>iasCut )   histo         -> Fill(trackASmi   -> at(i),weight*weight_xsec_lumi*weightReweighting);
-	if(trackASmiNP -> at(i)>iasCut ) histoNP       -> Fill(trackASmiNP -> at(i),weight*weight_xsec_lumi*weightReweighting);
+	//if(trackNValid->at(i)<10)                                     continue; 
+	//if(trackP->at(i)<10)                                          continue; 
+	if(trackNLostMiddle->at(i)!=0 )                                     continue; 
+	if(trackNLostInner->at(i) !=0 )                                     continue; 
+	histo         -> Fill(trackASmi   -> at(i),weight*weight_xsec_lumi*weightReweighting);
+	histoNP       -> Fill(trackASmiNP -> at(i),weight*weight_xsec_lumi*weightReweighting);
 	statistics +=1;
-	//break;
       }
     
     }

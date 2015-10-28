@@ -43,14 +43,6 @@ T.~Moroi, M.~Nagai, and M.~Takimoto, ``{Non-Thermal Production of Wino Dark
   doi:10.1007/JHEP07(2013)066}}.
 %%CITATION = ARXIV:1303.0948;%%.
 
-\bibitem{bib:Hisano:DarkMatter_2003}
-J.~Hisano, S.~Matsumoto, and M.~M. Nojiri, ``{Explosive dark matter
-  annihilation}'', {\em Phys. Rev. Lett.} {\bf 92} (2004) 031303,
-  \href{http://www.arXiv.org/abs/hep-ph/0307216}{{\tt arXiv:hep-ph/0307216}}.
-\href{http://dx.doi.org/10.1103/PhysRevLett.92.031303}{{\tt
-  doi:10.1103/PhysRevLett.92.031303}}.
-%%CITATION = HEP-PH/0307216;%%.
-
 \bibitem{bib:CMS:HSCP_8TeV}
 { CMS} Collaboration, ``{Searches for long-lived charged particles in pp
   collisions at $\sqrt{s}$=7 and 8 TeV}'', {\em JHEP} {\bf 07} (2013) 122,
@@ -73,10 +65,17 @@ J.~Hisano, S.~Matsumoto, and M.~M. Nojiri, ``{Explosive dark matter
   CMS Physics Analysis Summary} {\bf
   \href{http://cdsweb.cern.ch/record/1648902}{CMS-PAS-EXO-13-006}} (2014).
 
+\bibitem{bib:pMSSMplot_source_from_DT}
+{CMS Collaboration}, ``Search for disappearing tracks in proton-proton
+  collisions at $\sqrt{s}$ = 8 TeV'', {\em Public CMS Wiki} (2015).
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034}%
+{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034, Topic
+  revision: r9}.
+
 \bibitem{bib:CMS:pMSSMinterpretation_7TeV_PAS}
 { CMS} Collaboration, ``{Phenomenological MSSM interpretation of the CMS 2011
   5fb-1 results}'', {\em CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/155240}{CMS-PAS-SUS-12-030}} (2013).
+  \href{https://cds.cern.ch/record/1552402}{CMS-PAS-SUS-12-030}} (2013).
 
 \bibitem{bib:CMS:tracking_8TeV}
 { CMS} Collaboration, ``{Description and performance of track and
@@ -143,19 +142,5 @@ F.~James, ``{Statistical methods in experimental physics}''.
 { CMS} Collaboration, ``{Tracking and Vertexing Results from First
   Collisions}'', {\em CMS Physics Analysis Summary} {\bf
   \href{https://cds.cern.ch/record/1258204}{CMS-PAS-TRK-10-001}} (2010).
-
-\bibitem{bib:FEWZ}
-R.~Gavin {et~al.}, ``FEWZ 3.1: A User's Guide''.
-  \url{http://www.hep.anl.gov/fpetriello/FEWZManual_3.1.pdf}.
-\newblock Accessed: 2015-10-27.
-
-\bibitem{bib:ttbar:Czakon_2013}
-M.~Czakon, P.~Fiedler, and A.~Mitov, ``{Total Top-Quark Pair-Production Cross
-  Section at Hadron Colliders Through $O(α\frac{4}{S})$}'', {\em Phys. Rev.
-  Lett.} {\bf 110} (2013) 252004,
-  \href{http://www.arXiv.org/abs/1303.6254}{{\tt arXiv:1303.6254}}.
-\href{http://dx.doi.org/10.1103/PhysRevLett.110.252004}{{\tt
-  doi:10.1103/PhysRevLett.110.252004}}.
-%%CITATION = ARXIV:1303.6254;%%.
 
 \end{thebibliography}\endgroup

@@ -37,74 +37,58 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
 
   vector<sample> samplesBkg;
   samplesBkg.push_back((TString) "wjets");
+  //samplesBkg.push_back((TString) "ttjets");
 
-  unsigned int nStep = 40;
+  unsigned int nStep = 20;
 
   double *xNP = new double[nStep-1];
   double *x   = new double[nStep-1];
   double *yNP = new double[nStep-1];
   double *y   = new double[nStep-1];
   
-  double bkgFullNP    = 0;
-  double bkgFull      = 0;
-  double signalFullNP = 0;
-  double signalFull   = 0;
+  for(unsigned int i=0; i<samplesSig.size(); i++){
+    samplesSig[i].getTree("~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_10_27_NoSelection/results/analyzer/ntuples/input_weighted/");
+    samplesSig[i].getTreeVariables();
 
-  for(int j=0; j<nStep; j++){
+    samplesSig[i].histo      = new TH1D(samplesSig[i].filename,samplesSig[i].filename,nStep,0,1);
+    samplesSig[i].histoNP    = new TH1D(samplesSig[i].filename,samplesSig[i].filename,nStep,0,1);
+    samplesSig[i].histo      -> Sumw2();
+    samplesSig[i].histoNP    -> Sumw2();
 
-    double cut = j*0.025;
+    samplesSig[i].Selection(10000);
+  }
 
-    for(unsigned int i=0; i<samplesSig.size(); i++){
+  for(unsigned int i=0; i<samplesBkg.size(); i++){
+    samplesBkg[i].getTree("~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_10_27_NoSelection/results/analyzer/ntuples/input_weighted/");
+    samplesBkg[i].getTreeVariables();
 
-      samplesSig[i].getTree("~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_10_26_NoSelection/results/analyzer/ntuples/input_weighted/");
-      samplesSig[i].getTreeVariables();
-
-      samplesSig[i].histo      = new TH1D(samplesSig[i].filename,samplesSig[i].filename,1,-10,1);
-      samplesSig[i].histoNP    = new TH1D(samplesSig[i].filename,samplesSig[i].filename,1,-10,1);
-      samplesSig[i].histo      -> Sumw2();
-      samplesSig[i].histoNP    -> Sumw2();
-
-      samplesSig[i].Selection(cut);
-
-
-      if(j==0){
-	signalFullNP = samplesSig[i].histoNP -> Integral();
-	signalFull   = samplesSig[i].histo   -> Integral();
-      }
-      else{
-	yNP[j-1]  = samplesSig[i].histoNP->Integral()/signalFullNP;
-	y[j-1]    = samplesSig[i].histo->Integral()/signalFull;
-      }
-
-      delete samplesSig[i].histo;
-      delete samplesSig[i].histoNP;
-    }
-
-    for(unsigned int i=0; i<samplesBkg.size(); i++){
-
-      samplesBkg[i].getTree("~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_10_26_NoSelection/results/analyzer/ntuples/input_weighted/");
-      samplesBkg[i].getTreeVariables();
-      samplesBkg[i].histo      = new TH1D(samplesBkg[i].filename,samplesBkg[i].filename,1,-10,1);
-      samplesBkg[i].histoNP    = new TH1D(samplesBkg[i].filename,samplesBkg[i].filename,1,-10,1);
-      samplesBkg[i].histo      ->Sumw2();
-      samplesBkg[i].histoNP    ->Sumw2();
-
-      samplesBkg[i].Selection(cut);
-
-      if(j==0){
-	bkgFullNP      = samplesBkg[i].histoNP->Integral();
-	bkgFull        = samplesBkg[i].histo->Integral();
-      }
-      else{
-	xNP[j-1] = samplesBkg[i].histoNP->Integral()/bkgFullNP;
-	x[j-1]   = samplesBkg[i].histo->Integral()/bkgFull;
-      }
-
-      delete samplesBkg[i].histo;
-      delete samplesBkg[i].histoNP;
-  
-    }   
+    samplesBkg[i].getTree("~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_10_27_NoSelection/results/analyzer/ntuples/input_weighted/");
+    samplesBkg[i].getTreeVariables();
+    samplesBkg[i].histo      = new TH1D(samplesBkg[i].filename,samplesBkg[i].filename,nStep,0,1);
+    samplesBkg[i].histoNP    = new TH1D(samplesBkg[i].filename,samplesBkg[i].filename,nStep,0,1);
+    samplesBkg[i].histo      ->Sumw2();
+    samplesBkg[i].histoNP    ->Sumw2();
     
+    samplesBkg[i].Selection(100000);
+
+    samplesBkg[i].histo->Draw();
+    samplesBkg[i].histoNP->SetLineColor(2);
+    samplesBkg[i].histoNP->Draw("same");
+  }
+
+  for(unsigned int j=1; j<nStep; j++){
+
+    yNP[j-1]  = samplesSig[0].histoNP->Integral(j,samplesSig[0].histoNP->GetNbinsX())/samplesSig[0].histoNP->Integral();
+    y[j-1]    = samplesSig[0].histo->Integral(j,samplesSig[0].histoNP->GetNbinsX())/samplesSig[0].histo->Integral();
+    
+    xNP[j-1] = samplesBkg[0].histoNP->Integral(j,samplesBkg[0].histoNP->GetNbinsX()+1)/samplesBkg[0].histoNP->Integral();
+    x[j-1]   = samplesBkg[0].histo->Integral(j,samplesBkg[0].histoNP->GetNbinsX()+1)/samplesBkg[0].histo->Integral();
+
+    cout<<"yNP["<<j-1<<"] = "<<yNP[j-1]<<endl;
+    cout<<"y["<<j-1<<"]   = "<<y[j-1]<<endl;
+    cout<<"xNP["<<j-1<<"] = "<<xNP[j-1]<<endl;
+    cout<<"x["<<j-1<<"]   = "<<x[j-1]<<endl<<endl;
+   
   }
 
   // %% STYLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,14 +106,14 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
   gNP -> SetMarkerColor(1);
 
   g->SetTitle("");
-  g->GetXaxis()->SetTitle("bkg efficiency (wjets only)");
+  g->GetXaxis()->SetTitle("bkg efficiency");
   g->GetYaxis()->SetTitle("signal efficiency");
   g->Draw("AP");
   gNP->Draw("same P");
 
   c->SetLogx();
   c->Update();
-  TLegend* leg = new TLegend(0.16,0.8,0.65,0.95);
+  TLegend* leg = new TLegend(0.16,0.8,0.70,0.95);
   leg->SetTextSize(0.05);
   //leg->SetTextFont(42);
   leg->AddEntry(g,"Pixel hits included","p");
@@ -142,9 +126,9 @@ int makeROCplot(TString mass="500", TString ctau="50" ){
   info->DrawLatex(0.20,0.65,"c#tau=" + ctau + "cm");
 
   g->GetYaxis()->SetRangeUser(0,1);
-  g->GetXaxis()->SetLimits(0.0001,1);
+  g->GetXaxis()->SetLimits(0.00001,1);
   gNP->GetYaxis()->SetRangeUser(0,1);
-  gNP->GetXaxis()->SetLimits(0.0001,1);
+  gNP->GetXaxis()->SetLimits(0.00001,1);
   g->GetYaxis()->SetNdivisions(905);
   c->Update();
 

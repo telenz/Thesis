@@ -2,61 +2,61 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
 Database file #1: Thesis.bib
-I was expecting a `,' or a `}'---line 38 of file Thesis.bib
+I was expecting a `,' or a `}'---line 49 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 222 of file Thesis.bib
+I was expecting a `,' or a `}'---line 233 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-EXO-13-006",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 233 of file Thesis.bib
+I was expecting a `,' or a `}'---line 244 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--empty publisher in bib:James:StaticticalMethods_2006
-You've used 22 entries,
+You've used 20 entries,
             2369 wiz_defined-function locations,
-            765 strings with 9257 characters,
-and the built_in function-call counts, 6601 in all, are:
-= -- 829
-> -- 108
+            746 strings with 8956 characters,
+and the built_in function-call counts, 5804 in all, are:
+= -- 732
+> -- 75
 < -- 0
-+ -- 43
-- -- 21
-* -- 486
-:= -- 818
-add.period$ -- 56
-call.type$ -- 22
++ -- 34
+- -- 14
+* -- 431
+:= -- 723
+add.period$ -- 50
+call.type$ -- 20
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 409
-empty$ -- 677
-format.name$ -- 20
-if$ -- 1827
+cite$ -- 21
+duplicate$ -- 364
+empty$ -- 611
+format.name$ -- 13
+if$ -- 1606
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 56
-newline$ -- 107
-num.names$ -- 11
-pop$ -- 118
+int.to.str$ -- 20
+missing$ -- 53
+newline$ -- 96
+num.names$ -- 9
+pop$ -- 106
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 241
+skip$ -- 200
 stack$ -- 0
-substring$ -- 236
-swap$ -- 156
+substring$ -- 212
+swap$ -- 131
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 30
-width$ -- 24
-write$ -- 259
+while$ -- 26
+width$ -- 22
+write$ -- 233
 (There were 3 error messages)
