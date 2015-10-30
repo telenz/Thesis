@@ -1,4 +1,147 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{bib:CMS:RA2_8TeV}
+{ CMS} Collaboration, ``{Search for new physics in the multijet and missing
+  transverse momentum final state in proton-proton collisions at $\sqrt{s}$= 8
+  TeV}'', {\em JHEP} {\bf 06} (2014) 055,
+  \href{http://www.arXiv.org/abs/1402.4770}{{\tt arXiv:1402.4770}}.
+\href{http://dx.doi.org/10.1007/JHEP06(2014)055}{{\tt
+  doi:10.1007/JHEP06(2014)055}}.
+%%CITATION = ARXIV:1402.4770;%%.
+
+\bibitem{bib:CMS:MT2_8TeV}
+{ CMS} Collaboration, ``{Searches for Supersymmetry using the M$_{T2}$ Variable
+  in Hadronic Events Produced in pp Collisions at 8 TeV}'', {\em JHEP} {\bf 05}
+  (2015) 078, \href{http://www.arXiv.org/abs/1502.04358}{{\tt
+  arXiv:1502.04358}}.
+\href{http://dx.doi.org/10.1007/JHEP05(2015)078}{{\tt
+  doi:10.1007/JHEP05(2015)078}}.
+%%CITATION = ARXIV:1502.04358;%%.
+
+\bibitem{bib:ATLAS:JetPlusMET_8TeV}
+{ ATLAS} Collaboration, ``{Search for squarks and gluinos with the ATLAS
+  detector in final states with jets and missing transverse momentum using
+  $\sqrt{s}=8$ TeV proton--proton collision data}'', {\em JHEP} {\bf 09} (2014)
+  176, \href{http://www.arXiv.org/abs/1405.7875}{{\tt arXiv:1405.7875}}.
+\href{http://dx.doi.org/10.1007/JHEP09(2014)176}{{\tt
+  doi:10.1007/JHEP09(2014)176}}.
+%%CITATION = ARXIV:1405.7875;%%.
+
+\bibitem{bib:Ibe:DarkMatter_2015}
+M.~Ibe, S.~Matsumoto, S.~Shirai{ et~al.}, ``{Wino Dark Matter in light of the
+  AMS-02 2015 Data}'', {\em Phys. Rev.} {\bf D91} (2015), no.~11, 111701,
+  \href{http://www.arXiv.org/abs/1504.05554}{{\tt arXiv:1504.05554}}.
+\href{http://dx.doi.org/10.1103/PhysRevD.91.111701}{{\tt
+  doi:10.1103/PhysRevD.91.111701}}.
+%%CITATION = ARXIV:1504.05554;%%.
+
+\bibitem{bib:Moroi:DarkMatter_2013}
+T.~Moroi, M.~Nagai, and M.~Takimoto, ``{Non-Thermal Production of Wino Dark
+  Matter via the Decay of Long-Lived Particles}'', {\em JHEP} {\bf 07} (2013)
+  066, \href{http://www.arXiv.org/abs/1303.0948}{{\tt arXiv:1303.0948}}.
+\href{http://dx.doi.org/10.1007/JHEP07(2013)066}{{\tt
+  doi:10.1007/JHEP07(2013)066}}.
+%%CITATION = ARXIV:1303.0948;%%.
+
+\bibitem{bib:CMS:HSCP_8TeV}
+{ CMS} Collaboration, ``{Searches for long-lived charged particles in pp
+  collisions at $\sqrt{s}$=7 and 8 TeV}'', {\em JHEP} {\bf 07} (2013) 122,
+  \href{http://www.arXiv.org/abs/1305.0491}{{\tt arXiv:1305.0491}}.
+\href{http://dx.doi.org/10.1007/JHEP07(2013)122}{{\tt
+  doi:10.1007/JHEP07(2013)122}}.
+%%CITATION = ARXIV:1305.0491;%%.
+
+\bibitem{bib:CMS:DT_8TeV}
+{ CMS} Collaboration, ``{Search for disappearing tracks in proton-proton
+  collisions at $ \sqrt{s}=8 $ TeV}'', {\em JHEP} {\bf 01} (2015) 096,
+  \href{http://www.arXiv.org/abs/1411.6006}{{\tt arXiv:1411.6006}}.
+\href{http://dx.doi.org/10.1007/JHEP01(2015)096}{{\tt
+  doi:10.1007/JHEP01(2015)096}}.
+%%CITATION = ARXIV:1411.6006;%%.
+
+\bibitem{bib:CMS:HSCPReinterpreation_PAS}
+{ CMS} Collaboration, ``{Reinterpreting the results of the search for
+  long-lived charged particles in the pMSSM and other BSM scenarios}'', {\em
+  CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1648902}{CMS-PAS-EXO-13-006}} (2014).
+
+\bibitem{bib:pMSSMplot_source_from_DT}
+{CMS Collaboration}, ``Search for disappearing tracks in proton-proton
+  collisions at $\sqrt{s}$ = 8 TeV'', {\em Public CMS Wiki} (2015).
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034}%
+{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034, Topic
+  revision: r9}.
+
+\bibitem{bib:CMS:pMSSMinterpretation_7TeV_PAS}
+{ CMS} Collaboration, ``{Phenomenological MSSM interpretation of the CMS 2011
+  5fb-1 results}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1552402}{CMS-PAS-SUS-12-030}} (2013).
+
+\bibitem{bib:CMS:tracking_8TeV}
+{ CMS} Collaboration, ``{Description and performance of track and
+  primary-vertex reconstruction with the CMS tracker}'', {\em JINST} {\bf 9}
+  (2014), no.~10, P10009, \href{http://www.arXiv.org/abs/1405.6569}{{\tt
+  arXiv:1405.6569}}.
+\href{http://dx.doi.org/10.1088/1748-0221/9/10/P10009}{{\tt
+  doi:10.1088/1748-0221/9/10/P10009}}.
+%%CITATION = ARXIV:1405.6569;%%.
+
+\bibitem{bib:Bethe_1930}
+H.~Bethe, ``{Theory of the Passage of Fast Corpuscular Rays Through Matter}'',
+  {\em Annalen Phys.} {\bf 5} (1930) 325--400. [Annalen Phys.397,325(1930)].
+\href{http://dx.doi.org/10.1002/andp.19303970303}{{\tt
+  doi:10.1002/andp.19303970303}}.
+%%CITATION = ANPYA,5,325;%%.
+
+\bibitem{bib:NIST}
+``National Institute of Standards and Technology''.
+  \url{http://physics.nist.gov/cgi-bin/Star/compos.pl?mode=text&matno=014}.
+\newblock Accessed: 2015-10-21.
+
+\bibitem{bib:PDG_2014}
+{ Particle Data Group} Collaboration, ``{Review of Particle Physics}'', {\em
+  Chin. Phys.} {\bf C38} (2014) 090001.
+\href{http://dx.doi.org/10.1088/1674-1137/38/9/090001}{{\tt
+  doi:10.1088/1674-1137/38/9/090001}}.
+%%CITATION = CHPHD,C38,090001;%%.
+
+\bibitem{bib:Landau_1944}
+L.~Landau, ``{On the energy loss of fast particles by ionization}'', {\em J.
+  Phys.(USSR)} {\bf 8} (1944)
+201--205.
+%%CITATION = JOPYA,8,201;%%.
+
+\bibitem{bib:Bichsel:MPV_1988}
+H.~Bichsel, ``{Straggling in Thin Silicon Detectors}'', {\em Rev. Mod. Phys.}
+  {\bf 60} (1988) 663--699.
+\href{http://dx.doi.org/10.1103/RevModPhys.60.663}{{\tt
+  doi:10.1103/RevModPhys.60.663}}.
+%%CITATION = RMPHA,60,663;%%.
+
+\bibitem{bib:Quertenmont_2010}
+L.~Quertenmont, ``{Search for Heavy Stable Charged Particles with the CMS
+  detector at the LHC}''.
+\newblock PhD thesis, Louvain, U.,
+2010.
+\newblock
+%%CITATION = CERN-THESIS-2010-236;%%.
+
+\bibitem{bib:Anderson:CramerVonMises_1962}
+T.~W. Anderson, ``On the Distribution of the Two-Sample Cramér-von Mises
+  Criterion'', {\em The Annals of Mathematical Statistics} {\bf 33} (1962),
+  no.~3, pp. 1148--1159.
+
+\bibitem{bib:James:StaticticalMethods_2006}
+F.~James, ``{Statistical methods in experimental physics}''.
+\newblock
+2006.
+\newblock
+%%CITATION = ISBN-9789812567956;%%.
+
+\bibitem{bib:CMS:Tracking_2010}
+{ CMS} Collaboration, ``{Tracking and Vertexing Results from First
+  Collisions}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1258204}{CMS-PAS-TRK-10-001}} (2010).
 
 \bibitem{bib:FEWZ}
 R.~Gavin {et~al.}, ``FEWZ 3.1: A User's Guide''.
@@ -62,5 +205,10 @@ B.~Fuks, M.~Klasen, D.~R. Lamprea{ et~al.}, ``{Precision predictions for
 \href{http://dx.doi.org/10.1140/epjc/s10052-013-2480-0}{{\tt
   doi:10.1140/epjc/s10052-013-2480-0}}.
 %%CITATION = ARXIV:1304.0790;%%.
+
+\bibitem{bib:CMS:Tracking_7TeV_PAS}
+{ CMS} Collaboration, ``{Tracking and Primary Vertex Results in First 7 TeV
+  Collisions}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cds.cern.ch/record/1279383/}{CMS-PAS-TRK-10-005}} (2010).
 
 \end{thebibliography}\endgroup
