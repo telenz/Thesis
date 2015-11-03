@@ -211,4 +211,17 @@ B.~Fuks, M.~Klasen, D.~R. Lamprea{ et~al.}, ``{Precision predictions for
   Collisions}'', {\em CMS Physics Analysis Summary} {\bf
   \href{http://cds.cern.ch/record/1279383/}{CMS-PAS-TRK-10-005}} (2010).
 
+\bibitem{bib:CMS:DM_8TeV_AN}
+A.~B. et. al., ``Search for New Physics in the Monojet final state at CMS'',
+  {\em CMS Analysis Note} {\bf CMS-AN-12-421} (2012). Internal documentation.
+
+\bibitem{bib:CMS:DM_8TeV}
+{ CMS} Collaboration, ``{Search for dark matter, extra dimensions, and
+  unparticles in monojet events in proton–proton collisions at $\sqrt{s} = 8$
+  TeV}'', {\em Eur. Phys. J.} {\bf C75} (2015), no.~5, 235,
+  \href{http://www.arXiv.org/abs/1408.3583}{{\tt arXiv:1408.3583}}.
+\href{http://dx.doi.org/10.1140/epjc/s10052-015-3451-4}{{\tt
+  doi:10.1140/epjc/s10052-015-3451-4}}.
+%%CITATION = ARXIV:1408.3583;%%.
+
 \end{thebibliography}\endgroup
