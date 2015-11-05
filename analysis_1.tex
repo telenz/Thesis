@@ -486,16 +486,18 @@ In Fig.~\ref{fig:ProbabilityTemplate} the probability distribution template for 
   \caption{Cumulative probability for a MIP to release a $\Delta E/ \Delta x$ (y-axis) vs. the pathlength (x-axis) in data (left) and simulation (right) for the pixel tracker.}
   \label{fig:ProbabilityTemplate}
 \end{figure}
-A comparison between the energy release by MIPs (\ias) in data and simulation for high-purity tracks (as defined in \cite{bib:CMS:Tracking_2010}) with \pt$>10\gev$ and $|\eta|<2.1$ can be found in Fig.~\ref{fig:Data-MC-Dedx_MIPs}.
+A comparison between the energy release by MIPs (\ias) in data and simulation for good quality tracks (high-purity as defined in \cite{bib:CMS:Tracking_2010} and minimum number of eight hits) with $p>5\gev$ and $|\eta|<2.1$ can be found in Fig.~\ref{fig:Data-MC-Dedx_MIPs}.
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/htrackASmiSmallRange_log_MIPs.pdf}
   \end{tabular}
-  \caption{Normalized \ias distribution for MIPs in data and simulation for high-purity tracks (as defined in \cite{bib:CMS:Tracking_2010}) with \pt$>10\gev$ and $|\eta|<2.1$. \textcolor{red}{FIXME: take MIP selection}}
+  \caption{Normalized \ias distribution for MIPs from the minimum bias sample in data and simulation for good quality tracks with $p>5\gev$ and $|\eta|<2.1$.}
   \label{fig:Data-MC-Dedx_MIPs}
 \end{figure}
-It shows discrepancies up tp 100\% which is caused by the non-optimal simulation of $dE/dx$.\\
+$dE/dx$ shows good agreement in data and simulation for $\ias<0.1$.
+For larger values, \ias shows a larger decrease in simulation than in measured data.
+That's the reason why a data-based approach for analyses exploiting $dE/dx$ information is needed.\\
 
 
 \subsection{Efficiency improvements}

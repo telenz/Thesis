@@ -3,25 +3,27 @@
 \section{Simulated samples}
 \label{sec:SimulatedSamples}
 
-For the investigation of the various backgrounds to this search, the analysis relies also on simulated sample.
+For the investigation of the various backgrounds, the analysis relies also on simulated samples.
 An extensive introduction to the techniques and tools required for the simulation of SM and beyond SM processes can be found in Section~\ref{FIXME}.
 
-In the following two sections an overview about the used SM (Section~\ref{sec:SMSamples}) and SUSY samples (Section~\ref{sec:SignalSamples}) is given.
+In the following two sections an overview about the SM (Section~\ref{sec:SMSamples}) and SUSY samples (Section~\ref{sec:SignalSamples}) used to design the search is given.
 All samples are reweighted to match the measured distribution of primary vertices in data.
 
 \subsection{SM Background samples}
 \label{sec:SMSamples}
-To investigate the sources of background, various simulated SM samples were used.
+To investigate the sources of background, various simulated SM samples are used.
 In order to have the possibility to make use of the $dE/dx$ variables, a special data format of the simulated samples is required (called RECO format).
 Unfortunately, not all SM processes were available in this format in which also the information about the energy release in the tracking system is included.
-However, as this analysis needs to rely anyways on a data-based background estimation method, because of the limited quality of the $dE/dx$ simulation.
-this does not constitute a serious problem, but only limit the possibility of an extensive comparison between data and simulation going beyond shape comparisons.
+However, as this analysis needs to rely anyways on a data-based background estimation method, because of the limited quality of the $dE/dx$ simulation,
+it does not constitute a serious problem, but only limit the possibility of an extensive comparison between data and simulation going beyond shape comparisons.
+\footnote{E.g. the background process $Z\rightarrow\nu\nu$ sample is not available, which can possibly contribute via the fake background to the search.
+However, as the rate of fakes is independent of the underlying process, this background can be studied with the same quality with a $W$ + jets sample.}
 
 In Table \ref{tab:SMsamples_RECO} all SM samples are listed which were available in the RECO format and are used in the analysis.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!b]
 \centering
-\caption{Available and used Standard Model background samples containing $\Delta E/\Delta x$ information.}
+\caption{Available Standard Model background samples containing $\Delta E/\Delta x$ information which are used for background estimation studies.}
 \label{tab:SMsamples_RECO}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lll}
@@ -44,7 +46,7 @@ They are listed in Table~\ref{tab:SMsamples_AOD}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!t]
 \centering
-\caption{Used Standard Model background samples without $\Delta E/\Delta x$ information.}
+\caption{Standard Model background samples without $\Delta E/\Delta x$ information.}
 \label{tab:SMsamples_AOD}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lll}
@@ -221,11 +223,12 @@ Dataset  & Luminosity [\fbinv]   \\
 \end{tabular}}
 \end{table}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Candidate track selection}
+\subsection{Analysis selection}
 
 In order to supress events originating from SM processes (such as QCD-multijet events, $W$+jets, etc. ), a selection for signal-like tracks is applied which shall be described in the following sections.
 The candidate track selection follows closely the selection required in \cite{bib:CMS:DT_8TeV}.\\
 
+\subsubsection*{Event based selection}
 First, to supress cosmic events and noise from the beam halo a selection on the quality of the vertex can be applied.
 This selection includes requirements of the position of the vertex with respect to the beam axes and the number of degrees of freedom (which is strongly correlated to the number of tracks originating from the vertex) \cite{bib:CMS:Tracking_7TeV_PAS}:  
 \begin{itemize}
@@ -279,7 +282,7 @@ Therefore the following two requirements are suffiecient to supress QCD-multijet
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item $\Delta\phi$ between any of two subleading jets (with $\pt<20\gev$ and $|\eta|<4.5$) in the event must be smaller than 2.5: \mbox{$\Delta\phi\left( j_i, j_j\right)<2.7$}.
-\item $\Delta\phi$ between any of the two leading jets (with $\pt<20\gev$ and $|\eta|<4.5$) and the \met must be larger than 0.5: \mbox{$\Delta\phi\left( j_{1,2}, \met \right) > 0.5$.} 
+\item $\Delta\phi$ between any of the two leading jets (with $\pt<20\gev$ and $|\eta|<4.5$) and the \met must be larger than 0.5: \mbox{$\Delta\phi\left( j_{1,2}, \metvec \right) > 0.5$.} 
 \end{itemize}
 In Fig.~\ref{fig:QCDcuts}, the maximal $\Delta \phi$ of any of two subleading jets  and the minimal $\Delta \phi$ between the \met vector and the first two subleading jets for the QCD-multijet data set and two different signal datasets is shown.\\
 \begin{figure}[!t]
@@ -293,17 +296,18 @@ In Fig.~\ref{fig:QCDcuts}, the maximal $\Delta \phi$ of any of two subleading je
 \end{figure}
 \hspace{0.9cm}
 
+\subsubsection*{Selection of high quality and non SM-like tracks}
 After the reduction of background processes with event based variables, a track based selection is carried out.
 To get an optimized selection for possible chargino tracks several signal track characteristics are exploited.
 
 First a selection of tracks of good quality is enforced:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
-\item Only tracks are considered within the tracker acceptance: $|\eta|<2.1$.
 \item The track must be of ``high purity'' as defined in~\cite{bib:CMS:Tracking_2010}.
-\item No missing middle or inner hits of the track is required: $N_{\text{lost}}^{\text{middle/inner}}=0$
-\item The radial distance of the track to the primary vertex must be within 0.02\cm.
-\item The longitudial distance of the track to the primary vertex must be within  0.5\cm.
+\item The track is required to have no missing middle or inner hits: $N_{\text{miss}}^{\text{middle/inner}}=0$
+\item The radial and longitudinal  distance of the track to the primary vertex must be small: \mbox{$|d0|<0.02\cm$}, \mbox{$|dz|<0.5\cm$}.
+\item Only tracks are considered which are within the tracker acceptance taken also an isolation cone into account: $|\eta|<2.1$.
+\item A first loose selection of tracks in the transverse momentum is applied: \mbox{$\pt>10\gev$}.
 \end{itemize}
 In Figs~\ref{fig:Eta_HighPurity},~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the various track selection cuts are shown.\\
 \begin{figure}[!t]
@@ -335,15 +339,16 @@ In Figs~\ref{fig:Eta_HighPurity},~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the po
 \end{figure}
 
 Finally, to reject background tracks emerging from SM processes, an electron, muon and tau veto is applied.
-That means all candidate tracks are rejected in case theyr are in a cone of $\Delta R<0.15$ around a reconstructed electron, muon or tau.
+That means all candidate tracks are rejected when they are in a cone of $\Delta R<0.15$ around a reconstructed electron, muon or tau.
 Additionally, the candidate track must not be within a cone of $\Delta R<0.5$ around a subleading jet ($\pt<20\gev$ and $|\eta|<4.5$).
-Unfortunately, the veto cuts lack efficiency in some of the detector directions.
+
+Unfortunately, the lepton veto cuts lack efficiency in some of the detector directions.
 For example, the reconstruction of an electron easily fails in the direction of a dead ECAL cell.
 This reduces the discrimination power of the eletron veto.
-For this reason, tracks which point to a dead ECAL cells are rejected.
+For this reason, tracks which point to a dead ECAL cell within $\Delta R < 0.05$  are rejected.
 A general list of dead and noisy ecal cells is provided centrally at CMS.
-Further dead cells were identified within a study in \cite{bib:CMS:DT_8TeV} resulting in a total number of 1234 dead/noisy ECAL channels. 
-These are illustrated in Fig.~\ref{fig:DeadECALmap}.
+Further dead cells were identified within a study in \cite{bib:CMS:DT_8TeV} resulting in a total number of 1234 dead or noisy ECAL channels. 
+These are illustrated in Fig.~\ref{fig:DeadECALmap} where a map of all ECAL channels not considered in the search is given.
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
@@ -352,8 +357,9 @@ These are illustrated in Fig.~\ref{fig:DeadECALmap}.
   \caption{Visiualizaion of dead or noisy ecal cells in the $\phi - \eta$ plane.}
   \label{fig:DeadECALmap}
 \end{figure}
-Additionally, also tracks which point torwards intermodule gaps of ECAL cells or to the ECAL barrel endcap gap at $1.42<\eta<1.65$ are rejected.
-A list of all ECAL intermodule gaps is given in Table~\ref{tab:IntermoduleGaps}.
+
+Additionally, also tracks which point torwards intermodule gaps of ECAL cells or to the ECAL barrel endcap gap at $1.42<|\eta|<1.65$ are rejected.
+A list of the ECAL intermodule gaps is given in Table~\ref{tab:IntermoduleGaps}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!hbt]
 \centering
@@ -376,48 +382,85 @@ $\eta$-ranges     \\
 \end{tabular}}
 \end{table}  
 
-The muon reconstruction is less efficient for muons in detector regions with bad CSC cells.
-Thus, also tracks pointing in these regions are rejected.
+The muon reconstruction is less efficient for muons in detector regions with bad cathode strip chambers (CSC).
+Thus, also tracks pointing in these regions within a distance of $\Delta R<0.25$ are rejected.
 
+These considerations lead to the following selection cuts:
 
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
-\item The track must have a minimal transverse momentum of 10\gev: \mbox{$\pttrk>10\gev$.}
-\item No further substantial activity must be around the candidate track: \mbox{blabla.}
+\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed standalone, tracker or global muon with a transverse momentum larger than 10\gev.
+\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed electron with a transverse momentum larger than 10\gev.
+\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed tau with $\pt>20\gev$ and $|\eta|<2.3$.
+\item No subleading jet ($\pt<20\gev$ and $|\eta|<4.5$) is allowed around the track in a cone of $\Delta R< 0.5$
+\item The track must not be within a cone of $\Delta R<0.05$ to a dead or noisy ECAL cell.
+\item The track must not point in the direction of the ECAL intermodules gap lsted in Table~\ref{tab:IntermoduleGaps}.
+\item The track must not be within a cone of $\Delta R<0.25$ to a bad CSC.
+\item Veto any track pointing to the region between ECAL barrel and endcap at $1.42<|\eta|<1.65$
 \end{itemize}
 
-Further discrimination power shows the isolation of the track which is defined as the sum of all track's transverse momentum in a cone of $\Delta R < 0.3$ around the candidate track.
-See Figure~\ref{blabla} for a comparison of signal against background.\\
-
-Finally, a first loose selection on the transverse momentum is enforced:
-Summary:
+\subsubsection*{Selection of candidate tracks}
+Finally, a last few pronounced charecteristics of the chargino track are exploited.
+As the chargino is produced in a very clean environment, the isolation of the track (defined as the sum of all track's transverse momentum in a cone of $\Delta R < 0.3$ around the candidate track) is a well discriminating variable.
+Furthermore, in case the charginos decay inside the tracker, there is no energy deposition in the calorimeters in the direction of the track.
+The concrete selection cuts are as follows
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
-\item The track must have a minimal transverse momentum of 10\gev: \mbox{$\pttrk>10\gev$.}
-\item No further substantial activity must be around the candidate track: \mbox{blabla.}
+\item No further substantial track activity (less than 10\%) is allowed in a cone of $\Delta R < 0.3$ around the candidate track: \mbox{$\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$}
+\item Little calorimeter energy deposits in a cone of $\Delta R < 0.5$ around the track: \mbox{$\ecalo<5\gev$}.
 \end{itemize}
+These two variables are shown in Fig.~\ref{fig:TrackIso_Ecalo_After_Preselection} after the full previous selection.\\
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackIsolationSmallRange_lin_afterTrackPreselection.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackCaloIsolationSmallRange_lin_afterTrackPreselection.pdf}
+  \end{tabular}
+  \caption{Track isolation (left) and calorimeter isolation (right) of the candidate track after the full previous selection.}
+  \label{fig:TrackIso_Ecalo_After_Preselection}
+\end{figure}
 
-A summary of all preselection criteria is given in Appendix~\ref{app:blabla}.
+As emphasized before, this analysis aims to be as general as possible to search for charginos with different lifetimes.
+Although the search is designed with a focus on charginos which decay inside the tracker, no explicit selection cut is required in the number of missing outer hits.
+For charginos with very short mean lifetimes it was checked, whether a sensitivity increase can be achieved by imposing a cut on $N_{\text{miss}}^{\text{outer}}$.
+However, this is not the case and therefore a selection in $N_{\text{miss}}^{\text{outer}}$ is not considered.
 
-Given the presented preselection requirements, a set of four variables remain, which shall be used in the main selection of this analysis, where an optimization is conducted.
-These are the transverse momentum of the track, the energy release per path length of the track, the energy deposit in the calorimeters and the number of missing outer hits.
-Explicetly no selection of the number of missing outer hits is applied.
+A summary of all candidate track selection criteria is given in Appendix~\ref{app:blabla}.\\
+
+
+Given the presented candidate selection requirements, a set of two variables remain, which are highly discriminating:
+The transverse momentum and the energy release per path length of the candidate track.
+In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the application of the full candidate track selection.
+\begin{figure}[!tb]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackPtSmallRange_log_afterPreselection.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackASmiSmallRange_log_afterPreselection.pdf}
+  \end{tabular}
+  \caption{Candidate track \pt (left) and \ias (right) after the full candidate selection.}
+  \label{fig:PtAndIasAfterFullPreselection}
+\end{figure}
+\hspace{0.9cm}
+These variables are used to optimise the sensitivity of the search in the variable $S/(S+B)$ (S=number of signal events, B=number of background events).
+The optimisation process will be explained in Sec~\ref{blabla}.
+However, before the optimisation can be accomplished, the characterization end estimation of the background is needed.
+This topic will be discussed in the following section.
 
 
 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Main discriminating variables}
-\begin{itemize}
-\item dE/dx
-\item pt
-\item Show some MC signal bkg comparioson plots (only Wjets?)
-\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Sources of backgrounds}
 \label{sec:SourcesOfBackgrounds}
+After the application of the candidate track selection explained in the previous section the background arising from SM processes is dramatically reduced.
+Still, it happens sometimes that a electron, muon or tau fails reconstruction due to other reasons, which will be explained in detail in the following section.
+Furthermore, it is possible that a track is reconstructed which is not originating from only one particle.
+
+
+
+
 \begin{itemize}
 \item Background consist of particles which make high energy deposits and are high pt
 \item In general: Low background search
