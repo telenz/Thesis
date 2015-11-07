@@ -225,7 +225,7 @@ Dataset  & Luminosity [\fbinv]   \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Analysis selection}
 
-In order to supress events originating from SM processes (such as QCD-multijet events, $W$+jets, etc. ), a selection for signal-like tracks is applied which shall be described in the following sections.
+In order to supress events originating from SM processes (such as QCD-multijet events, \WJets, etc. ), a selection for signal-like tracks is applied which shall be described in the following sections.
 The candidate track selection follows closely the selection required in \cite{bib:CMS:DT_8TeV}.\\
 
 \subsubsection*{Event based selection}
@@ -245,8 +245,8 @@ In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the trans
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/hMet_log.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/h1stjetpt_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/hMet_log_4Signals_noSelection.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/h1stjetpt_log_4Signals_noSelection.pdf}
   \end{tabular}
   \caption{Distribution of missing transverse momentum (left) and the transverse momentum of the leading jet (right) for four different signal samples}
   \label{fig:SignalMET+SignalJetPt}
@@ -288,8 +288,8 @@ In Fig.~\ref{fig:QCDcuts}, the maximal $\Delta \phi$ of any of two subleading je
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/hDeltaPhiMaxbeforeCut_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/hDeltaPhiMaxbeforeCut_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/hDeltaPhiMaxbeforeCut_lin_afterTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/hDeltaPhiMaxbeforeCut_lin_afterTrigger.pdf}
   \end{tabular}
   \caption{Maximal $\Delta \phi$ between any of two subleading jets (left) and the minimal $\Delta \phi$  between the \met vector and the first two jets (right) normalized to unit area after the trigger selection.}
   \label{fig:QCDcuts}
@@ -313,8 +313,8 @@ In Figs~\ref{fig:Eta_HighPurity},~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the po
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackEta_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackHighPurity_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackEta_lin_QCDsupression.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackHighPurity_lin_QCDsupression.pdf}
   \end{tabular}
   \caption{Distribution of the track's pseudorapitity (left) and the number of tracks flagged and not flagged ``high-purity'' (right) after trigger requirements and QCD supression cuts.}
   \label{fig:Eta_HighPurity}
@@ -322,8 +322,8 @@ In Figs~\ref{fig:Eta_HighPurity},~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the po
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackNLostMid_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackNLostInner_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackNLostMid_lin_QCDsupression.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackNLostInner_lin_QCDsupression.pdf}
   \end{tabular}
   \caption{Number of missing middle (left) and inner (right) hits of background and signal tracks after trigger requirements and QCD supression cuts.}
   \label{fig:LostHits}
@@ -331,10 +331,11 @@ In Figs~\ref{fig:Eta_HighPurity},~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the po
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackd0_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackdz_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackd0_lin_QCDsupression.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackdz_lin_QCDsupression.pdf}
   \end{tabular}
-  \caption{Absolute value of the radial (left) and longitudinal (right) distance between the track and the primary vertex after trigger requirements and QCD supression cuts.}
+  \caption{Absolute value of the radial (left) and longitudinal (right) distance between the track and the primary vertex after trigger requirements and multijet supression cuts. 
+           Overflow entries are added to the last bin.}
   \label{fig:d0_dz}
 \end{figure}
 
@@ -354,7 +355,7 @@ These are illustrated in Fig.~\ref{fig:DeadECALmap} where a map of all ECAL chan
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/DeadECALMap.pdf}
   \end{tabular}
-  \caption{Visiualizaion of dead or noisy ecal cells in the $\phi - \eta$ plane.}
+  \caption{Visualization of dead and noisy ecal cells in the detector's $\phi - \eta$ plane.}
   \label{fig:DeadECALmap}
 \end{figure}
 
@@ -390,18 +391,18 @@ These considerations lead to the following selection cuts:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed standalone, tracker or global muon with a transverse momentum larger than 10\gev.
-\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed electron with a transverse momentum larger than 10\gev.
+\item Veto all tracks within a cone of $\Delta R<0.15$ to a reconstructed electron with a transverse momentum larger than 10\gev.
 \item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed tau with $\pt>20\gev$ and $|\eta|<2.3$.
 \item No subleading jet ($\pt<20\gev$ and $|\eta|<4.5$) is allowed around the track in a cone of $\Delta R< 0.5$
-\item The track must not be within a cone of $\Delta R<0.05$ to a dead or noisy ECAL cell.
-\item The track must not point in the direction of the ECAL intermodules gap lsted in Table~\ref{tab:IntermoduleGaps}.
+\item Veto tracks within a cone of $\Delta R<0.05$ to a dead or noisy ECAL cell.
+\item The track must not point in the direction of the ECAL intermodules gap listed in Table~\ref{tab:IntermoduleGaps}.
 \item The track must not be within a cone of $\Delta R<0.25$ to a bad CSC.
 \item Veto any track pointing to the region between ECAL barrel and endcap at $1.42<|\eta|<1.65$
 \end{itemize}
 
 \subsubsection*{Selection of candidate tracks}
 Finally, a last few pronounced charecteristics of the chargino track are exploited.
-As the chargino is produced in a very clean environment, the isolation of the track (defined as the sum of all track's transverse momentum in a cone of $\Delta R < 0.3$ around the candidate track) is a well discriminating variable.
+As the chargino is produced in a very clean environment, the isolation of the track (defined as the sum of all track's transverse momentum in a cone of $\Delta R < 0.3$ around the candidate track) can discriminate bsignal against background events.
 Furthermore, in case the charginos decay inside the tracker, there is no energy deposition in the calorimeters in the direction of the track.
 The concrete selection cuts are as follows
 \begin{itemize}
@@ -413,8 +414,8 @@ These two variables are shown in Fig.~\ref{fig:TrackIso_Ecalo_After_Preselection
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackIsolationSmallRange_lin_afterTrackPreselection.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackCaloIsolationSmallRange_lin_afterTrackPreselection.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackIsolationSmallRange_lin_afterCandidateSelection.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackCaloIsolationSmallRange_lin_afterCandidateSelection.pdf}
   \end{tabular}
   \caption{Track isolation (left) and calorimeter isolation (right) of the candidate track after the full previous selection.}
   \label{fig:TrackIso_Ecalo_After_Preselection}
@@ -424,7 +425,15 @@ As emphasized before, this analysis aims to be as general as possible to search 
 Although the search is designed with a focus on charginos which decay inside the tracker, no explicit selection cut is required in the number of missing outer hits.
 For charginos with very short mean lifetimes it was checked, whether a sensitivity increase can be achieved by imposing a cut on $N_{\text{miss}}^{\text{outer}}$.
 However, this is not the case and therefore a selection in $N_{\text{miss}}^{\text{outer}}$ is not considered.
-
+An illustration of the efficiency of the selection cuts for two different signal samples and simulated background is shown in Fig.~\ref{fig:CutFlow}.
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.99\textwidth]{figures/analysis/countsTrackCriteria_log.pdf}
+  \end{tabular}
+  \caption{Efficiency of the analysis selction cuts for simulated signal and background samples.}
+  \label{fig:CutFlow}
+\end{figure}
 A summary of all candidate track selection criteria is given in Appendix~\ref{app:blabla}.\\
 
 
@@ -434,10 +443,12 @@ In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaini
 \begin{figure}[!tb]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackPtSmallRange_log_afterPreselection.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackASmiSmallRange_log_afterPreselection.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackPt_log_fullSelectionNoTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackASmiSmallRange_log_fullSelectionNoTrigger.pdf}
   \end{tabular}
-  \caption{Candidate track \pt (left) and \ias (right) after the full candidate selection.}
+  \caption{Candidate track \pt (left) and \ias (right) after the full candidate track selection for signal and $\WJets$ events. 
+           Because of high event weights of the $\WJets$ sample, the \met and \ptfirstjet cuts are loosen to $\met>0\gev$ and $\ptfirstjet>70\gev$. 
+           As these variables are not expected to be correlated with the track charecteristics it does not incluences the shape of the shown distributions.}
   \label{fig:PtAndIasAfterFullPreselection}
 \end{figure}
 \hspace{0.9cm}
@@ -447,78 +458,4 @@ However, before the optimisation can be accomplished, the characterization end e
 This topic will be discussed in the following section.
 
 
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Sources of backgrounds}
-\label{sec:SourcesOfBackgrounds}
-After the application of the candidate track selection explained in the previous section the background arising from SM processes is dramatically reduced.
-Still, it happens sometimes that a electron, muon or tau fails reconstruction due to other reasons, which will be explained in detail in the following section.
-Furthermore, it is possible that a track is reconstructed which is not originating from only one particle.
-
-
-
-
-\begin{itemize}
-\item Background consist of particles which make high energy deposits and are high pt
-\item In general: Low background search
-\end{itemize}
-\subsection{Fake tracks}
-\begin{itemize}
-\item Definition of fake tracks
-\item How can they fake the signal
-\end{itemize}
-\subsection{Muons}
-\begin{itemize}
-\item How can muons fake the signal
-\end{itemize}
-\subsection{Pions}
-\begin{itemize}
-\item How can pions fake the signal
-\end{itemize}
-\subsection{Electrons}
-\begin{itemize}
-\item How can electrons fake the signal
-\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Background estimation methods}
-\label{sec:BackgroundEstimation}
-\subsection{Fake background}
-\subsection{Leptonic background}
-\subsection{Systematic uncertainties}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Optimization of search sensitivity}
-\label{sec:Optimization}
-\begin{itemize}
-\item Show plots
-\item show table
-\item Include NlostOuter here, too
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Statistical Methods/ Limit setting}
-\label{sec:LimitSetting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Results}
-\label{sec:Results}
-\begin{itemize}
-\item Data cutflowtable
-\item Tables with results
-\item One plot (4 bins: Prediction and data)
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Interpretation}
-\label{sec:Interpretation}
-\subsection{Systematic uncertainties of simulated signal samples}
-\subsection{Exclusion limits}
-\begin{itemize}
-\item 1-d limits
-\item 2-d limits
-\end{itemize}
 
