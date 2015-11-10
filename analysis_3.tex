@@ -2,45 +2,71 @@
 \section{Characterisation and estimation of the Standard Model backgrounds}
 \label{sec:BackgroundEstimation}
 After the application of the candidate track selection explained in the previous section the background arising from Standard Model processes is dramatically reduced.
-However, it still happens sometimes that a electron, muon or tau fails reconstruction, which will be explained in detail in the following section~\ref{sec:LeptonicBkg}.
+However, it still happens sometimes that an electron, muon or tau fails reconstruction.
+The underlying mechanism and the methods to estimate the leptonic backgound will be in detail explained in Section~\ref{sec:LeptiniBkg}.
 Furthermore, there is the possibility that a track is reconstructed out of a set of hits which do not origin from only one single particle.
-Such tracks will be called ``fake tracks'' in the following. 
-Background tracks arising from wrong reconstruction will be explained in Sec.~\ref{sec:FakeBkg}
+Such tracks are called ``fake tracks''. 
+Background tracks arising from the wrong combination of hits will be explained in the following Section~\ref{sec:FakeBkg}
 
-The composition of the background is shown in Fig.~\ref{fig:BkgComposition}.
-\begin{figure}[!tb]
+The composition of the background after the candidate track selection is shown in Fig.~\ref{fig:BkgComposition}.
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/htrackgenParticleSmallRange_lin_chiTracksfullSelectionTrigger.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/htrackgenParticleSmallRange_lin_chiTracksfullSelectionPlusIasTrigger.pdf}
   \end{tabular}
-  \caption{bla bla}
+  \caption{Background composition after the full candidate track selection (left) and after the full candidate track selection plus an additional selection cut of \mbox{$\ias>0.05$} (right). 
+           Given the limited size of the simulated \WJets dataset, the uncertainty of the composition is accordingly large.}
   \label{fig:BkgComposition}
 \end{figure}
-This composiiton can change significantly when imposing further selection cuts on \pt and \ias.
+This composition can change significantly when imposing further selection cuts on \pt and \ias.
 This, however, will be addressed during the optimisation procedure.
-To get a feeling how the composition of the background is affected by further cuts on one of the main variable \ias, 
-the background composition is shown in Fig~\ref{fig:BkgComposition} with the analysis selection plus an additional \ias cut of 0.5.
-As can be already seen in this figure the fake background becomes more important when apply also a selection on \ias, 
-especially because the fake background is not only present in \WJets events but essentially in all Standard Model processes with missing energy. \\
+To get a feeling how the composition of the background is affected by further cuts on one of the main variables, 
+the background composition is also shown with the candidate track selection plus an additional \ias cut of 0.05.
+It can be seen that the fake background is less reduced by an additional selection cut on \ias.
+This gains even more in importance when considering all sources of fake tracks.
+The fake background is not only present in \WJets events but essentially in all Standard Model processes.\\
 
 Still, also the leptonic background can be important.
-This is not possible to study with simulation because of the lack of statistics.
-Additionally, when the simulation is not fully correct in simulating the operativeness of every single detector module, the simulation could highly underestimate the leptonic background.
-Thus, a data based background estimation approach is needed.
+Unfortunately, because of the limited size of the simulated \WJets dataset, it is not possible to study the leptonic contribution to the background with simulated events.
+Furthermore, when the simulation of the operativeness of every single detector module is not fully correct, the simulation could highly underestimate the leptonic background.\\
+
+Therfore, a data-based approach is needed for either of the two background sources: the fake and the leptonic background.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fake background}
+\label{sec:FakeBkg}
+
+Fake tracks are tracks which are not reconstructed out of the trajectory of one single particle.
+In simulation they can be defined as a track which cannot be matched to a generator-level particle within a distance of $\Delta R < 0.01$.
+This can happen due to pile up and maybe there are other reasons.
+
+\begin{itemize}
+\item Start with the charecterization of the fake background
+\item How are fakes defined
+\item reference to the chapter where the track reconstruction is explained
+\item Show plot with fake rate in different samples
+\item Show dependency of fakes for the numbr of hits
+\item Show ias plot for fakes
+\item Explain background estimation method
+\end{itemize}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Leptonic background}
 \label{sec:LeptonicBkg}
 
 The leptonic background of the presented search is caused by non-reconstructed leptons which undergo hence the lepton veto selection.
-However, at least a non-reconstructed electron or tau should in principle deposit enough energy in the ECAL that it can still be vetoed by the calorimeter isolation requirement.
-As muons don't deposit much energy in the ECAL, this reason does not hold for them.
+However, at least non-reconstructed electrons or taus should in principle deposit enough energy in the calorimeters such that they can still be vetoed by the calorimeter isolation requirement.
+As muons don't deposit much energy in the calorimeters, this reason does not hold for them.
 In the following, the sources of the three different leptonic backgrounds shall be charectized.
 
 \subsubsection*{Electrons}
 To avoid the background source from unreconstructed electrons, all tracks pointing to a dead or noisy ecal cells are vetoed, as described in the previous section.
 By this selection, almost all electrons are efficiently rejected.
-In the simulated \WJets sample only one simulated event remain which pass all candidate track selection criteria and where the candidate track can be matched to generator-level electron .
+In the simulated \WJets sample only one simulated event remains which pass all candidate track selection criteria and where the candidate track can be matched to a generator-level electron.
 This event is visualised in Fig~\ref{fig:LostElectron}. 
 \begin{figure}[!tb]
   \centering 
@@ -55,16 +81,17 @@ This event is visualised in Fig~\ref{fig:LostElectron}.
            An ISR jet ($\pt\simeq 230\gev$) causes the \met (read arrow) in the event. }
   \label{fig:LostElectron}
 \end{figure}
-In this event to energy deposits in the ECAL are read out, which suggests, that this ECAL tower was neither working properly in 2012.
-Additionally, electrons might do much bremstrahlung and as a effect can change the direction significantly, such that the deposited energy in the ECAL is not matched to the electron.
+In this event no energy deposits in the ECAL are read out, which suggests, that this ECAL tower was neither working properly in 2012.
+Additionally, electrons can do bremstrahlung which can change the direction of the electron significantly.
+Thus, the energy deposits in the ECAL can possibly not be matched to the original electron.
+
 
 \subsubsection*{Taus}
 The tau background is contributing through the hadronic decay of a tau lepton to one charged pion $\tau\rightarrow\pi^{\pm}\nu$.
-Unreconstructed taus have typically large mismeasured \pt.
-Because of nuclear interactions in the tracker, they have typically short tracks and therefore easily mismeasured \pt.
-Additionnaly, the pion already looses energy in the tracker which opens up the possibility surviving also the calorimeter isolation selection.
+Unreconstructed taus are typcically low energetic and can therfore bypass the calorimeter isolation criterium.
+Because of nuclear interactions in the tracker, they can result in short reconstructed tracks which can easily be highly mismeasured in \pt.
+Thus, pions can also contribute even when imposing a tighter selection in the transverse momentum.
 Such an event is shown in Fig.~\ref{fig:LostTau}.
-Unfortunately, due to the short length of the track, these events can sometimes also survive an \ias cut, because of possibly large $dE/dx$ fluctions.
 \begin{figure}[!tb]
   \centering 
   \begin{tabular}{c}
@@ -77,7 +104,7 @@ Unfortunately, due to the short length of the track, these events can sometimes 
 \end{figure}
 
 \subsubsection*{Muons}
-Muons can fail reconstruction when they are pointing torward a bad cathode strip chamber.
+Muons can fail reconstruction when they are pointing torwards a bad cathode strip chamber.
 This is taken into account in the candidate track selection.
 However, some of the muons still fail reconstruction when they fall within the gap between stations 0 and 1 of the DT system at $\eta=0.25$.
 The muon reconstruction efficiency drops from around 99\% to a value of around 94\% as shown in~\ref{jessicathesis}. 
@@ -93,28 +120,25 @@ This possibility is illustrated in a simulated event shown in Fig~\ref{fig:LostM
 \end{figure}
 In~\ref{jessicastheisi} events are rejected when the track is pointing in a region of $0.15<|\eta|<0.35$.
 In this search, this cut was omitted to maximise signal acceptance. 
-Due to the additional selection in \ias, muons are easily efficiently supressed.
+Due to the additional selection in \ias, muons can easily be efficiently supressed.
 E.g. in the event example shown in Fig~\ref{fig:LostMuon}, the muon has an \ias value of about 0.02.\\
 
 
 In general, all leptons are rather minimal ionizing, especially muons and pions.
 Electrons can more easily interact with the shell electrons of the tracker material, but still the \ias spectrum is quickly decreasing compared to the signal.
 To have the possibility to make an optimisation in the two main discriminating variables \pt and \ias, the background estimation methods are designed to work for all different \pt and \ias selection cuts.
-\begin{itemize}
-\item Show ias plot for electrons, muons, taus seperately!
-\item Explain background estimation method
-\item with fake background (should be metioned before the leptonic background!!!!!)
-\end{itemize} 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Fake background}
-\label{sec:FakeBkg}
-
-\begin{itemize}
-\item Show plot with fake rate in different samples
-\end{itemize}
+A comparison of the \ias distribution for all four different bkg sources is shown in Fig~\ref{fig:IasDist}.
+\begin{figure}[!tb]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/IasDistributionForElecs.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/IasDistributionForPions.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/IasDistributionForMuons.pdf}
+  \end{tabular}
+  \caption{Normalised \ias distribution for electrons (left), pions (middle) and muons (right). 
+           For all leptons the \ias distribution is rapidly falling.}
+  \label{fig:IasDist}
+\end{figure}
 
 \subsection{Systematic uncertainties}
 \label{sec:SysUncertaintiesBkg}
@@ -124,9 +148,6 @@ To have the possibility to make an optimisation in the two main discriminating v
 \item Background consist of particles which make high energy deposits and are high pt
 \item In general: Low background search
 \end{itemize}
-
-
-\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Optimization of search sensitivity}

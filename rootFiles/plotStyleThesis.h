@@ -21,6 +21,10 @@ public:
     gStyle -> SetLegendFillColor(0);
     gStyle->SetLegendFont(42);
     //gStyle->SetLegendTextSize(0.05);
+    gStyle->SetLegendBorderSize(0);
+
+    gStyle->SetNdivisions(505,"X");
+    gStyle->SetNdivisions(510,"Y");
 
     gStyle -> SetTitleFont(42,"xyz");
     gStyle -> SetLabelFont(42,"xyz");
@@ -29,19 +33,20 @@ public:
     gStyle->SetPadTickY(1);
 
     // Canvas
-    gStyle -> SetCanvasDefH(600); //Height of canvas
-    gStyle -> SetCanvasDefW(600); //Width of canvas
+    gStyle -> SetCanvasDefH(500); //Height of canvas
+    gStyle -> SetCanvasDefW(500); //Width of canvas
 
-    gStyle -> SetPadBottomMargin(0.16);
-    gStyle -> SetPadLeftMargin(0.16);
-    gStyle -> SetPadTopMargin(0.05);
-    gStyle -> SetPadRightMargin(0.05);
+    gStyle -> SetPadBottomMargin(0.17);
+    gStyle -> SetPadLeftMargin(0.17);
+    gStyle -> SetPadTopMargin(0.06);
+    gStyle -> SetPadRightMargin(0.06);
 
     // Pad   
+    gStyle->SetOptTitle(0);
     gStyle -> SetTitleSize(0.06,"XYZ"); 
     gStyle -> SetLabelSize(0.05,"XYZ");
    
-    gStyle -> SetTitleOffset(1.1,"X");
+    gStyle -> SetTitleOffset(1.3,"X");
     gStyle -> SetTitleOffset(1.35,"Y");
 
     gStyle -> SetHistLineWidth(1);
@@ -89,9 +94,13 @@ public:
     cout<<"TeresaPlottingStyle 2d is activated!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
  
  
-    gStyle -> SetPadRightMargin(0.16);
-    gStyle -> SetTitleOffset(1.2,"XYZ");
-
+    gStyle -> SetPadRightMargin(0.20);
+    //gStyle -> SetPadLeftMargin(0.20);
+    //gStyle -> SetPadBottomMargin(0.20);
+    gStyle -> SetPadTopMargin(0.1);
+    //gStyle -> SetTitleOffset(1.05,"XY");
+    gStyle -> SetTitleOffset(1.25,"Z");
+    gStyle->SetNdivisions(509,"Z");
     gROOT->ForceStyle(); 
   }
 };
