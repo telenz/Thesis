@@ -96,6 +96,13 @@ a4paper,
 \hypersetup{pdftitle={A search for for highly ionizing short tracks and a measurement of the jet transverse-momentum resolution at the CMS detector}}
 \hypersetup{pdfauthor={Teresa Lenz}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
 \pagenumbering{roman}
@@ -172,30 +179,31 @@ a4paper,
 % \quad 
 % 
 % \newpage
-%%%%	\tableofcontents
+% 	\tableofcontents
 
 % \cleardoublepage
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-% \chapter{Introduction}
+% \part{Introduction}
 % \input{introduction.tex}
 
-% \chapter{The standard model of particle physics and supersymmetric extensions} \label{ch:Theory}
+% \part{The standard model of particle physics and supersymmetric extensions} \label{ch:Theory}
 % \input{theory.tex}
 
-% \chapter{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{sec:Detector}
+% \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{sec:Detector}
 % \input{detector.tex}
 
-% \chapter{Measurement of the jet transverse-momentum resolution} \label{sec:resolution}
+% \part{Measurement of the jet transverse-momentum resolution} \label{sec:resolution}
 % \input{resolution.tex}
 
-\chapter{A search for highly ionizing, short tracks at the CMS detector} \label{sec:analysis}
-% \input{analysis_1.tex}
-% \input{analysis_2.tex}
+% \part{A search for highly ionizing, short tracks at the CMS detector} \label{sec:analysis}
+\input{analysis_1.tex}
+\input{analysis_2.tex}
 \input{analysis_3.tex}
-% \chapter{Conclusions} \label{sec:Conclusion}
+
+% \part{Conclusions} \label{sec:Conclusion}
 % \input{conclusions.tex}
 
 

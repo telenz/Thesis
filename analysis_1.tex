@@ -1,15 +1,15 @@
-In this chapter a search for highly ionizing, short tracks is presented. The chapter will be structured as follows:
-In \mbox{Section~\ref{sec:Motivation}} a motivation will be given, followed by an overview of the general search strategy in \mbox{Section~\ref{sec:GeneralSearchStrategy}}.
-As the variable \dedx plays a crucial role in this analysis, a general introduction and different possible parametrizations will be introduced in \mbox{Section~\ref{sec:DeDxMeasurement}}.
-In this context also the conducted offline calibration of the silicon pixel detector will be explained.
-After presenting the simulated SM and signal samples which were used in this analysis (\mbox{Section~\ref{sec:SimulatedSamples}}) the event selection is shown (Section~\ref{sec:EventSelection}).
-Then, the various sources of background are charecterized (Section~\ref{sec:SourcesOfBackgrounds}) and the methods to estimate their size are presented (\ref{sec:BackgroundEstimation}).
-As a final step an optimization in the search sensitivity is done, which can be found in Section~\ref{sec:Optimization}.
-The chapter concludes by presenting the results of this analysis in Section~\ref{sec:Results}, and after a short introduction to the statistical methods of limit setting (Section~\ref{sec:LimitSetting}), the results will be interpreted in the context of Supersymmetry (Section~\ref{sec:Interpretation}).
+%In this chapter a search for highly ionizing, short tracks is presented. The chapter will be structured as follows:
+%In \mbox{Section~\ref{sec:Motivation}} a motivation will be given, followed by an overview of the general search strategy in \mbox{Section~\ref{sec:GeneralSearchStrategy}}.
+%As the variable \dedx plays a crucial role in this analysis, a general introduction and different possible parametrizations will be introduced in \mbox{Section~\ref{sec:DeDxMeasurement}}.
+%In this context also the conducted offline calibration of the silicon pixel detector will be explained.
+%After presenting the simulated SM and signal samples which were used in this analysis (\mbox{Section~\ref{sec:SimulatedSamples}}) the event selection is shown (Section~\ref{sec:EventSelection}).
+%Then, the various sources of background are charecterized (Section~\ref{sec:SourcesOfBackgrounds}) and the methods to estimate their size are presented (\ref{sec:BackgroundEstimation}).
+%As a final step an optimization in the search sensitivity is done, which can be found in Section~\ref{sec:Optimization}.
+%The chapter concludes by presenting the results of this analysis in Section~\ref{sec:Results}, and after a short introduction to the statistical methods of limit setting (Section~\ref{sec:LimitSetting}), the results will be interpreted in the context of Supersymmetry (Section~\ref{sec:Interpretation}).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Motivation}
+\chapter{Motivation}
 \label{sec:Motivation}
 As it was already pointed out in Chapter~\ref{ch:Theory}, Supersymmetry is able to offer solutions to unexplained phenomena in astrophysics and can solve the shortcomings of the Standard Model of particle physics.
 Unfortunately, due to the unknown mechanism of supersymmetry breaking, the most general parametrization of Supersymmetry introduces over 100 new dimensions which opens up an incredibly huge phenomenalogically rich space, 
@@ -99,7 +99,7 @@ The challenges of such a search and the general strategy of this analysis will b
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{General search strategy}
+\chapter{General search strategy}
 \label{sec:GeneralSearchStrategy}
 
 When searching for supersymmetric models with long-lived \chipm, the strategy is of course highly dependent on the actual lifetime of the chargino. 
@@ -193,7 +193,7 @@ However, no other CMS analysis used the energy information of the pixel tracker 
 That means, that a thoroughly study of the quality of the pixel energy calibration needs to be undertaken, and in case the energy calibration is not suffiencient, a further energy calibration needs to be carried out.
 
 
-\subsection{Comparison to existing searches}
+\section{Comparison to existing searches}
 As already mentioned before, there are several analyses at CMS at $\sqrt{s}=8\,\tev$ with 20\,fb$^{-1}$ data, which are sensitive to intermediate lifetime charginos. 
 Most notably, the search for long lived-charged \mbox{particles \cite{bib:CMS:HSCP_8TeV}} and the search for disappering tracks \cite{bib:CMS:DT_8TeV}.
 An improvement in sensitivity to shorter lifetimes compared to these analysis shall be achieved in a twofold way:
@@ -225,15 +225,16 @@ thus it shows less sensitivity compared to the disappearing track search in the 
 
 Therefore to conclude, the general search strategy of the presented analysis is to unite the strategies of \cite{bib:CMS:HSCP_8TeV} and \cite{bib:CMS:DT_8TeV} and to lower the strong selection on the number of hits in these analyses 
 to get an optimized selection for lifetimes around $10\,\text{cm} \lesssim c\tau \lesssim  40\,\text{cm}$.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Improved dE/dx measurement of short tracks}
+\chapter{Improved dE/dx measurement of short tracks}
 \label{sec:DeDxMeasurement}
 It was already pointed out, that the inclusion of the pixel energy measurements can increase the sensitivity when searching for short tracks.
 While the silicon strip detector has already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, there was never an offline calibration done for the pixel silicon tracker.
 To increase the discrimination power of $dE/dx$, such an calibration procedure was therefore conducted within this PHD thesis.
  
-\subsection{Measuring dE/dx}
+\section{Ionisation loss of charged particles}
 \label{sec:sub:MeasuringDeDx}
 The mean energy loss per path length of particles travelling through a layer of material can be described with the Bethe formula \cite{bib:Bethe_1930}:
 \begin{equation*}
@@ -320,7 +321,7 @@ Thus, the energy loss per path length can be used to discriminate between SM par
 %\item Minimal ionising particles (pt cut) (how dedx for pions CMS 2008)
 %\end{itemize}
 
-\subsection{Gain calibration of the silicon pixel tracker}
+\section{Energy calibration of the silicon pixel tracker}
 
 During Run I in 2012, the pixel silicon detector was continously subjected to an energy calibration, a so-called gain calibration.
 Every pixel was calibrated to the same response, such that the whole pixel tracker should have been well inter-calibrated.
@@ -345,7 +346,7 @@ In the following sections the method of the gain calibration (splitted into an s
 Detailed technical information about the pixel tracker can be found in Section~\ref{sec:Detector:Pixel}.
 
 
-\subsubsection*{Inter-calibration of gain}
+\subsection{Inter-calibration of gain}
 The main goal of the gain calibration is to get a uniform response in the ionization energy loss $dE/dx$ over the full data taking period in 2012.
 To ensure also a uniform response of all modules within one time step, also an inter-calibration on module level was carried out.
 The inter-calibration can in principle be done on various stages: the highest granularity would be a calibration on pixel level, followed by a calibration on ROC-level and then on module-level.
@@ -416,7 +417,7 @@ Additionaly, the same procedure is carried out for a corresponding simulated dat
 
 
 
-\subsubsection*{Absolute calibration of gain}
+\subsection{Absolute calibration of gain}
 As a final step, the targeted \mpv being $\mpv_{\text{target}}=300 \cdot 265 \,  \text{ADC/mm}$ needs to be translated to a meaningful physical quantity given in phsical units (e.g. MeV/cm).
 That means, that the charge measurement in ADC counts needs to be converted to the real energy release of a particle.
 The relation between $\Delta E$ in ADC counts and the energy loss in eV is given by
@@ -445,7 +446,7 @@ This factor is then applied on top of $c_{\text{inter}}$ for all pixel modules.
 
 Finally, also for the simulated samples an absolute calibration factor needs to be determined, where the simulated pixel tracker is  calibrated to the average $dE/dx$ of the silicon strip measured in data.
 
-\subsection{Asymmetric Smirnov discriminator}
+\section{Discriminating highly-ionising particles}
 
 As mentioned before, a difficult task when measuring the energy deposition of a particle consists in finding a robust estimator for the MPV of the underlying Landau, i.e combining eventually only a few single measurements of $\Delta E/ \Delta x$ to one single $dE/dx$ estimator.
 The harmonic-2 estimator \ihtwo was already introduced in Section~\ref{sec:sub:MeasuringDeDx} in Eq.~\ref{eq:Harmonic2Estimator}.
@@ -500,7 +501,7 @@ For larger values, \ias shows a larger decrease in simulation than in measured d
 That's the reason why a data-based approach for analyses exploiting $dE/dx$ information is needed.\\
 
 
-\subsection{Efficiency improvements}
+\section{Discrimination improvements}
 The goal of including the pixel energy information is to increase the discrimination power of \ias between background and signal tracks, especially for shorter lifetimes.
 In Fig.~\ref{fig:MIPs-Signal-Dedx}, a comparison of the shapes of the energy release by MIPs and by signal tracks in simulation is shown (details about the simulated samples can be found in the next section Section~\ref{sec:SignalSamples}).
 \begin{figure}[!bt]
