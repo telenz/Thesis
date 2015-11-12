@@ -9,7 +9,7 @@ An extensive introduction to the techniques and tools required for the simulatio
 In the following two sections an overview is given about the SM (Section~\ref{sec:SMSamples}) and SUSY samples (Section~\ref{sec:SignalSamples}) used to design the search.
 All samples are reweighted to match the measured distribution of primary vertices in data.
 
-\section{SM Background samples}
+\section{Standard Model background samples}
 \label{sec:SMSamples}
 To investigate the sources of background, various simulated SM samples are used.
 In order to have the possibility to make use of the \dedx variables, a special data format of the simulated samples is required (called RECO format).
@@ -226,7 +226,7 @@ Dataset  & Luminosity [\fbinv]   \\
 \section{Analysis selection}
 
 In order to suppress events originating from SM processes (such as QCD-multijet events, \WJets, etc.), a selection for signal-like tracks is applied which shall be described in the following sections.
-The candidate track selection follows closely the selection required in \cite{bib:CMS:DT_8TeV}.\\
+The candidate track selection follows closely the selection required in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.\\
 
 \subsection*{Event based selection}
 First, to suppress cosmic events and noise from the beam halo a selection on the quality of the vertex can be applied.
@@ -244,10 +244,10 @@ In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the trans
 \begin{figure}[!tb]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/hMet_log_4Signals_noSelection.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/h1stjetpt_log_4Signals_noSelection.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/hMetSmallRange_log_chiTracksnoSelection_4Signals.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/h1stjetptSmallRange_log_chiTracksnoSelection_4Signals.pdf}
   \end{tabular}
-  \caption{Distribution of missing transverse momentum (left) and the transverse momentum of the leading jet (right) for four different signal samples}
+  \caption{Normalised distributions of the missing transverse momentum (left) and the transverse momentum of the leading jet (right) for four different signal models.}
   \label{fig:SignalMET+SignalJetPt}
 \end{figure}
 Only jets are taken into account with $|\eta|<2.4$ and which fulfil several further criteria:
@@ -288,8 +288,8 @@ Figure~\ref{fig:QCDcuts} shows the maximal $\Delta\phi$ of any of two subleading
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/hDeltaPhiMaxbeforeCut_lin_chiTrackstriggerRequirementsTrigger.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/hDeltaPhiJetMetMaxbeforeCut_lin_chiTrackstriggerRequirementsTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiMaxbeforeCut_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiJetMetMinbeforeCut_lin.pdf}
   \end{tabular}
   \caption{Maximal $\Delta \phi$ between any of two subleading jets (left) and the minimal $\Delta \phi$  between the \met vector and the first two jets (right) normalised to unit area after the trigger selection.}
   \label{fig:QCDcuts}
@@ -311,8 +311,8 @@ In Figs~\ref{fig:Eta_HighPurity},~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the po
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackNLostMid_lin_chiTracksQCDsupressionTrigger.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackNLostInner_lin_chiTracksQCDsupressionTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostInner_lin.pdf}
   \end{tabular}
   \caption{Number of missing middle (left) and inner (right) hits of background and signal tracks after trigger requirements and QCD suppression cuts.}
   \label{fig:LostHits}
@@ -320,8 +320,8 @@ In Figs~\ref{fig:Eta_HighPurity},~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the po
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackd0_lin_chiTracksQCDsupressionTrigger.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackdz_lin_chiTracksQCDsupressionTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackd0_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackdz_lin.pdf}
   \end{tabular}
   \caption{Absolute value of the radial (left) and longitudinal (right) distance between the track and the primary vertex after trigger requirements and multijet suppression cuts. 
            Overflow entries are added to the last bin.}
@@ -335,7 +335,7 @@ Furthermore, a first kinematic preselection is applied:
 \item A first loose selection of tracks in the transverse momentum is applied: \mbox{$\pt>10\gev$}.
 \end{itemize}
 %\hspace{0.7cm}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In order to suppress background tracks emerging from SM processes, an electron, muon and tau veto is applied.
 That means events containing a candidate tracks close to a reconstructed electron, muon or tau are rejected.
 Additionally, the candidate track must not be close to a subleading jet ($\pt<20\gev$ and $|\eta|<4.5$).
@@ -415,8 +415,8 @@ The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackI
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackIsolation_lin_chiTracksCandidateSelectionTrigger.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackCaloIsolationSmallRange_lin_chiTrackspreselectionTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackIsolation_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackCaloIsolation_lin.pdf}
   \end{tabular}
   \caption{Track isolation (left) and calorimeter isolation (right) of the candidate track after the full previous selection (after all other selection cuts of the candidate track selection).}
   \label{fig:TrackIso_Ecalo_After_Preselection}
@@ -443,17 +443,17 @@ A summary and a cutflow table of the event selection cuts is given in table~\ref
 Given the presented candidate selection requirements, a set of two variables remain, which are highly discriminating:
 The transverse momentum and the energy release per path length of the candidate track.
 In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the application of the full candidate track selection.
-\begin{figure}[!tb]
-  \centering 
-  \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackPtSmallRange_log_chiTracksfullSelection.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackASmiSmallRange_log_chiTracksfullSelection.pdf}
-  \end{tabular}
-  \caption{Candidate track \pt (left) and \ias (right) after the full candidate track selection for signal and $\WJets$ events. 
-           Because of high event weights of the $\WJets$ sample, the \met and \ptfirstjet cuts are loosen to \mbox{$\met>0\gev$} and \mbox{$\ptfirstjet>70\gev$}.
-           As these variables are not expected to be correlated with the track characteristics it does not influences the shape of the shown distributions.}
-  \label{fig:PtAndIasAfterFullPreselection}
-\end{figure}
+%\begin{figure}[!tb]
+%  \centering 
+%  \begin{tabular}{c}
+%    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts/htrackPtSmallRange_log.pdf}
+%    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts/htrackASmiSmallRange_log.pdf}
+%  \end{tabular}
+%  \caption{Candidate track \pt (left) and \ias (right) after the full candidate track selection for signal and $\WJets$ events. 
+%           Because of high event weights of the $\WJets$ sample, the \met and \ptfirstjet cuts are loosen to \mbox{$\met>0\gev$} and \mbox{$\ptfirstjet>70\gev$}.
+%           As these variables are not expected to be correlated with the track characteristics it does not influences the shape of the shown distributions.}
+%  \label{fig:PtAndIasAfterFullPreselection}
+%\end{figure}
 These variables are used to optimise the sensitivity of the search in the variable $S/(S+B)$ (S=number of signal events, B=number of background events).
 The optimisation process will be explained in Sec~\ref{blabla}.
 However, before the optimisation can be accomplished, the characterisation end estimation of the background is needed.

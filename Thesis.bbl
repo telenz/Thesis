@@ -206,6 +206,18 @@ B.~Fuks, M.~Klasen, D.~R. Lamprea{ et~al.}, ``{Precision predictions for
   doi:10.1140/epjc/s10052-013-2480-0}}.
 %%CITATION = ARXIV:1304.0790;%%.
 
+\bibitem{bib:CMS:DT_Thesis}
+J.~D. Brinson, ``{A search for disappearing tracks in proton-proton collisions
+  at $\sqrt{s}$ = 8 TeV}''.
+\newblock PhD thesis,
+Ohio State U.
+\newblock
+%%CITATION = CERN-THESIS-2015-030;%%.
+
+\bibitem{bib:CMS:DT_8TeV_AN}
+C.~H. J.~Brinson and W.~Wulsin, ``Search for disappearing tracks'', {\em CMS
+  Analysis Note} {\bf CMS-AN-12-400} (2014). Internal documentation.
+
 \bibitem{bib:CMS:Tracking_7TeV_PAS}
 { CMS} Collaboration, ``{Tracking and Primary Vertex Results in First 7 TeV
   Collisions}'', {\em CMS Physics Analysis Summary} {\bf

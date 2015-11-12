@@ -12,8 +12,8 @@ The composition of the background after the candidate track selection is shown i
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackgenParticleSmallRange_lin_chiTracksfullSelectionTrigger.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/htrackgenParticleSmallRange_lin_chiTracksfullSelectionPlusIasTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionTrigger_Wjets/htrackgenParticleSmallRange_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionPlusIasTrigger_Wjets/htrackgenParticleSmallRange_lin.pdf}
   \end{tabular}
   \caption{Background composition after the full candidate track selection (left) and after the full candidate track selection plus an additional selection cut of \mbox{$\ias>0.05$} (right). 
            The statistical uncertainty is depicted by the hashed grey area.
@@ -47,22 +47,28 @@ This can be seen in Fig~\ref{fig:NValidFakes}, where the distribution in the num
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/NValidForFakes_chiTracksfullSelectionNoQCDCutsNoTrigger_PtGt15GeV.pdf}
   \end{tabular}
-  \caption{bla bla}
+  \caption{Normalised distribution of the number of hits for fake tracks.}
   \label{fig:NValidFakes}
 \end{figure}
 In simulation, fake tracks are defined as tracks which cannot be matched to a generator-level particle within a distance of $\Delta R < 0.01$.
-This can happen due to pile up and maybe there are other reasons.
 
-Fakes are efficiently suppressed by the vertex compatibilyt selection cuts and the no missing middle and inner hits requirement.
-Unfortunately, when they pass these criteria, thay also pass the \ecalo cut with high efficiency because they do not origin from a real particle.\\
+Fakes are efficiently suppressed by the requirements of no missing middle or inner hits and the compatibility with the primary vertex.
+Unfortunately, those wrongly reconstructed tracks which pass these criteria, do also easily pass the $\ecalo<5\gev$ requirement with high efficiency.\\
 
-In this analysis, the fake background estimation is split into two seperate parts.
-First an estimation of the fake background is done which is incluseveliy in \ias.
-As a second step, the ias distribution is taken from a fake enriched control region.
+In this analysis, the estimation of the fake background is split into two parts.
+First, the background is estimated inclusively in \ias.
+Secondly, to be able to optimise later in the variable \ias, the \ias distribution is taken from a fake enriched control region.
 
-The inclusive background estimation follows closely the background estimation method done in \cite{blabla}.
-For this a dysample with blabla
-is taken.
+The inclusive background estimation follows closely the background estimation method done in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
+The inclusive fake background is estimated with the help of $Z\rightarrow\mu\bar{\mu}$ and $Z\rightarrow e\bar{e}$  events.
+Selecting such events with a z mass constraint a very high purity can be achieved.
+When there is addiditonally the candidate track selection on top, than this track must be a fake track, as nothing can be further in the event.
+
+It was also checked that the fake rate is constant for different processes .
+In figure bla, one can the the fake rate for the most important sm processes.
+
+The zll events events are selected with the following requirements.
+blablabla
 
 \begin{itemize}
 \item Show plot with fake rate in different samples
@@ -124,7 +130,7 @@ Such an event is shown in Fig.~\ref{fig:LostTau}.
 Muons can fail reconstruction when they are pointing towards a bad cathode strip chamber.
 This is taken into account in the candidate track selection.
 However, some of the muons still fail reconstruction when they fall within the gap between stations 0 and 1 of the DT system at $\eta=0.25$.
-The muon reconstruction efficiency drops from around 99\% to a value of around 94\% as shown in~\ref{jessicathesis}. 
+The muon reconstruction efficiency drops from around 99\% to a value of around 94\% as shown in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
 This possibility is illustrated in a simulated event shown in Fig~\ref{fig:LostMuon}.
 \begin{figure}[!tb]
   \centering 
@@ -135,14 +141,15 @@ This possibility is illustrated in a simulated event shown in Fig~\ref{fig:LostM
            In light blue the generator-level particles $\mu$ and $\nu_{\mu}$ of the $W$ decay are shown. }
   \label{fig:LostMuon}
 \end{figure}
-In~\ref{jessicastheisi} events are rejected when the track is pointing in a region of $0.15<|\eta|<0.35$.
+In~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} events are rejected when the track is pointing in a region of $0.15<|\eta|<0.35$.
 In this search, this cut was omitted to maximise signal acceptance. 
 Due to the additional selection in \ias, muons can easily be efficiently suppressed.
 E.g. in the event example shown in Fig~\ref{fig:LostMuon}, the muon has an \ias value of about 0.02.\\
 
 
-In general, all leptons are rather minimal ionising, especially muons and pions.
-Electrons can more easily interact with the shell electrons of the tracker material, but still the \ias spectrum is quickly decreasing compared to the signal.
+In general, all leptons are minimal ionising.
+However, as electrons are much lighter compared to muons or pions, they loose more energy also via radiative effects.
+Still, all three lepton types loose much less energy compared to hypothetical new heavy particles.
 To have the possibility to make an optimisation in the two main discriminating variables \pt and \ias, the background estimation methods are designed to work for all different \pt and \ias selection cuts.
 A comparison of the \ias distribution for all four different background sources is shown in Fig~\ref{fig:IasDist}.
 \begin{figure}[!tb]
