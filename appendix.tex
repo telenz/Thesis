@@ -1,0 +1,63 @@
+\chapter{Detailed event yield tables for simulated samples and data}
+
+
+\renewcommand{\arraystretch}{1.1}
+\begin{table}[!h]
+%\begin{sideways}
+\centering
+\caption{Event yields after each selection step for various background processes. FIXME update this table!!}
+\label{tab:CutflowMC}
+\makebox[0.99\textwidth]{
+\begin{tabular}{|l|c|c|c|c|}
+\multicolumn{5}{c}{} \\
+\toprule
+
+Selection               &   \WJets  & \ttbarJets  & \Zlep & Multijet  \\
+\midrule
+
+after skim                                                                                & 9.16 $\cdot10^{7 }$ & 1.04 $\cdot10^{6 }$ & 2.21 $\cdot10^{7 }$ & 1.38 $\cdot10^{11}$ \\
+trigger                                                                                   & 4.31 $\cdot10^{6 }$ & 1.12 $\cdot10^{5 }$ & 4.23 $\cdot10^{3 }$ & 4.32 $\cdot10^{6 }$ \\
+$\ptfirstjet>100\gev$                                                                     & 3.07 $\cdot10^{6 }$ & 7.89 $\cdot10^{4 }$ & 1.02 $\cdot10^{3 }$ & 1.15 $\cdot10^{6 }$ \\
+$\met>100\gev$                                                                            & 1.89 $\cdot10^{6 }$ & 5.17 $\cdot10^{4 }$ & 6.26 $\cdot10^{2 }$ & 9.63 $\cdot10^{5 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                  & 1.11 $\cdot10^{6 }$ & 6.58 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                          & 1.11 $\cdot10^{6 }$ & 6.64 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 2.01 $\cdot10^{4 }$ \\
+$\geq1$ reconstructed trk                                                                 & 1.10 $\cdot10^{6 }$ & 6.57 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ high-purity trk                                                                   & 1.10 $\cdot10^{6 }$ & 6.57 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk with $N_{\text{miss}}^{\text{middle}}=0$                                      & 1.09 $\cdot10^{6 }$ & 6.55 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk with $N_{\text{miss}}^{\text{inner}}=0$                                       & 1.07 $\cdot10^{6 }$ & 6.53 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk with $|d0|<0.02\cm$                                                           & 1.07 $\cdot10^{6 }$ & 6.47 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk with $|dz|<0.5\cm$                                                            & 1.07 $\cdot10^{6 }$ & 6.46 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk with $|\eta|<2.1$                                                             & 1.03 $\cdot10^{6 }$ & 6.41 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk with $\pt>10\gev$                                                             & 1.03 $\cdot10^{6 }$ & 6.41 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk without a $\mu$ within $\Delta R<0.15$                                        & 9.85 $\cdot10^{5 }$ & 6.32 $\cdot10^{3 }$ & 1.14 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk without an e within $\Delta R<0.15$                                           & 9.55 $\cdot10^{5 }$ & 6.22 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk without a $\tau$ within $\Delta R<0.15$                                       & 9.53 $\cdot10^{5 }$ & 6.21 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk without a jet within $\Delta R<0.5$                                           & 9.15 $\cdot10^{5 }$ & 6.13 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 9.55 $\cdot10^{3 }$ \\
+\makecell[l]{$\geq1$ trk ! within $\Delta R<0.05$ of \\\hfill a dead/noisy ECAL cell}     & 3.70 $\cdot10^{5 }$ & 3.78 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 0.00 $\cdot10^{0 }$ \\
+\makecell[l]{$\geq1$ trk ! within an ECAL  intermodule gap}                               & 3.52 $\cdot10^{5 }$ & 3.61 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 0.00 $\cdot10^{0 }$ \\
+$\geq1$ trk ! within $1.42<|\eta|<1.65$                                                   & 2.21 $\cdot10^{5 }$ & 2.30 $\cdot10^{3 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+$\geq1$ trk ! within $\Delta R<0.25$ to a bad CSC                                         & 1.04 $\cdot10^{4 }$ & 1.20 $\cdot10^{2 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+$\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$     & 8.14 $\cdot10^{3 }$ & 7.96 $\cdot10^{1 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+\bottomrule
+\end{tabular}}
+%\end{sideways}
+\end{table}  
+%\end{landscape}
+
+
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
+When I now start to write some text, where does it appear. Starnge.
