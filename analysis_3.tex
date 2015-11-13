@@ -40,7 +40,7 @@ Therefore, a data-based approach is needed for either of the two background sour
 Fake tracks are tracks which are not reconstructed out of the trajectory of one single particle.
 The rate with which this wrong reconstruction occurs is of course highly restrained by the quality cuts on $\chi^2$ and the vertex compatibility of the track reconstruction algorithm.
 Details on the reconstruction algorithm at CMS can be found in Section~\ref{FIXME}.
-The fake rate is strongly correlated to the number of hits in the tracker system. 
+The probability of reconstructing a fake track is strongly correlated with the number of hits in the tracker system.
 This can be seen in Fig~\ref{fig:NValidFakes}, where the distribution in the number of hits of fakes is depicted.
 \begin{figure}[!bt]
   \centering 
@@ -50,18 +50,66 @@ This can be seen in Fig~\ref{fig:NValidFakes}, where the distribution in the num
   \caption{Normalised distribution of the number of hits for fake tracks.}
   \label{fig:NValidFakes}
 \end{figure}
+There are almost no fakes with a number of hits larger than six.
 In simulation, fake tracks are defined as tracks which cannot be matched to a generator-level particle within a distance of $\Delta R < 0.01$.
 
 Fakes are efficiently suppressed by the requirements of no missing middle or inner hits and the compatibility with the primary vertex.
-Unfortunately, those wrongly reconstructed tracks which pass these criteria, do also easily pass the $\ecalo<5\gev$ requirement with high efficiency.\\
+Unfortunately, wrongly reconstructed tracks which pass these criteria, do also easily pass the $\ecalo<5\gev$ requirement with high efficiency.\\
 
 In this analysis, the estimation of the fake background is split into two parts.
 First, the background is estimated inclusively in \ias.
 Secondly, to be able to optimise later in the variable \ias, the \ias distribution is taken from a fake enriched control region.
 
+\subsection*{Inclusive fake background estimation}
 The inclusive background estimation follows closely the background estimation method done in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
-The inclusive fake background is estimated with the help of $Z\rightarrow\mu\bar{\mu}$ and $Z\rightarrow e\bar{e}$  events.
-Selecting such events with a z mass constraint a very high purity can be achieved.
+The inclusive fake background is estimated with the help of $Z\rightarrow\mu\bar{\mu}$ and $Z\rightarrow e\bar{e}$ events.
+Selecting clean \Zlep events can be done with high efficiency~\ref{FIXME} by requiring two well reconstructed muons or electrons, for which the invariant mass is around the $Z$-boson mass of $\sim90\gev$.
+Putting on top the candidate track selection described in Section~\ref{sec:AnalysisSelection}, the selected track must a fake.\\
+
+To select well reconstructed muons, the following cuts are required:
+The full event selection for this electron/muon control sample is given in Table~\ref{FIXME}.
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Event selection cuts for the muon control sample to estimate the inclusive fake background.}
+\label{tab:SummaryCuts}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|l l }
+\multicolumn{3}{c}{} \\
+\toprule
+   
+\multirow{12}{*}{\makecell[l]{Event based \\ selection}}        &  Two global muons with & $\pt>25\gev$ \\
+                                                               &                        & $|\eta<2.4|$ \\
+                                                               &                        & $\sum \pt/\pt(\mu)<0.12$ \\
+                                                               &                        & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
+                                                               &                        & $|d0|<0.2\cm$  \\
+                                                               &                        & $|dz|<0.5\cm$  \\
+                                                               &                        & $\geq$ 1 hit in the muon detector  \\
+                                                               &                        & $\geq$ 2 hits in different muon detector planes  \\
+                                                               &                        & $\geq$ 1 hit in the pixel detector  \\
+                                                               &                        & $\geq$ 6 hits in the tracker system  \\
+                                                               &  \multicolumn{2}{l}{Muons opposite in charge}                                     \\
+                                                               &  \multicolumn{2}{l}{$80\gev<M_{\text{inv}}\left(\mu_1,\mu_2  \right)<100\gev$}        \\
+
+\midrule
+
+\multirow{4}{*}{\makecell[l]{Candidate track\\ selection}}    &  Good quality selection \\
+                                                              &  Kinematic selection    \\
+                                                              &  Lepton/jet veto        \\   
+                                                              &  Isolation selection    \\  
+
+
+\bottomrule
+\end{tabular}}
+\end{table}  
+
+
+
+Indeed, when testing this procedure in a \ZlepJets sample, it is found out, that a high purity can be achieved.
+This is illustrated in Fig.~\ref{FIXME}, where the generator-level particle type which can be matched to the candidate track is shown.
+As can be seen, 95\% of the selected tracks can not be matched to a generator-level particle.
+
 When there is addiditonally the candidate track selection on top, than this track must be a fake track, as nothing can be further in the event.
 
 It was also checked that the fake rate is constant for different processes .

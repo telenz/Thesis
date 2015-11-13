@@ -30,9 +30,9 @@ In Table \ref{tab:SMsamples_RECO} all available SM samples used in this analysis
 \toprule
  Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ \\%& Size $\left[\text{TB}\right]$\\
 \midrule
- \WJets                                                &  36703.2     &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
- \ttbarJets                                            &  245.8       &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
- \ZlepJets ($\ell=e,\mu,\tau$)             &  3531.9      &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
+ \WJets                                                &  36703.2      &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
+ \ttbarJets                                            &  245.8        &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
+ \ZlepJets ($\ell=e,\mu,\tau$)                         &  3531.9       &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
  QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)               &  9374794.2    &  LO  \\%% & 44.3\\
 \bottomrule
 \end{tabular}}
@@ -224,6 +224,7 @@ Dataset  & Luminosity [\fbinv]   \\
 \end{table}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis selection}
+\label{sec:AnalysisSelection}
 
 In order to suppress events originating from SM processes (such as QCD-multijet events, \WJets, etc.), a selection for signal-like tracks is applied which shall be described in the following sections.
 The candidate track selection follows closely the selection required in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.\\
@@ -427,37 +428,79 @@ Although the search is designed with a focus on charginos which decay inside the
 For charginos with very short mean lifetimes it was checked, whether a sensitivity increase can be achieved by imposing a cut on $N_{\text{miss}}^{\text{outer}}$.
 However, this is not the case and therefore a selection in $N_{\text{miss}}^{\text{outer}}$ is not considered.
 
-A summary and a cutflow table of the event selection cuts is given in table~\ref{blabla}.\\
-%An illustration of the efficiency of the selection cuts for two different signal samples and simulated background is shown in Fig.~\ref{fig:CutFlow}.
-%\begin{figure}[!t]
-%  \centering 
-%  \begin{tabular}{c}
-%    \includegraphics[width=0.99\textwidth]{figures/analysis/countsTrackCriteria_log.pdf}
-%  \end{tabular}
-%  \caption{Efficiency of the analysis selection cuts for simulated signal and background samples.}
-%  \label{fig:CutFlow}
-%\end{figure}
+
+An overview over the analysis preselection is given in Table~\ref{tab:SummaryCuts}. 
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Summary and categorisation of the analysis selection.}
+\label{tab:SummaryCuts}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|l|l}
+\multicolumn{3}{c}{} \\
+\toprule
+   
+\multirow{3}{*}{Trigger}                                       &  \multicolumn{2}{l}{HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 }\\
+                                                               &  \multicolumn{2}{l}{HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95}\\
+                                                               &  \multicolumn{2}{l}{HLT\_MET120\_HBHENoiseCleaned }\\\midrule
+
+\multirow{4}{*}{\makecell[l]{Event based \\ selection}}        &  \multirow{2}{*}{Trigger selection}   & \makecell[l]{$\ptfirstjet>100\gev$ \hfill with $|\eta_{\text{1.jet}}|<2.4$,  \\
+                                                                                                                   \hfill $\text{CHF}_{\text{1.jet}}>0.2$, \\
+                                                                                                                   \hfill $\text{CEF}_{\text{1.jet}}<0.5$, \\
+                                                                                                                   \hfill $\text{NHF}_{\text{1.jet}}<0.7$, \\
+                                                                                                                   \hfill $\text{NEF}_{\text{1.jet}}<0.7$} \\
+                                                               &                                       & $\met>100\gev$                                                  \\\cmidrule{2-3}
+                                                               &  \multirow{2}{*}{QCD supression}      & \makecell[l]{$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$  for all jets with \\ \hfill $\pt>20\gev$, $|\eta|<4.5$}\\
+                                                               &                                       & \makecell[l]{$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$  for two leading jets}\\
+
+\midrule
+
+\multirow{16}{*}{\makecell[l]{Candidate track\\ selection}}   &  \multirow{4}{*}{Good quality selection}   & $\geq1$ high-purity track \\
+                                                              &                                            & $\geq1$ track with $N_{\text{miss}}^{\text{middle/inner}}=0$\\
+                                                              &                                            & $\geq1$ track with $|d0|<0.02\cm$\\
+                                                              &                                            & $\geq1$ track with $|dz|<0.5\cm$\\\cmidrule{2-3}
+
+                                                              &  \multirow{2}{*}{Kinematic selection}      & $\geq1$ track with $|\eta|<2.1$ \\
+                                                              &                                            & $\geq1$ track with $\pt>10\gev$ \\\cmidrule{2-3}
+
+                                                              &  \multirow{8}{*}{Lepton/jet veto}          & $\geq1$ track without a muon within $\Delta R<0.15$ \\
+                                                              &                                            & $\geq1$ track without an electron within $\Delta R<0.15$ \\
+                                                              &                                            & $\geq1$ track without a tau within $\Delta R<0.15$ \\
+                                                              &                                            & $\geq1$ track without a jet within $\Delta R<0.5$ \\
+                                                              &                                            & \makecell[l]{$\geq1$ track not within $\Delta R<0.05$ of \\\hfill a dead/noisy ECAL cell} \\
+                                                              &                                            & $\geq1$ track not within an ECAL intermodule gap  \\
+                                                              &                                            & $\geq1$ track not within $1.42<|\eta|<1.65$ \\
+                                                              &                                            & $\geq1$ track not within $\Delta R<0.25$ to a bad CSC \\\cmidrule{2-3}
+
+                                                              &  \multirow{2}{*}{Isolation selection}      & $\geq1$ isolated track $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$ \\
+                                                              &                                            & $\geq1$ track with $\ecalo<5\gev$ \\
+
+
+\bottomrule
+\end{tabular}}
+\end{table}  
+
+
+A cutflow of the simulated background datasets and for some of the signal models can be found in Appendix~\ref{FIXME}.
 
 
 
 Given the presented candidate selection requirements, a set of two variables remain, which are highly discriminating:
 The transverse momentum and the energy release per path length of the candidate track.
 In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the application of the full candidate track selection.
-%\begin{figure}[!tb]
-%  \centering 
-%  \begin{tabular}{c}
-%    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts/htrackPtSmallRange_log.pdf}
-%    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts/htrackASmiSmallRange_log.pdf}
-%  \end{tabular}
-%  \caption{Candidate track \pt (left) and \ias (right) after the full candidate track selection for signal and $\WJets$ events. 
-%           Because of high event weights of the $\WJets$ sample, the \met and \ptfirstjet cuts are loosen to \mbox{$\met>0\gev$} and \mbox{$\ptfirstjet>70\gev$}.
-%           As these variables are not expected to be correlated with the track characteristics it does not influences the shape of the shown distributions.}
-%  \label{fig:PtAndIasAfterFullPreselection}
-%\end{figure}
+\begin{figure}[!tb]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts/htrackPtSmallRange_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts/htrackASmiSmallRange_log.pdf}
+  \end{tabular}
+  \caption{Candidate track \pt (left) and \ias (right) after the full candidate track selection for signal and $\WJets$ events. 
+           Because of high event weights of the $\WJets$ sample, the \met and \ptfirstjet cuts are loosen to \mbox{$\met>0\gev$} and \mbox{$\ptfirstjet>70\gev$}.
+           As these variables are not expected to be correlated with the track characteristics it does not influences the shape of the shown distributions.}
+  \label{fig:PtAndIasAfterFullPreselection}
+\end{figure}
 These variables are used to optimise the sensitivity of the search in the variable $S/(S+B)$ (S=number of signal events, B=number of background events).
 The optimisation process will be explained in Sec~\ref{blabla}.
 However, before the optimisation can be accomplished, the characterisation end estimation of the background is needed.
 This topic will be discussed in the following section.
-
-
 
