@@ -43,6 +43,14 @@ T.~Moroi, M.~Nagai, and M.~Takimoto, ``{Non-Thermal Production of Wino Dark
   doi:10.1007/JHEP07(2013)066}}.
 %%CITATION = ARXIV:1303.0948;%%.
 
+\bibitem{bib:CMS:DT_8TeV}
+{ CMS} Collaboration, ``{Search for disappearing tracks in proton-proton
+  collisions at $ \sqrt{s}=8 $ TeV}'', {\em JHEP} {\bf 01} (2015) 096,
+  \href{http://www.arXiv.org/abs/1411.6006}{{\tt arXiv:1411.6006}}.
+\href{http://dx.doi.org/10.1007/JHEP01(2015)096}{{\tt
+  doi:10.1007/JHEP01(2015)096}}.
+%%CITATION = ARXIV:1411.6006;%%.
+
 \bibitem{bib:CMS:HSCP_8TeV}
 { CMS} Collaboration, ``{Searches for long-lived charged particles in pp
   collisions at $\sqrt{s}$=7 and 8 TeV}'', {\em JHEP} {\bf 07} (2013) 122,
@@ -51,13 +59,10 @@ T.~Moroi, M.~Nagai, and M.~Takimoto, ``{Non-Thermal Production of Wino Dark
   doi:10.1007/JHEP07(2013)122}}.
 %%CITATION = ARXIV:1305.0491;%%.
 
-\bibitem{bib:CMS:DT_8TeV}
-{ CMS} Collaboration, ``{Search for disappearing tracks in proton-proton
-  collisions at $ \sqrt{s}=8 $ TeV}'', {\em JHEP} {\bf 01} (2015) 096,
-  \href{http://www.arXiv.org/abs/1411.6006}{{\tt arXiv:1411.6006}}.
-\href{http://dx.doi.org/10.1007/JHEP01(2015)096}{{\tt
-  doi:10.1007/JHEP01(2015)096}}.
-%%CITATION = ARXIV:1411.6006;%%.
+\bibitem{bib:CMS:pMSSMinterpretation_7TeV_PAS}
+{ CMS} Collaboration, ``{Phenomenological MSSM interpretation of the CMS 2011
+  5fb-1 results}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1552402}{CMS-PAS-SUS-12-030}} (2013).
 
 \bibitem{bib:CMS:HSCPReinterpreation_PAS}
 { CMS} Collaboration, ``{Reinterpreting the results of the search for
@@ -72,10 +77,13 @@ T.~Moroi, M.~Nagai, and M.~Takimoto, ``{Non-Thermal Production of Wino Dark
 {https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034, Topic
   revision: r9}.
 
-\bibitem{bib:CMS:pMSSMinterpretation_7TeV_PAS}
-{ CMS} Collaboration, ``{Phenomenological MSSM interpretation of the CMS 2011
-  5fb-1 results}'', {\em CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1552402}{CMS-PAS-SUS-12-030}} (2013).
+\bibitem{bib:CMS:HSCP_7TeV}
+{ CMS} Collaboration, ``{Search for heavy long-lived charged particles in $pp$
+  collisions at $\sqrt{s}=7$ TeV}'', {\em Phys. Lett.} {\bf B713} (2012)
+  408--433, \href{http://www.arXiv.org/abs/1205.0272}{{\tt arXiv:1205.0272}}.
+\href{http://dx.doi.org/10.1016/j.physletb.2012.06.023}{{\tt
+  doi:10.1016/j.physletb.2012.06.023}}.
+%%CITATION = ARXIV:1205.0272;%%.
 
 \bibitem{bib:CMS:tracking_8TeV}
 { CMS} Collaboration, ``{Description and performance of track and
@@ -235,5 +243,13 @@ A.~B. et. al., ``Search for New Physics in the Monojet final state at CMS'',
 \href{http://dx.doi.org/10.1140/epjc/s10052-015-3451-4}{{\tt
   doi:10.1140/epjc/s10052-015-3451-4}}.
 %%CITATION = ARXIV:1408.3583;%%.
+
+\bibitem{bib:CMS:ElectronMVA}
+{ CMS} Collaboration, ``{Measurement of Higgs boson production and properties
+  in the WW decay channel with leptonic final states}'', {\em JHEP} {\bf 01}
+  (2014) 096, \href{http://www.arXiv.org/abs/1312.1129}{{\tt arXiv:1312.1129}}.
+\href{http://dx.doi.org/10.1007/JHEP01(2014)096}{{\tt
+  doi:10.1007/JHEP01(2014)096}}.
+%%CITATION = ARXIV:1312.1129;%%.
 
 \end{thebibliography}\endgroup

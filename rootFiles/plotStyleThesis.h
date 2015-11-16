@@ -24,7 +24,7 @@ public:
     gStyle->SetLegendBorderSize(0);
 
     gStyle->SetNdivisions(505,"X");
-    gStyle->SetNdivisions(510,"Y");
+    gStyle->SetNdivisions(509,"Y");
 
     gStyle -> SetTitleFont(42,"xyz");
     gStyle -> SetLabelFont(42,"xyz");
@@ -96,8 +96,8 @@ public:
  
     gStyle -> SetPadRightMargin(0.20);
     //gStyle -> SetPadLeftMargin(0.20);
-    //gStyle -> SetPadBottomMargin(0.20);
-    gStyle -> SetPadTopMargin(0.1);
+    //gStyle -> SetPadBottomMargin(0.25);
+    //gStyle -> SetPadTopMargin(0.1);
     //gStyle -> SetTitleOffset(1.05,"XY");
     gStyle -> SetTitleOffset(1.25,"Z");
     gStyle->SetNdivisions(509,"Z");

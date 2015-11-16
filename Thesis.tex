@@ -111,6 +111,9 @@ a4paper,
 \makeatletter
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
+% \makeatletter
+% \patchcmd{\section}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+% \makeatother
 
 %  \usepackage[onehalfspacing]{setspace}
 %  \onehalfspacing
