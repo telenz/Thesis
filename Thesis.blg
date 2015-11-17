@@ -2,22 +2,27 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
 Database file #1: Thesis.bib
-I was expecting a `,' or a `}'---line 187 of file Thesis.bib
+I was expecting a `,' or a `}'---line 15 of file Thesis.bib
  :       
- :       reportNumber   = "CMS-PAS-TRK-10-005",
+ :       reportNumber   = "CMS-PAS-TRK-10-003",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 199 of file Thesis.bib
  :       
+ :       reportNumber   = "CMS-PAS-TRK-10-005",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 211 of file Thesis.bib
+ :       
  :       reportNumber   = "CMS-PAS-TRK-10-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 419 of file Thesis.bib
+I was expecting a `,' or a `}'---line 431 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-EXO-13-006",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 430 of file Thesis.bib
+I was expecting a `,' or a `}'---line 442 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
@@ -27,45 +32,45 @@ Warning--empty publisher in bib:James:StaticticalMethods_2006
 Warning--empty year in bib:CMS:DT_Thesis
 Name 1 in "J. Brinson, C. Hill, and W. Wulsin" has a comma at the end for entry bib:CMS:DT_8TeV_AN
 while executing---line 1277 of file lucas_unsrt.bst
-You've used 35 entries,
+You've used 36 entries,
             2369 wiz_defined-function locations,
-            862 strings with 12156 characters,
-and the built_in function-call counts, 10281 in all, are:
-= -- 1277
-> -- 205
+            866 strings with 12298 characters,
+and the built_in function-call counts, 10448 in all, are:
+= -- 1295
+> -- 206
 < -- 0
-+ -- 81
++ -- 82
 - -- 46
-* -- 779
-:= -- 1320
-add.period$ -- 90
-call.type$ -- 35
+* -- 794
+:= -- 1342
+add.period$ -- 91
+call.type$ -- 36
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 625
-empty$ -- 1056
+cite$ -- 38
+duplicate$ -- 637
+empty$ -- 1080
 format.name$ -- 36
-if$ -- 2828
+if$ -- 2874
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 92
-newline$ -- 166
+int.to.str$ -- 36
+missing$ -- 95
+newline$ -- 169
 num.names$ -- 19
-pop$ -- 183
+pop$ -- 189
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 332
+skip$ -- 333
 stack$ -- 0
 substring$ -- 324
-swap$ -- 216
+swap$ -- 217
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
 while$ -- 48
-width$ -- 37
-write$ -- 411
-(There were 5 error messages)
+width$ -- 38
+write$ -- 420
+(There were 6 error messages)

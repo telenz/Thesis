@@ -102,7 +102,7 @@ Fitting the exponential spectrum should result in the correct mean proper lifeti
 It can be seen, that the reweighting procedure can reproduce the targeted lifetime of 10\cm.
 
 All samples are generated for different masses of the chargino, but always almost mass-degenerate to the lightest neutralino.
-The mass gap between chargino and neutralino is set to 5\gev.
+The mass gap between chargino and neutralino is set to 150\mev.
 However, as this analysis does not make use of the decay products of the chargino and the lifetime is independently set within \geant, the mass gap does not play any role.
 Six different masses from 100\gev to 600\gev are simulated.
 This leads then to a total number of 42 signal samples.
@@ -197,31 +197,31 @@ Dataset  & Luminosity [\fbinv]   \\
 \end{table}  
 Again, because of the size of the datasets ($\sim150\,$TB in total), a reduction of the size is achieved by selecting only events with at least one jet with a minimum \pt of 50\gev.\\
 
-In addition, the analysis makes use of the datasets listed in Table~\ref{tab:ControlSamples}.
-These datasets are used for background estimation purposes and the estimation of their associated systematic uncertainties.
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[!hbt]
-\centering
-\caption{Further datasets used for background estimation.}
-\label{tab:ControlSamples}
-\makebox[0.99\textwidth]{
-\begin{tabular}{lr}
-\multicolumn{2}{c}{} \\
-\toprule
-Dataset  & Luminosity [\fbinv]   \\
-\midrule
-/SingleMu/Run2012A-22Jan2013-v1/AOD        &  0.876 \\
-/SingleMu/Run2012B-22Jan2013-v1/AOD        &  4.405 \\
-/SingleMu/Run2012C-22Jan2013-v1/AOD        &  7.040 \\
-/SingleMu/Run2012D-22Jan2013-v1/AOD        &  7.369 \\ 
-\midrule
-/SingleElectron/Run2012A-22Jan2013-v1/AOD  &  0.876 \\
-/SingleElectron/Run2012B-22Jan2013-v1/AOD  &  4.412 \\
-/SingleElectron/Run2012C-22Jan2013-v1/AOD  &  7.050 \\
-/SingleElectron/Run2012D-22Jan2013-v1/AOD  &  7.368 \\
-\bottomrule
-\end{tabular}}
-\end{table}  
+%In addition, the analysis makes use of the datasets listed in Table~\ref{tab:ControlSamples}.
+%These datasets are used for background estimation purposes and the estimation of their associated systematic uncertainties.
+%\renewcommand{\arraystretch}{1.5}
+%\begin{table}[!hbt]
+%\centering
+%\caption{Further datasets used for background estimation.}
+%\label{tab:ControlSamples}
+%\makebox[0.99\textwidth]{
+%\begin{tabular}{lr}
+%\multicolumn{2}{c}{} \\
+%\toprule
+%Dataset  & Luminosity [\fbinv]   \\
+%\midrule
+%/SingleMu/Run2012A-22Jan2013-v1/AOD        &  0.876 \\
+%/SingleMu/Run2012B-22Jan2013-v1/AOD        &  4.405 \\
+%/SingleMu/Run2012C-22Jan2013-v1/AOD        &  7.040 \\
+%/SingleMu/Run2012D-22Jan2013-v1/AOD        &  7.369 \\ 
+%\midrule
+%/SingleElectron/Run2012A-22Jan2013-v1/AOD  &  0.876 \\
+%/SingleElectron/Run2012B-22Jan2013-v1/AOD  &  4.412 \\
+%/SingleElectron/Run2012C-22Jan2013-v1/AOD  &  7.050 \\
+%/SingleElectron/Run2012D-22Jan2013-v1/AOD  &  7.368 \\
+%\bottomrule
+%\end{tabular}}
+%\end{table}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis selection}
 \label{sec:AnalysisSelection}
@@ -229,7 +229,8 @@ Dataset  & Luminosity [\fbinv]   \\
 In order to suppress events originating from SM processes (such as QCD-multijet events, \WJets, etc.), a selection for signal-like tracks is applied which shall be described in the following sections.
 The candidate track selection follows closely the selection required in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.\\
 
-\subsection*{Event based selection}
+\subsection{Event based selection}
+\label{sec:EventBasedSelection}
 First, to suppress cosmic events and noise from the beam halo a selection on the quality of the vertex can be applied.
 This selection includes requirements of the position of the vertex with respect to the beam axes and the number of degrees of freedom (which is strongly correlated to the number of tracks originating from the vertex) \cite{bib:CMS:Tracking_7TeV_PAS}:  
 \begin{itemize}
@@ -297,7 +298,8 @@ Figure~\ref{fig:QCDcuts} shows the maximal $\Delta\phi$ of any of two subleading
 \end{figure}
 \hspace{0.9cm}
 
-\subsection*{Candidate track selection}
+\subsection{Candidate track selection}
+\label{sec:CandidateTrackSelection}
 After the reduction of background processes with event based variables, a track based selection is carried out.
 To get an optimised selection for possible chargino tracks several signal track characteristics are exploited.\\
 

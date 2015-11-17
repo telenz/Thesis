@@ -5,7 +5,7 @@
 \begin{table}[!h]
 %\begin{sideways}
 \centering
-\caption{Event yields after each selection step for various background processes. FIXME update this table!!}
+\caption{Event yields after each selection step for various background processes. FIXME update this table with correct ttjets sample!!}
 \label{tab:CutflowMC}
 \makebox[0.99\textwidth]{
 \begin{tabular}{|l|c|c|c|c|}
@@ -15,16 +15,16 @@
 Selection               &   \WJets  & \ttbarJets  & \Zlep & Multijet  \\
 \midrule
 
-after skim                                                                                & 9.16 $\cdot10^{7 }$ & 1.04 $\cdot10^{6 }$ & 2.21 $\cdot10^{7 }$ & 1.38 $\cdot10^{11}$ \\
+after skim ($\pt^{\text{1.jets}}>60\gev$)                                                                             & 9.16 $\cdot10^{7 }$ & 1.04 $\cdot10^{6 }$ & 2.21 $\cdot10^{7 }$ & 1.38 $\cdot10^{11}$ \\
 trigger                                                                                   & 4.31 $\cdot10^{6 }$ & 1.12 $\cdot10^{5 }$ & 4.23 $\cdot10^{3 }$ & 4.32 $\cdot10^{6 }$ \\
 $\ptfirstjet>100\gev$                                                                     & 3.07 $\cdot10^{6 }$ & 7.89 $\cdot10^{4 }$ & 1.02 $\cdot10^{3 }$ & 1.15 $\cdot10^{6 }$ \\
 $\met>100\gev$                                                                            & 1.89 $\cdot10^{6 }$ & 5.17 $\cdot10^{4 }$ & 6.26 $\cdot10^{2 }$ & 9.63 $\cdot10^{5 }$ \\
-$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                  & 1.11 $\cdot10^{6 }$ & 6.58 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                          & 1.11 $\cdot10^{6 }$ & 6.64 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 2.01 $\cdot10^{4 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                     & 1.11 $\cdot10^{6 }$ & 6.58 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                             & 1.11 $\cdot10^{6 }$ & 6.64 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 2.01 $\cdot10^{4 }$ \\
 $\geq1$ reconstructed trk                                                                 & 1.10 $\cdot10^{6 }$ & 6.57 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
 $\geq1$ high-purity trk                                                                   & 1.10 $\cdot10^{6 }$ & 6.57 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk with $N_{\text{miss}}^{\text{middle}}=0$                                      & 1.09 $\cdot10^{6 }$ & 6.55 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk with $N_{\text{miss}}^{\text{inner}}=0$                                       & 1.07 $\cdot10^{6 }$ & 6.53 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk with $N_{\text{miss}}^{\text{middle}}=0$                                             & 1.09 $\cdot10^{6 }$ & 6.55 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ trk with $N_{\text{miss}}^{\text{inner}}=0$                                              & 1.07 $\cdot10^{6 }$ & 6.53 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
 $\geq1$ trk with $|d0|<0.02\cm$                                                           & 1.07 $\cdot10^{6 }$ & 6.47 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
 $\geq1$ trk with $|dz|<0.5\cm$                                                            & 1.07 $\cdot10^{6 }$ & 6.46 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
 $\geq1$ trk with $|\eta|<2.1$                                                             & 1.03 $\cdot10^{6 }$ & 6.41 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
@@ -44,20 +44,47 @@ $\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} <
 \end{table}  
 %\end{landscape}
 
+\renewcommand{\arraystretch}{1.1}
+\begin{table}[!h]
+%\begin{sideways}
+\centering
+\caption{Event yields after each selection step for various signal models. FIXME update this table with other signal samples!!}
+\label{tab:CutflowMC}
+\makebox[0.99\textwidth]{
+\begin{tabular}{|l|c|c|c|c|}
+\multicolumn{5}{c}{} \\
+\toprule
 
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
-When I now start to write some text, where does it appear. Starnge.
+\multirow{2}{*}{Selection}                                              &   m=100\gev          &   m=100\gev          &   m=500\gev          &   m=500\gev          \\
+                                                                        &   $c\tau$=10\cm      &   $c\tau$=100\cm     &   $c\tau$=10\cm      &   $c\tau$=100\cm      \\
+\midrule
+
+
+before selection                                                                          & 3.41 $\cdot10^{5 }$ & 3.41 $\cdot10^{5 }$ & 3.46 $\cdot10^{2 }$ & 3.46 $\cdot10^{2 }$ \\
+trigger                                                                                   & 1.56 $\cdot10^{4 }$ & 1.49 $\cdot10^{4 }$ & 4.63 $\cdot10^{1 }$ & 4.61 $\cdot10^{1 }$ \\
+$\ptfirstjet>100\gev$                                                                     & 1.10 $\cdot10^{4 }$ & 1.05 $\cdot10^{4 }$ & 3.65 $\cdot10^{1 }$ & 3.58 $\cdot10^{1 }$ \\
+$\met>100\gev$                                                                            & 1.09 $\cdot10^{4 }$ & 9.84 $\cdot10^{3 }$ & 3.63 $\cdot10^{1 }$ & 3.56 $\cdot10^{1 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                  & 7.91 $\cdot10^{3 }$ & 6.99 $\cdot10^{3 }$ & 2.76 $\cdot10^{1 }$ & 2.70 $\cdot10^{1 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                          & 7.91 $\cdot10^{3 }$ & 7.04 $\cdot10^{3 }$ & 2.77 $\cdot10^{1 }$ & 2.71 $\cdot10^{1 }$ \\
+$\geq1$ reconstructed trk                                                                 & 3.13 $\cdot10^{3 }$ & 5.75 $\cdot10^{3 }$ & 5.74 $\cdot10^{0 }$ & 2.13 $\cdot10^{1 }$ \\
+$\geq1$ high-purity trk                                                                   & 2.91 $\cdot10^{3 }$ & 5.66 $\cdot10^{3 }$ & 5.25 $\cdot10^{0 }$ & 2.08 $\cdot10^{1 }$ \\
+$\geq1$ trk with $N_{\text{miss}}^{\text{middle}}=0$                                      & 2.87 $\cdot10^{3 }$ & 5.46 $\cdot10^{3 }$ & 5.23 $\cdot10^{0 }$ & 2.02 $\cdot10^{1 }$ \\
+$\geq1$ trk with $N_{\text{miss}}^{\text{inner}}=0$                                       & 2.86 $\cdot10^{3 }$ & 5.41 $\cdot10^{3 }$ & 5.22 $\cdot10^{0 }$ & 2.01 $\cdot10^{1 }$ \\
+$\geq1$ trk with $|d0|<0.02\cm$                                                           & 2.81 $\cdot10^{3 }$ & 5.39 $\cdot10^{3 }$ & 5.08 $\cdot10^{0 }$ & 1.99 $\cdot10^{1 }$ \\
+$\geq1$ trk with $|dz|<0.5\cm$                                                            & 2.80 $\cdot10^{3 }$ & 5.39 $\cdot10^{3 }$ & 5.08 $\cdot10^{0 }$ & 1.99 $\cdot10^{1 }$ \\
+$\geq1$ trk with $|\eta|<2.1$                                                             & 2.63 $\cdot10^{3 }$ & 4.98 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.91 $\cdot10^{1 }$ \\
+$\geq1$ trk with $\pt>10\gev$                                                             & 2.63 $\cdot10^{3 }$ & 4.98 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.91 $\cdot10^{1 }$ \\
+$\geq1$ trk without a $\mu$ within $\Delta R<0.15$                                        & 2.63 $\cdot10^{3 }$ & 4.70 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.89 $\cdot10^{1 }$ \\
+$\geq1$ trk without an e within $\Delta R<0.15$                                           & 2.63 $\cdot10^{3 }$ & 4.70 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.89 $\cdot10^{1 }$ \\
+$\geq1$ trk without a $\tau$ within $\Delta R<0.15$                                       & 2.63 $\cdot10^{3 }$ & 4.68 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.89 $\cdot10^{1 }$ \\
+$\geq1$ trk without a jet within $\Delta R<0.5$                                           & 2.61 $\cdot10^{3 }$ & 4.64 $\cdot10^{3 }$ & 4.89 $\cdot10^{0 }$ & 1.84 $\cdot10^{1 }$ \\
+\makecell[l]{$\geq1$ trk !within $\Delta R<0.05$ of \\\hfill a dead/noisy ECAL cell}     & 2.40 $\cdot10^{3 }$ & 4.30 $\cdot10^{3 }$ & 4.44 $\cdot10^{0 }$ & 1.71 $\cdot10^{1 }$ \\
+\makecell[l]{$\geq1$ trk !within an ECAL  intermodule gap}                               & 2.38 $\cdot10^{3 }$ & 4.27 $\cdot10^{3 }$ & 4.41 $\cdot10^{0 }$ & 1.70 $\cdot10^{1 }$ \\
+$\geq1$ trk !within $1.42<|\eta|<1.65$                                                   & 2.16 $\cdot10^{3 }$ & 3.92 $\cdot10^{3 }$ & 4.19 $\cdot10^{0 }$ & 1.58 $\cdot10^{1 }$ \\
+$\geq1$ trk !within $\Delta R<0.25$ to a bad CSC                                         & 2.06 $\cdot10^{3 }$ & 3.71 $\cdot10^{3 }$ & 4.06 $\cdot10^{0 }$ & 1.52 $\cdot10^{1 }$ \\
+$\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$     & 2.03 $\cdot10^{3 }$ & 3.67 $\cdot10^{3 }$ & 4.00 $\cdot10^{0 }$ & 1.51 $\cdot10^{1 }$ \\
+\bottomrule
+\end{tabular}}
+%\end{sideways}
+\end{table}  
+%\end{landscape}

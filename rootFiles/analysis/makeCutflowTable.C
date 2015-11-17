@@ -15,25 +15,31 @@ int makeCutflowTable()
 
   vector<TH1D*> samples;
 
-  TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_11_METGt100_JetPt110/results/analyzer/ntuples/input_weighted";
+  TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_12_METGt100_JetPt110/results/analyzer/ntuples/input_weighted";
   TFile *file1 = TFile::Open(pathName + "/wjets.root","READ");
   file1->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file2 = TFile::Open(pathName + "/ttjets.root","READ");
   file2->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file3 = TFile::Open(pathName + "/dytoll.root","READ");
   file3->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file4 = TFile::Open(pathName + "/qcd.root","READ");
   file4->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file5 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_10cm.root","READ");
   file5->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
-  TFile *file6 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_100cm.root","READ");
+  samples.push_back(hCutflow);
+  TFile *file6 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_100cm.root","READ");
   file6->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  samples.push_back(hCutflow);
+  TFile *file7 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_10cm.root","READ");
+  file7->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
+  TFile *file8 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_100cm.root","READ");
+  file8->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
 
   ofstream cutflow;
   cutflow.open("cutflowTable.txt");

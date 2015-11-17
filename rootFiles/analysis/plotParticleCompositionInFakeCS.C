@@ -361,12 +361,17 @@ int plotParticleCompositionInFakeCS(){
   TCanvas *c1 = new TCanvas();
   muFakeControlRegion.histo->SetMaximum(1.);
   muFakeControlRegion.histo->Draw("e");
+  TLatex*  info   = new TLatex();
+  info-> SetNDC();
+  TString AuxString = "Z#rightarrow#mu#mu";
+  info->DrawLatex(0.65,0.8,AuxString);
   c1->SaveAs("ParticleCompositionInFakeCS_Mu.pdf");
 
   TCanvas *c2 = new TCanvas();
   c2->cd();
   eleFakeControlRegion.histo->SetMaximum(1.);
   eleFakeControlRegion.histo->Draw("e");
+  info->DrawLatex(0.65,0.8,"Z#rightarrowee");
   c2->SaveAs("ParticleCompositionInFakeCS_Ele.pdf");
   
   return 0;

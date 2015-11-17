@@ -244,6 +244,11 @@ A.~B. et. al., ``Search for New Physics in the Monojet final state at CMS'',
   doi:10.1140/epjc/s10052-015-3451-4}}.
 %%CITATION = ARXIV:1408.3583;%%.
 
+\bibitem{bib:CMS:ConversionVeto_PAS}
+{ CMS} Collaboration, ``{Studies of Tracker Material}'', {\em CMS Physics
+  Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1279138}{CMS-PAS-TRK-10-003}} (2010).
+
 \bibitem{bib:CMS:ElectronMVA}
 { CMS} Collaboration, ``{Measurement of Higgs boson production and properties
   in the WW decay channel with leptonic final states}'', {\em JHEP} {\bf 01}
