@@ -261,9 +261,9 @@ public:
 	  // weight_xsec_lumi=1;
 
 	  if(trackPdgId->at(i)!=0){
-	    cout<< weight<< endl;
-	    cout<<trackStatus->size()<<endl;
-	    cout<<"trackNValid->at(i) = "<<trackNValid->at(i)<<endl;
+	    //cout<< weight<< endl;
+	    //cout<<trackStatus->size()<<endl;
+	    //cout<<"trackNValid->at(i) = "<<trackNValid->at(i)<<endl;
 	  }
 
 

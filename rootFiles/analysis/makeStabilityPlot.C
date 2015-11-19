@@ -26,17 +26,12 @@ int makeStabilityPlot()
   
   TeresaPlottingStyle::init();
 
-  /*
-    gStyle->SetMarkerSize(.5);
-    gStyle -> SetTitleOffset(0.5,"X");
-    gStyle -> SetPadBottomMargin(0.10);
-    gStyle->SetTitleSize(0.03,"t");
-    gStyle -> SetTitleSize(0.04,"X"); 
-    gStyle -> SetTitleSize(0.04,"Y"); 
-    gStyle -> SetTitleOffset(0.7,"X");
-    gStyle -> SetTitleOffset(1.5,"Y");
-  */
   gStyle -> SetTitleOffset(0.7,"X");
+  gStyle -> SetTitleOffset(1.2,"Y");
+  gStyle -> SetTitleSize(0.055,"Y");
+  gROOT  -> ForceStyle(); 
+
+
   //Make fits at the five steps
   TString runRangeStart[5];
   //runRangeStart[0] = "190645"; 
@@ -76,9 +71,9 @@ int makeStabilityPlot()
   TH1D* hStrip  = new TH1D("hStrip","Strip dE/dx",521,1,521);
 
 
-  hAfter->GetYaxis()->SetTitle("dE/dx estimator I_{h2} [MeV/cm]");
-  hBefore->GetYaxis()->SetTitle("dE/dx estimator I_{h2} [MeV/cm]");
-  hStrip->GetYaxis()->SetTitle("dE/dx estimator I_{h2} [MeV/cm]");
+  hAfter->GetYaxis()->SetTitle("#sum I_{h2} [MeV/cm]");
+  hBefore->GetYaxis()->SetTitle("#sum I_{h2} [MeV/cm]");
+  hStrip->GetYaxis()->SetTitle("#sum I_{h2} [MeV/cm]");
   hAfter->GetXaxis()->SetTitle("Time (year 2012)");
   hBefore->GetXaxis()->SetTitle("Time (year 2012)");
   hStrip->GetXaxis()->SetTitle("Time (year 2012)");
@@ -89,6 +84,7 @@ int makeStabilityPlot()
   hAfter->SetTitle("");
   hBefore->SetTitle("");
   hStrip->SetTitle("");
+
   
   hAfter  -> GetYaxis()->SetRangeUser(2.8,3.8);
   hBefore -> GetYaxis()->SetRangeUser(2.8,3.8);

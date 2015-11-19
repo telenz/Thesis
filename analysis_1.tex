@@ -38,32 +38,29 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
     \includegraphics[width=0.75\textwidth]{figures/analysis/ChiChi_ProductionAndDecay.pdf}
   \end{tabular}
   \caption{Feynman diagram of chargino pair production via gamma or $Z$-boson exchange and the subsequent decay via a virtual $W$-boson.}
-  \vspace{20pt}
+  \vspace{30pt}
   \label{fig:FeynmanDiagram}
 \end{figure}
 
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \frame{\includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_GammaZ.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_GammaZ.pdf}
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_Scalar.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_Squark.pdf}}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_Squark.pdf}
   \end{tabular}
   \caption{Main tree-level diagrams for chargino pair production.}
-   \vspace{20pt}
+   \vspace{30pt}
   \label{fig:FeynmanDiagramProductionCharginoPair}
 \end{figure}
 
 \begin{figure}[!h]
   \centering 
-\begin{tabular}{c}
-    \frame{    
+  \begin{tabular}{c}
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi0_WBoson.pdf}
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi0_Squark.pdf}
-    }
   \end{tabular}
   \caption{Main tree-level diagrams for chargino neutralino production.}
-  \vspace{20pt}
   \label{fig:FeynmanDiagramProductionCharginoNeutralino}
 \end{figure}
 Thus, the LHC offers the potential to search for charginos and due to its high centre-of-mass energy it is the first collider that can access SUSY models with charginos of several hundreds \gev.
@@ -275,14 +272,6 @@ The Landau distribution has no free parameters. Its most probable value is aroun
 However, it is possible to introduce artifically a different most probable value and a width with $x \rightarrow \frac{x-\text{MPV}}{\sigma}-0.222$.
 The Landau distribution is a highly asymmetric distribution with a long tail towards the right end (see Fig.~\ref{fig:landau}).
 Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
-\begin{figure}[!b]
-  \centering 
-  \begin{tabular}{c}
-  \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/Landau.pdf}
-  \end{tabular}
-  \caption{Illustration of the shape of a Landau distribution. Parameters were chosen as $\mu=200$ and $\sigma=20$.} 
-  \label{fig:landau}
-\end{figure}
 The mean and the variance of a landau distribution are not defined.
 Because of its strong asymmetry, measurements of $\langle dE/dx \rangle$ with only a few single measurements are easily biased towards high values, making the mean energy loss described by the Bethe formula a problematic and unstable concept. 
 %This is again different for a (limited) measurment, as there it is always possible to calucalute a mean.
@@ -299,6 +288,15 @@ The most probable energy loss of a charged particle, $\Delta_p$, is defined by t
 with $\xi=(K/Z)\langle Z/A \rangle (x/\beta^2)$. 
 The thickness of the absorber $x$ appears explicitly in the Landau-Vavilov-Bichsel equation making the most probable energy loss per path \mbox{length $\Delta_p/dx$} logarithmically dependent on $x$.
 A comparison between the Bethe mean energy loss $\langle dE/dx \rangle$ and the most probable energy loss $\Delta_p/dx$ is shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
+\begin{figure}[!b]
+  \centering 
+  \begin{tabular}{c}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/Landau.pdf}
+  \end{tabular}
+  \caption{Illustration of the shape of a Landau distribution. Parameters were chosen as $\mu=200$ and $\sigma=20$.} 
+  \label{fig:landau}
+\vspace{92pt}
+\end{figure}
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
@@ -333,28 +331,20 @@ This makes $dE/dx$  a very well discriminating variable.
   \label{fig:dEdx_Landau_Silicon}
 \end{figure}
 Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles, which are usually unrelativistic because of their high mass.
-%\begin{itemize}
-%\item The variable dE/dx: General introdution
-%\item Bethe-Bloch (difficult concept because of undefined mean of the Landau distribution)
-%\item Landau distribution (no mean)
-%\item Most probable energy loss landau vavilov function (show comparison plot Landau, Bethe)
-%\item Minimal ionising particles (pt cut) (how dedx for pions CMS 2008)
-%\end{itemize}
 
 \section{Energy calibration of the silicon pixel tracker}
-
 During Run I in 2012, the pixel silicon detector was continuously subjected to an energy calibration, a so-called gain calibration~\cite{bib:Danek}.
 Every pixel was calibrated to the same response, so that the whole pixel tracker should have been well inter-calibrated.
 Unfortunately, due to various reasons, such as the imperfect constancy of the reference signal, or radiation and temperature induced changes, the energy calibration could not ensure a fully calibrated pixel tracker.
 %was not adequate enough to use the measured energy deposition without a further offline calibration procedure.
 This imperfection of the gain calibration can be seen in Fig.~\ref{fig:StabilityPlot_beforeCalibration}, where the sum of the harmonic-2 estimator for all tracks $\sum\limits_{\text{all trks}}\ihtwo$ over the full data-taking period in 2012 is shown.
 Four different steps can be spotted.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.49\textwidth]{figures/analysis/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{FIXME y;axis title. Sum of all track's $dE/dx$ (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run.} 
+  \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_beforeCalibration}
 \end{figure}
 The first and the third steps correspond to changes in the settings of the tracker due to irradiation.
@@ -424,7 +414,7 @@ The variation over time was indeed eradicated, resulting in a maximal time varia
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.49\textwidth]{figures/analysis/StabilityPlot_Pixel_afterCalibration_withoutStepFits_NEW.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_afterCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
   \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) over the full year 2012 after applying the calibration factors, resulting in an average $dE/dx$ of 3.51 MeV/cm. Only pixel hits are taken into account. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_afterCalibration}
@@ -455,7 +445,7 @@ c_{\text{absolute}} = \frac{dE/dx_{\text{strip}}}{dE/dx_{\text{pixel}}} = \frac{
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.49\textwidth]{figures/analysis/StabilityPlot_Strip_afterCalibration_withoutStepFits_NEW.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Strip_afterCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
   \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) measured in the silicon strip detector over the full year 2012. The average most probable $dE/dx$ is $\ihtwo=3.303\,\mev/\cm$. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_Strip}
@@ -583,7 +573,7 @@ This background suppression improvement is most pronounced for very tight cuts o
            Each point correspond to one selection cut in \ias.
            The figure is based on a simulated \WJets sample and a simulated signal sample with chargino-chargino production, both subject to a selection of good quality tracks with $\pt>10\gev$.
        }
-  \vspace{40pt}
+  %\vspace{40pt}
   \label{fig:ROCplots}
 \end{figure} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

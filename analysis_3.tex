@@ -1,9 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 \chapter{Characterisation and estimation of the Standard Model backgrounds}
 \label{sec:BackgroundEstimation}
 After the application of the candidate track selection explained in the previous section the background arising from Standard Model processes is dramatically reduced.
-However, it still happens sometimes that an electron, muon or tau fails reconstruction.
+Only two events in the simulated \WJets sample remain.
+One of these originates from an unreconstructed muon, and one from an unreconstructed electron.
+That means, it can still happen sometimes that an electron, muon or tau fails reconstruction.
 The underlying mechanism and the methods to estimate the leptonic background will be in detail explained in Section~\ref{sec:LeptonicBkg}.
 Furthermore, there is the possibility that a track is reconstructed out of a set of hits which do not origin from only one single particle.
 Such tracks are called ``fake tracks''. 
@@ -14,26 +15,29 @@ The composition of the background after the candidate track selection is shown i
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionTrigger_Wjets/htrackgenParticleSmallRange_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionPlusIasTrigger_Wjets/htrackgenParticleSmallRange_lin.pdf}
+    %\includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionPlusIasTrigger_Wjets/htrackgenParticleSmallRange_lin.pdf}
   \end{tabular}
-  \caption{Background composition in the simulated \WJets dataset after the full candidate track selection (left) and after the full candidate track selection plus an additional selection cut of \mbox{$\ias>0.05$} (right). 
+  \caption{Background composition in the simulated \WJets dataset after the full candidate track selection.
            The statistical uncertainty is depicted by the hashed grey area.
            Given the limited size of the simulated \WJets dataset, the uncertainty of the composition is accordingly large.}
   \label{fig:BkgComposition}
 \end{figure}
 This composition can change significantly when imposing further selection cuts on \pt and \ias.
 The definition of the signal region will be, however, addressed within the optimisation of the search sensitivity in Section~\ref{sec:Optimisation}.
-To get a feeling how the composition of the background is affected by further cuts on one of the main variables, 
-the background composition is also shown with the candidate track selection plus an additional \ias cut of 0.05.
-It can be seen that the fake background is less reduced by an additional selection cut on \ias.
-This gains even more in importance when considering all sources of fake tracks.
-The fake background is not only present in \WJets events but essentially in all Standard Model processes.\\
+%To get a feeling how the composition of the background is affected by further cuts on one of the main variables, 
+%the background composition is also shown with the candidate track selection plus an additional \ias cut of 0.05.
+%It can be seen that the fake background is less reduced by an additional selection cut on \ias.
+It needs to be mentioned that the fake background is contributing through all SM processes, whereas the leptonic background originates mainly from \WJets events.
+That means that neither of the two background sources can be studied with simulated samples.
+First, the \WJets sample is highly statistically limited.
+Second, not all SM processes were simulated in the special format required. 
+Thus, a data-based background estimation is required for either of the two backgrounds.
 
-Still, also the leptonic background can be important.
-Unfortunately, because of the limited size of the simulated \WJets dataset, it is not possible to study the leptonic contribution to the background with simulated events.
-Furthermore, when the simulation of the operativeness of every single detector module is not fully correct, the simulation could highly underestimate the leptonic background.\\
+%Still, also the leptonic background can be important.
+%Unfortunately, because of the limited size of the simulated \WJets dataset, it is not possible to study the leptonic contribution to the background with simulated events.
+%Furthermore, when the simulation of the operativeness of every single detector module is not fully correct, the simulation could highly underestimate the leptonic background.\\
 
-Therefore, a data-based approach is needed for either of the two background sources: the fake and the leptonic background.
+%Therefore, a data-based approach is needed for either of the two background sources: the fake and the leptonic background.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fake background}
@@ -46,7 +50,7 @@ This can be seen in Fig~\ref{fig:NValidFakes}, where the distribution in the num
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/NValidForFakes_chiTracksfullSelectionNoQCDCutsNoTrigger_PtGt15GeV.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/NValidForFakes_chiTracksfullSelectionNoTriggerCuts.pdf}
   \end{tabular}
   \caption{Normalised distribution of the number of hits for fake tracks.}
   \label{fig:NValidFakes}
@@ -187,8 +191,8 @@ This is shown in Fig.~\ref{fig:FakeRate} where the fake rate is depicted for the
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/ParticleCompositionInFakeCS_Mu.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/ParticleCompositionInFakeCS_Ele.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/ParticleCompositionInFakeCS_Mu.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/ParticleCompositionInFakeCS_Ele.pdf}
   \end{tabular}
   \caption{Generator-level particle matched to the selected track with the selection described in Table~\ref{tab:FakeMuonSample} (left) and Table~\ref{tab:FakeElectronSample} (right). ``Fake'' mean that no corresponding generator-level particle could be found. }
 \vspace{30pt}
@@ -198,7 +202,7 @@ This is shown in Fig.~\ref{fig:FakeRate} where the fake rate is depicted for the
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.79\textwidth]{figures/analysis/AnalysisSelection/fakeTrkRates.pdf}
+    \includegraphics[width=0.79\textwidth]{figures/analysis/Background/fakeTrkRates.pdf}
   \end{tabular}
   \caption{Fake track rate estimated in \cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} for tracks with four hits. Taken from \cite{bib:CMS:DT_8TeV_AN} }
   \label{fig:FakeRate}
@@ -282,7 +286,7 @@ This event is visualised in Fig~\ref{fig:LostElectron}.
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Electron_lumi_279317_event_111637553.png}
   \end{tabular}
-  \caption{Visualisation of an $W\rightarrow e\nu_e$ event contributing to the SM background. 
+ \caption{Visualisation of an $W\rightarrow e\nu_e$ event contributing to the SM background. 
            In light blue the generator-level particles $e$ and $\nu_e$ of the $W$ decay are shown. 
            The $\nu_e$, only weakly interacting does not show any signature in the detector, whereas the electron ($\pt\simeq 90\gev$) leaves a track (black line) with \mbox{$\pt\simeq 70\gev$} in the tracker. 
            No ECAL energy deposits in the direction of the electron are visible. 
@@ -290,6 +294,7 @@ This event is visualised in Fig~\ref{fig:LostElectron}.
            An ISR jet ($\pt\simeq 230\gev$) causes the \met (read arrow) in the event. }
   \label{fig:LostElectron}
 \end{figure}
+ 
 In this event no energy deposits in the ECAL are read out, which suggests, that this ECAL tower was neither working properly in 2012.
 Additionally, electrons can do bremsstrahlung which can change the direction of the electron significantly.
 Thus, the energy deposits in the ECAL can possibly not be matched to the original electron.
@@ -302,14 +307,6 @@ They can therefore also easily bypass the calorimeter isolation criterion.
 Because of nuclear interactions in the tracker, they can result in short reconstructed tracks which can easily be highly mismeasured in \pt.
 Thus, taus can also contribute even when imposing a tighter selection in the transverse momentum.
 Such an event is shown in Fig.~\ref{fig:LostTau}.  
-
-
-\subsection*{Muons}
-Muons can fail reconstruction when they are pointing towards a bad cathode strip chamber.
-This is taken into account in the candidate track selection.
-However, some of the muons still fail reconstruction when they fall within the gap between stations 0 and 1 of the DT system at $|\eta|=0.25$.
-The muon reconstruction efficiency drops from around 99\% to a value of around 94\% as shown in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
-This possibility is illustrated in a simulated event shown in Fig~\ref{fig:LostMuon}.
 \begin{figure}[!tb]
   \centering 
   \begin{tabular}{c}
@@ -321,6 +318,14 @@ This possibility is illustrated in a simulated event shown in Fig~\ref{fig:LostM
            No corresponding ECAL or HCAL energy deposits are measured. Therefore the reconstruction of the pion failed.}
   \label{fig:LostTau}
 \end{figure}
+
+\subsection*{Muons}
+Muons can fail reconstruction when they are pointing towards a bad cathode strip chamber.
+This is taken into account in the candidate track selection.
+However, some of the muons still fail reconstruction when they fall within the gap between stations 0 and 1 of the DT system at $|\eta|=0.25$.
+The muon reconstruction efficiency drops from around 99\% to a value of around 94\% as shown in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
+This possibility is illustrated in a simulated event shown in Fig~\ref{fig:LostMuon}.
+
 
 In~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} events are rejected when the track is pointing in a region of $0.15<|\eta|<0.35$.
 In this search, this cut was omitted to maximise signal acceptance. 
@@ -335,7 +340,6 @@ To have the possibility to make an optimisation in the two main discriminating v
 A comparison of the \ias distribution for all four different background sources is shown in Fig~\ref{fig:IasDist}.
 \begin{figure}[!tb]
   \centering 
-  \vspace{25pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/LostMuon_Lumi_357583_Event_142918834.png}
   \end{tabular}
@@ -344,16 +348,15 @@ A comparison of the \ias distribution for all four different background sources 
            The muon is pointing to the $\eta$-region between stations 0 and 1 of the DT system at $|\eta|\sim0.25$.
            In this region the muon reconstruction is less effcient. No signal in the muon chambers are visible. Therefore the  muon could not be reconstructed.}
   \label{fig:LostMuon}
-\vspace{25pt}
 \end{figure}
 
 \begin{figure}[!tb]
   \centering 
   \vspace{25pt}
   \begin{tabular}{c}
-    \includegraphics[width=0.33\textwidth]{figures/analysis/IasDistributionForElecs.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis/IasDistributionForPions.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis/IasDistributionForMuons.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/IasDistributionForElecs.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/IasDistributionForPions.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/IasDistributionForMuons.pdf}
   \end{tabular}
   \caption{Normalised \ias distribution for electrons (left), pions (middle) and muons (right). 
            For all leptons the \ias distribution is rapidly falling.}
@@ -372,42 +375,51 @@ The inclusive (without \ias information) lepton background estimation method fol
 
 In order to estimate the number of events in the signal region originating from unreconstructed leptons, information from simulated events is used.
 With the help of \WJets events the ratio between the number of events in the signal region with the selected track matched to a generator-level lepton $N_{SR}^{\text{trk matched to lepton}_i}$
- and the number of events in the control region $N_{CR}^{\text{lepton}_i\text{ veto inverted}}$ with the lepton veto inverted is determined
+ and the number of events in the control region $N_{CR}^{\text{lepton}_i\text{ veto inverted}}$ with the lepton veto inverted is determined.
+For muons, this lead to the following expression
 \begin{equation*}
-\rho_{\text{MC}}^{\text{lep}_i} = \frac{N_{\text{SR,MC}}^{\text{trk matched to lepton}_i}}{N_{\text{CR,MC}}^{\text{lepton}_i\text{ veto inverted}}},
+\rho_{\text{MC}}^{\mu} = \frac{N_{\text{SR,MC}}^{\text{trk matched to }\mu}}{N_{\text{CR,MC}}^{\mu \text{ veto inverted}}}.
 \end{equation*}
-where i stands for the lepton type.
-Since for electron and taus the reconstruction efficiency is highly correlated with the \ecalo selection requirement, the \ecalo requirement is additionnaly removed in the control regions for these two lepton types. 
+Since for electrons and taus the reconstruction efficiency is highly correlated with the \ecalo selection requirement, the \ecalo requirement is additionnaly removed in the control regions for these two lepton types 
+\begin{equation*}
+\rho_{\text{MC}}^{e,\tau} = \frac{N_{\text{SR,MC}}^{\text{trk matched to }e,\tau}}{N_{\text{CR,MC}}^{e,\tau\text{ veto inverted}, \cancel{\ecalo<5\gev}}}.
+\end{equation*}
 
 In order to estimate the inclusive background for all three lepton types, the scaling factor $\rho_{\text{MC}}^{\text{lep}_i}$ is applied to the number of events in the lepton veto inverted control region measured in data.
 Also in data the control region for electrons and taus is defined with the \ecalo requirement removed. 
 Thus the inclusive number of background events is 
 \begin{equation*}
-N^{\text{lepton}_i\text{, inclusive in I$_{\text{as}}$}}_{\text{bkg}} = \rho_{\text{MC}}^{\text{lep}_i} \cdot N_{\text{CR,data}}^{\text{lepton}_i\text{ veto inverted}}.
+N^{\mu \text{, inclusive in I$_{\text{as}}$}}_{\text{bkg}} = \rho_{\text{MC}}^{\mu} \cdot N_{\text{CR,data}}^{\mu\text{ veto inverted}}.
 \end{equation*}
+for muons, and 
+\begin{equation*}
+N^{e,\tau\text{, inclusive in I$_{\text{as}}$}}_{\text{bkg}} = \rho_{\text{MC}}^{e,\tau} \cdot N_{\text{CR,data}}^{e,\tau\text{ veto inverted}, \cancel{\ecalo<5\gev}}.
+\end{equation*}
+for electrons and taus.
 
 This method relies on the simulation of the lepton reconstruction inefficiencies.
-A possible wrong simulation is taken into account via a comparison of the lepton reconstruction efficiencies in data and simulation in \Zlep events which will be later explained in Section~\ref{FIXME}.
-In the simulated \WJets sample remain one electron, one tau and no muon after the candidate track selection. 
-When no event is found with a non-reconstructed lepton is found in the signal region a 68\% upper confidence limit is calculated.
-Otherwise a poisson error is calculated as statistical uncertainty due to the low number of events.
+A possible wrong simulation is taken into account via a comparison of the lepton reconstruction efficiencies in data and simulation in \Zlep events which will be later explained in Sec.~\ref{sec:LeptonScaleUncertainty}.
 
-Table~\ref{tab:LeptonicResults} gives the result for the prediction of the inclusive leptonic background estimation for the candidate track selection from Sec~\ref{FIXME}.
+To reduce the statistical uncertainty, the scale factor is calculated without applying the QCD suppression cuts. 
+After the candidate track selection described in Sec.~\ref{sec:AnalysisSelection} (without QCD selection cuts), only one event remains in the simulated \WJets sample where the candidate track can be matched to an electron.
+There are five track candidates that can be matched to a muon, and zero selected tracks that can be mactched to a pion.
+The 68\% upper and lower limits on the inclusive background are estimated with the Neyman procedure~\cite{bib:PDG_2014}.
+Table~\ref{tab:LeptonicResults} gives the result for the prediction of the inclusive leptonic background estimation for the candidate track selection from Sec.~\ref{sec:AnalysisSelection}.
 
 \renewcommand{\arraystretch}{1.4}
 \begin{table}[!h]
 \centering
-\caption{Scaling factor, number of events in the CR in data and the resulting inclusive estimation}
+\caption{Scaling factor $\rho_{\text{MC}}$, number of events in the control region in data N$_{\text{CR,data}}$ and the resulting inclusive estimation N$_{\text{predicted}}$ after the candidate track selection.}
 \label{tab:LeptonicResults}
 \makebox[0.99\textwidth]{
 \begin{tabular}{l|c |c| c }
 \multicolumn{4}{c}{} \\
 \toprule
-                                                               &      scaling factor    &       events in cr data   &  inclusive bkg estimation   \\
+                                                               &      scaling factor $\rho_{\text{MC}}$    &   N$_{\text{CR,data}}$         &  N$_{\text{predicted}}$   \\
 \midrule
-electrons                                                      &                        &                           &   \\
-muons                                                          &                        &                           &   \\
-taus                                                           &                        &                           &   \\
+electrons                                                      &       $1.25^{+1.70}_{-0.77} 10^{-4}  $      & 60067                     & $7.49^{+10.19}_{-4.63}$     \\
+muons                                                          &       $2.17^{+1.65}_{-0.93} 10^{-4}$        & 76664                     & $16.64^{+12.64}_{-7.12}$    \\
+taus                                                           &       $< 2.13 10^{-2}$                  & 445                      &  $<9.46$ \\
 \bottomrule
 \end{tabular}}
 \vspace{10pt}
@@ -416,66 +428,126 @@ taus                                                           &                
 
 
 \subsection*{\ias shape of leptonic background}
-It is very hard to find a cr for leptons which show the same ias distrution as in the sr.
-as the background is anyways very small, the ias shape was taken from mc.
-The differences in the lepton veto inverted region between data and mc is taken as systematic uncertainty.
-In Fig.~\ref{}, the ias distribution of cr data, cr mc, and sr mc is shown.
-It can be seen that the differences between cs and sr in mc is rather high, such that it is beneficial to take the \ias shape from mc sr.
+In order to get information about the \ias shape of electrons, muons and taus in the signal region, one need to find a control region where the shape is similar to that in the signal region.
+The most natural control region, being the lepton veto inverted control region, cannot be used because the variable \ias is highly correlated to the lepton recontruction efficiency, as can be seen in Fig.~\ref{FIXME}.
+Various other control regions were tested.
+Unfortunately, the energy deposition is not only correlated to the reconstruction probability of the leptons but also to \ecalo, \pt and various other observables which are tested.
+As no suitable control region exists where the \ias shape of the leptons is at least similar to the shape in the signal region, it is therefore decided to use the \ias information from simulation.
+This introduces of course a large systematic uncertainty.
+However, the corresponding systematic uncertainty is still smaller than taking the \ias shape from a control region in data.
+
+In order to take into account the bias when taking \ias from simulation, a systematic uncertainty is estimated which address MC data difference of the \ias distributions.
+This systematic uncertainty is discussed in Sec~\ref{sec:LeptonIasUncertainty}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background estimation validation}
 \label{sec:BkgValidation}
 
-The backround estimation methods are exaustively validated with the help of signal depleeted control regions.
-First to estimate the leptonic background.
-A leptonic control region was definde with hits gt 7 and the \ecalo reuirement inverted.
+The background estimation methods are exhaustively validated with the help of signal depleted control regions.
+Various control regions were used for the validation.
 
-Second to validate both, the fake and the leptonic backgorund, the nhits cut is removed and test in the calo cr.
-Furthermore to also validate the mc shape, a ias cut was applied.
+First, to validate the estimation method of the leptonic background, a leptonic control region is defined by selecting only tracks with $\nhits>6$.
+This reduces the fake contribution to a minimum.
+Additionally in order to minimise signal contamination, the \ecalo requirement is inverted to $\ecalo>10\gev$.
+The validation test for the candidate track selection with $\ecalo>10\gev$ and $\nhits>6$ is shown in Table~\ref{tab:LeptonicClosure}.
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Validation test of leptonic background estimation. Left: $\ecalo>10\gev$ and $\nhits>6$. Right: $\ecalo>10\gev$, $\nhits>6$ and $\ias>0.2$}
+\label{tab:LeptonicClosure}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                       &   Data Yield          \\
+\midrule
+electrons                                                      &       $14.67^{+ 11.16}_{-6.29}$            &                \\
+muons                                                          &       $7.99^{ + 10.90}_{-5.00}$            &            \\
+taus                                                           &       $109.04^{+21.18}_{-16.58}$           &          \\
+\midrule
+Total bkg                                                      &       $132.68^{ + 26.31}_{-18.43}$         &  156        \\
+\bottomrule
+\end{tabular}
+\hspace{10pt}
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                   &   Data Yield          \\
+\midrule
+electrons                                                      &       $0.0^{+ 0.07}_{-0.0}$               &                \\
+muons                                                          &       $0.0^{+ 0.32}_{-0.0}$               &            \\
+taus                                                           &       $0.0^{+ 0.38}_{-0.0}$               &          \\
+\midrule
+Total bkg                                                      &       $0.0^{+ 0.50}_{-0.0}$               &  1        \\
+\bottomrule
+\end{tabular}}
+\end{table}
 
-All validations also with different pt cuts show excellent agreement between prediction and result.
 
-Thus, it leasves us with confident that it will work.
-Nonethless, systematic uncertainties need to be estimated.
+In order to validate the fake background, the \nhits selection cut is again removed.
+In order to have a signal depleted region the $\ecalo$ selection is again inverted to $\ecalo>10\gev$.
+
+In Table~\ref{tab:FakeClosure}, two different validation tests are shown, once an inclusive validation in \ias and once with an \ias selection of 0.2.
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Validation test of leptonic background estimation. Left: $\ecalo>10\gev$ and $\nhits>6$. Right: $\ecalo>10\gev$, $\nhits>6$ and $\ias>0.2$}
+\label{tab:FakeClosure}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                   &   Data Yield          \\
+\midrule
+Electrons                                                      &     $59.92^{ + 16.11}_{ - 11.85}$                 &                \\
+Muons                                                          &      $8.04^{ + 10.97}_{ - 5.03}$                &            \\
+Taus                                                           &       $173.06^{+ 24.62}_{- 20.23}$               &          \\
+Fakes                                                           &      $42.08^{ + 8.54}_{ - 8.54}$               &          \\
+\midrule
+Total bkg                                                      &       $283.10^{ + 32.54}_{ - 25.45}$             &  324        \\
+\bottomrule
+\end{tabular}
+\hspace{10pt}
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                       &   Data Yield          \\
+\midrule
+Electrons                                                      &       $14.67^{+ 11.16}_{-6.29}$            &                \\
+Muons                                                          &       $7.99^{ + 10.90}_{-5.00}$            &            \\
+Taus                                                           &       $109.04^{+21.18}_{-16.58}$           &          \\
+Fakes                                                           &       $109.04^{+21.18}_{-16.58}$           &          \\
+\midrule
+Total bkg                                                      &       $132.68^{ + 26.31}_{-18.43}$         &  156        \\
+\bottomrule
+\end{tabular}
+
+}
+\end{table}
+
+
+
+
+The validation is also done for different selections in \pt and \ias.
+All validation tests show good agreement.
+
+However, some systematic uncertainties need to be estimated.
+The sources of systematic uncertainties and how they can be estimated will be explained in the follwong section.
 
 
 \section{Systematic uncertainties}
 \label{sec:SysUncertaintiesBkg}
 
 Sytematic uncertainties nees to be validate for all four steps.
-\subsection{fake rate differences between processes}
-\subsection{fake ias uncertainty}
-\subsection{lepton scale factor uncertainty}
-\subsection{lepton ias}
+\subsection{Uncertainty on fake rate}
+\label{sec:FakeRateUncertainty}
+\subsection{Uncertainty on the fake track \ias shape}
+\label{sec:FakeIasUncertainty}
+\subsection{Uncertainty on the leptonic scale factor}
+\label{sec:LeptonScaleUncertainty}
+\subsection{Uncertainty on the leptonic \ias shape}
+\label{sec:LeptonIasUncertainty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Optimisation of search sensitivity}
-\label{sec:Optimisation}
-\begin{itemize}
-\item Show plots
-\item show table
-\item Include NlostOuter here, too
-\end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Results}
-\label{sec:Results}
-\begin{itemize}
-\item Data cutflowtable
-\item Tables with results
-\item One plot (4 bins: Prediction and data)
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Interpretation}
-\label{sec:Interpretation}
-\section{Systematic uncertainties of simulated signal samples}
-\section{Statistical Methods/ Limit setting}
-\section{Exclusion limits}
-\begin{itemize}
-\item 1-d limits
-\item 2-d limits
-\end{itemize}
-

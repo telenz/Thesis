@@ -51,7 +51,8 @@ public:
 
     gStyle -> SetHistLineWidth(1);
     gStyle -> SetMarkerStyle(20);
-    gStyle -> SetMarkerSize(.6);
+    gStyle -> SetMarkerSize(1.);
+    //gStyle -> SetMarkerSize(.6); for stability plots
    
     gStyle->SetOptStat("");
 
