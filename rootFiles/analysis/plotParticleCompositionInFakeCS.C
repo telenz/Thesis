@@ -85,16 +85,6 @@ public:
   double VertexZ;
   int event;
 
-  vector<double> *trackDeDx1;
-  vector<double> *trackDeDx2;
-  vector<double> *trackDeDx3;
-  vector<double> *trackDeDx4;
-  vector<double> *trackDx1;
-  vector<double> *trackDx2;
-  vector<double> *trackDx3;
-  vector<double> *trackDx4;
-
-  vector<int>    *trackMeasSize;
 
   std::vector<Double_t>  *muonPt;
   std::vector<Double_t>  *muonEt;
@@ -152,15 +142,6 @@ public:
     trackNValid     = 0;
     trackPdgId      = 0;
     trackStatus     = 0;
-    trackDeDx1   = 0;
-    trackDeDx2   = 0;
-    trackDeDx3   = 0;
-    trackDeDx4   = 0;
-    trackDx1   = 0;
-    trackDx2   = 0;
-    trackDx3   = 0;
-    trackDx4   = 0;
-    trackMeasSize = 0;
     muonPt = 0;
     muonEt = 0;
     muonPhi = 0;
@@ -230,13 +211,6 @@ public:
     tree->SetBranchAddress("weight_xsec_lumi",&weight_xsec_lumi);
     
 
-    tree->SetBranchAddress("trackHCALRp5Isolation",&trackHCALRp5Isolation);
-    tree->SetBranchAddress("trackECALRp5Isolation",&trackECALRp5Isolation);
-    tree->SetBranchAddress("trackHCALRp4Isolation",&trackHCALRp4Isolation);
-    tree->SetBranchAddress("trackECALRp4Isolation",&trackECALRp4Isolation);
-    tree->SetBranchAddress("trackHCALRp3Isolation",&trackHCALRp3Isolation);
-    tree->SetBranchAddress("trackECALRp3Isolation",&trackECALRp3Isolation);
-
   };
 
 
@@ -261,9 +235,9 @@ public:
 	  histo -> Fill("Others",0);
 	
 	  histo -> LabelsDeflate("X") ;
-	  histo -> GetYaxis() ->SetTitle("a.u");
-	  histo -> GetXaxis() ->SetLabelSize(0.06);
-	  histo -> GetXaxis()->SetLabelOffset(0.007);
+	  histo -> GetYaxis() -> SetTitle("a.u");
+	  histo -> GetXaxis() -> SetLabelSize(0.06);
+	  histo -> GetXaxis() -> SetLabelOffset(0.007);
 	  //histo -> GetXaxis() ->SetTitle("matched generator-level particle");
 
     for(int n=0; n<tree->GetEntries(); n++){
@@ -273,17 +247,25 @@ public:
 
       if(fakeSelection){
 
+
 	for(unsigned int i=0; i<trackStatus->size();i++){
 
 
 	  if(abs(trackEta->at(i))>2.1)                                 continue;
 	  if(abs(trackEta->at(i))>1.42 && abs(trackEta->at(i))<1.65 )  continue;
-	  if(trackPt->at(i)<20)              continue;	
+	  if(trackPt->at(i)<30)              continue;	
 	  if(trackCaloIso->at(i)>5)          continue;   
 
 
-	  weight=1;
-	  weight_xsec_lumi=1;
+	  //weight=1;
+	  // weight_xsec_lumi=1;
+
+	  if(trackPdgId->at(i)!=0){
+	    cout<< weight<< endl;
+	    cout<<trackStatus->size()<<endl;
+	    cout<<"trackNValid->at(i) = "<<trackNValid->at(i)<<endl;
+	  }
+
 
 	  if(trackPdgId->at(i)==0){
 	    histo -> Fill("Fakes",weight_xsec_lumi*weight);

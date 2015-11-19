@@ -218,7 +218,7 @@ public:
 
 int makeFakeIasCRSRplots(){
 
-  double ptCut=40;
+  double ptCut=15;
   double ecaloCut=5;
   double iasCut=0.0;
 

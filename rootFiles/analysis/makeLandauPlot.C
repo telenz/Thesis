@@ -33,7 +33,7 @@ int makeLandauPlot()
   land->GetHistogram()->SetNdivisions(507, "Y");
   TCanvas *c = new TCanvas();
   c->cd();
-  land->GetXaxis()->SetTitle("#Delta E/ #Delta x");
+  land->GetXaxis()->SetTitle("x");
   land->GetYaxis()->SetTitle("a.u.");
   land->Draw();
   c->SaveAs("output/Landau.pdf");
