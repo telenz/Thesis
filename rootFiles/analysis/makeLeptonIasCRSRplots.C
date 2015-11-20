@@ -1,0 +1,399 @@
+#include "TROOT.h"
+#include "TFile.h"
+#include "TProfile.h"
+#include "TH1.h"
+#include "TH2.h"
+#include "TMath.h"
+#include "TGraph.h"
+#include "TGraphErrors.h"
+#include "TString.h"
+#include "TCanvas.h"
+#include "TLegend.h"
+#include "TLatex.h"
+#include "TROOT.h"
+#include "TStyle.h"
+#include "TLine.h"
+#include "TTree.h"
+#include "TChain.h"
+#include "TRandom3.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <iomanip>
+#include "TPad.h"
+#include "../plotStyleThesis.h"
+
+
+TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, TString filename, TString particleType);
+
+class sample{
+
+
+public:
+
+  TFile *file;
+  TTree *tree;
+
+  TH1D* histo;
+  TH1D* histoECalo;
+  TH1D* histoASmi;
+  TH1D* histoNValid;
+  TH1D* histoPt;
+
+  double statistics;
+  double purity;
+
+  vector<double> *trackEta;
+  vector<double> *trackPt;
+  vector<double> *trackP;
+  vector<double> *trackGenPt;
+  vector<double> *trackASmi;
+  vector<double> *trackHarm2;
+  vector<double> *trackCaloIso;
+  vector<double> *trackMass;
+  vector<double> *trackIsolation;
+  vector<double> *trackGenE;
+  vector<double> *trackGenEt;
+  vector<double> *trackEndVertexRho ;
+  vector<double> *trackChi2;
+  vector<double> *trackNdof;
+  vector<int>    *trackNLostOuter;
+  vector<int>    *trackNLostMiddle;
+  vector<int>    *trackNLostInner;
+  vector<int>    *trackNValid;
+  vector<int>    *trackPdgId;
+  double weight;
+  double weight_xsec_lumi;
+  double met;
+  double leadingJetPt;
+
+
+  vector<int>    *trackMeasSize;
+
+  sample(double iasCut){
+
+    tree=0;
+    file=0;
+    histo=0;
+    statistics=0;
+    purity=0;
+
+    trackEta        = 0;
+    trackEta        = 0;
+    trackPt         = 0;
+    trackP          = 0;
+    trackGenPt      = 0;
+    trackASmi       = 0;
+    trackHarm2      = 0;
+    trackCaloIso    = 0;
+    trackMass       = 0;
+    trackIsolation  = 0;
+    trackGenE       = 0;
+    trackGenEt      = 0;
+    trackEndVertexRho = 0;
+    trackChi2 = 0;
+    trackNdof = 0;
+    trackNLostOuter = 0;
+    trackNLostMiddle = 0;
+    trackNLostInner = 0;
+    trackNValid     = 0;
+    trackPdgId      = 0;
+
+    Double_t xbinsECalo[3]  = {0,10,200};
+    Double_t xbinsASmi[5]   = {0,0.1,0.2,0.5,1};
+    //Double_t xbinsASmi[5]   = {0,0.05,0.1,0.3,1};
+    Double_t xbinsNHits[4]  = {3,5,7,25};
+    Double_t xbinsPt[6]     = {20,35,50,75,150,2000};
+
+    histoECalo  = new TH1D("predECalo","predECalo",2,xbinsECalo);
+    histoASmi   = new TH1D("predASmi","predASmi",4,xbinsASmi);
+    histoNValid = new TH1D("predNValid","predNValid",3,xbinsNHits);
+    histoPt     = new TH1D("predPt","predPt",5,xbinsPt);
+  };
+
+  void getTreeVariables(){
+    tree->SetBranchAddress("trackEta",&trackEta);
+    tree->SetBranchAddress("trackPt",&trackPt);
+    tree->SetBranchAddress("trackP",&trackP);
+    tree->SetBranchAddress("trackGenPt",&trackGenPt);
+    tree->SetBranchAddress("trackDeDxASmi",&trackASmi);
+    tree->SetBranchAddress("trackDeDxHarm2",&trackHarm2);
+    tree->SetBranchAddress("trackCaloIsolation",&trackCaloIso);
+    tree->SetBranchAddress("trackMass",&trackMass);
+    tree->SetBranchAddress("trackIsolation",&trackIsolation);
+    tree->SetBranchAddress("trackGenE",&trackGenE);
+    tree->SetBranchAddress("trackGenEt",&trackGenEt);
+    tree->SetBranchAddress("trackEndVertexRho",&trackEndVertexRho);
+    tree->SetBranchAddress("trackChi2",&trackChi2);
+    tree->SetBranchAddress("trackNdof",&trackNdof);
+    tree->SetBranchAddress("trackNLostOuter",&trackNLostOuter);
+    tree->SetBranchAddress("trackNLostInner",&trackNLostInner);
+    tree->SetBranchAddress("trackNLostMiddle",&trackNLostMiddle);
+    tree->SetBranchAddress("trackNValid",&trackNValid);
+    tree->SetBranchAddress("trackPdgId",&trackPdgId);
+    tree->SetBranchAddress("MET",&met);
+    tree->SetBranchAddress("LeadingJetPt",&leadingJetPt);
+    tree->SetBranchAddress("weight",&weight);
+    tree->SetBranchAddress("weight_xsec_lumi",&weight_xsec_lumi);
+  };
+
+
+  void Selection(bool doMatching, int pdgId, double ptCut=35., double ecaloCut=5.){
+
+    histo->Sumw2();
+    histoECalo->Sumw2();
+    histoASmi->Sumw2();
+    histoNValid->Sumw2();
+    histoPt->Sumw2();
+
+    histo->SetTitle("");
+
+    statistics = 0;
+    purity     = 0;
+
+    for(int n=0; n<tree->GetEntries(); n++){
+
+      tree->GetEntry(n);
+
+      //if(met<100)                        continue;
+      //if(leadingJetPt<70)               continue;
+      
+
+      if(abs(trackEta->at(0))>2.1)                                 continue;
+      if(abs(trackEta->at(0))>1.42 && abs(trackEta->at(0))<1.65 )  continue;
+      if(trackPt->at(0)<ptCut)                                     continue;
+
+      if(trackCaloIso->at(0)>ecaloCut)                                     continue;
+
+             
+      // ****************************************** Particle Id **********************************
+      purity+=1;
+      if(doMatching){
+	if(abs(trackPdgId->at(0))!=pdgId)      continue; 
+      }
+      statistics +=1;
+      // ****************************************** Particle Id **********************************
+
+      histoECalo    -> Fill(trackCaloIso->at(0),weight_xsec_lumi*weight);
+      histoASmi     -> Fill(trackASmi->at(0));
+      histoNValid   -> Fill(trackNValid->at(0),weight_xsec_lumi*weight);
+      histoPt       -> Fill(trackPt->at(0),weight_xsec_lumi*weight);
+      histo         -> Fill(trackEta->at(0),weight_xsec_lumi*weight);
+
+    }
+    
+    purity=statistics/purity;
+    cout<<"integral = "<<histoASmi->Integral()<<endl;
+    histoASmi     -> Scale(1./histoASmi->Integral());
+  };
+
+  
+
+};
+
+
+int makePlots(int pdgId, double ptCut, double ecaloCut, double iasCut){
+
+  sample pred(iasCut);
+  sample SR(iasCut);
+  sample data(iasCut);
+
+
+
+  TString process = "wjets";
+  SR.file   = new TFile("/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_10_11_METGt0_JetPt70_noBlinding/results/analyzer/ntuples/input_weighted/wjets.root","READ");
+
+
+  TString pathToFile = "";
+  TString particleType = "";
+  if(pdgId==11){
+    pathToFile = "/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_08_19_METGt0_JetPt70_ElectronCS/results/analyzer/ntuples/input_weighted/";
+    particleType = "Electrons";
+  }
+  else if(pdgId==13){
+    pathToFile = "/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_08_19_METGt0_JetPt70_MuonCS/results/analyzer/ntuples/input_weighted/";
+    particleType = "Muons";
+  }
+  else if(pdgId==211){
+    pathToFile = "/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_08_19_METGt0_JetPt70_FakeCS/results/analyzer/ntuples/input_weighted/";
+    particleType = "Taus";
+  }
+
+  pred.file   = new TFile(pathToFile + process + ".root","READ");
+  data.file   = new TFile(pathToFile + "data.root","READ");
+
+  
+  TString selection = "chiTrackspreselectionNoQCDCutsNoTrigger";
+  pred.file -> GetObject(selection + "/Variables",pred.tree);
+  SR.file   -> GetObject(selection + "/Variables",SR.tree);
+  data.file -> GetObject(selection + "/Variables",data.tree);
+
+  SR.getTreeVariables();
+  pred.getTreeVariables();
+  data.getTreeVariables();
+
+  int nbins=20;
+  double xmin=-2.4;
+  double xmax=2.4;
+  SR.histo   = new TH1D("SR","SR",nbins,xmin,xmax);
+  pred.histo = new TH1D("pred","pred",nbins,xmin,xmax);
+  data.histo = new TH1D("data","data",nbins,xmin,xmax);
+
+
+  SR.Selection(1,pdgId,ptCut,ecaloCut);
+  pred.Selection(0,pdgId,ptCut,ecaloCut);
+  data.Selection(0,pdgId,ptCut,ecaloCut);
+
+  cout<<"###########################################################################"<<endl;
+  cout<<"Statisitcs:"<<endl;
+  cout<<"Signal region  = "<<SR.statistics<<endl;
+  cout<<"Control region = "<<pred.statistics<<endl;
+  cout<<"Purity: Control region = "<<pred.purity<<endl;
+  cout<<"###########################################################################"<<endl;
+  
+  
+  TeresaPlottingStyle::init();
+  gROOT->ForceStyle();
+ 
+
+  //TCanvas *c0 = drawRatioPlot(pred.histoECalo,SR.histoECalo,Form("E_{calo} pdgId=%i",pdgId),Form("hECalo_%i.pdf",pdgId));
+  TCanvas *c1 = drawRatioPlot(pred.histoASmi,SR.histoASmi,data.histoASmi,Form("I_{as} pdgId=%i",pdgId),Form("plots/hASmi_%i_ASmiShape_ptCut%.0f_iasCut0p%.0f_EcaloLe%.0f.pdf",pdgId,ptCut,iasCut*100,ecaloCut), particleType);
+
+  
+  //TCanvas *c2 = drawRatioPlot(pred.histoPt,data.histoPt,Form("track Pt pdgId=%i",pdgId),Form("hPt_%i.pdf",pdgId));
+  //TCanvas *c3 = drawRatioPlot(pred.histoNValid,SR.histoNValid,Form("n_{Hits} pdgId=%i",pdgId),Form("hNValid_%i.pdf",pdgId));
+  //TCanvas *c3 = drawRatioPlot(pred.histo,SR.histo,Form("n_{Hits} pdgId=%i",pdgId),Form("hNValid_%i.pdf",pdgId));
+
+  //gDirectory->Delete(); 
+ 
+  return 0;
+ 
+}
+
+//################################################################################################################################
+//################################################################################################################################
+//################################################################################################################################
+
+
+TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, TString filename, TString particleType ){
+
+  gStyle -> SetPadLeftMargin(0.20);
+
+  data->SetMarkerStyle(20);
+  data->SetMarkerColor(kGreen);
+  data->SetLineColor(kGreen);
+
+
+  
+  TCanvas *c = new TCanvas("c"+filename,"c",0,0,500,500);
+
+  float y = 0.3;
+
+  TPad *pad1     = new TPad("pad1", "Control Plots 1", 0.01, y, 0.99, 0.99);
+  TPad *padRatio = new TPad("rp1", "Ratio1", 0.01, 0.01, 0.99, y-0.01);
+
+  pad1->SetNumber(100);
+  pad1->SetTicks(0,1);
+  cout<<"number pad1     = "<<pad1->GetNumber()<<endl;
+  cout<<"number padRatio = "<<padRatio->GetNumber()<<endl;
+
+  TH1D *ratio = 0;
+
+  //ratio = (TH1D*) sr->Clone();
+  //ratio->Divide(prediction);
+
+  ratio = (TH1D*) prediction->Clone();
+  ratio->Divide(sr);
+
+
+
+  for(int i=1; i<=ratio->GetNbinsX();i++){
+
+    if(ratio->GetBinContent(i) != 0){
+      cout<<"N in CR in "<<i<<". bin ="<<prediction->GetBinContent(i)<<endl;
+      cout<<"N in SR in "<<i<<". bin ="<<sr->GetBinContent(i)<<endl;
+      cout<<"Rel. difference in "<<i<<". bin ="<<(1./ratio->GetBinContent(i)-1.)*100<<"%"<<endl; 
+    }
+    else if(sr->GetBinContent(i) == 0 && prediction->GetBinContent(i) !=0)    cout<<"Scaling Factor in "<<i<<". bin <"<<prediction->GetBinContent(i)/1.15<<" +/- "<<ratio->GetBinError(i)<<endl;
+    else if(sr->GetBinContent(i) != 0 && prediction->GetBinContent(i) ==0)    cout<<"Scaling Factor in "<<i<<". bin <"<<(sr->GetEntries()/prediction->GetEntries())/sr->GetBinContent(i)<<" +/- "<<ratio->GetBinError(i)<<endl;
+
+  }
+
+  ratio->GetYaxis()->SetTitle("#frac{CR (W+jets)}{SR (W+jets)}");
+  ratio->SetTitle("");
+  ratio->SetLabelSize(0.1,"X");
+  ratio->SetLabelSize(0.1,"Y");
+  ratio->SetTitleOffset(0.5,"Y");
+  ratio->SetTitleSize(0.15,"Y");
+
+
+  padRatio->cd();
+  ratio->GetYaxis()->SetRangeUser(0,10);
+  ratio->Draw("e");
+
+  // Draw line at one!
+  float xmin = ratio->GetXaxis()->GetXmin();
+  float xmax = ratio->GetXaxis()->GetXmax();
+  TLine *line = new TLine(xmin,1,xmax,1);
+  line->SetLineWidth(2);
+  line->Draw("same");
+  padRatio->Modified();
+
+  TLegend *leg = new TLegend(0.5,0.7,0.9,0.9);
+  leg->AddEntry(sr,"SR (W^{#pm}+jets)","lep"); 
+  leg->AddEntry(prediction,"lepton CR (W^{#pm}+jets)","pel"); 
+ 
+  pad1->cd();
+  pad1->SetLogy();
+  //  pad1->SetLogx();
+
+  sr->SetLineColor(kRed);
+  sr->SetMarkerColor(kRed);
+  sr->SetMarkerStyle(20);
+  sr->SetTitle("");
+  prediction->SetMarkerStyle(20);
+  prediction->SetTitle("");
+  prediction->GetXaxis()->SetTitle("dE/dx discriminator (I_{as})");
+  sr->GetXaxis()->SetTitle(xTitle);
+
+  
+  
+
+  prediction->SetTitleSize(0.07,"X");
+  prediction->GetXaxis()->SetTitleOffset(1.);
+  sr->SetTitleSize(0.07,"X");
+  sr->GetXaxis()->SetTitleOffset(0.7);
+
+  double maximum = 0;
+  
+
+
+  prediction->GetYaxis()->SetRangeUser(0.00001,2);
+
+  prediction->GetXaxis()->SetTitle("a.u");
+  prediction->Draw("e");
+  sr->Draw("e same");
+  //  leg->AddEntry(data,"lepton CR (data)","pel"); 
+  //data->Draw("e same");
+
+  
+  leg->Draw("same");
+
+
+  TLatex*  info1   = new TLatex();
+  info1-> SetNDC();
+  info1->SetTextSize(0.07);
+  info1->DrawLatex(0.65,0.30,particleType);
+
+  // Draw both pads to canvas
+  c->cd();
+  pad1->Draw();
+  padRatio->SetGridy();
+  padRatio->Draw();
+
+  c->SaveAs(filename);
+
+  return c;
+}
