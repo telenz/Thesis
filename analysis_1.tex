@@ -38,7 +38,6 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
     \includegraphics[width=0.75\textwidth]{figures/analysis/ChiChi_ProductionAndDecay.pdf}
   \end{tabular}
   \caption{Feynman diagram of chargino pair production via gamma or $Z$-boson exchange and the subsequent decay via a virtual $W$-boson.}
-  \vspace{30pt}
   \label{fig:FeynmanDiagram}
 \end{figure}
 
@@ -50,7 +49,6 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_Squark.pdf}
   \end{tabular}
   \caption{Main tree-level diagrams for chargino pair production.}
-   \vspace{30pt}
   \label{fig:FeynmanDiagramProductionCharginoPair}
 \end{figure}
 
@@ -82,7 +80,7 @@ Although supersymmetric models with nearly mass-degenerate \chipm and \chiO lead
            Taken from: \cite{bib:pMSSMplot_source_from_DT}.}
   \label{fig:pMSSMplot}
 \end{figure}
-It can be seen that general SUSY searches (blue area) are mostly sensitive to shorter chargino lifetimes ($c\tau \lesssim 10\cm$)\footnote{It should be mentioned, that the pMSSM interpretation relied on the use of fast simulation techniques which are not capable of simulating charginos with lifetimes $\ctau>1\cm$. It could therefore not be tested to which exact upper lifetime the searches combined in the blue area are sensitive to.}.. 
+It can be seen that general SUSY searches (blue area) are mostly sensitive to shorter chargino lifetimes ($c\tau \lesssim 10\cm$)\footnote{It should be mentioned, that the pMSSM interpretation relied on the use of fast simulation techniques which are not capable of simulating charginos with lifetimes $\ctau>1\cm$. It could therefore not be tested to which exact upper lifetime the searches combined in the blue area are sensitive to.}. 
 Two existing searches, the search for long-lived charged particles~\cite{bib:CMS:HSCP_8TeV} and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} focus on long and intermediate chargino lifetimes respectively. 
 These two searches (purple and red areas) are sensitive to chargino lifetimes of $\gtrsim 35\cm$. 
 Taken together, the existing searches exclude a large fraction of pMSSM points at different chargino lifetimes. 
@@ -102,7 +100,7 @@ When searching for supersymmetric models with long-lived \chipm, the strategy is
 For long lifetimes, the chargino can reach the muon chambers and can be reconstructed as a muon even despite a longer time-of-flight \cite{bib:CMS:HSCP_7TeV}. 
 For lower lifetimes, the chargino can already decay inside the detector (e.g. the tracker), and can hence not be reconstructed as a muon but leads to an isolated, potentially disappearing track in the tracker. 
 The detector signatures of these two scenarios are visualised in Fig.~\ref{fig:CharginoPaiEventDisplay}, where simulated chargino-chargino events are shown in a cross-sectional view of the CMS detector.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \begin{subfigure}{0.31\textwidth}
@@ -124,7 +122,6 @@ The detector signatures of these two scenarios are visualised in Fig.~\ref{fig:C
            The right picture is a zoom of the picture in the middle. Here, only the cross-section of the tracker (green wavy lines for the strip and grey lines for the pixel) is displayed. The red arrow shows the missing transverse energy in the event.
            The red (blue) towers correspond to the energy deposition in the ECAL (HCAL).} 
   \label{fig:CharginoPaiEventDisplay}
-\vspace{10pt}
 \end{figure}
 
 Since this analysis targets a search for Supersymmetry with charginos of lifetimes between $10\,\text{cm} \lesssim c\tau \lesssim  40\,\text{cm}$, the charginos decay rather early in the detector, even in the inner layers of the tracker. 
@@ -143,8 +140,9 @@ The typical momentum of a pion originating from a chargino to neutralino decay i
 p_{\pi}\sim \sqrt{m_{\chi^{\pm}_1}-m_{\chi^{0}_1}-m_{\pi}}.
 \end{equation*}
 %As the \chipm is rather slow for higher masses this is a good approximation also in the detector rest frame.
-For a mass gap between \chipm and \chiO of $\Delta m=150\, \mev$, the pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} (Fig.~\ref{fig:KinkedTrack}).
+For a mass gap between \chipm and \chiO of $\Delta m=150\, \mev$, the pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} (Fig.~\ref{fig:ptOfPions}).
 
+If the transverse momentum of a particle is very low, the particle trajectory is much more bended compared to a particle with higher \pt (see Fig.~\ref{fig:KinkedTrack} for illustration).
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -152,13 +150,12 @@ For a mass gap between \chipm and \chiO of $\Delta m=150\, \mev$, the pt distrib
   \end{tabular}
   \caption{Transverse momentum distribution of pions coming from chargino decay into a neutralino with a mass gap of 150\mev.}
   \label{fig:ptOfPions}
+\vspace{90pt}
 \end{figure} 
-
-If the transverse momentum of a particle is very low, the particle trajectory is much more bended compared to a particle with higher \pt (see Fig.~\ref{fig:KinkedTrack} for illustration).
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \frame{\includegraphics[width=0.30\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/BendedPionTrack.png}}
+    \frame{\includegraphics[width=0.4\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/BendedPionTrack.png}}
     %\frame{\includegraphics[width=0.30\textwidth]{figures/analysis/KinkedTrackZoom_Quadrat.png}}
   \end{tabular}
   \caption{Cross-sectional view of the tracker (silicon strip (silicon pixel) tracker layers are illustrated with green (grey) lines) and a simulated chargino track (black line) decaying to a pion (bended blue line) with a \pt of $\sim$85\mev and a neutralino (not visible).}
@@ -213,7 +210,7 @@ However, a notable fraction of $\sim$ 40\% of chargino tracks still has a number
 It should be also mentioned, that the track reconstruction efficiency is sufficient for short chargino tracks, such that a loosening of the \nhits requirement is expected to be really improving the signal acceptance.
 The track reconstruction efficiency for different chargino decay points is depicted in Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (right).
 For very short tracks ($\nhits=3$) the efficiency is still around 20\%.\\
-\begin{figure}[!bt]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/htrackNValid_log_chiTracksnoSelection.pdf}
@@ -271,6 +268,14 @@ p(x) = \frac{1}{\pi} \int_0^\infty\! e^{-t \log t - x t} \sin(\pi t)\, dt.
 The Landau distribution has no free parameters. Its most probable value is around 0.222.
 However, it is possible to introduce artifically a different most probable value and a width with $x \rightarrow \frac{x-\text{MPV}}{\sigma}-0.222$.
 The Landau distribution is a highly asymmetric distribution with a long tail towards the right end (see Fig.~\ref{fig:landau}).
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/Landau.pdf}
+  \end{tabular}
+  \caption{Illustration of the shape of a Landau distribution. Parameters were chosen as $\mu=200$ and $\sigma=20$.} 
+  \label{fig:landau}
+\end{figure}
 Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
 The mean and the variance of a landau distribution are not defined.
 Because of its strong asymmetry, measurements of $\langle dE/dx \rangle$ with only a few single measurements are easily biased towards high values, making the mean energy loss described by the Bethe formula a problematic and unstable concept. 
@@ -288,15 +293,8 @@ The most probable energy loss of a charged particle, $\Delta_p$, is defined by t
 with $\xi=(K/Z)\langle Z/A \rangle (x/\beta^2)$. 
 The thickness of the absorber $x$ appears explicitly in the Landau-Vavilov-Bichsel equation making the most probable energy loss per path \mbox{length $\Delta_p/dx$} logarithmically dependent on $x$.
 A comparison between the Bethe mean energy loss $\langle dE/dx \rangle$ and the most probable energy loss $\Delta_p/dx$ is shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
-\begin{figure}[!b]
-  \centering 
-  \begin{tabular}{c}
-  \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/Landau.pdf}
-  \end{tabular}
-  \caption{Illustration of the shape of a Landau distribution. Parameters were chosen as $\mu=200$ and $\sigma=20$.} 
-  \label{fig:landau}
-\vspace{92pt}
-\end{figure}
+
+
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
@@ -322,7 +320,7 @@ SM particles such as pions and muons are minimally ionising in silicon for $\bet
 For higher momenta the deposited energies increase again reaching a plateau at around $\beta\gamma\sim100$. 
 However, new heavy charged particles would mainly be unrelativistic because of their high mass and would therefore deposit much higher energies in the detector.
 This makes $dE/dx$  a very well discriminating variable.
-\begin{figure}[!bt]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.6\textwidth]{figures/analysis/dEdx_Landau_Silicon.png}
@@ -339,7 +337,7 @@ Unfortunately, due to various reasons, such as the imperfect constancy of the re
 %was not adequate enough to use the measured energy deposition without a further offline calibration procedure.
 This imperfection of the gain calibration can be seen in Fig.~\ref{fig:StabilityPlot_beforeCalibration}, where the sum of the harmonic-2 estimator for all tracks $\sum\limits_{\text{all trks}}\ihtwo$ over the full data-taking period in 2012 is shown.
 Four different steps can be spotted.
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
@@ -512,7 +510,6 @@ $dE/dx$ shows good agreement in data and simulation for $\ias<0.1$.
 For larger values, \ias shows a larger decrease in simulation than in measured data.
 That's the reason why a data-based approach for analyses exploiting $dE/dx$ information is needed.\\
 
-\newpage
 \section{Discrimination improvements}
 The goal of including the pixel energy information is to increase the discrimination power of \ias between background and signal tracks, especially for shorter lifetimes.
 In Fig.~\ref{fig:MIPs-Signal-Dedx}, a comparison of the shapes of the energy release by MIPs and by signal tracks in simulation is shown (details about the simulated samples can be found in the next section Section~\ref{sec:SignalSamples}).
@@ -550,19 +547,9 @@ The large tail for longer lifetimes is caused by the lower velocities, but the s
 
 Finally, the impact of the additional $\Delta E/\Delta x$ information from the pixel tracker on the selection efficiency of signal and background tracks is quantified.
 Figure~\ref{fig:ROCplots} shows the signal selection efficiency against the background selection efficiency for different selection cuts in \ias, once including the pixel information and once without it.
-The background selection efficiency is estimated with simulated $W$+jets  events but was additionally checked on simulated $t\bar{t}$+jets  and QCD-multijet events 
-(further information about the simulated samples can be found in the next section).
-No significant difference between these processes in the background selection efficiency was observed.
-
-The signal selection efficiency and the background suppression depend on the mass and the lifetime of the charginos.
-The discrimination power of \ias is much better for higher masses as expected.
-
-It can be seen that the inclusion of the pixel information increases the background suppression for a given signal efficiency throughout the investigated signal models.
-This background suppression improvement is most pronounced for very tight cuts on \ias (up to a factor of 20) and still considerable for looser selections with signal efficiencies of around 40\% (factor of 10).
-
-\begin{figure}[!bt]
+\begin{figure}[!b]
   \centering 
-  \vspace{79pt}
+  %\vspace{79pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/rocplot_wjets_mass_100GeV_ctau_5cm.pdf} 
     \includegraphics[width=0.49\textwidth]{figures/analysis/rocplot_wjets_mass_100GeV_ctau_50cm.pdf} \\
@@ -576,5 +563,16 @@ This background suppression improvement is most pronounced for very tight cuts o
   %\vspace{40pt}
   \label{fig:ROCplots}
 \end{figure} 
+The background selection efficiency is estimated with simulated $W$+jets  events but was additionally checked on simulated $t\bar{t}$+jets  and QCD-multijet events 
+(further information about the simulated samples can be found in the next section).
+No significant difference between these processes in the background selection efficiency was observed.
+
+The signal selection efficiency and the background suppression depend on the mass and the lifetime of the charginos.
+The discrimination power of \ias is much better for higher masses as expected.
+
+It can be seen that the inclusion of the pixel information increases the background suppression for a given signal efficiency throughout the investigated signal models.
+This background suppression improvement is most pronounced for very tight cuts on \ias (up to a factor of 20) and still considerable for looser selections with signal efficiencies of around 40\% (factor of 10).
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

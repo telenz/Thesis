@@ -218,7 +218,7 @@ public:
 
 int makeFakeIasCRSRplots(){
 
-  double ptCut=15;
+  double ptCut=20;
   double ecaloCut=5;
   double iasCut=0.0;
 
@@ -229,8 +229,8 @@ int makeFakeIasCRSRplots(){
   SR.file   = new TFile("/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_10_11_METGt0_JetPt70_noBlinding/results/analyzer/ntuples/input_weighted/wjets.root","READ");
   pred.file = new TFile("/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_08_19_METGt0_JetPt70_FakeCS/results/analyzer/ntuples/input_weighted/wjets.root","READ");
 
-  pred.file   -> GetObject("chiTrackspreselectionNoQCDCutsNoTrigger/Variables",pred.tree);
-  SR.file     -> GetObject("chiTrackspreselectionNoQCDCutsNoTrigger/Variables",SR.tree);
+  pred.file   -> GetObject("chiTrackspreselectionNoQCDCutsTrigger/Variables",pred.tree);
+  SR.file     -> GetObject("chiTrackspreselectionNoQCDCutsTrigger/Variables",SR.tree);
 
 
   pred.getTreeVariables();
