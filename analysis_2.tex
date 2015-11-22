@@ -1,28 +1,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Simulated samples}
 \label{sec:SimulatedSamples}
 
-For the investigation of the various backgrounds, the analysis relies also on simulated samples.
+In order to design the search and to study background and signal characteristics, this analysis relies on simulated  SM and SUSY datasets.
 An extensive introduction to the techniques and tools required for the simulation of SM and beyond SM processes can be found in Section~\ref{FIXME}.
 
-In the following two sections an overview is given about the SM (Section~\ref{sec:SMSamples}) and SUSY samples (Section~\ref{sec:SignalSamples}) used to design the search.
+The following two sections present an overview of the SM (Section~\ref{sec:SMSamples}) and SUSY samples (Section~\ref{sec:SignalSamples}) used in this search.
 All samples are reweighted to match the measured distribution of primary vertices in data.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Standard Model background samples}
 \label{sec:SMSamples}
 To investigate the sources of background, various simulated SM samples are used.
-In order to have the possibility to make use of the \dedx variables, a special data format of the simulated samples is required (called RECO format).
-Unfortunately, not all SM processes were available in this specific format.
-However, as this analysis needs to rely anyways on a data-based background estimation method, because of the limited quality of the \dedx simulation,
-it does not constitute a serious problem.
-It only limits the possibility of a comparison between data and simulation going beyond shape comparisons.\footnote{E.g. the background process \ZInvJets sample is not available. It can possibly contribute via the fake background to the search. However, as the rate of fake tracks is independent of the underlying process, this background can be studied with the same quality with a \WJets sample.}
+Since this analysis aims at making use of \dedx, a special data format of the simulated samples, the so-called RECO format, is required.
+Unfortunately, not all SM processes are available in this specific format making it impossible to compare the total number of events in simulation and real data.
+This, however, does not constitute a serious problem since this analysis will finally use data-based background estimation methods.
+The simulated SM datasets can still be used to compare the shapes of important distributions in simulation and data.\footnote{For example, the simulated \ZInvJets sample that can contribute to the backround of this search via fake tracks is not available in RECO format. However, as the shape of important observables of fake tracks is independent of the underlying process, this background can be studied with a simulated \WJets sample.}
 
 In Table \ref{tab:SMsamples_RECO} all available SM samples used in this analysis are listed.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
-\caption{Available Standard Model background samples containing $\Delta E/\Delta x$ information which are used for background estimation studies.}
+\caption{Available Standard Model background samples containing $\Delta E/\Delta x$ information that are used for background estimation studies.}
 \label{tab:SMsamples_RECO}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lll}
@@ -37,11 +38,11 @@ In Table \ref{tab:SMsamples_RECO} all available SM samples used in this analysis
 \bottomrule
 \end{tabular}}
 \end{table}  
-\vspace{20pt}
-Due to the immense size of the samples (between 5 and 70\,TB) and in order to match a reasonable storage space a reduction is done by selecting only events which contain at least one leading jet with a minimum transverse momentum of $\pt>60\gev$.
+Due to the size of the samples (between 5 and 70\,TB) a reduction needs to be done in order to limit the storage space requirements.
+This is achieved by selecting only events which contain at least one jet with a minimum transverse momentum of $\pt>60\gev$.
 
 In addition, further simulated samples not containing the energy information are used.
-These are needed to study the background inclusively in the variable \ias.
+These are needed to study the background inclusively in the variable \dedx.
 They are listed in Table~\ref{tab:SMsamples_AOD}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
@@ -60,49 +61,39 @@ They are listed in Table~\ref{tab:SMsamples_AOD}.
 \end{tabular}}
 \end{table}  
 
-%\begin{itemize}
-%\item Main Background are ... ???
-%\item Most important sample was included: Wjets
-%\item ZoNuNu Backgrund not availbale plays also a role (see DT paper!)
-%\item Table of SM samples with cross sections
-%\end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Signal samples}
 \label{sec:SignalSamples}
-For the investigation of a possible signal, events containing either chargino pair production $q\bar{q} \rightarrow \chipm \chimp$ or chargino neutralino production $q\bar{q} \rightarrow \chipm \chiO$ are simulated. 
+For the investigation of a possible SUSY signal, events containing either chargino pair production $q\bar{q} \rightarrow \chipm \chimp$ or chargino neutralino production $q\bar{q} \rightarrow \chipm \chiO$ are simulated. 
 The simulation is done with the matrix-element event generator \madgraph \cite{bib:Madgraph_2014}
 The parton showering and hadronisation processes are then simulated with \pythia \cite{bib:Pyhtia6_2006}.
-A last step is needed to simulate the interactions of the generated particles with the detector material, which is done with \geant \cite{bib:Geant4_2003,bib:Geant4_2006}.
+Finally, the interactions of the generator-level particles with the detector material are simulated  with \geant \cite{bib:Geant4_2003,bib:Geant4_2006}.
 
 Furthermore, a special treatment for long-lived particles is required.
 In order to get a correct detector simulation of the energy loss of long-lived particles that decay after the beam pipe, the decay of the chargino cannot be simulated in the matrix-element generator 
 but needs to be simulated within \geant.
-%This also means, that the decay products are only existing in the detector simulation, but are not accessible as particles in the event generators.
-
 
 To narrow down the required computing sources, the simulation is only done for a few lifetimes (1\cm, 5\cm, 10\cm, 50\cm, 100\cm, 1\,000\cm and 10\,000\cm).
-In order to get yet a tight scan over the lifetime space, other lifetimes are generated using lifetime reweighting.
-This can be done by determining a weight for every event.
-The weight depends on the individual proper lifetime of the chargino (in case of chargino pair production it depends on the individual lifetime of the two charginos).
-It is given by
+In order to scan in a high resolution over the lifetime space, other lifetimes are generated using lifetime reweighting.
+The weight for each event depends on the individual proper lifetime of the chargino and is given by
 \begin{equation*}
 w = \prod_{i=1}^n \frac{\tau^{\text{gen}}}{\tau^{\text{target}}}\cdot  \exp \left[ t_i \cdot \left( \frac{1}{\tau^{\text{target}}} - \frac{1}{\tau^{\text{gen}}} \right) \right] ,
 \end{equation*}
 where $n$ is the  number of charginos in the event, $\tau^{\text{gen}}$ is the generated mean lifetime in the particle's rest frame and $t_i$ is the individual proper lifetime of the chargino. 
 The targeted mean lifetime is given by $\tau^{\text{target}}$. 
-A derivation of this formula can be found in Appendix~\ref{blabla}.
-With the reweighting procedure a tight covering of the lifetime space can be achieved with lifetimes of \ctau = $a\cdot10^{n}$ for $n=0,1,2,3,4$ and $a=\left[1,9\right]$.
+A derivation of this formula can be found in Appendix~\ref{FIXME}.
+Using this reweighting procedure a good coverage of the lifetime space can be achieved with lifetimes of \ctau = $a\cdot10^{n}$ for $n=0,1,2,3,4$ and $a=\left[1,9\right]$.
 Figure~\ref{fig:LifetimeReweighting} shows the exponential distribution of the individual proper lifetime of the charginos after the reweighting of a simulated sample with $c\tau^{\text{gen}}=50\cm$ to a lifetime of $c\tau^{\text{target}}=10\cm$.
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/10cm.pdf}
   \end{tabular}
-  \caption{Normalised distribution of the proper lifetime $d_{\text{lab}}/\left(\beta\gamma \right)$ of all charginos contained in a signal sample with a generated lifetime of $c\tau^{\text{gen}}=50\cm$ reweighted to a lifetime of $c\tau^{\text{target}}=10\cm$.}
+  \caption{Normalised distribution of the proper individual lifetime $d_{\text{lab}}/\left(\beta\gamma \right)$ of all charginos contained in a signal sample with a generated lifetime of $c\tau^{\text{gen}}=50\cm$ reweighted to a lifetime of $c\tau^{\text{target}}=10\cm$. Fitting an expotential curve $a\cdot \exp\left[\frac{1}{c \tau } c t_i\right]$ yields $c\tau=1./\text{Slope}=10\cm$.}
   \label{fig:LifetimeReweighting}
 \end{figure}
-Fitting the exponential spectrum should result in the correct mean proper lifetime as parameter of the fit.
-It can be seen, that the reweighting procedure does indeed reproduce the targeted lifetime of 10\cm.
+It can be seen that the reweighting procedure does indeed reproduce the targeted lifetime of 10\cm.
+
 
 All samples are generated for different masses of the chargino, but always almost mass-degenerate to the lightest neutralino.
 The mass gap between chargino and neutralino is set to 150\mev.
@@ -133,6 +124,7 @@ The cross section does not dependent on the lifetime of the chargino.
 \end{tabular}}
 \end{table}  
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Event selection}

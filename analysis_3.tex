@@ -112,7 +112,7 @@ The $Z\rightarrow\mu\bar{\mu}\,+\,\text{fake track}$ selection is summarised in 
 \begin{tabular}{l|l l }
 \multicolumn{3}{c}{} \\
 \toprule
-\multirow{12}{*}{\makecell[l]{Event based \\ selection}}       &  Two global muons with & $\pt>25\gev$ \\
+\multirow{12}{*}{\makecell[l]{Event-based \\ selection}}       &  Two global muons with & $\pt>25\gev$ \\
                                                                &                        & $|\eta|<2.4$ \\
                                                                &                        & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(\mu)<0.12$ \\
                                                                &                        & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
@@ -150,7 +150,7 @@ A summary of the $Z\rightarrow e\bar{e}\,+\,\text{fake track}$ event selection c
 \begin{tabular}{l|l l }
 \multicolumn{3}{c}{} \\
 \toprule
-\multirow{8}{*}{\makecell[l]{Event based \\ selection}}        &  Two Electrons with    & $\pt>25\gev$ \\
+\multirow{8}{*}{\makecell[l]{Event-based \\ selection}}        &  Two Electrons with    & $\pt>25\gev$ \\
                                                                &                        & $|\eta|<2.5$ \\
                                                                &                        & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(e)<0.15$ \\
                                                                &                        & pass conversion veto    \\
@@ -185,7 +185,7 @@ In simulated $Z\rightarrow\mu\bar{\mu}$ events, a purity of 88\%, whereas in sim
 
 
 As already mentioned, the fake rate is defined as the probability that an event contains a fake track that fulfils the candidate track selection criteria listed in Section~\ref{sec:CandidateTrackSelection}.
-Thus, for the \Zlep datasets it is defined as the number of events passing the full selection described in Table~\ref{tab:FakeMuonSample} (Table~\ref{tab:FakeElectronSample}) divided by the number of events that pass only the event based selection in Table~\ref{tab:FakeMuonSample} (Table~\ref{tab:FakeElectronSample})
+Thus, for the \Zlep datasets it is defined as the number of events passing the full selection described in Table~\ref{tab:FakeMuonSample} (Table~\ref{tab:FakeElectronSample}) divided by the number of events that pass only the event-based selection in Table~\ref{tab:FakeMuonSample} (Table~\ref{tab:FakeElectronSample})
 \begin{equation*}
 \rho_{\text{fake}} = \frac{N_{Z\rightarrow ll}^{\text{cand trk selection}}}{N_{Z\rightarrow ll}}
 \end{equation*}
@@ -203,11 +203,11 @@ This is shown in Fig.~\ref{fig:FakeRate} where the fake rate is depicted for the
   \label{fig:FakeRate}
 \end{figure}
 Since the fake rate is constant for different SM processes, the fake rate determined on the \Zlep dataset can be generalised for all SM background possibily contributing to this search.
-Thus, the inclusive fake background can be estimated by multiplying the fake rate with the number of events selected in the MET dataset after the event based selection from Section~\ref{sec:EventBasedSelection}
+Thus, the inclusive fake background can be estimated by multiplying the fake rate with the number of events selected in the MET dataset after the event-based selection from Section~\ref{sec:EventBasedSelection}
 \begin{equation*}
-N^{\text{fake, inclusive in I$_{\text{as}}$}}_{\text{bkg}} = \rho_{\text{fake}} \cdot N_{\text{event based selection}}^{\text{MET}}.
+N^{\text{fake, inclusive in I$_{\text{as}}$}}_{\text{bkg}} = \rho_{\text{fake}} \cdot N_{\text{event-based selection}}^{\text{MET}}.
 \end{equation*}
-Given the number of events after the event based selection of $N_{\text{event based selection}}^{\text{MET}} = 1.38\cdot10^6$ and the fake rate cited above, 
+Given the number of events after the event-based selection of $N_{\text{event-based selection}}^{\text{MET}} = 1.38\cdot10^6$ and the fake rate cited above, 
 the inclusive fake background can be estimated to $94.7\pm3.4$ for the candidate track selection.
 
 It should again be mentioned that the inclusive fake background estimation will be only inclusive in \ias not in \pt.
@@ -406,9 +406,9 @@ Table~\ref{tab:LeptonicResults} gives the result for the prediction of the inclu
 \toprule
                                                                &      scaling factor $\rho_{\text{MC}}$    &   N$_{\text{CR,data}}$         &  N$_{\text{predicted}}$   \\
 \midrule
-electrons                                                      &       $1.25^{+1.70}_{-0.77} 10^{-4}  $      & 60067                     & $7.49^{+10.19}_{-4.63}$     \\
-muons                                                          &       $2.17^{+1.65}_{-0.93} 10^{-4}$        & 76664                     & $16.64^{+12.64}_{-7.12}$    \\
-taus                                                           &       $< 2.13 10^{-2}$                  & 445                      &  $<9.46$ \\
+electrons                                                      &       $1.25^{+1.70}_{-0.77} \cdot 10^{-4}  $      & 60067                     & $7.49^{+10.19}_{-4.63}$     \\
+muons                                                          &       $2.17^{+1.65}_{-0.93} \cdot 10^{-4}$        & 76664                     & $16.64^{+12.64}_{-7.12}$    \\
+taus                                                           &       $< 2.13 \cdot 10^{-2}$                  & 445                      &  $<9.46$ \\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -521,16 +521,49 @@ All validation tests show good agreement.
 Still, systematic uncertainties need to be estimated.
 The sources of systematic uncertainties and how they are estimated will be explained in the following section.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Systematic uncertainties}
 \label{sec:SysUncertaintiesBkg}
 
-The corresponding systematic uncertainties for the background estimation methods, are the uncertainty on the fake rate $\rho_{\text{fake}}$, the uncertainty of shape differences in the \ias distribution between the signal region and the fake control region CR$_{\ias}^{\text{fake}}$, the uncertainty on the leptonic scale factor $\rho_{\text{MC}}^{\text{lep}_i}$ determined with simulated events, and the uncertainty of the shape differences between simulation and real data of the leptonic background.  
+The corresponding systematic uncertainties on the background estimation methods, are the uncertainty on the fake rate $\rho_{\text{fake}}$, the uncertainty of shape differences in the \ias distribution between the signal region and the fake control region CR$_{\ias}^{\text{fake}}$, the uncertainty on the leptonic scale factor $\rho_{\text{MC}}^{\text{lep}_i}$ determined with simulated events, and the uncertainty of the shape differences between simulation and real data of the leptonic background.  
+
 \subsection{Uncertainty on the fake rate}
 \label{sec:FakeRateUncertainty}
-The uncertainty on the fake rate $\rho_{\text{fake}}$ is determined with a comparison of the fake rate in \WJets and \Zlep events in simulation.
+The uncertainty on the fake rate $\rho_{\text{fake}}$ is determined with a comparison of the fake rate in \WJets and \Zlep events in simulation (datasets listed in Table~\ref{tab:SMsamples_AOD} were used.)
+Unfortunately, the statistical precision of this comparison is limited.
+Therefore, the estimation of this systematic uncertainty is again introducing large uncertainties due to the statistical limitation of the simulated \WJets sample.
+As the fake rate is not expected to be correlated to the \met and \ptfirstjet  selections, these selections requriements are removed/loosend for the fake rate comparison in order to enhance the statistical precision of the systemactic uncertainty.
+This can be seen in Table~\ref{FIXME}.
+There, the results of the fake rate can be seen for different event-based selections. All are compatible within the statistcial uncertainty.
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Fake rates in simulated \WJets and \Zlep events for different event-based selections ). Right: $\ecalo>10\gev$, $\nhits>6$ and $\ias>0.2$}
+\label{tab:LeptonicClosure}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+Selections                                                     &      $\rho_{\text{fake}}^{\WJets}$                       &  $\rho_{\text{fake}}^{\Zlep}$          \\
+\midrule
+                                                       &       $14.67^{+ 11.16}_{-6.29}$            &                \\
+                                                    &       $7.99^{ + 10.90}_{-5.00}$            &            \\
+                                                           &       $109.04^{+21.18}_{-16.58}$           &          \\
+\bottomrule
+\end{tabular}}
+\end{table}\\
+
+The systematic uncertainty is estimated with the largest 1-sigma deviation from one, being 25\%.
+
 \subsection{Uncertainty on the fake track \ias shape}
 \label{sec:FakeIasUncertainty}
+The uncertainty on the \ias shape from the fake control region $\rho_{\text{MC}}^{\text{lep}_i}$ is estimated using simulated \WJets events.
+A comparison is done between the \ias shape in the signal region and the control region in simulation.
+Figure~\ref{FIXME} shows the \ias distribution fore different \pt selection cuts.
+The ratio in the second bin between the signal region and the control region is calculated.
+Again, the largest 1-sigma difference fromone is taken as systematic ucnertainty.
+
 \subsection{Uncertainty on the leptonic scale factor}
 \label{sec:LeptonScaleUncertainty}
 \subsection{Uncertainty on the leptonic \ias shape}
