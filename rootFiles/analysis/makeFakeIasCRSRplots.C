@@ -22,7 +22,7 @@
 #include <cmath>
 #include <algorithm>
 #include <iomanip>
-#include "/afs/desy.de/user/t/tlenz/Thesis/rootFiles/plotStyleThesis.h"
+#include "../plotStyleThesis.h"
 
 
 TCanvas *drawRatioPlotWithPurity(TH1D *prediction, TH1D *sr, TString xTitle, TString filename, double purity, double ptcut);
@@ -156,15 +156,6 @@ public:
     tree->SetBranchAddress("LeadingJetPt",&leadingJetPt);
     tree->SetBranchAddress("weight",&weight);
     tree->SetBranchAddress("weight_xsec_lumi",&weight_xsec_lumi);
-    tree->SetBranchAddress("trackDeDx1",&trackDeDx1);
-    tree->SetBranchAddress("trackDeDx2",&trackDeDx2);
-    tree->SetBranchAddress("trackDeDx3",&trackDeDx3);
-    tree->SetBranchAddress("trackDeDx4",&trackDeDx4);
-    tree->SetBranchAddress("trackDx1",&trackDx1);
-    tree->SetBranchAddress("trackDx2",&trackDx2);
-    tree->SetBranchAddress("trackDx3",&trackDx3);
-    tree->SetBranchAddress("trackDx4",&trackDx4);
-    tree->SetBranchAddress("trackMeasSize",&trackMeasSize);
   };
 
 
@@ -218,9 +209,9 @@ public:
 
 int makeFakeIasCRSRplots(){
 
-  double ptCut=20;
+  double ptCut=40;
   double ecaloCut=5;
-  double iasCut=0.0;
+  double iasCut=0.2;
 
   sample pred;
   sample SR;
@@ -229,8 +220,8 @@ int makeFakeIasCRSRplots(){
   SR.file   = new TFile("/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_10_11_METGt0_JetPt70_noBlinding/results/analyzer/ntuples/input_weighted/wjets.root","READ");
   pred.file = new TFile("/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_08_19_METGt0_JetPt70_FakeCS/results/analyzer/ntuples/input_weighted/wjets.root","READ");
 
-  pred.file   -> GetObject("chiTrackspreselectionNoQCDCutsTrigger/Variables",pred.tree);
-  SR.file     -> GetObject("chiTrackspreselectionNoQCDCutsTrigger/Variables",SR.tree);
+  pred.file   -> GetObject("chiTrackspreselectionNoQCDCutsNoTrigger/Variables",pred.tree);
+  SR.file     -> GetObject("chiTrackspreselectionNoQCDCutsNoTrigger/Variables",SR.tree);
 
 
   pred.getTreeVariables();
@@ -271,11 +262,15 @@ int makeFakeIasCRSRplots(){
 
   TeresaPlottingStyle::init();
   gROOT->ForceStyle();
+  TString filename = "";
 
-  TString filename = "hASmi_SRbinning_d0Inverted_fakes_";
+  filename = "hASmi_SRbinning_fakes_";
   filename += Form("ECalaoLe%.0f_",ecaloCut);
   filename += Form("trackPtGt%.0f_",ptCut);
-
+  TCanvas *c1 = drawRatioPlotWithPurity(pred.histoASmiSR,SR.histoASmiSR,"dE/dx discriminator (I_{as})",filename + pred.histoASmi->GetName() + "_"  + SR.histoASmi->GetName() + ".pdf" ,pred.purity,ptCut);
+  filename = "hASmi_fakes_";
+  filename += Form("ECalaoLe%.0f_",ecaloCut);
+  filename += Form("trackPtGt%.0f_",ptCut);
   TCanvas *c2 = drawRatioPlotWithPurity(pred.histoASmi,SR.histoASmi,"dE/dx discriminator (I_{as})",filename + pred.histoASmi->GetName() + "_"  + SR.histoASmi->GetName() + ".pdf" ,pred.purity,ptCut);
  
   return 0;
@@ -400,7 +395,7 @@ TCanvas *drawRatioPlotWithPurity(TH1D *prediction, TH1D *sr, TString xTitle, TSt
   sr->Draw("e same");
 
 
-  prediction->SetMaximum(1);
+  prediction->SetMaximum(5);
   prediction->SetMinimum(0.05);
   leg->Draw("same");
 

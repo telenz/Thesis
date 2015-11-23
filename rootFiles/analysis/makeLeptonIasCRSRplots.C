@@ -102,13 +102,14 @@ public:
     trackPdgId      = 0;
 
     Double_t xbinsECalo[3]  = {0,10,200};
-    Double_t xbinsASmi[5]   = {0,0.1,0.2,0.5,1};
+    //Double_t xbinsASmi[5]   = {0,0.1,0.2,0.5,1};
+    Double_t xbinsASmi[3]   = {0,0.2,1};
     //Double_t xbinsASmi[5]   = {0,0.05,0.1,0.3,1};
     Double_t xbinsNHits[4]  = {3,5,7,25};
     Double_t xbinsPt[6]     = {20,35,50,75,150,2000};
 
     histoECalo  = new TH1D("predECalo","predECalo",2,xbinsECalo);
-    histoASmi   = new TH1D("predASmi","predASmi",4,xbinsASmi);
+    histoASmi   = new TH1D("predASmi","predASmi",2,xbinsASmi);
     histoNValid = new TH1D("predNValid","predNValid",3,xbinsNHits);
     histoPt     = new TH1D("predPt","predPt",5,xbinsPt);
   };
@@ -186,7 +187,7 @@ public:
     
     purity=statistics/purity;
     cout<<"integral = "<<histoASmi->Integral()<<endl;
-    histoASmi     -> Scale(1./histoASmi->Integral());
+    if(histoASmi->Integral() !=0)  histoASmi     -> Scale(1./histoASmi->Integral());
   };
 
   
@@ -198,7 +199,7 @@ int makePlots(int pdgId, double ptCut, double ecaloCut, double iasCut){
 
   sample pred(iasCut);
   sample SR(iasCut);
-  sample data(iasCut);
+  sample dataCR(iasCut);
 
 
 
@@ -217,34 +218,35 @@ int makePlots(int pdgId, double ptCut, double ecaloCut, double iasCut){
     particleType = "Muons";
   }
   else if(pdgId==211){
-    pathToFile = "/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_08_19_METGt0_JetPt70_FakeCS/results/analyzer/ntuples/input_weighted/";
+    pathToFile = "/nfs/dust/cms/user/tlenz/ANALYSIS/workdir/analysis_2015_08_19_METGt0_JetPt70_TauCS/results/analyzer/ntuples/input_weighted/";
     particleType = "Taus";
   }
 
-  pred.file   = new TFile(pathToFile + process + ".root","READ");
-  data.file   = new TFile(pathToFile + "data.root","READ");
+  pred.file     = new TFile(pathToFile + process + ".root","READ");
+  dataCR.file   = new TFile(pathToFile + "data.root","READ");
 
-  
-  TString selection = "chiTrackspreselectionNoQCDCutsNoTrigger";
-  pred.file -> GetObject(selection + "/Variables",pred.tree);
-  SR.file   -> GetObject(selection + "/Variables",SR.tree);
-  data.file -> GetObject(selection + "/Variables",data.tree);
-
+  cout<<"1"<<endl;
+  TString selection = "chiTrackspreselectionTrigger";
+  pred.file   -> GetObject(selection + "/Variables",pred.tree);
+  SR.file     -> GetObject(selection + "/Variables",SR.tree);
+  dataCR.file -> GetObject(selection + "/Variables",dataCR.tree);
+  cout<<"2"<<endl;
   SR.getTreeVariables();
   pred.getTreeVariables();
-  data.getTreeVariables();
+  dataCR.getTreeVariables();
 
   int nbins=20;
   double xmin=-2.4;
   double xmax=2.4;
   SR.histo   = new TH1D("SR","SR",nbins,xmin,xmax);
   pred.histo = new TH1D("pred","pred",nbins,xmin,xmax);
-  data.histo = new TH1D("data","data",nbins,xmin,xmax);
+  dataCR.histo = new TH1D("data","data",nbins,xmin,xmax);
+
 
 
   SR.Selection(1,pdgId,ptCut,ecaloCut);
   pred.Selection(0,pdgId,ptCut,ecaloCut);
-  data.Selection(0,pdgId,ptCut,ecaloCut);
+  dataCR.Selection(0,pdgId,ptCut,ecaloCut);
 
   cout<<"###########################################################################"<<endl;
   cout<<"Statisitcs:"<<endl;
@@ -256,17 +258,13 @@ int makePlots(int pdgId, double ptCut, double ecaloCut, double iasCut){
   
   TeresaPlottingStyle::init();
   gROOT->ForceStyle();
+  TeresaPlottingStyle::init();
  
 
   //TCanvas *c0 = drawRatioPlot(pred.histoECalo,SR.histoECalo,Form("E_{calo} pdgId=%i",pdgId),Form("hECalo_%i.pdf",pdgId));
-  TCanvas *c1 = drawRatioPlot(pred.histoASmi,SR.histoASmi,data.histoASmi,Form("I_{as} pdgId=%i",pdgId),Form("plots/hASmi_%i_ASmiShape_ptCut%.0f_iasCut0p%.0f_EcaloLe%.0f.pdf",pdgId,ptCut,iasCut*100,ecaloCut), particleType);
+  //TCanvas *c1 = drawRatioPlot(pred.histoASmi, SR.histoASmi     ,dataCR.histoASmi, Form("I_{as} pdgId=%i",pdgId)   , Form("plots/hASmi_%i_ASmiShape_ptCut%.0f_iasCut0p%.0f_EcaloLe%.0f.pdf",pdgId,ptCut,iasCut*100,ecaloCut), particleType);
+  TCanvas *c2 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,dataCR.histoASmi, Form("track Pt pdgId=%i",pdgId) , Form("plots/hASmi_data-mc_%i_ASmiShape_ptCut%.0f_iasCut0p%.0f_EcaloLe%.0f.pdf",pdgId,ptCut,iasCut*100,ecaloCut), particleType);
 
-  
-  //TCanvas *c2 = drawRatioPlot(pred.histoPt,data.histoPt,Form("track Pt pdgId=%i",pdgId),Form("hPt_%i.pdf",pdgId));
-  //TCanvas *c3 = drawRatioPlot(pred.histoNValid,SR.histoNValid,Form("n_{Hits} pdgId=%i",pdgId),Form("hNValid_%i.pdf",pdgId));
-  //TCanvas *c3 = drawRatioPlot(pred.histo,SR.histo,Form("n_{Hits} pdgId=%i",pdgId),Form("hNValid_%i.pdf",pdgId));
-
-  //gDirectory->Delete(); 
  
   return 0;
  
@@ -306,6 +304,8 @@ TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, T
 
   ratio = (TH1D*) prediction->Clone();
   ratio->Divide(sr);
+  TeresaPlottingStyle::init();
+  gROOT->ForceStyle();
 
 
 
@@ -321,7 +321,8 @@ TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, T
 
   }
 
-  ratio->GetYaxis()->SetTitle("#frac{CR (W+jets)}{SR (W+jets)}");
+  //ratio->GetYaxis()->SetTitle("#frac{CR (W+jets)}{SR (W+jets)}");
+  ratio->GetYaxis()->SetTitle("#frac{CR (W+jets)}{CR (data)}");
   ratio->SetTitle("");
   ratio->SetLabelSize(0.1,"X");
   ratio->SetLabelSize(0.1,"Y");
@@ -330,7 +331,7 @@ TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, T
 
 
   padRatio->cd();
-  ratio->GetYaxis()->SetRangeUser(0,10);
+  ratio->GetYaxis()->SetRangeUser(0,2);
   ratio->Draw("e");
 
   // Draw line at one!
@@ -340,9 +341,9 @@ TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, T
   line->SetLineWidth(2);
   line->Draw("same");
   padRatio->Modified();
-
   TLegend *leg = new TLegend(0.5,0.7,0.9,0.9);
-  leg->AddEntry(sr,"SR (W^{#pm}+jets)","lep"); 
+  //leg->AddEntry(sr,"SR (W^{#pm}+jets)","lep"); 
+  leg->AddEntry(sr,"lepton CR (MET data)","lep"); 
   leg->AddEntry(prediction,"lepton CR (W^{#pm}+jets)","pel"); 
  
   pad1->cd();
@@ -372,7 +373,7 @@ TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, T
 
   prediction->GetYaxis()->SetRangeUser(0.00001,2);
 
-  prediction->GetXaxis()->SetTitle("a.u");
+  prediction->GetYaxis()->SetTitle("a.u");
   prediction->Draw("e");
   sr->Draw("e same");
   //  leg->AddEntry(data,"lepton CR (data)","pel"); 

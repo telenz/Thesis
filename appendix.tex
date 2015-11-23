@@ -1,3 +1,5 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Detailed event yield tables for simulated samples and data}
 \label{app:cutflow}
 
@@ -89,3 +91,110 @@ $\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} <
 %\end{sideways}
 \end{table}  
 %\end{landscape}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\chapter{Selection requirements in the ``tag-and-probe'' samples}
+\label{app:TagAndProbeRequirements}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Event selection cuts for the muon ``tag-and-probe'' sample that is used to estimate the uncertainty on the muon scale factor \muonscalefactor.}
+\label{tab:MuonTagAndProbeSample}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|l }
+\multicolumn{2}{c}{} \\
+\toprule
+\multirow{10}{*}{\makecell[l]{Muon selection}}                 & $\pt>25\gev$ \\
+                                                               & $|\eta|<2.4$ \\
+                                                               & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(\mu)<0.12$ \\
+                                                               & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
+                                                               & $|d0|<0.2\cm$  \\
+                                                               & $|dz|<0.5\cm$  \\
+                                                               & $\geq$ 1 hit in the muon detector  \\
+                                                               & $\geq$ 2 hits in different muon detector planes  \\
+                                                               & $\geq$ 1 hit in the pixel detector  \\
+                                                               & $\geq$ 6 hits in the tracker system  \\
+\midrule
+\multirow{5}{*}{Candidate track selection}                     &  Good quality selection \\
+                                                               &  Kinematic selection    \\
+                                                               &  Lepton/jet veto        \\   
+                                                               &  Isolation selection    \\  
+                                                               &  $\nhits>5$             \\  
+\midrule
+\multirow{2}{*}{Event-based selection}                         &  Muon and candidate track opposite in charge                                     \\
+                                                               &  $80\gev<M_{\text{inv}}\left(\mu,\text{can. trk} \right)<100\gev$        \\
+
+\bottomrule
+\multicolumn{2}{c}{} \\
+\end{tabular}}
+\end{table}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Event selection cuts for the tau ``tag-and-probe'' sample that is used to estimate the uncertainty on the tau scale factor \tauscalefactor.}
+\label{tab:TauTagAndProbeSample}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|l }
+\multicolumn{2}{c}{} \\
+\toprule
+\multirow{10}{*}{\makecell[l]{Muon selection\\ that is compatible with a \\$\tau\rightarrow\mu\nu\nu$ decay}}                 & $\pt>25\gev$ \\
+                                                               & $|\eta|<2.4$ \\
+                                                               & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(\mu)<0.12$ \\
+                                                               & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
+                                                               & $|d0|<0.2\cm$  \\
+                                                               & $|dz|<0.5\cm$  \\
+                                                               & $\geq$ 1 hit in the muon detector  \\
+                                                               & $\geq$ 2 hits in different muon detector planes  \\
+                                                               & $\geq$ 1 hit in the pixel detector  \\
+                                                               & $\geq$ 6 hits in the tracker system  \\
+\midrule
+\multirow{5}{*}{Candidate track selection}                     &  Good quality selection \\
+                                                               &  Kinematic selection    \\
+                                                               &  Lepton/jet veto        \\   
+                                                               &  $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$\\  
+                                                               &  $\nhits>5$             \\  
+\midrule
+\multirow{2}{*}{Event-based selection}                         &  Muon and candidate track opposite in charge                                     \\
+                                                               &  $40\gev<M_{\text{inv}}\left( \mu, \text{cand. trk}  \right)<75\gev$        \\
+                                                               & $m_T\left(\mu,\met\right)<40\gev$ \\
+
+\bottomrule
+\multicolumn{2}{c}{} \\
+\end{tabular}}
+\end{table}
+
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Event selection cuts for the electron ``tag-and-probe'' sample that is used to estimate the uncertainty on the electron scale factor \electronscalefactor.}
+\label{tab:ElectronTagAndProbeSample}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|l}
+\multicolumn{2}{c}{} \\
+\toprule
+\multirow{6}{*}{Electron selection}                            &  $\pt>25\gev$ \\
+                                                               &  $|\eta|<2.5$ \\
+                                                               &  $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(e)<0.15$ \\
+                                                               &  pass conversion veto    \\
+                                                               &  no missing tracker hits  \\
+                                                               &  good MVA electron as defined in \cite{bib:CMS:ElectronMVA}  \\
+\midrule
+\multirow{5}{*}{Candidate track selection}                    &  Good quality selection \\
+                                                              &  Kinematic selection    \\
+                                                              &  Lepton/jet veto        \\   
+                                                              &  $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$    \\  
+                                                              &  $\nhits>5$             \\  
+\midrule
+\multirow{2}{*}{Event-based selection}                         &  Electron and candidate track opposite in charge                      \\
+                                                               &  $80\gev<M_{\text{inv}}\left(e,\text{cand. trk}  \right)<100\gev$        \\
+
+\bottomrule
+\multicolumn{2}{c}{} \\
+\end{tabular}}
+\end{table}  
