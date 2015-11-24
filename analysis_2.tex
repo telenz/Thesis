@@ -295,7 +295,7 @@ Figure~\ref{fig:QCDcuts} shows the maximal $\Delta\phi$ of any of two subleading
 
 \subsection{Candidate track selection}
 \label{sec:CandidateTrackSelection}
-After the reduction of background processes with event-based variables, a track based selection is carried out.
+After the reduction of background processes with event-based variables, a track-based selection is carried out.
 To get an optimised selection for possible chargino tracks several signal track characteristics are exploited.\\
 
 First a selection of tracks of good quality is enforced:
@@ -386,9 +386,10 @@ Thus, also tracks pointing in these regions within a distance of $\Delta R<0.25$
 To summarise, the candidate track must fulfil the following selection criteria:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
-\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed standalone, tracker or global muon with a transverse momentum larger than 10\gev.
-\item Veto all tracks within a cone of $\Delta R<0.15$ to a reconstructed electron with a transverse momentum larger than 10\gev.
-\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed tau with $\pt>20\gev$ and $|\eta|<2.3$.
+\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed standalone, tracker or global muon with a transverse momentum larger than 10\gev (see Section~\ref{FIXME} for details on the different muon definitions).
+\item Veto all tracks within a cone of $\Delta R<0.15$ to a reconstructed electron with a transverse momentum larger than 10\gev (see Section~\ref{FIXME} for details on the electron reconstruction).
+\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed tau with $\pt>20\gev$ and $|\eta|<2.3$ (see Section~\ref{FIXME} for details on the tau reconstruction). 
+      Some loose isolation requirements are enforced to protect the tau reconstruction from jet contamination.
 \item No subleading jet ($\pt<20\gev$ and $|\eta|<4.5$) is allowed around the track in a cone of $\Delta R< 0.5$
 \item Veto tracks within a cone of $\Delta R<0.05$ to a dead or noisy ECAL cell.
 \item The track must not point in the direction of the ECAL intermodule gap listed in Table~\ref{tab:IntermoduleGaps}.
@@ -495,7 +496,7 @@ A summary table of the event yields after each selection step for the simulated 
 Given the presented analysis selection requirements, a set of two variables remain, which are highly discriminating:
 The transverse momentum and the energy release per path length of the candidate track.
 In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the application of the full analysis selection.
-\begin{figure}[!b]
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts_Wjets/htrackPtSmallRange_log.pdf}

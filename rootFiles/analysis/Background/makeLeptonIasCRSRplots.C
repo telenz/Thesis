@@ -108,8 +108,9 @@ public:
 
     histoECalo  = new TH1D("predECalo","predECalo",2,xbinsECalo);
 
-    Double_t xbinsASmi[5]   = {0,0.05,0.1,0.2,1};
-    histoASmi   = new TH1D("predASmi","predASmi",4,xbinsASmi);
+    //Double_t xbinsASmi[5]   = {0,0.05,0.1,0.2,1};
+    Double_t xbinsASmi[3]   = {0,0.2,1};
+    histoASmi   = new TH1D("predASmi","predASmi",2,xbinsASmi);
 
     histoNValid = new TH1D("predNValid","predNValid",3,xbinsNHits);
     histoPt     = new TH1D("predPt","predPt",5,xbinsPt);
@@ -272,7 +273,7 @@ int makeLeptonIasCRSRplots(int pdgId){
   info1-> SetNDC();
   info1->SetTextSize(0.06);
   info1->DrawLatex(0.45,0.65,particleType);
-  c->SaveAs("hASmi_" + particleType + "_MCCR_MCSR.pdf");
+  c->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_MCSR.pdf");
 
 
   TCanvas *c1 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,"dE/dx discriminator (I_{as})","N_{MC}/N_{Data}","CR_{MC}^{lep veto inverted}","CR_{Data}^{lep veto inverted}",10,0.001);
@@ -282,8 +283,8 @@ int makeLeptonIasCRSRplots(int pdgId){
   info1   = new TLatex();
   info1-> SetNDC();
   info1->SetTextSize(0.06);
-  info1->DrawLatex(0.45,0.65,particleType);
-  c1->SaveAs("hASmi_" + particleType + "_MCCR_DataCR.pdf");
+  info1->DrawLatex(0.50,0.65,particleType);
+  c1->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_DataCR.pdf");
  
   return 0;
  

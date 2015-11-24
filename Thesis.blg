@@ -2,27 +2,27 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
 Database file #1: Thesis.bib
-I was expecting a `,' or a `}'---line 21 of file Thesis.bib
+I was expecting a `,' or a `}'---line 31 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-003",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 205 of file Thesis.bib
+I was expecting a `,' or a `}'---line 215 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-005",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 217 of file Thesis.bib
+I was expecting a `,' or a `}'---line 227 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 437 of file Thesis.bib
+I was expecting a `,' or a `}'---line 447 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-EXO-13-006",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 448 of file Thesis.bib
+I was expecting a `,' or a `}'---line 458 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
@@ -32,45 +32,46 @@ Warning--empty publisher in bib:James:StaticticalMethods_2006
 Warning--empty year in bib:CMS:DT_Thesis
 Name 1 in "J. Brinson, C. Hill, and W. Wulsin" has a comma at the end for entry bib:CMS:DT_8TeV_AN
 while executing---line 1277 of file lucas_unsrt.bst
-You've used 37 entries,
+Warning--empty title in bib:Neyman_1937
+You've used 38 entries,
             2369 wiz_defined-function locations,
-            870 strings with 12354 characters,
-and the built_in function-call counts, 10580 in all, are:
-= -- 1310
-> -- 211
+            878 strings with 12569 characters,
+and the built_in function-call counts, 10938 in all, are:
+= -- 1353
+> -- 216
 < -- 0
-+ -- 84
-- -- 47
-* -- 795
-:= -- 1358
-add.period$ -- 93
-call.type$ -- 37
++ -- 86
+- -- 48
+* -- 815
+:= -- 1404
+add.period$ -- 95
+call.type$ -- 38
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 643
-empty$ -- 1099
-format.name$ -- 37
-if$ -- 2911
+cite$ -- 41
+duplicate$ -- 664
+empty$ -- 1137
+format.name$ -- 38
+if$ -- 3010
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 95
-newline$ -- 172
-num.names$ -- 20
-pop$ -- 195
+int.to.str$ -- 38
+missing$ -- 98
+newline$ -- 175
+num.names$ -- 21
+pop$ -- 201
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 339
+skip$ -- 353
 stack$ -- 0
-substring$ -- 324
-swap$ -- 217
+substring$ -- 349
+swap$ -- 226
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 49
-width$ -- 39
-write$ -- 426
+warning$ -- 3
+while$ -- 52
+width$ -- 40
+write$ -- 436
 (There were 6 error messages)

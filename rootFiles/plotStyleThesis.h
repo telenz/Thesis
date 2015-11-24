@@ -8,7 +8,6 @@
 #include "TPad.h"
 #include <iostream>
 
-
 class GeneralSettings {
 public:
   static void init() {
@@ -51,7 +50,7 @@ public:
 
     gStyle -> SetHistLineWidth(1);
     gStyle -> SetMarkerStyle(20);
-    gStyle -> SetMarkerSize(1.);
+    gStyle -> SetMarkerSize(1.1);
     //gStyle -> SetMarkerSize(.6); for stability plots
    
     gStyle->SetOptStat("");
@@ -81,6 +80,26 @@ public:
     //Legend 
     cout<<"TeresaPlottingStyle is activated!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
     
+
+    gROOT->ForceStyle(); 
+  }
+};
+//################################################################################################################################################################################################
+class TeresaPlottingStyleRatio {
+public:
+  static void init() {
+
+    //Legend 
+    GeneralSettings::init();
+    cout<<"TeresaPlottingStyle Ratio is activated!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
+
+    gStyle -> SetMarkerColor(kBlack);
+    gStyle -> SetLineColor(kBlack);
+    gStyle -> SetLabelSize(0.06,"XYZ");
+    gStyle -> SetTitleSize(0.07,"XYZ");
+    gStyle -> SetTitleOffset(1.15,"X");
+    gStyle -> SetTitleOffset(1.1,"Y");
+    gStyle -> SetTextSize(0.06);
 
     gROOT->ForceStyle(); 
   }
