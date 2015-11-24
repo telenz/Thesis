@@ -23,10 +23,8 @@
 #include <algorithm>
 #include <iomanip>
 #include "TPad.h"
-#include "../plotStyleThesis.h"
+#include "drawRatioPlot.h"
 
-
-TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, TString filename, TString particleType);
 
 class sample{
 
@@ -103,13 +101,16 @@ public:
 
     Double_t xbinsECalo[3]  = {0,10,200};
     //Double_t xbinsASmi[5]   = {0,0.1,0.2,0.5,1};
-    Double_t xbinsASmi[3]   = {0,0.2,1};
+   
     //Double_t xbinsASmi[5]   = {0,0.05,0.1,0.3,1};
     Double_t xbinsNHits[4]  = {3,5,7,25};
     Double_t xbinsPt[6]     = {20,35,50,75,150,2000};
 
     histoECalo  = new TH1D("predECalo","predECalo",2,xbinsECalo);
-    histoASmi   = new TH1D("predASmi","predASmi",2,xbinsASmi);
+
+    Double_t xbinsASmi[5]   = {0,0.05,0.1,0.2,1};
+    histoASmi   = new TH1D("predASmi","predASmi",4,xbinsASmi);
+
     histoNValid = new TH1D("predNValid","predNValid",3,xbinsNHits);
     histoPt     = new TH1D("predPt","predPt",5,xbinsPt);
   };
@@ -195,7 +196,11 @@ public:
 };
 
 
-int makePlots(int pdgId, double ptCut, double ecaloCut, double iasCut){
+int makeLeptonIasCRSRplots(int pdgId){
+
+  double ptCut    = 20;
+  double ecaloCut = 50000;
+  double iasCut   = 0.2;
 
   sample pred(iasCut);
   sample SR(iasCut);
@@ -225,27 +230,30 @@ int makePlots(int pdgId, double ptCut, double ecaloCut, double iasCut){
   pred.file     = new TFile(pathToFile + process + ".root","READ");
   dataCR.file   = new TFile(pathToFile + "data.root","READ");
 
-  cout<<"1"<<endl;
-  TString selection = "chiTrackspreselectionTrigger";
+  TString selection = "chiTrackspreselectionNoQCDCutsNoTrigger";
   pred.file   -> GetObject(selection + "/Variables",pred.tree);
   SR.file     -> GetObject(selection + "/Variables",SR.tree);
   dataCR.file -> GetObject(selection + "/Variables",dataCR.tree);
-  cout<<"2"<<endl;
+
   SR.getTreeVariables();
   pred.getTreeVariables();
   dataCR.getTreeVariables();
-
+  
+  cout<<"1"<<endl;
   int nbins=20;
   double xmin=-2.4;
   double xmax=2.4;
-  SR.histo   = new TH1D("SR","SR",nbins,xmin,xmax);
-  pred.histo = new TH1D("pred","pred",nbins,xmin,xmax);
+  SR.histo     = new TH1D("SR","SR",nbins,xmin,xmax);
+  pred.histo   = new TH1D("pred","pred",nbins,xmin,xmax);
   dataCR.histo = new TH1D("data","data",nbins,xmin,xmax);
 
 
 
+  cout<<"MC signal region = "<<endl;
   SR.Selection(1,pdgId,ptCut,ecaloCut);
+  cout<<"MC control region = "<<endl;
   pred.Selection(0,pdgId,ptCut,ecaloCut);
+  cout<<"Data signal region = "<<endl;
   dataCR.Selection(0,pdgId,ptCut,ecaloCut);
 
   cout<<"###########################################################################"<<endl;
@@ -256,15 +264,26 @@ int makePlots(int pdgId, double ptCut, double ecaloCut, double iasCut){
   cout<<"###########################################################################"<<endl;
   
   
-  TeresaPlottingStyle::init();
-  gROOT->ForceStyle();
-  TeresaPlottingStyle::init();
- 
+  TCanvas *c = drawRatioPlot(pred.histoASmi, SR.histoASmi ,"dE/dx discriminator (I_{as})","N_{CR}/N_{SR}","CR_{MC}^{lep veto inverted}","SR_{MC}",10,0.001);
+  c->cd();
+  TPad* pad = (TPad*) gPad->GetPrimitive("pad1");
+  pad->cd();
+  TLatex*  info1   = new TLatex();
+  info1-> SetNDC();
+  info1->SetTextSize(0.06);
+  info1->DrawLatex(0.45,0.65,particleType);
+  c->SaveAs("hASmi_" + particleType + "_MCCR_MCSR.pdf");
 
-  //TCanvas *c0 = drawRatioPlot(pred.histoECalo,SR.histoECalo,Form("E_{calo} pdgId=%i",pdgId),Form("hECalo_%i.pdf",pdgId));
-  //TCanvas *c1 = drawRatioPlot(pred.histoASmi, SR.histoASmi     ,dataCR.histoASmi, Form("I_{as} pdgId=%i",pdgId)   , Form("plots/hASmi_%i_ASmiShape_ptCut%.0f_iasCut0p%.0f_EcaloLe%.0f.pdf",pdgId,ptCut,iasCut*100,ecaloCut), particleType);
-  TCanvas *c2 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,dataCR.histoASmi, Form("track Pt pdgId=%i",pdgId) , Form("plots/hASmi_data-mc_%i_ASmiShape_ptCut%.0f_iasCut0p%.0f_EcaloLe%.0f.pdf",pdgId,ptCut,iasCut*100,ecaloCut), particleType);
 
+  TCanvas *c1 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,"dE/dx discriminator (I_{as})","N_{MC}/N_{Data}","CR_{MC}^{lep veto inverted}","CR_{Data}^{lep veto inverted}",10,0.001);
+  c1->cd();
+  pad = (TPad*) gPad->GetPrimitive("pad1");
+  pad->cd();
+  info1   = new TLatex();
+  info1-> SetNDC();
+  info1->SetTextSize(0.06);
+  info1->DrawLatex(0.45,0.65,particleType);
+  c1->SaveAs("hASmi_" + particleType + "_MCCR_DataCR.pdf");
  
   return 0;
  
@@ -272,129 +291,3 @@ int makePlots(int pdgId, double ptCut, double ecaloCut, double iasCut){
 
 //################################################################################################################################
 //################################################################################################################################
-//################################################################################################################################
-
-
-TCanvas *drawRatioPlot(TH1D *prediction, TH1D *sr, TH1D *data, TString xTitle, TString filename, TString particleType ){
-
-  gStyle -> SetPadLeftMargin(0.20);
-
-  data->SetMarkerStyle(20);
-  data->SetMarkerColor(kGreen);
-  data->SetLineColor(kGreen);
-
-
-  
-  TCanvas *c = new TCanvas("c"+filename,"c",0,0,500,500);
-
-  float y = 0.3;
-
-  TPad *pad1     = new TPad("pad1", "Control Plots 1", 0.01, y, 0.99, 0.99);
-  TPad *padRatio = new TPad("rp1", "Ratio1", 0.01, 0.01, 0.99, y-0.01);
-
-  pad1->SetNumber(100);
-  pad1->SetTicks(0,1);
-  cout<<"number pad1     = "<<pad1->GetNumber()<<endl;
-  cout<<"number padRatio = "<<padRatio->GetNumber()<<endl;
-
-  TH1D *ratio = 0;
-
-  //ratio = (TH1D*) sr->Clone();
-  //ratio->Divide(prediction);
-
-  ratio = (TH1D*) prediction->Clone();
-  ratio->Divide(sr);
-  TeresaPlottingStyle::init();
-  gROOT->ForceStyle();
-
-
-
-  for(int i=1; i<=ratio->GetNbinsX();i++){
-
-    if(ratio->GetBinContent(i) != 0){
-      cout<<"N in CR in "<<i<<". bin ="<<prediction->GetBinContent(i)<<endl;
-      cout<<"N in SR in "<<i<<". bin ="<<sr->GetBinContent(i)<<endl;
-      cout<<"Rel. difference in "<<i<<". bin ="<<(1./ratio->GetBinContent(i)-1.)*100<<"%"<<endl; 
-    }
-    else if(sr->GetBinContent(i) == 0 && prediction->GetBinContent(i) !=0)    cout<<"Scaling Factor in "<<i<<". bin <"<<prediction->GetBinContent(i)/1.15<<" +/- "<<ratio->GetBinError(i)<<endl;
-    else if(sr->GetBinContent(i) != 0 && prediction->GetBinContent(i) ==0)    cout<<"Scaling Factor in "<<i<<". bin <"<<(sr->GetEntries()/prediction->GetEntries())/sr->GetBinContent(i)<<" +/- "<<ratio->GetBinError(i)<<endl;
-
-  }
-
-  //ratio->GetYaxis()->SetTitle("#frac{CR (W+jets)}{SR (W+jets)}");
-  ratio->GetYaxis()->SetTitle("#frac{CR (W+jets)}{CR (data)}");
-  ratio->SetTitle("");
-  ratio->SetLabelSize(0.1,"X");
-  ratio->SetLabelSize(0.1,"Y");
-  ratio->SetTitleOffset(0.5,"Y");
-  ratio->SetTitleSize(0.15,"Y");
-
-
-  padRatio->cd();
-  ratio->GetYaxis()->SetRangeUser(0,2);
-  ratio->Draw("e");
-
-  // Draw line at one!
-  float xmin = ratio->GetXaxis()->GetXmin();
-  float xmax = ratio->GetXaxis()->GetXmax();
-  TLine *line = new TLine(xmin,1,xmax,1);
-  line->SetLineWidth(2);
-  line->Draw("same");
-  padRatio->Modified();
-  TLegend *leg = new TLegend(0.5,0.7,0.9,0.9);
-  //leg->AddEntry(sr,"SR (W^{#pm}+jets)","lep"); 
-  leg->AddEntry(sr,"lepton CR (MET data)","lep"); 
-  leg->AddEntry(prediction,"lepton CR (W^{#pm}+jets)","pel"); 
- 
-  pad1->cd();
-  pad1->SetLogy();
-  //  pad1->SetLogx();
-
-  sr->SetLineColor(kRed);
-  sr->SetMarkerColor(kRed);
-  sr->SetMarkerStyle(20);
-  sr->SetTitle("");
-  prediction->SetMarkerStyle(20);
-  prediction->SetTitle("");
-  prediction->GetXaxis()->SetTitle("dE/dx discriminator (I_{as})");
-  sr->GetXaxis()->SetTitle(xTitle);
-
-  
-  
-
-  prediction->SetTitleSize(0.07,"X");
-  prediction->GetXaxis()->SetTitleOffset(1.);
-  sr->SetTitleSize(0.07,"X");
-  sr->GetXaxis()->SetTitleOffset(0.7);
-
-  double maximum = 0;
-  
-
-
-  prediction->GetYaxis()->SetRangeUser(0.00001,2);
-
-  prediction->GetYaxis()->SetTitle("a.u");
-  prediction->Draw("e");
-  sr->Draw("e same");
-  //  leg->AddEntry(data,"lepton CR (data)","pel"); 
-  //data->Draw("e same");
-
-  
-  leg->Draw("same");
-
-
-  TLatex*  info1   = new TLatex();
-  info1-> SetNDC();
-  info1->SetTextSize(0.07);
-  info1->DrawLatex(0.65,0.30,particleType);
-
-  // Draw both pads to canvas
-  c->cd();
-  pad1->Draw();
-  padRatio->SetGridy();
-  padRatio->Draw();
-
-  c->SaveAs(filename);
-
-  return c;
-}
