@@ -22,13 +22,13 @@ Still, as the characteristics of fake tracks are independent of the underlying p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fake background}
 \label{sec:FakeBkg}
-Fake tracks are tracks which are not reconstructed out of the trajectory of one single particle.
+Fake tracks are tracks that are not reconstructed out of the trajectory of one single particle.
 The rate with which this wrong reconstruction occurs is of course highly restrained by the quality cuts on $\chi^2$ and the vertex compatibility of the track reconstruction algorithm.
 Details on the reconstruction algorithm of tracks at CMS can be found in Section~\ref{FIXME}.
 
 The probability of reconstructing a fake track is furthermore strongly correlated with the number of hits in the tracker system.
-This can be seen in Fig~\ref{fig:NValidFakes}, where the normalised distribution of the number of hits from fake tracks is depicted.
-\begin{figure}[!b]
+This can be seen in Fig.~\ref{fig:NValidFakes}, where the normalised distribution of the number of hits from fake tracks is depicted.
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/NValidForFakes_chiTracksfullSelectionNoTriggerCuts.pdf}
@@ -83,7 +83,7 @@ Dataset  & Luminosity [\fbinv]   \\
 \end{table}  
 For the $Z\rightarrow\mu\bar{\mu}$ selection an event is required to have two muons with $\pt>25\gev$ and $|\eta|<2.4$.
 To suppress background from cosmic muons, the distance from the primary vertex must be less than $|d0|<0.2\cm$ in radial and $|dz|<0.5\cm$ in longitudinal direction.
-To suppress background arising from jets that fake muons, various quality criteria are applied. 
+In order to suppress background arising from jets that fake muons, various quality criteria are applied. 
 Thus, it is required that there is at least one hit in the muon detector and at least two hits in different detector planes.   
 Concerning the track of the muon in the tracker system, at minimum one hit in the pixel tracker and at least six hits in the full tracker system is required. 
 An isolation criterion is applied that requires the sum of transverse momenta in a cone of $\Delta R<0.4$ of all PF particles to be less than 12\%.
@@ -124,7 +124,7 @@ The $Z\rightarrow\mu\bar{\mu}\,+\,\text{fake track}$ selection is summarised in 
 
 In order to select $Z\rightarrow e\bar{e}$ events in data, the two electrons are required to have \mbox{$\pt>25\gev$}, $|\eta|<2.5$ and no missing hits in the inner layers of the tracker.
 Furthermore, the electrons need to pass a conversion veto to reduce background arising from photon conversions, as described in~\cite{bib:CMS:ConversionVeto_PAS}.
-An isolation requirement is applied similar to the muon isolation criterion with a reduced cut of 15\%.
+An isolation requirement is applied similar to the muon isolation criterion with a reduced requirement of 15\%.
 The electron identification is further based on a multivariate technique developed within~\cite{bib:CMS:ElectronMVA} that exploits electron characteristics about the track quality, the ECAL cluster shapes, and the combination about the measurements in the tracker and in the ECAL.
 Again, also the two electrons must be opposite in charge and their invariant mass must be between $80-100\gev$.
 A summary of the $Z\rightarrow e\bar{e}\,+\,\text{fake track}$ event selection can be found in Table~\ref{tab:FakeElectronSample}.\\
@@ -169,17 +169,17 @@ As can be seen in Fig.~\ref{fig:BkgComposition}, a reasonable purity in fake tra
   \caption{Generator-level particle matched to the selected track with the selection described in Table~\ref{tab:FakeMuonSample} (left) and Table~\ref{tab:FakeElectronSample} (right). 
            ``Fake'' means that no corresponding generator-level particle is found. }
   \label{fig:BkgComposition}
-\vspace{30pt}
+\vspace{50pt}
 \end{figure}
 In simulated $Z\rightarrow\mu\bar{\mu}$ events, a purity of 88\%, whereas in simulated $Z\rightarrow e\bar{e}$ events a purity of 92\% of fake tracks can be achieved.
 
 
-As already mentioned, the fake rate is defined as the probability that an event contains a fake track that fulfils the candidate track selection criteria listed in Section~\ref{sec:CandidateTrackSelection}.
+As already mentioned, the fake rate is defined as the probability that an event contains a fake track that fulfils the track selection criteria listed in Section~\ref{sec:CandidateTrackSelection}.
 Thus, for the \Zlep datasets it is defined as the number of events passing the full selection described in Table~\ref{tab:FakeMuonSample} (Table~\ref{tab:FakeElectronSample}) divided by the number of events that pass only the event-based selection in Table~\ref{tab:FakeMuonSample} (Table~\ref{tab:FakeElectronSample})
 \begin{equation*}
 \fakerate = \frac{N_{Z\rightarrow ll}^{\text{cand trk selection}}}{N_{Z\rightarrow ll}}
 \end{equation*}
-The fake rate for the candidate track selection is e.g. $\left( 6.86 \pm 0.25 \right) \cdot 10^{-5}$. 
+The fake rate for the candidate track selection is \eg $\left( 6.86 \pm 0.25 \right) \cdot 10^{-5}$. 
 This is of course not the final result as the optimisation in \pt will add an additional \pt selection cut to the candidate track selection.
 
 Within~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}, it was checked that the fake rate is constant for different processes.
@@ -210,11 +210,11 @@ How to receive this information will be explained in the next section.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{\ias shape of fake background}
-The information about the energy release per path length for fake tracks should not be taken from simulated samples as the simulation of $dE/dx$ is not reliable (see Fig.~\ref{fig:Data-MC-Dedx_MIPs}).
-To still get knowledge about the \ias shape of fake tracks, a control region \fakeCR is defined that is enriched with fakes and shows the same \ias distribution as fake tracks in the signal region.
+The information about the energy release per path length for fake tracks should not be taken from simulated samples as the simulation of $dE/dx$ is not reliable (cf. Fig.~\ref{fig:Data-MC-Dedx_MIPs}).
+In order to get knowledge about the \ias shape of fake tracks, a control region \fakeCR is defined that is enriched with fakes and shows the same \ias distribution as fake tracks in the signal region.
 
-To enrich fake tracks, it is possible to invert the selection cuts of the number of missing middle and inner hits, i.e. requiring at least one missing inner or middle hit $\left( N_{\text{miss}}^{\text{inner}} +N_{\text{miss}}^{\text{middle}}>0\right)$ .
-Figure~\ref{fig:NMissInnerAndMiddle} shows the distribution of the number of missing inner plus missing middle hits for fake and leptonic tracks in simulated \WJets events
+To enrich fake tracks, it is possible to invert the selection cuts of the number of missing middle and inner hits, \ie requiring at least one missing inner or middle hit $\left( N_{\text{miss}}^{\text{inner}} +N_{\text{miss}}^{\text{middle}}>0\right)$.
+Figure~\ref{fig:NMissInnerAndMiddle} shows the distribution of the number of missing inner plus missing middle hits for fake and leptonic tracks in simulated \WJets events.
 It can be seen that the enrichment of fakes by this selection works. 
 \begin{figure}[!b]
   \centering 
@@ -226,11 +226,11 @@ It can be seen that the enrichment of fakes by this selection works.
 \end{figure}
 
 Additionally, it must be checked whether the \ias shape in \fakeCR is comparable to the \ias shape in the signal region.
-As the exact definition of the signal region will be addressed during optimisation, this test is be done for various \pt selection cuts.
+As the exact definition of the signal region will be addressed during optimisation, this test is done for various \pt selection cuts.
 
 The comparison of the \ias shape of fake tracks can of course only be done on simulation.
 Thus, simulated \WJets events are used to select fake tracks in both regions.
-A comparison of the shape for the candidate track selection and the \fakeCR is shown in Fig~\ref{fig:IasSRCRFakes}.
+A comparison of the shape for the candidate track selection and the \fakeCR is shown in Fig.~\ref{fig:IasSRCRFakes}.
 indeed an excellent purity of around 99\% of fakes can be achieved in the \ias fake control region \fakeCR.
 
 
@@ -254,7 +254,7 @@ The remaining differences between these regions will be taken into account as sy
 \label{sec:LeptonicBkg}
 
 The leptonic background of the here presented search is caused by non-reconstructed leptons which undergo hence the lepton veto selection.
-However, at least non-reconstructed electrons or taus should in principle deposit enough energy in the calorimeters such that they can still be vetoed by the calorimeter isolation requirement.
+However, at least non-reconstructed electrons or taus should in principle deposit enough energy in the calorimeters such that they can still be vetoed by the calorimeter isolation requirement $\ecalo<5\gev$.
 As muons don't deposit much energy in the calorimeters, this reason does not hold for them.
 In the following, the sources of the three different leptonic backgrounds shall be characterised.
 
@@ -263,7 +263,7 @@ To avoid the background source from unreconstructed electrons, all tracks pointi
 as described in Section~\ref{sec:AnalysisSelection}.
 By this selection, almost all electrons are efficiently rejected.
 In the simulated \WJets sample only one simulated event remains that pass all candidate track selection criteria and for which the candidate track can be matched to a generator-level electron.
-This event is visualised in Fig~\ref{fig:LostElectron}. 
+This event is visualised in Fig.~\ref{fig:LostElectron}. 
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
@@ -308,7 +308,7 @@ Muons can fail reconstruction when they are pointing towards a bad cathode strip
 This is taken into account in the candidate track selection.
 However, some of the muons still fail reconstruction when they fall within the gap between stations 0 and 1 of the DT system at $|\eta|=0.25$.
 The muon reconstruction efficiency drops from around 99\% to a value of around 94\% as shown in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
-This possibility is illustrated in a simulated event shown in Fig~\ref{fig:LostMuon}.
+This possibility is illustrated in a simulated event shown in Fig.~\ref{fig:LostMuon}.
 \begin{figure}[!tb]
   \centering 
   \begin{tabular}{c}
@@ -325,14 +325,14 @@ This possibility is illustrated in a simulated event shown in Fig~\ref{fig:LostM
 In~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} events are rejected when the track is pointing in a region of $0.15<|\eta|<0.35$.
 In this search, this cut was omitted to maximise signal acceptance. 
 Due to the additional selection in \ias, muons can be efficiently suppressed.
-E.g. in the event example shown in Fig~\ref{fig:LostMuon}, the muon has an \ias value of about 0.007.\\
+E.g. in the event example shown in Fig.~\ref{fig:LostMuon}, the muon has an \ias value of about 0.007.\\
 
 In general, all leptons are minimal ionising.
 However, as electrons are much lighter compared to muons or pions, they loose more energy also via radiative effects.
 Still, all three lepton types loose much less energy compared to hypothetical new heavy particles.
 To have the possibility to make an optimisation in the two main discriminating variables \pt and \ias, the background estimation methods are designed to work for all different \pt and \ias selection cuts.\\
 
-%A comparison of the \ias distribution for all four different background sources is shown in Fig~\ref{fig:IasDist}.
+%A comparison of the \ias distribution for all four different background sources is shown in Fig.~\ref{fig:IasDist}.
 
 
 
@@ -418,7 +418,7 @@ Various other control regions were tested and could not be used because of too l
 
 As no suitable control region exists where the \ias shape of the leptons is at least similar to the shape in the signal region, it is therefore decided to use the \ias information from simulation.
 This introduces of course a large systematic uncertainty.
-However, the corresponding systematic uncertainty is still smaller than taking the \ias shape from a control region in data, compare Fig.~\ref{fig:LeptonIasDist} and Fig~\ref{fig:LeptonIasDistData}.
+However, the corresponding systematic uncertainty is still smaller than taking the \ias shape from a control region in data, compare Fig.~\ref{fig:LeptonIasDist} and Fig.~\ref{fig:LeptonIasDistData}.
 \begin{figure}[!tb]
   \centering 
   \begin{tabular}{c}
@@ -440,10 +440,10 @@ This systematic uncertainty is discussed in Section~\ref{sec:LeptonIasUncertaint
 The background estimation methods are exhaustively validated with the help of signal depleted control regions.
 Various control regions are used for the validation.
 
-First, to validate the estimation method of the leptonic background, a leptonic control region is defined by selecting only tracks with $\nhits>6$.
+First, to validate the estimation method of the leptonic background, a leptonic control region is defined by selecting only tracks with a minimal number of seven hits in the tracker.
 This reduces the fake contribution to a minimum.
-Additionally in order to minimise signal contamination, the \ecalo requirement is inverted to $\ecalo>10\gev$.
-The validation test for the candidate track selection with $\ecalo>10\gev$ and $\nhits>6$ is shown in Table~\ref{tab:LeptonicClosure}.
+Additionally in order to minimise signal contamination, the calorimeter isolation requirement is inverted to $\ecalo>10\gev$.
+The validation test for the control region with $\ecalo>10\gev$ and $\nhits>6$ is shown in Table~\ref{tab:LeptonicClosure}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
@@ -480,13 +480,13 @@ Total bkg                                                      &       $0.0^{+ 0
 \end{table}
 
 
-In order to validate the fake background, the \nhits selection cut is again removed.
-As the inclusive fake background can only be estimated within the low calorimeter isolation region $\ecalo<5\gev$ or $\ecalo<10\gev$, 
-the information about the number of fake tracks in the high \ecalo region is taken from the fake enriched control region.
+In order to validate the fake background, the requirement on the number of tracker hits is again removed.
+As the fake background can only be estimated within the low calorimeter isolation region $\left(\ecalo<10\gev\right)$ to ensure high fake purity, 
+the information about the number of fake tracks in the high calorimeter isolation region is taken from the fake enriched control region \fakeCR defined in Section~\ref{sec:FakeBkg}.
 In this control region, the ratio of $N_{\ecalo>10\gev}/N_{\ecalo<10\gev}$ is estimated and taken as a multiplicand to the number of events predicted from the $\ecalo<10\gev$ region.
 In Table~\ref{tab:FakeClosure}, two different validation tests are shown, once an inclusive validation in \ias and once with an \ias selection of 0.2.
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!b]
 \centering
 \caption{Validation test of fake and leptonic background estimation methods (only statistical uncertainties are included). Left: $\ecalo>10\gev$ . Right: $\ecalo>10\gev$ and $\ias>0.2$}
 \label{tab:FakeClosure}
@@ -523,9 +523,7 @@ Total bkg                                                      &       $14.80^{ 
 \end{table}
 
 
-
-
-The validation is done for different selections in \pt and \ias.
+The whole validation is done for different selections in \pt and \ias.
 All validation tests show good agreement.
 
 Still, systematic uncertainties need to be estimated.
@@ -579,7 +577,11 @@ For the candidate track selection, this is estimated to $\fakerate^{\WJets}/\fak
 The systematic uncertainty on the shape of the \ias distribution takes into account the shape differences between the \ias shape in the fake control region \fakeCR and in the signal region.
 For the estimation, information from simulated \WJets events is used.
 A comparison between the \ias shape in the signal and in the control region can be seen in Fig.~\ref{fig:FakeIasUnc}.
-\begin{figure}[!bt]
+To enhance the statistical precision only track-based selection cuts are applied.
+
+The largest 1-sigma difference from one of the ratio of the number of events in the signal region and the control region in the second bin is taken as systematic uncertainty.
+This is for example for a signal region definition with $\pt>20\gev$ and $\ias>0.2$ around 21\% and for a definition with $\pt>40\gev$ and $\ias>0.2$ around 25\%.
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hASmi_SRbinning_fakes_ECalaoLe5_trackPtGt20_MC_CR_MC_SR.pdf}
@@ -588,10 +590,6 @@ A comparison between the \ias shape in the signal and in the control region can 
   \caption{Underlying histograms to estimate the fake \ias systematic uncertainty. Normalised distributions of the fake \ias in signal and control region with a \pt selection of 20\gev (left) and a 40\gev (right).}
   \label{fig:FakeIasUnc}
 \end{figure}
-To enhance the statistical precision only track-based selection cuts are applied.
-The largest 1-sigma difference from one of the ratio of the number of events in the signal region and the control region in the second bin is taken as systematic uncertainty.
-This is for example for a signal region definition with $\pt>20\gev$ and $\ias>0.2$ around 21\% and for a definition with $\pt>40\gev$ and $\ias>0.2$ around 25\%.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Uncertainty on the leptonic scale factor}

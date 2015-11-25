@@ -265,4 +265,18 @@ J.~Neyman {\em Phil. Trans. Royal Soc. London, Series A} {\bf 236} (1937)
   333--80. Reprinted in \textit{A Selection of Early Statistical Papers on J.
   Neyman} (University of California Press, Berkeley, 1967).
 
+\bibitem{bib:CMS:Lumi_PAS}
+{ CMS} Collaboration, ``{CMS Luminosity Based on Pixel Cluster Counting -
+  Summer 2013 Update}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1598864}{CMS-PAS-LUM-13-001}} (2013).
+
+\bibitem{bib:CMS:ISR_AN}
+D.~B. et. al., ``Hadronic Recoil Studies of Heavy Boosted Systems'', {\em CMS
+  Analysis Note} {\bf CMS-AN-13-059} (2013). Internal documentation.
+
+\bibitem{bib:CMS:JME_PAS}
+{ CMS} Collaboration, ``{Jet Energy Scale and Resolution in the CMS
+  Experiment}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/2033232}{CMS-PAS-JME-13-004}} (2015).
+
 \end{thebibliography}\endgroup

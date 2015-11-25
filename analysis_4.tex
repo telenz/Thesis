@@ -74,20 +74,110 @@ To have an optimal coverage over a wide mass space, four different signal region
 \chapter{Results}
 \label{sec:Results}
 
-\begin{itemize}
-\item correlations between signal regions
-\item Data cutflowtable
-\item Tables with results
-\item One plot (4 bins: Prediction and data)
-\end{itemize}
+After the development of the background estimation methods for all different background sources and their corresponding systematic uncertainties (all explained in Section~\ref{sec:BackgroundEstimation}), 
+the search is performed in four different signal regions with 19.7\fbinv of data collected at a centre-of-mass energy of $\sqrt{s} = 8\tev$ at the CMS experiment.
+The comparison between the predicted number of events and the number of observed events is shown in Fig.~\ref{fig:FinalResult}.
+\begin{figure}[!b]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.99\textwidth]{figures/analysis/Results/FinalResultPlot.pdf} 
+  \end{tabular}
+  \caption{Number of predicted (green area) and observed (black dots) events for the four different signal regions. The hashed area represents the total uncertainty on the background prediction.}
+  \label{fig:FinalResult}
+\end{figure} 
+The corresponding numbers of predicted and observed events can be found in Table~\ref{tab:FinalResult}.
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+\centering
+\caption{Number of predicted and observed events for the four different signal regions.}
+\label{tab:FinalResult}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l |c| c}
+\multicolumn{3}{c}{} \\
+\toprule
+Signal region                           & Prediction & Observation  \\
+\midrule
+$30\gev<\pt<50\gev$ and $0.05<\ias<0.3$ & 0          &0 \\
+$30\gev<\pt<50\gev$ and $\ias>0.3$      & 0          &0 \\
+$\pt>50\gev$ and $0.05<\ias<0.3$        & 0          &0 \\
+ $\pt>50\gev$ and $\ias>0.3$       & 0          &0 \\
+\bottomrule
+\multicolumn{3}{c}{} \\
+\end{tabular}}
+\end{table}
+The event yields observed in data after each selection requirement for the four signal regions are listed in Table~\ref{FIXME} in Appendix~\ref{FIXME}.
+
+The results are compatible in all four signal regions with the Standard Model background within the 1$\sigma$ uncertainties.
+No excess above the SM prediction is in either of the four signal regions observed.
+That means, there is no evidence for physics beyond the Standard Model.
+
+Therefore, in the following section the result is interpreted within the context of a supersymmetric model with a wino-like \chipm and \chiO.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Interpretation}
 \label{sec:Interpretation}
+In order to interpret the result of the search in the context of supersymmetric models with wino-like \chipm and \chiO, the size of uncertainties of the simulated signal events must be estimated.
+Furthermore, the size of correlations between the systematic uncertainties must be determined to be able to combine the results of all four signal regions.
+The interpretation will then be done with statistical methods, that allow for exclusions of parts of the supersymmetric parameter space on a 95\% confidence level.
+
 \section{Systematic uncertainties of simulated signal samples}
+The systematic uncertainties on the number of signal events in the four signal regions are mainly caused by uncertainties on the quality of the simulation.
+This influences the signal efficiency of every selection requirements done in this analysis.
+Furthermore, an uncertainty on the overall number of events is caused by the uncertainty on the integrated luminosity recorded in 2012 at CMS and the theoretical signal cross-sections.
+
+\subsection*{Luminosity uncertainty}
+The integrated luminosity recorded at CMS during the year 2012 is not exactly known. 
+A detailed explanation of the methods to measure the luminosity and the corresponding total uncertainty of 2.6\% can be found in \cite{bib:CMS:Lumi_PAS}.
+
+\subsection*{Uncertainty on the simulation of initial state radiation}
+This uncertainty is estimated via a comparison of simulated and observed $Z$ and $\bar{t}t$ events done in~\cite{bib:CMS:ISR_AN}.
+In order to take data-simulation differences of initial state radiation into account, the transverse momentum of the $\chipm\chimp$ or $\chipm\chiO$ system is reweighted.
+The uncertainty of the reweighted procedure is taken into account as changes of the weight up to 25\%.
+
+\subsection*{Uncertainty on the simulation of the trigger efficiency}
+The HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 trigger used in this analysis was not available in the simulated signal samples.
+It was therefore emulated using L1 information. More details on the emulation of this trigger can be found in Appendix~\ref{FIXME}.
+
+The trigger uncertainty is accessed by comparing data-simulation differences of the trigger efficiency.
+This has been done within~\ref{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
+The resulting differences are applied as variations in event weights on the simulated samples.
+The corresponding uncertainty lies between $2.6-4.6\%$ for the signal samples.
+
+\subsection*{Uncertainty on the jet energy scale}
+The uncertainty on the jet energy scale arise from various unknows, neatly described in~\cite{bib:CMS:JME_PAS}.
+The correction applied as a multiplicant on each jet's transverse momentum conatined in an event is varied up and down within 1sigma.
+The resulting uncertainties are of minor importance and lie between $0.5-1.1\%$.
+
+\subsection*{Uncertainty on the jet energy resolution}
+The jet energy resolution is smaller in simulated than in measured data.
+To take into account these differences, the jet energy response is additionnaly smeared to match the measured response.
+The corresponding uncertainties are estimated in order to cover the uncertainty on the measured resolution in data.
+The resulting uncertainty on the signal efficiency is between $0.1-0.7\%$ and therefore almost negliglbe . CITE SOMETHING
+
+\subsection*{Uncertainty on the simulation of the parton density functions}
+The uncertainty on the simulation of the parton density function is a complex procedure, very well described in CITEME.
+The resulting uncertainties are within blabla.
+
+\subsection*{Uncertainty on the simulation of the calorimeter isolation}
+\subsection*{Uncertainty on the simualtion of missing middle hits}
+\subsection*{Uncertainty on the simulation of missing inner hits}
+\subsection*{Uncertainty on the simulation of pile-up}
+\subsection*{Uncertainty on the simulation of the track reconstruction efficiency}
+\subsection*{Uncertainty on the simulation of the \ias}
+\subsection*{Uncertainty on the theoretical cross section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Correlation of systematic uncertainties}
+In order to combine the four different signal regions, a specification of the size of correlations between the systematic uncertay needs to be addresses.
+
+\subsection*{Background correlations}
+\subsection*{Signal correlation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Methods/ Limit setting}
+
+Finally, bla bla bla.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Exclusion limits}
 \begin{itemize}
 \item 1-d limits
@@ -95,5 +185,6 @@ To have an optimal coverage over a wide mass space, four different signal region
 \end{itemize}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Discussion and outlook and conclusion}
 \label{sec:Discussion}
