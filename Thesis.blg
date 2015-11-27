@@ -38,8 +38,6 @@ I was expecting a `,' or a `}'---line 491 of file Thesis.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "FIXME"
-Warning--I didn't find a database entry for "bib:FIXME"
 Warning--empty publisher in bib:James:StaticticalMethods_2006
 Warning--empty year in bib:CMS:DT_Thesis
 Name 1 in "J. Brinson, C. Hill, and W. Wulsin" has a comma at the end for entry bib:CMS:DT_8TeV_AN
@@ -47,7 +45,7 @@ while executing---line 1277 of file lucas_unsrt.bst
 Warning--empty title in bib:Neyman_1937
 You've used 41 entries,
             2369 wiz_defined-function locations,
-            895 strings with 13010 characters,
+            891 strings with 12982 characters,
 and the built_in function-call counts, 11475 in all, are:
 = -- 1412
 > -- 223

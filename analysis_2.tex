@@ -17,7 +17,7 @@ To investigate the sources of background, various simulated SM samples are used.
 Since this analysis aims at making use of \dedx, a special data format of the simulated samples, the so-called RECO format, is required.
 Unfortunately, not all SM processes are available in this specific format making it impossible to compare the total number of events in simulation and real data.
 This, however, does not constitute a serious problem since this analysis will finally use data-based background estimation methods.
-The simulated SM datasets can still be used to compare the shapes of important distributions in simulation and data.\footnote{For example, the simulated \ZInvJets sample that can contribute to the backround of this search via fake tracks is not available in RECO format. However, as the shape of important observables of fake tracks is independent of the underlying process, this background can be studied with a simulated \WJets sample.}
+The simulated SM datasets can still be used to compare the shapes of important distributions in simulation and data.\footnote{For example, the simulated \ZInvJets sample that can contribute to the background of this search via fake tracks is not available in RECO format. However, as the shape of important observables of fake tracks is independent of the underlying process, this background can be studied with a simulated \WJets sample.}
 
 In Table \ref{tab:SMsamples_RECO} all available SM samples used in this analysis are listed.
 \renewcommand{\arraystretch}{1.5}
@@ -89,7 +89,7 @@ Figure~\ref{fig:LifetimeReweighting} shows the exponential distribution of the i
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/10cm.pdf}
   \end{tabular}
-  \caption{Normalised distribution of the proper individual lifetime $d_{\text{lab}}/\left(\beta\gamma \right)$ of all charginos contained in a signal sample with a generated lifetime of $c\tau^{\text{gen}}=50\cm$ reweighted to a lifetime of $c\tau^{\text{target}}=10\cm$. Fitting an expotential curve $a\cdot \exp\left[\frac{1}{c \tau } c t_i\right]$ yields $c\tau=1./\text{Slope}=10\cm$.}
+  \caption{Normalised distribution of the proper individual lifetime $d_{\text{lab}}/\left(\beta\gamma \right)$ of all charginos contained in a signal sample with a generated lifetime of $c\tau^{\text{gen}}=50\cm$ reweighted to a lifetime of $c\tau^{\text{target}}=10\cm$. Fitting an exponential curve $a\cdot \exp\left[\frac{1}{c \tau } c t_i\right]$ yields $c\tau=1./\text{Slope}=10\cm$.}
   \label{fig:LifetimeReweighting}
 \end{figure}
 It can be seen that the reweighting procedure does indeed reproduce the targeted lifetime of 10\cm.
@@ -106,7 +106,7 @@ The cross section does not depend on the lifetime of the chargino.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[h]
 \centering
-\caption{Simulated signal mass points with corresponding cross sections the NLO-NLL (NLO: next-to-leading order, NLL: next-to-leading logarithmic accuracy) for wino-like charginos.}
+\caption{Simulated signal mass points with corresponding cross sections at NLO-NLL (NLO: next-to-leading order, NLL: next-to-leading logarithmic) accuracy for wino-like charginos.}
 \label{tab:SignalCrossSections}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lll}
@@ -139,7 +139,7 @@ As outlined in Section~\ref{sec:GeneralSearchStrategy}, the detection of chargin
 Direct triggering of events containing chargino-like tracks is not possible because in 2012 there was no information about the tracking system available on trigger level L1.
 Furthermore, there is no intrinsic missing transverse energy in the event if the chargino decays inside the tracker.
 Therefore, this analysis uses initial state radiation for the detection of chargino events.
-If ISR occurs, it is possible to trigger on a high-\pt jet and missing transverse energy.
+If ISR occurs, it is possible to trigger on a high-\pt jet (\ptfirstjet) and missing transverse energy (\met).
 
 For this purpose, several triggers are utilised in this analysis.
 An event is selected, if at least one of the three triggers in Table~\ref{tab:triggers} fired.
@@ -220,10 +220,10 @@ Again, because of the size of the datasets ($\sim150\,$TB in total), a reduction
 %\end{tabular}}
 %\end{table}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Analysis selection/ Selection of signal candidate events}
+\section{Selection of signal candidate events}
 \label{sec:AnalysisSelection}
 
-In order to suppress events originating from Standard Model processes such as QCD-multijet events, \WJets etc., a selection for signal-like tracks is applied.
+In order to suppress events originating from Standard Model processes such as QCD-multijet events, \WJets, etc., a selection for signal-like tracks is applied.
 The analysis selection closely follows the selection required in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
 It relies on event-based and track-based variables as described in the following two sections.
 
@@ -235,14 +235,14 @@ This selection includes requirements on the position of the vertex with respect 
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item The vertex must have at least four degrees of freedom: \mbox{$vtx$ with $\geq 4$ d.o.f.}
-\item The position of the vertex along the beam line must be within 24\cm from the beam origin (FIXME: bunch crossing): \mbox{$|dz| \leq 24\cm$.}
-\item The position in the transverse direction must be within 2\cm from the beam origin (FIXME): \mbox{$|d0| \leq 2\cm$.}
+\item The position of the vertex along the beam line must be within 24\cm with respect to the nominal interaction point: \mbox{$|dz| \leq 24\cm$.}
+\item The position in the transverse direction must be within 2\cm with respect to the nominal interaction point: \mbox{$|d0| \leq 2\cm$.}
 \end{itemize}
 After these selection cuts are applied the remaining events are subjected to a further preselection.\\
 
 To maximise the signal acceptance, the trigger related selection cuts are chosen as close as possible to the trigger thresholds (see Section~\ref{sec:DatasetsAndTriggers}).
 In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the transverse momentum of the leading jet, \ptfirstjet, are shown for different signal models.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/hMetSmallRange_log_chiTracksnoSelection_4Signals.pdf}
@@ -271,7 +271,7 @@ The trigger requirements are as follows:
 \item There is at least one jet within $|\eta|<2.4$ with transverse momentum larger than 110\gev which fulfils the above mentioned jet noise cleaning criteria: \mbox{$\ptfirstjet>110\gev$}.
 \item The missing transverse momentum must be larger than 100\gev: \mbox{$\met>100\gev$}
 \end{itemize}
-These requirements result in a trigger efficiency of xxx at the cut threshold~\cite{FIXME}.\\
+These requirements result in a trigger efficiency of 100\% in the variable \ptfirstjet and $\sim20\%$ in the variable \met at the cut thresholds~\cite{bib:CMS:DM_8TeV_AN}.\\
 
 Because of the huge cross section, QCD-multijet events are frequently produced at the LHC.
 Due to jet energy mismeasurements, they can also contribute to data samples recorded with MET triggers.
@@ -349,24 +349,31 @@ Unfortunately, the lepton veto selection cuts lack efficiency in some of the det
 For example, the reconstruction of an electron easily fails in the direction of a dead ECAL cell.
 This reduces the discrimination power of the electron veto.
 For this reason, tracks that point towards dead or noisy ECAL cells are rejected.
-A general list of dead and noisy ECAL cells is provided centrally at CMS~\cite{FIXME}.
-Further dead cells were identified within a study in~\cite{bib:FIXME} resulting in a total number of 1234 dead or noisy ECAL channels. 
+A general list of dead and noisy ECAL cells is provided centrally at CMS.
+Further dead cells were identified within a study in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} resulting in a total number of 1234 dead or noisy ECAL channels. 
 These are illustrated in Fig.~\ref{fig:DeadECALmap} showing a map of all ECAL channels not considered in the search.
+
+
+Additionally, tracks that point towards intermodule gaps of ECAL cells or to the ECAL barrel endcap gap at $1.42<|\eta|<1.65$ are rejected.
+A list of the ECAL intermodule gaps, that is supplied centrally at CMS, is given in Table~\ref{tab:IntermoduleGaps}.
+
+The muon reconstruction is less efficient for muons in detector regions with bad cathode strip chambers (CSC).
+These bad chambers are also identified centrally at CMS and their $\eta$ and $\phi$ values are visualised in Fig.~\ref{fig:BadCSCMap}.
+Thus, also tracks pointing towards these regions within a distance of $\Delta R<0.25$ are rejected.
+
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/DeadECALMap.pdf}
   \end{tabular}
-  \caption{Visualisation of dead and noisy ECAL cells in the detector's $\phi - \eta$ plane according to~\cite{bib:FIXME}.}
+  \caption{Visualisation of dead and noisy ECAL cells in the detector's $\phi - \eta$ plane according to~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.}
   \label{fig:DeadECALmap}
 \end{figure}
 
-Additionally, tracks that point towards intermodule gaps of ECAL cells or to the ECAL barrel endcap gap at $1.42<|\eta|<1.65$ are rejected.
-A list of the ECAL intermodule gaps is given in Table~\ref{tab:IntermoduleGaps}.
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!hbt]
+\begin{table}[!b]
 \centering
-\caption{Intermodule ECAL gaps \cite{FIXME}.}
+\caption{Intermodule ECAL gaps.}
 \label{tab:IntermoduleGaps}
 \makebox[0.99\textwidth]{
 \begin{tabular}{c}
@@ -385,26 +392,31 @@ $\eta$-ranges     \\
 \end{tabular}}
 \end{table}  
 
-The muon reconstruction is less efficient for muons in detector regions with bad cathode strip chambers (CSC).
-Thus, also tracks pointing towards these regions within a distance of $\Delta R<0.25$ are rejected. FIXME. Show the list. Cite something
-
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/BadCSCMap.pdf}
+  \end{tabular}
+  \caption{Visualisation of bad cathode strip chambers in the detector's $\phi - \eta$.}
+  \label{fig:BadCSCMap}
+\end{figure}
 
 To summarise, the candidate track must fulfil the following selection criteria:
-FIXME: Einheitliche veto bullets
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed standalone, tracker or global muon with a transverse momentum larger than 10\gev (see Section~\ref{FIXME} for details on the different muon definitions).
-\item Veto all tracks within a cone of $\Delta R<0.15$ to a reconstructed electron with a transverse momentum larger than 10\gev (see Section~\ref{FIXME} for details on the electron reconstruction).
+\item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed electron with a transverse momentum larger than 10\gev (see Section~\ref{FIXME} for details on the electron reconstruction).
 \item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed tau with $\pt>20\gev$ and $|\eta|<2.3$ (see Section~\ref{FIXME} for details on the tau reconstruction). 
       Some loose isolation requirements are enforced to protect the tau reconstruction from jet contamination.
-\item No jet ($\pt>20\gev$ and $|\eta|<4.5$) is allowed around the track in a cone of $\Delta R< 0.5$
-\item Veto tracks within a cone of $\Delta R<0.05$ to a dead or noisy ECAL cell.
-\item The track must not point in the direction of the ECAL intermodule gap listed in Table~\ref{tab:IntermoduleGaps}.
-\item The track must not be within a cone of $\Delta R<0.25$ to a bad CSC.
-\item Veto any track pointing to the region between ECAL barrel and endcap at $1.42<|\eta|<1.65$
+\item The track must not be within a cone of $\Delta R< 0.5$ to a reconstructed jet ($\pt>20\gev$ and $|\eta|<4.5$).
+\item Veto tracks within a cone of $\Delta R<0.05$ to a dead or noisy ECAL cell (visualised in Fig.~\ref{fig:DeadECALmap}).
+\item Veto tracks that point towards the direction of the ECAL intermodule gap listed in Table~\ref{tab:IntermoduleGaps}.
+\item Veto tracks that point towards a bad CSC (visualised in Fig.~\ref{fig:BadCSCMap}).
+\item Veto tracks that point towards the region between ECAL barrel and endcap at $1.42<|\eta|<1.65$
 \end{itemize}
 These lepton and jet veto selection requirements are of course highly suppressing the background emerging from real lepton/jet production like in \WJets events.
-\begin{figure}[!b]
+The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:TrackdRmin} where the minimum $\Delta R$ between the candidate track and a reconstructed electron, muon, tau or jet is shown.\\
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminElec_log.pdf}
@@ -413,10 +425,11 @@ These lepton and jet veto selection requirements are of course highly suppressin
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminTau_log.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminJet_log.pdf}
   \end{tabular}
-  \caption{The minimal dr betweenn}
+  \caption{The minimum $\Delta R$ between the candidate track and a reconstructed electron (top left), muon (top right), tau (bottom left) or jet (bottom right) 
+           after the full candidate track selection cuts besides the one shown in the corresponding plot.}
   \label{fig:TrackdRmin}
 \end{figure}
-The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:TrackdRmin} where the minimum $\Delta R$ between the candidate track and a reconstructed electron, muon, tau or jet is shown.\\
+
 
 Finally, two further characteristics of chargino tracks are exploited.
 As the chargino is produced in a very clean environment, the isolation of the track can discriminate signal against background events.
@@ -431,7 +444,7 @@ The resulting selection cuts are as follows
 \item Little calorimeter energy deposits (ECAL+HCAL) in a cone of $\Delta R < 0.5$ around the track: \mbox{$\ecalo<5\gev$}.
 \end{itemize}
 The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackIso_Ecalo_After_Preselection}.\\
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackIsolationSmallRange_lin.pdf}
@@ -441,8 +454,9 @@ The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackI
   \label{fig:TrackIso_Ecalo_After_Preselection}
 \end{figure}
 
-FiXME: As emphasised before, this analysis aims at being sensitive to different chargino lifetimes  to search for charginos with different lifetimes.
-To allow for charginos decaying at any layer of the tracker, no explicit selection cut on the number of missing outer hits is required.
+
+As emphasised before, this analysis aims at being sensitive especially on shorter lifetimes.
+Still, in order to allow for charginos decaying at any layer of the tracker, no explicit selection cut on the number of missing outer hits is required.
 %For charginos with very short mean lifetimes it was checked, whether a sensitivity increase can be achieved by imposing a cut on $N_{\text{miss}}^{\text{outer}}$.
 %However, this is not the case and therefore a selection in $N_{\text{miss}}^{\text{outer}}$ is not considered.
 

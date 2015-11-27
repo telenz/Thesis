@@ -6,10 +6,11 @@
 //-----------------------------------------------------------------------------
 #include "TLorentzVector.h"
 #include "TH2.h"
+#include "TCanvas.h"
 #include <time.h>
 #include <fstream>
 #include <iomanip>
-#include "plotStyleThesis.h"
+#include "../plotStyleThesis.h"
 using namespace std;
 
 
@@ -19,6 +20,8 @@ int makeDeadECALmap()
   TeresaPlottingStyle::init();
   ifstream inputFile("/afs/desy.de/user/t/tlenz/HighDeDx-DisappTrks-Analyzer/data/DeadEcalChannelsNew.txt");
   
+  gStyle->SetMarkerSize(0.3);
+
   vector<double> etaCSC, phiCSC, etaEcal, phiEcal;
   int lines;
   int i=0;
@@ -46,7 +49,6 @@ int makeDeadECALmap()
   }
 
   TCanvas* c = new TCanvas();
-
 
 
   histo->SetTitle("");

@@ -22,7 +22,7 @@ public:
     //gStyle->SetLegendTextSize(0.05);
     gStyle->SetLegendBorderSize(0);
 
-    gStyle->SetNdivisions(505,"X");
+    gStyle->SetNdivisions(509,"X");
     gStyle->SetNdivisions(509,"Y");
 
     gStyle -> SetTitleFont(42,"xyz");
