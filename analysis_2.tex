@@ -99,14 +99,14 @@ All samples are generated for different masses of the chargino, but always almos
 The mass gap between chargino and neutralino is set to 150\mev.
 However, as this analysis does not make use of the decay products of the chargino and the lifetime is independently set within \geant, the mass gap does not play any role.
 Six different masses from 100\gev to 600\gev are simulated.
-This leads then to a total number of 42 signal samples.
-In Table~\ref{tab:SignalCrossSections} the NLO-NLL\footnote{NLO: next-to-leading order, NLL: next-to-leading logarithmic accuracy} cross sections at $\sqrt{s}=8\tev$ for $\chipm\chimp$ and $\chipm\chiO$ production 
+This leads to a total number of 42 signal samples.
+In Table~\ref{tab:SignalCrossSections} cross sections at $\sqrt{s}=8\tev$ for $\chipm\chimp$ and $\chipm\chiO$ production 
 for wino-like charginos and neutralinos are listed \cite{bib:SignalCrossSection_2012,bib:SignalCrossSection_2013}.
-The cross section does not dependent on the lifetime of the chargino.
+The cross section does not depend on the lifetime of the chargino.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[h]
 \centering
-\caption{Simulated signal mass points with corresponding cross sections for wino-like charginos.}
+\caption{Simulated signal mass points with corresponding cross sections the NLO-NLL (NLO: next-to-leading order, NLL: next-to-leading logarithmic accuracy) for wino-like charginos.}
 \label{tab:SignalCrossSections}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lll}
@@ -136,18 +136,20 @@ The analysis is performed on pp collision data recorded in the year 2012 at the 
 In total an integrated luminosity of 19.7\fbinv was recorded in 2012.
 
 As outlined in Section~\ref{sec:GeneralSearchStrategy}, the detection of chargino tracks is a challenging task already on trigger level.
-The direct triggering of events containing chargino-like tracks is not possible because in 2012 there was no information about the tracking system on L1 level available.
-Furthermore, there is no intrinsic missing transverse energy in the event, when the chargino (or both charginos) decay inside the tracker.
-Therefore, the detection of these events shall be achieved with the help of initial state radiation.
-When initial state radiation occurs, it is possible to trigger on a high-\pt jet and also on \met in the event.
+Direct triggering of events containing chargino-like tracks is not possible because in 2012 there was no information about the tracking system available on trigger level L1.
+Furthermore, there is no intrinsic missing transverse energy in the event if the chargino decays inside the tracker.
+Therefore, this analysis uses initial state radiation for the detection of chargino events.
+If ISR occurs, it is possible to trigger on a high-\pt jet and missing transverse energy.
 
-For this purpose, several triggers are exploited.
-To consider the event in the analysis, at least one of them must have fired.
-In Table~\ref{tab:triggers} the three triggers are listed together with the corresponding recorded integrated luminosity in the time when they were active.
+For this purpose, several triggers are utilised in this analysis.
+An event is selected, if at least one of the three triggers in Table~\ref{tab:triggers} fired.
+%
+%To consider the event in the analysis, at least one of them must have fired.
+%In Table~\ref{tab:triggers} the three triggers are listed together with the corresponding recorded integrated luminosity in the time when they were active.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!hbt]
 \centering
-\caption{\met and \met+ jet triggers used in the analysis together with the corresponding recorded integrated luminosity in the time when they were in place.}
+\caption{\met and \met+ jet triggers used in this analysis together with the corresponding recorded integrated luminosity during the time when they were in place.}
 \label{tab:triggers}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lr}
@@ -162,16 +164,16 @@ Trigger  & Luminosity [\fbinv]   \\
 \end{tabular}}
 \end{table}  
 
-The HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 and HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 triggers exploit both the L1 ETM40 trigger, which requires the missing energy to be larger than 40\gev.
-On HLT level, they require further at least one PF jet with \pt$>80\gev$ and the missing transverse momentum \met (not taken into account the \pt of any muon in the event) to be larger than 95\gev (or 105\gev).
+The HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 and HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 triggers both rely on the L1 ETM40 trigger which requires the missing energy to be larger than 40\gev.
+On HLT level, they further require at least one particle-flow jet with $\pt>80\gev$ and a missing transverse momentum (not taking into account the \pt of muons) to be larger than 95\gev or 105\gev respectively.
 Finally, the energy release by neutral hadrons must not be larger than 95\% for all jets in the event.
-The HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 trigger was in place during Run\,A and Run\,B in 2012 data taking, whereas HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 was set during Run\,C and Run\,D in 2012.
+The HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 trigger was active during Run\,A and Run\,B in 2012 data taking, whereas HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 was in place during Run\,C and Run\,D in 2012.
 
-The HLT\_MET120\_HBHENoiseCleaned trigger is based on the two L1 triggers ETM40 and ETM36 which are combined by a logical OR.
+The HLT\_MET120\_HBHENoiseCleaned trigger is based on the two L1 triggers ETM40 and ETM36 that are combined by a logical OR.
 On HLT level, the trigger requires that the missing energy measured in the calorimeter is larger than 120\gev.
 The HBHENoise-filter reduces background from electronic noise in the HCAL.
 
-Table~\ref{tab:SearchSamples} lists the datasets in which the triggers used in the analysis are comprised. 
+The events that were selected by the described triggers are available in the datasets listed in Table~\ref{tab:SearchSamples}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!hbt]
 \centering
@@ -218,26 +220,28 @@ Again, because of the size of the datasets ($\sim150\,$TB in total), a reduction
 %\end{tabular}}
 %\end{table}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Analysis selection}
+\section{Analysis selection/ Selection of signal candidate events}
 \label{sec:AnalysisSelection}
 
-In order to suppress events originating from SM processes (such as QCD-multijet events, \WJets, etc.), a selection for signal-like tracks is applied which shall be described in the following sections.
-The analysis selection follows closely the selection required in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.\\
+In order to suppress events originating from Standard Model processes such as QCD-multijet events, \WJets etc., a selection for signal-like tracks is applied.
+The analysis selection closely follows the selection required in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
+It relies on event-based and track-based variables as described in the following two sections.
+
 
 \subsection{Event-based selection}
 \label{sec:EventBasedSelection}
-First, to suppress cosmic events and noise from the beam halo a selection on the quality of the vertex can be applied.
-This selection includes requirements of the position of the vertex with respect to the beam axes and the number of degrees of freedom (which is strongly correlated to the number of tracks originating from the vertex) \cite{bib:CMS:Tracking_7TeV_PAS}:  
+First a selection on the quality of the vertex is applied in order to suppress cosmic events and noise from the beam halo .
+This selection includes requirements on the position of the vertex with respect to the beam axes and the number of degrees of freedom of the vertex which is strongly correlated to the number of tracks originating from the vertex~\cite{bib:CMS:Tracking_7TeV_PAS}:  
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item The vertex must have at least four degrees of freedom: \mbox{$vtx$ with $\geq 4$ d.o.f.}
-\item The position of the vertex along the beam line must be within 24\cm from the beam origin: \mbox{$|dz| \leq 24\cm$.}
-\item The position in the transverse direction must be within 2\cm from the beam origin: \mbox{$|d0| \leq 2\cm$.}
+\item The position of the vertex along the beam line must be within 24\cm from the beam origin (FIXME: bunch crossing): \mbox{$|dz| \leq 24\cm$.}
+\item The position in the transverse direction must be within 2\cm from the beam origin (FIXME): \mbox{$|d0| \leq 2\cm$.}
 \end{itemize}
 After these selection cuts are applied the remaining events are subjected to a further preselection.\\
 
 To maximise the signal acceptance, the trigger related selection cuts are chosen as close as possible to the trigger thresholds (see Section~\ref{sec:DatasetsAndTriggers}).
-In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the transverse momentum of the leading jet \ptfirstjet are shown for different signal models.
+In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the transverse momentum of the leading jet, \ptfirstjet, are shown for different signal models.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -247,7 +251,7 @@ In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the trans
   \caption{Normalised distributions of the missing transverse momentum (left) and the transverse momentum of the leading jet (right) for four different signal models.}
   \label{fig:SignalMET+SignalJetPt}
 \end{figure}
-Only jets are taken into account with $|\eta|<2.4$ and which fulfil several further criteria:
+Only jets with $|\eta|<2.4$ that fulfil the following further criteria are taken into account:
 \begin{itemize}
 \item Charged hadron energy fraction $>0.2$
 \item Charged electromagnetic energy fraction $<0.5$
@@ -255,40 +259,42 @@ Only jets are taken into account with $|\eta|<2.4$ and which fulfil several furt
 \item Neutral electromagnetic energy fraction $<0.7$.
 \end{itemize}
 These additional jet quality criteria ensure that noise from cosmic and beam halo muons and high-\pt photons and electrons is suppressed \cite{bib:CMS:DM_8TeV_AN}.
-In can be seen in Fig.~\ref{fig:SignalMET+SignalJetPt} that already for a selection of $\met>100\gev$ 80\% of the signal events are rejected.
 
 The trigger efficiency as a function of \met and \ptfirstjet was determined within~\cite{bib:CMS:DM_8TeV} with a single-muon reference sample.
 The trigger paths become fully efficient for \mbox{$\ptfirstjet \gtrsim 110\gev$} and \mbox{$\met \gtrsim 220\gev$~\cite{bib:CMS:DM_8TeV_AN}}.
+However, it can be seen in Fig.~\ref{fig:SignalMET+SignalJetPt} that for a selection of \mbox{$\met>220\gev$} more than 99\% of the signal events are rejected.
 
-However, as said before, this search imposes a trigger selection to maximise the signal acceptance.
-The trigger requirement are as follows:
+In order to achieve a reasonable signal acceptance, this search imposes a trigger selection closer to the intrinsic trigger thresholds.
+The trigger requirements are as follows:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
-\item There is at least one jet within $|\eta|<2.4$ with transverse momentum larger than 110\gev which fulfils the above mentioned jet noise cleaning criteria: \mbox{$\pt^{\text{1. jet}}>110\gev$}.
+\item There is at least one jet within $|\eta|<2.4$ with transverse momentum larger than 110\gev which fulfils the above mentioned jet noise cleaning criteria: \mbox{$\ptfirstjet>110\gev$}.
 \item The missing transverse momentum must be larger than 100\gev: \mbox{$\met>100\gev$}
 \end{itemize}
-
-\hspace{0.9cm}
+These requirements result in a trigger efficiency of xxx at the cut threshold~\cite{FIXME}.\\
 
 Because of the huge cross section, QCD-multijet events are frequently produced at the LHC.
 Due to jet energy mismeasurements, they can also contribute to data samples recorded with MET triggers.
-Therefore, some special requirements to suppress events emerging from strong production processes are enforced.
-QCD-multijet events can be characterised by topologies were two jets are almost back-to back.
+Therefore, special requirements are enforced in order to suppress events emerging from strong production processes.
+QCD-multijet events can be characterised by topologies where two jets are almost back-to back.
 Additionally, in QCD-multijet events the missing energy is usually aligned with one of the leading jets in the event.
+Figure~\ref{fig:QCDcuts} shows the maximum $\Delta\phi$ of any of two jets and the minimum $\Delta\phi$ between the \met vector and any of the two leading jets for the SM background and two different signal datasets.
+
 Therefore the following two requirements are sufficient to suppress QCD-multijet events efficiently:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
-\item $\Delta\phi$ between any of two subleading jets (with $\pt<20\gev$ and $|\eta|<4.5$) in the event must be smaller than 2.5. %: \mbox{$\Delta\phi\left( j_i, j_j\right)<2.5$}.
-\item $\Delta\phi$ between any of the two leading jets (with $\pt<20\gev$ and $|\eta|<4.5$) and the \met must be larger than 0.5. %: \mbox{$\Delta\phi\left( j_{1,2}, \metvec \right) > 0.5$.} 
+\item $\Delta\phi$ between any of two jets (with $\pt>20\gev$ and $|\eta|<4.5$) in the event must be smaller than 2.5. %: \mbox{$\Delta\phi\left( j_i, j_j\right)<2.5$}.
+\item $\Delta\phi$ between any of the two leading jets (with $\pt>20\gev$ and $|\eta|<4.5$) and the \met must be larger than 0.5. %: \mbox{$\Delta\phi\left( j_{1,2}, \metvec \right) > 0.5$.} 
 \end{itemize}
-Figure~\ref{fig:QCDcuts} shows the maximal $\Delta\phi$ of any of two subleading jets and the minimal $\Delta\phi$ between the \met vector and the first two subleading jets for the SM background and two different signal datasets.
+
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiMaxbeforeCut_lin.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiJetMetMinbeforeCut_lin.pdf}
   \end{tabular}
-  \caption{Maximal $\Delta \phi$ between any of two subleading jets (left) and the minimal $\Delta \phi$  between the \met vector and the first two jets (right) normalised to unit area after the trigger selection.}
+  \caption{Maximum $\Delta \phi$ between any of two jets (left) and the minimum $\Delta \phi$  between the \met vector and any of the two leading jets (right) normalised to unit area after the trigger selection.
+           Only jets with $\pt>20\gev$ and $|\eta|<4.5$ are considered.}
   \label{fig:QCDcuts}
 \end{figure}
 \hspace{0.9cm}
@@ -298,14 +304,14 @@ Figure~\ref{fig:QCDcuts} shows the maximal $\Delta\phi$ of any of two subleading
 After the reduction of background processes with event-based variables, a track-based selection is carried out.
 To get an optimised selection for possible chargino tracks several signal track characteristics are exploited.\\
 
-First a selection of tracks of good quality is enforced:
+First, a selection of high quality tracks is enforced:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item The track must be of ``high purity'' as defined in~\cite{bib:CMS:Tracking_2010}.
 \item The track is required to have no missing middle or inner hits: $N_{\text{miss}}^{\text{middle/inner}}=0$
 \item The radial and longitudinal  distance of the track to the primary vertex must be small: \mbox{$|d0|<0.02\cm$}, \mbox{$|dz|<0.5\cm$}.
 \end{itemize}
-In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the quality selection cuts are shown.\\
+In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two quality selection cuts is shown.\\
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -329,38 +335,38 @@ In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the quality select
 Furthermore, a first kinematic preselection is applied:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
-\item Only tracks are considered which are within the tracker acceptance taken an isolation cone into account: $|\eta|<2.1$.
-\item A first selection of tracks in the transverse momentum is applied: \mbox{$\pt>20\gev$}.\\
+\item Only tracks in the central region are considered : $|\eta|<2.1$.
+\item Only tracks with a minimum transverse momentum of 20\gev are considered: \mbox{$\pt>20\gev$}.\\
 \end{itemize}
 %\hspace{0.7cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In order to suppress background tracks emerging from SM processes, an electron, muon and tau veto is applied.
-That means events containing a candidate track close to a reconstructed electron, muon or tau are rejected.
-Additionally, the candidate track must not be close to a subleading jet ($\pt<20\gev$ and $|\eta|<4.5$).
+This rejects tracks that are close to a reconstructed electron, muon or tau.
+Additionally, the candidate track must not be close to a jet ($\pt>20\gev$ and $|\eta|<4.5$).
 
 Unfortunately, the lepton veto selection cuts lack efficiency in some of the detector directions.
 For example, the reconstruction of an electron easily fails in the direction of a dead ECAL cell.
 This reduces the discrimination power of the electron veto.
-For this reason, tracks that point to a dead ECAL cell are rejected.
-A general list of dead and noisy ECAL cells is provided centrally at CMS.
-Further dead cells were identified within a study in \cite{bib:CMS:DT_8TeV} resulting in a total number of 1234 dead or noisy ECAL channels. 
+For this reason, tracks that point towards dead or noisy ECAL cells are rejected.
+A general list of dead and noisy ECAL cells is provided centrally at CMS~\cite{FIXME}.
+Further dead cells were identified within a study in~\cite{bib:FIXME} resulting in a total number of 1234 dead or noisy ECAL channels. 
 These are illustrated in Fig.~\ref{fig:DeadECALmap} showing a map of all ECAL channels not considered in the search.
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/DeadECALMap.pdf}
   \end{tabular}
-  \caption{Visualisation of dead and noisy ECAL cells in the detector's $\phi - \eta$ plane.}
+  \caption{Visualisation of dead and noisy ECAL cells in the detector's $\phi - \eta$ plane according to~\cite{bib:FIXME}.}
   \label{fig:DeadECALmap}
 \end{figure}
 
-Additionally, also tracks which point towards intermodule gaps of ECAL cells or to the ECAL barrel endcap gap at $1.42<|\eta|<1.65$ are rejected.
+Additionally, tracks that point towards intermodule gaps of ECAL cells or to the ECAL barrel endcap gap at $1.42<|\eta|<1.65$ are rejected.
 A list of the ECAL intermodule gaps is given in Table~\ref{tab:IntermoduleGaps}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!hbt]
 \centering
-\caption{Intermodule ECAL gaps.}
+\caption{Intermodule ECAL gaps \cite{FIXME}.}
 \label{tab:IntermoduleGaps}
 \makebox[0.99\textwidth]{
 \begin{tabular}{c}
@@ -380,23 +386,24 @@ $\eta$-ranges     \\
 \end{table}  
 
 The muon reconstruction is less efficient for muons in detector regions with bad cathode strip chambers (CSC).
-Thus, also tracks pointing in these regions within a distance of $\Delta R<0.25$ are rejected.
+Thus, also tracks pointing towards these regions within a distance of $\Delta R<0.25$ are rejected. FIXME. Show the list. Cite something
 
 
 To summarise, the candidate track must fulfil the following selection criteria:
+FIXME: Einheitliche veto bullets
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed standalone, tracker or global muon with a transverse momentum larger than 10\gev (see Section~\ref{FIXME} for details on the different muon definitions).
 \item Veto all tracks within a cone of $\Delta R<0.15$ to a reconstructed electron with a transverse momentum larger than 10\gev (see Section~\ref{FIXME} for details on the electron reconstruction).
 \item The track must not be within a cone of $\Delta R<0.15$ to a reconstructed tau with $\pt>20\gev$ and $|\eta|<2.3$ (see Section~\ref{FIXME} for details on the tau reconstruction). 
       Some loose isolation requirements are enforced to protect the tau reconstruction from jet contamination.
-\item No subleading jet ($\pt<20\gev$ and $|\eta|<4.5$) is allowed around the track in a cone of $\Delta R< 0.5$
+\item No jet ($\pt>20\gev$ and $|\eta|<4.5$) is allowed around the track in a cone of $\Delta R< 0.5$
 \item Veto tracks within a cone of $\Delta R<0.05$ to a dead or noisy ECAL cell.
 \item The track must not point in the direction of the ECAL intermodule gap listed in Table~\ref{tab:IntermoduleGaps}.
 \item The track must not be within a cone of $\Delta R<0.25$ to a bad CSC.
 \item Veto any track pointing to the region between ECAL barrel and endcap at $1.42<|\eta|<1.65$
 \end{itemize}
-These lepton veto selection requirements are of course highly suppressing the background emerging from real lepton production like in \WJets events.
+These lepton and jet veto selection requirements are of course highly suppressing the background emerging from real lepton/jet production like in \WJets events.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -409,7 +416,7 @@ These lepton veto selection requirements are of course highly suppressing the ba
   \caption{The minimal dr betweenn}
   \label{fig:TrackdRmin}
 \end{figure}
-The discrimination power of the lepton vetos is shown in Fig.~\ref{fig:TrackdRmin} where the minimal $\Delta R$ between the candidate track and a reconstructed electron, muon, tau or jet is shown.\\
+The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:TrackdRmin} where the minimum $\Delta R$ between the candidate track and a reconstructed electron, muon, tau or jet is shown.\\
 
 Finally, two further characteristics of chargino tracks are exploited.
 As the chargino is produced in a very clean environment, the isolation of the track can discriminate signal against background events.
@@ -417,7 +424,7 @@ As the chargino is produced in a very clean environment, the isolation of the tr
 Furthermore, for charginos decaying inside the tracker there is no associated energy deposition in the calorimeters in the direction of the track.
 This is a very pronounced characteristics of signal tracks.
 
-The concrete selection cuts are as follows
+The resulting selection cuts are as follows
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item No further substantial track activity (less than 10\%) is allowed in a cone of $\Delta R < 0.3$ around the candidate track: \mbox{$\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$}
@@ -434,13 +441,13 @@ The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackI
   \label{fig:TrackIso_Ecalo_After_Preselection}
 \end{figure}
 
-As emphasised before, this analysis aims to be as general as possible to search for charginos with different lifetimes.
-To allow for charginos decaying at any layer of the tracker, no explicit selection cut is required in the number of missing outer hits.
+FiXME: As emphasised before, this analysis aims at being sensitive to different chargino lifetimes  to search for charginos with different lifetimes.
+To allow for charginos decaying at any layer of the tracker, no explicit selection cut on the number of missing outer hits is required.
 %For charginos with very short mean lifetimes it was checked, whether a sensitivity increase can be achieved by imposing a cut on $N_{\text{miss}}^{\text{outer}}$.
 %However, this is not the case and therefore a selection in $N_{\text{miss}}^{\text{outer}}$ is not considered.
 
 
-An overview over the analysis preselection is given in Table~\ref{tab:SummaryCuts}. 
+An overview over the full analysis preselection is given in Table~\ref{tab:SummaryCuts}. 
 \renewcommand{\arraystretch}{1.39}
 \begin{table}[!h]
 \centering
@@ -495,22 +502,22 @@ An overview over the analysis preselection is given in Table~\ref{tab:SummaryCut
 A summary table of the event yields after each selection step for the simulated background datasets and for some of the signal models can be found in Appendix~\ref{app:cutflow}.\\
 
 
-Given the presented analysis selection requirements, a set of two variables remain, which are highly discriminating:
+Given the presented signal candidate selection, a set of two variables remain  that are highly discriminating:
 The transverse momentum and the energy release per path length of the candidate track.
-In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the application of the full analysis selection.
+In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the application of the full signal candidate selection.
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts_Wjets/htrackPtSmallRange_log.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts_Wjets/htrackASmiSmallRange_log.pdf}
   \end{tabular}
-  \caption{Candidate track \pt (left) and \ias (right) after the full candidate track selection for signal and $\WJets$ events. 
-           Because of high event weights of the $\WJets$ sample, the trigger requirements are not applied.
-           As \met and \ptfirstjet are not expected to be correlated with the track characteristics it does not influences the shape of the shown distributions.}
+  \caption{Candidate track \pt (left) and \ias (right) after the full signal candidate selection for signal and $\WJets$ events. 
+           Because of the low statistical precision of the $\WJets$ sample, the trigger requirements are not applied.
+           This does not influence the shape of the distributions since \met and \ptfirstjet are not expected to be correlated with the track characteristics.}
   \label{fig:PtAndIasAfterFullPreselection}
 \end{figure}
 These variables are used to optimise the sensitivity of the search.
 The optimisation process will be explained in Section~\ref{sec:Optimisation}.
-However, before the optimisation can be accomplished, the characterisation end estimation of the background is needed.
+However, before the optimisation can be accomplished, a characterisation end estimation of the background is needed.
 This topic will be discussed in the following section.
 
