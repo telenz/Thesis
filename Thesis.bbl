@@ -279,4 +279,31 @@ D.~B. et. al., ``Hadronic Recoil Studies of Heavy Boosted Systems'', {\em CMS
   Experiment}'', {\em CMS Physics Analysis Summary} {\bf
   \href{https://cds.cern.ch/record/2033232}{CMS-PAS-JME-13-004}} (2015).
 
+\bibitem{bib:Kristin_Thesis}
+K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the
+  CMS experiment}''.
+\newblock PhD thesis, U. Hamburg, Dept. Phys.,
+2015.
+\newblock
+%%CITATION = DESY-THESIS-2015-003;%%.
+
+\bibitem{Pumplin:2002vw}
+J.~Pumplin, D.~R. Stump, J.~Huston{ et~al.}, ``{New generation of parton
+  distributions with uncertainties from global QCD analysis}'', {\em JHEP} {\bf
+  07} (2002) 012, \href{http://www.arXiv.org/abs/hep-ph/0201195}{{\tt
+  arXiv:hep-ph/0201195}}.
+\href{http://dx.doi.org/10.1088/1126-6708/2002/07/012}{{\tt
+  doi:10.1088/1126-6708/2002/07/012}}.
+%%CITATION = HEP-PH/0201195;%%.
+
+\bibitem{Botje:2011sn}
+M.~Botje {et~al.}, ``{The PDF4LHC Working Group Interim Recommendations}'',
+\href{http://www.arXiv.org/abs/1101.0538}{{\tt arXiv:1101.0538}}.
+%%CITATION = ARXIV:1101.0538;%%.
+
+\bibitem{bib:PDF_practical}
+A.~Vicini, ``Practical implementation of the PDF4LHC recipe''.
+  \url{http://www.hep.ucl.ac.uk/pdf4lhc/PDF4LHC_practical_guide.pdf}.
+\newblock Accessed: 2015-11-27.
+
 \end{thebibliography}\endgroup
