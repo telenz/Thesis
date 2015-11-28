@@ -267,13 +267,13 @@ public:
 	    histo -> Fill("p",weight_xsec_lumi*weight);
 	  }
 	  else if(abs(trackPdgId->at(i))==3222){
-	    histo -> Fill("#sigma^{+}",weight_xsec_lumi*weight);
+	    histo -> Fill("#Sigma^{+}",weight_xsec_lumi*weight);
 	  }
 	  else if(abs(trackPdgId->at(i))==321){
 	    histo -> Fill("K^{+}",weight_xsec_lumi*weight);
 	  }
 	  else if(abs(trackPdgId->at(i))==3112){
-	    histo -> Fill("#sigma^{-}",weight_xsec_lumi*weight);
+	    histo -> Fill("#Sigma^{-}",weight_xsec_lumi*weight);
 	  }
 	  else if(abs(trackPdgId->at(i))==22){
 	    histo -> Fill("#gamma",weight_xsec_lumi*weight);
@@ -332,6 +332,7 @@ int plotParticleCompositionInFakeCS(){
   // ***********************************************************************************************************
   TCanvas *c1 = new TCanvas();
   muFakeControlRegion.histo->SetMaximum(1.);
+  muFakeControlRegion.histo->SetMinimum(0.);
   muFakeControlRegion.histo->Draw("e");
   TLatex*  info   = new TLatex();
   info-> SetNDC();
