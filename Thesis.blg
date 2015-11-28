@@ -42,7 +42,6 @@ Repeated entry---line 4085 of file Thesis.bib
  :                        ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "FIXME"
 Warning--empty publisher in bib:James:StaticticalMethods_2006
 Warning--empty year in bib:CMS:DT_Thesis
 Name 1 in "J. Brinson, C. Hill, and W. Wulsin" has a comma at the end for entry bib:CMS:DT_8TeV_AN
@@ -50,7 +49,7 @@ while executing---line 1277 of file lucas_unsrt.bst
 Warning--empty title in bib:Neyman_1937
 You've used 45 entries,
             2369 wiz_defined-function locations,
-            921 strings with 13797 characters,
+            919 strings with 13787 characters,
 and the built_in function-call counts, 12328 in all, are:
 = -- 1510
 > -- 262

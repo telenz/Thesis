@@ -1,5 +1,5 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Detailed event yield tables for simulated samples and data}
 \label{app:cutflow}
 
@@ -96,7 +96,7 @@ $\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} <
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Selection requirements in the ``tag-and-probe'' samples}
+\chapter{Selection requirements of the ``tag-and-probe'' samples}
 \label{app:TagAndProbeRequirements}
 
 \renewcommand{\arraystretch}{1.4}
@@ -198,3 +198,134 @@ $\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} <
 \multicolumn{2}{c}{} \\
 \end{tabular}}
 \end{table}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\chapter{Validation tests of the background estimation methods}
+\label{app:Validation}
+
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[!h]
+\centering
+\caption{Validation tests of the background estimation methods in the calorimeter isolation control region $\ecalo>10\gev$ 
+         for two different \pt selection requirements:
+         $\pt>40\gev$ (left) and $\pt>60\gev$ (right). Only statistical uncertainties are included.}
+\label{tab:LeptonicClosure}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                   &   Data Yield          \\
+\midrule
+Total bkg        &$84.36^{+16.47}_{-10.88}$                   &94 \\
+\midrule
+ Electrons        &$15.69^{+11.92}_{-6.72}$                   & \\
+     Muons        &$5.67^{+7.74}_{-3.55}$                     & \\
+      Taus        &$35.78^{+5.09}_{-4.18}$                    & \\
+     Fakes        &$27.23^{+6.57}_{-6.57}$                    & \\
+\bottomrule
+\multicolumn{3}{c}{} \\
+\end{tabular}
+\hspace{10pt}
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                   &   Data Yield          \\
+\midrule
+ Total bkg        &$35.56^{+11.95}_{-6.20}$                   &53 \\
+\midrule
+Electrons        &$0.00^{+9.14}_{-0.00}$                & \\
+     Muons        &$3.65^{+4.98}_{-2.28}$                & \\
+      Taus        &$13.22^{+1.88}_{-1.55}$                & \\
+     Fakes        &$18.70^{+5.55}_{-5.55}$                & \\
+\bottomrule
+\multicolumn{3}{c}{} \\
+\end{tabular}}
+\end{table}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[!h]
+\centering
+\caption{Validation tests of the background estimation methods in the calorimeter isolation control region $\ecalo>10\gev$
+         with an additional \ias selection of $\ias>0.2$ for two different \pt selection requirements:
+         $\pt>40\gev$ (left) and $\pt>60\gev$ (right). Only statistical uncertainties are included.}
+\label{tab:LeptonicClosure}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                   &   Data Yield          \\
+\midrule
+ Total bkg        &$4.76^{+1.42}_{-1.39}$                   &8 \\
+\midrule
+Electrons        &$0.20^{+0.17}_{-0.10}$                & \\
+     Muons        &$0.00^{+0.22}_{-0.00}$                & \\
+      Taus        &$0.48^{+0.15}_{-0.11}$                & \\
+     Fakes        &$4.08^{+1.38}_{-1.38}$                & \\
+\bottomrule
+\multicolumn{3}{c}{} \\
+\end{tabular}
+\hspace{10pt}
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                   &   Data Yield          \\
+\midrule
+ Total bkg        &$2.31^{+0.97}_{-0.95}$                   &3 \\
+\midrule
+ Electrons        &$0.00^{+0.11}_{-0.00}$                & \\
+     Muons        &$0.00^{+0.14}_{-0.00}$                & \\
+      Taus        &$0.18^{+0.06}_{-0.04}$                & \\
+     Fakes        &$2.14^{+0.95}_{-0.95}$                & \\
+ \bottomrule
+\multicolumn{3}{c}{} \\
+\end{tabular}}
+\end{table}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[!h]
+\centering
+\caption{Validation tests of the background estimation methods in the calorimeter isolation control region $\ecalo>10\gev$
+         with an additional \ias selection of $\ias>0.4$ for two different \pt selection requirements:
+         $\pt>40\gev$ (left) and $\pt>60\gev$ (right). Only statistical uncertainties are included.}
+\label{tab:LeptonicClosure}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                   &   Data Yield          \\
+\midrule
+ Total bkg        &$1.98^{+0.87}_{-0.83}$                   &2 \\
+\midrule
+Electrons        &$0.00^{+0.05}_{-0.00}$                & \\
+     Muons        &$0.00^{+0.22}_{-0.00}$                & \\
+      Taus        &$0.08^{+0.09}_{-0.04}$                & \\
+     Fakes        &$1.91^{+0.83}_{-0.83}$                & \\
+\bottomrule
+\multicolumn{3}{c}{} \\
+\end{tabular}
+\hspace{10pt}
+\begin{tabular}{l|c |c}
+\multicolumn{3}{c}{} \\
+\toprule
+                                                               &      Predicted Yield                   &   Data Yield          \\
+\midrule
+
+ Total bkg        &$1.10^{+0.63}_{-0.61}$                   &1 \\
+\midrule
+ Electrons        &$0.00^{+0.00}_{-0.00}$                & \\
+     Muons        &$0.00^{+0.14}_{-0.00}$                & \\
+      Taus        &$0.03^{+0.03}_{-0.02}$                & \\
+     Fakes        &$1.07^{+0.61}_{-0.61}$                & \\
+\bottomrule
+\multicolumn{3}{c}{} \\
+\end{tabular}}
+\end{table}
+
+
+\newpage 
+The underprediction in the control regions with $\ias>0.2$ is caused by the pediction of the leptonic \ias shape from simulation.
+This leads to a bias as the \ias distribution in simulation is softer than in data.
+However, this bias is taken into account as systematic uncertainty (see Section~\ref{sec:LeptonIasUncertainty}).
