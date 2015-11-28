@@ -173,7 +173,7 @@ The HLT\_MET120\_HBHENoiseCleaned trigger is based on the two L1 triggers ETM40 
 On HLT level, the trigger requires that the missing energy measured in the calorimeter is larger than 120\gev.
 The HBHENoise-filter reduces background from electronic noise in the HCAL.
 
-The events that were selected by the described triggers are available in the datasets listed in Table~\ref{tab:SearchSamples}.
+The events that were selected by the described triggers are available in the MET datasets listed in Table~\ref{tab:SearchSamples}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!hbt]
 \centering
@@ -517,7 +517,9 @@ A summary table of the event yields after each selection step for the simulated 
 
 
 Given the presented signal candidate selection, a set of two variables remain  that are highly discriminating:
-The transverse momentum and the energy release per path length of the candidate track.
+The transverse momentum \pt and the energy release per path length \dedx of the candidate track.
+In this analysis, the Asymmetric Smirnov discriminator \ias is used to enhance the discrimating power of \dedx.
+See Section~\ref{FIXME} for the definition and a detailed explanation of \ias.
 In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the application of the full signal candidate selection.
 \begin{figure}[!h]
   \centering 
