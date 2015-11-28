@@ -215,10 +215,10 @@ public:
 
 	  histo -> Fill("Fakes",0);
 	  histo -> Fill("p",0);
-	  histo -> Fill("#sigma^{+}",0);
+	  histo -> Fill("#Sigma^{+}",0);
 	  histo -> Fill("K^{+}",0);
 	  histo -> Fill("#pi",0);
-	  histo -> Fill("#sigma^{-}",0);
+	  histo -> Fill("#Sigma^{-}",0);
 	  histo -> Fill("#gamma",0);
 	  histo -> Fill("Others",0);
 	
@@ -343,6 +343,7 @@ int plotParticleCompositionInFakeCS(){
   TCanvas *c2 = new TCanvas();
   c2->cd();
   eleFakeControlRegion.histo->SetMaximum(1.);
+  eleFakeControlRegion.histo->SetMinimum(0.);
   eleFakeControlRegion.histo->Draw("e");
   info->DrawLatex(0.65,0.8,"Z#rightarrowee");
   c2->SaveAs("plots/ParticleCompositionInFakeCS_Ele.pdf");
