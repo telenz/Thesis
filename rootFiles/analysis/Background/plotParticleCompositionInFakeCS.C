@@ -219,7 +219,6 @@ public:
 	  histo -> Fill("K^{+}",0);
 	  histo -> Fill("#pi",0);
 	  histo -> Fill("#Sigma^{-}",0);
-	  histo -> Fill("#gamma",0);
 	  histo -> Fill("Others",0);
 	
 	  histo -> LabelsDeflate("X") ;
@@ -274,9 +273,6 @@ public:
 	  }
 	  else if(abs(trackPdgId->at(i))==3112){
 	    histo -> Fill("#Sigma^{-}",weight_xsec_lumi*weight);
-	  }
-	  else if(abs(trackPdgId->at(i))==22){
-	    histo -> Fill("#gamma",weight_xsec_lumi*weight);
 	  }
 	  else{
 	    histo -> Fill("Others",weight_xsec_lumi*weight);
