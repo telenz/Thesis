@@ -260,6 +260,31 @@ A.~B. et. al., ``Search for New Physics in the Monojet final state at CMS'',
   doi:10.1007/JHEP01(2014)096}}.
 %%CITATION = ARXIV:1312.1129;%%.
 
+\bibitem{bib:CMS:elec_recoEff}
+{ CMS} Collaboration, ``{Performance of Electron Reconstruction and Selection
+  with the CMS Detector in Proton-Proton Collisions at √s = 8 TeV}'', {\em
+  JINST} {\bf 10} (2015), no.~06, P06005,
+  \href{http://www.arXiv.org/abs/1502.02701}{{\tt arXiv:1502.02701}}.
+\href{http://dx.doi.org/10.1088/1748-0221/10/06/P06005}{{\tt
+  doi:10.1088/1748-0221/10/06/P06005}}.
+%%CITATION = ARXIV:1502.02701;%%.
+
+\bibitem{bib:CMS:muon_recoEff}
+{ CMS} Collaboration, ``{Performance of CMS muon reconstruction in $pp$
+  collision events at $\sqrt{s}=7$ TeV}'', {\em JINST} {\bf 7} (2012) P10002,
+  \href{http://www.arXiv.org/abs/1206.4071}{{\tt arXiv:1206.4071}}.
+\href{http://dx.doi.org/10.1088/1748-0221/7/10/P10002}{{\tt
+  doi:10.1088/1748-0221/7/10/P10002}}.
+%%CITATION = ARXIV:1206.4071;%%.
+
+\bibitem{bib:CMS:tau_recoEff}
+{ CMS} Collaboration, ``{Performance of tau-lepton reconstruction and
+  identification in CMS}'', {\em JINST} {\bf 7} (2012) P01001,
+  \href{http://www.arXiv.org/abs/1109.6034}{{\tt arXiv:1109.6034}}.
+\href{http://dx.doi.org/10.1088/1748-0221/7/01/P01001}{{\tt
+  doi:10.1088/1748-0221/7/01/P01001}}.
+%%CITATION = ARXIV:1109.6034;%%.
+
 \bibitem{bib:Neyman_1937}
 J.~Neyman {\em Phil. Trans. Royal Soc. London, Series A} {\bf 236} (1937)
   333--80. Reprinted in \textit{A Selection of Early Statistical Papers on J.
