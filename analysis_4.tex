@@ -155,13 +155,13 @@ The corresponding uncertainty lies between $2.6-4.6\%$ for the signal samples.
 
 \subsection*{Uncertainty on the jet energy scale}
 The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt~\cite{bib:CMS:JME_PAS} and for data-simulation differences.
-The uncertainty on the jet energy scale arise from the systematic uncertainty of the jet response in data like jet fragmentation, jet flavor composition, etc., neatly described in~\cite{bib:CMS:JME_PAS}.
+The uncertainty on the jet energy scale (JES) arise from the systematic uncertainty of the jet response in data like jet fragmentation, jet flavor composition, etc., neatly described in~\cite{bib:CMS:JME_PAS}.
 The correction is applied as a multiplicant on each jet's transverse momentum contained in an event.
 The corresponding systematic uncertainty is accessed by a up and down variation of the correction factor within 1\,$\sigma$.
 The resulting uncertainties are of minor importance and lie between $0.5-1.1\%$.
 
 \subsection*{Uncertainty on the jet energy resolution}
-The jet energy resolution is smaller in simulation than in measured data (see Part~\ref{FIXME}). 
+The jet energy resolution (JER) is smaller in simulation than in measured data (see Part~\ref{FIXME}). 
 To take into account these differences, the jet energy response is additionnaly smeared to match the measured response.
 The systematic uncertainties cover the uncertainty on the resolution in data, like the jet energy scale uncertainty, uncertainties arising from non-Gaussian tails etc.~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 The resulting uncertainty on the signal efficiency is between $0.1-0.7\%$ and therefore almost negliglbe.
@@ -203,7 +203,37 @@ The uncertainties are of very similar size in the signal regions with different 
 No \ias dependence is considered.
 
 \subsection*{Uncertainty on the simulation of the \ias}
-FIXME
+FIXME!!!
+An uncertainty on the simulation of \ias needs to be estimated to account for possible data-simulation differences for highly ionising particles.
+This uncertainty can be assessed by comparing data and simulation differences of slow protons.
+Slow protons are highly ionising, thus, can be used to determine the uncertainty in the high \ias region.
+
+The estimation is done with the ``Minimum Bias'' samples also used for the pixel calibration (see Section~\ref{sec:EnergyCalibration}).
+In order to select slow protons, good quality tracks with a momentum smaller than 2.5\gev are selected.
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/IasP_Data.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/IasP_MC.pdf}
+  \end{tabular}
+  \caption{\ias versus momentum for good quality tracks with at least eight hits in observed data (left) and simulation (right).
+           The kaon and proton line are visible in both datasets. The deuteron line is only visible in data, as deuterons are not simulated.}
+  \label{fig:optimisation}
+\end{figure} 
+
+Seevral slices are taken and fitted.
+Mean between mC and data is taken as sys. which is 10\%
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/hIas_analysis_2015_11_30_ForThesis_ptmin0p80_ptmax0p85.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/hIas_analysis_2015_11_30_ForThesis_ptmin0p95_ptmax1p0.pdf}
+  \end{tabular}
+  \caption{bla}
+  \label{fig:optimisation}
+\end{figure} 
+The size of the systeamtic uncertainty is also expected to cover the data-simulation difference for minimally ionising particles.
+
 
 \subsection*{Uncertainty on the simulation of the track reconstruction efficiency}
 One final source of uncertainty is the simulation of the track reconstruction efficiency.
@@ -214,32 +244,133 @@ Therefore, a worst case estimation is done, comparing the track reconstruction e
 In simulation and observed data, well reconstructed muon tracks are selected and all hits after the third hits are removed.
 Afterwards the full track reconstruction step is again preformed.
 The relative difference of the track efficiency in data and simulation ($\epsilon = N_{\text{recon. track with \nhits=3}}/N_{\text{selected muon trks}}$) is taken as systematic uncertainty.
-The track reconstruction efficiency is higher in simulation than in data and results in uncertainties between $4.5-6.0\%$.
+The track reconstruction efficiency is higher in simulation than in data and results in uncertainties between $4.5-6.0\%$.\\
 
 
+\subsection*{Summary of systematic uncertainties of the simulated signal samples}
+All systematic uncertaintes are estimated for all simulated signal samples.
+An overview of the range of the uncertainties is given in Table~\ref{tab:SignalSysUnc}.
 
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h] 
+\centering
+\caption{Ranges of systematic uncertainties of the simulated signal samples. FIXME: Update this Table with latest uncertainties.}
+\label{tab:SignalSysUnc}
+\begin{tabular}{|l|c|c|}  
+\multicolumn{3}{c}{} \\
+\toprule
+Uncertainty                             &Min [\%]           &Max [\%]           \\ 
+\midrule
+Luminosity                              &2.6                &2.6                \\ 
+ISR                                     &10.4               &12.6               \\ 
+Trigger efficiency                      &2.6                &4.6                \\ 
+JES                                     &0.5                &1.1                \\ 
+JER                                     &0.1                &0.7                \\ 
+PDF                                     &3.0                &4.9                \\ 
+Simulation of calorimeter isolation     &0.8                &6.6                \\ 
+Simulation of missing middle hits       &1.8                &2.3                \\ 
+Simulation of missing inner hits        &3.2                &3.4                \\ 
+PU                                      &0.0                &35.9               \\ 
+Track reconstruction efficiency         &4.1                &5.1                \\ 
+Simulation of Ias                       &6.5                &6.5                \\ 
+Theoretical x-section                   &3.4                &8.1                \\ 
+\bottomrule
+\multicolumn{3}{c}{} \\
+\end{tabular}  
+\end{table} 
+
+In order to avoid an overestimation of the systematic uncertainties due to limited sizes of the samples (especially for low lifetimes like 1\cm), the corresponding signal sample with longer lifetime (100\cm) is used instead.
+This is possible for uncertainty sources, for which the size is not affected by the lifetime of the chargino.
+These are the uncertainties in ISR, trigger efficiency, JES, JER and PDF.
+
+It can be seen, that major uncertainties are the simulation of the initial state radiation, of the calorimeter isolation, and of \ias.
+The high maximal uncertainty of the pile-up uncertainty is caused by limited statistical precision.
+
+The systematic uncertainties of the simulated signal samples are taken as fully correlated for the four signal bins into account.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Correlation of systematic uncertainties}
-In order to combine the four different signal regions, a specification of the size of correlations between the systematic uncertay needs to be addresses.
-
-
-\subsection*{Background correlations}
-\subsection*{Signal correlation}
+%\section{Correlation of systematic uncertainties}
+%In order to combine the four different signal regions, a specification of the size of correlations between the systematic uncertay needs to be addresses.
+%\subsection*{Background correlations}
+%\subsection*{Signal correlation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Methods/ Limit setting}
+FIXME!
+This section is a small interlude to give a short introduction into the methods and techniques of the exclusion of theoretical models used in this analysis.
+For a detailed and pedagigical introduction to the methods, it is refered to~\cite{bib:Ott_Thesis}.
 
-Finally, bla bla bla.
+In this analysis the exclusion of the underlying theoretical model is achieved with the \CLs method~\cite{bib:CLS_1999,bib:CLS_2000,bib:CLS_2002}.
+The \CLs method was developed for the Higgs searches at LEP in order not to overestimate the exclusion power of a result when an  underfluctuation of the Standard Model expectation occurs.
+\CLs is defined as the confidence limit for the background plus signal hypothesis devided by the confidence limit for the background hypothesis only
+\begin{equation*}
+\CLs = \frac{\CLsb}{\CLb}.
+\end{equation*}
+The confidence limit is defined as the probability to observe less than or equal the number of observed events P($n<n_{\text{obs}}$) for a given background (or background+signal) hypothesis.
+In general, the considered distribution can be any constructed test statistics $Q$ and is not necessarily the distribution in the number of events.
+However, For Poissonian statistics this leads to the following expression for \CLb for one signal region
+\begin{equation*}
+\CLsb = \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),
+\end{equation*}
+where $\lambda$ is the mean of the poisson distribution and $\mu$ is the signal strength.
+
+In order to include systematic uncertainties, the background expectation $b$ or the signal expectation $\mu\cdot s$ are varied within a Gaussian distribution with a width estimated as the 1-$\sigma$ uncertainty and a mean of zero.
+For one source of systematic uncertainty on the background, it leads to the following expression for \CLsb
+\begin{equation*}
+\CLsb = \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \delta_b\right),
+\end{equation*}
+This expression can be generalised for more than one signal region and more systematic uncertainties~\cite{bib:Ott_Thesis}.
+A model is considered as excluded at a 95\% confidence level when \CLs is smaller than 5\%.
+
+
+
+In this search, the systematic uncertainties are taken as (un-)correlated according to Table~\ref{tab:BkgSysUncCorr}.
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h] 
+\centering
+\caption{Correlation of systematic and statistical uncertainties between the four different signal regions.}
+\label{tab:BkgSysUncCorr}
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|}  
+\multicolumn{5}{c}{} \\
+\toprule 
+                                         &Fakes                          & Taus                        &Electrons   &Muons        \\ 
+\midrule
+Statistical uncertainty                 &0\% correlated                & 100\% for same bins in \ias  & 0\% correlated               & 100\% for same bins in \ias \\
+\midrule
+Leptonic scale factor uncertainty       & \centering -                 & 100\% for same bins in \ias  & 100\% for same bins in \ias  & 100\% for same bins in \ias  \\
+\midrule
+Fake rate  uncertainty                  & 100\% for same bins in \ias  &  -                 &  -                 &  -  \\
+\midrule
+Ias uncertainty                         &0\% correlated                & 100\% for same bins in \pt              & 100\% for same bins in \pt &  100\% for same bins in \pt \\
+\bottomrule
+\multicolumn{5}{c}{} \\
+\end{tabularx}  
+\end{table} 
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Exclusion limits}
+
+The search is interpretet wiithin SUSY models with wino-like chargino and neutralinos....
+As explained in the previous section, the exclusion limits are done with the \CLs method.
+For each of the signal model (FIXME in total), the
+
 \begin{itemize}
+\item Say a word about background correlations.
 \item 1-d limits
 \item 2-d limits
 \end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Discussion and outlook and conclusion}
+\chapter{Discussion and conclusion}
 \label{sec:Discussion}
+
+\begin{itemize}
+\item Earlier limits could verified and slightly improved in mass regions between 300-400 to 50\gev
+\item The inclusion of ias discriminatior shows good sensitivty increase of 100\% ...
+\item further improvements throudh bla bla
+\end{itemize}

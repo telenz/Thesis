@@ -272,18 +272,18 @@ int makeLeptonIasCRSRplots(int pdgId){
   TLatex*  info1   = new TLatex();
   info1-> SetNDC();
   info1->SetTextSize(0.06);
-  info1->DrawLatex(0.45,0.65,particleType);
+  info1->DrawLatex(0.55,0.60,particleType);
   c->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_MCSR.pdf");
 
 
-  TCanvas *c1 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,"dE/dx discriminator (I_{as})","N_{MC}/N_{Data}","CR_{MC}^{lep veto inverted}","CR_{Data}^{lep veto inverted}",10,0.001);
+  TCanvas *c1 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,"dE/dx discriminator (I_{as})","N_{MC}/N_{Data}","CR_{W+Jets MC}^{lep veto inverted}","CR_{MET Data}^{lep veto inverted}",10,0.001);
   c1->cd();
   pad = (TPad*) gPad->GetPrimitive("pad1");
   pad->cd();
   info1   = new TLatex();
   info1-> SetNDC();
   info1->SetTextSize(0.06);
-  info1->DrawLatex(0.50,0.65,particleType);
+  info1->DrawLatex(0.55,0.60,particleType);
   c1->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_DataCR.pdf");
  
   return 0;

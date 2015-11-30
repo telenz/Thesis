@@ -30,7 +30,9 @@ TCanvas* drawRatioPlot(TH1D *numerator, TH1D *denominator, TString xTitle, TStri
   double labelSize = gStyle->GetLabelSize()*(1-y)/y;
   ratio -> SetLabelSize(labelSize,"XYZ");
   ratio -> GetYaxis()->SetTitleOffset(0.45);
-  ratio->GetYaxis()->SetTitle(yTitleRatio);
+  ratio -> GetYaxis()->SetTitle(yTitleRatio);
+  ratio -> SetMarkerStyle(20);
+
   padRatio->cd();
   ratio->Draw();
 
@@ -41,7 +43,7 @@ TCanvas* drawRatioPlot(TH1D *numerator, TH1D *denominator, TString xTitle, TStri
   padRatio->Modified();
 
 
-  TLegend *leg = new TLegend(0.45,0.72,0.85,0.90);   //Lepton Ias plots
+  TLegend *leg = new TLegend(0.45,0.68,0.85,0.90);   //Lepton Ias plots
   //TLegend *leg = new TLegend(0.28,0.72,0.85,0.90); //Fake Ias plots
   leg ->SetTextSize(0.06);
   leg->AddEntry(numerator,legendNum,"pel"); 
@@ -52,8 +54,10 @@ TCanvas* drawRatioPlot(TH1D *numerator, TH1D *denominator, TString xTitle, TStri
   pad1->SetLogy();
   numerator   -> SetLineColor(kBlack);
   numerator   -> SetMarkerColor(kBlack);
+  numerator   -> SetMarkerStyle(24);
   denominator -> SetLineColor(kRed);
   denominator -> SetMarkerColor(kRed);
+  denominator -> SetMarkerSize(1.2);
   denominator -> GetYaxis()->SetTitle("a.u.");
   denominator -> GetXaxis()->SetTitle(xTitle);
   denominator -> Draw("e");

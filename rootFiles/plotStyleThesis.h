@@ -115,9 +115,7 @@ public:
  
  
     gStyle -> SetPadRightMargin(0.20);
-    //gStyle -> SetPadLeftMargin(0.20);
-    //gStyle -> SetPadBottomMargin(0.25);
-    //gStyle -> SetPadTopMargin(0.1);
+    gStyle -> SetPadTopMargin(0.12);
     //gStyle -> SetTitleOffset(1.05,"XY");
     gStyle -> SetTitleOffset(1.25,"Z");
     gStyle->SetNdivisions(509,"Z");
