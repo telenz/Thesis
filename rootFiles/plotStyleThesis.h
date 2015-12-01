@@ -55,13 +55,14 @@ public:
    
     gStyle->SetOptStat("");
 
-
+ 
     gStyle -> SetTextFont(42);
+    gStyle -> SetTitleFont(42,"");
     gStyle -> SetTextSize(0.05);
-    
+    gStyle -> SetTitleSize(0.06);
 
     TGaxis::SetMaxDigits(3);
-    
+ 
 
    
     //gStyle->SetStatStyle(0);
