@@ -363,4 +363,11 @@ A.~L. Read, ``{Presentation of search results: The CL(s) technique}'', {\em J.
   doi:10.1088/0954-3899/28/10/313}}.
 %%CITATION = JPAGA,G28,2693;%%.
 
+\bibitem{bib:CMS:Combine}
+\text{CMS Collaboration}, ``Documentation of the RooStats-based statistics
+  tools for Higgs PAG''.
+  \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombin%
+edLimit}.
+\newblock Accessed: 2015-11-27.
+
 \end{thebibliography}\endgroup

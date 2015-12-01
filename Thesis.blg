@@ -2,81 +2,82 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
 Database file #1: Thesis.bib
-I was expecting a `,' or a `}'---line 168 of file Thesis.bib
+I was expecting a `,' or a `}'---line 174 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-JME-13-004",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 190 of file Thesis.bib
+I was expecting a `,' or a `}'---line 196 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-LUM-13-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 217 of file Thesis.bib
+I was expecting a `,' or a `}'---line 223 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-003",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 401 of file Thesis.bib
+I was expecting a `,' or a `}'---line 407 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-005",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 413 of file Thesis.bib
+I was expecting a `,' or a `}'---line 419 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 633 of file Thesis.bib
+I was expecting a `,' or a `}'---line 639 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-EXO-13-006",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 644 of file Thesis.bib
+I was expecting a `,' or a `}'---line 650 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 4192 of file Thesis.bib
+Repeated entry---line 4198 of file Thesis.bib
  : @article{Pumplin:2002vw
  :                        ,
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "FIXME"
 Warning--empty publisher in bib:James:StaticticalMethods_2006
 Warning--empty year in bib:CMS:DT_Thesis
 Name 1 in "J. Brinson, C. Hill, and W. Wulsin" has a comma at the end for entry bib:CMS:DT_8TeV_AN
 while executing---line 1277 of file lucas_unsrt.bst
 Warning--empty title in bib:Neyman_1937
-You've used 52 entries,
+You've used 53 entries,
             2369 wiz_defined-function locations,
-            974 strings with 15294 characters,
-and the built_in function-call counts, 14605 in all, are:
-= -- 1811
-> -- 285
+            981 strings with 15508 characters,
+and the built_in function-call counts, 14755 in all, are:
+= -- 1826
+> -- 290
 < -- 0
-+ -- 115
-- -- 63
-* -- 1068
-:= -- 1877
-add.period$ -- 131
-call.type$ -- 52
++ -- 117
+- -- 64
+* -- 1072
+:= -- 1897
+add.period$ -- 133
+call.type$ -- 53
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 55
-duplicate$ -- 891
-empty$ -- 1524
-format.name$ -- 50
-if$ -- 4012
+cite$ -- 56
+duplicate$ -- 897
+empty$ -- 1546
+format.name$ -- 51
+if$ -- 4053
 int.to.chr$ -- 0
-int.to.str$ -- 52
+int.to.str$ -- 53
 missing$ -- 129
-newline$ -- 244
-num.names$ -- 30
-pop$ -- 275
+newline$ -- 248
+num.names$ -- 31
+pop$ -- 284
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 468
+skip$ -- 471
 stack$ -- 0
 substring$ -- 455
 swap$ -- 296
@@ -85,7 +86,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 69
-width$ -- 54
-write$ -- 595
+while$ -- 70
+width$ -- 55
+write$ -- 604
 (There were 9 error messages)

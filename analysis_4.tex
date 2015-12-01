@@ -2,46 +2,51 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Optimisation of the search sensitivity}
 \label{sec:Optimisation}
-Finally, having all background estimation methods in place, an optimisation procedure is conducted to increase the search sensitivity with respect to the signal models introduced in Section~\ref{sec:SignalSamples}.
-The optimisation is done in the most sensitive variables, \pt and \ias.
+Finally, having all background estimation methods in place, an optimisation procedure is conducted in order to increase the search sensitivity with respect to the signal models introduced in Section~\ref{sec:SignalSamples}.
+The optimisation is done in the most sensitive variables, \pt and \ias (see Section~\ref{sec:Ias} for a definition and explanation of the Asymmetric Smirnov discriminator \ias).
+
 In this optimisation, the full systematic uncertainty is taken into account, which includes statistical uncertainties arising from limited statistical precision of the samples used in the background estimation methods and the systematic uncertainties that are described in Section~\ref{sec:SysUncertaintiesBkg}.
 In order to avoid unnecessary fine-tuning of the optimisation to the specific cross sections of the SUSY models and to keep the search as general as possible, 
-the optimisation is not done by maximising  $S/\Delta B$ but by minimising the cross section for which a 5$\sigma$ discovery is possible
+the optimisation is not done by maximising  $S/\Delta B$ but by a minimisation of the cross section for which a 5$\sigma$ discovery is possible, \ie finding the optimal selection cuts for \pt and \ias for which the lowest possible cross section can be discovered
 \begin{equation}
 \label{eq:optimisation}
-\frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\Delta B} = \frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\sqrt{ \Delta B_{\text{stat}} + \Delta B_{\text{sys}}}} \geq 5.
+\frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\Delta B} = \frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\sqrt{ \left(\Delta B_{\text{stat}}\right)^2 + \left(\Delta B_{\text{sys}}\right)^2}} \geq 5.
 \end{equation} 
-In this formula, $\mathcal{L}$ is the integrated luminosity in 2012, $\sigma_{\text{min}}$ is the cross section to be minimised, $\Delta B_{\text{sys}}$ is the systematic uncertainty of the background prediction as explained above and 
+In this formula, $\mathcal{L}$ is the integrated luminosity in 2012, $\sigma_{\text{min}}$ is the minimum cross section that can be discovered, $\Delta B_{\text{sys}}$ is the systematic uncertainty of the background prediction as explained above and 
 $\Delta B_{\text{stat}}$ is the statistical uncertainty of the background prediction which is the 68\% one sided upper limit of a poisson distribution with $\mu = B$ estimated with the 
-Neyman construction~\cite{bib:Neyman_1937,bib:PDG_2014}.
+Neyman construction~\cite{bib:Neyman_1937,bib:PDG_2014}.\\
 
-Four different benchmark models are choosen for the optimisation.
-As this analysis focus on short tracks, models with charginos with low lifetimes are choosen: $\ctau=1\cm$ and $\ctau=5\cm$. 
-Additionally, two different masses in order to cover also the mass dimension: 100\gev and 500\gev.
-
-A visualised optimisation is done by imposing general systematic uncertainties on the leptonic and the fake background of 100\% and 20\% respectively whereas
-the uncertainties arising from limited statistical precision of the samples are propagated accurately into the formula~\ref{eq:optimisation}.
-The results can be found in Fig.~\ref{fig:optimisation}, where the minimal cross section that is possible to exclude is shown in the $\pt-\ias$ plane.
+For a first qualitative estimation of the optimal selection cuts, general systematic uncertainties on the leptonic and the fake background of 100\% and 20\% respectively are imposed.
+Uncertainties arising from limited statistical precision of the samples used for the background estimation are propagated consistently into formula~\ref{eq:optimisation}.
+The results of this optimisation for two very different lifetimes (5\cm and 50\cm) and masses (100\gev and 500\gev) are visualised in Fig.~\ref{fig:optimisation}, where the minimum cross section that is possible to discover is shown in the $\pt-\ias$ plane.
 \begin{figure}[!h]
   \centering 
+  \vspace{50pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf} 
     \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_50cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf}\\ 
     \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_50cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf} 
   \end{tabular}
-  \caption{Minimal possible cross section to exclude in the $\ias-\pt$ plane for four different signal models.
+  \caption{Minimum possible cross section that can be discovered with 5$\sigma$ significance in the $\ias-\pt$ plane for four different signal models.
            The systematic uncertainties are taken to be 20\% and 100\% for the fake and the leptonic background respectively.
-           The uncertainty of the background arising from the limited size of datasets are propagated exactly to the search optimisation.}
+           The uncertainty on the background arising from the limited size of the used samples are propagated consistently to the search optimisation.}
+  \vspace{50pt}
   \label{fig:optimisation}
 \end{figure} 
-A exact optimisation taken the whole background uncertainties precisly into account is done without a visualisation.
-The corresponding results are shown in Table~\ref{tab:optimisation}.
+It can be seen, that for low masses and low lifetimes, the highest serach sensitivity is achieved by imposing rather soft selection cuts on \ias and \pt.
+Optimising for higher lifetime pushes the selection in \pt to larger values.
+For SUSY models with high chargino masses, like 500\gev, the search sensitivity can be increased by an increased selection cut in \ias, as can been seen in the bottom part of Fig.~\ref{fig:optimisation}.\\
 
-\renewcommand{\arraystretch}{1.5}
+For a structured optimisation all background uncertainties as estimated in Sections~\ref{sec:FakeBkg} and ~\ref{sec:LeptonicBkg} are taken precisely into account. 
+As this analysis focus on short tracks, only low lifetimes are considered in the optimisation procedure: $\ctau=1\cm-10\cm$.
+To cover the full mass space, the optimisation is done for masses between 100\gev and 600\gev.
+The corresponding results are shown in Table~\ref{tab:optimisation}.
+\renewcommand{\arraystretch}{1.3}
 \begin{table}[!h]
 \centering
-\caption{Optimal \pt and \ias cuts and corresponding minimal possible cross section $\sigma_{\text{min}}$ to exclude for different signal models.}
+\caption{Optimal \pt and \ias selection cuts and the corresponding minimum cross section $\sigma_{\text{min}}$ that can be discovered with 5$\sigma$ significance for different signal models.
+         For some signal samples a optimisation result is not availabale due to the limited size of these samples.}
 \label{tab:optimisation}
 \makebox[0.99\textwidth]{
 \begin{tabular}{c |c| c| c| c}
@@ -49,34 +54,53 @@ The corresponding results are shown in Table~\ref{tab:optimisation}.
 \toprule
 Mass [\gev] & Lifetime [\cm] & Optimal \pt cut & Optimal \ias cut & $\sigma_{\text{min}}$ \\
 \midrule
-100&                           1&                             30&                            0.05&                          59.0291   \\
-500&                           1&                             0 &                            0.0 &                          10000.0000\\
-100&                           5&                             50&                            0.05&                          2.6965    \\
-500&                           5&                             50&                            0.30&                          0.6180    \\
+100&                          1&                            30&                           0.05&                         59.03\\
+200&                          1&                            20&                           0.05&                         42.01\\
+300&                          1&                            n/a&                          n/a&                          n/a\\
+400&                          1&                            n/a&                          n/a&                          n/a\\
+500&                          1&                            n/a&                          n/a&                          n/a\\
+%600&                          1&                            n/a&                          n/a&                          n/a\\
+100&                          5&                            50&                           0.05&                         2.70\\
+200&                          5&                            30&                           0.30&                         1.81\\
+300&                          5&                            50&                           0.30&                         0.85\\
+400&                          5&                            50&                           0.30&                         0.83\\
+500&                          5&                            50&                           0.30&                         0.62\\
+%600&                          5&                            50&                           0.30&                         0.72\\
+100&                          10&                           30&                           0.30&                         1.44\\
+200&                          10&                           50&                           0.30&                         0.42\\
+300&                          10&                           50&                           0.30&                         0.27\\
+400&                          10&                           50&                           0.30&                         0.19\\
+500&                          10&                           50&                           0.30&                         0.15\\
+%600&                          10&                           50&                           0.30&                         0.14\\
 \bottomrule
 \multicolumn{5}{c}{} \\
 \end{tabular}}
 \end{table}
 
-It can be seen that the optimal selections are highly dependent on the signal models.
-
-Additionally, it is checked whether a sensitivity increase can be achieved by imposing also a selection on the number of missing outer hits $N_{lost}^{outer}$.
-For low lifetimes, a tiny increase in sensistivy is possible by selecting also in this variable but as this variable comes with new sources of uncertainties this is not consideres in this search.
+It can be seen that the optimal selection is highly dependent on the signal models.
+As in the qualitative optimisation procedure, the search sensitivity for low masses and low lifetimes is achieved by soft selection cuts in \pt.
+For higher masses, the optimal \ias selection is increasing.
 
 To have an optimal coverage over a wide mass space, four different signal regions are defined:
 \begin{enumerate}[1.)]
 \item $30\gev<\pt<50\gev$ and $0.05<\ias<0.3$
 \item $30\gev<\pt<50\gev$ and $\ias>0.3$
 \item $\pt>50\gev$ and $0.05<\ias<0.3$
-\item $\pt>50\gev$ and $\ias>0.3$.
+\item $\pt>50\gev$ and $\ias>0.3$.\\
 \end{enumerate}
+
+Besides the optimisation in \ias and \pt, is is also checked whether a sensitivity increase can be achieved by imposing also a selection on the number of missing outer hits $N_{\text{lost}}^{\text{outer}}$.
+For low lifetimes, a tiny increase in sensitivity of the order of FIXME is possible by a $N_{\text{lost}}^{\text{outer}}>0$ selection.
+However, as this variable means also a new source of uncertainty on the signal model, such a selection cut is not considered.\\
+
+The next section shows the comparison of the predicted number of events from Standard Model sources to the observed number of events in data.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results}
 \label{sec:Results}
 
-After the development of the background estimation methods for all different background sources and their corresponding systematic uncertainties (all explained in Section~\ref{sec:BackgroundEstimation}), 
+After developing the methods of the background estimation for all different background sources and their corresponding systematic uncertainties (all explained in Section~\ref{sec:BackgroundEstimation}), 
 the search is performed in four different signal regions with 19.7\fbinv of data collected at a centre-of-mass energy of $\sqrt{s} = 8\tev$ at the CMS experiment.
 The comparison between the predicted number of events and the number of observed events is shown in Fig.~\ref{fig:FinalResult}.
 \begin{figure}[!b]
@@ -203,13 +227,15 @@ The uncertainties are of very similar size in the signal regions with different 
 No \ias dependence is considered.
 
 \subsection*{Uncertainty on the simulation of the \ias}
-FIXME!!!
 An uncertainty on the simulation of \ias needs to be estimated to account for possible data-simulation differences for highly ionising particles.
+The estimation of the \ias uncertainty is done as in ~\cite{FIXME}.
 This uncertainty can be assessed by comparing data and simulation differences of slow protons.
 Slow protons are highly ionising, thus, can be used to determine the uncertainty in the high \ias region.
 
-The estimation is done with the ``Minimum Bias'' samples also used for the pixel calibration (see Section~\ref{sec:EnergyCalibration}).
+%The estimation is done with the ``Minimum Bias'' samples also used for the pixel calibration (see Section~\ref{sec:EnergyCalibration}).
 In order to select slow protons, good quality tracks with a momentum smaller than 2.5\gev are selected.
+The \ias versus momentum distribution for the selected tracks are shown in Fig.~\ref{fig:IasVsMomentum}.
+The kaon, proton and in data also the deuteron line is visible.
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
@@ -218,21 +244,22 @@ In order to select slow protons, good quality tracks with a momentum smaller tha
   \end{tabular}
   \caption{\ias versus momentum for good quality tracks with at least eight hits in observed data (left) and simulation (right).
            The kaon and proton line are visible in both datasets. The deuteron line is only visible in data, as deuterons are not simulated.}
-  \label{fig:optimisation}
+  \label{fig:IasVsMomentum}
 \end{figure} 
-
-Seevral slices are taken and fitted.
-Mean between mC and data is taken as sys. which is 10\%
+Two different slices in the momentum are extracted where the proton line is contained: p between $0.80-0.85$ and $0.95-1.00$.
+A gaussian function is fitted to the proton peak and the maximal difference of the mean the fitted gaussian between simulation and observed data is taken as systematic uncertainty.
+The \ias distribution for the two momentum ranges with the Gaussian fit is depicted in Fig.~\ref{fig:IasSlowProtons}.
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/hIas_analysis_2015_11_30_ForThesis_ptmin0p80_ptmax0p85.pdf} 
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/hIas_analysis_2015_11_30_ForThesis_ptmin0p95_ptmax1p0.pdf}
   \end{tabular}
-  \caption{bla}
-  \label{fig:optimisation}
+  \caption{\ias distribution for slow protons in simulation and obsereved data for a momentum range of $0.80-0.85$ (left) and $0.95-1.00$ (left).}
+  \label{fig:IasSlowProtons}
 \end{figure} 
-The size of the systeamtic uncertainty is also expected to cover the data-simulation difference for minimally ionising particles.
+The systematic uncertainty is estimated to a value of 6\%.
+The size of the systematic uncertainty is also expected to cover the data-simulation difference for minimal ionisation.
 
 
 \subsection*{Uncertainty on the simulation of the track reconstruction efficiency}
@@ -309,14 +336,14 @@ The \CLs method was developed for the Higgs searches at LEP in order not to over
 \end{equation*}
 The confidence limit is defined as the probability to observe less than or equal the number of observed events P($n<n_{\text{obs}}$) for a given background (or background+signal) hypothesis.
 In general, the considered distribution can be any constructed test statistics $Q$ and is not necessarily the distribution in the number of events.
-However, For Poissonian statistics this leads to the following expression for \CLb for one signal region
+However, For Poissonian statistics this leads to the following expression for \CLsb for one signal region
 \begin{equation*}
 \CLsb = \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),
 \end{equation*}
 where $\lambda$ is the mean of the poisson distribution and $\mu$ is the signal strength.
 
 In order to include systematic uncertainties, the background expectation $b$ or the signal expectation $\mu\cdot s$ are varied within a Gaussian distribution with a width estimated as the 1-$\sigma$ uncertainty and a mean of zero.
-For one source of systematic uncertainty on the background, it leads to the following expression for \CLsb
+For one source of systematic uncertainty on the background, this leads to the following expression for \CLsb
 \begin{equation*}
 \CLsb = \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \delta_b\right),
 \end{equation*}
@@ -325,7 +352,8 @@ A model is considered as excluded at a 95\% confidence level when \CLs is smalle
 
 
 
-In this search, the systematic uncertainties are taken as (un-)correlated according to Table~\ref{tab:BkgSysUncCorr}.
+In this search, the systematic uncertainties on the background expectation are taken as (un-)correlated according to Table~\ref{tab:BkgSysUncCorr}.
+The systematic uncertainties on the expected signal yields are considered fully correlated.
 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h] 
@@ -335,15 +363,15 @@ In this search, the systematic uncertainties are taken as (un-)correlated accord
 \begin{tabularx}{\textwidth}{|X|X|X|X|X|}  
 \multicolumn{5}{c}{} \\
 \toprule 
-                                         &Fakes                          & Taus                        &Electrons   &Muons        \\ 
+                                        & Fakes                        & Taus                          & Electrons                      & Muons                       \\ 
 \midrule
-Statistical uncertainty                 &0\% correlated                & 100\% for same bins in \ias  & 0\% correlated               & 100\% for same bins in \ias \\
+Statistical uncertainty                 &0\% correlated                & 100\% for same bins in \ias   & 0\% correlated                 & 100\% for same bins in \ias \\
 \midrule
-Leptonic scale factor uncertainty       & \centering -                 & 100\% for same bins in \ias  & 100\% for same bins in \ias  & 100\% for same bins in \ias  \\
+Leptonic scale factor uncertainty       & \centering -                 & 100\% for same bins in \ias   & 100\% for same bins in \ias    & 100\% for same bins in \ias \\
 \midrule
-Fake rate  uncertainty                  & 100\% for same bins in \ias  &  -                 &  -                 &  -  \\
+Fake rate  uncertainty                  & 100\% for same bins in \ias  &  -                            &  -                             &  -                          \\
 \midrule
-Ias uncertainty                         &0\% correlated                & 100\% for same bins in \pt              & 100\% for same bins in \pt &  100\% for same bins in \pt \\
+Ias uncertainty                         &0\% correlated                & 100\% for same bins in \pt    & 100\% for same bins in \pt     &  100\% for same bins in \pt \\
 \bottomrule
 \multicolumn{5}{c}{} \\
 \end{tabularx}  
@@ -352,17 +380,66 @@ Ias uncertainty                         &0\% correlated                & 100\% f
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Exclusion limits}
 
-The search is interpretet wiithin SUSY models with wino-like chargino and neutralinos....
-As explained in the previous section, the exclusion limits are done with the \CLs method.
-For each of the signal model (FIXME in total), the
+The search for highly ionising short tracks is interpreted within SUSY models with wino-like chargino and neutralinos.
+As explained in the previous section, the exclusion is done with the help of the \CLs method.
+As production channels, chargino pair production and chargino neutralino production are taken into account. 
+The corresponding cross sections can be found in Table~\ref{tab:SignalCrossSections}.
+The exclusion limits are derived with the Combine framework~\cite{bib:CMS:Combine} developed for the Higgs searches at CMS.
+The systematic uncertainties on the background and the signal yields  are modelled with log-normal distributions, whereas the statistical uncertainties on the background are modelled with a gamma distributions.
+The log-normal distribution is used rather than a normal distribution to ensure that the prediction cannot become negative.
+The gamma distribution is well suited for statistical uncertainties arising from limited statistical precision in control regions or in simulated samples.
 
-\begin{itemize}
-\item Say a word about background correlations.
-\item 1-d limits
-\item 2-d limits
-\end{itemize}
+In total, 37 different lifetimes for every mass point are considered, leading to 37 different exclusion limits.
+Four exemplary exclusion limits are shown in Fig.~\ref{fig:1dLimits}, the full set of exclusion limits can be found in Appendix~\ref{FIXME}.
+
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/LimitPlot_ctau5cm.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/LimitPlot_ctau10cm.pdf} \\
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/LimitPlot_ctau50cm.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/LimitPlot_ctau100cm.pdf} 
+  \end{tabular}
+  \caption{Four different exclusion limits for charginos with mean lifetimes of 5\cm (top left), 10\cm (top right), 50\cm (bottom left), 100\cm (bottom right).
+           The red line gives th expected 95\% upper cross-section limit with the 1-$\sigma$ (green band) and 2-$\sigma$ (yellow band).
+           The black line is the observed limit.
+           The signal cross section is depicted as dark green line. 
+           SUSY models can be excluded with a 95\% confidence when the signal cross section is large as the 95\% observed upper limit on the cross section.}
+  \label{fig:1dLimits}
+\end{figure} 
+Due to the higher cross sections for lower masses the exclusion is stronger is the low chargino mass region.
+A 2-dimensional exclusion limit in the chargino lifetime/mass paramater space is shown in Fig.~\ref{FIXME}.
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.69\textwidth]{figures/analysis/Interpretation/LimitPlot_2d_log.pdf} 
+  \end{tabular}
+  \caption{Excluded regions in the mass versus lifetime space.
+           Excluded models are all lying within the contour line.
+          1 sigma}
+  \label{fig:1dLimits}
+\end{figure} 
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
+Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
