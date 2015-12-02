@@ -331,6 +331,11 @@ A.~Vicini, ``Practical implementation of the PDF4LHC recipe''.
   \url{http://www.hep.ucl.ac.uk/pdf4lhc/PDF4LHC_practical_guide.pdf}.
 \newblock Accessed: 2015-11-27.
 
+\bibitem{bib:CMS:HSCP_8TeV_AN}
+L.~Q. at~al., ``Searches for Heavy Stable Charged Particles with Combined 2011
+  and 2012 Datasets'', {\em CMS Analysis Note} {\bf CMS-AN-12-293} (2013).
+  Internal documentation.
+
 \bibitem{bib:Ott_Thesis}
 J.~Ott, ``{Search for Resonant Top Quark Pair Production in the Muon+Jets
   Channel with the CMS Detector}''.

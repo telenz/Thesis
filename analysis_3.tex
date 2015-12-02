@@ -49,7 +49,7 @@ First, the background is determined inclusively in \dedx.
 Second, the \dedx (\ias) distribution is estimated with the help of a fake enriched control region. 
 This second step is needed to enable an optimisation in \dedx (see Section~\ref{sec:Optimisation}).
 
-\subsection*{Inclusive fake background estimation}
+\subsection{Inclusive fake background estimation}
 The inclusive background estimation closely follows the background estimation method done in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
 It aims at determining the probability of having a fake track in an event that passes the full signal candidate selection (Table~\ref{tab:SummaryCuts}) plus a potential additional \pt selection cut that is determined in an
 optimisation procedure (Section~\ref{sec:Optimisation}).
@@ -87,7 +87,7 @@ Dataset  & Luminosity [\fbinv]   \\
 \multicolumn{2}{c}{} \\
 \end{tabular}}
 \end{table}  
-For the $Z\rightarrow\mu\bar{\mu}$ selection an event is required to have two muons with $\pt>25\gev$ and $|\eta|<2.4$.
+For the $Z\rightarrow\mu\bar{\mu}$ selection, an event is required to have two muons with $\pt>25\gev$ and $|\eta|<2.4$.
 To suppress background from cosmic muons, the distance from the primary vertex must be less than $|d0|<0.2\cm$ in radial and $|dz|<0.5\cm$ in longitudinal direction.
 In order to suppress background arising from jets that fake muons, various quality criteria are applied: it is required that there is at least one hit in the muon detector that is considered in the global muon fit, 
 and that at least two measurements are from different muon detector stations.
@@ -216,7 +216,7 @@ That means that after the definition of the signal region, $N^{\text{fake, inclu
 Possible differences between the fake rate in \Zlep events and other SM processes are estimated on simulated events and taken into account as a systematic uncertainty (see Section~\ref{sec:FakeRateUncertainty}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{dE/dx shape of fake background}
+\subsection{dE/dx shape of fake background}
 The information about the energy release per path length for fake tracks should not be taken from simulated samples as the simulation of $dE/dx$ is not reliable (cf. Fig.~\ref{fig:Data-MC-Dedx_MIPs}).
 Within this analysis the Asymmetric Smirnov discriminator \ias is used to discriminate signal against background with respect to \dedx (see Section~\ref{sec:Ias}). 
 In order to estimate the \ias shape of fake tracks, a control region \fakeCR is defined that is enriched with fakes and shows the same \ias distribution as fake tracks in the signal region.

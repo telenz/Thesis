@@ -14,7 +14,7 @@
 TCanvas* plotTH2D(TH2* histo, TString xTitle, TString yTitle);
 TH1D* getMomentumSlide(TH2D* histo, double ptmin, double ptmax, TString name);
 
-void makeFit(double ptmin = 0.95, double ptmax = 1.00){
+void makeFit(double ptmin = 0.95, double ptmax = 1.00, double distToMean = 0.2, double min=0.2, double max=0.6){
 
   //  gStyle->SetOptFit(1111);
   gStyle->SetOptStat("");
@@ -26,7 +26,8 @@ void makeFit(double ptmin = 0.95, double ptmax = 1.00){
   TCanvas *c = new TCanvas("c","c",500,0,500,500);
   c->cd();
 
-  TString ana = "analysis_2015_11_30_ForThesis";
+  //TString ana = "analysis_2015_11_30_ForThesis";
+  TString ana = "analysis_2015_11_30_NoLostOuterHits";
 
   TFile *fileMC   = new TFile("/nfs/dust/cms/user/tlenz/HighDeDx-DisappTrks-PostProcessing-ExclusiveBins/systematics/signal/11_Ias/ANALYSES/workdir/" + ana + "/results/analyzer/ntuples/mc.root", "READ");
   TFile *fileData = new TFile("/nfs/dust/cms/user/tlenz/HighDeDx-DisappTrks-PostProcessing-ExclusiveBins/systematics/signal/11_Ias/ANALYSES/workdir/" + ana + "/results/analyzer/ntuples/data.root", "READ");
@@ -53,8 +54,8 @@ void makeFit(double ptmin = 0.95, double ptmax = 1.00){
   histoData -> SetMarkerSize(0.7);
 
 
-  histoMC   -> GetXaxis()->SetRangeUser(0.2,1.0);
-  histoData -> GetXaxis()->SetRangeUser(0.2,1.0);
+  histoMC   -> GetXaxis()->SetRangeUser(min,max);
+  histoData -> GetXaxis()->SetRangeUser(min,max);
 
 
   histoMC   -> Scale(1./histoMC->Integral());
@@ -68,8 +69,8 @@ void makeFit(double ptmin = 0.95, double ptmax = 1.00){
 
 
   // for slice 0.95 - 1.00
-  TF1* fMC   = new TF1("fMC","gaus",maximumMC-0.2,maximumMC+0.2);
-  TF1* fData = new TF1("fData","gaus",maximumMC-0.2,maximumMC+0.2);
+  TF1* fMC   = new TF1("fMC","gaus",maximumMC-distToMean,maximumMC+distToMean);
+  TF1* fData = new TF1("fData","gaus",maximumMC-distToMean,maximumMC+distToMean);
 
   // for slice 0.80 - 0.85
   //TF1* fMC   = new TF1("fMC","gaus",maximumMC-0.1,maximumMC+0.1);
@@ -107,7 +108,7 @@ void makeFit(double ptmin = 0.95, double ptmax = 1.00){
 
   TLatex*  info   = new TLatex();
   info-> SetNDC();
-  TString AuxString = Form("%.2f GeV < p_{T} < %.2f GeV ",ptmin,ptmax);
+  TString AuxString = Form("%.2f GeV < p < %.2f GeV ",ptmin,ptmax);
   info->DrawLatex(0.20,0.87,AuxString);
 
 
@@ -138,8 +139,8 @@ void makeFit(double ptmin = 0.95, double ptmax = 1.00){
   int ptminInt = (int) ptmin;
   int ptmaxInt = (int) ptmax;
 
-  double max = histoMC->GetMaximum();
-  histoMC->SetMaximum(100*max);
+  double maxAux = histoMC->GetMaximum();
+  histoMC->SetMaximum(100*maxAux);
 
   c->SaveAs("plots/hIas_" + ana + Form("_ptmin%ip%.0f_ptmax%ip%.0f.pdf",ptminInt,(ptmin-ptminInt)*100,ptmaxInt,(ptmax-ptmaxInt)*100));
 

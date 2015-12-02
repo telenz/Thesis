@@ -2,9 +2,11 @@
 #include <fstream>
 #include <iomanip>
 #include <cmath>
+#include <vector>
 #include "TFile.h"
 #include "TTree.h"
 #include "TH1D.h"
+#include "TMath.h"
 
 
 
@@ -16,19 +18,21 @@ int makeCutflowTable()
   vector<TH1D*> samples;
 
   //TString pathName="/afs/desy.de/user/t/tlenz//xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_18_METGt100_JetPt110_TrackPtGt20/results/analyzer/ntuples/input_weighted";
-   TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_12_METGt100_JetPt110/results/analyzer/ntuples/input_weighted";
+  //TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_12_METGt100_JetPt110/results/analyzer/ntuples/input_weighted";
+  TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_30_METGt100_JetPt110_TrackPtGt20/results/analyzer/ntuples/input_weighted";
   TFile *file1 = TFile::Open(pathName + "/wjets.root","READ");
   file1->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file2 = TFile::Open(pathName + "/ttjets.root","READ");
   file2->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file3 = TFile::Open(pathName + "/dytoll.root","READ");
   file3->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file4 = TFile::Open(pathName + "/qcd.root","READ");
   file4->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
+  //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   TFile *file5 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_10cm.root","READ");
   file5->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
   //samples.push_back(hCutflow);
@@ -41,6 +45,10 @@ int makeCutflowTable()
   TFile *file8 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_100cm.root","READ");
   file8->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
   //samples.push_back(hCutflow);
+  //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  TFile *file9 = TFile::Open(pathName + "/data.root","READ");
+  file9->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
 
   ofstream cutflow;
   cutflow.open("cutflowTable.txt");
@@ -50,7 +58,7 @@ int makeCutflowTable()
 
   cout<<setprecision(5);  
 
-  for(int i=1; i<samples[0]->GetNbinsX(); i++){
+  for(int i=1; i<=samples[0]->GetNbinsX(); i++){
 
    
     if(i==1)  cout<<left<<setw(90)<<"after skim";
@@ -66,7 +74,7 @@ int makeCutflowTable()
     if(i==11) cout<<left<<setw(90)<<"$\\geq1$ trk with $|d0|<0.02\\cm$";
     if(i==12) cout<<left<<setw(90)<<"$\\geq1$ trk with $|dz|<0.5\\cm$";
     if(i==13) cout<<left<<setw(90)<<"$\\geq1$ trk with $|\\eta|<2.1$";
-    if(i==14) cout<<left<<setw(90)<<"$\\geq1$ trk with $\\pt>10\\gev$";
+    if(i==14) cout<<left<<setw(90)<<"$\\geq1$ trk with $\\pt>20\\gev$";
     if(i==15) cout<<left<<setw(90)<<"$\\geq1$ trk without a $\\mu$ within $\\Delta R<0.15$";
     if(i==16) cout<<left<<setw(90)<<"$\\geq1$ trk without an e within $\\Delta R<0.15$";
     if(i==17) cout<<left<<setw(90)<<"$\\geq1$ trk without a $\\tau$ within $\\Delta R<0.15$";
@@ -104,14 +112,14 @@ int makeCutflowTable()
 
       
       int exp     = (int)std::log10((float)samples[s]->GetBinContent(i));
-      double base = samples[s]->GetBinContent(i)/pow(10,exp);
+      double base = samples[s]->GetBinContent(i)/TMath::Power(10.,exp);
      
       if(samples[s]->GetBinContent(i) == 0){
 	exp  = 0;
 	base = 0;
       }
      
-      
+      cout.precision(2);
       cout<<"& "<<fixed<<setw(5)<<base<<"$\\cdot10^{"<<setw(2)<<exp<<"}$"<<setw(1)<<"";
     }
     cout<<"\\\\"<<endl;

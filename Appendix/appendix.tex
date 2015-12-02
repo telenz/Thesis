@@ -1,5 +1,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Lifetime reweighting}
+\label{app:LifetimeReweighting}
+The probability density function of a particle's proper lifetime for a sample generated with a particle's mean lifetime $\tau^{\text{gen}}$ is given by
+\begin{equation*}
+p \left( t \right) = \frac{1}{\tau^{\text{gen}}} \cdot \exp\left[ -\frac{t}{\tau^{\text{gen}}} \right].
+\end{equation*}
+
+After carrying out the lifetime reweighting procedure, the targeted p.d.f of the particle's new mean lifetime $\tau^{\text{target}}$ is given by
+\begin{equation*}
+p'  \left( t \right) = \frac{1}{\tau^{\text{target}}} \cdot \exp\left[ -\frac{t}{\tau^{\text{target}}} \right].
+\end{equation*}
+Thus, an event containing a particle with individual proper lifetime can be reweighted with the following weight
+\begin{equation*}
+\label{eq:reweight}
+\frac{p'  \left( t \right)}{p \left( t \right)} = \frac{\tau^{\text{gen}}}{\tau^{\text{target}}} \cdot \exp\left[ \frac{t}{\tau^{\text{gen}}} - \frac{t}{\tau^{\text{target}}} \right].  %= \frac{\tau^{\text{gen}}}{\tau^{\text{target}}} \cdot \exp \left[ t \cdot \left( \frac{1}{\tau^{\text{gen}}} - \frac{1}{\tau^{\text{target}}} \right) \right] .
+\end{equation*}
+For more than one non-stable particle, the event weight is calculated by multiplying the weights of the single reweighting procedures.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 \chapter{Detailed event yield tables for simulated samples and data}
 \label{app:cutflow}
 
@@ -67,8 +88,8 @@ before selection                                                                
 trigger                                                                                   & 1.56 $\cdot10^{4 }$ & 1.49 $\cdot10^{4 }$ & 4.63 $\cdot10^{1 }$ & 4.61 $\cdot10^{1 }$ \\
 $\ptfirstjet>100\gev$                                                                     & 1.10 $\cdot10^{4 }$ & 1.05 $\cdot10^{4 }$ & 3.65 $\cdot10^{1 }$ & 3.58 $\cdot10^{1 }$ \\
 $\met>100\gev$                                                                            & 1.09 $\cdot10^{4 }$ & 9.84 $\cdot10^{3 }$ & 3.63 $\cdot10^{1 }$ & 3.56 $\cdot10^{1 }$ \\
-$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                  & 7.91 $\cdot10^{3 }$ & 6.99 $\cdot10^{3 }$ & 2.76 $\cdot10^{1 }$ & 2.70 $\cdot10^{1 }$ \\
-$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                          & 7.91 $\cdot10^{3 }$ & 7.04 $\cdot10^{3 }$ & 2.77 $\cdot10^{1 }$ & 2.71 $\cdot10^{1 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                     & 7.91 $\cdot10^{3 }$ & 6.99 $\cdot10^{3 }$ & 2.76 $\cdot10^{1 }$ & 2.70 $\cdot10^{1 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                             & 7.91 $\cdot10^{3 }$ & 7.04 $\cdot10^{3 }$ & 2.77 $\cdot10^{1 }$ & 2.71 $\cdot10^{1 }$ \\
 $\geq1$ reconstructed trk                                                                 & 3.13 $\cdot10^{3 }$ & 5.75 $\cdot10^{3 }$ & 5.74 $\cdot10^{0 }$ & 2.13 $\cdot10^{1 }$ \\
 $\geq1$ high-purity trk                                                                   & 2.91 $\cdot10^{3 }$ & 5.66 $\cdot10^{3 }$ & 5.25 $\cdot10^{0 }$ & 2.08 $\cdot10^{1 }$ \\
 $\geq1$ trk with $N_{\text{miss}}^{\text{middle}}=0$                                      & 2.87 $\cdot10^{3 }$ & 5.46 $\cdot10^{3 }$ & 5.23 $\cdot10^{0 }$ & 2.02 $\cdot10^{1 }$ \\
@@ -95,112 +116,6 @@ $\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} <
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-\chapter{Selection requirements of the ``tag-and-probe'' samples}
-\label{app:TagAndProbeRequirements}
-
-\renewcommand{\arraystretch}{1.4}
-\begin{table}[!h]
-\centering
-\caption{Event selection cuts for the muon ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the muon scale factor \muonscalefactor.}
-\label{tab:MuonTagAndProbeSample}
-\makebox[0.99\textwidth]{
-\begin{tabular}{l|l }
-\multicolumn{2}{c}{} \\
-\toprule
-\multirow{10}{*}{\makecell[l]{Muon selection}}                 & $\pt>25\gev$ \\
-                                                               & $|\eta|<2.4$ \\
-                                                               & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(\mu)<0.12$ \\
-                                                               & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
-                                                               & $|d0|<0.2\cm$  \\
-                                                               & $|dz|<0.5\cm$  \\
-                                                               & $\geq$ 1 hit in the muon detector  \\
-                                                               & $\geq$ 2 hits in different muon detector planes  \\
-                                                               & $\geq$ 1 hit in the pixel detector  \\
-                                                               & $\geq$ 6 hits in the tracker system  \\
-\midrule
-\multirow{6}{*}{Candidate track selection}                     &  Good quality selection \\
-                                                               &  Kinematic selection    \\
-                                                               &  \makecell[l]{Lepton/jet veto ($\mu$ veto inverted for the\\\hspace{2.7cm} ``tag-and-probe'' control region)}       \\   
-                                                               &  Isolation selection    \\  
-                                                               &  $\nhits>5$             \\  
-\midrule
-\multirow{2}{*}{Event-based selection}                         &  Muon and candidate track opposite in charge                                     \\
-                                                               &  $80\gev<M_{\text{inv}}\left(\mu,\text{can. trk} \right)<100\gev$        \\
-
-\bottomrule
-\multicolumn{2}{c}{} \\
-\end{tabular}}
-\end{table}
-
-\renewcommand{\arraystretch}{1.4}
-\begin{table}[!h]
-\centering
-\caption{Event selection cuts for the tau ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the tau scale factor \tauscalefactor.}
-\label{tab:TauTagAndProbeSample}
-\makebox[0.99\textwidth]{
-\begin{tabular}{l|l }
-\multicolumn{2}{c}{} \\
-\toprule
-\multirow{10}{*}{\makecell[l]{Muon selection\\ that is compatible with a \\$\tau\rightarrow\mu\nu\nu$ decay}}                 & $\pt>25\gev$ \\
-                                                               & $|\eta|<2.4$ \\
-                                                               & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(\mu)<0.12$ \\
-                                                               & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
-                                                               & $|d0|<0.2\cm$  \\
-                                                               & $|dz|<0.5\cm$  \\
-                                                               & $\geq$ 1 hit in the muon detector  \\
-                                                               & $\geq$ 2 hits in different muon detector planes  \\
-                                                               & $\geq$ 1 hit in the pixel detector  \\
-                                                               & $\geq$ 6 hits in the tracker system  \\
-\midrule
-\multirow{6}{*}{Candidate track selection}                     &  Good quality selection \\
-                                                               &  Kinematic selection    \\
-                                                               &  \makecell[l]{Lepton/jet veto ($\tau$ veto inverted for the\\\hspace{2.7cm} ``tag-and-probe'' control region)}       \\   
-                                                               &  $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$\\  
-                                                               &  $\nhits>5$             \\  
-\midrule
-\multirow{2}{*}{Event-based selection}                         &  Muon and candidate track opposite in charge                                     \\
-                                                               &  $40\gev<M_{\text{inv}}\left( \mu, \text{cand. trk}  \right)<75\gev$        \\
-                                                               & $m_T\left(\mu,\met\right)<40\gev$ \\
-
-\bottomrule
-\multicolumn{2}{c}{} \\
-\end{tabular}}
-\end{table}
-
-
-\renewcommand{\arraystretch}{1.4}
-\begin{table}[!h]
-\centering
-\caption{Event selection cuts for the electron ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the electron scale factor \electronscalefactor.}
-\label{tab:ElectronTagAndProbeSample}
-\makebox[0.99\textwidth]{
-\begin{tabular}{l|l}
-\multicolumn{2}{c}{} \\
-\toprule
-\multirow{6}{*}{Electron selection}                            &  $\pt>25\gev$ \\
-                                                               &  $|\eta|<2.5$ \\
-                                                               &  $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(e)<0.15$ \\
-                                                               &  pass conversion veto    \\
-                                                               &  no missing tracker hits  \\
-                                                               &  good MVA electron as defined in \cite{bib:CMS:ElectronMVA}  \\
-\midrule
-\multirow{6}{*}{Candidate track selection}                    &  Good quality selection \\
-                                                              &  Kinematic selection    \\
-                                                              &   \makecell[l]{Lepton/jet veto ($e$ veto inverted for the\\\hspace{2.7cm} ``tag-and-probe'' control region)}       \\   
-                                                              &  $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$    \\  
-                                                              &  $\nhits>5$             \\  
-\midrule
-\multirow{2}{*}{Event-based selection}                         &  Electron and candidate track opposite in charge                      \\
-                                                               &  $80\gev<M_{\text{inv}}\left(e,\text{cand. trk}  \right)<100\gev$        \\
-
-\bottomrule
-\multicolumn{2}{c}{} \\
-\end{tabular}}
-\end{table}  
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \chapter{Validation tests of the background estimation methods}
 \label{app:Validation}
@@ -329,3 +244,217 @@ Electrons        &$0.00^{+0.05}_{-0.00}$                & \\
 The underprediction in the control regions with $\ias>0.2$ is caused by the pediction of the leptonic \ias shape from simulation.
 This leads to a bias as the \ias distribution in simulation is softer than in data.
 However, this bias is taken into account as systematic uncertainty (see Section~\ref{sec:LeptonIasUncertainty}).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\chapter{Selection requirements of the ``tag-and-probe'' samples}
+\label{app:TagAndProbeRequirements}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Event selection cuts for the muon ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the muon scale factor \muonscalefactor.}
+\label{tab:MuonTagAndProbeSample}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|l }
+\multicolumn{2}{c}{} \\
+\toprule
+\multirow{10}{*}{\makecell[l]{Muon selection}}                 & $\pt>25\gev$ \\
+                                                               & $|\eta|<2.4$ \\
+                                                               & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(\mu)<0.12$ \\
+                                                               & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
+                                                               & $|d0|<0.2\cm$  \\
+                                                               & $|dz|<0.5\cm$  \\
+                                                               & $\geq$ 1 hit in the muon detector  \\
+                                                               & $\geq$ 2 hits in different muon detector planes  \\
+                                                               & $\geq$ 1 hit in the pixel detector  \\
+                                                               & $\geq$ 6 hits in the tracker system  \\
+\midrule
+\multirow{6}{*}{Candidate track selection}                     &  Good quality selection \\
+                                                               &  Kinematic selection    \\
+                                                               &  \makecell[l]{Lepton/jet veto ($\mu$ veto inverted for the\\\hspace{2.7cm} ``tag-and-probe'' control region)}       \\   
+                                                               &  Isolation selection    \\  
+                                                               &  $\nhits>5$             \\  
+\midrule
+\multirow{2}{*}{Event-based selection}                         &  Muon and candidate track opposite in charge                                     \\
+                                                               &  $80\gev<M_{\text{inv}}\left(\mu,\text{can. trk} \right)<100\gev$        \\
+
+\bottomrule
+\multicolumn{2}{c}{} \\
+\end{tabular}}
+\end{table}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Event selection cuts for the tau ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the tau scale factor \tauscalefactor.}
+\label{tab:TauTagAndProbeSample}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|l }
+\multicolumn{2}{c}{} \\
+\toprule
+\multirow{10}{*}{\makecell[l]{Muon selection\\ that is compatible with a \\$\tau\rightarrow\mu\nu\nu$ decay}}                 & $\pt>25\gev$ \\
+                                                               & $|\eta|<2.4$ \\
+                                                               & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(\mu)<0.12$ \\
+                                                               & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
+                                                               & $|d0|<0.2\cm$  \\
+                                                               & $|dz|<0.5\cm$  \\
+                                                               & $\geq$ 1 hit in the muon detector  \\
+                                                               & $\geq$ 2 hits in different muon detector planes  \\
+                                                               & $\geq$ 1 hit in the pixel detector  \\
+                                                               & $\geq$ 6 hits in the tracker system  \\
+\midrule
+\multirow{6}{*}{Candidate track selection}                     &  Good quality selection \\
+                                                               &  Kinematic selection    \\
+                                                               &  \makecell[l]{Lepton/jet veto ($\tau$ veto inverted for the\\\hspace{2.7cm} ``tag-and-probe'' control region)}       \\   
+                                                               &  $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$\\  
+                                                               &  $\nhits>5$             \\  
+\midrule
+\multirow{2}{*}{Event-based selection}                         &  Muon and candidate track opposite in charge                                     \\
+                                                               &  $40\gev<M_{\text{inv}}\left( \mu, \text{cand. trk}  \right)<75\gev$        \\
+                                                               & $m_T\left(\mu,\met\right)<40\gev$ \\
+
+\bottomrule
+\multicolumn{2}{c}{} \\
+\end{tabular}}
+\end{table}
+
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{Event selection cuts for the electron ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the electron scale factor \electronscalefactor.}
+\label{tab:ElectronTagAndProbeSample}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|l}
+\multicolumn{2}{c}{} \\
+\toprule
+\multirow{6}{*}{Electron selection}                            &  $\pt>25\gev$ \\
+                                                               &  $|\eta|<2.5$ \\
+                                                               &  $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(e)<0.15$ \\
+                                                               &  pass conversion veto    \\
+                                                               &  no missing tracker hits  \\
+                                                               &  good MVA electron as defined in \cite{bib:CMS:ElectronMVA}  \\
+\midrule
+\multirow{6}{*}{Candidate track selection}                    &  Good quality selection \\
+                                                              &  Kinematic selection    \\
+                                                              &   \makecell[l]{Lepton/jet veto ($e$ veto inverted for the\\\hspace{2.7cm} ``tag-and-probe'' control region)}       \\   
+                                                              &  $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$    \\  
+                                                              &  $\nhits>5$             \\  
+\midrule
+\multirow{2}{*}{Event-based selection}                         &  Electron and candidate track opposite in charge                      \\
+                                                               &  $80\gev<M_{\text{inv}}\left(e,\text{cand. trk}  \right)<100\gev$        \\
+
+\bottomrule
+\multicolumn{2}{c}{} \\
+\end{tabular}}
+\end{table}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\chapter{Underlying distributions for the qualitative search sensitivity optimisation}
+\label{app:OptimisationApp}
+
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/BkgYield_ECaloLe5.pdf} 
+    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/BkgUncertainty_ECaloLe5.pdf}\\ 
+    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SignalYield.pdf}
+    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_50cm_ECaloLe5_SignalYield.pdf}\\ 
+    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SignalYield.pdf}
+    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_50cm_ECaloLe5_SignalYield.pdf}\\ 
+  \end{tabular}
+  \caption{Background yield, background uncertainty and signal yield for different \pt and \ias selection requirements and four different signal models.}
+  \label{fig:optimisationApp}
+\end{figure} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\chapter{Trigger emulation}
+\label{app:TriggerEmulation}
+
+As the HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 trigger is not availabale in the simulated signal samples, this trigger is emulated in these samples.
+Since HLT trigger information is stored in the samples, it is possible to rebuild the trigger afterwards. 
+
+The following requirements must be fulfilled in order to consider the trigger fireing~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}:
+\begin{itemize}
+\item \pt of hltL1sL1ETM40 $>40\gev$
+\item \pt of hltCentralJet65L1FastJet $>65\gev$
+\item \pt of hltMET65 $>65\gev$
+\item \pt of hltCentralPFJet80 $>80\gev$
+\item \pt of hltPFMETWOM95 $>105\gev$
+\end{itemize}
+As a cross check, also the HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 is rebuild with the looser selection of \pt of hltPFMETWOM95 $>95\gev$.
+The correct implementation could be verified with this test.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\chapter{Exclusion limits for all simulated lifetimes}
+\label{app:LimitPlots2d}
+
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau1cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau2cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau3cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau4cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau5cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau6cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau7cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau8cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau9cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau10cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau20cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau30cm.pdf} \\
+  \end{tabular}
+  \caption{95\% CL exclusion limits for signal models with $\ctau = 1-30\cm$.}
+  \label{fig:1dLimitsA}
+\end{figure}
+
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau40cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau50cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau60cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau70cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau80cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau90cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau100cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau200cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau300cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau400cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau500cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau600cm.pdf} \\
+  \end{tabular}
+  \caption{95\% CL exclusion limits for signal models with $\ctau = 40-600\cm$.}
+  \label{fig:1dLimitsB}
+\end{figure} 
+
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau700cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau800cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau900cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau1000cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau2000cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau3000cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau4000cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau5000cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau6000cm.pdf} \\
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau7000cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau8000cm.pdf} 
+    \includegraphics[width=0.29\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau9000cm.pdf} \\
+  \end{tabular}
+  \caption{95\% CL exclusion limits for signal models with $\ctau = 700-9000\cm$.}
+  \label{fig:1dLimitsC}
+\end{figure} 

@@ -36,6 +36,7 @@ In Table \ref{tab:SMsamples_RECO} all available SM samples used in this analysis
  \ZlepJets ($\ell=e,\mu,\tau$)                         &  3531.9       &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
  QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)               &  9374794.2    &  LO  \\%% & 44.3\\
 \bottomrule
+\multicolumn{3}{c}{} \\
 \end{tabular}}
 \end{table}  
 Due to the size of the samples (between 5 and 70\,TB) a reduction needs to be done in order to limit the storage space requirements.
@@ -58,6 +59,7 @@ They are listed in Table~\ref{tab:SMsamples_AOD}.
 \WJets                                             &  36703.2    &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
 \ZlepJets ($\ell=e,\mu,\tau$)                      &  3531.9     &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
 \bottomrule
+\multicolumn{3}{c}{} \\
 \end{tabular}}
 \end{table}  
 
@@ -77,11 +79,11 @@ To narrow down the required computing sources, the simulation is only done for a
 In order to scan in a high resolution over the lifetime space, other lifetimes are generated using lifetime reweighting.
 The weight for each event depends on the individual proper lifetime of the chargino and is given by
 \begin{equation*}
-w = \prod_{i=1}^n \frac{\tau^{\text{gen}}}{\tau^{\text{target}}}\cdot  \exp \left[ t_i \cdot \left( \frac{1}{\tau^{\text{target}}} - \frac{1}{\tau^{\text{gen}}} \right) \right] ,
+w = \prod_{i=1}^n \frac{\tau^{\text{gen}}}{\tau^{\text{target}}}\cdot  \exp \left[ t_i \cdot \left( \frac{1}{\tau^{\text{gen}}} - \frac{1}{\tau^{\text{target}}} \right) \right] ,
 \end{equation*}
 where $n$ is the  number of charginos in the event, $\tau^{\text{gen}}$ is the generated mean lifetime in the particle's rest frame and $t_i$ is the individual proper lifetime of the chargino. 
 The targeted mean lifetime is given by $\tau^{\text{target}}$. 
-A derivation of this formula can be found in Appendix~\ref{FIXME}.
+A derivation of this formula can be found in Appendix~\ref{app:LifetimeReweighting}.
 Using this reweighting procedure a good coverage of the lifetime space can be achieved with lifetimes of \ctau = $a\cdot10^{n}$ for $n=0,1,2,3$ and $a=\left[1,9\right]$.
 Figure~\ref{fig:LifetimeReweighting} shows the exponential distribution of the individual proper lifetime of the charginos after the reweighting of a simulated sample with $c\tau^{\text{gen}}=50\cm$ to a lifetime of $c\tau^{\text{target}}=10\cm$.
 \begin{figure}[!t]
@@ -121,6 +123,7 @@ The cross section does not depend on the lifetime of the chargino.
  500     &  0.00553    &  0.01205 \\
  600     &  0.00196    &  0.00431 \\
 \bottomrule
+\multicolumn{3}{c}{} \\
 \end{tabular}}
 \end{table}  
 
@@ -161,6 +164,7 @@ Trigger  & Luminosity [\fbinv]   \\
  HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95    &  14.4  \\
  HLT\_MET120\_HBHENoiseCleaned                    &  19.7  \\
 \bottomrule
+\multicolumn{2}{c}{} \\
 \end{tabular}}
 \end{table}  
 
@@ -190,6 +194,7 @@ Dataset  & Luminosity [\fbinv]   \\
  /MET/Run2012C-22Jan2013-v1/RECO         &  7.055  \\
  /METParked/Run2012D-22Jan2013-v1/RECO   &  7.354  \\ 
 \bottomrule
+\multicolumn{2}{c}{} \\
 \end{tabular}}
 \end{table}  
 Again, because of the size of the datasets ($\sim150\,$TB in total), a reduction of the size is achieved by selecting only events where one of the used triggers fired and that contain at least one jet with a minimum \pt of 50\gev.\\
@@ -328,7 +333,7 @@ In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two qua
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackdz_lin.pdf}
   \end{tabular}
   \caption{Absolute value of the radial (left) and longitudinal (right) distance between the track and the primary vertex after trigger requirements and multijet suppression cuts. 
-           Overflow entries are added to the last bin.}
+           All events with a candidate track with a radial (longitudinal) distance larger than 0.2\cm (5\cm) are contained in the last bin.}
   \label{fig:d0_dz}
 \end{figure}
 
@@ -426,7 +431,8 @@ The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:T
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminJet_log.pdf}
   \end{tabular}
   \caption{The minimum $\Delta R$ between the candidate track and a reconstructed electron (top left), muon (top right), tau (bottom left) or jet (bottom right) 
-           after the full candidate track selection cuts besides the one shown in the corresponding plot.}
+           after the full candidate track selection cuts besides the one shown in the corresponding plot. 
+           The last bin contains all events where the candidate track has a $\Delta R_{\text{min}}$ larger than 1.5 or 5.0 to the next lepton or jet respectively. }
   \label{fig:TrackdRmin}
 \end{figure}
 
