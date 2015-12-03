@@ -21,15 +21,15 @@ For more than one non-stable particle, the event weight is calculated by multipl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Detailed event yield tables for simulated samples and data}
+\chapter{Event yields for simulated samples and data}
 \label{app:cutflow}
 
 
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.15}
 \begin{table}[!h]
 %\begin{sideways}
 \centering
-\caption{Event yields after each selection step for various background processes. FIXME update this table with correct ttjets sample!!}
+\caption{Event yields after each selection step for various background processes.}
 \label{tab:CutflowMC}
 \makebox[0.99\textwidth]{
 \begin{tabular}{|l|c|c|c|c|}
@@ -39,29 +39,31 @@ For more than one non-stable particle, the event weight is calculated by multipl
 Selection               &   \WJets  & \ttbarJets  & \Zlep & Multijet  \\
 \midrule
 
-after skim ($\pt^{\text{1.jets}}>60\gev$)                                                                             & 9.16 $\cdot10^{7 }$ & 1.04 $\cdot10^{6 }$ & 2.21 $\cdot10^{7 }$ & 1.38 $\cdot10^{11}$ \\
-trigger                                                                                   & 4.31 $\cdot10^{6 }$ & 1.12 $\cdot10^{5 }$ & 4.23 $\cdot10^{3 }$ & 4.32 $\cdot10^{6 }$ \\
-$\ptfirstjet>100\gev$                                                                     & 3.07 $\cdot10^{6 }$ & 7.89 $\cdot10^{4 }$ & 1.02 $\cdot10^{3 }$ & 1.15 $\cdot10^{6 }$ \\
-$\met>100\gev$                                                                            & 1.89 $\cdot10^{6 }$ & 5.17 $\cdot10^{4 }$ & 6.26 $\cdot10^{2 }$ & 9.63 $\cdot10^{5 }$ \\
-$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                     & 1.11 $\cdot10^{6 }$ & 6.58 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                             & 1.11 $\cdot10^{6 }$ & 6.64 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 2.01 $\cdot10^{4 }$ \\
-$\geq1$ reconstructed trk                                                                 & 1.10 $\cdot10^{6 }$ & 6.57 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ high-purity trk                                                                   & 1.10 $\cdot10^{6 }$ & 6.57 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk with $N_{\text{miss}}^{\text{middle}}=0$                                             & 1.09 $\cdot10^{6 }$ & 6.55 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk with $N_{\text{miss}}^{\text{inner}}=0$                                              & 1.07 $\cdot10^{6 }$ & 6.53 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk with $|d0|<0.02\cm$                                                           & 1.07 $\cdot10^{6 }$ & 6.47 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk with $|dz|<0.5\cm$                                                            & 1.07 $\cdot10^{6 }$ & 6.46 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk with $|\eta|<2.1$                                                             & 1.03 $\cdot10^{6 }$ & 6.41 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk with $\pt>10\gev$                                                             & 1.03 $\cdot10^{6 }$ & 6.41 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk without a $\mu$ within $\Delta R<0.15$                                        & 9.85 $\cdot10^{5 }$ & 6.32 $\cdot10^{3 }$ & 1.14 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk without an e within $\Delta R<0.15$                                           & 9.55 $\cdot10^{5 }$ & 6.22 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk without a $\tau$ within $\Delta R<0.15$                                       & 9.53 $\cdot10^{5 }$ & 6.21 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 9.55 $\cdot10^{3 }$ \\
-$\geq1$ trk without a jet within $\Delta R<0.5$                                           & 9.15 $\cdot10^{5 }$ & 6.13 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 9.55 $\cdot10^{3 }$ \\
-\makecell[l]{$\geq1$ trk ! within $\Delta R<0.05$ of \\\hfill a dead/noisy ECAL cell}     & 3.70 $\cdot10^{5 }$ & 3.78 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 0.00 $\cdot10^{0 }$ \\
-\makecell[l]{$\geq1$ trk ! within an ECAL  intermodule gap}                               & 3.52 $\cdot10^{5 }$ & 3.61 $\cdot10^{3 }$ & 8.53 $\cdot10^{1 }$ & 0.00 $\cdot10^{0 }$ \\
-$\geq1$ trk ! within $1.42<|\eta|<1.65$                                                   & 2.21 $\cdot10^{5 }$ & 2.30 $\cdot10^{3 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
-$\geq1$ trk ! within $\Delta R<0.25$ to a bad CSC                                         & 1.04 $\cdot10^{4 }$ & 1.20 $\cdot10^{2 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
-$\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$     & 8.14 $\cdot10^{3 }$ & 7.96 $\cdot10^{1 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+after skim                                                                                & 9.16 $\cdot10^{7 }$ & 1.04 $\cdot10^{6 }$ & 2.21 $\cdot10^{7 }$ & 1.38 $\cdot10^{11}$ \\
+trigger                                                                                   & 4.31 $\cdot10^{6 }$ & 1.15 $\cdot10^{5 }$ & 4.23 $\cdot10^{3 }$ & 4.32 $\cdot10^{6 }$ \\
+$\ptfirstjet>100\gev$                                                                     & 2.47 $\cdot10^{6 }$ & 7.17 $\cdot10^{4 }$ & 2.60 $\cdot10^{3 }$ & 2.75 $\cdot10^{6 }$ \\
+$\met>100\gev$                                                                            & 1.89 $\cdot10^{6 }$ & 5.31 $\cdot10^{4 }$ & 6.26 $\cdot10^{2 }$ & 9.63 $\cdot10^{5 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                  & 1.11 $\cdot10^{6 }$ & 6.81 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 2.01 $\cdot10^{4 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                          & 1.11 $\cdot10^{6 }$ & 6.76 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\geq1$ track in the event with:                                                          &&&&\\
+reconstructed trk                                                                         & 1.10 $\cdot10^{6 }$ & 6.75 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+high-purity                                                                               & 1.10 $\cdot10^{6 }$ & 6.74 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$N_{\text{miss}}^{\text{middle}}=0$                                                       & 1.09 $\cdot10^{6 }$ & 6.72 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$N_{\text{miss}}^{\text{inner}}=0$                                                        & 1.07 $\cdot10^{6 }$ & 6.70 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$|d0|<0.02\cm$                                                                            & 1.07 $\cdot10^{6 }$ & 6.64 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$|dz|<0.5\cm$                                                                             & 1.07 $\cdot10^{6 }$ & 6.63 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$|\eta|<2.1$                                                                              & 1.03 $\cdot10^{6 }$ & 6.58 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ \\
+$\pt>20\gev$                                                                              & 8.14 $\cdot10^{5 }$ & 5.63 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 5.48 $\cdot10^{3 }$ \\
+No $\mu$ within $\Delta R<0.15$                                                           & 7.15 $\cdot10^{5 }$ & 4.52 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 5.48 $\cdot10^{3 }$ \\
+No e within $\Delta R<0.15$                                                               & 6.69 $\cdot10^{5 }$ & 3.67 $\cdot10^{3 }$ & 7.86 $\cdot10^{1 }$ & 5.48 $\cdot10^{3 }$ \\
+No $\tau$ within $\Delta R<0.15$                                                          & 6.62 $\cdot10^{5 }$ & 3.61 $\cdot10^{3 }$ & 7.86 $\cdot10^{1 }$ & 5.47 $\cdot10^{3 }$ \\
+No jet within $\Delta R<0.5$                                                              & 1.18 $\cdot10^{3 }$ & 1.44 $\cdot10^{1 }$ & 1.09 $\cdot10^{1 }$ & 0.00 $\cdot10^{0 }$ \\
+\makecell[l]{Not within $\Delta R<0.05$ of \\\hfill a dead/noisy ECAL cell}               & 7.25 $\cdot10^{2 }$ & 8.02 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+Not within an ECAL  intermodule gap                                                       & 7.15 $\cdot10^{2 }$ & 8.02 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+Not within $1.42<|\eta|<1.65$                                                             & 5.89 $\cdot10^{2 }$ & 6.53 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+Not within $\Delta R<0.25$ to a bad CSC                                                   & 5.02 $\cdot10^{2 }$ & 5.88 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+$\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$                      & 4.46 $\cdot10^{2 }$ & 4.78 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
+$\ecalo<5\gev$                                                                            & 3.19 $\cdot10^{1 }$ & 0.67 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ & 0.00 $\cdot10^{0 }$ \\
 \bottomrule
 \end{tabular}}
 %\end{sideways}
@@ -72,8 +74,8 @@ $\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} <
 \begin{table}[!h]
 %\begin{sideways}
 \centering
-\caption{Event yields after each selection step for various signal models. FIXME update this table with other signal samples!!}
-\label{tab:CutflowMC}
+\caption{Event yields after each selection step for various signal models.}
+\label{tab:CutflowSignal}
 \makebox[0.99\textwidth]{
 \begin{tabular}{|l|c|c|c|c|}
 \multicolumn{5}{c}{} \\
@@ -83,35 +85,83 @@ $\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} <
                                                                         &   $c\tau$=10\cm      &   $c\tau$=100\cm     &   $c\tau$=10\cm      &   $c\tau$=100\cm      \\
 \midrule
 
-
-before selection                                                                          & 3.41 $\cdot10^{5 }$ & 3.41 $\cdot10^{5 }$ & 3.46 $\cdot10^{2 }$ & 3.46 $\cdot10^{2 }$ \\
-trigger                                                                                   & 1.56 $\cdot10^{4 }$ & 1.49 $\cdot10^{4 }$ & 4.63 $\cdot10^{1 }$ & 4.61 $\cdot10^{1 }$ \\
-$\ptfirstjet>100\gev$                                                                     & 1.10 $\cdot10^{4 }$ & 1.05 $\cdot10^{4 }$ & 3.65 $\cdot10^{1 }$ & 3.58 $\cdot10^{1 }$ \\
-$\met>100\gev$                                                                            & 1.09 $\cdot10^{4 }$ & 9.84 $\cdot10^{3 }$ & 3.63 $\cdot10^{1 }$ & 3.56 $\cdot10^{1 }$ \\
-$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                     & 7.91 $\cdot10^{3 }$ & 6.99 $\cdot10^{3 }$ & 2.76 $\cdot10^{1 }$ & 2.70 $\cdot10^{1 }$ \\
-$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                             & 7.91 $\cdot10^{3 }$ & 7.04 $\cdot10^{3 }$ & 2.77 $\cdot10^{1 }$ & 2.71 $\cdot10^{1 }$ \\
-$\geq1$ reconstructed trk                                                                 & 3.13 $\cdot10^{3 }$ & 5.75 $\cdot10^{3 }$ & 5.74 $\cdot10^{0 }$ & 2.13 $\cdot10^{1 }$ \\
-$\geq1$ high-purity trk                                                                   & 2.91 $\cdot10^{3 }$ & 5.66 $\cdot10^{3 }$ & 5.25 $\cdot10^{0 }$ & 2.08 $\cdot10^{1 }$ \\
-$\geq1$ trk with $N_{\text{miss}}^{\text{middle}}=0$                                      & 2.87 $\cdot10^{3 }$ & 5.46 $\cdot10^{3 }$ & 5.23 $\cdot10^{0 }$ & 2.02 $\cdot10^{1 }$ \\
-$\geq1$ trk with $N_{\text{miss}}^{\text{inner}}=0$                                       & 2.86 $\cdot10^{3 }$ & 5.41 $\cdot10^{3 }$ & 5.22 $\cdot10^{0 }$ & 2.01 $\cdot10^{1 }$ \\
-$\geq1$ trk with $|d0|<0.02\cm$                                                           & 2.81 $\cdot10^{3 }$ & 5.39 $\cdot10^{3 }$ & 5.08 $\cdot10^{0 }$ & 1.99 $\cdot10^{1 }$ \\
-$\geq1$ trk with $|dz|<0.5\cm$                                                            & 2.80 $\cdot10^{3 }$ & 5.39 $\cdot10^{3 }$ & 5.08 $\cdot10^{0 }$ & 1.99 $\cdot10^{1 }$ \\
-$\geq1$ trk with $|\eta|<2.1$                                                             & 2.63 $\cdot10^{3 }$ & 4.98 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.91 $\cdot10^{1 }$ \\
-$\geq1$ trk with $\pt>10\gev$                                                             & 2.63 $\cdot10^{3 }$ & 4.98 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.91 $\cdot10^{1 }$ \\
-$\geq1$ trk without a $\mu$ within $\Delta R<0.15$                                        & 2.63 $\cdot10^{3 }$ & 4.70 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.89 $\cdot10^{1 }$ \\
-$\geq1$ trk without an e within $\Delta R<0.15$                                           & 2.63 $\cdot10^{3 }$ & 4.70 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.89 $\cdot10^{1 }$ \\
-$\geq1$ trk without a $\tau$ within $\Delta R<0.15$                                       & 2.63 $\cdot10^{3 }$ & 4.68 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.89 $\cdot10^{1 }$ \\
-$\geq1$ trk without a jet within $\Delta R<0.5$                                           & 2.61 $\cdot10^{3 }$ & 4.64 $\cdot10^{3 }$ & 4.89 $\cdot10^{0 }$ & 1.84 $\cdot10^{1 }$ \\
-\makecell[l]{$\geq1$ trk !within $\Delta R<0.05$ of \\\hfill a dead/noisy ECAL cell}     & 2.40 $\cdot10^{3 }$ & 4.30 $\cdot10^{3 }$ & 4.44 $\cdot10^{0 }$ & 1.71 $\cdot10^{1 }$ \\
-\makecell[l]{$\geq1$ trk !within an ECAL  intermodule gap}                               & 2.38 $\cdot10^{3 }$ & 4.27 $\cdot10^{3 }$ & 4.41 $\cdot10^{0 }$ & 1.70 $\cdot10^{1 }$ \\
-$\geq1$ trk !within $1.42<|\eta|<1.65$                                                   & 2.16 $\cdot10^{3 }$ & 3.92 $\cdot10^{3 }$ & 4.19 $\cdot10^{0 }$ & 1.58 $\cdot10^{1 }$ \\
-$\geq1$ trk !within $\Delta R<0.25$ to a bad CSC                                         & 2.06 $\cdot10^{3 }$ & 3.71 $\cdot10^{3 }$ & 4.06 $\cdot10^{0 }$ & 1.52 $\cdot10^{1 }$ \\
-$\geq1$ trk with $\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$     & 2.03 $\cdot10^{3 }$ & 3.67 $\cdot10^{3 }$ & 4.00 $\cdot10^{0 }$ & 1.51 $\cdot10^{1 }$ \\
+total                                                                                & 3.41 $\cdot10^{5 }$ & 3.41 $\cdot10^{5 }$ & 3.46 $\cdot10^{2 }$ & 3.46 $\cdot10^{2 }$ \\
+trigger                                                                                   & 1.55 $\cdot10^{4 }$ & 1.49 $\cdot10^{4 }$ & 4.62 $\cdot10^{1 }$ & 4.62 $\cdot10^{1 }$ \\
+$\ptfirstjet>100\gev$                                                                     & 1.10 $\cdot10^{4 }$ & 1.04 $\cdot10^{4 }$ & 3.64 $\cdot10^{1 }$ & 3.58 $\cdot10^{1 }$ \\
+$\met>100\gev$                                                                            & 1.09 $\cdot10^{4 }$ & 9.83 $\cdot10^{3 }$ & 3.63 $\cdot10^{1 }$ & 3.57 $\cdot10^{1 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                  & 7.90 $\cdot10^{3 }$ & 7.04 $\cdot10^{3 }$ & 2.76 $\cdot10^{1 }$ & 2.72 $\cdot10^{1 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                          & 7.90 $\cdot10^{3 }$ & 6.98 $\cdot10^{3 }$ & 2.76 $\cdot10^{1 }$ & 2.71 $\cdot10^{1 }$ \\
+$\geq1$ track in the event with:                                                          &&&&\\
+reconstructed trk                                                                         & 3.13 $\cdot10^{3 }$ & 5.74 $\cdot10^{3 }$ & 5.74 $\cdot10^{0 }$ & 2.13 $\cdot10^{1 }$ \\
+high-purity                                                                               & 2.91 $\cdot10^{3 }$ & 5.65 $\cdot10^{3 }$ & 5.25 $\cdot10^{0 }$ & 2.08 $\cdot10^{1 }$ \\
+$N_{\text{miss}}^{\text{middle}}=0$                                                       & 2.87 $\cdot10^{3 }$ & 5.46 $\cdot10^{3 }$ & 5.23 $\cdot10^{0 }$ & 2.02 $\cdot10^{1 }$ \\
+$N_{\text{miss}}^{\text{inner}}=0$                                                        & 2.86 $\cdot10^{3 }$ & 5.40 $\cdot10^{3 }$ & 5.22 $\cdot10^{0 }$ & 2.01 $\cdot10^{1 }$ \\
+$|d0|<0.02\cm$                                                                            & 2.81 $\cdot10^{3 }$ & 5.39 $\cdot10^{3 }$ & 5.07 $\cdot10^{0 }$ & 2.00 $\cdot10^{1 }$ \\
+$|dz|<0.5\cm$                                                                             & 2.80 $\cdot10^{3 }$ & 5.38 $\cdot10^{3 }$ & 5.07 $\cdot10^{0 }$ & 2.00 $\cdot10^{1 }$ \\
+$|\eta|<2.1$                                                                              & 2.63 $\cdot10^{3 }$ & 4.97 $\cdot10^{3 }$ & 5.01 $\cdot10^{0 }$ & 1.91 $\cdot10^{1 }$ \\
+$\pt>20\gev$                                                                              & 2.54 $\cdot10^{3 }$ & 4.93 $\cdot10^{3 }$ & 4.73 $\cdot10^{0 }$ & 1.89 $\cdot10^{1 }$ \\
+No $\mu$ within $\Delta R<0.15$                                                           & 2.54 $\cdot10^{3 }$ & 4.65 $\cdot10^{3 }$ & 4.72 $\cdot10^{0 }$ & 1.87 $\cdot10^{1 }$ \\
+No e within $\Delta R<0.15$                                                               & 2.54 $\cdot10^{3 }$ & 4.65 $\cdot10^{3 }$ & 4.72 $\cdot10^{0 }$ & 1.87 $\cdot10^{1 }$ \\
+No $\tau$ within $\Delta R<0.15$                                                          & 2.54 $\cdot10^{3 }$ & 4.64 $\cdot10^{3 }$ & 4.72 $\cdot10^{0 }$ & 1.87 $\cdot10^{1 }$ \\
+No jet within $\Delta R<0.5$                                                              & 2.53 $\cdot10^{3 }$ & 4.59 $\cdot10^{3 }$ & 4.63 $\cdot10^{0 }$ & 1.82 $\cdot10^{1 }$ \\
+\makecell[l]{Not within $\Delta R<0.05$ of \\\hfill a dead/noisy ECAL cell}               & 2.32 $\cdot10^{3 }$ & 4.25 $\cdot10^{3 }$ & 4.19 $\cdot10^{0 }$ & 1.69 $\cdot10^{1 }$ \\
+Not within an ECAL  intermodule gap                                                       & 2.31 $\cdot10^{3 }$ & 4.23 $\cdot10^{3 }$ & 4.17 $\cdot10^{0 }$ & 1.68 $\cdot10^{1 }$ \\
+Not within $1.42<|\eta|<1.65$                                                             & 2.09 $\cdot10^{3 }$ & 3.88 $\cdot10^{3 }$ & 3.95 $\cdot10^{0 }$ & 1.56 $\cdot10^{1 }$ \\
+Not within $\Delta R<0.25$ to a bad CSC                                                   & 1.99 $\cdot10^{3 }$ & 3.67 $\cdot10^{3 }$ & 3.83 $\cdot10^{0 }$ & 1.50 $\cdot10^{1 }$ \\
+$\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$                      & 1.97 $\cdot10^{3 }$ & 3.64 $\cdot10^{3 }$ & 3.78 $\cdot10^{0 }$ & 1.49 $\cdot10^{1 }$ \\
+$\ecalo<5\gev$                                                                            & 1.67 $\cdot10^{3 }$ & 3.04 $\cdot10^{3 }$ & 3.39 $\cdot10^{0 }$ & 1.26 $\cdot10^{1 }$ \\
 \bottomrule
 \end{tabular}}
 %\end{sideways}
 \end{table}  
 %\end{landscape}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{table}[!h]
+%\begin{sideways}
+\centering
+\caption{Observed event yield after each selection step in data.}
+\label{tab:CutflowData}
+\makebox[0.99\textwidth]{
+\begin{tabular}{|l|c|}
+\multicolumn{2}{c}{} \\
+\toprule
+
+Selection                                                                                 &   MET dataset               \\
+
+\midrule
+
+after skim                                                                                & 1.07 $\cdot10^{7 }$ \\
+trigger                                                                                   & 1.07 $\cdot10^{7 }$ \\
+$\ptfirstjet>100\gev$                                                                     & 6.82 $\cdot10^{6 }$ \\
+$\met>100\gev$                                                                            & 3.94 $\cdot10^{6 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \text{jet}_j  \right)<2.7$                     & 1.39 $\cdot10^{6 }$ \\
+$\Delta\phi_{\text{max}} \left( \text{jet}_i, \met  \right)>0.5$                             & 1.38 $\cdot10^{6 }$ \\
+$\geq1$ track in the event with:                                 &\\                         
+reconstructed trk                                                                         & 1.37 $\cdot10^{6 }$ \\
+high-purity                                                                               & 1.36 $\cdot10^{6 }$ \\
+$N_{\text{miss}}^{\text{middle}}=0$                                                              & 1.34 $\cdot10^{6 }$ \\
+$N_{\text{miss}}^{\text{inner}}=0$                                                               & 1.31 $\cdot10^{6 }$ \\
+$|d0|<0.02\cm$                                                                            & 1.30 $\cdot10^{6 }$ \\
+$|dz|<0.5\cm$                                                                             & 1.30 $\cdot10^{6 }$ \\
+$|\eta|<2.1$                                                                              & 1.26 $\cdot10^{6 }$ \\
+$\pt>20\gev$                                                                              & 9.51 $\cdot10^{5 }$ \\
+No $\mu$ within $\Delta R<0.15$                                                           & 8.40 $\cdot10^{5 }$ \\
+No e within $\Delta R<0.15$                                                               & 8.01 $\cdot10^{5 }$ \\
+No $\tau$ within $\Delta R<0.15$                                                          & 7.95 $\cdot10^{5 }$ \\
+No jet within $\Delta R<0.5$                                                              & 1.75 $\cdot10^{3 }$ \\
+\makecell[l]{Not within $\Delta R<0.05$ of \\\hfill a dead/noisy ECAL cell}               & 9.11 $\cdot10^{2 }$ \\
+Not within an ECAL  intermodule gap                                                       & 9.06 $\cdot10^{2 }$ \\
+Not within $1.42<|\eta|<1.65$                                                             & 7.33 $\cdot10^{2 }$ \\
+Not within $\Delta R<0.25$ to a bad CSC                                                   & 6.16 $\cdot10^{2 }$ \\
+$\sum \limits_{\Delta R < 0.3} \pt/p_{\text{T}}^{\text{cand}} < 0.1$                                & 5.26 $\cdot10^{2 }$ \\
+$\ecalo<5\gev$                                                                            & 1.19 $\cdot10^{2 }$ \\
+\midrule
+$\pt>30\gev$                                                                              & 9.10 $\cdot10^{1 }$ \\
+$\ias>0.05$                                                                               & 5.60 $\cdot10^{1 }$ \\
+\bottomrule
+\end{tabular}}
+\end{table}  
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -397,7 +447,7 @@ The correct implementation could be verified with this test.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \chapter{Exclusion limits for all simulated lifetimes}
-\label{app:LimitPlots2d}
+\label{app:ExlusionLimits}
 
 \begin{figure}[!h]
   \centering 

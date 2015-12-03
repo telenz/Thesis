@@ -1,5 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
 \chapter{Optimisation of the search sensitivity}
 \label{sec:Optimisation}
 Finally, having all background estimation methods in place, an optimisation procedure is conducted in order to increase the search sensitivity with respect to the signal models introduced in Section~\ref{sec:SignalSamples}.
@@ -102,6 +103,7 @@ The next section shows the comparison of the predicted number of events from Sta
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
 \chapter{Results}
 \label{sec:Results}
 
@@ -160,7 +162,7 @@ $\pt: 50-\infty\gev$ / $\ias:0.30-1.00$ & 2.57 $^{+ 1.18} _{- 1.14}$ (stat) $\pm
 \multicolumn{3}{c}{} \\
 \end{tabular}}
 \end{table}
-The event yields observed in data after each selection requirement for the four signal regions are listed in Table~\ref{FIXME} in Appendix~\ref{FIXME}.
+The event yields observed in data after each selection requirement for the four signal regions are listed in Table~\ref{tab:CutflowData} in Appendix~\ref{app:cutflow}.
 
 The results are compatible in all four signal regions with the Standard Model background within the 1$\sigma$ uncertainties.
 No excess above the SM prediction is in either of the four signal regions observed.
@@ -194,7 +196,7 @@ Therefore, in the following section the result will be interpreted within the co
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+\FloatBarrier
 \chapter{Interpretation}
 \label{sec:Interpretation}
 In order to interpret the result of the search in the context of supersymmetric models with wino-like charginos and neutralinos, sources of systematic uncertainties on the number of selected signal events must be identified
@@ -207,20 +209,20 @@ The systematic uncertainties on the number of signal events in the four signal r
 This influences the signal efficiency of each selection requirement in this analysis.
 Furthermore, an uncertainty on the overall number of events is caused by the uncertainty on the integrated luminosity recorded in 2012 at CMS and the theoretical signal cross-sections.
 
+\subsection*{Uncertainty on the theoretical cross section}
+The theoretical cross sections of $\chipm\chimp$ and $\chipm\chiO$ production at a centre-of-mass energy of 8\tev are taken from \cite{bib:SignalCrossSection_2012,bib:SignalCrossSection_2013}.
+The corresponding theoretical uncertainties are ranging between $4.5-12.1\%$.
+
 \subsection*{Luminosity uncertainty}
 The integrated luminosity recorded at CMS during the year 2012 is measured with the counting of pixel clusters during the crossing of two bunches (zero-bias event).
 A detailed explanation of this method and the corresponding total uncertainty of 2.6\% can be found in \cite{bib:CMS:Lumi_PAS}.
-
-\subsection*{Uncertainty on the theoretical cross section}
-The theoretical cross sections of $\chipm\chimp$ and $\chipm\chiO$ production at a centre-of-mass energy of 8\tev are taken from \cite{bib:SignalCrossSection_2012,bib:SignalCrossSection_2013}.
-The corresponding theoretical uncertainties are ranging between $3-10\%$.
 
 \subsection*{Uncertainty on the simulation of initial state radiation}
 Initial state radiation affects the transverse momentum distribution of the 2-particle system, $\pt\left(p_1^{\mu} + p_2^{\mu} \right)$, in a 2-body decay.
 Differences between data and simulation of ISR are taken into account by reweighting the transverse momentum of the $\chipm\chimp$ or $\chipm\chiO$ system.
 The weights are determined with a comparison of the simulated and observed \pt distribution of $Z$ and $\bar{t}t$ events, done in~\cite{bib:CMS:ISR_AN}.
 To account for the systematic uncertainties on the reweighting procedure, the event weights are varied up and down dependent on the $\pt^{\chi_1\chi_2}$ up to variations of 25\%.
-The resulting uncertainty on the ISR simulation is between $10-13\%$.
+The resulting uncertainty on the ISR simulation is between $9.2-12.6\%$.
 
 \subsection*{Uncertainty on the simulation of the trigger efficiency}
 The HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 trigger with the higher MET threshold of 105\gev active in Run\,C and Run\,D during 2012 was not available in the simulated signal samples.
@@ -230,29 +232,29 @@ More details on the emulation of this trigger can be found in Appendix~\ref{app:
 The trigger uncertainty is accessed by comparing data-simulation differences of the trigger efficiency.
 This has been done within~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
 The resulting differences are applied as variations of the event weights of the simulated samples.
-The corresponding uncertainty lies between $2.6-4.6\%$ for the signal samples.
+The corresponding uncertainty lies between $1.9-4.4\%$ for the signal samples.
 
 \subsection*{Uncertainty on the jet energy scale}
 The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt~\cite{bib:CMS:JME_PAS} and for data-simulation differences.
 The uncertainty on the jet energy scale (JES) arise from the systematic uncertainty of the jet response in data like jet fragmentation, jet flavor composition, etc., neatly described in~\cite{bib:CMS:JME_PAS}.
-The correction is applied as a multiplicant on each jet's transverse momentum contained in an event.
+The correction is applied as a multiplicand on each jet's transverse momentum contained in an event.
 The corresponding systematic uncertainty is accessed by a up and down variation of the correction factor within 1\,$\sigma$.
-The resulting uncertainties are of minor importance and lie between $0.5-1.1\%$.
+The resulting uncertainties are of minor importance and lie between $0.4-3.1\%$.
 
 \subsection*{Uncertainty on the jet energy resolution}
 The jet energy resolution (JER) is smaller in simulation than in measured data (see Part~\ref{FIXME}). 
-To take into account these differences, the jet energy response is additionnaly smeared to match the measured response.
+To take into account these differences, the jet energy response is additionally smeared to match the measured response.
 The systematic uncertainties cover the uncertainty on the resolution in data, like the jet energy scale uncertainty, uncertainties arising from out-of-cone showering etc.~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
-The resulting uncertainty on the signal efficiency is between $0.1-0.7\%$ and therefore almost negliglbe.
+The resulting uncertainty on the signal efficiency is between $0.1-2.0\%$ and therefore almost negligible.
 
 \subsection*{Uncertainty on the simulation of the parton distribution functions}
 The parton distribution function (PDF) used for the simulation of proton-proton collisions is provided by the \cteq group~\cite{Pumplin:2002vw} (see Section~\ref{FIXME} for more information about PDFs).
 In~\cite{Pumplin:2002vw}, a detailed description of the methodology of the determination of a parton distribution function and its uncertainties is given.
-Pratically, the estimation of the PDF uncertainty is done by the application of 44 different sets of event weights which take into account 22 different sources of uncertainties~\cite{Botje:2011sn,bib:PDF_practical} 
+Practically, the estimation of the PDF uncertainty is done by the application of 44 different sets of event weights which take into account 22 different sources of uncertainties~\cite{Botje:2011sn,bib:PDF_practical} 
 (up and down variations lead to a factor of 2).
 The sources correspond inter alia to uncertainties in the single distributions of gluons, up/down-quarks, etc, with the gluon distribution being by far the largest source of uncertainty.
 
-The resulting uncertainties on the signal efficiency are between $3-5\%$.
+The resulting uncertainties on the signal efficiency are between $2.6-6.8\%$.
 
 \subsection*{Uncertainty of the pile-up reweighting}
 As mentioned before, the distribution of the number of primary vertices is reweighted to match the measured distribution in data.
@@ -260,24 +262,26 @@ The number of interactions in data on the other hand is determined by the lumino
 The uncertainty on the number of interactions consists thus out of the uncertainty on the luminosity and the uncertainty on the cross section.
 To cover both sources, a variation of the inelastic cross section by plus/minus 5\% is done.
 
-The signal efficiency is only affected with less than 1\% by this sytematic uncertainty.
+For most of the signal models and signal regions, the signal efficiency is only affected with less than 1\% by the pile-up reweighting uncertainty.
+Due to limited statistical precision it can become larger in some signal regions, but those are never the most sensitive ones. 
+
 
 \subsection*{Uncertainty on the simulation of the calorimeter isolation}
 The uncertainty on the simulation of the calorimeter isolation \ecalo is estimated by the comparison of the cut selection efficiency of $\ecalo<5\gev$ in the fake enriched control sample \fakeCR.
 The fake enriched control region is well suited for this estimation, as fake tracks are also expected to deposit only a low amount of energy in the calorimeters.
-The selection efficiency in data is higher than in simulation in both \pt bins of $30-50\gev$ and $50-\infty\gev$, which results in an uncertainty of 12\% and 3\% respectively.
+The selection efficiency in data is higher than in simulation in both \pt bins of $30-50\gev$ and $50-\infty\gev$, which results in an uncertainty of 12.1\% and 3.0\% respectively.
 
 
 \subsection*{Uncertainty on the simulation of missing middle/inner hits}
 The uncertainty on the simulation of the number of missing inner and middle hits is assessed by comparing the probability of passing the selection requirements of $N_{\text{miss}}^{\text{middle/inner}}=0$
 of a candidate track in the muon-veto inverted control region. 
-This control region is particulary suitable because muons are neither expected to have intrinsic sources of missing hits, as pions or electrons have.
-Pions can interact nuclearly with the tracker material and electrons can have sizeable radiative losses, such that both can change direction or don't deposit energy in a tracker layer.
-For muons, on the other hand, sources of missing inner and middle hits are mainly algorithmical~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}, 
+This control region is particularly suitable because muons are neither expected to have intrinsic sources of missing hits, as pions or electrons have.
+Pions can interact nuclearly with the tracker material and electrons can have sizable radiative losses, such that both can change direction or don't deposit energy in a tracker layer.
+For muons, on the other hand, sources of missing inner and middle hits are mainly algorithmic~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}, 
 making them very similar to the algorithmic sources of missing inner/middle hits for chargino tracks.
 
 The uncertainty is estimated as the relative difference of the cut selection efficiency of $N_{\text{miss}}^{\text{middle/inner}}=0$ in data and simulation.
-The selection efficiency is always higher in simulation, resulting in systematic uncertainties of around 3.5\% for the simulation of $N_{\text{miss}}^{\text{inner}}=0$ and around 2.0\% for $N_{\text{miss}}^{\text{middle}}=0$.
+The selection efficiency is always higher in simulation, resulting in systematic uncertainties of around 3.5\% for the simulation of $N_{\text{miss}}^{\text{inner}}=0$ and around 2.2\% for $N_{\text{miss}}^{\text{middle}}=0$.
 The uncertainties are of very similar size in the signal regions with different \pt.
 No \ias dependence is considered.
 
@@ -298,11 +302,11 @@ The kaon, proton and in data also the deuteron line is visible.
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/IasP_MC.pdf}
   \end{tabular}
   \caption{\ias versus momentum for good quality tracks with at least eight hits in observed data (left) and simulation (right).
-           The kaon and proton line are visible in both datasets. The deuteron line is only visible in data, as deuterons are not simulated.}
+           The kaon and proton line are visible in both datasets. The deuteron line is only visible in data, as deuteron's are not simulated.}
   \label{fig:IasVsMomentum}
 \end{figure} 
 Two different slices in the momentum are extracted where the proton line is contained: p between $0.80-0.85$ and $0.95-1.00$.
-A gaussian function is fitted to the proton peak and the maximal difference of the mean the fitted gaussian between simulation and observed data is taken as systematic uncertainty.
+A Gaussian function is fitted to the proton peak and the maximal difference of the mean the fitted Gaussian between simulation and observed data is taken as systematic uncertainty.
 The \ias distribution for the two momentum ranges with the Gaussian fit is depicted in Fig.~\ref{fig:IasSlowProtons}.
 \begin{figure}[!h]
   \centering 
@@ -327,36 +331,36 @@ Therefore, a worst case estimation is done, comparing the track reconstruction e
 In simulation and observed data, well reconstructed muon tracks are selected and all hits after the third hits are removed.
 Afterwards the full track reconstruction step is again preformed.
 The relative difference of the track reconstruction efficiency in data and simulation ($\epsilon = N_{\text{recon. track with \nhits=3}}/N_{\text{selected muon trks}}$) is taken as systematic uncertainty.
-The track reconstruction efficiency is higher in simulation than in data and results in uncertainties between $4.5-6.0\%$.\\
+The track reconstruction efficiency is higher in simulation than in data and results in uncertainties between $4.6-6.0\%$.\\
 
 
 \subsection*{Summary of systematic uncertainties of the simulated signal samples}
-All systematic uncertaintes are estimated for all simulated signal samples.
+All systematic uncertainties are estimated for all simulated signal samples.
 An overview of the range of the uncertainties is given in Table~\ref{tab:SignalSysUnc}.
 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h] 
 \centering
-\caption{Ranges of systematic uncertainties of the simulated signal samples. FIXME: Update this Table with latest uncertainties.}
+\caption{Ranges of systematic uncertainties of the simulated signal samples.}
 \label{tab:SignalSysUnc}
 \begin{tabular}{|l|c|c|}  
 \multicolumn{3}{c}{} \\
 \toprule
 Uncertainty                             &Min [\%]           &Max [\%]           \\ 
 \midrule
-Luminosity                              &2.6                &2.6                \\ 
-ISR                                     &10.4               &12.6               \\ 
-Trigger efficiency                      &2.6                &4.6                \\ 
-JES                                     &0.5                &1.1                \\ 
-JER                                     &0.1                &0.7                \\ 
-PDF                                     &3.0                &4.9                \\ 
-Simulation of calorimeter isolation     &0.8                &6.6                \\ 
-Simulation of missing middle hits       &1.8                &2.3                \\ 
-Simulation of missing inner hits        &3.2                &3.4                \\ 
-PU                                      &0.0                &35.9               \\ 
-Track reconstruction efficiency         &4.1                &5.1                \\ 
-Simulation of Ias                       &6.5                &6.5                \\ 
-Theoretical x-section                   &3.4                &8.1                \\ 
+Theoretical x-section                   &4.5                &12.1               \\
+Luminosity                              &2.6                &2.6                \\
+Simulation of ISR                       &9.2                &12.6               \\ 
+Simulation of trigger efficiency        &1.9                &4.4                \\ 
+JES                                     &0.4                &3.1                \\ 
+JER                                     &0.1                &2.0                \\ 
+Simulation of PDF                       &2.6                &6.8                \\ 
+Pile-up reweighting                     &0.0                &16.0               \\ 
+Simulation of calorimeter isolation     &3.0                &12.1               \\ 
+Simulation of missing middle hits       &2.2                &2.2                \\ 
+Simulation of missing inner hits        &3.3                &3.7                \\ 
+Simulation of \ias                      &6.0                &6.0                \\ 
+Simulation of track reconstruction efficiency    &4.6                &6.0                \\ 
 \bottomrule
 \multicolumn{3}{c}{} \\
 \end{tabular}  
@@ -381,11 +385,11 @@ The systematic uncertainties of the simulated signal samples are taken as fully 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Methods/ Limit setting}
 This section is a small interlude to give a short introduction into the methods and techniques of the exclusion of theoretical models used in this analysis.
-For a detailed and pedagigical introduction to the methods, it is refered to~\cite{bib:Ott_Thesis}.
+For a detailed and pedagogical introduction to the methods, it is referred to~\cite{bib:Ott_Thesis}.
 
 In this analysis the exclusion of the underlying theoretical model is achieved with the \CLs method~\cite{bib:CLS_1999,bib:CLS_2000,bib:CLS_2002}.
-The \CLs method was developed for the Higgs searches at LEP in order not to overestimate the exclusion power of a result when an  underfluctuation of the Standard Model expectation occurs.
-\CLs is defined as the confidence level for the background plus signal hypothesis devided by the confidence level for the background hypothesis only
+The \CLs method was developed for the Higgs searches at LEP in order not to overestimate the exclusion power of a result when an  under-fluctuation of the Standard Model expectation occurs.
+\CLs is defined as the confidence level for the background plus signal hypothesis divided by the confidence level for the background hypothesis only
 \begin{equation*}
 \CLs = \frac{\CLsb}{\CLb}.
 \end{equation*}
@@ -398,7 +402,7 @@ However, For Poissonian statistics it leads to the following expressions for \CL
 \CLb  &= \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b   \right),
 \end{split}
 \end{equation*}
-where $\lambda$ is the mean of the poisson distribution and $\mu$ is the signal strength.
+where $\lambda$ is the mean of the Poisson distribution and $\mu$ is the signal strength.
 The signal strength $\mu$ is a measure for the size of the signal cross section.
 
 In order to include systematic uncertainties, the background expectation $b$ or the signal expectation $\mu\cdot s$ are varied within a Gaussian distribution with a width estimated as the 1-$\sigma$ uncertainty and a mean of zero.
@@ -443,19 +447,20 @@ Ias uncertainty                         &0\% correlated                & 100\% f
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
 \section{Exclusion limits}
 
-The search for highly ionising short tracks is interpreted within SUSY models with wino-like chargino and neutralinos.
+The search for highly ionising short tracks is interpreted in the context of SUSY models with almost mass degenerate wino-like charginos and neutralinos.
 As explained in the previous section, the exclusion is done with the help of the \CLs method.
-As production channels, chargino pair production and chargino neutralino production are taken into account. 
+Two direct production channels are taken into account: chargino pair production and chargino neutralino production. 
 The corresponding cross sections can be found in Table~\ref{tab:SignalCrossSections}.
-The exclusion limits are derived with the Combine framework~\cite{bib:CMS:Combine} developed for the Higgs searches at CMS.
-The systematic uncertainties on the background and the signal yields  are modelled with log-normal distributions, whereas the statistical uncertainties on the background are modelled with a gamma distributions.
-The log-normal distribution is used rather than a normal distribution to ensure that the prediction cannot become negative.
-The gamma distribution is well suited for statistical uncertainties arising from limited statistical precision in control regions or in simulated samples.
+The exclusion limits are derived with the \textit{Combine} framework~\cite{bib:CMS:Combine} that was developed for the Higgs searches at CMS.
+The systematic uncertainties on the background and the signal yields  are modelled with log-normal distributions, whereas the statistical uncertainties on the background are modelled with gamma distributions.
+A log-normal distribution is used instead of a normal distribution to ensure that the prediction cannot become negative.
+The gamma distribution is well suited for statistical uncertainties arising from limited statistical precision in control regions or in simulated samples that are use for the background estimation.
 
 In total, 37 different lifetimes for every mass point are considered, leading to 37 different exclusion limits.
-Four exemplary exclusion limits are shown in Fig.~\ref{fig:1dLimits}, the full set of exclusion limits can be found in Appendix~\ref{FIXME}.
+Four exemplary exclusion limits are shown in Fig.~\ref{fig:1dLimits}, the full set of exclusion limits can be found in Appendix~\ref{app:ExlusionLimits}.
 
 \begin{figure}[!h]
   \centering 
@@ -463,53 +468,70 @@ Four exemplary exclusion limits are shown in Fig.~\ref{fig:1dLimits}, the full s
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau5cm.pdf} 
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau10cm.pdf} \\
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau50cm.pdf} 
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau100cm.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau1000cm.pdf} 
   \end{tabular}
   \caption{Four different exclusion limits for charginos with mean lifetimes of 5\cm (top left), 10\cm (top right), 50\cm (bottom left), 100\cm (bottom right).
-           The red line gives th expected 95\% upper cross-section limit with the 1-$\sigma$ (green band) and 2-$\sigma$ (yellow band).
+           The red line gives the expected 95\% upper cross-section limit with the 1-$\sigma$ (green band) and 2-$\sigma$ (yellow band).
            The black line is the observed limit.
            The signal cross section is depicted as dark green line. 
            SUSY models can be excluded with a 95\% confidence when the signal cross section is large as the 95\% observed upper limit on the cross section.}
   \label{fig:1dLimits}
 \end{figure} 
-Due to the higher cross sections for lower masses the exclusion is stronger is the low chargino mass region.
-A 2-dimensional exclusion limit in the chargino lifetime/mass paramater space is shown in Fig.~\ref{FIXME}.
-\begin{figure}[!h]
+The upper 95\%\,CL limit on the cross section is strongest for intermediate lifetimes ($10-100\cm$).
+For lower lifetimes a sizable fraction of the charginos decay already before they reach the tracking system, thus aren't visible in the tracker.
+For longer lifetimes, the cross section upper limit becomes again weaker because the charginos start to be reconstructed as muons (the muon veto thus rejects these events).
+Also the \ecalo requirement rejects these charginos with higher efficiency.
+
+Due to the falling spectrum of the chargino production cross section, charginos with lower masses are more effectively excluded than charginos with a higher mass.
+A 2-dimensional exclusion limit in the chargino lifetime-mass parameter space is shown in Fig.~\ref{fig:2dLimit}.
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.69\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_2d_log_cm.pdf} 
+    \includegraphics[width=0.79\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_2d_log_cm.pdf} 
   \end{tabular}
   \caption{Excluded regions in the mass versus lifetime space.
            Excluded models are all lying within the contour line.
           1 sigma}
-  \label{fig:1dLimits}
+  \label{fig:2dLimit}
 \end{figure} 
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
-Signal models up to a mass of $\sim FIXME \gev$ with lifetimes around FIXME can be excluded.
 
+Charginos with a masses of 100\gev can be excluded down to a lifetime of $~2\cm$.
+Charginos with a higher mass of 500\gev are excluded for lifetimes between $60-700\cm$.
 
+Since the long lifetime of the chargino is caused by the small mass splitting between $m_{\chipm}$ and $m_{\chi0}$, 
+it is possible to express the lifetime of the chargino also as a mass gap $\Delta m_{\chipm\chiO}$ between the chargino and the lightest neutralino~\cite{bib:MassSplitting_Drees}.
+The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d}.
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.55\textwidth]{figures/analysis/Interpretation/MassSplittingLimitPlot.pdf} 
+  \end{tabular}
+  \caption{Excluded parameter region by 95\% CL for wino-like charginos and neutralinos dependent on the chargino mass and the mass splitting between \chipm and \chiO.
+           Everything below the red line is excluded up to the region where the mass splitting is smaller than the pion mass.}
+  \label{fig:DeltaMLimit2d}
+\end{figure} 
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.55\textwidth]{figures/analysis/Interpretation/MassSplittingLimitPlot.pdf} 
+  \end{tabular}
+  \caption{Excluded parameter region by 95\% CL for wino-like charginos and neutralinos dependent on the chargino mass and the mass splitting between \chipm and \chiO.
+           Everything below the red line is excluded up to the region where the mass splitting is smaller than the pion mass.}
+  \label{fig:DeltaMLimit2d}
+\end{figure} 
+This search is sensitive to mass splittings between $\sim 140\mev-210\mev$.
+
+The derived exclusion limits of this search could confirm the exclusion from~\cite{FIXME} with small improvements in the medium mass range up to FIXME\gev.
+A comparison of the two searches is shown in Fig.~\ref{FIXME}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
 \chapter{Discussion and conclusion}
 \label{sec:Discussion}
 
 \begin{itemize}
 \item Earlier limits could verified and slightly improved in mass regions between 300-400 to 50\gev
-\item The inclusion of ias discriminatior shows good sensitivty increase of 100\% ...
-\item further improvements throudh bla bla
+\item The inclusion of ias discriminator shows good sensitivity increase of 100\% ...
+\item further improvements through bla bla
 \end{itemize}
