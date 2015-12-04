@@ -3,52 +3,38 @@
 \FloatBarrier
 \chapter{Optimisation of the search sensitivity}
 \label{sec:Optimisation}
-Finally, having all background estimation methods in place, an optimisation procedure is conducted in order to increase the search sensitivity with respect to the signal models introduced in Section~\ref{sec:SignalSamples}.
+Finally, having all background estimation methods in place, an optimisation procedure is conducted in order to increase the search sensitivity with respect to different signal models as introduced in Section~\ref{sec:SignalSamples}.
 The optimisation is done in the most sensitive variables, \pt and \ias (see Section~\ref{sec:Ias} for a definition and explanation of the Asymmetric Smirnov discriminator \ias).
+A potential additional discriminating variable is the number of missing outer hits $N_{\text{lost}}^{\text{outer}}$ in the tracker system. 
+This variable is, however, not considered in this analysis because studies show that the discriminating potential is limited and associated systematic uncertainties are high (see Appendix~\ref{FIXME}).
+%For low lifetimes, a tiny increase in sensitivity of the order of 1-3\% is possible by a $N_{\text{lost}}^{\text{outer}}>0$ selection.
+%However, as this variable means also a new source of uncertainty on the signal model, such a selection cut is not considered.
 
-In this optimisation, the full systematic uncertainty is taken into account, which includes statistical uncertainties arising from limited statistical precision of the samples used in the background estimation and the systematic uncertainties that are described in Section~\ref{sec:SysUncertaintiesBkg}.
-In order to avoid unnecessary fine-tuning of the optimisation to the specific cross sections of the SUSY models and to keep the search as general as possible, 
-the optimisation is not done by maximising  $S/\Delta B$ but by a minimisation of the cross section for which a 5$\sigma$ discovery is possible, \ie finding the optimal selection cuts for \pt and \ias for which the lowest possible cross section can be discovered
+SUSY models with different chargino lifetimes and masses are characterised by different \pt and \ias distributions as well as different theoretical cross sections.
+Therefore, the usual search optimisation startegy that maximises $S/\Delta B$ ($S$ = number of signal events, $\Delta B$ = background uncertainty) implies a potential fine-tuning on the specific SUSY cross sections.
+In order to keep the search as general as possible, a cross section independent optimisation is performed.
+This is achieved by a minimisation of the cross section for which a 5$\sigma$ discovery of the corresponding signal model is possible, \ie finding the optimal selection cuts for \pt and \ias for which the lowest possible cross section, $\sigma_{\text{min}}$, can be discovered
 \begin{equation}
 \label{eq:optimisation}
-\frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\Delta B} = \frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\sqrt{ \left(\Delta B_{\text{stat}}\right)^2 + \left(\Delta B_{\text{sys}}\right)^2}} \geq 5.
+%\frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\Delta B} = \frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\sqrt{ \left(\Delta B_{\text{stat}}\right)^2 + \left(\Delta B_{\text{sys}}\right)^2}} \geq 5.
+\frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\Delta B (\pt, \ias)} \geq 5.
 \end{equation} 
 In this formula, $\mathcal{L}$ is the integrated luminosity in 2012, $\sigma_{\text{min}}$ is the minimum cross section that can be discovered, $\Delta B_{\text{sys}}$ is the systematic uncertainty of the background prediction as explained above and 
 $\Delta B_{\text{stat}}$ is the statistical uncertainty of the background prediction which is the 68\% one sided upper limit of a Poisson distribution with $\mu = B$ estimated with the 
 Neyman construction~\cite{bib:Neyman_1937,bib:PDG_2014}.\\
+In this optimisation, the full systematic uncertainty is taken into account.
+In addition to the sytematics described in Section~\ref{sec:SysUncertaintiesBkg}, this includes statistical uncertainties arising from limited statistical precision of the control regions and simulated samples used in the background estimation.\\
 
-For a first qualitative estimation of the optimal selection cuts, general systematic uncertainties on the leptonic and the fake background of 100\% and 20\% respectively are imposed.
-Uncertainties arising from limited statistical precision of the samples used for the background estimation are propagated consistently into formula~\ref{eq:optimisation}.
-The results of this optimisation for two very different lifetimes (5\cm and 50\cm) and masses (100\gev and 500\gev) are visualised in Fig.~\ref{fig:optimisation}, where the minimum cross section that is possible to discover is shown in the $\pt-\ias$ plane.
-\begin{figure}[!h]
-  \centering 
-  \vspace{30pt}
-  \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf} 
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_50cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf}\\ 
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_50cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf} 
-  \end{tabular}
-  \caption{Minimum possible cross section that can be discovered with 5$\sigma$ significance in the $\ias-\pt$ plane for four different signal models.
-           The systematic uncertainties are taken to be 20\% and 100\% for the fake and the leptonic background respectively.
-           The uncertainty on the background arising from the limited size of the used samples are propagated consistently to the search optimisation.
-           In Table~\ref{fig:optimisationApp} of Appendix~\ref{app:OptimisationApp}, the corresponding histograms of the background yield, the background uncertainty and the signal yield for the four signal models can be found.}
-  \vspace{30pt}
-  \label{fig:optimisation}
-\end{figure} 
-It can be seen, that for low masses and low lifetimes, the highest search sensitivity is achieved by imposing rather soft selection cuts on \ias and \pt.
-Optimising for higher lifetime pushes the optimal selection in \pt and \ias to larger values, where signal models with higher masses prefer even tighter \ias selection cuts than the corresponding lower mass signal model.
-It can also be seen, that for low lifetimes, the \pt dependence of the search sensitivity is less pronounced than for long lifetimes.\\
-
-For a structured optimisation all background uncertainties as estimated in Section~\ref{sec:SysUncertaintiesBkg} are taken precisely into account. 
-As this analysis focus on short tracks, only low lifetimes are considered in the optimisation procedure: $\ctau=1\cm-10\cm$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%For a structured optimisation all background uncertainties as estimated in Section~\ref{sec:SysUncertaintiesBkg} are taken precisely into account. 
+As this analysis focuses on short tracks, only low lifetimes are considered in the optimisation procedure: $\ctau=1\cm-10\cm$.
 To cover the full mass space, the optimisation is done for masses between 100\gev and 500\gev.
 The corresponding results are shown in Table~\ref{tab:optimisation}.
 \renewcommand{\arraystretch}{1.3}
 \begin{table}[!h]
 \centering
 \caption{Optimal \pt and \ias selection cuts and the corresponding minimum cross section $\sigma_{\text{min}}$ that can be discovered with 5$\sigma$ significance for different signal models.
-         For some signal samples a optimisation result is not available due to the limited size of these samples.}
+         For some signal samples, an optimisation result is not available due to the limited size of these samples.}
 \label{tab:optimisation}
 \makebox[0.99\textwidth]{
 \begin{tabular}{c |c| c| c| c}
@@ -80,14 +66,38 @@ Mass [\gev] & Lifetime [\cm] & Optimal \pt cut & Optimal \ias cut & $\sigma_{\te
 \end{table}
 
 It can be seen that the optimal selection is highly dependent on the signal models.
-As in the qualitative optimisation procedure, the search sensitivity for low masses ($\leq 200\gev$) is achieved by soft selection cuts in \pt between $20-30\gev$.
+The best sensitivity for low masses ($\leq 200\gev$) is mainly achieved by soft selection cuts in \pt between $20-30\gev$, while models with higher chargino masses require tighter \pt selections of around 50\gev.
+The optimal \ias selection is mostly dependent 
 For low lifetimes also the optimal \ias selection cut is soft ($0.05$).
 The search sensitivity can be increased in the low mass region for long lifetimes when tightening the \ias selection to a value of 0.3.
-
 For high masses the highest search sensitivity can be achieved with a tighter \pt selection cut of 50\gev and a \ias selection cut of 0.3.
 
+In order to visualise the mass and \ctau dependence of the optimal \pt and \ias selection cuts, the optimisation results for two very different lifetimes (5\cm and 50\cm) and masses (100\gev and 500\gev) are visualised in Fig.~\ref{fig:optimisation}, where the minimum cross section that is possible to discover is shown in the $\pt-\ias$ plane.
+For the visualisation, general systematic uncertainties on the leptonic and the fake background of 100\% and 20\% respectively are imposed.
+FIXME Uncertainties arising from limited statistical precision of the samples used for the background estimation are propagated consistently into formula~\ref{eq:optimisation}.
+\begin{figure}[!h]
+  \centering 
+  \vspace{30pt}
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_50cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf}\\ 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_50cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf} 
+  \end{tabular}
+  \caption{Minimum possible cross section that can be discovered with 5$\sigma$ significance in the $\ias-\pt$ plane for four different signal models.
+           The systematic uncertainties are taken to be 20\% and 100\% for the fake and the leptonic background respectively.
+           The uncertainty on the background arising from the limited size of the used samples are propagated consistently to the search optimisation.
+           In Table~\ref{fig:optimisationApp} of Appendix~\ref{app:OptimisationApp}, the corresponding histograms of the background yield, the background uncertainty and the signal yield for the four signal models can be found.}
+  \vspace{30pt}
+  \label{fig:optimisation}
+\end{figure} 
+FIXME!
+It can be seen, that for low masses and low lifetimes, the highest search sensitivity is achieved by imposing rather soft selection cuts on \ias and \pt.
+Optimising for higher lifetime pushes the optimal selection in \pt and \ias to larger values, where signal models with higher masses prefer even tighter \ias selection cuts than the corresponding lower mass signal model.
+It can also be seen, that for low lifetimes, the \pt dependence of the search sensitivity is less pronounced than for long lifetimes.\\
 
-To have an optimal coverage over a wide mass space and a sensitivity reach for different lifetimes, four different exclusive signal regions are defined:
+
+Based on the optimisation, four different exclusive signal regions are defined in order to achieve an optimal coverage over a wide mass space and a high sensitivity for different lifetimes:
 \begin{enumerate}[1.)]
 \item $30\gev<\pt<50\gev$ and $0.05<\ias<0.3$
 \item $\pt>50\gev$ and $0.05<\ias<0.3$
@@ -95,9 +105,7 @@ To have an optimal coverage over a wide mass space and a sensitivity reach for d
 \item $\pt>50\gev$ and $\ias>0.3$.\\
 \end{enumerate}
 
-Besides the optimisation in \ias and \pt, is is also checked whether a sensitivity increase can be achieved by imposing also a selection on the number of missing outer hits $N_{\text{lost}}^{\text{outer}}$.
-For low lifetimes, a tiny increase in sensitivity of the order of 1-3\% is possible by a $N_{\text{lost}}^{\text{outer}}>0$ selection.
-However, as this variable means also a new source of uncertainty on the signal model, such a selection cut is not considered.\\
+GOOD SENTENCE.
 
 The next section shows the comparison of the predicted number of events from Standard Model sources to the observed number of events measured in data.
 
@@ -146,7 +154,7 @@ Additionally, the corresponding numbers of predicted and observed events can be 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
-\caption{Number of predicted and observed events for the four different signal regions.}
+\caption{Number of predicted and observed events for the four different signal regions. FIXME: different lables.}
 \label{tab:FinalResult}
 \makebox[0.99\textwidth]{
 \begin{tabular}{l |c| c}
@@ -164,11 +172,11 @@ $\pt: 50-\infty\gev$ / $\ias:0.30-1.00$ & 2.57 $^{+ 1.18} _{- 1.14}$ (stat) $\pm
 \end{table}
 The event yields observed in data after each selection requirement for the four signal regions are listed in Table~\ref{tab:CutflowData} in Appendix~\ref{app:cutflow}.
 
-The results are compatible in all four signal regions with the Standard Model background within the 1$\sigma$ uncertainties.
-No excess above the SM prediction is in either of the four signal regions observed.
+The results are compatible with the Standard Model background within 1$\sigma$ uncertainties in all four signal regions.
+No excess above the SM prediction is observed in either of the four signal regions.
 Thus, no evidence for physics beyond the Standard Model could be found.
 
-Therefore, in the following section the result will be interpreted within the context of a supersymmetric models with wino-like charginos and neutralinos.
+Therefore, in the following section these results will be used to constrain the parameter space of supersymmetric models with almost mass degenerate charginos and neutralinos.
 %\renewcommand{\arraystretch}{1.5}
 %\begin{table}[!h]
 %\centering
@@ -199,18 +207,19 @@ Therefore, in the following section the result will be interpreted within the co
 \FloatBarrier
 \chapter{Interpretation}
 \label{sec:Interpretation}
-In order to interpret the result of the search in the context of supersymmetric models with wino-like charginos and neutralinos, sources of systematic uncertainties on the number of selected signal events must be identified
-and their size must be estimated.
-Furthermore, the size of correlations between the systematic uncertainties must be determined to be able to combine the results of all four signal regions.
-The interpretation will then be done with statistical methods, that allow for the exclusion of parts of the supersymmetric parameter space on a 95\% confidence level.
+In order to interpret the result of the search in the context of supersymmetric models with almost mass degenerate charginos and neutralinos, sources of systematic uncertainties on the number of selected signal events must be identified and quantified.
+The interpretation will then be done with statistical methods that allow for the exclusion of parts of the supersymmetric parameter space on a 95\% confidence level.
 
 \section{Systematic uncertainties of simulated signal samples}
 The systematic uncertainties on the number of signal events in the four signal regions are mainly caused by uncertainties on the quality of the simulation.
 This influences the signal efficiency of each selection requirement in this analysis.
 Furthermore, an uncertainty on the overall number of events is caused by the uncertainty on the integrated luminosity recorded in 2012 at CMS and the theoretical signal cross-sections.
 
+All systematic uncertainties are estimated for each signal model and each search bin seperately.
+In the following, the minimum and maximum value of the corresponding systematic uncertainty will be given.
+
 \subsection*{Uncertainty on the theoretical cross section}
-The theoretical cross sections of $\chipm\chimp$ and $\chipm\chiO$ production at a centre-of-mass energy of 8\tev are taken from \cite{bib:SignalCrossSection_2012,bib:SignalCrossSection_2013}.
+The theoretical cross sections of $\chipm\chimp$ and $\chipm\chiO$ production at a centre-of-mass energy of 8\tev are taken from~\cite{bib:SignalCrossSection_2012,bib:SignalCrossSection_2013}.
 The corresponding theoretical uncertainties are ranging between $4.5-12.1\%$.
 
 \subsection*{Luminosity uncertainty}
