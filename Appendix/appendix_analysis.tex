@@ -405,18 +405,52 @@ However, this bias is taken into account as systematic uncertainty (see Section~
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Underlying distributions for the qualitative search sensitivity optimisation}
+\chapter{Optimisation of the search sensitivity}
+\section{Optimisation results with the number of missing outer hits}
+\label{app:OptimisationNLostOuter}
+
+Also an optimisation in the number of missing outer hits is performed. 
+No significant improvement is visible in the search sensitivity for different selection requirements of $\nlostouter$, see Fig~\ref{fig:optimisationNLostOuter}.  
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys_0.pdf} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys_1.pdf} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys_2.pdf} \\
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys_0.pdf} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys_1.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys_2.pdf} 
+  \end{tabular}
+  \caption{Minimum possible cross section that can be discovered with 5$\sigma$ significance in the $\ias−\pt$ plane for two different signal models with a chargino lifetime of 5\cm and a mass of 100\gev (top) and 500\gev (bottom).
+           The requirement on the number of missing outer hits is varied between $\nlostouter>0$ (left), $\nlostouter>1$ (middle), $\nlostouter>2$ (right). 
+           A difference in the sensitivity can be spotted when looking at the lowest value of the minimum cross section that occurs.
+           No sizable discrimination improvement is visible for a tighter selection in $\nlostouter$.}
+  \label{fig:optimisationNLostOuter}
+\end{figure} 
+This is caused by the fact, that the main background, the fake background, also shows missing outer hits.
+A comparison between the number of missing outer hits for the fake background and two signal models is shown in Fig.~\ref{}.
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.39\textwidth]{figures/analysis/Optimisation/NLostOuterForFakes_chiTracksfullSelectionNoQCDCutsNoTrigger.pdf} 
+  \end{tabular}
+  \caption{Normalised distribution of the number of missing outer hits for fake tracks and two different signal models. }
+  \label{fig:optimisationNLostOuter}
+\end{figure} 
+
+
+\section{Underlying distributions for the qualitative search sensitivity optimisation}
 \label{app:OptimisationApp}
 
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/BkgYield_ECaloLe5.pdf} 
-    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/BkgUncertainty_ECaloLe5.pdf}\\ 
-    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SignalYield.pdf}
-    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_50cm_ECaloLe5_SignalYield.pdf}\\ 
-    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SignalYield.pdf}
-    \includegraphics[width=0.35\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_50cm_ECaloLe5_SignalYield.pdf}\\ 
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/BkgYield_ECaloLe5.pdf} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SignalYield.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_5cm_ECaloLe5_SignalYield.pdf}\\
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/BkgUncertainty_ECaloLe5.pdf} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_50cm_ECaloLe5_SignalYield.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_500_ctau_50cm_ECaloLe5_SignalYield.pdf}
   \end{tabular}
   \caption{Background yield, background uncertainty and signal yield for different \pt and \ias selection requirements and four different signal models.}
   \label{fig:optimisationApp}

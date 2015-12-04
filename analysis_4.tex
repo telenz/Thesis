@@ -5,32 +5,29 @@
 \label{sec:Optimisation}
 Finally, having all background estimation methods in place, an optimisation procedure is conducted in order to increase the search sensitivity with respect to different signal models as introduced in Section~\ref{sec:SignalSamples}.
 The optimisation is done in the most sensitive variables, \pt and \ias (see Section~\ref{sec:Ias} for a definition and explanation of the Asymmetric Smirnov discriminator \ias).
-A potential additional discriminating variable is the number of missing outer hits $N_{\text{lost}}^{\text{outer}}$ in the tracker system. 
-This variable is, however, not considered in this analysis because studies show that the discriminating potential is limited and associated systematic uncertainties are high (see Appendix~\ref{FIXME}).
+A potential additional discriminating variable is the number of missing outer hits \nlostouter in the tracker system. 
+This variable is, however, not considered in this analysis because studies show that the discriminating potential is limited (see Appendix~\ref{app:OptimisationNLostOuter}).
 %For low lifetimes, a tiny increase in sensitivity of the order of 1-3\% is possible by a $N_{\text{lost}}^{\text{outer}}>0$ selection.
 %However, as this variable means also a new source of uncertainty on the signal model, such a selection cut is not considered.
 
 SUSY models with different chargino lifetimes and masses are characterised by different \pt and \ias distributions as well as different theoretical cross sections.
-Therefore, the usual search optimisation startegy that maximises $S/\Delta B$ ($S$ = number of signal events, $\Delta B$ = background uncertainty) implies a potential fine-tuning on the specific SUSY cross sections.
+Therefore, the usual search optimisation startegy that maximises $N_S/\Delta B$ ($N_S$ = number of events of model $S$, $\Delta B$ = background uncertainty) implies a potential fine-tuning on the specific SUSY cross sections.
 In order to keep the search as general as possible, a cross section independent optimisation is performed.
-This is achieved by a minimisation of the cross section for which a 5$\sigma$ discovery of the corresponding signal model is possible, \ie finding the optimal selection cuts for \pt and \ias for which the lowest possible cross section, $\sigma_{\text{min}}$, can be discovered
-\begin{equation}
+This is achieved by a minimisation of the cross section for which a 5$\sigma$-discovery of the corresponding signal model is possible, \ie finding the optimal selection cuts for \pt and \ias for which the lowest possible cross section, $\sigma_{\text{min}}$, can be discovered
+\begin{align}
 \label{eq:optimisation}
 %\frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\Delta B} = \frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\sqrt{ \left(\Delta B_{\text{stat}}\right)^2 + \left(\Delta B_{\text{sys}}\right)^2}} \geq 5.
-\frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\Delta B (\pt, \ias)} \geq 5.
-\end{equation} 
-In this formula, $\mathcal{L}$ is the integrated luminosity in 2012, $\sigma_{\text{min}}$ is the minimum cross section that can be discovered, $\Delta B_{\text{sys}}$ is the systematic uncertainty of the background prediction as explained above and 
-$\Delta B_{\text{stat}}$ is the statistical uncertainty of the background prediction which is the 68\% one sided upper limit of a Poisson distribution with $\mu = B$ estimated with the 
-Neyman construction~\cite{bib:Neyman_1937,bib:PDG_2014}.\\
-In this optimisation, the full systematic uncertainty is taken into account.
-In addition to the sytematics described in Section~\ref{sec:SysUncertaintiesBkg}, this includes statistical uncertainties arising from limited statistical precision of the control regions and simulated samples used in the background estimation.\\
+\frac{\alpha_{\text{min}} \cdot N_S(\text{mass},\ctau,\pt^{\text{cut}}, \ias^{\text{cut}})}{\Delta B (\pt^{\text{cut}}, \ias^{\text{cut}})} = 5. && \text{with   } \alpha_{\text{min}} = \frac{\sigma_{\text{min}}}{\sigma_{S}}.
+\end{align}
+The number of expected events $N_S$ of the signal model $S$ depends on the \pt and \ias selection cut as well as the mass and the lifetime of the chargino.
+The uncertainty on the background $\Delta B$ is dependent on the \pt and \ias cut, and takes into account the full systematic uncertainty as well as the statistical uncertainty on the background prediction which is the 68\% one sided upper limit of a Poisson distribution with $\mu = N_B$ estimated with the Neyman construction~\cite{bib:Neyman_1937,bib:PDG_2014}.
+The systematic uncertainty on the background prediction includes systematic uncertainties as described in Section~\ref{sec:SysUncertaintiesBkg}, and statistical uncertainties arising from limited statistical precision of the control regions and simulated samples used in the background estimation.
+The facor that is minimised $\alpha_{\text{min}}$ is the ratio of the minimum cross section $\sigma_{\text{min}}$ divided by the nominal cross section $\sigma_{S}$ of the signal model S.\\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%For a structured optimisation all background uncertainties as estimated in Section~\ref{sec:SysUncertaintiesBkg} are taken precisely into account. 
 As this analysis focuses on short tracks, only low lifetimes are considered in the optimisation procedure: $\ctau=1\cm-10\cm$.
 To cover the full mass space, the optimisation is done for masses between 100\gev and 500\gev.
 The corresponding results are shown in Table~\ref{tab:optimisation}.
-\renewcommand{\arraystretch}{1.3}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
 \caption{Optimal \pt and \ias selection cuts and the corresponding minimum cross section $\sigma_{\text{min}}$ that can be discovered with 5$\sigma$ significance for different signal models.
@@ -47,19 +44,54 @@ Mass [\gev] & Lifetime [\cm] & Optimal \pt cut & Optimal \ias cut & $\sigma_{\te
 300&                          1&                            n/a&                          n/a&                          n/a\\
 400&                          1&                            n/a&                          n/a&                          n/a\\
 500&                          1&                            n/a&                          n/a&                          n/a\\
-%600&                          1&                            n/a&                          n/a&                          n/a\\
+600&                          1&                            n/a&                          n/a&                          n/a\\
 100&                          5&                            50&                           0.05&                         2.70\\
 200&                          5&                            30&                           0.30&                         1.81\\
 300&                          5&                            50&                           0.30&                         0.85\\
 400&                          5&                            50&                           0.30&                         0.83\\
 500&                          5&                            50&                           0.30&                         0.62\\
-%600&                          5&                            50&                           0.30&                         0.72\\
+600&                          5&                            50&                           0.30&                         0.72\\
 100&                          10&                           30&                           0.30&                         1.44\\
 200&                          10&                           50&                           0.30&                         0.42\\
 300&                          10&                           50&                           0.30&                         0.27\\
 400&                          10&                           50&                           0.30&                         0.19\\
 500&                          10&                           50&                           0.30&                         0.15\\
-%600&                          10&                           50&                           0.30&                         0.14\\
+600&                          10&                           50&                           0.30&                         0.14\\ 
+\bottomrule
+\multicolumn{5}{c}{} \\
+\end{tabular}}
+\end{table}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+\centering
+\caption{Optimal \pt and \ias selection cuts and the corresponding minimum cross section $\sigma_{\text{min}}$ that can be discovered with 5$\sigma$ significance for different signal models.
+         For some signal samples, an optimisation result is not available due to the limited size of these samples.}
+\label{tab:optimisation}
+\makebox[0.99\textwidth]{
+\begin{tabular}{c |c| c| c| c}
+\multicolumn{5}{c}{} \\
+\toprule
+Mass [\gev] & Lifetime [\cm] & Optimal \pt cut & Optimal \ias cut & $\sigma_{\text{min}}$ \\
+\midrule
+100&                          1&                            30&                           0.05&                         61.60\\
+200&                          1&                            20&                           0.05&                         43.41\\
+300&                          1&                            n/a &                         n/a &                         n/a \\ 
+400&                          1&                            n/a &                         n/a &                         n/a \\ 
+500&                          1&                            n/a &                         n/a &                         n/a \\ 
+600&                          1&                            n/a &                         n/a &                         n/a \\ 
+100&                          5&                            50&                           0.05&                         2.85\\ 
+200&                          5&                            30&                           0.05&                         2.19\\ 
+300&                          5&                            50&                           0.30&                         1.14\\ 
+400&                          5&                            50&                           0.30&                         1.11\\ 
+500&                          5&                            30&                           0.30&                         0.81\\ 
+600&                          5&                            30&                           0.30&                         0.96\\ 
+100&                          10&                           30&                           0.05&                         1.53\\ 
+200&                          10&                           30&                           0.30&                         0.56\\ 
+300&                          10&                           30&                           0.30&                         0.35\\ 
+400&                          10&                           30&                           0.30&                         0.24\\ 
+500&                          10&                           50&                           0.30&                         0.20\\ 
+600&                          10&                           50&                           0.30&                         0.19\\ 
 \bottomrule
 \multicolumn{5}{c}{} \\
 \end{tabular}}
@@ -67,17 +99,17 @@ Mass [\gev] & Lifetime [\cm] & Optimal \pt cut & Optimal \ias cut & $\sigma_{\te
 
 It can be seen that the optimal selection is highly dependent on the signal models.
 The best sensitivity for low masses ($\leq 200\gev$) is mainly achieved by soft selection cuts in \pt between $20-30\gev$, while models with higher chargino masses require tighter \pt selections of around 50\gev.
-The optimal \ias selection is mostly dependent 
-For low lifetimes also the optimal \ias selection cut is soft ($0.05$).
-The search sensitivity can be increased in the low mass region for long lifetimes when tightening the \ias selection to a value of 0.3.
-For high masses the highest search sensitivity can be achieved with a tighter \pt selection cut of 50\gev and a \ias selection cut of 0.3.
+The optimal \ias selection is mostly dependent on the mass of the chargino.
+For low masses and low lifetimes a soft selection in $\ias>0.05$ is preferred. 
+Since for longer lifetimes more charginos are able to reach the tracking system, a tighter selection in \ias of 0.3 is preferable.
+For high masses the highest search sensitivity is always achieved by a high \ias selection cut of 0.3.\\
 
-In order to visualise the mass and \ctau dependence of the optimal \pt and \ias selection cuts, the optimisation results for two very different lifetimes (5\cm and 50\cm) and masses (100\gev and 500\gev) are visualised in Fig.~\ref{fig:optimisation}, where the minimum cross section that is possible to discover is shown in the $\pt-\ias$ plane.
+In order to visualise the mass and \ctau dependence of the optimal \pt and \ias selection, the optimisation results for two very different lifetimes (5\cm and 50\cm) and masses (100\gev and 500\gev) are visualised in Fig.~\ref{fig:optimisation}, where the minimum cross section that is possible to discover is shown in the $\pt-\ias$ plane.
 For the visualisation, general systematic uncertainties on the leptonic and the fake background of 100\% and 20\% respectively are imposed.
-FIXME Uncertainties arising from limited statistical precision of the samples used for the background estimation are propagated consistently into formula~\ref{eq:optimisation}.
+Uncertainties arising from limited statistical precision of the samples used for the background estimation are propagated consistently into formula~\ref{eq:optimisation}.
 \begin{figure}[!h]
   \centering 
-  \vspace{30pt}
+  \vspace{50pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_5cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf} 
     \includegraphics[width=0.49\textwidth]{figures/analysis/Optimisation/Madgraph_signal_mass_100_ctau_50cm_ECaloLe5_SOverDeltaBStatPlusSys.pdf}\\ 
@@ -88,11 +120,10 @@ FIXME Uncertainties arising from limited statistical precision of the samples us
            The systematic uncertainties are taken to be 20\% and 100\% for the fake and the leptonic background respectively.
            The uncertainty on the background arising from the limited size of the used samples are propagated consistently to the search optimisation.
            In Table~\ref{fig:optimisationApp} of Appendix~\ref{app:OptimisationApp}, the corresponding histograms of the background yield, the background uncertainty and the signal yield for the four signal models can be found.}
-  \vspace{30pt}
+  \vspace{10pt}
   \label{fig:optimisation}
-\end{figure} 
-FIXME!
-It can be seen, that for low masses and low lifetimes, the highest search sensitivity is achieved by imposing rather soft selection cuts on \ias and \pt.
+\end{figure}
+Also here, it can be seen that for low masses and low lifetimes, the highest search sensitivity is achieved by imposing rather soft selection cuts on \ias and \pt.
 Optimising for higher lifetime pushes the optimal selection in \pt and \ias to larger values, where signal models with higher masses prefer even tighter \ias selection cuts than the corresponding lower mass signal model.
 It can also be seen, that for low lifetimes, the \pt dependence of the search sensitivity is less pronounced than for long lifetimes.\\
 
@@ -102,13 +133,10 @@ Based on the optimisation, four different exclusive signal regions are defined i
 \item $30\gev<\pt<50\gev$ and $0.05<\ias<0.3$
 \item $\pt>50\gev$ and $0.05<\ias<0.3$
 \item $30\gev<\pt<50\gev$ and $\ias>0.3$
-\item $\pt>50\gev$ and $\ias>0.3$.\\
+\item $\pt>50\gev$ and $\ias>0.3$.
 \end{enumerate}
 
-GOOD SENTENCE.
-
-The next section shows the comparison of the predicted number of events from Standard Model sources to the observed number of events measured in data.
-
+The unblinded results of the search for highly ionising, short tarcks are presented in the following chapter.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
@@ -154,7 +182,7 @@ Additionally, the corresponding numbers of predicted and observed events can be 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
-\caption{Number of predicted and observed events for the four different signal regions. FIXME: different lables.}
+\caption{Number of predicted and observed events for the four different signal regions.}
 \label{tab:FinalResult}
 \makebox[0.99\textwidth]{
 \begin{tabular}{l |c| c}

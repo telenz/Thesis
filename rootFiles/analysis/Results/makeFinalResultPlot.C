@@ -13,6 +13,7 @@ int makeFinalResultPlot(){
   gStyle -> SetPadBottomMargin(0.15);
   gStyle -> SetPadRightMargin(0.05);
   gStyle -> SetLabelSize(0.06,"X");
+  gStyle -> SetLabelSize(0.04,"Y");
   gStyle -> SetTitleSize(0.05,"Y");
   gStyle->SetLegendBorderSize(0);
   gStyle->SetPadTickY(1);
@@ -50,11 +51,17 @@ int makeFinalResultPlot(){
   TCanvas *c1 = new TCanvas("c1","c1",1.618*700,700);
 
   TH1D* h = new TH1D("result","",1,0,1);
-  
+  /*
   h->Fill("#splitline{30GeV<p_{T}<50GeV}{0.05<I_{as}<0.30}",pred[0]);
   h->Fill("#splitline{p_{T}>50GeV}{0.05<I_{as}<0.30}",pred[1]);
   h->Fill("#splitline{30GeV<p_{T}<50GeV}{0.30<I_{as}<1.00}",pred[2]);
   h->Fill("#splitline{p_{T}>50GeV}{0.30<I_{as}<1.00}",pred[3]);
+  */
+
+  h->Fill("#splitline{p_{T}: 30-50GeV}{I_{as}: 0.05-0.30}",pred[0]);
+  h->Fill("#splitline{p_{T}: 50-#scale[1.4]{#infty}GeV}{I_{as}: 0.05-0.30}",pred[1]);
+  h->Fill("#splitline{p_{T}: 30-50GeV}{I_{as}: 0.30-1.00}",pred[2]);
+  h->Fill("#splitline{p_{T}: 50-#scale[1.4]{#infty}GeV}{I_{as}: 0.30-1.00}",pred[3]);
 
   h->SetBinError(1,error_y_sym[0]);
   h->SetBinError(2,error_y_sym[1]);
