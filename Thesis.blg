@@ -41,7 +41,6 @@ Repeated entry---line 4276 of file Thesis.bib
  : @article{Pumplin:2002vw
  :                        ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "FIXME"
 Warning--empty publisher in bib:James:StaticticalMethods_2006
 Warning--empty year in bib:CMS:DT_Thesis
 Name 1 in "J. Brinson, C. Hill, and W. Wulsin" has a comma at the end for entry bib:CMS:DT_8TeV_AN
@@ -49,16 +48,16 @@ while executing---line 1277 of file lucas_unsrt.bst
 Warning--empty title in bib:Neyman_1937
 You've used 59 entries,
             2369 wiz_defined-function locations,
-            1019 strings with 17078 characters,
-and the built_in function-call counts, 16361 in all, are:
-= -- 2012
+            1021 strings with 17333 characters,
+and the built_in function-call counts, 16425 in all, are:
+= -- 2036
 > -- 344
 < -- 0
 + -- 135
 - -- 76
-* -- 1190
-:= -- 2132
-add.period$ -- 147
+* -- 1194
+:= -- 2144
+add.period$ -- 151
 call.type$ -- 59
 change.case$ -- 0
 chr.to.int$ -- 0
@@ -66,17 +65,17 @@ cite$ -- 62
 duplicate$ -- 993
 empty$ -- 1717
 format.name$ -- 62
-if$ -- 4487
+if$ -- 4511
 int.to.chr$ -- 0
 int.to.str$ -- 59
 missing$ -- 150
 newline$ -- 271
 num.names$ -- 37
-pop$ -- 315
+pop$ -- 311
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 498
+skip$ -- 494
 stack$ -- 0
 substring$ -- 489
 swap$ -- 316
@@ -87,5 +86,5 @@ type$ -- 0
 warning$ -- 3
 while$ -- 79
 width$ -- 61
-write$ -- 666
+write$ -- 670
 (There were 9 error messages)

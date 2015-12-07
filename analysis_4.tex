@@ -287,15 +287,14 @@ The uncertainties are of very similar size in the signal regions with different 
 No \ias dependence is considered.
 
 \subsection*{Uncertainty on the simulation of \ias}
-An uncertainty on the simulation of \ias needs to be estimated to account for possible data-simulation differences for highly ionising particles.
-The estimation of the \ias uncertainty is done as in~\cite{bib:CMS:HSCP_8TeV,bib:CMS:HSCP_8TeV_AN}.
+An uncertainty on the simulation of \ias needs to be estimated in order to account for possible data-simulation differences for highly ionising particles.
+The estimation of the \ias uncertainty is done following the methodology in~\cite{bib:CMS:HSCP_8TeV,bib:CMS:HSCP_8TeV_AN}.
 The \ias uncertainty can be assessed by comparing data and simulation differences of slow protons.
-Slow protons are highly ionising, thus, can be used to determine the uncertainty in the high \ias region.
+Slow protons are highly ionising and can thus be used to determine the uncertainty in the high \ias region.
 
-%The estimation is done with the ``Minimum Bias'' samples also used for the pixel calibration (see Section~\ref{sec:EnergyCalibration}).
-In order to select slow protons, good quality tracks with a momentum smaller than 2.5\gev are selected.
-The \ias versus momentum distribution for the selected tracks are shown in Fig.~\ref{fig:IasVsMomentum}.
-The kaon, proton and in data also the deuteron line is visible.
+In order to select slow protons, high quality tracks with a momentum smaller than 2.5\gev are selected.
+The \ias versus momentum distribution for the selected tracks is shown in Fig.~\ref{fig:IasVsMomentum}.
+The kaon, proton, and in data also the deuteron line is visible.
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
@@ -307,7 +306,7 @@ The kaon, proton and in data also the deuteron line is visible.
   \label{fig:IasVsMomentum}
 \end{figure} 
 Two different slices in the momentum are extracted where the proton line is contained: p between $0.80-0.85$ and $0.95-1.00$.
-A Gaussian function is fitted to the proton peak and the maximal difference of the mean the fitted Gaussian between simulation and observed data is taken as systematic uncertainty.
+A Gaussian function is fitted to the proton peak and the maximum difference of the mean of the fitted Gaussian between simulation and observed data is taken as systematic uncertainty.
 The \ias distribution for the two momentum ranges with the Gaussian fit is depicted in Fig.~\ref{fig:IasSlowProtons}.
 \begin{figure}[!h]
   \centering 
@@ -320,29 +319,29 @@ The \ias distribution for the two momentum ranges with the Gaussian fit is depic
   \label{fig:IasSlowProtons}
 \end{figure} 
 The systematic uncertainty is estimated to a value of 6\%.
-The size of the systematic uncertainty is also expected to cover the data-simulation difference for minimal ionisation.
+%The size of the systematic uncertainty is also expected to cover the data-simulation difference for minimal ionisation.
 
 
 \subsection*{Uncertainty on the simulation of the track reconstruction efficiency}
 One final source of uncertainty is the simulation of the track reconstruction efficiency.
 Possible differences of the reconstruction efficiency in simulation and data can lead to a different signal acceptance.
 Differences in the track reconstruction efficiency are especially expected for short tracks.
-Therefore, a worst case estimation is done, comparing the track reconstruction efficiency in data and simulation for tracks with a number of hits of three.
+Therefore, a worst case estimation is done, comparing the track reconstruction efficiency in data and simulation for tracks with only three hits.
 
-In simulation and observed data, well reconstructed muon tracks are selected and all hits after the third hits are removed.
-Afterwards the full track reconstruction step is again preformed.
-The relative difference of the track reconstruction efficiency in data and simulation ($\epsilon = N_{\text{recon. track with \nhits=3}}/N_{\text{selected muon trks}}$) is taken as systematic uncertainty.
+In simulation and observed data, well reconstructed muon tracks are selected and all hits after the third hit are removed.
+Afterwards the full track reconstruction is performed again.
+The relative difference of the track reconstruction efficiency in data and simulation ($\epsilon = N_{\text{recon. trk matched to muon trk}}/N_{\text{selected muon trks}}$) is taken as systematic uncertainty.
 The track reconstruction efficiency is higher in simulation than in data and results in uncertainties between $4.6-6.0\%$.\\
 
 
-\subsection*{Summary of systematic uncertainties of the simulated signal samples}
+\subsection*{Summary of systematic uncertainties on the simulated signal samples}
 All systematic uncertainties are estimated for all simulated signal samples.
 An overview of the range of the uncertainties is given in Table~\ref{tab:SignalSysUnc}.
 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h] 
 \centering
-\caption{Ranges of systematic uncertainties of the simulated signal samples.}
+\caption{Ranges of systematic uncertainties on the simulated signal samples. Min and Max correspond to variations between different signal samples and search bins.}
 \label{tab:SignalSysUnc}
 \begin{tabular}{|l|c|c|}  
 \multicolumn{3}{c}{} \\
@@ -367,55 +366,56 @@ Simulation of track reconstruction efficiency    &4.6                &6.0       
 \end{tabular}  
 \end{table} 
 
-In order to avoid an overestimation of the systematic uncertainties due to limited sizes of the samples (especially for low lifetimes like 1\cm), the corresponding signal sample with longer lifetime (100\cm) is used instead.
-This is possible for uncertainty sources, for which the size is not affected by the lifetime of the chargino.
-These are the uncertainties in ISR, trigger efficiency, JES, JER and PDF.
+In order to avoid an overestimation of the systematic uncertainties due to limited sizes of the samples (especially for low lifetimes like 1\cm), the corresponding signal sample with longer lifetime (100\cm) is used instead for determining the systematic uncertainty.
+This is possible for uncertainty sources, where the size is not affected by the lifetime of the chargino, including ISR, trigger efficiency, JES, JER, and PDF uncertainties.
 
 It can be seen, that major uncertainties are the simulation of the initial state radiation, of the calorimeter isolation, and of \ias.
-The high maximal uncertainty of the pile-up uncertainty is caused by limited statistical precision.
+The high maximum value of the pile-up uncertainty is caused by limited statistical precision.
 
-The systematic uncertainties of the simulated signal samples are taken as fully correlated for the four signal bins into account.
+The systematic uncertainties on the simulated signal samples are considered as fully correlated among the four signal regions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Methods/ Limit setting}
 
-This section is a small interlude to give a short introduction into the methods and techniques of the exclusion of theoretical models used in this analysis.
-For a detailed and pedagogical introduction to the methods, it is referred to~\cite{bib:Ott_Thesis}.
+This section is a small interlude to give a short introduction into the methods and techniques that are used to exclude theoretical models in this analysis.
+For a detailed and pedagogical introduction to the methods, the reader is referred to~\cite{bib:Ott_Thesis}.
 
-In this analysis the exclusion of the underlying theoretical model is achieved with the \CLs method~\cite{bib:CLS_1999,bib:CLS_2000,bib:CLS_2002}.
-The \CLs method was developed for the Higgs searches at LEP in order not to overestimate the exclusion power of a result when an  under-fluctuation of the Standard Model expectation occurs.
-\CLs is defined as the confidence level for the background plus signal hypothesis divided by the confidence level for the background hypothesis only
+In this analysis, the exclusion of the underlying theoretical model is achieved with the \CLs method~\cite{bib:CLS_1999,bib:CLS_2000,bib:CLS_2002}.
+A model is considered as excluded at a 95\% confidence level if \CLs is smaller than 5\%.
+The \CLs method was developed for the Higgs searches at LEP in order not to overestimate the exclusion power of a result if an  under-fluctuation of the background expectation occurs.
+\CLs is defined as the confidence level of the background plus signal hypothesis divided by the confidence level of the background only hypothesis
 \begin{equation*}
 \CLs = \frac{\CLsb}{\CLb}.
 \end{equation*}
-The confidence level CL is defined as the probability to observe less than or equal the number of observed events P($n<n_{\text{obs}}$) for a given background (or background+signal) hypothesis.
-In general, the considered distribution can be any constructed test statistics $Q$ and is not necessarily the distribution in the number of events.
+The confidence level CL is defined as the probability of obtaining less than or equal the number of observed events P($n\leq n_{\text{obs}}$) for a given background (or background+signal) hypothesis.
+In general, the considered distribution can be any test statistics $Q$ and is not necessarily the distribution of the number of events.
 However, For Poissonian statistics it leads to the following expressions for \CLsb and \CLb for one signal region
 \begin{equation*}
 \begin{split}
-\CLsb &= \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),\\
-\CLb  &= \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b   \right),
+\CLsb &= \text{Poisson}\left( n\leq n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),\\
+\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b   \right),
 \end{split}
 \end{equation*}
-where $\lambda$ is the mean of the Poisson distribution and $\mu$ is the signal strength.
-The signal strength $\mu$ is a measure for the size of the signal cross section.
+where $\lambda$ is the mean of the Poisson distribution and the signal strength $\mu$ is the measure for the size of the signal cross section.
 
-In order to include systematic uncertainties, the background expectation $b$ or the signal expectation $\mu\cdot s$ are varied within a Gaussian distribution with a width estimated as the 1-$\sigma$ uncertainty and a mean of zero.
+In order to include systematic uncertainties, the background expectation $b$ and the signal expectation $\mu\cdot s$ are varied within a Gaussian distribution with a width estimated as the 1-$\sigma$ uncertainty and a mean of zero.
 For one source of systematic uncertainty on the background, this leads to the following expressions for \CLsb and \CLb
 \begin{equation*}
 \begin{split}
-\CLsb &= \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \delta_b\right),\\
-\CLb  &= \text{Poisson}\left( n<n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \delta_b\right),
+\CLsb &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
+\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),
 \end{split}
 \end{equation*}
 These expressions can be generalised for more than one signal region and more than one systematic uncertainty~\cite{bib:Ott_Thesis}.
-A model is considered as excluded at a 95\% confidence level when \CLs is smaller than 5\%.
+In case of multiple signal regions, the distribution of the systematic uncertainties becomes a multi-dimensional Gaussian that takes the covariance matrix of the systematic uncertainty in different signal regions into account.
+In order to get rid of the nuisance parameter $\delta_b$, the expression for \CLsb and \CLs is integrated over all possible values of  $\delta_b$.
+This integration is generally not solvalbel analytically, but is calculated with pseudo data drawn from the Gaussian and inserted into the Poisson function.
+The distribution of \CLsb($\delta_b,\mu$) is usually not known analytically but is generated by pseudo data for which the corresponding value of \CLsb is calculated.
 
 
-
-In this search, the systematic uncertainties on the background expectation are taken as (un-)correlated according to Table~\ref{tab:BkgSysUncCorr}.
-The systematic uncertainties on the expected signal yields are considered fully correlated.
+In this search, correlations between systematic uncertainties on the background expectation in different search bins are assumed as shown in Table~\ref{tab:BkgSysUncCorr}.
+The systematic uncertainties on the expected signal yields are considered fully correlated accross search bins.
 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h] 
@@ -450,15 +450,17 @@ As explained in the previous section, the exclusion is done with the help of the
 Two direct production channels are taken into account: chargino pair production and chargino neutralino production. 
 The corresponding cross sections can be found in Table~\ref{tab:SignalCrossSections}.
 The exclusion limits are derived with the \textit{Combine} framework~\cite{bib:CMS:Combine} that was developed for the Higgs searches at CMS.
-The systematic uncertainties on the background and the signal yields  are modelled with log-normal distributions, whereas the statistical uncertainties on the background are modelled with gamma distributions.
+The systematic uncertainties on the background and the signal yields as well as the statistical uncertainty on the fake background are modelled with log-normal distributions, 
+whereas the statistical uncertainties on the leptonic background are modelled with the use of gamma distributions.
 A log-normal distribution is used instead of a normal distribution to ensure that the prediction cannot become negative.
-The gamma distribution is well suited for statistical uncertainties arising from limited statistical precision in control regions or in simulated samples that are use for the background estimation.
+The gamma distribution is well suited for statistical uncertainties arising from very limited statistical precision in control regions or in simulated samples that are used for the background estimation.
 
 In total, 37 different lifetimes for every mass point are considered, leading to 37 different exclusion limits.
 Four exemplary exclusion limits are shown in Fig.~\ref{fig:1dLimits}, the full set of exclusion limits can be found in Appendix~\ref{app:ExlusionLimits}.
 
 \begin{figure}[!h]
   \centering 
+  \vspace{70pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau5cm.pdf} 
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_ctau10cm.pdf} \\
@@ -493,7 +495,7 @@ A 2-dimensional exclusion limit in the chargino lifetime-mass parameter space is
 Charginos with a masses of 100\gev can be excluded down to a lifetime of $~2\cm$.
 Charginos with a higher mass of 500\gev are excluded for lifetimes between $60-700\cm$.
 
-Since the long lifetime of the chargino is caused by the small mass splitting between $m_{\chipm}$ and $m_{\chi0}$, 
+Since the long lifetime of a wino-like chargino is caused by the small mass splitting between $m_{\chipm}$ and $m_{\chiO}$, 
 it is possible to express the lifetime of the chargino also as a mass gap $\Delta m_{\chipm\chiO}$ between the chargino and the lightest neutralino~\cite{bib:MassSplitting_Drees}.
 The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d}.
 \begin{figure}[!t]
@@ -513,12 +515,20 @@ The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d
   \end{tabular}
   \caption{Comparison of the 95\% CL exluded parameter region from~\cite{bib:CMS:DT_8TeV} (black line) and the excluded parameter region of this analysis (red line).
            The results are very similar. A slight improvement of the size of the excluded parameter region by this analysis can be seen.}
-  \label{fig:DeltaMLimit2d}
+  \label{fig:Comparison2dLimit}
 \end{figure} 
-This search is sensitive to mass splittings between $\sim 140\mev-210\mev$.
+This search is sensitive to mass splittings between $\sim 140\mev-210\mev$.\\
 
-The derived exclusion limits of this search could confirm the exclusion from~\cite{FIXME} with small improvements in the medium mass range up to FIXME\gev.
-A comparison of the two searches is shown in Fig.~\ref{FIXME}.
+The derived exclusion limits of this search could confirm the exclusion from~\cite{bib:CMS:DT_8TeV} with slight improvements in the low lifetime region.
+The comparison of the two searches is shown in Fig~\ref{fig:Comparison2dLimit}.
+For a chargino with a lifetime of $\tau=0.07\ns$, the observed limit of this search improves the limits of~\cite{bib:CMS:DT_8TeV} by $\sim35\gev$, for a lifetime of $\tau=0.4ns$ by $\sim25\gev$. 
+The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is even more interesting as the confimation is achieved with a very uncorrelated selection.
+The correlation of the signal region in~\cite{bib:CMS:DT_8TeV} and the most sensitive signal region (out of the four exclusive regions) of this analysis can be estimated by the correlation coefficient of two overlapping sets
+\begin{equation*}
+\rho_{\text{corr}} = \frac{N_{A\cap B}}{N_A + N_B - N_{A \cap B}}
+\end{equation*}
+The correlation coefficient for some of the examined signal model can be found in Table~\ref{FIXME}.
+It can be seen, that for very low lifetimes, the overlap of the here preseneted search and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} is of minor importance.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -527,10 +537,20 @@ A comparison of the two searches is shown in Fig.~\ref{FIXME}.
 \chapter{Discussion and conclusion}
 \label{sec:Discussion}
 
-\begin{itemize}
-\item Earlier limits could verified and slightly improved in mass regions between 300-400 to 50\gev
-\item The inclusion of ias discriminator shows good sensitivity increase of 100\% ...
-\item further improvements through bla bla
-\item Fist analysis that takes \dedx pixel information into account
-\item ..
-\end{itemize}
+The here presented search for highly ionising, short tracks is motivated by supersymmetric models with wino-like charginos \chipm and neutralinos \chiO.
+Such scenarios are well motivated by astrophysical observations that suggest the existence of large amounts of dark matter.
+The relic density is possible to explain with wino-like neutralinos that are non-thermally produced via the decay of long-lived particles, such as a wino-like chargino.\\
+
+The presented analysis extends the search for disappearing tracks~\cite{bib:CMS:DT_8TeV}, by including the variable \dedx.
+It is the first analysis at CMS that includes energy information from the pixel tracker.
+By this inclusion the discrimantion power of \dedx is impressingly increased.
+Furthermore, \dedx inclusion enables to loosen track selection requirements that lead to a high supression of signal events.
+The used \dedx discriminator, the Asymmetric Smirnov discriminator \ias, shows good seperation power and can lead to sensitiviy increases up to 400\%.\\
+
+No excess above the Standard Model expection is observed.
+Exclusion on the SUSY parameter space is set.
+The parameter exclusion limits in~\cite{bib:CMS:DT_8TeV} can be confirmed and slight improvements of th order $\sim 10-40\gev$ in the low lifetime region is achieved.
+Interstingly, the signal regions of the here preseneted search and the search from~\cite{bib:CMS:DT_8TeV} are highly non-corrlated and thus this analysis can serve as an orthogonal cross check of~\cite{bib:CMS:DT_8TeV}.\\
+
+The main background is arising from fake tracks, that are also typically short and can have large values of \ias.
+Further improvements in the background supprresion can be possibly achieved by the characterisation of further unique characteristics fake tracks, such as ????.
