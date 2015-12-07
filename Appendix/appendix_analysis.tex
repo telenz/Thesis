@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Lifetime reweighting}
+\chapter{A search for highly ionising, short tracks}
+\section{Lifetime reweighting}
 \label{app:LifetimeReweighting}
 The probability density function of a particle's proper lifetime for a sample generated with a particle's mean lifetime $\tau^{\text{gen}}$ is given by
 \begin{equation*}
@@ -21,11 +22,11 @@ For more than one non-stable particle, the event weight is calculated by multipl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Event yields for simulated samples and data}
+\section{Event yields for simulated samples and data}
 \label{app:cutflow}
 
 
-\renewcommand{\arraystretch}{1.15}
+\renewcommand{\arraystretch}{1.45}
 \begin{table}[!h]
 %\begin{sideways}
 \centering
@@ -70,7 +71,7 @@ $\ecalo<5\gev$                                                                  
 \end{table}  
 %\end{landscape}
 
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.45}
 \begin{table}[!h]
 %\begin{sideways}
 \centering
@@ -116,7 +117,7 @@ $\ecalo<5\gev$                                                                  
 \end{table}  
 %\end{landscape}
 
-\renewcommand{\arraystretch}{1.1}
+\renewcommand{\arraystretch}{1.45}
 \begin{table}[!h]
 %\begin{sideways}
 \centering
@@ -167,11 +168,11 @@ $\ias>0.05$                                                                     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Validation tests of the background estimation methods}
+\section{Validation tests of the background estimation methods}
 \label{app:Validation}
 
 
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
 \caption{Validation tests of the background estimation methods in the calorimeter isolation control region $\ecalo>10\gev$ 
@@ -210,7 +211,7 @@ Electrons        &$0.00^{+9.14}_{-0.00}$                & \\
 \end{tabular}}
 \end{table}
 
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
 \caption{Validation tests of the background estimation methods in the calorimeter isolation control region $\ecalo>10\gev$
@@ -249,7 +250,7 @@ Electrons        &$0.20^{+0.17}_{-0.10}$                & \\
 \end{tabular}}
 \end{table}
 
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
 \caption{Validation tests of the background estimation methods in the calorimeter isolation control region $\ecalo>10\gev$
@@ -291,7 +292,7 @@ Electrons        &$0.00^{+0.05}_{-0.00}$                & \\
 
 
 \newpage 
-The underprediction in the control regions with $\ias>0.2$ is caused by the pediction of the leptonic \ias shape from simulation.
+The underprediction in the control regions with $\ias>0.2$ is caused by the prediction of the leptonic \ias shape from simulation.
 This leads to a bias as the \ias distribution in simulation is softer than in data.
 However, this bias is taken into account as systematic uncertainty (see Section~\ref{sec:LeptonIasUncertainty}).
 
@@ -299,10 +300,10 @@ However, this bias is taken into account as systematic uncertainty (see Section~
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Selection requirements of the ``tag-and-probe'' samples}
+\section{Selection requirements of the ``tag-and-probe'' samples}
 \label{app:TagAndProbeRequirements}
 
-\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
 \caption{Event selection cuts for the muon ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the muon scale factor \muonscalefactor.}
@@ -336,7 +337,7 @@ However, this bias is taken into account as systematic uncertainty (see Section~
 \end{tabular}}
 \end{table}
 
-\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
 \caption{Event selection cuts for the tau ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the tau scale factor \tauscalefactor.}
@@ -372,7 +373,7 @@ However, this bias is taken into account as systematic uncertainty (see Section~
 \end{table}
 
 
-\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
 \caption{Event selection cuts for the electron ``tag-and-probe'' samples (T\&P signal region sample and T\&P lepton veto inverted control region sample) that are used to estimate the uncertainty on the electron scale factor \electronscalefactor.}
@@ -405,7 +406,6 @@ However, this bias is taken into account as systematic uncertainty (see Section~
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Optimisation of the search sensitivity}
 \section{Optimisation results with the number of missing outer hits}
 \label{app:OptimisationNLostOuter}
 
@@ -428,17 +428,17 @@ No significant improvement is visible in the search sensitivity for different se
   \label{fig:optimisationNLostOuter}
 \end{figure} 
 This is caused by the fact, that the main background, the fake background, also shows missing outer hits.
-A comparison between the number of missing outer hits for the fake background and two signal models is shown in Fig.~\ref{}.
+A comparison between the number of missing outer hits for the fake background and two signal models is shown in Fig.~\ref{fig:NLostOuterFakeSignal}.
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.39\textwidth]{figures/analysis/Optimisation/NLostOuterForFakes_chiTracksfullSelectionNoQCDCutsNoTrigger.pdf} 
   \end{tabular}
   \caption{Normalised distribution of the number of missing outer hits for fake tracks and two different signal models. }
-  \label{fig:optimisationNLostOuter}
+  \label{fig:NLostOuterFakeSignal}
 \end{figure} 
 
-
+\FloatBarrier
 \section{Underlying distributions for the qualitative search sensitivity optimisation}
 \label{app:OptimisationApp}
 
@@ -460,13 +460,13 @@ A comparison between the number of missing outer hits for the fake background an
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Trigger emulation}
+\section{Trigger emulation}
 \label{app:TriggerEmulation}
 
-As the HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 trigger is not availabale in the simulated signal samples, this trigger is emulated in these samples.
+As the HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 trigger is not available in the simulated signal samples, this trigger is emulated in these samples.
 Since HLT trigger information is stored in the samples, it is possible to rebuild the trigger afterwards. 
 
-The following requirements must be fulfilled in order to consider the trigger fireing~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}:
+The following requirements must be fulfilled in order to consider the trigger firing~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}:
 \begin{itemize}
 \item \pt of hltL1sL1ETM40 $>40\gev$
 \item \pt of hltCentralJet65L1FastJet $>65\gev$
@@ -480,7 +480,7 @@ The correct implementation could be verified with this test.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\chapter{Exclusion limits for all simulated lifetimes}
+\section{Exclusion limits for all simulated lifetimes}
 \label{app:ExlusionLimits}
 
 \begin{figure}[!h]

@@ -6,9 +6,7 @@
 Finally, having all background estimation methods in place, an optimisation procedure is conducted in order to increase the search sensitivity with respect to different signal models as introduced in Section~\ref{sec:SignalSamples}.
 The optimisation is done in the most sensitive variables, \pt and \ias (see Section~\ref{sec:Ias} for a definition and explanation of the Asymmetric Smirnov discriminator \ias).
 A potential additional discriminating variable is the number of missing outer hits \nlostouter in the tracker system. 
-This variable is, however, not considered in this analysis because studies show that the discriminating potential is limited (see Appendix~\ref{app:OptimisationNLostOuter}).
-%For low lifetimes, a tiny increase in sensitivity of the order of 1-3\% is possible by a $N_{\text{lost}}^{\text{outer}}>0$ selection.
-%However, as this variable means also a new source of uncertainty on the signal model, such a selection cut is not considered.
+This variable is, however, not considered in this analysis because studies show that the discriminating potential is limited (see Appendix~\ref{app:OptimisationNLostOuter}).\\
 
 SUSY models with different chargino lifetimes and masses are characterised by different \pt and \ias distributions as well as different theoretical cross sections.
 Therefore, the usual search optimisation startegy that maximises $N_S/\Delta B$ ($N_S$ = number of signal events of model $S$, $\Delta B$ = background uncertainty) implies a potential fine-tuning on the specific SUSY cross sections.
@@ -24,7 +22,8 @@ The uncertainty on the background $\Delta B$ is dependent on the \pt and \ias cu
 The systematic uncertainty on the background prediction includes systematic uncertainties as described in Section~\ref{sec:SysUncertaintiesBkg}, and statistical uncertainties arising from limited statistical precision of the control regions and simulated samples used in the background estimation.
 The factor $\alpha_{\text{min}}$  that is minimised is the ratio of the minimum cross section $\sigma_{\text{min}}$ divided by the nominal cross section $\sigma_{S}$ of the signal model S.\\
 
-As this analysis focuses on short tracks, only low lifetimes are considered in the optimisation procedure: $\ctau=1\cm-10\cm$.
+As this analysis focuses on short tracks, rather low lifetimes are considered in the optimisation procedure: $\ctau=1\cm,\,10\cm,\,50\cm$.
+These lifetimes are further sutiable as they lie at the edge of the sensitivity of the search for disapperaing tracks~\cite{bib:CMS:DT_8TeV}.
 To cover the full mass space, the optimisation is done for masses between 100\gev and 500\gev.
 The corresponding results are shown in Table~\ref{tab:optimisation}.
 \renewcommand{\arraystretch}{1.5}
@@ -39,59 +38,23 @@ The corresponding results are shown in Table~\ref{tab:optimisation}.
 \toprule
 Mass [\gev] & Lifetime [\cm] & Optimal \pt cut & Optimal \ias cut & $\sigma_{\text{min}}$ \\
 \midrule
-100&                          1&                            30&                           0.05&                         59.03\\
-200&                          1&                            20&                           0.05&                         42.01\\
-300&                          1&                            n/a&                          n/a&                          n/a\\
-400&                          1&                            n/a&                          n/a&                          n/a\\
-500&                          1&                            n/a&                          n/a&                          n/a\\
-600&                          1&                            n/a&                          n/a&                          n/a\\
-100&                          5&                            50&                           0.05&                         2.70\\
-200&                          5&                            30&                           0.30&                         1.81\\
-300&                          5&                            50&                           0.30&                         0.85\\
-400&                          5&                            50&                           0.30&                         0.83\\
-500&                          5&                            50&                           0.30&                         0.62\\
-600&                          5&                            50&                           0.30&                         0.72\\
-100&                          10&                           30&                           0.30&                         1.44\\
-200&                          10&                           50&                           0.30&                         0.42\\
-300&                          10&                           50&                           0.30&                         0.27\\
-400&                          10&                           50&                           0.30&                         0.19\\
-500&                          10&                           50&                           0.30&                         0.15\\
-600&                          10&                           50&                           0.30&                         0.14\\ 
-\bottomrule
-\multicolumn{5}{c}{} \\
-\end{tabular}}
-\end{table}
-
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
-\centering
-\caption{Optimal \pt and \ias selection cuts and the corresponding minimum cross section $\sigma_{\text{min}}$ that can be discovered with 5$\sigma$ significance for different signal models.
-         For some signal samples, an optimisation result is not available due to the limited size of these samples.}
-\label{tab:optimisation}
-\makebox[0.99\textwidth]{
-\begin{tabular}{c |c| c| c| c}
-\multicolumn{5}{c}{} \\
-\toprule
-Mass [\gev] & Lifetime [\cm] & Optimal \pt cut & Optimal \ias cut & $\sigma_{\text{min}}$ \\
+100&                     1&                       30&                      0.05&                    61.596\\
+200&                     1&                       20&                      0.05&                    43.414\\
+300&                     1&                       n/a &                    n/a &                    n/a \\  
+400&                     1&                       n/a &                    n/a &                    n/a \\  
+500&                     1&                       n/a &                    n/a &                    n/a \\  
 \midrule
-100&                          1&                            30&                           0.05&                         61.60\\
-200&                          1&                            20&                           0.05&                         43.41\\
-300&                          1&                            n/a &                         n/a &                         n/a \\ 
-400&                          1&                            n/a &                         n/a &                         n/a \\ 
-500&                          1&                            n/a &                         n/a &                         n/a \\ 
-600&                          1&                            n/a &                         n/a &                         n/a \\ 
-100&                          5&                            50&                           0.05&                         2.85\\ 
-200&                          5&                            30&                           0.05&                         2.19\\ 
-300&                          5&                            50&                           0.30&                         1.14\\ 
-400&                          5&                            50&                           0.30&                         1.11\\ 
-500&                          5&                            30&                           0.30&                         0.81\\ 
-600&                          5&                            30&                           0.30&                         0.96\\ 
-100&                          10&                           30&                           0.05&                         1.53\\ 
-200&                          10&                           30&                           0.30&                         0.56\\ 
-300&                          10&                           30&                           0.30&                         0.35\\ 
-400&                          10&                           30&                           0.30&                         0.24\\ 
-500&                          10&                           50&                           0.30&                         0.20\\ 
-600&                          10&                           50&                           0.30&                         0.19\\ 
+100&                     10&                      30&                      0.05&                    1.531\\ 
+200&                     10&                      30&                      0.30&                    0.561\\ 
+300&                     10&                      30&                      0.30&                    0.354\\ 
+400&                     10&                      30&                      0.30&                    0.238\\ 
+500&                     10&                      50&                      0.30&                    0.201\\ 
+\midrule
+100&                     50&                      50&                      0.30&                    0.435\\ 
+200&                     50&                      50&                      0.30&                    0.110\\ 
+300&                     50&                      50&                      0.30&                    0.063\\ 
+400&                     50&                      50&                      0.30&                    0.045\\ 
+500&                     50&                      50&                      0.30&                    0.037\\ 
 \bottomrule
 \multicolumn{5}{c}{} \\
 \end{tabular}}
@@ -415,13 +378,8 @@ The systematic uncertainties of the simulated signal samples are taken as fully 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Correlation of systematic uncertainties}
-%In order to combine the four different signal regions, a specification of the size of correlations between the systematic uncertay needs to be addresses.
-%\subsection*{Background correlations}
-%\subsection*{Signal correlation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Methods/ Limit setting}
+
 This section is a small interlude to give a short introduction into the methods and techniques of the exclusion of theoretical models used in this analysis.
 For a detailed and pedagogical introduction to the methods, it is referred to~\cite{bib:Ott_Thesis}.
 
@@ -481,12 +439,11 @@ Ias uncertainty                         &0\% correlated                & 100\% f
 \end{tabularx}  
 \end{table} 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \section{Exclusion limits}
+\label{sec:ExclusionLimits}
 
 The search for highly ionising short tracks is interpreted in the context of SUSY models with almost mass degenerate wino-like charginos and neutralinos.
 As explained in the previous section, the exclusion is done with the help of the \CLs method.
@@ -551,16 +508,18 @@ The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.55\textwidth]{figures/analysis/Interpretation/MassSplittingLimitPlot.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/Comparison2dLimits.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_largerRange.pdf} 
   \end{tabular}
-  \caption{Excluded parameter region by 95\% CL for wino-like charginos and neutralinos dependent on the chargino mass and the mass splitting between \chipm and \chiO.
-           Everything below the red line is excluded up to the region where the mass splitting is smaller than the pion mass.}
+  \caption{Comparison of the 95\% CL exluded parameter region from~\cite{bib:CMS:DT_8TeV} (black line) and the excluded parameter region of this analysis (red line).
+           The results are very similar. A slight improvement of the size of the excluded parameter region by this analysis can be seen.}
   \label{fig:DeltaMLimit2d}
 \end{figure} 
 This search is sensitive to mass splittings between $\sim 140\mev-210\mev$.
 
 The derived exclusion limits of this search could confirm the exclusion from~\cite{FIXME} with small improvements in the medium mass range up to FIXME\gev.
 A comparison of the two searches is shown in Fig.~\ref{FIXME}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -572,4 +531,6 @@ A comparison of the two searches is shown in Fig.~\ref{FIXME}.
 \item Earlier limits could verified and slightly improved in mass regions between 300-400 to 50\gev
 \item The inclusion of ias discriminator shows good sensitivity increase of 100\% ...
 \item further improvements through bla bla
+\item Fist analysis that takes \dedx pixel information into account
+\item ..
 \end{itemize}

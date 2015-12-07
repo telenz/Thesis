@@ -27,6 +27,22 @@
   doi:10.1007/JHEP09(2014)176}}.
 %%CITATION = ARXIV:1405.7875;%%.
 
+\bibitem{bib:Giudice:DarkMatter_1998}
+G.~F. Giudice, M.~A. Luty, H.~Murayama{ et~al.}, ``{Gaugino mass without
+  singlets}'', {\em JHEP} {\bf 12} (1998) 027,
+  \href{http://www.arXiv.org/abs/hep-ph/9810442}{{\tt arXiv:hep-ph/9810442}}.
+\href{http://dx.doi.org/10.1088/1126-6708/1998/12/027}{{\tt
+  doi:10.1088/1126-6708/1998/12/027}}.
+%%CITATION = HEP-PH/9810442;%%.
+
+\bibitem{bib:Moroi:DarkMatter_1999}
+T.~Moroi and L.~Randall, ``{Wino cold dark matter from anomaly mediated SUSY
+  breaking}'', {\em Nucl. Phys.} {\bf B570} (2000) 455--472,
+  \href{http://www.arXiv.org/abs/hep-ph/9906527}{{\tt arXiv:hep-ph/9906527}}.
+\href{http://dx.doi.org/10.1016/S0550-3213(99)00748-8}{{\tt
+  doi:10.1016/S0550-3213(99)00748-8}}.
+%%CITATION = HEP-PH/9906527;%%.
+
 \bibitem{bib:Ibe:DarkMatter_2015}
 M.~Ibe, S.~Matsumoto, S.~Shirai{ et~al.}, ``{Wino Dark Matter in light of the
   AMS-02 2015 Data}'', {\em Phys. Rev.} {\bf D91} (2015), no.~11, 111701,
@@ -332,16 +348,18 @@ A.~Vicini, ``Practical implementation of the PDF4LHC recipe''.
 \newblock Accessed: 2015-11-27.
 
 \bibitem{bib:CMS:PileupUtilities}
-\text{CMS Collaboration}, ``Pileup Reweighting Utilities''.
-  \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtiliti%
-es}.
-\newblock Accessed: 2015-12-05.
+{CMS Collaboration}, ``Pileup Reweighting Utilities'', {\em Internal CMS Wiki}
+  (2012).
+  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilit%
+ies}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilities,
+  Topic revision: r29}.
 
 \bibitem{bib:CMS:PileupSysUnc}
-\text{CMS Collaboration}, ``Estimating Systematic Errors Due to Pileup
-  Modeling''.
-  \url{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors}.
-\newblock Accessed: 2015-12-05.
+{CMS Collaboration}, ``Estimating Systematic Errors Due to Pileup Modeling'',
+  {\em Internal CMS Wiki} (2013).
+  \href{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors}{https%
+://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors, Topic revision:
+  r11}.
 
 \bibitem{bib:CMS:HSCP_8TeV_AN}
 L.~Q. at~al., ``Searches for Heavy Stable Charged Particles with Combined 2011
@@ -381,11 +399,11 @@ A.~L. Read, ``{Presentation of search results: The CL(s) technique}'', {\em J.
 %%CITATION = JPAGA,G28,2693;%%.
 
 \bibitem{bib:CMS:Combine}
-\text{CMS Collaboration}, ``Documentation of the RooStats-based statistics
-  tools for Higgs PAG''.
-  \url{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombin%
-edLimit}.
-\newblock Accessed: 2015-11-27.
+{CMS Collaboration}, ``\mbox{Documentation} of the RooStats-based statistics
+  tools for Higgs PAG'', {\em Public CMS Wiki} (2015).
+  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombi%
+nedLimit}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCom%
+binedLimit, Topic rev: r124}.
 
 \bibitem{bib:MassSplitting_Drees}
 C.~H. Chen, M.~Drees, and J.~F. Gunion, ``{Addendum/erratum for 'searching for

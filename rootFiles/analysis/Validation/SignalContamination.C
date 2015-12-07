@@ -173,7 +173,7 @@ public:
 	if(trackCaloIso->at(i)<10)  continue;
 	
 
-	if(trackNValid->at(i)<7) continue;
+	//if(trackNValid->at(i)<7) continue;
 	
       
 	histo         -> Fill(trackASmi->at(i),weight_xsec_lumi*weight);
