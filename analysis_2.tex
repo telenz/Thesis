@@ -231,7 +231,7 @@ Again, because of the size of the datasets ($\sim150\,$TB in total), a reduction
 \label{sec:AnalysisSelection}
 
 In order to suppress events originating from Standard Model processes such as QCD-multijet events, \WJets, etc., a selection for signal-like tracks is applied.
-The analysis selection closely follows the selection required in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
+The signal candidate event selection closely follows the selection required in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
 It relies on event-based and track-based variables as described in the following two sections.
 
 
@@ -260,10 +260,10 @@ In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the trans
 \end{figure}
 Only jets with $|\eta|<2.4$ that fulfil the following further criteria are taken into account:
 \begin{itemize}
-\item Charged hadron energy fraction $\text{CHF}>0.2$
-\item Charged electromagnetic energy fraction $\text{CEF}<0.5$
-\item Neutral hadron energy fraction $\text{NHF}<0.7$
-\item Neutral electromagnetic energy fraction $\text{NEF}<0.7$.
+\item Charged hadron energy fraction (CHF) $>0.2$
+\item Charged electromagnetic energy fraction (CEF) $<0.5$
+\item Neutral hadron energy fraction (NHF) $<0.7$
+\item Neutral electromagnetic energy fraction (NEF) $<0.7$.
 \end{itemize}
 These additional jet quality criteria ensure that noise from cosmic and beam halo muons and high-\pt photons and electrons is suppressed \cite{bib:CMS:DM_8TeV_AN}.
 
@@ -287,7 +287,7 @@ QCD-multijet events can be characterised by topologies where two jets are almost
 Additionally, in QCD-multijet events the missing energy is usually aligned with one of the leading jets in the event.
 Figure~\ref{fig:QCDcuts} shows the maximum $\Delta\phi$ of any of two jets and the minimum $\Delta\phi$ between the \met vector and any of the two leading jets for the SM background and two different signal datasets.
 
-Therefore the following two requirements are sufficient to suppress QCD-multijet events efficiently:
+The following two requirements are sufficient to suppress QCD-multijet events efficiently:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item $\Delta\phi$ between any of two jets (with $\pt>20\gev$ and $|\eta|<4.5$) in the event must be smaller than 2.5. %: \mbox{$\Delta\phi\left( j_i, j_j\right)<2.5$}.
@@ -311,7 +311,7 @@ Therefore the following two requirements are sufficient to suppress QCD-multijet
 After the reduction of background processes with event-based variables, a track-based selection is carried out.
 To get an optimised selection for possible chargino tracks several signal track characteristics are exploited.\\
 
-First, a selection of high quality tracks is enforced:
+First, a selection of high-quality tracks is enforced:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item The track must be of ``high purity'' as defined in~\cite{bib:CMS:Tracking_2010}.
@@ -343,7 +343,8 @@ Furthermore, a first kinematic preselection is applied:
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
 \item Only tracks in the central region are considered : $|\eta|<2.1$.
-\item Only tracks with a minimum transverse momentum of 20\gev are considered: \mbox{$\pt>20\gev$}.\\
+\item Only tracks with a minimum transverse momentum of 20\gev are considered:\\
+       \mbox{$\pt>20\gev$}.\\
 \end{itemize}
 %\hspace{0.7cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -523,7 +524,7 @@ A summary table of the event yields after each selection step for the simulated 
 
 Given the presented signal candidate selection, a set of two variables remain  that are highly discriminating:
 The transverse momentum \pt and the energy release per path length \dedx of the candidate track.
-In this analysis, the Asymmetric Smirnov discriminator \ias is used to enhance the discrimating power of \dedx.
+In this analysis, the Asymmetric Smirnov discriminator \ias is used to enhance the discriminating power of \dedx.
 See Section~\ref{sec:Ias} for the definition and a detailed explanation of \ias.
 
 In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the application of the full signal candidate selection.

@@ -171,10 +171,17 @@ $\ias>0.05$                                                                     
 \section{Signal contamination in validation regions}
 \label{app:SignalContamination}
 
+Signal contamination in the four validation regions from Section~\ref{sec:BkgValidation}.
+The highest signal contamination is visible for a lifetime of 100\cm for all signal masses.
+For higher lifetimes the signal contamination is again reduced due to the muon veto selection requirement.
+The most extreme values (from $\ctau=100\cm$) of expected signal events and some other selected signal models are shown in the following tables.
+The signal contamination is rapidly falling towards lower lifetimes and higher masses.
+
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
-\caption{Signal contamination in leptonic control region: $\ecalo>10\gev$ and $\nhits>6$}
+\caption{Signal contamination in leptonic control region: $\ecalo>10\gev$ and \mbox{$\nhits>6$}. 
+         $N_S$ is the number of expected signal events and $\Delta B$ is the statistical uncertainty on the background prediction.}
 \makebox[0.99\textwidth]{
 \begin{tabular}{l| c | c |c}
 \multicolumn{4}{c}{} \\
@@ -182,11 +189,93 @@ $\ias>0.05$                                                                     
                        Signal model                       &     $N_S$               &   $N_S/\Delta B$  & Excluded by~\cite{bib:CMS:DT_8TeV}        \\
 \midrule
 mass=100\gev, \ctau=100\cm                                &      211.93             & 8.06  & yes\\
+mass=100\gev, \ctau=10\cm                                 &      27.83              & 1.06  & yes\\
+mass=100\gev, \ctau=5\cm                                  &      7.39               & 0.28  & yes\\
+mass=100\gev, \ctau=1\cm                                  &      0                  & 0     & no\\
+mass=300\gev, \ctau=100\cm                                &      6.97               & 0.26  & yes\\
+mass=300\gev, \ctau=10\cm                                 &      0.33               & 0.01  & yes\\
+mass=300\gev, \ctau=5\cm                                  &      0.0                & 0.0   & no\\
+mass=500\gev, \ctau=100\cm                                &      0.72               & 0.03  & yes\\
+mass=500\gev, \ctau=10\cm                                 &      0.00               & 0.00  & no\\
 \bottomrule
 \multicolumn{4}{c}{} \\
 \end{tabular}}
 \end{table}
 
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+\centering
+\caption{Signal contamination in leptonic control region: $\ecalo>10\gev$, \mbox{$\nhits>6$} and $\ias>0.2$. 
+         $N_S$ is the number of expected signal events and $\Delta B$ is the statistical uncertainty on the background prediction.}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l| c | c |c}
+\multicolumn{4}{c}{} \\
+\toprule
+                       Signal model                       &     $N_S$               &   $N_S/\Delta B$  & Excluded by~\cite{bib:CMS:DT_8TeV}        \\
+\midrule
+mass=100\gev, \ctau=100\cm                                &      24.11              & 48.21 & yes\\
+mass=100\gev, \ctau=10\cm                                 &      0.00               & 0.00  & yes\\
+mass=300\gev, \ctau=100\cm                                &      2.03               & 4.06  & yes\\
+mass=300\gev, \ctau=10\cm                                 &      0.03               & 0.07  & yes\\
+mass=300\gev, \ctau=5\cm                                  &      0.0                & 0.0   & no\\
+mass=500\gev, \ctau=100\cm                                &      0.38               & 0.75  & yes\\
+mass=500\gev, \ctau=10\cm                                 &      0.00               & 0.00  & no\\
+\bottomrule
+\multicolumn{4}{c}{} \\
+\end{tabular}}
+\end{table}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+\centering
+\caption{Signal contamination in fake+lepton control region: $\ecalo>10\gev$. 
+         $N_S$ is the number of expected signal events and $\Delta B$ is the statistical uncertainty on the background prediction.}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l| c | c |c}
+\multicolumn{4}{c}{} \\
+\toprule
+                       Signal model                       &     $N_S$               &   $N_S/\Delta B$  & Excluded by~\cite{bib:CMS:DT_8TeV}        \\
+\midrule
+mass=100\gev, \ctau=100\cm                                &      257.33             & 7.69  & yes\\
+mass=100\gev, \ctau=10\cm                                 &      116.21             & 3.47  & yes\\
+mass=100\gev, \ctau=5\cm                                  &      48.07              & 1.44  & yes\\
+mass=100\gev, \ctau=1\cm                                  &      1.26               & 0.04  & no\\
+mass=300\gev, \ctau=100\cm                                &      9.35               & 0.28  & yes\\
+mass=300\gev, \ctau=10\cm                                 &      2.20               & 0.07  & yes\\
+mass=300\gev, \ctau=5\cm                                  &      0.85               & 0.03  & no\\
+mass=500\gev, \ctau=100\cm                                &      1.10               & 0.03  & yes\\
+mass=500\gev, \ctau=10\cm                                 &      0.15               & 0.00  & no\\
+\bottomrule
+\multicolumn{4}{c}{} \\
+\end{tabular}}
+\end{table}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+\centering
+\caption{Signal contamination in fake+lepton control region: $\ecalo>10\gev$, and $\ias>0.2$. 
+         $N_S$ is the number of expected signal events and $\Delta B$ is the statistical uncertainty on the background prediction.}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l| c | c |c}
+\multicolumn{4}{c}{} \\
+\toprule
+                       Signal model                       &     $N_S$               &   $N_S/\Delta B$  & Excluded by~\cite{bib:CMS:DT_8TeV}        \\
+\midrule
+mass=100\gev, \ctau=100\cm                                &      36.40              & 12.47 & yes\\
+mass=100\gev, \ctau=10\cm                                 &      5.22               & 1.79  & yes\\
+mass=100\gev, \ctau=5\cm                                  &      1.76               & 0.60  & yes\\
+mass=300\gev, \ctau=100\cm                                &      3.20               & 1.10  & yes\\
+mass=300\gev, \ctau=10\cm                                 &      0.58               & 0.20  & yes\\
+mass=300\gev, \ctau=5\cm                                  &      0.12               & 0.04  & no\\
+mass=500\gev, \ctau=100\cm                                &      0.63               & 0.22  & yes\\
+mass=500\gev, \ctau=10\cm                                 &      0.07               & 0.02  & no\\
+\bottomrule
+\multicolumn{4}{c}{} \\
+\end{tabular}}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
 \section{Validation tests of the background estimation methods}
 \label{app:Validation}
 

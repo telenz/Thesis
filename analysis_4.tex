@@ -9,7 +9,7 @@ A potential additional discriminating variable is the number of missing outer hi
 This variable is, however, not considered in this analysis because studies show that the discriminating potential is limited (see Appendix~\ref{app:OptimisationNLostOuter}).\\
 
 SUSY models with different chargino lifetimes and masses are characterised by different \pt and \ias distributions as well as different theoretical cross sections.
-Therefore, the usual search optimisation startegy that maximises $N_S/\Delta B$ ($N_S$ = number of signal events of model $S$, $\Delta B$ = background uncertainty) implies a potential fine-tuning on the specific SUSY cross sections.
+Therefore, the usual search optimisation strategy that maximises $N_S/\Delta B$ ($N_S$ = number of signal events of model $S$, $\Delta B$ = background uncertainty) implies a potential fine-tuning on the specific SUSY cross sections.
 In order to keep the search as general as possible, a cross section independent optimisation is performed.
 This is achieved by a minimisation of the cross section for which a 5$\sigma$-discovery of the corresponding signal model is possible, \ie finding the optimal selection cuts for \pt and \ias for which the lowest possible cross section, $\sigma_{\text{min}}$, can be discovered
 \begin{align}
@@ -23,7 +23,7 @@ The systematic uncertainty on the background prediction includes systematic unce
 The factor $\alpha_{\text{min}}$  that is minimised is the ratio of the minimum cross section $\sigma_{\text{min}}$ divided by the nominal cross section $\sigma_{S}$ of the signal model S.\\
 
 As this analysis focuses on short tracks, rather low lifetimes are considered in the optimisation procedure: $\ctau=1\cm,\,10\cm,\,50\cm$.
-These lifetimes are further sutiable as they lie at the edge of the sensitivity of the search for disapperaing tracks~\cite{bib:CMS:DT_8TeV}.
+These lifetimes are further suitable as they lie at the edge of the sensitivity of the search for disappearing tracks~\cite{bib:CMS:DT_8TeV}.
 To cover the full mass space, the optimisation is done for masses between 100\gev and 500\gev.
 The corresponding results are shown in Table~\ref{tab:optimisation}.
 \renewcommand{\arraystretch}{1.5}
@@ -99,7 +99,7 @@ Based on the optimisation, four different exclusive signal regions are defined i
 \item $\pt>50\gev$ and $\ias>0.3$.
 \end{enumerate}
 
-The unblinded results of the search for highly ionising, short tarcks are presented in the following chapter.
+The unblinded results of the search for highly ionising, short tracks are presented in the following chapter.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
@@ -110,7 +110,7 @@ After developing the methods of the background estimation for all different back
 the search is performed in four exclusive signal regions with 19.7\fbinv of data collected at a centre-of-mass energy of $\sqrt{s} = 8\tev$ at the CMS experiment.
 The predicted number of events for the fake and the leptonic background in the four signal regions is depicted in Table~\ref{tab:BackgroundPrediction}.
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!t]
 \centering
 \caption{Background prediction in the four exclusive signal regions for the fake and the leptonic background.}
 \label{tab:BackgroundPrediction}
@@ -132,18 +132,18 @@ It can be seen, that fake tracks are by far the dominant background to this sear
 The leptonic background contributes only in one signal region to the total background with a share of about 10\%.
 
 Finally, the comparison between the predicted number of events and the number of observed events is shown in Fig.~\ref{fig:FinalResult}.
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
+  \vspace{55pt}
   \begin{tabular}{c}
     \includegraphics[width=0.99\textwidth]{figures/analysis/Results/FinalResultPlot.pdf} 
   \end{tabular}
   \caption{Number of predicted (green area) and observed (black dots) events for the four different signal regions. The hashed area represents the total uncertainty on the background prediction.}
   \label{fig:FinalResult}
- \vspace{50pt}
 \end{figure} 
 Additionally, the corresponding numbers of predicted and observed events can be found in Table~\ref{tab:FinalResult}.
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!t]
 \centering
 \caption{Number of predicted and observed events for the four different signal regions.}
 \label{tab:FinalResult}
@@ -189,13 +189,8 @@ Therefore, in the following section these results will be used to constrain the 
 %\end{table}
 
 
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\FloatBarrier
 \chapter{Interpretation}
 \label{sec:Interpretation}
 In order to interpret the result of the search in the context of supersymmetric models with almost mass degenerate charginos and neutralinos, sources of systematic uncertainties on the number of selected signal events must be identified and quantified.
@@ -507,28 +502,42 @@ The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d
            Everything below the red line is excluded up to the region where the mass splitting is smaller than the pion mass.}
   \label{fig:DeltaMLimit2d}
 \end{figure} 
-\begin{figure}[!t]
-  \centering 
-  \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/Comparison2dLimits.pdf} 
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_largerRange.pdf} 
-  \end{tabular}
-  \caption{Comparison of the 95\% CL exluded parameter region from~\cite{bib:CMS:DT_8TeV} (black line) and the excluded parameter region of this analysis (red line).
-           The results are very similar. A slight improvement of the size of the excluded parameter region by this analysis can be seen.}
-  \label{fig:Comparison2dLimit}
-\end{figure} 
 This search is sensitive to mass splittings between $\sim 140\mev-210\mev$.\\
 
 The derived exclusion limits of this search could confirm the exclusion from~\cite{bib:CMS:DT_8TeV} with slight improvements in the low lifetime region.
 The comparison of the two searches is shown in Fig~\ref{fig:Comparison2dLimit}.
-For a chargino with a lifetime of $\tau=0.07\ns$, the observed limit of this search improves the limits of~\cite{bib:CMS:DT_8TeV} by $\sim35\gev$, for a lifetime of $\tau=0.4ns$ by $\sim25\gev$. 
-The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is even more interesting as the confimation is achieved with a very uncorrelated selection.
-The correlation of the signal region in~\cite{bib:CMS:DT_8TeV} and the most sensitive signal region (out of the four exclusive regions) of this analysis can be estimated by the correlation coefficient of two overlapping sets
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_largerRange.pdf}  
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/Comparison2dLimits.pdf} 
+  \end{tabular}
+  \caption{Comparison of the excluded regions in the mass versus lifetime space derived in this analysis (red line) and derived within~\cite{bib:CMS:DT_8TeV} (black line). The right figure is a part of the left figure concentrating on the low lifetime region.}
+  \vspace{50pt}
+  \label{fig:Comparison2dLimit}
+\end{figure} 
+For a chargino with a lifetime of $\tau=0.07\ns$, the observed limit of this search improves the limits derived inf~\cite{bib:CMS:DT_8TeV} by $\sim35\gev$, for a lifetime of $\tau=0.4ns$ by $\sim25\gev$. 
+
+The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is even more interesting as the confirmation is achieved with a very  uncorrelated sample.
+The correlation between the selected signal events of the signal region in~\cite{bib:CMS:DT_8TeV} and the most sensitive signal region (out of the four exclusive regions) of this analysis can be estimated by the event overlap $\rho$
 \begin{equation*}
 \rho_{\text{corr}} = \frac{N_{A\cap B}}{N_A + N_B - N_{A \cap B}}
 \end{equation*}
-The correlation coefficient for some of the examined signal model can be found in Table~\ref{FIXME}.
-It can be seen, that for very low lifetimes, the overlap of the here preseneted search and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} is of minor importance.
+Only the most sensitive signal region is choosen in order not to underestimate the correlation by artificially adding other signal regions that are not important for the search sensitivity.
+The degree of correlation is depicted in Fig.~\ref{fig:AnalysisOverlap} that shows the event overlap for signal models with chargino masses between $100-500\gev$ and lifetimes between $1\cm-1000\cm$.
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/AnalysisOverlap.pdf}  
+  \end{tabular}
+  \caption{The event overlap between the selected signal events of the here presented search and the search from~\cite{bib:CMS:DT_8TeV} for different signal models.
+          The correlation is determined using only the signal region with the highest sensitivity of this analysis.}
+  \label{fig:AnalysisOverlap}
+\end{figure} 
+It can be seen, that for intermediate lifetimes around 100\cm, the event overlap is around 50\% and reduces for small lifetimes to an overlap of around 15\%.
+Thus, this analysis can confirme the limits by an uncorrelated signal selection.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -539,18 +548,35 @@ It can be seen, that for very low lifetimes, the overlap of the here preseneted 
 
 The here presented search for highly ionising, short tracks is motivated by supersymmetric models with wino-like charginos \chipm and neutralinos \chiO.
 Such scenarios are well motivated by astrophysical observations that suggest the existence of large amounts of dark matter.
-The relic density is possible to explain with wino-like neutralinos that are non-thermally produced via the decay of long-lived particles, such as a wino-like chargino.\\
+The relic density is possible to explain with wino-like neutralinos that are non-thermally produced via the decay of long-lived particles, such as a wino-like chargino~\cite{}.\\
 
-The presented analysis extends the search for disappearing tracks~\cite{bib:CMS:DT_8TeV}, by including the variable \dedx.
-It is the first analysis at CMS that includes energy information from the pixel tracker.
-By this inclusion the discrimantion power of \dedx is impressingly increased.
-Furthermore, \dedx inclusion enables to loosen track selection requirements that lead to a high supression of signal events.
+The presented analysis extends the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} by the inclusion of the variable \dedx.
+As it focuses on short tracks in order to increase the sensitivity with respect to short lifetimes, also energy information from the pixel silicon tracker is taken into account.
+For this purpose, a dedicated pixel energy calibration was carried out within this thesis to ensure stable energy measurements over time and across pixel modules.
+It is thus the first analysis at CMS that includes energy information from the pixel tracker.
+By this inclusion the discrimantion power of \dedx could be significantly increased.
+Furthermore, \dedx inclusion enabled to loosen track selection requirements that led to a high supression of signal events, the number of hits in the tracker system.
 The used \dedx discriminator, the Asymmetric Smirnov discriminator \ias, shows good seperation power and can lead to sensitiviy increases up to 400\%.\\
 
 No excess above the Standard Model expection is observed.
-Exclusion on the SUSY parameter space is set.
-The parameter exclusion limits in~\cite{bib:CMS:DT_8TeV} can be confirmed and slight improvements of th order $\sim 10-40\gev$ in the low lifetime region is achieved.
-Interstingly, the signal regions of the here preseneted search and the search from~\cite{bib:CMS:DT_8TeV} are highly non-corrlated and thus this analysis can serve as an orthogonal cross check of~\cite{bib:CMS:DT_8TeV}.\\
+Thus, the absence of any deviation from the Standard Model prediction is used to constrain the supersymmetric parameter space.
+Wino-like charginos could be excluded down to lifetimes of 2\cm for charginos with a mass of 100\gev.
+For high mass scenarios of 500\gev, the excluded lifetime ranges between $80-100\cm$.
+Thus, the derived parameter exclusion limits in~\cite{bib:CMS:DT_8TeV} could be confirmed and slight improvements of the order $\sim 10-40\gev$ in the low lifetime region was achieved.
+Interestingly, the signal regions of the here presented search and the search from~\cite{bib:CMS:DT_8TeV} are not heavily corrlated.
+Therefore, this analysis can serve as an independent cross check of~\cite{bib:CMS:DT_8TeV}.\\
+
+The methodoly used to estimate the background expectation is always a challenging task for low background searches. 
+The statistical precision of the simulated sample is always a majpr problem as it forbidds a thorough study of the real signal region.
+First, non-correlated variables need to be identified to increase the statistical power.
+The estimation of the \ias variable for the most important background fake tracks was developed on this analyis and worked very well.
 
 The main background is arising from fake tracks, that are also typically short and can have large values of \ias.
-Further improvements in the background supprresion can be possibly achieved by the characterisation of further unique characteristics fake tracks, such as ????.
+As fake tracks show therefore a very similar signature in the detector as signal events they cannot be easily supressed.
+Exploiting further characteristics like a large angle with respect to the normal axis of the module might result in a possibilit of further background supression.
+
+A similar study with 13 tev data could be very interesting as the production cross section is much higher, and thus the \ias can show its full discrimination power at higher masses. now the cross section are to low.
+Expected increase of the cross section of the order bla bla.
+
+Unfortunatly no hints for SUSY at 8tev, but exotic searches will remain important to look also into the corners.
+%Further improvements in the background supprresion can be possibly achieved by the characterisation of further unique characteristics fake tracks, such as ????.Further improvements in the background supprresion can be possibly achieved by the characterisation of further unique characteristics fake tracks, such as ????.

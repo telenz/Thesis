@@ -82,7 +82,7 @@ Taken together, the existing searches exclude a large fraction of pMSSM points a
 However, there is a gap between the general SUSY searches and the search for disappearing tracks where none of the existing searches show a high sensitivity.
 
 The here presented analysis aims at targeting this gap by focusing on charginos with intermediate lifetimes of $10\cm \lesssim c\tau \lesssim 40\cm$. 
-The main idea is to make use of the variable $dE/dx$ which can be very discriminating for massive particles such as charginos.
+The main idea is to make use of the variable \dedx which can be very discriminating for massive particles such as charginos.
 The associated challenges and the general strategy of this analysis will be presented in the next section.
 
 
@@ -172,12 +172,12 @@ Exploiting these two circumstances, it is possible to detect chargino-pair or ch
 Since Jet+MET triggers are not very specific for chargino events, it is important to identify further track properties that can be used to select chargino candidates.
 One distinctive property of charginos compared to SM particles is their high mass. 
 Therefore, charginos can be identified by selecting high \pt tracks. 
-Furthermore, the energy loss per path length ($dE/dx$) depends quadratically on the particle's mass for low velocities ($0.2<\beta\gamma<0.9$):
+Furthermore, the energy loss per path length (\dedx) depends quadratically on the particle's mass for low velocities ($0.2<\beta\gamma<0.9$):
 \begin{equation*}
 \langle\frac{dE}{dx}\rangle = K \frac{m^2}{p^2} +C
 \end{equation*}
-Therefore, $dE/dx$ constitutes a very nice discriminating variable for massive particles like charginos against SM particles.
-The selection of chargino events in this analysis thus relies on the selection of isolated high \pt tracks with high $dE/dx$ values. 
+Therefore, \dedx constitutes a very nice discriminating variable for massive particles like charginos against SM particles.
+The selection of chargino events in this analysis thus relies on the selection of isolated high \pt tracks with high \dedx values. 
 
 If the chargino decays before it has crossed the full pixel and strip detector, the associated track is disappearing. 
 For low lifetimes, the tracks can be very short and can have only a few hits in the detector. 
@@ -194,7 +194,7 @@ This analysis thus requires a thorough study of the quality of the pixel energy 
 As already mentioned before, there are several analyses at CMS at $\sqrt{s}=8\,\tev$ with 20\,fb$^{-1}$ data, that are sensitive to intermediate lifetime charginos, most notably the search for long-lived charged \mbox{particles \cite{bib:CMS:HSCP_8TeV}} and the search for disappearing tracks \cite{bib:CMS:DT_8TeV}.
 The here presented analysis aims at achieving an increase in sensitivity towards shorter lifetimes compared to the existing analyses in a twofold way.
 First, the selection is optimised for the inclusion of very short tracks.
-Second, the inclusion of the variable $dE/dx$ is used to increase the search sensitivity compared to \cite{bib:CMS:DT_8TeV}.\\
+Second, the inclusion of the variable \dedx is used to increase the search sensitivity compared to \cite{bib:CMS:DT_8TeV}.\\
 
 In \cite{bib:CMS:HSCP_8TeV}, a minimum number of eight hits were required for every track, whereas \cite{bib:CMS:DT_8TeV} required a minimum of seven hits.
 This can be very inefficient for shorter lifetimes, where most of the charginos already decay shortly after the pixel tracker.
@@ -240,7 +240,7 @@ A detailed introduction to the CMS tracker system and the energy measurement can
 
 It was already pointed out that the inclusion of the pixel energy measurements can increase the sensitivity when searching for short tracks.
 While the silicon strip detector has already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, no offline calibration has been done for the pixel silicon tracker so far.
-To increase the discrimination power of $dE/dx$ for short tracks, such a calibration procedure is therefore conducted within this PHD thesis.
+To increase the discrimination power of \dedx for short tracks, such a calibration procedure is therefore conducted within this PHD thesis.
 
 
 \section{Ionisation loss of charged particles}
@@ -258,12 +258,12 @@ The density correction $\delta( \beta \gamma )$ reduces the mean energy loss at 
 The constant factor K is $4\pi N_A r_e^2 m_e^2 c^2$ with $N_A$ being the Avogadro’s number.
 
 Even if widely used, the mean energy loss is a quantity which is ``ill-defined experimentally and is not useful for describing energy loss by single particles'' \cite{bib:PDG_2014}.
-The problem is caused by the underlying probability distribution of one single $dE/dx$ measurement (this will be named $\Delta E/ \Delta x $ throughout the following sections), which can be parametrised by a Landau distribution \cite{bib:Landau_1944}
+The problem is caused by the underlying probability distribution of one single \dedx measurement (this will be named $\Delta E/ \Delta x $ throughout the following sections), which can be parametrised by a Landau distribution \cite{bib:Landau_1944}
 \begin{equation*}
 p(x) = \frac{1}{\pi} \int_0^\infty\! e^{-t \log t - x t} \sin(\pi t)\, dt.
 \end{equation*}
 The Landau distribution has no free parameters. Its most probable value is around 0.222.
-However, it is possible to introduce artifically a different most probable value and a width with $x \rightarrow \frac{x-\text{MPV}}{\sigma}-0.222$.
+However, it is possible to introduce artificially a different most probable value and a width with $x \rightarrow \frac{x-\text{MPV}}{\sigma}-0.222$.
 The Landau distribution is a highly asymmetric distribution with a long tail towards the right end (see Fig.~\ref{fig:landau}).
 \begin{figure}[!t]
   \centering 
@@ -275,13 +275,13 @@ The Landau distribution is a highly asymmetric distribution with a long tail tow
 \end{figure}
 Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
 The mean and the variance of a landau distribution are not defined.
-Because of its strong asymmetry, measurements of $\langle dE/dx \rangle$ with only a few single measurements are easily biased towards high values, making the mean energy loss described by the Bethe formula a problematic and unstable concept. 
+Because of its strong asymmetry, measurements of $\langle \dedx \rangle$ with only a few single measurements are easily biased towards high values, making the mean energy loss described by the Bethe formula a problematic and unstable concept. 
 %This is again different for a (limited) measurment, as there it is always possible to calucalute a mean.
 %Still, this leads to the fact that the definition of the mean energy loss per path length is a problematic and unstable concept.
 
 
 A much better observable is the most probable value (MPV): the maximum of the Landau distribution.
-The MPV is much more stable compared to the mean and is not as easily biased towards higher $dE/dx$ values. 
+The MPV is much more stable compared to the mean and is not as easily biased towards higher \dedx values. 
 The most probable energy loss of a charged particle, $\Delta_p$, is defined by the Landau-Vavilov-Bichsel equation \cite{bib:Bichsel:MPV_1988}:
 \begin{equation}
 \Delta_p = \xi \left[ \ln \frac{2mc^2\beta^2\gamma^2}{I}  + \ln\frac{\xi}{I} + j - \beta^2 - \delta(\beta\gamma)  \right],
@@ -289,7 +289,7 @@ The most probable energy loss of a charged particle, $\Delta_p$, is defined by t
 \end{equation}
 with $\xi=(K/Z)\langle Z/A \rangle (x/\beta^2)$. 
 The thickness of the absorber $x$ appears explicitly in the Landau-Vavilov-Bichsel equation making the most probable energy loss per path \mbox{length $\Delta_p/dx$} logarithmically dependent on $x$.
-A comparison between the Bethe mean energy loss $\langle dE/dx \rangle$ and the most probable energy loss $\Delta_p/dx$ is shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
+A comparison between the Bethe mean energy loss $\langle \dedx \rangle$ and the most probable energy loss $\Delta_p/dx$ is shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
 
 
 \begin{figure}[!bt]
@@ -302,7 +302,7 @@ A comparison between the Bethe mean energy loss $\langle dE/dx \rangle$ and the 
   \label{fig:dEdx_Bethe_Landau}
 \end{figure}
 However, it is difficult to determine the most probable value for tracks with only $\sim$15 energy measurements available.
-Large fluctuations can still lead to a bias towards higher value of the most probable $dE/dx$.
+Large fluctuations can still lead to a bias towards higher value of the most probable \dedx.
 
 Several "estimators'' exist that suppress a potential bias towards the high end without introducing a bias towards lower values~\cite{bib:Quertenmont_2010}.
 One of the estimators, also used in the next chapter, is the harmonic-2 estimator
@@ -311,12 +311,12 @@ One of the estimators, also used in the next chapter, is the harmonic-2 estimato
 \label{eq:Harmonic2Estimator}
 \end{equation}
 where $\Delta E /\Delta x$ corresponds to one measurement in one tracker module. 
-The harmonic mean of all $N$ measurements to the power of two is the estimated most probable $dE/dx$.\\
+The harmonic mean of all $N$ measurements to the power of two is the estimated most probable \dedx.\\
 
 SM particles such as pions and muons are minimally ionising in silicon for $\beta\gamma \sim 3-4$ (see Fig.~\ref{fig:dEdx_Landau_Silicon}). 
 For higher momenta the deposited energies increase again reaching a plateau at around $\beta\gamma\sim100$. 
 However, new heavy charged particles would mainly be unrelativistic because of their high mass and would therefore deposit much higher energies in the detector.
-This makes $dE/dx$  a very well discriminating variable.
+This makes \dedx  a very well discriminating variable.
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
@@ -341,13 +341,13 @@ Four different steps can be spotted.
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run.} 
+  \caption{Sum of all track's \dedx (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_beforeCalibration}
 \end{figure}
 The first and the third steps correspond to changes in the settings of the tracker due to irradiation.
 The second and fourth step are induced by associated adjustments in the online gain calibration.
 Unfortunately, although the gain calibration was adjusted (even with some delay), it was not able to ensure a constant energy response of the pixel tracker over time. 
-The variations of the dE/dx measurement over time of around 15\% are too large to use dE/dx without a further calibration. 
+The variations of the \dedx measurement over time of around 15\% are too large to use \dedx without a further calibration. 
 
 The following sections explain the method of the gain calibration of the pixel silicon tracker which is conducted for this analysis. 
 It is splitted into a section about the inter-calibration of gain and the absolute calibration of gain.
@@ -355,7 +355,7 @@ Detailed technical information about the pixel tracker can be found in Section~\
 
 
 \subsection*{Inter-calibration of gain}
-The main goal of the gain calibration is to get a uniform response in the ionisation energy loss $dE/dx$ over the full data taking period in 2012.
+The main goal of the gain calibration is to get a uniform response in the ionisation energy loss \dedx over the full data taking period in 2012.
 To also ensure a uniform response of all modules within one time step, an additional inter-calibration on module level is carried out.
 The inter-calibration can in principle be done on various levels: the highest granularity would be a calibration on pixel level, followed by a calibration on read-out-chip (ROC) level and then on module-level.
 Lower granularities in descending order are rings (modules with same z-position) and finally layers (3 layers in the barrel and 4 disks in the endcap). 
@@ -364,11 +364,11 @@ It is checked that all pixels and all ROCs (on one module) are well inter-calibr
 
 The gain calibration of the pixel silicon tracker is carried out with the help of minimally ionising particles (MIPs).
 MIPs in this context are not defined as particles depositing a minimum amount of energy, but more generally a small amount of energy.
-This denotes all particles located at the plateau of the $dE/dx$ distribution vs. momentum (see Fig.~\ref{fig:dEdx_Landau_Silicon}).
+This denotes all particles located at the plateau of the \dedx distribution vs. momentum (see Fig.~\ref{fig:dEdx_Landau_Silicon}).
 This approach ensures that all particles deposit similar amount of energy so that the variation due to different momenta is minimised.
 MIPs are selected by a momentum selection of $\text{p}>2\,$\gev.
 Additionally, only tracks with at least eight hits and a $\chi^2/\text{n.d.o.f.}<3$ are used to ensure a high-quality track reconstruction.
-A sample containg around $~$50 million ``minimum bias'' events is used for calibration.
+A sample containing around $~$50 million ``minimum bias'' events is used for calibration.
 The ``minimum bias'' sample was specifically recorded for tracker calibration purposes.
 Its distinctive property is that neither an online nor offline selection was applied.
 
@@ -413,7 +413,7 @@ The variation over time is indeed eradicated, resulting in a maximal time variat
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_afterCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) over the full year 2012 after applying the calibration factors, resulting in an average $dE/dx$ of 3.51 MeV/cm. Only pixel hits are taken into account. Every data point corresponds to one run.} 
+  \caption{Sum of all track's \dedx (harmonic-2 estimator) over the full year 2012 after applying the calibration factors, resulting in an average \dedx of 3.51 MeV/cm. Only pixel hits are taken into account. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_afterCalibration}
 \end{figure}
 
@@ -434,8 +434,8 @@ Such an absolute gain calibration can be done with the help of several methods (
 The absolute calibration of the silicon pixel tracker can rely on the already conducted absolute calibration of the silicon strip detector.
 In \cite{bib:Quertenmont_2010}, the absolute gain calibration was done with the help of the most probable energy release per path length of muons, 
 theoretically described by the Landau-Vavilov-Bichsel formula in Eq.~\ref{eq:Landau_Vavilov_Bichsel}.  
-To calibrate the pixel tracker to the correct energy loss per path length it is therefore sufficient to determine one calibration factor to relate the average $dE/dx$ of all tracks in the pixel tracker as shown in 
-Fig.~\ref{fig:StabilityPlot_afterCalibration} to the average measured $dE/dx$ in the strip tracker, shown in Fig.~\ref{fig:StabilityPlot_Strip} by
+To calibrate the pixel tracker to the correct energy loss per path length it is therefore sufficient to determine one calibration factor to relate the average \dedx of all tracks in the pixel tracker as shown in 
+Fig.~\ref{fig:StabilityPlot_afterCalibration} to the average measured \dedx in the strip tracker, shown in Fig.~\ref{fig:StabilityPlot_Strip} by
 \begin{equation*}
 c_{\text{absolute}} = \frac{dE/dx_{\text{strip}}}{dE/dx_{\text{pixel}}} = \frac{3.303}{3.509} = 0.941.
 \end{equation*}
@@ -444,12 +444,12 @@ c_{\text{absolute}} = \frac{dE/dx_{\text{strip}}}{dE/dx_{\text{pixel}}} = \frac{
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Strip_afterCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{Sum of all track's $dE/dx$ (harmonic-2 estimator) measured in the silicon strip detector over the full year 2012. The average most probable $dE/dx$ is $\ihtwo=3.303\,\mev/\cm$. Every data point corresponds to one run.} 
+  \caption{Sum of all track's \dedx (harmonic-2 estimator) measured in the silicon strip detector over the full year 2012. The average most probable \dedx is $\ihtwo=3.303\,\mev/\cm$. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_Strip}
 \end{figure}
 This factor is then applied on top of $c_{\text{inter}}$ for all pixel modules.
 
-Finally, an absolute calibration factor needs to be determined for the simulated samples, where the simulated pixel tracker is calibrated to the average $dE/dx$ of the silicon strip measured in data.
+Finally, an absolute calibration factor needs to be determined for the simulated samples, where the simulated pixel tracker is calibrated to the average \dedx of the silicon strip measured in data.
 
 \section{Discrimination of highly-ionising particles}
 \label{sec:Ias}
@@ -473,7 +473,7 @@ where N is the total number of energy measurements and $P_i$ is the cumulative p
 
 However, this test statistics is not sensitive to the sign of the difference between the measured and the theoretical distribution.
 It can therefore not distinguish between incompatibilities due to variations towards higher or lower energy deposits compared to the hypothesis distribution.
-Thus it is not suitable for the discrimination between MIPs and heavy new particles by $dE/dx$.
+Thus it is not suitable for the discrimination between MIPs and heavy new particles by \dedx.
 A so-called Asymmetric Smirnov-Cram\'{e}r-von Mises discriminator was developed in \cite{bib:Quertenmont_2010} which is only sensitive to incompatibilities to the MIP hypothesis towards higher energy depositions
 \begin{equation*}
 \ias = \frac{3}{N} \cdot \left( \frac{1}{12N} + \sum\limits_{i=1}^N \left[ P_i \cdot \left(P_i - \frac{2i-1}{2N} \right)^2 \right] \right).
@@ -486,7 +486,7 @@ In Fig.~\ref{fig:ProbabilityTemplate} the probability distribution template for 
 The corresponding templates for the energy release in the silicon strip detector were already built by  \cite{bib:Quertenmont_2010}.
 
 
-A comparison between the energy release by MIPs (\ias) in data and simulation for good quality tracks with $p>5\gev$ and $|\eta|<2.1$ can be found in Fig.~\ref{fig:Data-MC-Dedx_MIPs}.
+A comparison between the energy release by MIPs (\ias) in data and simulation for high-quality tracks with $p>5\gev$ and $|\eta|<2.1$ can be found in Fig.~\ref{fig:Data-MC-Dedx_MIPs}.
 \begin{figure}[!tb]
   \centering 
   \begin{tabular}{c}
@@ -504,12 +504,12 @@ A comparison between the energy release by MIPs (\ias) in data and simulation fo
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/htrackASmiSmallRange_log_MIPs.pdf}
   \end{tabular}
-  \caption{Normalised \ias distribution for MIPs from the minimum bias sample in data and simulation for good quality (high-purity as defined in \cite{bib:CMS:Tracking_2010} and minimum number of eight hits) tracks with $p>5\gev$ and $|\eta|<2.1$.}
+  \caption{Normalised \ias distribution for MIPs from the minimum bias sample in data and simulation for high-quality (high purity as defined in \cite{bib:CMS:Tracking_2010}, a minimum number of eight hits and no missing inner and middle hits) tracks with $p>5\gev$ and $|\eta|<2.1$.}
   \label{fig:Data-MC-Dedx_MIPs}
 \end{figure}
-$dE/dx$ shows good agreement in data and simulation for $\ias<0.1$.
+\dedx shows good agreement in data and simulation for $\ias<0.1$.
 For larger values, \ias shows a larger decrease in simulation than in measured data.
-That's the reason why a data-based approach for analyses exploiting $dE/dx$ information is needed.\\
+That's the reason why a data-based approach for analyses exploiting \dedx information is needed.\\
 
 \section{Discrimination improvements}
 The goal of including the pixel energy information is to increase the discrimination power of \ias between background and signal tracks, especially for shorter lifetimes.
@@ -559,7 +559,7 @@ Figure~\ref{fig:ROCplots} shows the signal selection efficiency against the back
   \end{tabular}
   \caption{Signal selection efficiency vs. background selection efficiency with (red) and without (black) pixel information.
            Each point correspond to one selection cut in \ias.
-           The figure is based on a simulated \WJets sample and a simulated signal sample with chargino-chargino production, both subject to a selection of good quality tracks (without a selection on \nhits) with $\pt>10\gev$.
+           The figure is based on a simulated \WJets sample and a simulated signal sample with chargino-chargino production, both subject to a selection of high-quality tracks (without a selection on \nhits) with $\pt>10\gev$.
        }
   %\vspace{40pt}
   \label{fig:ROCplots}
