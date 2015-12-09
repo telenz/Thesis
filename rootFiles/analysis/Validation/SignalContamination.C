@@ -202,7 +202,9 @@ int SignalContamination(TString mass, TString ctau){
   pred.histo = new TH1D("CR","CR",nbins,xmin,xmax);
 
   pred.Selection();
-  cout<<"integral = "<<pred.histo->Integral()<<endl;
+  cout<<setprecision(2);
+  double integral = pred.histo->Integral();
+  cout<<"integral = "<<fixed<<integral<<"         & "<<integral/2.92<<endl;
 
   return 0;
  
