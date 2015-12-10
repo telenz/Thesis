@@ -394,7 +394,7 @@ However, For Poissonian statistics it leads to the following expressions for \CL
 \end{equation*}
 where $\lambda$ is the mean of the Poisson distribution and the signal strength $\mu$ is the measure for the size of the signal cross section.
 
-Systematic uncertainties are included by varying the background expectation $b$ and the signal expectation $\mu\cdot s$ according to a predifined probability densitiy function (pdf).
+Systematic uncertainties are included by varying the background expectation $b$ and the signal expectation $\mu\cdot s$ according to a predefined probability density function (pdf).
 For one Gaussian distributed source of systematic uncertainty on the background, this leads to the following expressions for \CLsb and \CLb
 \begin{equation*}
 \begin{split}
@@ -428,11 +428,11 @@ The exclusion limits are derived according to the above presented methodology us
 \midrule
 Statistical uncertainty                 &0\% correlated                & 100\% for same bins in \ias   & 0\% correlated                 & 100\% for same bins in \ias \\
 \midrule
-Leptonic scale factor uncertainty       & \centering -                 & 100\% for same bins in \ias   & 100\% for same bins in \ias    & 100\% for same bins in \ias \\
+Leptonic scale factor uncertainty       & \makecell[c]{-}              & 100\% for same bins in \ias   & 100\% for same bins in \ias    & 100\% for same bins in \ias \\
 \midrule
-Fake rate  uncertainty                  & 100\% for same bins in \ias  &  -                            &  -                             &  -                          \\
+Fake rate  uncertainty                  & 100\% for same bins in \ias  &  \makecell[c]{-}              &  \makecell[c]{-}                &  \makecell[c]{-}           \\
 \midrule
-Ias uncertainty                         &0\% correlated                & 100\% for same bins in \pt    & 100\% for same bins in \pt     &  100\% for same bins in \pt \\
+\ias uncertainty                         &0\% correlated                & 100\% for same bins in \pt    & 100\% for same bins in \pt     &  100\% for same bins in \pt \\
 \bottomrule
 \multicolumn{5}{c}{} \\
 \end{tabularx}  
@@ -492,7 +492,7 @@ Charginos with a higher mass of 500\gev are excluded for lifetimes between $\cta
 
 Since the lifetime of a wino-like chargino is determined by the mass splitting between $m_{\chipm}$ and $m_{\chiO}$, 
 it is possible to express the lifetime of the chargino as a mass gap $\Delta m_{\chipm\chiO}$ between the chargino and the lightest neutralino.
-The correspondance between lifetime and mass gap is taken from~\cite{bib:MassSplitting_Drees}, where the decay width of $\chipm \rightarrow \chiO\, \pi^{\pm}$ is expressed in terms of chargino, neutralino, and pion mass.
+The correspondence between lifetime and mass gap is taken from~\cite{bib:MassSplitting_Drees}, where the decay width of $\chipm \rightarrow \chiO\, \pi^{\pm}$ is expressed in terms of chargino, neutralino, and pion mass.
 Thus, the mass gaps that are considered are bounded by the pion mass of $\sim140\mev$.
 The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d}.
 \begin{figure}[!t]
@@ -501,7 +501,7 @@ The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d
     \includegraphics[width=0.55\textwidth]{figures/analysis/Interpretation/MassSplittingLimitPlot.pdf} 
   \end{tabular}
   \caption{Excluded parameter region at 95\% CL for wino-like charginos and neutralinos depending on the chargino mass and the mass splitting between \chipm and \chiO, $\Delta m_{\chipm\chiO}$.
-          All SUSY models between the red line and the gray area are excluded.}
+          All SUSY models between the red line and the grey area are excluded.}
   \label{fig:DeltaMLimit2d}
 \end{figure} 
 It can be seen that this search is sensitive to mass splittings between $\sim 140\mev-210\mev$.\\
@@ -564,12 +564,10 @@ For this purpose, a dedicated pixel energy calibration was carried out within th
 It is thus the first analysis at CMS that makes use of energy information from the pixel tracker.
 By this inclusion the discrimination power of \dedx was increased significantly.
 Furthermore, \dedx inclusion enabled to loosen the requirement on the number of hits in the tracker with respect to~\cite{bib:CMS:DT_8TeV} that led to a strong suppression of signal events for low chargino lifetimes. 
-The used \dedx discriminator, the Asymmetric Smirnov discriminator \ias, shows good separation power and can lead to sensitivity increases up to 400\% (cf. Fig.~\ref{fig:optimisation}).
+The used \dedx discriminator, the Asymmetric Smirnov discriminator \ias, shows good separation power and can lead to sensitivity increases up to 400\% (cf. Fig.~\ref{fig:optimisation}).\\
 
-The Standard Model background is mainly estiamted with data-based techniques.
-%This was not only necessary because of the limited quality of the \dedx simulation, but also because of the limited statistical precision of the simulated datasets.
-%The low statistical precision constituted a serious challenge, since the study of background characteristics from different sources relies mainly on simulated samples.
-%Therefore, non-correlated selection requirements were loosened identified in order to loosen them and increase thus the expressiveness of background studies.
+
+The Standard Model background is mainly estimated with data-based techniques.
 The main background to this search is arising from fake tracks, \ie tracks that are reconstructed out of several particles' trajectories.
 Fake tracks are typically short and can have large values of \ias, thus showing a very signal-like signature in the detector.
 The uncertainty on the fake background is dominated by systematic uncertainties originating from low statistical precision in the simulated datasets.
@@ -578,28 +576,27 @@ This strategy is however technically challenging, since storage capacity limits 
 Still, reducing the uncertainty will be one of the main tasks in order to increase the search sensitivity.
 
 Even though this search already features low background, a further background suppression is desirable.
-However, the impact on the search sensitivity will be limited because of the high relative poisson error on low background predictions.
-For instance, a reduction of the number of background events by 75\% from 4 to 1 event reduces the signal yield required for a 5$\sigma$-discovery by around 30\%, whereas a 75\% reduction of expected background events from 400 to 100 reduces the required signal yield by 70\%.\\
-FIXME ueberleitung
+However, the impact on the search sensitivity will be limited because of the high relative Poisson error on low background predictions.
+For instance, a reduction of the number of background events by 75\% from 4 to 1 event reduces the signal yield required for a 5$\sigma$-discovery by around 30\%, whereas a 75\% reduction of expected background events from 400 to 100 reduces the required signal yield by 70\%.
 
-Collision data recorded during the year 2012 at the CMS experiment at a centre-of-mass energy of 8\tev was analysed with respect to SUSY scenarios with almost mass-degenerate charginos and neutralinos.
+In the current analysis, the background was estimated between $19-24$ events for the low \ias signal regions and $2.5-2.6$ for the high \ias regions.
+This background estimate was confronted with collision data recorded during the year 2012 at the CMS experiment at a centre-of-mass energy of 8\tev.
+%Collision data recorded during the year 2012 at the CMS experiment at a centre-of-mass energy of 8\tev was analysed with respect to SUSY scenarios with almost mass-degenerate charginos and neutralinos.
 No evidence for physics beyond the Standard Model was found since the observations are compatible with SM expectations within $1\sigma$.
 Thus, the absence of any deviation from the Standard Model prediction is used to constrain the supersymmetric parameter space.
 Wino-like charginos were excluded down to lifetimes of $\ctau=2\cm$ for $m_{\chipm}=100\gev$.
 For high mass scenarios of $m_{\chipm}=500\gev$, the excluded lifetime ranges between $\ctau=70-500\cm$.
-This confirms the paramter exclusion limits of the search for disappearing tracks~\cite{bib:CMS:DT_8TeV}.
+This confirms the parameter exclusion limits of the search for disappearing tracks~\cite{bib:CMS:DT_8TeV}.
 Interestingly, the signal regions of the here presented search and the search from~\cite{bib:CMS:DT_8TeV} show little overlap.
 Therefore, this analysis serves as an independent cross check of~\cite{bib:CMS:DT_8TeV}.
 Improvements of the exclusion of SUSY models with respect to existing searches of around $10-40\gev$ in chargino mass were achieved in the low lifetime region.
 
-Despite all the effort to search for SUSY at 8\tev, SUSY models with wino-like chargino with short lifetimes could not be fully excluded and remain a possible extension of the Standard Model.
-The results of the here presented analysis show that the combination selectiing short tracks and high energy deposition, is a promising avenue for the exclusion of such SUSY models.
-Further improvements can be achieved vby the reduction of the large systematic ucnertainties which are mainly cause by the low statistical precision of simulated samples and a further reduction of the fake bacground by indetifying further characteristics of fake tracks.
-%Studying further characteristics of the fake background further will be one of the main tasks for a progression of this analysis.
-\\
+Still, SUSY models with higher mass and low lifetimes could not be fully excluded by any search at the LHC.
+Therefore, it will stay interesting to further search for these phenomenological interesting scenarios.
+Combining a search for short tracks that are highly ionising is hereby a promising approach.
+As said before, further improvements can be achieved by the reduction of the large systematic uncertainties and a further suppression of the dominating fake background.
 
-
-A similar study with 13\tev collision data could be very interesting as the signal production cross section would increases by around a factor of two for chargino masses of 500\gev.
+A similar study with 13\tev collision data could be additionally very interesting as the signal production cross section would increases by around a factor of two for chargino masses of 500\gev.
 As \ias is much more discriminating for high masses, a sensitivity increase by the inclusion of \ias is more pronounced for a high mass scenario.
 Thus, the increase of the search sensitivity by including \ias will become even stronger for $\sqrt{s} = 13\tev$.
 
