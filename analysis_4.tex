@@ -234,7 +234,7 @@ The transverse momentum of all jets is corrected for non-uniformities in the ene
 The uncertainty on the jet energy scale (JES) is neatly described and quantified in~\cite{bib:CMS:JME_PAS}. 
 It arises from uncertainties on the jet response in data including jet fragmentation, jet flavor composition, etc..
 The JES correction is applied as a multiplicand on each jet's transverse momentum contained in an event.
-The corresponding systematic uncertainty is assessed by a up- and downward variation of the correction factor within 1\,$\sigma$.
+The corresponding systematic uncertainty is assessed by an up- and downward variation of the correction factor within 1\,$\sigma$.
 The resulting uncertainties are of minor importance and range between $0.4-3.1\%$.
 
 \subsection*{Uncertainty on the jet energy resolution}
@@ -300,7 +300,7 @@ The kaon, proton, and in data also the deuteron line is visible.
            The kaon and proton line are visible in both datasets. The deuteron line is only visible in data, as deuteron's are not simulated.}
   \label{fig:IasVsMomentum}
 \end{figure} 
-Two different slices in the momentum are extracted where the proton line is contained: p between $0.80-0.85$ and $0.95-1.00$.
+Two different slices in the momentum are extracted where the proton line is contained: p between $0.80-0.85\gev$ and $0.95-1.00\gev$.
 A Gaussian function is fitted to the proton peak and the maximum difference of the mean of the fitted Gaussian between simulation and observed data is taken as systematic uncertainty.
 The \ias distribution for the two momentum ranges with the Gaussian fit is depicted in Fig.~\ref{fig:IasSlowProtons}.
 \begin{figure}[!h]
@@ -330,7 +330,7 @@ The track reconstruction efficiency is higher in simulation than in data and res
 
 
 \subsection*{Summary of systematic uncertainties on the simulated signal samples}
-All systematic uncertainties are estimated for all simulated signal samples.
+All systematic uncertainties are estimated for all simulated signal samples and in each of the four signal regions.
 An overview of the range of the uncertainties is given in Table~\ref{tab:SignalSysUnc}.
 
 \renewcommand{\arraystretch}{1.5}
@@ -473,7 +473,7 @@ For lower lifetimes a sizable fraction of the charginos already decay before rea
 For longer lifetimes, the cross section upper limit gets weaker again because the charginos start to be reconstructed as muons and do not pass the muon veto.
 Also, the \ecalo requirement rejects these charginos with higher efficiency.
 
-Due to the falling spectrum of the chargino production cross section, charginos with lower masses are more effectively excluded than charginos with a higher mass.
+Due to the falling spectrum of the chargino production cross section, charginos with lower masses are more effectively excluded than charginos with higher masses.
 A 2-dimensional exclusion limit in the chargino lifetime-mass parameter space is shown in Fig.~\ref{fig:2dLimit}.
 \begin{figure}[!t]
   \centering 
@@ -509,7 +509,7 @@ It can be seen that this search is sensitive to mass splittings between $\sim 14
 The presented exclusion limits confirm the exclusion from the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} with slight improvements in the low lifetime region.
 The comparison of the two searches is shown in Fig~\ref{fig:Comparison2dLimit}.
 
-For charginos with a lifetime of $\tau=0.07\ns$, the observed limit of this search improves the limits derived in~\cite{bib:CMS:DT_8TeV} by $\sim35\gev$ in chargino mass, for a lifetime of $\tau=0.4\ns$ by $\sim25\gev$. 
+For charginos with a lifetime of $\tau=0.07\ns$ ($\ctau=2.1\cm$), the observed limit of this search improves the limits derived in~\cite{bib:CMS:DT_8TeV} by $\sim35\gev$ in chargino mass, for a lifetime of $\tau=0.4\ns$ ($\ctau=12.0\cm$) by $\sim25\gev$. 
 For SUSY models with long chargino lifetimes the here presented search shows a higher exclusion power.
 The weaker exclusion for long lifetimes in~\cite{bib:CMS:DT_8TeV} is caused by the additional selection cut on the number of missing outer hits, $\nlostouter\geq3$.
 
@@ -541,11 +541,13 @@ The degree of correlation is depicted in Fig.~\ref{fig:AnalysisOverlap} which sh
   \label{fig:AnalysisOverlap}
 \end{figure} 
 It can be seen that the event overlap for intermediate lifetimes of around 100\cm is around 60\% and decreases for shorter lifetimes to small overlaps of around $15-20\%$.
-Thus, this analysis is able to confirm the exclusion limits derived in~\cite{bib:CMS:DT_8TeV} with an almost independent set of simulated signal events for low lifetimes.
+Additionally, the two events that were observed in data by~\cite{bib:CMS:DT_8TeV} in their signal region are not contained in any of the signal regions in the here presented analysis.
+Thus, this analysis constitutes an independent confirmation of the exclusion limits derived in~\cite{bib:CMS:DT_8TeV}.
 
-It should be also mentioned, that the two events observed in data for the signal region of~\cite{bib:CMS:DT_8TeV}, are not contained in any of the signal regions in the here presented analysis.
-One event is rejected by the tighter calorimeter isolation requirement of $\ecalo<5\gev$ (cf.~\cite{bib:CMS:DT_8TeV} required $\ecalo<10\gev$), and the other event is rejected by the stronger QCD suppression requirements.
-Thus, also the observed data shows no event overlap between this search and the search from~\cite{bib:CMS:DT_8TeV}.
+% with an almost independent set of simulated signal events for low lifetimes.
+%It should also be noted that the two events observed in data in the signal region of~\cite{bib:CMS:DT_8TeV}, are not contained in any of the signal regions in the here presented analysis.
+%One event is rejected by the tighter calorimeter isolation requirement of $\ecalo<5\gev$ (cf.~\cite{bib:CMS:DT_8TeV} required $\ecalo<10\gev$), and the other event is rejected by the stronger QCD suppression requirements.
+%Thus, also the observed data shows no event overlap between this search and the search from~\cite{bib:CMS:DT_8TeV}.
 
 
 
@@ -560,14 +562,15 @@ The here presented search for highly ionising, short tracks is motivated by supe
 Such scenarios are well motivated by astrophysical observations that suggest the existence of large amounts of dark matter.
 It is possible to explain the relic density with wino-like neutralinos if they are non-thermally produced via the decay of long-lived particles, such as a wino-like chargino~\cite{bib:Moroi:DarkMatter_2013}.\\
 
-The presented analysis was designed to increase the search sensitivity on SUSY models with low chargino lifetimes.
+The presented analysis is designed to increase the search sensitivity on SUSY models with low chargino lifetimes.
 It extends the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} by the inclusion of the variable \dedx.
 In order to increase the search sensitivity with respect to short lifetimes, energy information from the pixel silicon tracker is taken into account.
 For this purpose, a dedicated pixel energy calibration was carried out within this thesis to ensure stable energy measurements over time and across pixel modules.
-It is thus the first analysis at CMS that makes use of energy information from the pixel tracker.
-By this inclusion the discrimination power of \dedx was increased significantly.
-Furthermore, \dedx inclusion enabled to loosen the requirement on the number of hits in the tracker with respect to~\cite{bib:CMS:DT_8TeV} that led to a strong suppression of signal events for low chargino lifetimes. 
-The used \dedx discriminator, the Asymmetric Smirnov discriminator \ias, shows good separation power and can lead to sensitivity increases up to 400\% (cf. Fig.~\ref{fig:optimisation}).\\
+This is thus the first analysis at CMS that makes use of energy information from the pixel tracker.
+By adding pixel energy information the discrimination power of \dedx is significantly increased.
+
+Overall, \dedx inclusion allows for loosening the requirement on the number of hits in the tracker with respect to~\cite{bib:CMS:DT_8TeV} that leads to a strong suppression of signal events for low chargino lifetimes. 
+The Asymmetric Smirnov discriminator, \ias, which is used for \dedx discrimination in this analysis, shows good separation power and can lead to sensitivity increases up to 400\% (cf. Fig.~\ref{fig:optimisation}).\\
 
 
 The Standard Model background is mainly estimated with data-based techniques.
@@ -575,33 +578,30 @@ The main background to this search is arising from fake tracks, \ie tracks that 
 Fake tracks are typically short and can have large values of \ias, thus showing a very signal-like signature in the detector.
 The uncertainty on the fake background is dominated by systematic uncertainties originating from low statistical precision in the simulated datasets.
 Simulating more events could therefore significantly improve the search sensitivity.
-This strategy is however technically challenging, since storage capacity limits were already reached within this analysis.
+This strategy is however technically challenging, since storage capacity limits were already reached within the current analysis.
 Still, reducing the uncertainty will be one of the main tasks in order to increase the search sensitivity.
 
 Even though this search already features low background, a further background suppression is desirable.
 However, the impact on the search sensitivity will be limited because of the high relative Poisson error on low background predictions.
 For instance, a reduction of the number of background events by 75\% from 4 to 1 event reduces the signal yield required for a 5$\sigma$-discovery by around 30\%, whereas a 75\% reduction of expected background events from 400 to 100 reduces the required signal yield by 70\%.
 
-In the current analysis, the background was estimated between $19-24$ events for the low \ias signal regions and $2.5-2.6$ for the high \ias regions.
-This background estimate was confronted with collision data recorded during the year 2012 at the CMS experiment at a centre-of-mass energy of 8\tev.
+In the current analysis, the background is estimated at $19-24$ events in the low \ias signal regions and $2.5-2.6$ events in the high \ias regions.
+This background estimate is confronted with collision data recorded during the year 2012 at the CMS experiment at a centre-of-mass energy of 8\tev.
 %Collision data recorded during the year 2012 at the CMS experiment at a centre-of-mass energy of 8\tev was analysed with respect to SUSY scenarios with almost mass-degenerate charginos and neutralinos.
-No evidence for physics beyond the Standard Model was found since the observations are compatible with SM expectations within $1\sigma$.
+No evidence for physics beyond the Standard Model is found. % since the observations are compatible with SM expectations within $1\sigma$.
 Thus, the absence of any deviation from the Standard Model prediction is used to constrain the supersymmetric parameter space.
-Wino-like charginos were excluded down to lifetimes of $\ctau=2\cm$ for $m_{\chipm}=100\gev$.
+Wino-like charginos are excluded down to lifetimes of $\ctau=2\cm$ for $m_{\chipm}=100\gev$.
 For high mass scenarios of $m_{\chipm}=500\gev$, the excluded lifetime ranges between $\ctau=70-500\cm$.
 This confirms the parameter exclusion limits of the search for disappearing tracks~\cite{bib:CMS:DT_8TeV}.
 Interestingly, the signal regions of the here presented search and the search from~\cite{bib:CMS:DT_8TeV} show little overlap.
 Therefore, this analysis serves as an independent cross check of~\cite{bib:CMS:DT_8TeV}.
-Improvements of the exclusion of SUSY models with respect to existing searches of around $10-40\gev$ in chargino mass were achieved in the low lifetime region.
+Improvements of the exclusion of SUSY models with respect to existing searches of around $10-40\gev$ in chargino mass are achieved in the low lifetime region.\\
 
 Still, SUSY models with higher mass and low lifetimes could not be fully excluded by any search at the LHC.
-Therefore, it will stay interesting to further search for these phenomenological interesting scenarios.
-Combining a search for short tracks that are highly ionising is hereby a promising approach.
-As said before, further improvements can be achieved by the reduction of the large systematic uncertainties and a further suppression of the dominating fake background.
-
-A similar study with 13\tev collision data could be additionally very interesting as the signal production cross section would increases by around a factor of two for chargino masses of 500\gev.
-As \ias is much more discriminating for high masses, a sensitivity increase by the inclusion of \ias is more pronounced for a high mass scenario.
-Thus, the increase of the search sensitivity by including \ias will become even stronger for $\sqrt{s} = 13\tev$.
+Therefore, it will stay interesting to further search for these phenomenologically interesting scenarios in collisions at a centre-of-mass energy of 13\tev.
+In this context, the here presented approach of combining a selection of short tracks with \dedx information is especially promising.
+The expected cross section for SUSY models with higher chargino masses of around 500\gev will increase by a factor of two at $\sqrt{s}= 13\tev$.
+Since \dedx is much more discriminating for high masses, the sensitivity impact is expected to be even more pronounced for 13\tev data.
 
 %Up to now, no evidence for Supersymmetry at the LHC could be found.
 %Still, such an explanatory powerful and aesthetically convincing theory will not be given up without a certain confidence that it is not realised in nature.
