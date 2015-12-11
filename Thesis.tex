@@ -48,6 +48,7 @@ a4paper,
 \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
 % remember to use [htp] or [htpb] for placement
 
+\usepackage{scrhack}
 \usepackage{afterpage}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -66,7 +67,7 @@ a4paper,
 \usepackage{float}
 \usepackage{afterpage}
 \usepackage{verbatim}
-\usepackage{gensymb}
+\usepackage{textcomp,gensymb}
 \usepackage[bottom]{footmisc}
 \usepackage{makecell}
 \usepackage{pdflscape}
@@ -74,6 +75,8 @@ a4paper,
 \usepackage[makeroom]{cancel}
 \usepackage{enumerate}
 \usepackage[verbose]{placeins}
+\usepackage[]{units}
+\usepackage[super]{nth}
 % \usepackage{subfig}
 %\usepackage{hepnames}
 % \usepackage{ptdr-definitions}
@@ -215,21 +218,21 @@ a4paper,
 % \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{sec:Detector}
 % \input{detector.tex}
 
-% \part{Measurement of the jet transverse-momentum resolution} \label{sec:resolution}
-% \input{resolution.tex}
+%  \part{Measurement of the jet transverse momentum resolution} \label{sec:resolution}
+ \input{resolution.tex}
 
-\part{A search for highly ionising, short tracks at the CMS detector} \label{sec:analysis}
-\input{analysis_1.tex}
-\input{analysis_2.tex}
-\input{analysis_3.tex}
-\input{analysis_4.tex}
+% \part{A search for highly ionising, short tracks at the CMS detector} \label{sec:analysis}
+% \input{analysis_1.tex}
+% \input{analysis_2.tex}
+% \input{analysis_3.tex}
+% \input{analysis_4.tex}
 
 % \part{Summary} \label{sec:Conclusion}
 % \input{summary.tex}
 
 \cleardoublepage 
 \appendix
-\input{Appendix/appendix_analysis.tex}
+% \input{Appendix/appendix_analysis.tex}
 
 
 \cleardoublepage 
