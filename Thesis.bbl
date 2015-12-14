@@ -1,4 +1,4 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
 
 \bibitem{bib:CMS:QCD_measurements}
 { CMS} Collaboration, ``{Measurements of differential dijet cross section in
@@ -14,6 +14,34 @@
 \href{http://dx.doi.org/10.1140/epjc/s10052-015-3709-x}{{\tt
   doi:10.1140/epjc/s10052-015-3709-x}}.
 %%CITATION = ARXIV:1505.04480;%%.
+
+\bibitem{bib:CMS:RA2_8TeV}
+{ CMS} Collaboration, ``{Search for new physics in the multijet and missing
+  transverse momentum final state in proton-proton collisions at $\sqrt{s}$= 8
+  TeV}'', {\em JHEP} {\bf 06} (2014) 055,
+  \href{http://www.arXiv.org/abs/1402.4770}{{\tt arXiv:1402.4770}}.
+\href{http://dx.doi.org/10.1007/JHEP06(2014)055}{{\tt
+  doi:10.1007/JHEP06(2014)055}}.
+%%CITATION = ARXIV:1402.4770;%%.
+
+\bibitem{bib:CMS:MT2_8TeV}
+{ CMS} Collaboration, ``{Searches for Supersymmetry using the M$_{T2}$ Variable
+  in Hadronic Events Produced in pp Collisions at 8 TeV}'', {\em JHEP} {\bf 05}
+  (2015) 078, \href{http://www.arXiv.org/abs/1502.04358}{{\tt
+  arXiv:1502.04358}}.
+\href{http://dx.doi.org/10.1007/JHEP05(2015)078}{{\tt
+  doi:10.1007/JHEP05(2015)078}}.
+%%CITATION = ARXIV:1502.04358;%%.
+
+\bibitem{bib:CMS:AlphaT_8TeV}
+{ CMS} Collaboration, ``{Search for supersymmetry in hadronic final states with
+  missing transverse energy using the variables $\alpha_T$ and b-quark
+  multiplicity in pp collisions at $\sqrt s=8$ TeV}'', {\em Eur. Phys. J.} {\bf
+  C73} (2013), no.~9, 2568, \href{http://www.arXiv.org/abs/1303.2985}{{\tt
+  arXiv:1303.2985}}.
+\href{http://dx.doi.org/10.1140/epjc/s10052-013-2568-6}{{\tt
+  doi:10.1140/epjc/s10052-013-2568-6}}.
+%%CITATION = ARXIV:1303.2985;%%.
 
 \bibitem{bib:CMS:JERCPaper_2011}
 { CMS} Collaboration, ``{Determination of Jet Energy Calibration and Transverse
@@ -38,10 +66,23 @@ M.~V. F.~Pandolfi, D. del~Re, ``Jet Response and Resolution Measurement with
   Resolution Measurements with Photon+Jet Events at $\sqrt{s}=7$ TeV'', {\em
   CMS Analysis Note} {\bf CMS-AN-10-004} (2011). Internal documentation.
 
-\bibitem{bib:CMS:ECALresolution_7TeV}
-{ CMS} Collaboration, ``{Energy calibration and resolution of the CMS
-  electromagnetic calorimeter in pp collisions at $\sqrt{s}$ = 7 TeV}'',
-\href{http://www.arXiv.org/abs/1306.2016}{{\tt arXiv:1306.2016}}.
-%%CITATION = ARXIV:1306.2016;%%.
+\bibitem{bib:CMS:PhotonResolution_8TeV}
+{ CMS} Collaboration, ``{Performance of Photon Reconstruction and
+  Identification with the CMS Detector in Proton-Proton Collisions at sqrt(s) =
+  8 TeV}'', {\em JINST} {\bf 10} (2015), no.~08, P08010,
+  \href{http://www.arXiv.org/abs/1502.02702}{{\tt arXiv:1502.02702}}.
+\href{http://dx.doi.org/10.1088/1748-0221/10/08/P08010}{{\tt
+  doi:10.1088/1748-0221/10/08/P08010}}.
+%%CITATION = ARXIV:1502.02702;%%.
+
+\bibitem{CMS-PAS-PFT-09-001}
+{ CMS} Collaboration, ``Particle-Flow Event Reconstruction in CMS and
+  Performance for Jets, Taus, and $E^\text{miss}_{T}$'', {\em CMS Physics
+  Analysis Summary} {\bf CMS-PAS-PFT-09-001} (2009).
+
+\bibitem{CMS-PAS-EGM-10-006}
+{ CMS} Collaboration, ``Isolated Photon Reconstruction and Identification at
+  \mbox{$\sqrt{s}=7\tev$}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cdsweb.cern.ch/record/1324545}{CMS-PAS-EGM-10-006}} (2011).
 
 \end{thebibliography}\endgroup
