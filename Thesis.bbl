@@ -76,9 +76,25 @@ M.~V. F.~Pandolfi, D. del~Re, ``Jet Response and Resolution Measurement with
 %%CITATION = ARXIV:1502.02702;%%.
 
 \bibitem{CMS-PAS-PFT-09-001}
-{ CMS} Collaboration, ``Particle-Flow Event Reconstruction in CMS and
-  Performance for Jets, Taus, and $E^\text{miss}_{T}$'', {\em CMS Physics
-  Analysis Summary} {\bf CMS-PAS-PFT-09-001} (2009).
+{ CMS} Collaboration, {CMS Collaboration}, ``Particle-Flow Event Reconstruction
+  in CMS and Performance for Jets, Taus, and MET'', CMS Physics Analysis
+  Summary CMS-PAS-PFT-09-001, 2009.
+
+\bibitem{Cacciari:2008gp}
+M.~Cacciari, G.~P. Salam, and G.~Soyez, ``The anti-$k_t$ jet clustering
+  algorithm'', {\em JHEP} {\bf 04} (2008) 063,
+  \href{http://www.arXiv.org/abs/0802.1189}{{\tt arXiv:0802.1189}}.
+  \href{http://dx.doi.org/10.1088/1126-6708/2008/04/063}{{\tt
+  doi:10.1088/1126-6708/2008/04/063}}.
+
+\bibitem{website:JetIdentification}
+N.~Odell, ``Jet Identification''.
+  \url{http://twiki.cern.ch/twiki/bin/view/CMS/JetID#Documentation}, August,
+  2013.
+
+\bibitem{bib:CMS-AN-2010-003}
+{N. Saoulidou}, ``Particle Flow Jet Identification Criteria'', {\em CMS
+  Analysis Note} {\bf CMS-AN-10-003} (2010). Internal documentation.
 
 \bibitem{CMS-PAS-EGM-10-006}
 { CMS} Collaboration, ``Isolated Photon Reconstruction and Identification at
