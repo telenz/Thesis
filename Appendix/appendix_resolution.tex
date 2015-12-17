@@ -30,28 +30,39 @@
 
 \section{Summary of all selection requirements}
 \label{res:app:eventselection}
-FIXME: Update this table and include all details!
+
+
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[htb]
+\begin{table}[!h]
 \centering
-\caption{Summary of all selection criteria.}
-\label{res:tab:selection}
+\caption{Summary of all  selection criteria for the measurments of the jet transverse-momentum resolution with \GAMJET events.}
+\label{res:tab:FullSelection}
 \makebox[0.99\textwidth]{
-\begin{tabular}{l | c | l}
-\multicolumn{3}{c}{} \\
+\begin{tabular}{l|l}
+\multicolumn{2}{c}{} \\
 \toprule
-  &      Selection                                               & Further specifications                                                                 \\
+One jet with                          & $\pt>10\gev$ \\
+                                      & Neutral hadron fraction $<$ 0.90\\
+                                      & Neutral electromagnetic fraction $<$ 0.90 \\
+                                      & Number of constituents $>$ 1  \\
+                                      & Charged hadron fraction $>$ 0 \\
+                                      & Charged hadron multiplicity $>$ 0   \\
 \midrule
-1.&  Leading Photon  & See table \ref{res:tab:PhotonIsolation} in section \ref{res:sec:EventSelection} for the specific selection requirements            \\
-2.&  Leading Jet is tight                                        & See in section \ref{res:sec:EventSelection} the specific selection requirements    \\
-3.&  $\pt^{\text{1st jet}} > 10\gev$                             &                                                                                       \\
-4.&  $\pt^{\text{2nd jet}} > 10\gev$                             &                                                                                       \\
-5.&  $\eta^{\gamma}<1.3$                                         &                                                                                       \\
-6.&  $\Delta \Phi \left(\text{1st jet}, \gamma \right) > 2.95 $  &                                                                                       \\
-7.&  $\frac{\pt^{\text{2nd jet}}}{\pt^{\gamma}} < 0.20$          & With the following binning: [0,0.075,0.1,0.125,0.15,0.175,0.2]                        \\
-8.&  Trigger $\pt^{\gamma}$ bounds                               & With the following bounds: [22,36,60,88,105,148.5,165,176,$\inf$]                     \\
+One photon with                       & $\pt>22\gev$ \\
+                                      & $|\eta|<1.3$ \\
+                                      & $\frac{\text{H}}{\text{E}}< 0.05$ \\
+                                      & $\sigma_{i\eta i \eta} < 0.013$  \\
+                                      & ECAL isolation $<4.2\gev + 0.0060 \cdot \pt^{\gamma}$ \\
+                                      & HCAL isolation $<2.2\gev + 0.0025 \cdot \pt^{\gamma}$  \\
+                                      & Track Isolation $<2.0\gev + 0.0010 \cdot \pt^{\gamma}$ \\
+                                      & Pixel seed veto  \\
+\midrule
+Event-based selection                 & $\pt^{\text{2nd jet}} > 10\gev$ \\
+                                      & $\frac{\ptsecondjet}{\ptgamma} < 0.20$  \\
+                                      & $\Delta \Phi \left(\text{\nth{1}\,jet},\, \gamma \right) > 2.95 $  \\
 \bottomrule
-\multicolumn{3}{c}{} \\
+\multicolumn{2}{c}{} \\
 \end{tabular}}
 \end{table}
+
 

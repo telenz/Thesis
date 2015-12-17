@@ -51,29 +51,10 @@
   doi:10.1088/1748-0221/6/11/P11002}}.
 %%CITATION = ARXIV:1107.4277;%%.
 
-\bibitem{bib:CMS-AN-2010-076}
-M.~V. F.~Pandolfi, D. del~Re, ``Jet Response and Resolution Measurement with
-  Photon+Jet Events'', {\em CMS Analysis Note} {\bf CMS-AN-10-076} (2010).
-  Internal documentation.
-
-\bibitem{bib:CMS-AN-2010-141}
-{F. Pandolfi, D. del Re, M. Voutilainen}, ``Jet Response and Resolution
-  Measurement with Photon+Jet Events at $\sqrt{s}=7$ TeV'', {\em CMS Analysis
-  Note} {\bf CMS-AN-10-141} (2010). Internal documentation.
-
-\bibitem{bib:CMS-AN-2011-004}
-{F. Pandolfi, D. del Re, M. Voutilainen}, ``Update on Jet Response and
-  Resolution Measurements with Photon+Jet Events at $\sqrt{s}=7$ TeV'', {\em
-  CMS Analysis Note} {\bf CMS-AN-10-004} (2011). Internal documentation.
-
-\bibitem{bib:CMS:PhotonResolution_8TeV}
-{ CMS} Collaboration, ``{Performance of Photon Reconstruction and
-  Identification with the CMS Detector in Proton-Proton Collisions at sqrt(s) =
-  8 TeV}'', {\em JINST} {\bf 10} (2015), no.~08, P08010,
-  \href{http://www.arXiv.org/abs/1502.02702}{{\tt arXiv:1502.02702}}.
-\href{http://dx.doi.org/10.1088/1748-0221/10/08/P08010}{{\tt
-  doi:10.1088/1748-0221/10/08/P08010}}.
-%%CITATION = ARXIV:1502.02702;%%.
+\bibitem{CMS:PAS:JETResolution_7TeV}
+{ CMS} Collaboration, ``{Jet Energy Resolution in CMS at sqrt(s)=7 TeV}'', {\em
+  CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1339945}{CMS-PAS-JME-10-014}} (2011).
 
 \bibitem{CMS-PAS-PFT-09-001}
 { CMS} Collaboration, {CMS Collaboration}, ``Particle-Flow Event Reconstruction
@@ -87,18 +68,29 @@ M.~Cacciari, G.~P. Salam, and G.~Soyez, ``The anti-$k_t$ jet clustering
   \href{http://dx.doi.org/10.1088/1126-6708/2008/04/063}{{\tt
   doi:10.1088/1126-6708/2008/04/063}}.
 
-\bibitem{website:JetIdentification}
-N.~Odell, ``Jet Identification''.
-  \url{http://twiki.cern.ch/twiki/bin/view/CMS/JetID#Documentation}, August,
-  2013.
+\bibitem{bib:JetIDRecommendation_7TeV}
+N.~Odell, ``PF Jet ID Recommendation''.
+  \url{https://indico.cern.ch/event/89919/contribution/0/attachments/1091238/1%
+556772/PF_JET_ID_Reccomendation.pdf}, April, 2010.
 
-\bibitem{bib:CMS-AN-2010-003}
-{N. Saoulidou}, ``Particle Flow Jet Identification Criteria'', {\em CMS
-  Analysis Note} {\bf CMS-AN-10-003} (2010). Internal documentation.
+\bibitem{bib:AN:JetId_8TeV}
+{N. Saoulidou and E. Tziaferi}, ``Performance of the Particle-Flow jet
+  identification criteria using proton-proton collisions at $\sqrt{s}=
+  8\tev$'', {\em CMS Analysis Note} {\bf
+  \href{http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2014_227_v3.%
+pdf}{CMS-AN-14-227}} (2014). Internal documentation.
 
 \bibitem{CMS-PAS-EGM-10-006}
 { CMS} Collaboration, ``Isolated Photon Reconstruction and Identification at
   \mbox{$\sqrt{s}=7\tev$}'', {\em CMS Physics Analysis Summary} {\bf
   \href{http://cdsweb.cern.ch/record/1324545}{CMS-PAS-EGM-10-006}} (2011).
+
+\bibitem{bib:Matthias_Thesis}
+M.~Schröder, ``{Quality of jet measurements and impact on a search for new
+  physics at CMS}''.
+\newblock PhD thesis, Hamburg U.,
+2012.
+\newblock
+%%CITATION = DESY-THESIS-2012-042;%%.
 
 \end{thebibliography}\endgroup
