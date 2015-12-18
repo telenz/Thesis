@@ -352,10 +352,9 @@ The figure compares the intrinsic response, the imbalance, and the measured tota
 
 \begin{figure}[t]
  \centering
-     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/intrinsicExample.pdf}
-     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/imbalanceExample.pdf}
-
-     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/fullResponseExample.pdf}
+     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/intrinsicResponse_6_alpha_bin.pdf}
+     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/imbalanceResponse_6_alpha_bin.pdf}\\
+     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/fullResponse_6_alpha_bin.pdf}
   \caption{The two different contributions, intrinsic (top left) and imbalance (top right), to the measured response (bottom) (cf. Eq.~\eqref{eq:splittedResolution}) in simulated events.}  
  \label{fig:responseExamples}
 \end{figure}
@@ -373,9 +372,9 @@ events with a second jet perpendicular to the photon leading jet axis (see \mbox
 
 \begin{figure}[bt]
  \centering
-     \includegraphics[width=0.32\textwidth]{figures/resolution/methodology/fullResponseExample1stBin.pdf}
-     \includegraphics[width=0.32\textwidth]{figures/resolution/methodology/fullResponseExample4thBin.pdf}
-     \includegraphics[width=0.32\textwidth]{figures/resolution/methodology/fullResponseExample6thBin.pdf}
+     \includegraphics[width=0.32\textwidth]{figures/resolution/methodology/fullResponse_1_alpha_bin.pdf}
+     \includegraphics[width=0.32\textwidth]{figures/resolution/methodology/fullResponse_4_alpha_bin.pdf}
+     \includegraphics[width=0.32\textwidth]{figures/resolution/methodology/fullResponse_6_alpha_bin.pdf}
   \caption{The measured response \ptrecojet/\ptgamma in simulation for FIXME : $\ptgamma < 400 \gev$ for three different $\alpha$ ranges: $0.0-7.5\%$ (left), $12.5-15.0\%$ (middle) and $17.5-20.0\%$ (right). 
            It can be seen that the double peak structure gets less pronounced for low $\alpha$ values.}  
  \label{fig:alphaBins}
@@ -397,15 +396,16 @@ The two response distributions coming from the different event topologies are se
 (cf. Fig.~\ref{fig:fullResponseAndContributions}), and then, the weighted mean of the two contributions is calculated.
 \begin{figure}[!t]
  \centering
-     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/2ndJet_in_JetHemisphere.pdf}
-     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/2ndJet_in_PhotonHemisphere.pdf}
+     \includegraphics[width=0.42\textwidth]{figures/resolution/methodology/2ndJet_in_JetHemisphere.pdf}
+     \hspace{0.1\textwidth}
+     \includegraphics[width=0.42\textwidth]{figures/resolution/methodology/2ndJet_in_PhotonHemisphere.pdf}
   \caption{A schematic sketch of the two different event topologies where the second jet is in the leading jet (left) or the photon hemisphere (right)}  
  \label{fig:sketch}
 \end{figure}
 \begin{figure}[!b]
   \centering
   \vspace{35pt}
-      \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/fullResponseAndContributionsExample.pdf}
+      \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/fullResponseAndContributions_6_alpha_bin.pdf}
   \caption{The measured response with the two contributions visualised. Events with a second jet in photon hemisphere (red) lead to a mean response larger one, while events with a
            second jet in the leading jet hemisphere (green) have a mean smaller one.}  
   \label{fig:fullResponseAndContributions}
@@ -431,8 +431,8 @@ Folding two independent Gaussian functions results in a quadratic addition of th
 In Fig.~\ref{fig:AlphaDependenceOfResolutions}, the $\alpha$ dependence of the imbalance, the intrinsic resolution, and the total resolution is shown for two exemplary \ptgamma regions in simulated events. 
 \begin{figure}[!b]
  \centering
-    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/JER_for_1_eta_bin_4_pTGamma_bin_all_contributions_PFCHS_RMS99_mc.pdf} 
-    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/JER_for_1_eta_bin_12_pTGamma_bin_all_contributions_PFCHS_RMS99_mc.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/JER_for_1_eta_bin_5_pTGamma_bin_wo_data_PFCHS_RMS99_mc.pdf} 
+    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/JER_for_1_eta_bin_12_pTGamma_bin_wo_data_PFCHS_RMS99_mc.pdf} 
   \caption{The alpha dependency of the various parts of the resolution in the simulated events for (left) $83 \gev < \pt^{\gamma} < 99 \gev $ and (right) $400 \gev < \pt^{\gamma}$. 
            The total resolution (grey line) is the addition in quadrature of the imbalance (blue line) and the intrinsic (red line) 
   fit functions. It can 
@@ -470,8 +470,8 @@ In Fig.~\ref{fig:ResolutionOfPtgamma}, the fitted intrinsic resolution in simula
 The resolution improves for increasing photon \pt. 
 \begin{figure}[tbp]
   \centering
-    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/Resolution_for_1_eta_bin_PFCHS_mc_RMS99.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/Resolution_for_3_eta_bin_PFCHS_mc_RMS99.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/Intrinsic_for_1_eta_bin_PFCHS_mc_RMS99.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/Intrinsic_for_3_eta_bin_PFCHS_mc_RMS99.pdf}
   \caption{Intrinsic resolution for $|\etafirstjet| < 0.5$ (left) and $1.1<|\etafirstjet| < 1.7$ (right) in simulation.}  
   \label{fig:ResolutionOfPtgamma}
 \end{figure}

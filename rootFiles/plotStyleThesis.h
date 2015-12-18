@@ -15,8 +15,8 @@ public:
     //Legend 
     cout<<"GeneralSettings is activated!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
     
-    gROOT  -> SetStyle("Plain");
-    
+    gROOT  -> SetStyle("Modern");
+        
     gStyle -> SetLegendFillColor(0);
     gStyle->SetLegendFont(42);
     //gStyle->SetLegendTextSize(0.05);
@@ -55,14 +55,15 @@ public:
    
     gStyle->SetOptStat("");
 
- 
+    
     gStyle -> SetTextFont(42);
     gStyle -> SetTitleFont(42,"");
     gStyle -> SetTextSize(0.05);
     gStyle -> SetTitleSize(0.06);
+    gStyle -> SetTitleBorderSize(0);
 
     TGaxis::SetMaxDigits(3);
- 
+  
 
    
     //gStyle->SetStatStyle(0);
