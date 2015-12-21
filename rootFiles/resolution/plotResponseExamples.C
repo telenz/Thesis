@@ -43,7 +43,7 @@ int plotResponseExamples(){
   gStyle->SetMarkerStyle(1);
   //  gStyle -> SetOptTitle(1);
   gStyle -> SetOptLogy();
-  gStyle -> SetHistLineWidth(3);
+  gStyle -> SetHistLineWidth(width);
 
 
   TString pathToFile = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS/mc/root_files/";
@@ -55,7 +55,7 @@ int plotResponseExamples(){
       
   
   const int etaB   = 1;
-  const int alphaB = 6;
+  const int alphaB = 1;
   const int ptB    = 12;
 
   double min = 0.0001;
@@ -93,7 +93,7 @@ int plotResponseExamples(){
   // Draw info boxes
   info   = new TLatex();
   info -> SetNDC();
-  info ->SetTextSize(0.055);
+  info ->SetTextSize(0.05);
   info -> DrawLatex(0.7, 0.95, "Simulation");
   info -> DrawLatex(0.2, 0.87, "Measured Response");
   info ->SetTextSize(0.04);
@@ -143,7 +143,7 @@ int plotResponseExamples(){
   legend1 -> AddEntry(histoJet1   , "2^{nd} jet in leading jet hemisphere");
   legend1 -> AddEntry(histoPhoton1, "2^{nd} jet in photon hemisphere");
   legend1 -> Draw();
-  info ->SetTextSize(0.055);
+  info ->SetTextSize(0.05);
   info -> DrawLatex(0.7, 0.95, "Simulation");
   canvas1->SaveAs(Form("output/fullResponseAndContributions_%i_alpha_bin.pdf",alphaB));
 
@@ -178,7 +178,7 @@ int plotResponseExamples(){
   // Draw info boxes
   info   = new TLatex();
   info -> SetNDC();
-  info ->SetTextSize(0.055);
+  info ->SetTextSize(0.05);
   info -> DrawLatex(0.2, 0.87, "Imbalance Response");
   info -> DrawLatex(0.7, 0.95, "Simulation");
   info ->SetTextSize(0.04);
@@ -259,7 +259,7 @@ int plotResponseExamples(){
   // Draw info boxes
   info   = new TLatex();
   info -> SetNDC();
-  info ->SetTextSize(0.055);
+  info ->SetTextSize(0.05);
   info -> DrawLatex(0.2, 0.87, "Intrinsic Response");
   info -> DrawLatex(0.7, 0.95, "Simulation");
   info ->SetTextSize(0.04);

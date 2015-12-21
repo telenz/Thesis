@@ -39,7 +39,7 @@ int plotResponse_BC_Quarks(){
   TeresaPlottingStyle::init();
   gStyle->SetMarkerSize(0.001);
   //gStyle->SetMarkerStyle(1);
-  gStyle->SetHistLineWidth(3);
+  gStyle->SetHistLineWidth(2);
 
   TH1D *histoBC, *histoALL;
   TCanvas* c =  new TCanvas();

@@ -41,7 +41,7 @@ int plotPhotonPtReweighting(){
   gStyle->SetMarkerSize(0.1);
   gStyle->SetMarkerStyle(1);
   gStyle -> SetOptLogy();
-  gStyle -> SetHistLineWidth(3);
+  gStyle -> SetHistLineWidth(2);
   TGaxis::SetMaxDigits(5);
   gStyle->SetNdivisions(506,"Y");
 
@@ -62,10 +62,10 @@ int plotPhotonPtReweighting(){
   histo           -> Rebin(rebin);
   histoReweighted -> Rebin(rebin);
 
-  Color_t color = 9;
+  Color_t color = kBlue;
   histo           -> SetLineColor(color);
   histo           -> SetMarkerColor(color);
-  color = kRed;
+  color = kTeal+10;
   histoReweighted -> SetLineColor(color);
   histoReweighted -> SetMarkerColor(color);
 
