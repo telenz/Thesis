@@ -27,7 +27,7 @@
   \label{res:fig:PUreweighting}
 \end{figure}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary of all selection requirements}
 \label{res:app:eventselection}
 
@@ -66,3 +66,19 @@ Event-based selection                 & $\pt^{\text{2nd jet}} > 10\gev$ \\
 \end{table}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Generator-level jet flavor definition}
+\label{res:app:FlavorDefinition}
+
+The algorithmic flavor definition uses the following discrimination:
+
+\begin{itemize}
+\item Try to find the parton that most likely determines the properties of the jet and assign that flavor as true flavor
+\item Here, the ``final state'' partons (after showering, radiation) are analyzed (also within $\Delta$R $<$ 0.3 of reconstructed jet cone)
+\item Jets from radiation are matched with full efficiency
+\item If there is a b/c within the jet cone: label as b/c
+\item Otherwise: assign flavor of the hardest parton 
+\end{itemize}
+
+ 
+   

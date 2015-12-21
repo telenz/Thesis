@@ -93,4 +93,14 @@ M.~Schröder, ``{Quality of jet measurements and impact on a search for new
 \newblock
 %%CITATION = DESY-THESIS-2012-042;%%.
 
+\bibitem{bib:CMS:JME_PAS}
+{ CMS} Collaboration, ``{Jet Energy Scale and Resolution in the CMS
+  Experiment}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/2033232}{CMS-PAS-JME-13-004}} (2015).
+
+\bibitem{bib:CMS:PileUpReweighting}
+{ CMS} Collaboration, ``Pileup Reweighting'', {\em Internal CMS Wiki} (2011).
+  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupReweighting}{https:%
+//twiki.cern.ch/twiki/bin/viewauth/CMS/PileupReweighting}.
+
 \end{thebibliography}\endgroup

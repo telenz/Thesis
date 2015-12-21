@@ -13,11 +13,11 @@ void DTLimit(){
   TeresaPlottingStyle::init();
   //gStyle->SetLineWidth(3);
 
-  TFile *in = new TFile("ObservedLimit.root","READ");
-  //TFile *in = new TFile("ObservedLimit_HybridNew.root","READ");
+  //TFile *in = new TFile("ObservedLimit.root","READ");
+  TFile *in = new TFile("ObservedLimit_HybridNew.root","READ");
   TGraph *myLimit = 0;
-  in -> GetObject("Graph",myLimit);
-  //in -> GetObject("Limit_ns",myLimit);
+  //in -> GetObject("Graph",myLimit);
+  in -> GetObject("Limit_ns",myLimit);
   myLimit ->SetLineColor(kRed);
   myLimit ->SetLineWidth(2);
     
@@ -137,9 +137,10 @@ void DTLimit(){
    graph->SetPoint(36,186.2748171,333.5668301);
 
 
-   Graph_Graph1->SetMaximum(300);
-   TLegend* leg = new TLegend(0.17,0.46,0.72,0.6);
-   //TLegend* leg = new TLegend(0.33,0.2,0.9,0.35);
+   //Graph_Graph1->SetMaximum(300);
+   Graph_Graph1->SetMaximum(1);
+   //TLegend* leg = new TLegend(0.17,0.46,0.72,0.6);
+   TLegend* leg = new TLegend(0.33,0.2,0.9,0.35);
    leg->SetTextSize(0.045);
    leg->AddEntry(myLimit,"Observed limit","l");
    leg->AddEntry(graph,"#splitline{Observed limit of #font[12]{Search }}{#font[12]{for disappearing tracks}}","l");
@@ -150,7 +151,7 @@ void DTLimit(){
    graph->Write();
    out->Close();
 
-   lifetimeNs_vs_mass->SaveAs("Comparison2dLimits.pdf");
+   lifetimeNs_vs_mass->SaveAs("Comparison2dLimits_HybridNew_SmallRange.pdf");
         
  
 }
