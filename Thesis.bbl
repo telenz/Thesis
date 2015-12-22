@@ -56,6 +56,15 @@
   CMS Physics Analysis Summary} {\bf
   \href{https://cds.cern.ch/record/1339945}{CMS-PAS-JME-10-014}} (2011).
 
+\bibitem{bib:CMS:PhotonIdentification_8TeV}
+{ CMS} Collaboration, ``{Performance of Photon Reconstruction and
+  Identification with the CMS Detector in Proton-Proton Collisions at $\sqrt{s}
+  = 8\tev$}'', {\em JINST} {\bf 10} (2015), no.~08, P08010,
+  \href{http://www.arXiv.org/abs/1502.02702}{{\tt arXiv:1502.02702}}.
+\href{http://dx.doi.org/10.1088/1748-0221/10/08/P08010}{{\tt
+  doi:10.1088/1748-0221/10/08/P08010}}.
+%%CITATION = ARXIV:1502.02702;%%.
+
 \bibitem{CMS-PAS-PFT-09-001}
 { CMS} Collaboration, {CMS Collaboration}, ``Particle-Flow Event Reconstruction
   in CMS and Performance for Jets, Taus, and MET'', CMS Physics Analysis

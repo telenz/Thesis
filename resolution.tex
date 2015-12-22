@@ -74,7 +74,7 @@ A determination of the resolution in data, however, has to rely on a different a
 
 \section{Basic concept of a data-based method}
 The main idea of a resolution measurement using \GAMJET events is based on the transverse-momentum balance of the \GAMJET system and the excellent electromagnetic calorimeter resolution
-(which was estimated between 1.1 \% and 3.8\% in the barrel region for photons for $\sqrt{s}=8\tev$ data~\cite{bib:CMS:PhotonResolution_8TeV}).
+(which was estimated between 1.4\% and 3.8\% in the barrel region for photons for $\sqrt{s}=8\tev$ data~\cite{bib:CMS:PhotonIdentification_8TeV}).
 
 In Fig~\ref{res:fig:FeynmanDiagrams}, all tree-level processes contributing to an event topology with one photon and one jet in the final state are depicted. 
 \begin{figure}[t]
@@ -341,7 +341,7 @@ A summary of all selection criteria can be found in Appendix~\ref{res:app:events
 The basic methodology of measuring the jet transverse-momentum resolution by exploiting the \pt balance in $\GAMJET$ events and extrapolating the result to small $\alpha$, that was already used in earlier analyses~\cite{bib:CMS:JERCPaper_2011,CMS:PAS:JETResolution_7TeV}, 
 is extended in this measurement in order to explicitly distinguish the case of parton radiation in different event hemispheres.
 
-As already described in Section~\ref{res:ch:GeneralApproach}, the idea behind a resolution measurement with $\GAMJET$ events is the usage of the photon \pt instead of the true jet \pt.
+As already described in Chapter~\ref{res:ch:GeneralApproach}, the idea behind a resolution measurement with $\GAMJET$ events is the usage of the photon \pt instead of the true jet \pt.
 This results in a twofold contribution to the measured response, the intrinsic response and the imbalance:
 
 \begin{equation}\label{eq:splittedResolution}
@@ -434,10 +434,9 @@ In Fig.~\ref{fig:AlphaDependenceOfResolutions}, the $\alpha$ dependence of the i
  \centering
     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/JER_for_1_eta_bin_5_pTGamma_bin_wo_data_PFCHS_RMS99_mc.pdf} 
     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/JER_for_1_eta_bin_12_pTGamma_bin_wo_data_PFCHS_RMS99_mc.pdf} 
-  \caption{The alpha dependency of the various parts of the resolution in the simulated events for (left) $83 \gev < \pt^{\gamma} < 99 \gev $ and (right) $400 \gev < \pt^{\gamma}$. 
-           The total resolution (grey line) is the addition in quadrature of the imbalance (blue line) and the intrinsic (red line) 
-  fit functions. It can 
-  be compared to the measured pseudo data (black line).}  
+  \caption{The alpha dependency of the various parts of the resolution in the simulated events for $83 \gev < \pt^{\gamma} < 99 \gev $ (left) and $400 \gev < \pt^{\gamma}$ (right). 
+           The total resolution (grey dotted line) is the addition in quadrature of the imbalance (blue line) and the intrinsic (red line) fit functions. 
+           It can be compared to the measured pseudo data (green dots/line).}  
  \label{fig:AlphaDependenceOfResolutions}
 \end{figure}
 The measured intrinsic resolution and imbalance for various $\alpha$ values are fitted with functions \eqref{eq:intrinsic} and \eqref{eq:imbalance}, respectively.
@@ -715,8 +714,19 @@ The resulting uncertainties are almost negligible and range between $0.1-0.2\%$.
 The data-to-simulation resolution scaling factors $\rhores = \jer^{\text{data}}$/$\jer^{\text{MC}}$ are determined in $19.7\fbinv$ of pp collision data at $\sqrt{s} = 8 \tev$ with the methodology described in Chapter~\ref{res:ch:methodology}.
 In each $\alpha$-, \ptgamma- and $|\etafirstjet|$-bin, the width of the 99\% truncated response histogram is determined in simulation and data.
 Afterwards, the extrapolation to zero additional jet activtivty is carried out, by fixing the imbalance $q$ in simulation and in data to the value extracted from the imbalance extrapolation in simulation.
-Examplary extrapolitions for the imbalance and the total resolution in data and simulation are shown in Fig.~\ref{FIXME}.
-The full set for each \ptgamma and $|\etafirstjet|$ bin can be found in Appendix~\ref{FIXME}.
+Examplary extrapolations for the imbalance and the total resolution in data and simulation are shown in Fig.~\ref{res:fig:ExtrapolationsWithData}.
+
+\begin{figure}[b]
+ \centering
+    \includegraphics[width=0.49\textwidth]{figures/resolution/results/JER_for_1_eta_bin_10_pTGamma_bin_all_contributions_PFCHS_RMS99_mc.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/resolution/results/JER_for_2_eta_bin_10_pTGamma_bin_all_contributions_PFCHS_RMS99_mc.pdf}
+  \caption{Two examples of the alpha dependency of the measured jet transverse-momentum resolution in data (black dots), in simulation (green dots) and  of the intrinsic (red dots) and the imbalance (blue dots) part 
+           of the resolution in simulated events. All resolutions are fitted with the corresponding functions introduced in Chapter~\ref{res:ch:methodology} (Eqs.~\eqref{eq:intrinsic}-~\eqref{eq:total}).
+           The total resolution (grey dotted line) is the addition in quadrature of the imbalance (blue line) and the intrinsic (red line) fit functions. }
+  \label{res:fig:ExtrapolationsWithData}
+\end{figure}
+
+The full set for each \ptgamma and $|\etafirstjet|$ bin can be found in Appendix~\ref{res:app:extrapolationPlots}.
 
 Finally, the extracted resolutions in data and simulation in every \ptgamma bin are divided and a horizontal fit is applied to this ratio
 \begin{equation*}
@@ -726,27 +736,29 @@ In Fig.~\ref{res:fig:RatioEtaBinned}, the results for all four $|\etafirstjet|$-
 The $\chi^2$/NDF-values for the four fits vary between 0.23 and 2.53. 
 Thus, a horizontal fit is justified, and one value for every $|\etafirstjet|$-bin will be reported.
 
-\begin{figure}[hb]
+\begin{figure}[t]
  \centering
     \includegraphics[width=0.49\textwidth]{figures/resolution/results/Ratio_Resolution_for_1_eta_bin_PFCHS_data_comparison_RMS99.pdf}
     \includegraphics[width=0.49\textwidth]{figures/resolution/results/Ratio_Resolution_for_2_eta_bin_PFCHS_data_comparison_RMS99.pdf}
+    \vspace{18pt}
 
     \includegraphics[width=0.49\textwidth]{figures/resolution/results/Ratio_Resolution_for_3_eta_bin_PFCHS_data_comparison_RMS99.pdf}
     \includegraphics[width=0.49\textwidth]{figures/resolution/results/Ratio_Resolution_for_4_eta_bin_PFCHS_data_comparison_RMS99.pdf}
-  \caption{Data-to-simulation resolution ratios, fitted with a horizontal line for four different $|\etafirstjet|$-ranges: 
-           \mbox{$|\eta^{\text{1st jet}}| < 0.5$}, \mbox{$0.5\le|\eta^{\text{1st jet}}| < 1.1$}, \mbox{$1.1\le|\eta^{\text{1st jet}}| < 1.7$}, \mbox{$1.7\le|\eta^{\text{1st jet}}| < 2.3$}.}
+  \caption{Data-to-simulation resolution ratios (black dots), fitted with a horizontal line (red line) for four different $|\etajet|$-ranges.
+           The fit uncertainties are depicted with light red error bands.}
   \label{res:fig:RatioEtaBinned}
 \end{figure}
 
-All fit results are greater then one which means that the resolution in data is in all bins worse compared to the resolution in simulation.
-The values of the fits range from 1.067 (for the first $\eta$-bin) to 1.199 (for the last $\eta$-bin). 
+All fit results are greater than one which means that the resolution in data is in all bins worse compared to the resolution in simulation.
+The values of the fits range from 1.067 (for the first $\etajet$-bin) to 1.199 (for the last $\etajet$-bin). 
 
-The systematic uncertainties were evaluated as described in the previous chapter. 
-The single uncertainties were taken as upper and lower boundary of the 68\% uncertainty band and were added in quadrature to get the total systematic uncertainty.
-Table~\ref{res:tab:FinalResults} summarises the ratio results determined with data collected during the year 2012 with their statistical and systematic uncertainties.
+The systematic uncertainties are evaluated as described in the previous chapter. 
+The single uncertainties are taken as upper and lower boundary of the 68\% uncertainty band and are added in quadrature to get the total systematic uncertainty.
+Table~\ref{res:tab:FinalResults} summarises the data-to-simulation ratio results determined with data collected during the year 2012 with their statistical and systematic uncertainties.
+The visualised result can be found in Fig.~\ref{res:fig:RatioFinal}.\\
 
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!b]
+\begin{table}[!t]
 \centering
 \caption{Data-to-simulation resolution scaling factors \rhores with statistical and systematic uncertainties.}
 \label{res:tab:FinalResults}
@@ -766,34 +778,44 @@ $1.7 - 2.3$ &1.199 & $\pm 0.037$ & $^{+0.075}_{-0.075}$ \\
 \end{tabular}}}
 \end{table}  
 
-
-
-Though the $\GAMJET$ analysis is known to be capable to produce highly precise results, the systematic uncertainties are still dominating. 
-The statistical limitation of this analysis is due to the collected data at the CMS detector. 
-The number of simulated events is roughly eight times larger.
- 
-A comparison of the data to simulation resolution scaling factors between this analysis and the results of 2011 which were determined from a dijet data sample
-\cite{Schroder:2012} can be found in \mbox{Fig. \ref{fig:RatioFinal}}.
-The black dots show the $\frac{\text{JER}^{\text{data}}}{\text{JER}^{\text{MC}}}$ scale factors of the 2011 analysis with the grey band 
-representing the statistical and systematic uncertainties added in quadrature while the magenta dots and the magenta band
-are the 2012 central values with their total uncertainties.
-
-\begin{figure}[ht]
+\begin{figure}[!b]
  \centering
-    \includegraphics[width=0.6\textwidth]{figures/resolution/results/resultsComparisonFINAL.pdf}
-  \caption{The measured data to simulation resolution ratio $\frac{\text{JER}^{\text{data}}}{\text{JER}^{\text{MC}}}$ for 2012 (magenta dots) and 2011 (black dots)
-           with statistical and systematic uncertainties added in quadrature (magenta area). The dark grey line indicates the systematic uncertainty only.}
-  \label{fig:RatioFinal}
+    \includegraphics[width=0.65\textwidth]{figures/resolution/results/MySingleFinalResult.pdf}
+  \caption{The measured data-to-simulation resolution ratio in \GAMJET events using data recorded in the year 2012.
+           The red band depicts the total uncertainty whereas the erorr bars show the statistical uncertainty only.}
+  \label{res:fig:RatioFinal}
 \end{figure}
 
-It can be seen, that throughout the whole $\eta^{\text{jet}}$-range the data to simulation scale factors became systematically larger. 
+Though the \GAMJET analysis is known to be capable to produce highly precise results, the systematic uncertainties are still dominating. 
+This is mainly caused by the uncertainty on the simulation of out-of-cone showering.
+This uncertainty, however, is limited because of the statistical precision of the \GAMJET dataset.
+Thus, this analysis is mainly statistically limited because of the limited number of events recorded in 2012 at the CMS detector.
+The number of simulated events is roughly eight times larger.
+ 
+\section{Comparison to 2011 measurements}
+\label{res:sec:comparison_2011}
 
+A comparison of the data-to-simulation resolution scaling factors between this analysis and the results of 2011 which were determined from a dijet data sample \cite{Schroder:2012} can be found in Fig.~\ref{res:fig:Comparison_2011}}.
+\begin{figure}[!b]
+ \centering
+    \includegraphics[width=0.65\textwidth]{figures/resolution/results/MySingleFinalResult.pdf}
+  \caption{FIXME: Other plot here.}
+  \label{res:fig:Comparison_2011}
+\end{figure}
 
-Comparing the precision of both measurements, the $\GAMJET$ analysis is for all $\eta$-bins more precise than the analysis done with dijet events.
-This is due to the smaller systematic uncertainties of the $\GAMJET$ analysis which compensates for the better statistical precision of the QCD-multijet sample due to the large 
+The black dots show the $\jer^{\text{data}}/\jer^{\text{MC}}$ scale factors of the 2011 analysis with the grey band representing the statistical and systematic uncertainties added in quadrature while the magenta dots and the magenta band
+are the 2012 central values with their total uncertainties. (FIXME: is this correct).
+
+It can be seen, that throughout the whole \etajet-range the data-to-simulation are systematically larger for the result in 2011. 
+
+Comparing the precision of both measurements, the \GAMJET analysis is for all $\eta$-bins more precise than the analysis done with dijet events.
+This is due to the smaller systematic uncertainties of the \GAMJET analysis which compensates for the better statistical precision of the QCD-multijet sample due to the large 
 cross section.
 
+BLABLABLA!!!
 
+\section{Comparison to dijet measurement}
+\label{res:sec:comparison_2012}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

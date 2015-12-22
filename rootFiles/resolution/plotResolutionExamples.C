@@ -48,7 +48,7 @@ int plotResolutionExamples(){
   TString pathToFileData = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS/data/root_files/";
 
 
-  bool addAll = false;
+  bool addAll = true;
   bool addMC  = true;
 
   TString sourceResponseAlpha, sourceIntrinsicAlpha, sourceImbalanceAlpha, sourceTotalAlpha, sourceData, pdfFile, etaRegion, ptRegion, title, EtaPtRegion; 
@@ -165,7 +165,6 @@ int plotResolutionExamples(){
       info -> SetTextSize(0.04);
       info->DrawLatex(0.23,0.55,  ptRegion);
       info->DrawLatex(0.22,0.48,  etaRegion);
-      //      info->DrawLatex(0.55,0.53, "Anti-k_{T} 0.5 PFCHSJets");
       
       
       legend -> Draw("same");

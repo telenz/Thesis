@@ -127,7 +127,7 @@ int plotResolutionVsPhotonPt(){
   
     info -> SetNDC();    
     info->DrawLatex(0.22,0.65,  etaRegion);
-    info->DrawLatex(0.22,0.25, "Anti-k_{T} 0.5 PFCHSJets");
+    info->DrawLatex(0.22,0.25, "Anti-k_{T} (R=0.5), PF+CHS");
     c[j] -> SaveAs(pdfFile);
 
     // Draw imbalance
@@ -139,7 +139,7 @@ int plotResolutionVsPhotonPt(){
     info->SetTextSize(0.05);
     info -> DrawLatex(0.7, 0.95, "Simulation");
     info->DrawLatex(0.22,0.76,  etaRegion);
-    info->DrawLatex(0.22,0.85, "Anti-k_{T} (R=0.5) PFCHS jets");
+    info->DrawLatex(0.22,0.85, "Anti-k_{T} (R=0.5), PF+CHS");
 
     pdfFile.Form("output/Imbalance_for_%i_eta_bin_PFCHS_mc_RMS99.pdf",j+1);
     cImb[j] -> SaveAs(pdfFile);
@@ -154,7 +154,7 @@ int plotResolutionVsPhotonPt(){
     info->SetTextSize(0.05);
     info -> DrawLatex(0.7, 0.95, "Simulation");
     info->DrawLatex(0.5,0.76,  etaRegion);
-    info->DrawLatex(0.35,0.85, "Anti-k_{T} (R=0.5) PFCHS jets");
+    info->DrawLatex(0.35,0.85, "Anti-k_{T} (R=0.5), PF+CHS");
 
     pdfFile.Form("output/Intrinsic_for_%i_eta_bin_PFCHS_mc_RMS99.pdf",j+1);
     cImb[j] -> SaveAs(pdfFile);
