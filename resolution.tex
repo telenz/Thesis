@@ -148,7 +148,7 @@ All triggers that are utilised in this measurement are listed in Table~\ref{res:
 \toprule
 Trigger                       & Luminosity [\fbinv]   \\
 \midrule
-HLT\_Photon20\_CaloIdVL\_IsoL & 0.0008\\
+%HLT\_Photon20\_CaloIdVL\_IsoL & 0.0008\\
 HLT\_Photon30\_CaloIdVL\_IsoL & 0.0029\\
 HLT\_Photon50\_CaloIdVL\_IsoL & 0.0607\\
 HLT\_Photon75\_CaloIdVL\_IsoL & 0.123\\
@@ -212,7 +212,8 @@ Events are reconstructed with the particle-flow reconstruction algorithm, which 
 In the following, the selection of well reconstructed jets and photons will be explained as well as the event selection of \GAMJET events.
 
 \subsection{Jet selection}
-Furthermore, particles belonging to a jet are clustered with the Anti-k$_{\text{t}}$ jet clustering algorithm with a radius of R=0.5~\cite{Cacciari:2008gp}.
+Particles belonging to a jet are clustered with the Anti-k$_{\text{t}}$ jet clustering algorithm with a radius of R=0.5~\cite{Cacciari:2008gp}.
+Furthermore, all reconstructed jets undergo a so-called ``charged hadron subtraction'' (CHS) which removes hadrons that are likely caused by pileup events.
 
 To select clean \GAMJET events, it is required that the leading jet meets the following requirements (these criteria correspond to a 'tight ID' in~\cite{bib:JetIDRecommendation_7TeV,bib:AN:JetId_8TeV}):
 \begin{itemize}
@@ -249,7 +250,7 @@ In Table~\ref{res:tab:PhotonPtBins} the applied binning is shown with the respec
 \toprule
 $\pt^{\gamma}$-bins           & Trigger         \\
 \midrule
-22\gev    & HLT\_Photon20\_CaloIdVL\_IsoL\_v* \\
+%22\gev    & HLT\_Photon20\_CaloIdVL\_IsoL\_v* \\
 36\gev    & HLT\_Photon30\_CaloIdVL\_IsoL\_v* \\
 60\gev    & HLT\_Photon50\_CaloIdVL\_IsoL\_v* \\
 88\gev    & HLT\_Photon75\_CaloIdVL\_IsoL\_v* \\
@@ -329,7 +330,24 @@ An upper threshold on $\Delta \Phi$ between the leading jet and the photon and a
 \end{itemize}
 These requirements are important to suppress events with too much further hadronic activity.
 
-A summary of all selection criteria can be found in Appendix~\ref{res:app:eventselection}.
+A summary of all selection criteria can be found in Appendix~\ref{res:app:eventselection}.\\
+
+Finally, the leading jet pseudorapity interval bounds need to be choosen in order to account for resolution differences in different detector regions.
+This is done according to~\cite{bib:Matthias_Thesis} with the following binning
+\begin{align*}
+|\etafirstjet| = 0.0-0.5 && |\etafirstjet| = 1.1-1.7 \\
+|\etafirstjet| = 0.5-1.1 && |\etafirstjet| = 1.7-2.3.
+\end{align*}
+
+The binning in the \ptgamma dimension is chosen according to the trigger thresholds for \mbox{$\ptgamma<165\gev$} and ensures sufficient statistical precision for \mbox{$\ptgamma>165\gev$}
+\begin{align*}
+\ptgamma &= 36 -60\gev     &  \ptgamma &= 149-165\gev  & \ptgamma &= 200-300\gev\\
+\ptgamma &= 60 -88\gev     &  \ptgamma &= 165-176\gev  & \ptgamma &= 300-400\gev\\
+\ptgamma &= 88 -105\gev    &  \ptgamma &= 176-200\gev  & \ptgamma &> 400\gev\\
+\ptgamma &= 105-149\gev    &  \ptgamma  &= 300-400\gev. & \\
+\end{align*}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -788,17 +806,18 @@ $1.7 - 2.3$ &1.199 & $\pm 0.037$ & $^{+0.075}_{-0.075}$ \\
 
 Though the \GAMJET analysis is known to be capable to produce highly precise results, the systematic uncertainties are still dominating. 
 This is mainly caused by the uncertainty on the simulation of out-of-cone showering.
-This uncertainty, however, is limited because of the statistical precision of the \GAMJET dataset.
-Thus, this analysis is mainly statistically limited because of the limited number of events recorded in 2012 at the CMS detector.
+The statistical limitation of this analysis is due to the collected data at the CMS detector
 The number of simulated events is roughly eight times larger.
- 
-\section{Comparison to 2011 measurements}
-\label{res:sec:comparison_2011}
 
-A comparison of the data-to-simulation resolution scaling factors between this analysis and the results of 2011 which were determined from a dijet data sample \cite{Schroder:2012} can be found in Fig.~\ref{res:fig:Comparison_2011}}.
+FIXME: What am I missing here?
+ 
+\section{Comparison to 2011 photon+jet measurement}
+\label{res:sec:comparison_2010}
+
+A comparison of the data-to-simulation resolution scaling factors between this analysis and the results of 2011 which were determined from a dijet data sample~\cite{bib:Matthias_Thesis} can be found in Fig.~\ref{res:fig:Comparison_2011}.
 \begin{figure}[!b]
  \centering
-    \includegraphics[width=0.65\textwidth]{figures/resolution/results/MySingleFinalResult.pdf}
+    \includegraphics[width=0.65\textwidth]{figures/resolution/results/ComparisonTo2012_GAMJET.pdf}
   \caption{FIXME: Other plot here.}
   \label{res:fig:Comparison_2011}
 \end{figure}
@@ -814,26 +833,31 @@ cross section.
 
 BLABLABLA!!!
 
-\section{Comparison to dijet measurement}
+\section{Comparison to 2012 dijet measurement}
 \label{res:sec:comparison_2012}
 
+\begin{figure}[!b]
+ \centering
+    \includegraphics[width=0.65\textwidth]{figures/resolution/results/JER_2012_compPhoton_final_v2.pdf}
+  \caption{FIXME: Other plot here.}
+  \label{res:fig:Comparison_2011}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \chapter{Discussion and conclusion}
-A first measurement of the resolution ratio $\frac{\text{JER}^{\text{data}}}{\text{JER}^{\text{MC}}}$ 
-using $\GAMJET$ events with $19.7\fbinv$ pp collision data at $\sqrt{s}=8 \tev$ collected in 2012 at the CMS detector has been presented. 
-For this purpose, the methodology introduced in \cite{CMS-AN-2010-076}
-was further developed to take account of the double peak structure when applying an exclusive binning in the variable $\alpha$ 
+The difference between data and simulation of the jet-transverse momentum resolution is an important input for many analyses at CMS.
+A first measurement of the data-simulation resolution ratio $\jer^{\text{data}}/\jer^{\text{MC}}$ using \GAMJET events with $19.7\fbinv$ pp collision data at $\sqrt{s}=8 \tev$ collected in 2012 at the CMS detector has been presented. 
+For this purpose, the methodology introduced in~\cite{bib:CMS:JERCPaper_2011,CMS:PAS:JETResolution_7TeV} was further developed to take account of the double peak structure when applying an exclusive binning in the variable $\alpha$ 
 that measures the additional jet activity in the event.
 
-The resolution in data was found to be systematically larger than in the simulation throughout the investigated $\eta^{\text{jet}}$ plane. 
-A possible $\pt^{\gamma}$ dependence of the resolution scale factors was not visible. 
-Thus, the ratio has been parametrised with a constant per $\eta^{\text{jet}}$ bin.
+The resolution in data was found to be systematically larger than in the simulation throughout the investigated \etajet plane. 
+A possible \ptgamma dependence of the resolution scale factors was not visible. 
+Thus, the ratio has been parametrised with a constant per \etajet bin.
 
-The relative difference of the data resolution ranges from $\sim$ 7\% to $\sim$ 20\% for  $0.0<|\eta^{\text{jet}}|<0.5$ and  $1.7<|\eta^{\text{jet}}|<2.3$, respectively, 
+The relative difference of the data resolution ranges from $\sim$ 7\% to $\sim$ 20\% for  $0.0<|\etajet|<0.5$ and  $1.7<|\etajet|<2.3$, respectively, 
 with total statistical and systematic uncertainties between 3\% and 8\%.
 
 
@@ -842,5 +866,7 @@ with total statistical and systematic uncertainties between 3\% and 8\%.
 \item Repeat results
 \item cross-check analysis
 \item Outlook
+\item Discuss reduction of the uncertainties
+\item ...
 \end{itemize}
 

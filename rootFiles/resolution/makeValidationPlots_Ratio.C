@@ -29,6 +29,7 @@
 #include "TROOT.h"
 #include "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/CODE/myDeclarations.h"
 #include "../plotStyleThesis.h"
+#include "myColors.h"
 
 TH1D* GetTH1D(TString filename, TString objectName);
 TH2D* GetTH2D(TString filename, TString objectName);
@@ -39,6 +40,7 @@ int makeValidationPlots_Ratio(){
 
   TeresaPlottingStyle::init();
   gStyle -> SetHistLineWidth(width);
+  gStyle -> SetMarkerSize(0.8);
   TGaxis::SetMaxDigits(5);
   gStyle->SetNdivisions(506,"Y");
 
@@ -101,7 +103,7 @@ int makeValidationPlots_Ratio(){
 
   TF1* line = new TF1("line","1.1",0,2.3);
   line -> GetYaxis()->SetRangeUser(1.0, 1.3);
-  line -> GetYaxis()->SetTitle("#rho_{res} = #sigma_{MC}^{smeared}/ #sigma_{MC}^{non-smeared}");
+  line -> GetYaxis()->SetTitle("#sigma_{MC}^{smeared}/ #sigma_{MC}^{non-smeared}");
   line -> GetXaxis()->SetTitle("|#eta^{1st jet}|");
   line -> SetLineColor(kBlack);
   line -> SetLineStyle(7);
@@ -122,7 +124,7 @@ int makeValidationPlots_Ratio(){
    
   //Res_INPUT->Draw("e1psame");
 
-  Res_RMS99->SetMarkerStyle(21);
+  Res_RMS99->SetMarkerStyle(20);
   Res_RMS99->SetLineColor(kPink-8);
   Res_RMS99->SetMarkerColor(kPink-8);
   Res_RMS99->GetYaxis()->SetRangeUser(1.0, 1.3);

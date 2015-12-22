@@ -66,9 +66,11 @@
 %%CITATION = ARXIV:1502.02702;%%.
 
 \bibitem{CMS-PAS-PFT-09-001}
-{ CMS} Collaboration, {CMS Collaboration}, ``Particle-Flow Event Reconstruction
-  in CMS and Performance for Jets, Taus, and MET'', CMS Physics Analysis
-  Summary CMS-PAS-PFT-09-001, 2009.
+{ CMS} Collaboration, ``Particle-Flow Event Reconstruction in CMS and
+  Performance for Jets, Taus, and MET'', {\em CMS Physics Analysis Summary}
+  {\bf \href{http://cds.cern.ch/record/1194487}{CMS-PAS-PFT-09-001}}
+(2009).
+%%CITATION = CMS-PAS-PFT-09-001;%%.
 
 \bibitem{Cacciari:2008gp}
 M.~Cacciari, G.~P. Salam, and G.~Soyez, ``The anti-$k_t$ jet clustering
@@ -95,11 +97,11 @@ pdf}{CMS-AN-14-227}} (2014). Internal documentation.
   \href{http://cdsweb.cern.ch/record/1324545}{CMS-PAS-EGM-10-006}} (2011).
 
 \bibitem{bib:Matthias_Thesis}
-M.~Schröder, ``{Quality of jet measurements and impact on a search for new
+M.~Schr{\"o}der, ``{Quality of jet measurements and impact on a search for new
   physics at CMS}''.
-\newblock PhD thesis, Hamburg U.,
-2012.
+\newblock PhD thesis, Hamburg U., 2012.
 \newblock
+\url{http://www-library.desy.de/cgi-bin/showprep.pl?thesis12-042}.
 %%CITATION = DESY-THESIS-2012-042;%%.
 
 \bibitem{bib:CMS:JME_PAS}

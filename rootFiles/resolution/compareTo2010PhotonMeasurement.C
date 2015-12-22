@@ -7,16 +7,17 @@
 
    gROOT->LoadMacro("CMS_lumi.C");
 
-   writeExtraText = true;       // if extra text
-   extraText  = "Preliminary";  // default extra text is "Preliminary"
-   lumi_8TeV  = "19.7 fb^{-1}"; // default is "19.7 fb^{-1}"
-   lumi_7TeV  = "4.9 fb^{-1}";  // default is "5.1 fb^{-1}"
+   writeExtraText = false;       // if extra text
+   extraText  = "";  // default extra text is "Preliminary"
+   lumi_8TeV  = ""; // default is "19.7 fb^{-1}"
+   lumi_7TeV  = "";  // default is "5.1 fb^{-1}"
+   cmsText     = "";
 
-   int iPeriod = 2;    // 1=7TeV, 2=8TeV, 3=7+8TeV, 7=7+8+13TeV 
+   int iPeriod = 0;    // 1=7TeV, 2=8TeV, 3=7+8TeV, 7=7+8+13TeV 
 
    // Dijet number 1st occurence - Full uncertainty
 
-   TGraphAsymmErrors *grae = new TGraphAsymmErrors(4);
+   TGraphAsymmErrors *grae = new TGraphAsymmErrors(3);
    grae->SetName("Graph");
    grae->SetTitle("Graph");
 
@@ -29,14 +30,12 @@
    grae->SetLineWidth(2);
    grae->SetMarkerStyle(24);
    grae->SetMarkerSize(1.2);
-   grae->SetPoint(0,0.25,1.07);
-   grae->SetPointError(0,0.25,0.25,0.0385875627,0.02828427);
-   grae->SetPoint(1,0.8,1.07);
-   grae->SetPointError(1,0.3,0.3,0.0385875627,0.02828427);
+   grae->SetPoint(0,0.55,1.07);
+   grae->SetPointError(0,0.55,0.55,0.0385875627,0.0312409987);
    grae->SetPoint(2,1.4,1.10);
-   grae->SetPointError(2,0.3,0.3,0.0498196748,0.0452769256);
+   grae->SetPointError(2,0.3,0.3,0.0498196748,0.04384062);
    grae->SetPoint(3,2,1.07);
-   grae->SetPointError(3,0.3,0.3,0.06717886572,0.0693108938);
+   grae->SetPointError(3,0.3,0.3,0.06717886572,0.073756355);
    
    TH1F *Graph_GraphD = new TH1F("Graph_Graph1","Graph",100,0,2.3);
    Graph_Graph1->SetMinimum(0.8);
@@ -53,7 +52,7 @@
    Graph_Graph1->GetXaxis()->SetTitleSize(0.06);
    Graph_Graph1->GetXaxis()->SetTitleOffset(0.9);
    Graph_Graph1->GetXaxis()->SetTitleFont(42);
-   Graph_Graph1->GetYaxis()->SetTitle("Data/MC ratio for JER");
+   Graph_Graph1->GetYaxis()->SetTitle("Data/MC ratio");
    Graph_Graph1->GetYaxis()->SetLabelFont(42);
    Graph_Graph1->GetYaxis()->SetLabelOffset(0.007);
    Graph_Graph1->GetYaxis()->SetLabelSize(0.05);
@@ -74,7 +73,7 @@
    gStyle->SetHatchesSpacing(2.2);   
 
    // Dijet number 2nd occurence - only statistical ucnertainties
-   grae = new TGraphAsymmErrors(4);
+   grae = new TGraphAsymmErrors(3);
    grae->SetName("Res_2011_stat");
    grae->SetTitle("Graph");
 
@@ -86,10 +85,8 @@
    grae->SetLineWidth(2);
    grae->SetMarkerStyle(24);
    grae->SetMarkerSize(1.1);
-   grae->SetPoint(0,0.25,1.07);
-   grae->SetPointError(0,0.25,0.25,0.020,0.020);
-   grae->SetPoint(1,0.8,1.07);
-   grae->SetPointError(1,0.3,0.3,0.020,0.020);
+   grae->SetPoint(0,0.55,1.07);
+   grae->SetPointError(0,0.55,0.55,0.020,0.020);
    grae->SetPoint(2,1.4,1.10);
    grae->SetPointError(2,0.3,0.3,0.031,0.031);
    grae->SetPoint(3,2,1.07);
@@ -183,7 +180,7 @@
    grae->Draw("2");
    
    // Dijet number 3rd occurence - this is important
-   grae = new TGraphAsymmErrors(4);
+   grae = new TGraphAsymmErrors(3);
    grae->SetName("Res_2011_stat");
    grae->SetTitle("Graph");
 
@@ -195,10 +192,8 @@
    grae->SetLineWidth(2);
    grae->SetMarkerStyle(24);
    grae->SetMarkerSize(1.1);
-   grae->SetPoint(0,0.25,1.07);
-   grae->SetPointError(0,0.25,0.25,0.020,0.020);
-   grae->SetPoint(1,0.8,1.07);
-   grae->SetPointError(1,0.3,0.3,0.020,0.020);
+   grae->SetPoint(0,0.55,1.07);
+   grae->SetPointError(0,0.55,0.55,0.020,0.020);
    grae->SetPoint(2,1.4,1.10);
    grae->SetPointError(2,0.3,0.3,0.031,0.031);
    grae->SetPoint(3,2,1.07);
@@ -354,7 +349,7 @@
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(0);
-   TLegendEntry *entry=leg->AddEntry("Graph","5/fb (7 TeV)","pfl");
+   TLegendEntry *entry=leg->AddEntry("Graph","36/pb (7 TeV) #gamma+jet","pfle");
 
    ci = TColor::GetColor("#cccccc");
    entry->SetFillColor(ci);
@@ -367,7 +362,7 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(24);
    entry->SetMarkerSize(1.2);
-   entry=leg->AddEntry("statPlusSys_2012","20/fb (8 TeV)","pfl");
+   entry=leg->AddEntry("statPlusSys_2012","20/fb (8 TeV) #gamma+jet","pfle");
 
    ci = TColor::GetColor("#cc0066");
    entry->SetFillColor(ci);
@@ -397,8 +392,8 @@
    info->DrawLatex(0.67,0.83,"Anti-k_{T} R=0.5");
    info->DrawLatex(0.67,0.77,"PF+CHS");
    info->SetTextSize(0.055); 
-   info->DrawLatex(0.79,0.20,"#gamma+jet");
+   //   info->DrawLatex(0.79,0.20,"#gamma+jet");
 
 
-   cNew->Print("Figure_44_left_Teresa_cmsStyle_updated_4.pdf");
+   cNew->Print("output/ComparisonTo2012_GAMJET.pdf");
 }
