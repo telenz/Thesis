@@ -39,7 +39,7 @@ int plotResponse_BC_Quarks(){
   TeresaPlottingStyle::init();
   gStyle->SetMarkerSize(0.001);
   //gStyle->SetMarkerStyle(1);
-  gStyle->SetHistLineWidth(2);
+  gStyle->SetHistLineWidth(width);
 
   TH1D *histoBC, *histoALL;
   TCanvas* c =  new TCanvas();
@@ -112,12 +112,12 @@ int plotResponse_BC_Quarks(){
 
   histoALL -> Draw("E");
   //Color_t color = kBlack;
-  //Color_t color = kTeal-1;
+  Color_t color = kBlue+1;
   cout<< histoALL -> GetLineColor()<<endl;
-  //histoALL -> SetMarkerColor(color);
-  //histoALL -> SetLineColor(color);
+  histoALL -> SetMarkerColor(color);
+  histoALL -> SetLineColor(color);
 
-  Color_t color2 = 867;
+  Color_t color2 = kRed; //kAzure+7
   histoBC  -> SetMarkerColor(color2);
   histoBC  -> SetLineColor(color2);
 

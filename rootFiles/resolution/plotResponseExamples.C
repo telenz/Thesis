@@ -55,7 +55,7 @@ int plotResponseExamples(){
       
   
   const int etaB   = 1;
-  const int alphaB = 1;
+  const int alphaB = 6;
   const int ptB    = 12;
 
   double min = 0.0001;
@@ -122,7 +122,7 @@ int plotResponseExamples(){
 
   histoPhoton1 -> Scale(1./scaleFactor);
   histoPhoton1 -> Rebin(rebin);
-  color = kBlue;
+  color = kBlue+1;
   histoPhoton1 -> SetMarkerColor(color);
   histoPhoton1 -> SetLineColor(color);
 

@@ -40,6 +40,7 @@ TF1* GetTF1(TString filename, TString objectName);
 int plotResolutionVsPhotonPt(){
 
   TeresaPlottingStyle::init();
+  gStyle->SetHistLineWidth(width);
   gStyle->SetNdivisions(507,"Y");
 
   TString pathToFileMC   = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS/mc/root_files/";
