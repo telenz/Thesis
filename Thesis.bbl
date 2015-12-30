@@ -114,4 +114,12 @@ M.~Schr{\"o}der, ``{Quality of jet measurements and impact on a search for new
   \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupReweighting}{https:%
 //twiki.cern.ch/twiki/bin/viewauth/CMS/PileupReweighting}.
 
+\bibitem{bib:Kristin_Thesis}
+K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the
+  CMS experiment}''.
+\newblock PhD thesis, U. Hamburg, Dept. Phys., 2015.
+\newblock
+\url{http://www-library.desy.de/cgi-bin/showprep.pl?thesis15-003}.
+%%CITATION = DESY-THESIS-2015-003;%%.
+
 \end{thebibliography}\endgroup
