@@ -2,24 +2,61 @@
 \FloatBarrier
 \chapter{Motivation}
 \label{sec:Motivation}
-Supersymmetry is able to offer solutions to unexplained phenomena in astrophysics and can solve the shortcomings of the Standard Model of particle physics (see Section~\ref{FIXME}).
-Unfortunately, due to the unknown mechanism of supersymmetry breaking, the most general parametrisation of Supersymmetry introduces over 100 new parameters and thus opens up an incredibly large phenomenological space, 
-leading to very different possible signatures at particle colliders. 
-A variety of searches were hunting for SUSY during the Phase\,I run at the LHC in 2012.
-Proton-proton collision data from the CMS and ATLAS experiments were analysed with a strong focus on the search for SUSY in the strong production sector (\eg \cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:ATLAS:JetPlusMET_8TeV}).
-As a consequence, wide regions of SUSY parameter space are already excluded and 
-the search for SUSY in more "exotic" regions gains more and more attention. 
-Typical SUSY scenarios that are not easily excluded by the general SUSY searches consist of so-called compressed spectra where two or more particles are nearly mass-degenerate.
-Such scenarios can have two very distinctive phenomenological properties.
-First, if mother and daughter particles in a two body decay are almost mass-degenerate, the remaining decay product can be very soft in \pt, making them very hard to detect.
-Second, the mother particle can be long-lived due to phase space suppression (see Section~\ref{sec:FIXME.Theory:Lifetimes}).
-Because of these two properties, scenarios with compressed spectra can be challenging to search for and are in general much weaker constrained.\\
+Supersymmetry is able to offer solutions to many unexplained phenomena in astrophysics and can solve many of the shortcomings of the Standard Model of particle physics (see Section~\ref{FIXME}).
+While SUSY has been analysed at previous particle colliders including Tevatron and LEP~\cite{bib:Tevatron:SUSY_results,bib:LEP:SUSY_results}, the LHC with its high centre-of-mass energy offers a unique opportunity to investigate SUSY models with high particle masses that were not accessible in previous experiments.
 
-In R-parity conserving Supersymmetry, compressed spectra can be realised if the lightest neutralino ($\chi^{0}_1$) is almost mass-degenerate with the lightest chargino ($\chi^{\pm}_1$).
-Such a mass-degeneracy naturally occurs in case of wino-like neutralinos and charginos, since the mass gap between $W_{3}$ and $W_{1/2}$ is fully determined by higher loop corrections (see Section~\ref{FIXME}).
-SUSY models with a wino-like lightest neutralino are especially interesting because they are able to explain the sources of the relic density \cite{bib:Giudice:DarkMatter_1998,bib:Moroi:DarkMatter_1999}. 
-While it is not possible to explain the full relic density with thermally produced neutralinos for m$_{\chi^{0}_1}\lesssim 2.9\,\tev$ \cite{bib:Ibe:DarkMatter_2015}, neutralinos can still be the dominant part if they are non-thermally produced via the decay of a long-lived particle such as a wino-like chargino \cite{bib:Moroi:DarkMatter_2013}.\\
-%Additionaly, due to the large annihilation cross-sections for a wino-like neutralino \cite{bib:Hisano:DarkMatter_2003}, these models would result in strong signals in indirect searches.\\
+Therefore, a variety of searches were hunting for SUSY during the Phase\,I run at the LHC in 2012.
+Proton-proton collision data from the CMS and ATLAS experiments were analysed with a strong focus on the search for SUSY in the strong production sector (\eg~\cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:ATLAS:JetPlusMET_8TeV}).
+As a consequence, wide regions of SUSY parameter space are already excluded.
+However, due to the unknown mechanism of supersymmetry breaking, the most general parametrisation of Supersymmetry introduces over 100 new parameters and thus opens up an incredibly large phenomenological space. Therefore, SUSY models can lead to a plethora of possible signatures at particle colliders. 
+Such more ``exotic'' SUSY scenarios include models with compressed spectra, where two or more particles are nearly mass-degenerate.
+
+Especially scenarios with a nearly mass-degenerate lightest chargino (\chipm) and lightest neutralino (\chiO) are very interesting from a theoretical perspective as they can help to explain the sources of the relic density~\cite{bib:Moroi:DarkMatter_1999,bib:Hisano:DarkMatter_2005,bib:Ibe:DarkMatter_2015}.
+In R-parity conserving Supersymmetry, such a mass-degeneracy naturally occurs in case of wino-like neutralinos and charginos, since the mass gap between $W_{3}$ and $W_{1/2}$ is fully determined by higher loop corrections (see Section~\ref{FIXME}).
+While it is not possible to explain the full relic density with thermally produced neutralinos for m$_{\chiO}\lesssim 2.9\tev$~\cite{bib:Moroi:DarkMatter_2013}, neutralinos can still be the dominant part if they are non-thermally produced via the decay of a long-lived particle such as a wino-like chargino.
+The enhanced annihilation cross section (called Sommerfeld enhancement) into $WW$- , $ZZ$- or $ff$-pairs for a wino-like dark matter candidate leads to an underprediction of the relic density if the neutralino and chargino masses are too small~\cite{bib:Hisano:DarkMatter_2003}.
+This underprediction can be cured, however, if there is an additional non-thermal production of dark matter that is caused by the decay of a long-lived chargino.
+%However, as said before, wino-like neutralinos can still dominate the relic density, if there is a non-thermal production of dark matter via the decay of a long-lived wino-like chargino. 
+
+SUSY scenarios with nearly mass-degenerate particles have two distinctive phenomenological properties that require a very different search strategy compared to general SUSY searches. 
+First, if mother and daughter particles in a two body decay are almost mass-degenerate ($\Delta m \lesssim 200\mev$), the remaining decay product is very soft in \pt, making it hard to detect.
+Second, the mother particle is long-lived due to phase space suppression (see Section~\ref{sec:FIXME.Theory:Lifetimes}) and may traverse several detector layers before decaying.
+
+Although supersymmetric models with nearly mass-degenerate \chipm and \chiO lead to exotic signatures with long-lived charginos and soft decay products, existing SUSY searches at CMS can in principle be sensitive to these models. 
+The exclusion power of existing SUSY searches can be assessed by interpreting their results in terms of the fraction of excluded parameter points in the phenomenological MSSM (see Section~\ref{theorySUSY} for an introduction to the pMSSM). 
+The results of such a study which has been performed in \cite{bib:CMS:DT_8TeV} are shown in Figure~\ref{fig:pMSSMplot}. 
+\begin{figure}[!b]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.75\textwidth]{figures/analysis/pMSSM_vs_ctau.pdf}
+  \end{tabular}
+  \caption{The number of excluded pMSSM points at 95\% C.L. (upper part) and the fraction of excluded pMSSM points (bottom part) vs. the chargino lifetime for different CMS searches.
+           Red area: the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV},
+           Purple area: the search for disappearing tracks  \cite{bib:CMS:DT_8TeV},
+           Blue area: a collection of various general SUSY searches \cite{bib:CMS:pMSSMinterpretation_7TeV_PAS}
+           The black line indicates the unexcluded pMSSM parameter points.
+           The sampling of the parameter space points was done according to a prior probability density function which takes pre-LHC data and results from indirect SUSY searches into account (see \cite{bib:CMS:HSCPReinterpreation_PAS} for further details).
+           Taken from: \cite{bib:pMSSMplot_source_from_DT}.}
+  \label{fig:pMSSMplot}
+\end{figure}
+It can be seen that general SUSY searches (blue area) are sensitive to shorter chargino lifetimes ($c\tau \lesssim 10\cm$). 
+Due to technical reasons\footnote{The pMSSM interpretation relied on the use of fast simulation techniques which are not capable of simulating charginos with lifetimes $\ctau>1\cm$.}, the general SUSY searches were never interpreted in the context of SUSY models with longer chargino lifetimes. 
+Two existing searches, the search for long-lived charged particles~\cite{bib:CMS:HSCP_8TeV} and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} focus on long and intermediate chargino lifetimes, respectively. 
+These two searches (purple and red areas) are sensitive to chargino lifetimes of $\ctau \gtrsim 35\cm$. 
+Taken together, the existing searches exclude a large fraction of pMSSM points at different chargino lifetimes. 
+However, there is a gap between the general SUSY searches and the search for disappearing tracks that is not accessible by any of the existing searches.\\
+
+The here presented analysis aims at targeting this gap by optimising the search strategy for charginos with intermediate lifetimes of $10\cm \lesssim c\tau \lesssim 40\cm$. 
+It is the first analysis at CMS focusing on two signature properties that are highly distinctive for charginos with intermediate lifetimes: first, the characteristically high ionisation losses of heavy charginos;
+second, short reconstructed tracks due to chargino decays early in the detector. 
+
+The associated challenges and the general search strategy of this analysis will be presented in the next section.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
+\chapter{General search strategy}
+\label{sec:GeneralSearchStrategy}
 
 At the LHC, there are several possible chargino production channels. 
 Chargino pairs can be produced through a photon or a $Z$-boson exchange. 
@@ -37,8 +74,10 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
   \end{tabular}
   \caption{Feynman diagram of chargino pair production via gamma or $Z$-boson exchange and the subsequent decay via a virtual $W$-boson.}
   \label{fig:FeynmanDiagram}
+\vspace{25pt}
 \end{figure}
-\begin{figure}[!b]
+
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi_GammaZ.pdf}
@@ -47,9 +86,10 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
   \end{tabular}
   \caption{Main tree-level diagrams for chargino pair production.}
   \label{fig:FeynmanDiagramProductionCharginoPair}
+\vspace{25pt}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.33\textwidth]{figures/analysis/ChiChi0_WBoson.pdf}
@@ -58,45 +98,17 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
   \caption{Main tree-level diagrams for chargino neutralino production.}
   \label{fig:FeynmanDiagramProductionCharginoNeutralino}
 \end{figure}
-Thus, the LHC offers the potential to search for charginos and due to its high centre-of-mass energy it is the first collider that can access SUSY models with charginos of several hundreds \gev.
+Alternatively, charginos can be produced via strong production modes, \ie in cascade decays of new heavy particles, such as gluinos or squarks.
+In those cascade decays, other particles are additionally produced and lead therefore to different signatures in the detector.
+Thus, these strong production channels won't be considered in this analysis since they would require other optimised search strategies.\\
+%Thus, the LHC offers the potential to search for charginos and due to its high centre-of-mass energy it is the first collider that can access SUSY models with charginos of several hundreds \gev.
 
-Although supersymmetric models with nearly mass-degenerate \chipm and \chiO lead to exotic signatures with long lived charginos and soft decay products, existing SUSY searches at CMS can in principle be sensitive to these models. The exclusion power of existing SUSY searches can be assessed by interpreting their results in terms of the fraction of excluded parameter points in the phenomenological MSSM (see Section~\ref{theorySUSY} for a detailed introduction to the pMSSM). The results of such a study which has been performed in \cite{bib:CMS:DT_8TeV} are shown in Figure~\ref{fig:pMSSMplot}. 
-\begin{figure}[!t]
-  \centering 
-  \begin{tabular}{c}
-    \includegraphics[width=0.75\textwidth]{figures/analysis/pMSSM_vs_ctau.pdf}
-  \end{tabular}
-  \caption{The number of excluded pMSSM points at 95\% C.L. (upper part) and the fraction of excluded pMSSM points (bottom part) vs. the chargino lifetime for different CMS searches.
-           Red area: the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV},
-           Purple area: the search for disappearing tracks  \cite{bib:CMS:DT_8TeV},
-           Blue area: a collection of various general SUSY searches \cite{bib:CMS:pMSSMinterpretation_7TeV_PAS}
-           The black line indicates the unexcluded pMSSM parameter points.
-           The sampling of the parameter space points was done according to a prior probability density function which takes pre-LHC data and results from indirect SUSY searches into account (see \cite{bib:CMS:HSCPReinterpreation_PAS} for further details).
-           Taken from: \cite{bib:pMSSMplot_source_from_DT}.}
-  \label{fig:pMSSMplot}
-\end{figure}
-It can be seen that general SUSY searches (blue area) are mostly sensitive to shorter chargino lifetimes ($c\tau \lesssim 10\cm$)\footnote{It should be mentioned, that the pMSSM interpretation relied on the use of fast simulation techniques which are not capable of simulating charginos with lifetimes $\ctau>1\cm$. It could therefore not be tested to which exact upper lifetime the searches combined in the blue area are sensitive to.}. 
-Two existing searches, the search for long-lived charged particles~\cite{bib:CMS:HSCP_8TeV} and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} focus on long and intermediate chargino lifetimes respectively. 
-These two searches (purple and red areas) are sensitive to chargino lifetimes of $\gtrsim 35\cm$. 
-Taken together, the existing searches exclude a large fraction of pMSSM points at different chargino lifetimes. 
-However, there is a gap between the general SUSY searches and the search for disappearing tracks where none of the existing searches show a high sensitivity.
-
-The here presented analysis aims at targeting this gap by focusing on charginos with intermediate lifetimes of $10\cm \lesssim c\tau \lesssim 40\cm$. 
-The main idea is to make use of the variable \dedx which can be very discriminating for massive particles such as charginos.
-The associated challenges and the general strategy of this analysis will be presented in the next section.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\FloatBarrier
-\chapter{General search strategy}
-\label{sec:GeneralSearchStrategy}
 
 When searching for supersymmetric models with long-lived \chipm, the strategy is of course highly dependent on the actual lifetime of the chargino. 
 For long lifetimes, the chargino can reach the muon chambers and can be reconstructed as a muon even despite a longer time-of-flight \cite{bib:CMS:HSCP_7TeV}. 
 For lower lifetimes, the chargino can already decay inside the detector (\eg the tracker), and can hence not be reconstructed as a muon but leads to an isolated, potentially disappearing track in the tracker. 
 The detector signatures of these two scenarios are visualised in Fig.~\ref{fig:CharginoPaiEventDisplay}, where simulated chargino-chargino events are shown in a cross-sectional view of the CMS detector.
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
   \begin{subfigure}{0.31\textwidth}
@@ -112,33 +124,34 @@ The detector signatures of these two scenarios are visualised in Fig.~\ref{fig:C
       \caption{}
   \end{subfigure} 
   \end{tabular}
-  \caption{Visualisation of possible signatures of a chargino pair produced with a lifetime of $c\tau = 10\,\text{m}$ (a) and a lifetime of $c\tau = 0.5\,\text{m}$ (b and c). 
-           In the left picture, both charginos are reconstructed as muons, which can be seen in the energy deposition in the muon chambers (red boxes). 
-           In the middle picture both charginos are only visible as tracks in the tracker (black lines), where both trajectories end inside the silicon strip tracker, showing the decay point of the corresponding chargino. 
+  \caption{Visualisation of possible signatures of a chargino pair produced with a lifetime of $\ctau = 10\,\text{m}$ (a) and a lifetime of $\ctau = 0.5\,\text{m}$ (b and c). 
+           The muon chambers are the outer layers of the detector and are depicted as red boxes.
+           The black lines represent the reconstructed chargino tracks.
            The right picture is a zoom of the picture in the middle. Here, only the cross-section of the tracker (green wavy lines for the strip and grey lines for the pixel) is displayed. The red arrow shows the missing transverse energy in the event.
            The red (blue) towers correspond to the energy deposition in the ECAL (HCAL).} 
   \label{fig:CharginoPaiEventDisplay}
 \end{figure}
+In the left picture of Fig.~\ref{fig:CharginoPaiEventDisplay}, both charginos are reconstructed as muons, which can be seen in the energy deposition in the muon chambers.
+In the middle and right pictures both charginos have a lower lifetime of $\ctau=0.5\,$m and thus are only visible as tracks in the tracker, where both trajectories end inside the silicon strip tracker.
+Since this analysis targets a search for Supersymmetry with charginos of lifetimes between $\ctau \approx 10\,\text{cm} - 40\,\text{cm}$, the charginos decay rather early in the detector, even in the inner layers of the tracker.
+%Thus, the signature of chargino events consists of isolated, short tracks that have large ionisation losses due to high chargino masses and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
+Thus, the signature of chargino events consists of isolated, short tracks and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
 
-Since this analysis targets a search for Supersymmetry with charginos of lifetimes between $10\,\text{cm} \lesssim c\tau \lesssim  40\,\text{cm}$, the charginos decay rather early in the detector, even in the inner layers of the tracker. 
-Thus, the signature of the chargino consists of an isolated track and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
-In case of R-parity conservation the neutralino is stable and weakly interacting, thus traversing the detector without leaving any further signature.
+In case of R-parity conservation one of the chargino decay products, the neutralino, is stable and weakly interacting, thus traversing the detector without leaving any further signature.
 The missing transverse energy of the neutralino is balanced by the missing transverse energy of the second produced SUSY particle.
 This is either a neutralino or the decay products of the chargino in events with chargino pairs. 
 
-The signature of the fermion pair can in principle be used to select chargino events. 
+The signature of the other decay product, the fermion pair, can in principle be used to select chargino events. 
 However, for mass-degenerate charginos, it can be very hard or even impossible to detect these fermions as will be explained in detail in the next paragraph.
 
-First of all, the fermionic decay product (\eg a pion) can hardly be reconstructed because it does not origin from the primary vertex.
+First of all, the fermionic decay product (\eg a pion) can usually not be reconstructed because it does not origin from the primary vertex.
 Secondly, it is very low in momentum because of the mass-degeneracy between \chipm and \chiO.
 The typical momentum of a pion originating from a chargino to neutralino decay in the \chipm rest frame is of the order 
-\begin{equation*}
+\begin{equation}
 p_{\pi}\sim \sqrt{m_{\chi^{\pm}_1}-m_{\chi^{0}_1}-m_{\pi}}.
-\end{equation*}
+\end{equation}
 %As the \chipm is rather slow for higher masses this is a good approximation also in the detector rest frame.
 For a mass gap between \chipm and \chiO of $\Delta m=150\, \mev$, the pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} (Fig.~\ref{fig:ptOfPions}).
-
-If the transverse momentum of a particle is very low, the particle trajectory is much more bended compared to a particle with higher \pt (see Fig.~\ref{fig:KinkedTrack} for illustration).
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -146,8 +159,12 @@ If the transverse momentum of a particle is very low, the particle trajectory is
   \end{tabular}
   \caption{Transverse momentum distribution of pions coming from chargino decay into a neutralino with a mass gap of 150\mev.}
   \label{fig:ptOfPions}
-\vspace{90pt}
+%\vspace{90pt}
 \end{figure} 
+
+If the transverse momentum of a particle is very low, the particle trajectory is much more bended compared to a particle with higher \pt (see Fig.~\ref{fig:KinkedTrack} for illustration).
+Due to this bending, the track reconstruction efficiency of particles with a transverse momentum below 1\gev decreases rapidly, reaching around 40\% for isolated pions with a \pt of 100\mev produced in the primary vertex~\cite{bib:CMS:tracking_8TeV}. 
+It is therefore impossible to rely on a reconstruction of the fermionic chargino decay products in this analysis.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -157,14 +174,13 @@ If the transverse momentum of a particle is very low, the particle trajectory is
   \caption{Cross-sectional view of the tracker (silicon strip (silicon pixel) tracker layers are illustrated with green (grey) lines) and a simulated chargino track (black line) decaying to a pion (bended blue line) with a \pt of $\sim$85\mev and a neutralino (not visible).}
   \label{fig:KinkedTrack}
 \end{figure} 
-Due to this bending, the track reconstruction efficiency of particles with a transverse momentum below 1\gev decreases rapidly, reaching around 40\% for isolated pions with a \pt of 100\mev~\cite{bib:CMS:tracking_8TeV}. 
-It is therefore impossible to rely on a reconstruction of the fermionic chargino decay products in this analysis.
 
-In summary, the signature of chargino events in mass-degenerate SUSY models consists only of a – potentially disappearing- track. 
+
+In summary, the signature of chargino events in mass-degenerate SUSY models consists only of a - potentially - disappearing track. 
 Such a signature is very difficult to detect, especially since CMS doesn't offer a dedicated track trigger so that triggering on the chargino track is impossible.
 
 In order to search for such signatures, one therefore needs to trigger on other, less obvious properties of chargino events. 
-This analysis takes advantage of higher order contributions to the Feynman diagrams shown in the previous section (Figs.~\ref{fig:FeynmanDiagramProductionCharginoPair}, \ref{fig:FeynmanDiagramProductionCharginoNeutralino}), resulting in initial state radiation (ISR).
+This analysis takes advantage of higher order contributions to the Feynman diagrams shown in Figs.~\ref{fig:FeynmanDiagramProductionCharginoPair} and~\ref{fig:FeynmanDiagramProductionCharginoNeutralino}, resulting in initial state radiation (ISR).
 If the initial quarks radiate a high \pt gluon, the resulting jet can be detected and can offer a possibility to search for events with nothing more than isolated tracks.
 Furthermore, the non-detection of the chargino's decay products plus a high \pt ISR jet lead to missing transverse energy (MET) in the event. 
 Exploiting these two circumstances, it is possible to detect chargino-pair or chargino-neutralino events with the help of Jet+MET triggers.
@@ -190,9 +206,9 @@ This analysis thus requires a thorough study of the quality of the pixel energy 
 
 
 
-\section{Comparison to existing searches}
-As already mentioned before, there are several analyses at CMS at $\sqrt{s}=8\,\tev$ with 20\,fb$^{-1}$ data, that are sensitive to intermediate lifetime charginos, most notably the search for long-lived charged \mbox{particles \cite{bib:CMS:HSCP_8TeV}} and the search for disappearing tracks \cite{bib:CMS:DT_8TeV}.
-The here presented analysis aims at achieving an increase in sensitivity towards shorter lifetimes compared to the existing analyses in a twofold way.
+\section{Comparison to earlier searches}
+As already mentioned before, there are two analyses at CMS at $\sqrt{s}=8\,\tev$ with 20\,fb$^{-1}$ data that search for intermediate lifetime charginos, the search for long-lived charged \mbox{particles \cite{bib:CMS:HSCP_8TeV}} and the search for disappearing tracks \cite{bib:CMS:DT_8TeV}.
+The here presented analysis aims at achieving an increase in sensitivity towards shorter lifetimes compared to the earlier analyses in a twofold way.
 First, the selection is optimised for the inclusion of very short tracks.
 Second, the inclusion of the variable \dedx is used to increase the search sensitivity compared to \cite{bib:CMS:DT_8TeV}.\\
 
@@ -200,7 +216,8 @@ In \cite{bib:CMS:HSCP_8TeV}, a minimum number of eight hits were required for ev
 This can be very inefficient for shorter lifetimes, where most of the charginos already decay shortly after the pixel tracker.
 In Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (left), the normalised distribution of the number of measurements (\nhits) of chargino tracks is shown. 
 It can be seen, that \nhits peaks at the minimal possible value needed for track reconstruction of $\nhits=3$ for lower lifetimes.
-For higher lifetimes ($\ctau=50\cm$) the distribution shifts to higher values with a second peak at $\nhits\sim17$.
+%For higher lifetimes ($\ctau=50\cm$) the distribution shifts to higher values with a second peak at $\nhits\sim17$.
+For a lifetime of $\ctau=50\cm$, a second peak at $\sim$17 hits appears corresponding to the number of measurements when crossing all pixel barrel (3) and strip inner and outer barrel (6 from stereo and 8 from normal) layers.
 However, a notable fraction of $\sim$ 40\% of chargino tracks still has a number of measurements of $\nhits<8$. 
 
 It should be also mentioned, that the track reconstruction efficiency is sufficient for short chargino tracks, such that a loosening of the \nhits requirement is expected to be really improving the signal acceptance.
@@ -214,10 +231,8 @@ For very short tracks ($\nhits=3$) the efficiency is still around 20\%.\\
   \includegraphics[width=0.49\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/RecoEffTracksZoom.png}
   \end{tabular}
   \caption{Left: Number of measurements in the tracker system \nhits for four different signal lifetimes.
-                 The low lifetime samples are rapidly falling and peaking at the lowest number of possible measurements of three. 
-                 For a lifetime of $\ctau=50\cm$, a second peak at $\sim$17 hits appears corresponding to the number of measurements when crossing all pixel barrel (3) and strip inner and outer barrel (6 from stereo and 8 from normal) layers.
            Right: Probability to reconstruct a track (z) in dependency of the chargino's decay point (x and y).
-           More information on the generation of the simulated signal samples can be found in Section~\ref{sec:SignalSamples}}. 
+           More information on the generation of the simulated signal samples can be found in Section~\ref{sec:SignalSamples}.} 
   \label{fig:NHits_2Signal_noSelection_normalized}
 \end{figure}
 
@@ -232,38 +247,52 @@ To conclude, the general search strategy of the here presented analysis is to un
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
-\chapter{Improved dE/dx measurement of short tracks}
+\chapter{Improved dE/dx measurement for short tracks}
 \label{sec:DeDxMeasurement}
-The CMS tracker system does not only allow for the precise measurement of particle's tracks and primary and secondary vertices but also the measurement of a particle's energy loss within the tracker material.
-This is done by the detection of the number of electrons produced by the ionisation of the particle during its passage through the silicon tracker.
+As already pointed out in the previous chapter the inclusion of the pixel energy measurements can increase the sensitivity when searching for short and highly ionising tracks.
+While the silicon strip detector has already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, no complete calibration has been done for the pixel silicon tracker so far.
+To increase the discrimination power of \dedx for short tracks, such a calibration procedure is therefore conducted within this PHD thesis.
+
+The CMS tracker system provides a measurement of a particle's energy loss for each hit in the tracker.
+This is done by the detection of the number of electrons produced by the ionisation of the silicon.
 A detailed introduction to the CMS tracker system and the energy measurement can be found in Section~\ref{FIXME}.
 
-It was already pointed out that the inclusion of the pixel energy measurements can increase the sensitivity when searching for short tracks.
-While the silicon strip detector has already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, no offline calibration has been done for the pixel silicon tracker so far.
-To increase the discrimination power of \dedx for short tracks, such a calibration procedure is therefore conducted within this PHD thesis.
+How to combine the single energy measurements for each tracker hit into one track \dedx estimator that can be used for analysis porpuses will be explained in the following Section~\ref{sec:sub:MeasuringDeDx}.
+The pixel energy calibration is then described in Section~\ref{sec:EnergyCalibration}. 
+How to discrimate SM particles and beyond SM particles with the help of a \dedx measurement is discussed in Section~\ref{sec:Ias}, followed by the exploration of the achieved discrimination improvements in Section~\ref{sec:DiscriminationImprovements}.
+
+%The CMS tracker system does not only allow for the precise measurement of particle tracks and primary and secondary vertices but also the measurement of a particle's mean energy loss per path length.
+%This is done by the detection of the number of electrons produced by the ionisation of the particle during its passage through the silicon tracker.
+%A detailed introduction to the CMS tracker system and the energy measurement can be found in Section~\ref{FIXME}.
+
+%It was already pointed out that the inclusion of the pixel energy measurements can increase the sensitivity when searching for short and highly ionising tracks.
+%While the silicon strip detector has already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, no complete calibration has been done for the pixel silicon tracker so far.
+%To increase the discrimination power of \dedx for short tracks, such a calibration procedure is therefore conducted within this PHD thesis.
 
 
 \section{Ionisation loss of charged particles}
 \label{sec:sub:MeasuringDeDx}
-The mean energy loss per path length of particles travelling through a layer of material can be described with the Bethe formula \cite{bib:Bethe_1930}:
-\begin{equation*}
+Energy losses for moderately relativistic charged particles travelling through matter are mostly caused by ionisation effects.
+The mean energy loss per path length can be described with the Bethe formula \cite{bib:Bethe_1930}:
+\begin{equation}
 \langle \frac{dE}{dx} \rangle = Kz^2\frac{Z}{A}\frac{1}{\beta^2} [ \frac{1}{2} \ln{\frac{2m_e c^2 \beta^2 \gamma^2 T_{\text{max}}}{I^2}} - \beta^2 - \frac{\delta( \beta \gamma )}{2} ].
-\end{equation*}
-It is valid if the main energy loss originates from ionisation effects, \ie in a region between $0.1\lesssim\beta\gamma\lesssim 1000$.
-It is a function of the atomic number ($Z$) and the atomic mass ($A$) of the absorber. 
-The mean excitation energy ($I$) for silicon is 173\,eV \cite{bib:NIST}. 
+\end{equation}
+It is a function of the atomic number ($Z$), the atomic mass ($A$) of the absorber, and the mean excitation energy ($I$) which is 173\,eV~\cite{bib:NIST} for silicon.  
 $T_{\text{max}}$ represents the maximum energy transfer in a single collision.
 The relevant particle's properties are the velocity ($\beta$), the Lorentz factor ($\gamma$) and the charge (z) of the incident particle.
 The density correction $\delta( \beta \gamma )$ reduces the mean energy loss at high energies because of polarisation effects of the material. 
-The constant factor K is $4\pi N_A r_e^2 m_e^2 c^2$ with $N_A$ being the Avogadro’s number.
+%The constant factor K is $4\pi N_A r_e^2 m_e^2 c^2$ with $N_A$ being the Avogadro constant, $m_e$ the electron mass and $r_e$ the classical electron radius of 2.8\,fm.
+The factor K is constant and is 0.307 in units of $\mev\,$mol$^{-1}$cm$^2$.
+The Bethe formula is valid if the main energy loss originates from ionisation effects, \ie in a region between $0.1\lesssim\beta\gamma\lesssim 1000$.
+
 
 Even if widely used, the mean energy loss is a quantity which is ``ill-defined experimentally and is not useful for describing energy loss by single particles'' \cite{bib:PDG_2014}.
 The problem is caused by the underlying probability distribution of one single \dedx measurement (this will be named $\Delta E/ \Delta x $ throughout the following sections), which can be parametrised by a Landau distribution \cite{bib:Landau_1944}
-\begin{equation*}
+\begin{equation}
 p(x) = \frac{1}{\pi} \int_0^\infty\! e^{-t \log t - x t} \sin(\pi t)\, dt.
-\end{equation*}
+\end{equation}
 The Landau distribution has no free parameters. Its most probable value is around 0.222.
-However, it is possible to introduce artificially a different most probable value and a width with $x \rightarrow \frac{x-\text{MPV}}{\sigma}-0.222$.
+However, it is possible to introduce artificially a different most probable value and a width (at half maximum) with $x \rightarrow \frac{x-\text{MPV}}{\sigma}-0.222$.
 The Landau distribution is a highly asymmetric distribution with a long tail towards the right end (see Fig.~\ref{fig:landau}).
 \begin{figure}[!t]
   \centering 
@@ -274,24 +303,22 @@ The Landau distribution is a highly asymmetric distribution with a long tail tow
   \label{fig:landau}
 \end{figure}
 Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
-The mean and the variance of a landau distribution are not defined.
-Because of its strong asymmetry, measurements of $\langle \dedx \rangle$ with only a few single measurements are easily biased towards high values, making the mean energy loss described by the Bethe formula a problematic and unstable concept. 
+%The mean and the variance of a landau distribution are not defined.
+Because of its strong asymmetry, measurements of the mean energy loss per path length $\langle \dedx \rangle$ with only a few single measurements are easily biased towards high values, making the mean energy loss described by the Bethe formula a problematic and unstable concept. 
 %This is again different for a (limited) measurment, as there it is always possible to calucalute a mean.
 %Still, this leads to the fact that the definition of the mean energy loss per path length is a problematic and unstable concept.
 
 
-A much better observable is the most probable value (MPV): the maximum of the Landau distribution.
+A much better observable is the most probable value (MPV) of the Landau distribution.
 The MPV is much more stable compared to the mean and is not as easily biased towards higher \dedx values. 
-The most probable energy loss of a charged particle, $\Delta_p$, is defined by the Landau-Vavilov-Bichsel equation \cite{bib:Bichsel:MPV_1988}:
+The most probable energy loss of a charged particle, $\Delta_p$, can be described by the Landau-Vavilov-Bichsel equation \cite{bib:Bichsel:MPV_1988}:
 \begin{equation}
-\Delta_p = \xi \left[ \ln \frac{2mc^2\beta^2\gamma^2}{I}  + \ln\frac{\xi}{I} + j - \beta^2 - \delta(\beta\gamma)  \right],
+\Delta_p = \xi \left[ \ln \frac{2m_e c^2\beta^2\gamma^2}{I}  + \ln\frac{\xi}{I} + j - \beta^2 - \delta(\beta\gamma)  \right],
 \label{eq:Landau_Vavilov_Bichsel}
 \end{equation}
 with $\xi=(K/Z)\langle Z/A \rangle (x/\beta^2)$. 
 The thickness of the absorber $x$ appears explicitly in the Landau-Vavilov-Bichsel equation making the most probable energy loss per path \mbox{length $\Delta_p/dx$} logarithmically dependent on $x$.
 A comparison between the Bethe mean energy loss $\langle \dedx \rangle$ and the most probable energy loss $\Delta_p/dx$ is shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
-
-
 \begin{figure}[!bt]
   \centering 
   \begin{tabular}{c}
@@ -301,31 +328,34 @@ A comparison between the Bethe mean energy loss $\langle \dedx \rangle$ and the 
            Taken from \cite{bib:PDG_2014}.} 
   \label{fig:dEdx_Bethe_Landau}
 \end{figure}
-However, it is difficult to determine the most probable value for tracks with only $\sim$15 energy measurements available.
-Large fluctuations can still lead to a bias towards higher value of the most probable \dedx.
+%However, it is difficult to determine the most probable value for tracks with only a few energy measurements available.
+%Large fluctuations can still lead to a bias towards higher value of the most probable \dedx.
 
-Several "estimators'' exist that suppress a potential bias towards the high end without introducing a bias towards lower values~\cite{bib:Quertenmont_2010}.
-One of the estimators, also used in the next chapter, is the harmonic-2 estimator
+%Particles such as pions and muons are minimally ionising in silicon for $\beta\gamma \sim 3-4$ (see Fig.~\ref{fig:dEdx_Landau_Silicon}). 
+%For higher momenta the deposited energies increase again reaching a plateau at around $\beta\gamma\sim100$. 
+%However, new heavy charged particles would mainly be unrelativistic because of their high mass and would therefore deposit much higher energies in the detector.
+%This makes \dedx  a very well discriminating variable.
+%\begin{figure}[!bt]
+%  \centering 
+%  \begin{tabular}{c}
+%  \includegraphics[width=0.6\textwidth]{figures/analysis/dEdx_Landau_Silicon.png}
+%  \end{tabular}
+%  \caption{Most probable energy loss in silicon, scaled to the mean loss of a minimally ionising particle (388 eV/$\mu$m) for different absorber thicknesses. Taken from \cite{bib:PDG_2014}.} 
+%  \label{fig:dEdx_Landau_Silicon}
+%\end{figure}
+%Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles, which are usually unrelativistic because of their high mass.
+
+In order to estimate experimentally the most probable \dedx value from only a few energy measurements, several ``estimators'' can be used that suppress a potential bias towards the high end without introducing a bias towards lower values~\cite{bib:Quertenmont_2010}.
+One of the estimators for determining a tracks's \dedx is the harmonic-2 estimator
 \begin{equation}
-\ihtwo=\left( \frac{1}{N}\sum_{i=1}^{N}(\Delta E/\Delta x)_i^2 \right)^{-1/2},
+\ihtwo=\left( \frac{1}{N}\sum_{i=1}^{N}(\Delta E_i/\Delta x_i)^{-2} \right)^{-1/2},
 \label{eq:Harmonic2Estimator}
 \end{equation}
-where $\Delta E /\Delta x$ corresponds to one measurement in one tracker module. 
-The harmonic mean of all $N$ measurements to the power of two is the estimated most probable \dedx.\\
+where $\Delta E_i /\Delta x_i$ corresponds to the $\Delta E$ and $\Delta x$ measurement in the $i$th hit of the track. 
+The harmonic mean of all $N$ measurements to the power of two is used as estimator for the MPV of the \dedx distribution of a particle.
 
-SM particles such as pions and muons are minimally ionising in silicon for $\beta\gamma \sim 3-4$ (see Fig.~\ref{fig:dEdx_Landau_Silicon}). 
-For higher momenta the deposited energies increase again reaching a plateau at around $\beta\gamma\sim100$. 
-However, new heavy charged particles would mainly be unrelativistic because of their high mass and would therefore deposit much higher energies in the detector.
-This makes \dedx  a very well discriminating variable.
-\begin{figure}[!bt]
-  \centering 
-  \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis/dEdx_Landau_Silicon.png}
-  \end{tabular}
-  \caption{Most probable energy loss in silicon, scaled to the mean loss of a minimally ionising particle (388 eV/$\mu$m) for different absorber thicknesses. Taken from \cite{bib:PDG_2014}.} 
-  \label{fig:dEdx_Landau_Silicon}
-\end{figure}
-Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles, which are usually unrelativistic because of their high mass.
+The harmonic-2 estimator is also used for the pixel energy calibration described in the following section.
+
 
 \FloatBarrier
 \section{Energy calibration of the silicon pixel tracker}
@@ -433,7 +463,7 @@ where $N_e$/ADC is the number of electrons which correspond to one ADC count and
 Such an absolute gain calibration can be done with the help of several methods (all explained in \cite{bib:Quertenmont_2010}).
 The absolute calibration of the silicon pixel tracker can rely on the already conducted absolute calibration of the silicon strip detector.
 In \cite{bib:Quertenmont_2010}, the absolute gain calibration was done with the help of the most probable energy release per path length of muons, 
-theoretically described by the Landau-Vavilov-Bichsel formula in Eq.~\ref{eq:Landau_Vavilov_Bichsel}.  
+theoretically described by the Landau-Vavilov-Bichsel formula in Eq.~\eqref{eq:Landau_Vavilov_Bichsel}.  
 To calibrate the pixel tracker to the correct energy loss per path length it is therefore sufficient to determine one calibration factor to relate the average \dedx of all tracks in the pixel tracker as shown in 
 Fig.~\ref{fig:StabilityPlot_afterCalibration} to the average measured \dedx in the strip tracker, shown in Fig.~\ref{fig:StabilityPlot_Strip} by
 \begin{equation*}
@@ -455,7 +485,7 @@ Finally, an absolute calibration factor needs to be determined for the simulated
 \label{sec:Ias}
 
 As mentioned before, it is difficult to find a robust estimator for the MPV of the Landau distribution, if only a few single measurements of $\Delta E/ \Delta x$  are available.
-The harmonic-2 estimator \ihtwo was already introduced in Section~\ref{sec:sub:MeasuringDeDx} in Eq.~\ref{eq:Harmonic2Estimator}.
+The harmonic-2 estimator \ihtwo was already introduced in Section~\ref{sec:sub:MeasuringDeDx} in Eq.~\eqref{eq:Harmonic2Estimator}.
 It is known to be a robust estimator not easily biased by large fluctuation in $\Delta E/ \Delta x$ because of the suppression by a factor of two.
 However, it was shown in \cite{bib:Quertenmont_2010} that a better discrimination between SM particles and possible new heavy particles can be achieved when using likelihood techniques,
 \ie determining the probability that the set of all $\Delta E/ \Delta x$ belonging to one track is actually compatible with the hypothetical probability distribution of a MIP.
@@ -512,6 +542,7 @@ For larger values, \ias shows a larger decrease in simulation than in measured d
 That's the reason why a data-based approach for analyses exploiting \dedx information is needed.\\
 
 \section{Discrimination improvements}
+\label{sec:DiscriminationImprovements}
 The goal of including the pixel energy information is to increase the discrimination power of \ias between background and signal tracks, especially for shorter lifetimes.
 In Fig.~\ref{fig:MIPs-Signal-Dedx}, a comparison of the shapes of the energy release by MIPs and by signal tracks in simulation is shown (details about the simulated samples can be found in the next section Section~\ref{sec:SignalSamples}).
 \begin{figure}[!b]
@@ -527,7 +558,7 @@ In Fig.~\ref{fig:MIPs-Signal-Dedx}, a comparison of the shapes of the energy rel
 \end{figure} 
 It can be seen, that the \ias distributions of all signal models show a larger tail towards $\ias=1$, whereas the \ias of the background is rapidly falling.
 The \ias distribution is not only influenced by the velocity ($\beta$) of a particle but also by the number of hits of a track.
-The influence of the velocity can be easily seen in Eq.~\ref{eq:Landau_Vavilov_Bichsel}. 
+The influence of the velocity can be easily seen in Eq.~\eqref{eq:Landau_Vavilov_Bichsel}. 
 This in turn results in a dependency of \ias on the mass of the incident particle.
 However, also for charginos with same mass, the velocity is higher in average for shorter lifetimes.
 This is caused by the fact, that for shorter lifetimes (\eg $\ctau=10\cm$), already a sizable fraction of the charginos decay before reaching the tracker system.
