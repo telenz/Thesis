@@ -67,46 +67,54 @@ I was expecting a `,' or a `}'---line 956 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Repeated entry---line 4486 of file Thesis.bib
+ : @article{Pumplin:2002vw
+ :                        ,
+I'm skipping whatever remains of this entry
 Warning--empty publisher in bib:James:StaticticalMethods_2006
-You've used 27 entries,
+Warning--empty year in bib:CMS:DT_Thesis
+Name 1 in "J. Brinson, C. Hill, and W. Wulsin" has a comma at the end for entry bib:CMS:DT_8TeV_AN
+while executing---line 1277 of file lucas_unsrt.bst
+Warning--empty title in bib:Neyman_1937
+You've used 62 entries,
             2369 wiz_defined-function locations,
-            805 strings with 10447 characters,
-and the built_in function-call counts, 7967 in all, are:
-= -- 998
-> -- 130
+            1046 strings with 18026 characters,
+and the built_in function-call counts, 17280 in all, are:
+= -- 2136
+> -- 368
 < -- 0
-+ -- 53
-- -- 26
-* -- 582
-:= -- 993
-add.period$ -- 71
-call.type$ -- 27
++ -- 143
+- -- 81
+* -- 1244
+:= -- 2248
+add.period$ -- 160
+call.type$ -- 62
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 488
-empty$ -- 833
-format.name$ -- 24
-if$ -- 2199
+cite$ -- 65
+duplicate$ -- 1048
+empty$ -- 1808
+format.name$ -- 67
+if$ -- 4744
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 66
-newline$ -- 131
-num.names$ -- 15
-pop$ -- 146
+int.to.str$ -- 62
+missing$ -- 154
+newline$ -- 288
+num.names$ -- 40
+pop$ -- 334
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 278
+skip$ -- 528
 stack$ -- 0
-substring$ -- 292
-swap$ -- 176
+substring$ -- 507
+swap$ -- 336
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 38
-width$ -- 29
-write$ -- 315
-(There were 13 error messages)
+warning$ -- 3
+while$ -- 83
+width$ -- 64
+write$ -- 706
+(There were 15 error messages)
