@@ -28,7 +28,7 @@
 #include "TColorWheel.h"
 #include "TLatex.h"
 #include "TROOT.h"
-#include "../plotStyleThesis.h"
+#include "../../plotStyleThesis.h"
 
 TH1D* GetTH1D(TString filename, TString objectName);
 TH2D* GetTH2D(TString filename, TString objectName);
@@ -43,10 +43,10 @@ int plotDiscrimTemplates(TString file="data"){
   TH3F *h;
 
   if(file=="data"){   
-    h = (TH3F*) GetTH3("Discrim_template_pixel_data_2012.root","Charge_Vs_Path");
+    h = (TH3F*) GetTH3("/afs/desy.de/user/t/tlenz/HighDeDx-DisappTrks-Analyzer/data/Discrim_template_pixel_data_2012.root","Charge_Vs_Path");
   }
   else{
-    h = (TH3F*) GetTH3("Discrim_template_pixel_mc_2012.root","Charge_Vs_Path");
+    h = (TH3F*) GetTH3("/afs/desy.de/user/t/tlenz/HighDeDx-DisappTrks-Analyzer/data/Discrim_template_pixel_mc_2012.root","Charge_Vs_Path");
   }
 
   h->GetXaxis()->SetTitle("pt");
@@ -85,12 +85,12 @@ int plotDiscrimTemplates(TString file="data"){
   histo ->Draw("COLZ");
 
   if(file=="data"){   
-    canvas1->SaveAs("Discriminator_template_data_pixel_2012.pdf");
-    canvas1->SaveAs("Discriminator_template_data_pixel_2012.png");
+    canvas1->SaveAs("output/Discriminator_template_data_pixel_2012.pdf");
+    canvas1->SaveAs("output/Discriminator_template_data_pixel_2012.png");
   }
   else{
-    canvas1->SaveAs("Discriminator_template_mc_pixel_2012.pdf");
-    canvas1->SaveAs("Discriminator_template_mc_pixel_2012.png");
+    canvas1->SaveAs("output/Discriminator_template_mc_pixel_2012.pdf");
+    canvas1->SaveAs("output/Discriminator_template_mc_pixel_2012.png");
   }
 
   return 0;

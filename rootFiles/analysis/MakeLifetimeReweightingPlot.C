@@ -7,7 +7,7 @@
 #include "TLegend.h"
 #include "TLatex.h"
 #include <iostream>
-#include "/afs/desy.de/user/t/tlenz/Thesis/rootFiles/plotStyleThesis.h"
+#include "../plotStyleThesis.h"
 
 
 void MakeLifetimeReweightingPlot(){
@@ -72,7 +72,7 @@ void MakeLifetimeReweightingPlot(){
 
   TLatex box;
   box.SetNDC();
-  box.DrawLatex(0.5,0.6,Form("Fitted c#tau=%4.2f^{+%4.2f}_{-%4.2f}",ctau,ctauErrorHigh,ctauErrorLow));
+  box.DrawLatex(0.45,0.5,Form("Fitted c#tau=%4.2f^{+%4.2f}_{-%4.2f} cm",ctau,ctauErrorHigh,ctauErrorLow));
 
   //  TLegend *leg = new TLegend(0.2, 0.2, .8, .8);
   //leg->Add()

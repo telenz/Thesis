@@ -11,7 +11,7 @@
 #include "TCanvas.h"
 #include "TF1.h"
 #include "TLatex.h"
-#include "../plotStyleThesis.h"
+#include "../../plotStyleThesis.h"
 
 using std::string;
 using std::vector;
@@ -29,6 +29,9 @@ int makeStabilityPlot()
   gStyle -> SetTitleOffset(0.7,"X");
   gStyle -> SetTitleOffset(1.2,"Y");
   gStyle -> SetTitleSize(0.055,"Y");
+  gStyle -> SetMarkerSize(0.5);
+  gStyle -> SetMarkerColor(kBlack);
+  gStyle -> SetLineColor(kBlack);
   gROOT  -> ForceStyle(); 
 
 
@@ -71,9 +74,9 @@ int makeStabilityPlot()
   TH1D* hStrip  = new TH1D("hStrip","Strip dE/dx",521,1,521);
 
 
-  hAfter->GetYaxis()->SetTitle("#sum I_{h2} [MeV/cm]");
-  hBefore->GetYaxis()->SetTitle("#sum I_{h2} [MeV/cm]");
-  hStrip->GetYaxis()->SetTitle("#sum I_{h2} [MeV/cm]");
+  hAfter->GetYaxis()->SetTitle("<I_{h2}> [MeV/cm]");
+  hBefore->GetYaxis()->SetTitle("<I_{h2}> [MeV/cm]");
+  hStrip->GetYaxis()->SetTitle("<I_{h2}> [MeV/cm]");
   hAfter->GetXaxis()->SetTitle("Time (year 2012)");
   hBefore->GetXaxis()->SetTitle("Time (year 2012)");
   hStrip->GetXaxis()->SetTitle("Time (year 2012)");
@@ -191,13 +194,13 @@ int makeStabilityPlot()
   hBefore->Draw("E");
   
 
-  for(int i=0; i<5; i++){
+  for(unsigned int i=0; i<5; i++){
     ffit[i]      = new TF1(Form("fit%i",i),"pol0",hAfter->GetXaxis()->FindBin(runRangeStart[i]),hAfter->GetXaxis()->FindBin(runRangeEnd[i])); 
     ffitStrip[i] = new TF1(Form("fit%iStrip",i),"pol0",hStrip->GetXaxis()->FindBin(runRangeStart[i]),hStrip->GetXaxis()->FindBin(runRangeEnd[i])); 
     ffitBefore[i] = new TF1(Form("fit%iBefore",i),"pol0",hBefore->GetXaxis()->FindBin(runRangeStart[i]),hBefore->GetXaxis()->FindBin(runRangeEnd[i])); 
   }
   
-  for(int i=0; i<5; i++){
+  for(unsigned int i=0; i<5; i++){
         
     hAfter->Fit(Form("fit%i",i),"Q0R");
     hStrip->Fit(Form("fit%iStrip",i),"Q0R");
@@ -252,10 +255,10 @@ int makeStabilityPlot()
   info-> SetNDC();
   cAfter->cd();
   ffitAll->Draw("same");
-  info->DrawLatex(0.40, 0.80,Form("<I_{h2}> = %4.3f MeV/cm",ffitAll->GetParameter(0)));
+  info->DrawLatex(0.40, 0.83,Form("<I_{h2}>_{Fit} = %4.3f MeV/cm",ffitAll->GetParameter(0)));
   
   cStrip->cd();
-  info->DrawLatex(0.40, 0.80,Form("<I_{h2}> = %4.3f MeV/cm",ffitAllStrip->GetParameter(0)));
+  info->DrawLatex(0.40, 0.83,Form("<I_{h2}>_{Fit} = %4.3f MeV/cm",ffitAllStrip->GetParameter(0)));
 
 
   
