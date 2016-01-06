@@ -17,11 +17,11 @@ int makeCutflowTable()
 
   vector<TH1D*> samples;
 
-  TString selection = "chiTracksfullSelectionTrigger";
+  TString selection = "chiTracksfullSelectionPlusIasAndPtTrigger";
 
   //TString pathName="/afs/desy.de/user/t/tlenz//xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_18_METGt100_JetPt110_TrackPtGt20/results/analyzer/ntuples/input_weighted";
   //TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_12_METGt100_JetPt110/results/analyzer/ntuples/input_weighted";
-  TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_12_02_METGt100_JetPt110_TrackPtGt20/results/analyzer/ntuples/input_weighted";
+  TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2016_01_06_METGt100_JetPt110/results/analyzer/ntuples/input_weighted";
   TFile *file1 = TFile::Open(pathName + "/wjets.root","READ");
   file1->GetObject(selection + "/countsTrackCriteria",hCutflow);
   samples.push_back(hCutflow);
@@ -37,20 +37,20 @@ int makeCutflowTable()
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   TFile *file5 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_10cm.root","READ");
   file5->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file6 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_100cm.root","READ");
   file6->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file7 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_10cm.root","READ");
   file7->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file8 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_100cm.root","READ");
   file8->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   TFile *file9 = TFile::Open(pathName + "/data.root","READ");
   file9->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
 
   ofstream cutflow;
   cutflow.open("cutflowTable.txt");
@@ -60,9 +60,9 @@ int makeCutflowTable()
 
   cout<<setprecision(5);  
 
+  cout<<"Number of bins = "<<samples[0]->GetNbinsX()<<endl;
   for(int i=1; i<=samples[0]->GetNbinsX(); i++){
 
-   
     if(i==1)  cout<<left<<setw(90)<<"after skim";
     if(i==2)  cout<<left<<setw(90)<<"trigger";
     if(i==3)  cout<<left<<setw(90)<<"$\\ptfirstjet>110\\gev$";
@@ -90,7 +90,9 @@ int makeCutflowTable()
     if(i==22) cout<<left<<setw(90)<<"Not within $\\Delta R<0.25$ to a bad CSC";
     if(i==23) cout<<left<<setw(90)<<"$\\sum \\limits_{\\Delta R < 0.3} \\pt^{\\text{trk}}/\\pt^{\\text{cand}} - 1 < 0.1$";
     if(i==24) cout<<left<<setw(90)<<"$\\ecalo<5\\gev$";
-    if(i==25) cout<<left<<setw(90)<<"$\\ias>0.05$";
+    if(i==25) cout<<left<<setw(90)<<"$\\pt>30\\gev$";
+    if(i==26) cout<<left<<setw(90)<<"$\\ias>0.05$";
+   
     
     /*
     if(i==8)  cout<<left<<setw(90)<<"high-purity";
