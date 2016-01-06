@@ -161,6 +161,8 @@ The cross section does not depend on the lifetime of the chargino.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
 \FloatBarrier
 \chapter{Event selection}
 \label{sec:EventSelection}
@@ -174,7 +176,7 @@ As outlined in Section~\ref{sec:GeneralSearchStrategy}, the detection of chargin
 Direct triggering of events containing chargino-like tracks is not possible because in 2012 there was no dedicated track trigger available.
 Furthermore, there is no intrinsic missing transverse energy in the event if the chargino is not reconstructed as a PF particle, \eg when it decays inside the tracker.
 Therefore, this analysis uses initial state radiation for the detection of chargino events.
-If ISR occurs, it is possible to trigger on a high-\pt jet (\ptfirstjet) and missing transverse energy (\met).
+If ISR occurs, it is possible to trigger on a high-\pt jet (\ptfirstjet) and missing transverse momentum (\met).
 
 For this purpose, several triggers are utilised in this analysis.
 An event is selected, if at least one of the three triggers in Table~\ref{tab:triggers} fired.
@@ -190,7 +192,7 @@ An event is selected, if at least one of the three triggers in Table~\ref{tab:tr
 \begin{tabular}{lr}
 \multicolumn{2}{c}{} \\
 \toprule
-Trigger  & Luminosity [\fbinv]   \\
+Trigger  & Integrated luminosity [\fbinv]   \\
 \midrule
  HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95     &  5.3   \\
  HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95    &  14.4  \\
@@ -201,12 +203,12 @@ Trigger  & Luminosity [\fbinv]   \\
 \end{table}  
 
 The HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 and HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 triggers both rely on the L1 ETM40 trigger which requires the missing energy to be larger than 40\gev.
-On HLT level, they further require at least one particle-flow jet within the pseudorapidity range of $|\eta|<2.6$ with $\pt>80\gev$ and a missing transverse momentum (not taking into account the \pt of muons) to be larger than 95\gev or 105\gev respectively.
+On HLT level, they further require at least one particle-flow jet within the pseudorapidity range of $|\eta|<2.6$ with $\pt>80\gev$ and the PF missing transverse momentum (not taking into account the \pt of muons) to be larger than 95\gev or 105\gev respectively.
 Finally, no more than 95\% of the jet energy must be carried by neutral hadrons.
 The HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 trigger was active during Run\,A and Run\,B in 2012 data taking, whereas HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 was in place during Run\,C and Run\,D in 2012.
 
 The HLT\_MET120\_HBHENoiseCleaned trigger is based on the L1 trigger ETM36. % that are combined by a logical OR.
-On HLT level, the trigger requires that the missing energy measured in the calorimeter is larger than 120\gev.
+On HLT level, the trigger requires that the missing energy measured from calorimeter energy deposits only is larger than 120\gev.
 The HBHENoise-filter reduces background from electronic noise in the HCAL.
 
 The events that were selected by the described triggers are available in the MET datasets listed in Table~\ref{tab:SearchSamples}.
@@ -219,7 +221,7 @@ The events that were selected by the described triggers are available in the MET
 \begin{tabular}{lr}
 \multicolumn{2}{c}{} \\
 \toprule
-Dataset  & Luminosity [\fbinv]   \\
+Dataset  & Integrated luminosity [\fbinv]   \\
 \midrule
  /MET/Run2012A-22Jan2013-v1/RECO         &  0.876   \\
  /MET/Run2012B-22Jan2013-v1/RECO         &  4.412  \\
@@ -279,7 +281,7 @@ This selection includes requirements on the position of the vertex with respect 
 
 To maximise the signal acceptance, the trigger related selection cuts are chosen close to the trigger thresholds (see Section~\ref{sec:DatasetsAndTriggers}).
 In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the transverse momentum of the leading jet, \ptfirstjet, are shown for different signal models.
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/hMetSmallRange_log_chiTracksnoSelection_4Signals.pdf}
@@ -350,7 +352,7 @@ First, a selection of high-quality tracks is enforced:
 \item The radial and longitudinal  distance of the track to the primary vertex must be small: \mbox{$|d0|<0.02\cm$}, \mbox{$|dz|<0.5\cm$}.
 \end{itemize}
 In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two quality selection cuts is shown.\\
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
@@ -391,6 +393,23 @@ Additionally, the candidate track must not be close to a jet ($\pt>20\gev$ and $
       Some loose isolation requirements are enforced to protect the tau reconstruction from jet contamination.
 \item The track must not be within a cone of $\Delta R< 0.5$ to a reconstructed jet ($\pt>20\gev$ and $|\eta|<4.5$).\\
 \end{itemize}
+These lepton and jet veto selection requirements are of course highly suppressing the background emerging from real lepton/jet production like in \WJets events.
+The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:TrackdRmin} where the minimum $\Delta R$ between the candidate track and a reconstructed electron, muon, tau or jet is shown.\\
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminElec_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminMuon_log.pdf}\\
+
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminTau_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminJet_log.pdf}
+  \end{tabular}
+  \caption{The minimum $\Delta R$ between the candidate track and a reconstructed electron (top left), muon (top right), tau (bottom left) or jet (bottom right) 
+           after the full candidate track selection cuts but without the one shown in the corresponding plot (``N-1 plot''). 
+           The last bin contains all events where the candidate track has a $\Delta R_{\text{min}}$ larger than 1.5 or 5.0 to the next lepton or jet respectively. 
+           Events with no respective lepton or jet are all contained in the last bin.  }
+  \label{fig:TrackdRmin}
+\end{figure}
 
 Unfortunately, the lepton veto selection cuts lack efficiency in some of the detector directions.
 For example, the reconstruction of an electron easily fails in the direction of a dead ECAL cell.
@@ -457,23 +476,7 @@ To summarise, tracks pointing towards detector regions, that are not working pro
 \item Veto tracks that point towards a bad CSC within $\Delta R<0.25$ (visualised in Fig.~\ref{fig:BadCSCMap}).
 \item Veto tracks that point towards the region between ECAL barrel and endcap at $1.42<|\eta|<1.65$
 \end{itemize}
-These lepton and jet veto selection requirements are of course highly suppressing the background emerging from real lepton/jet production like in \WJets events.
-The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:TrackdRmin} where the minimum $\Delta R$ between the candidate track and a reconstructed electron, muon, tau or jet is shown.\\
-\begin{figure}[!t]
-  \centering 
-  \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminElec_log.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminMuon_log.pdf}\\
 
-    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminTau_log.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminJet_log.pdf}
-  \end{tabular}
-  \caption{The minimum $\Delta R$ between the candidate track and a reconstructed electron (top left), muon (top right), tau (bottom left) or jet (bottom right) 
-           after the full candidate track selection cuts but without the one shown in the corresponding plot (``N-1 plot''). 
-           The last bin contains all events where the candidate track has a $\Delta R_{\text{min}}$ larger than 1.5 or 5.0 to the next lepton or jet respectively. 
-           Events with no respective lepton or jet are all contained in the last bin.  }
-  \label{fig:TrackdRmin}
-\end{figure}
 
 
 Finally, two further characteristics of chargino tracks are exploited.
@@ -489,7 +492,7 @@ The resulting selection cuts are as follows
 \item Little calorimeter energy deposits (ECAL+HCAL) in a cone of $\Delta R < 0.5$ around the track: \mbox{$\ecalo<5\gev$}.
 \end{itemize}
 The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackIso_Ecalo_After_Preselection}.\\
-\begin{figure}[!t]
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackIsolation_lin.pdf}
@@ -538,7 +541,7 @@ An overview over the full analysis preselection is given in Table~\ref{tab:Summa
                                                               &                                            & $|dz|<0.5\cm$\\\cmidrule{2-3}
 
                                                               &  \multirow{2}{*}{Kinematic selection}      & $|\eta|<2.1$ \\
-                                                              &                                            & $\pt>10\gev$ \\\cmidrule{2-3}
+                                                              &                                            & $\pt>20\gev$ \\\cmidrule{2-3}
 
                                                               &  \multirow{8}{*}{Lepton/jet veto}          & No muon within $\Delta R<0.15$ \\
                                                               &                                            & No electron within $\Delta R<0.15$ \\
@@ -555,8 +558,40 @@ An overview over the full analysis preselection is given in Table~\ref{tab:Summa
 
 \bottomrule
 \end{tabular}}
-\end{table}  
-A summary table of the event yields after each selection step for the simulated background datasets and for some of the signal models can be found in Appendix~\ref{app:cutflow}.\\
+\end{table}
+The event yields after the selections of each of the categories from Table~\ref{tab:SummaryCuts} are listed in Table~\ref{tab:CutflowALL} for the simulated background samples, some exemplary simulated signal models and for observed data.
+Detailed event yield tables can be found in Appendix~\ref{app:cutflow}.\\
+%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\arraystretch}{1.5}
+\begin{sidewaystable}
+\centering
+\caption{Event yields in simulation and observed data after the selections of each of the categories from Table~\ref{tab:SummaryCuts}}
+\label{tab:CutflowALL}
+\makebox[0.99\textwidth]{
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|}
+\multicolumn{10}{c}{} \\
+\toprule
+                            & \multicolumn{4}{c|}{Simulated background samples}      & \multicolumn{4}{c|}{Simulated signal samples}  & Data         \\
+\midrule
+\multirow{2}{*}{Selection}  & \multirow{2}{*}{\WJets} & \multirow{2}{*}{\ttbarJets} & \multirow{2}{*}{\Zlep} & \multirow{2}{*}{Multijet} & m\shorteq100GeV     & m\shorteq100GeV      & m\shorteq500GeV    & m\shorteq500GeV  & MET      \\
+                            &                         &                             &                        &       & $c\tau$\shorteq10\cm & $c\tau$\shorteq100\cm & $c\tau$\shorteq10\cm & $c\tau$\shorteq100\cm &  data            \\
+\midrule
+After skim                                                                                & 9.16 $\cdot10^{7 }$ & 1.04 $\cdot10^{6 }$ & 2.21 $\cdot10^{7 }$ & 1.38 $\cdot10^{11}$ & 3.41 $\cdot10^{5 }$ & 3.41 $\cdot10^{5 }$ & 3.46 $\cdot10^{2 }$ & 3.46 $\cdot10^{2 }$ & 1.07 $\cdot10^{7 }$ \\
+Event-based selection:                                                                    
+& & & & & & & & & \\
+Trigger                                                                                   & 4.31 $\cdot10^{6 }$ & 1.15 $\cdot10^{5 }$ & 4.23 $\cdot10^{3 }$ & 4.32 $\cdot10^{6 }$ & 1.55 $\cdot10^{4 }$ & 1.49 $\cdot10^{4 }$ & 4.62 $\cdot10^{1 }$ & 4.62 $\cdot10^{1 }$ & 1.07 $\cdot10^{7 }$ \\
+Trigger selection                                                                         & 1.89 $\cdot10^{6 }$ & 5.31 $\cdot10^{4 }$ & 6.26 $\cdot10^{2 }$ & 9.63 $\cdot10^{5 }$ & 1.09 $\cdot10^{4 }$ & 9.83 $\cdot10^{3 }$ & 3.63 $\cdot10^{1 }$ & 3.57 $\cdot10^{1 }$ & 3.94 $\cdot10^{6 }$ \\
+QCD suppression                                                                           & 1.11 $\cdot10^{6 }$ & 6.76 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ & 7.90 $\cdot10^{3 }$ & 6.98 $\cdot10^{3 }$ & 2.76 $\cdot10^{1 }$ & 2.71 $\cdot10^{1 }$ & 1.38 $\cdot10^{6 }$ \\
+Track-based selection:                                                                    
+& & & & & & & & & \\
+Good quality selection                                                                    & 1.07 $\cdot10^{6 }$ & 6.63 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 9.55 $\cdot10^{3 }$ & 2.80 $\cdot10^{3 }$ & 5.38 $\cdot10^{3 }$ & 5.07 $\cdot10^{0 }$ & 2.00 $\cdot10^{1 }$ & 1.30 $\cdot10^{6 }$ \\
+Kinematic selection                                                                       & 8.14 $\cdot10^{5 }$ & 5.63 $\cdot10^{3 }$ & 1.32 $\cdot10^{2 }$ & 5.48 $\cdot10^{3 }$ & 2.54 $\cdot10^{3 }$ & 4.93 $\cdot10^{3 }$ & 4.73 $\cdot10^{0 }$ & 1.89 $\cdot10^{1 }$ & 9.51 $\cdot10^{5 }$ \\
+Lepton/jet veto                                                                           & 5.02 $\cdot10^{2 }$ & 5.88 $\cdot10^{0 }$ & 0 $\cdot10^{0}$ & 0 $\cdot10^{0}$ & 1.99 $\cdot10^{3 }$ & 3.67 $\cdot10^{3 }$ & 3.83 $\cdot10^{0 }$ & 1.50 $\cdot10^{1 }$ & 6.16 $\cdot10^{2 }$ \\
+Isolation selection                                                                       & 3.19 $\cdot10^{1 }$ & 0.67 $0\cdot10^{0 }$ & 0 $\cdot10^{0}$ & 0 $\cdot10^{0}$ & 1.67 $\cdot10^{3 }$ & 3.04 $\cdot10^{3 }$ & 3.39 $\cdot10^{0 }$ & 1.26 $\cdot10^{1 }$ & 1.19 $\cdot10^{2 }$ \\
+\bottomrule
+\end{tabular}}
+\end{sidewaystable}
+%\end{landscape}
 
 
 Given the presented signal candidate selection, two variables remain that are highly discriminating:

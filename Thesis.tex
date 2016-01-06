@@ -74,7 +74,7 @@ a4paper,
 \usepackage{hvfloat}
 \usepackage[makeroom]{cancel}
 \usepackage{enumerate}
-\usepackage[verbose]{placeins}
+\usepackage[]{placeins}
 \usepackage[]{units}
 \usepackage[super]{nth}
 \usepackage{fixmath}
@@ -144,6 +144,13 @@ a4paper,
 \patchBothAmsMathEnvironmentsForLineno{gather}%
 \patchBothAmsMathEnvironmentsForLineno{multline}%
 }
+% Short equal sign
+\makeatletter
+\newcommand{\shorteq}{%
+  \settowidth{\@tempdima}{-}% Width of hyphen
+  \resizebox{\@tempdima}{\height}{=}%
+}
+\makeatother
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -242,9 +249,10 @@ a4paper,
 
   \part{A search for highly ionising, short tracks at the CMS detector} \label{sec:analysis}
   \input{analysis_1.tex}
+  \input{Part_Analysis/PixelCalibration.tex}
   \input{analysis_2.tex}
-%   \input{analysis_3.tex}
-%   \input{analysis_4.tex}
+  \input{analysis_3.tex}
+  \input{analysis_4.tex}
 
 % \part{Summary} \label{sec:Conclusion}
 % \input{summary.tex}

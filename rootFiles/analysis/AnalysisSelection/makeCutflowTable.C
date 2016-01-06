@@ -17,34 +17,36 @@ int makeCutflowTable()
 
   vector<TH1D*> samples;
 
+  TString selection = "chiTracksfullSelectionTrigger";
+
   //TString pathName="/afs/desy.de/user/t/tlenz//xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_18_METGt100_JetPt110_TrackPtGt20/results/analyzer/ntuples/input_weighted";
   //TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_11_12_METGt100_JetPt110/results/analyzer/ntuples/input_weighted";
   TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2015_12_02_METGt100_JetPt110_TrackPtGt20/results/analyzer/ntuples/input_weighted";
   TFile *file1 = TFile::Open(pathName + "/wjets.root","READ");
-  file1->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  file1->GetObject(selection + "/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
   TFile *file2 = TFile::Open(pathName + "/ttjets.root","READ");
-  file2->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  file2->GetObject(selection + "/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
   TFile *file3 = TFile::Open(pathName + "/dytoll.root","READ");
-  file3->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  file3->GetObject(selection + "/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
   TFile *file4 = TFile::Open(pathName + "/qcd.root","READ");
-  file4->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  file4->GetObject(selection + "/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   TFile *file5 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_10cm.root","READ");
   file5->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  samples.push_back(hCutflow);
   TFile *file6 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_100cm.root","READ");
   file6->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  samples.push_back(hCutflow);
   TFile *file7 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_10cm.root","READ");
   file7->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  samples.push_back(hCutflow);
   TFile *file8 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_100cm.root","READ");
   file8->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  samples.push_back(hCutflow);
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   TFile *file9 = TFile::Open(pathName + "/data.root","READ");
   file9->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
@@ -63,13 +65,13 @@ int makeCutflowTable()
    
     if(i==1)  cout<<left<<setw(90)<<"after skim";
     if(i==2)  cout<<left<<setw(90)<<"trigger";
-    if(i==3)  cout<<left<<setw(90)<<"$\\ptfirstjet>100\\gev$";
+    if(i==3)  cout<<left<<setw(90)<<"$\\ptfirstjet>110\\gev$";
     if(i==4)  cout<<left<<setw(90)<<"$\\met>100\\gev$";
     if(i==5)  cout<<left<<setw(90)<<"$\\Delta\\phi_{\\text{max}} \\left( \\text{jet}_i, \\text{jet}_j  \\right)<2.7$";
     if(i==6)  cout<<left<<setw(90)<<"$\\Delta\\phi_{\\text{max}} \\left( \\text{jet}_i, \\met  \\right)>0.5$";
     if(i==7){
       cout<<left<<setw(90)<<"$\\geq1$ track in the event with:"<<endl;
-      cout<<left<<setw(90)<<"reconstructed trk";
+      //      cout<<left<<setw(90)<<"reconstructed trk";
     }
     if(i==8)  cout<<left<<setw(90)<<"high-purity";
     if(i==9)  cout<<left<<setw(90)<<"$N_{\\text{miss}}^{\\text{middle}}=0$";
@@ -86,8 +88,9 @@ int makeCutflowTable()
     if(i==20) cout<<left<<setw(90)<<"Not within an ECAL  intermodule gap";
     if(i==21) cout<<left<<setw(90)<<"Not within $1.42<|\\eta|<1.65$";
     if(i==22) cout<<left<<setw(90)<<"Not within $\\Delta R<0.25$ to a bad CSC";
-    if(i==23) cout<<left<<setw(90)<<"$\\sum \\limits_{\\Delta R < 0.3} \\pt/p_{\\text{T}}^{\\text{cand}} < 0.1$";
+    if(i==23) cout<<left<<setw(90)<<"$\\sum \\limits_{\\Delta R < 0.3} \\pt^{\\text{trk}}/\\pt^{\\text{cand}} - 1 < 0.1$";
     if(i==24) cout<<left<<setw(90)<<"$\\ecalo<5\\gev$";
+    if(i==25) cout<<left<<setw(90)<<"$\\ias>0.05$";
     
     /*
     if(i==8)  cout<<left<<setw(90)<<"high-purity";
