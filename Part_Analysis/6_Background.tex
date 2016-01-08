@@ -5,46 +5,47 @@
 \label{ch:BackgroundEstimation}
 After the application of the signal candidate selection, explained in the previous section, the background arising from Standard Model processes is dramatically reduced.
 Only two events in the simulated \WJets sample remain.
-One of these originates from an unreconstructed muon, the other one from an unreconstructed electron.
+One of these originates from an unreconstructed muon, the other one from an unreconstructed electron, both passing the lepton vetoes.
 This implies, that the electron, muon, and tau vetos cannot reject all leptons because some are not properly reconstructed.
 Due to the limited size of the simulated \WJets dataset (15 times smaller than the number of events expected from \WJets processes during 2012 data taking), 
 it is not possible to rely on a full simulation-based estimation of the leptonic background.
 The underlying mechanism that a lepton can pass the lepton veto and the corresponding methods to estimate the leptonic background will be explained in detail in Section~\ref{sec:LeptonicBkg}.
 
-Furthermore, there is the possibility that a track is reconstructed out of a set of hits that do not origin from only one single particle.
+Furthermore, there is the possibility that a track is reconstructed out of a set of hits that do not originate from only one single particle.
 Such tracks are called ``fake tracks''. 
 Background tracks arising from a combination of unrelated hits will be explained in the following Section~\ref{sec:FakeBkg}.
 It should be noted that the fake background is contributing through all SM processes, not only via \WJets.
 Still, as the characteristics of fake tracks are independent of the underlying process, this background can also be studied on simulation using \WJets events only.
 
-The reader will recognise, that the importance of the two contributions, the fake and leptonic background, is very different to this search.
+There is no contribution of jets to the background, because jets are efficiently suppressed by the jet veto and the track isolation requirement of the signal candidate selection (see Table~\ref{tab:SummaryCuts}).
+
+The reader will recognise, that the importance of the two contributions to the background, the fake and leptonic background, is very different to this search.
 It will be seen, that the leptonic background is of negligible size.
 
 However, both background are estimated in a similar approach.
 First, an inclusive background estimation (without the use of \dedx information) is estimated.
 Afterwards, the efficiency of a \dedx selection for the fake and leptonic background is determined.
 
-Finally, an optimisation in the track variables \pt and \dedx is carried out (see Chapter~\ref{ch:Optimisation}) to ensure an ideal selection for the search for short and  highly ionising tracks.
+Finally, the final signal regions are determined within an optimisation procedure.
+This optimisation is carried out in the track variables \pt and \dedx (see Chapter~\ref{ch:Optimisation}) to ensure an ideal selection for the search for short and  highly ionising tracks.
 %The limited quality of the \dedx simulation enforces anyways a data-based background estimation method.
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fake background}
 \label{sec:FakeBkg}
-Fake tracks are tracks that are not reconstructed out of the tracker hits of one single particle.
-The rate at which this wrong reconstruction occurs is highly restrained by the quality cuts on $\chi^2$ and the vertex compatibility of the track reconstruction algorithm.
+Fake tracks are tracks that are not only reconstructed out of the tracker hits of one single particle.
+The rate at which this false reconstruction occurs is highly restrained by the quality cuts on $\chi^2$ and the vertex compatibility of the track reconstruction algorithm.
 Details on the reconstruction algorithm of tracks at CMS can be found in Section~\ref{FIXME}.
 
 Reconstructed tracks that are fake tracks consist in general only out of a few hits.
-This can be seen in Fig.~\ref{fig:NValidFakes}, where the normalised distribution of the number of hits from fake tracks is depicted.
+This can be seen in Fig.~\ref{fig:NValidFakes}, where the normalised distribution of the number of hits from fake tracks in simulated \WJets events is depicted.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/NValidForFakes_chiTracksfullSelectionNoTriggerCuts.pdf}
   \end{tabular}
-  \caption{Normalised distribution of the number of hits for fake tracks. To increase the statistical precision, only the candidate track selection from Table~\ref{tab:SummaryCuts} is applied.}
+  \caption{Normalised distribution of the number of hits for fake tracks in the simulated \WJets sample. To increase the statistical precision, only the candidate track selection from Table~\ref{tab:SummaryCuts} is applied.}
   \label{fig:NValidFakes}
 \end{figure}
 There are almost no fakes with more than seven hits.
@@ -523,7 +524,7 @@ The fake background can only be estimated within the low calorimeter isolation r
 To be able to validate the method in the high calorimeter isolation region $\left(\ecalo>10\gev\right)$, a translation factor from the low to the high calorimeter isolation region for the number of fake tracks is determined in the fake enriched control region \fakeCR defined in Section~\ref{sec:FakeIasUncertainty}.
 %As the fake background can only be estimated within the low calorimeter isolation region $\left(\ecalo<10\gev\right)$ to ensure high fake purity, 
 %the information about the number of fake tracks in the high calorimeter isolation region is taken from the fake enriched control region \fakeCR defined in Section~\ref{sec:FakeBkg}.
-In this control region, the ratio of $N_{\ecalo>10\gev}/N_{\ecalo<10\gev}$ is estimated and taken as a multiplicand to the number of events predicted from the $\ecalo<10\gev$ region.
+In this control region, the ratio of $N_{\ecalo>10\gev}/N_{\ecalo<10\gev}$ is estimated and taken as a multiplicative factor to the number of events predicted from the $\ecalo<10\gev$ region.
 In Table~\ref{tab:FakeClosure}, two different validation tests are shown, once an inclusive validation in \ias and once with an \ias selection of 0.2.
 Again, the predicted background events is in agreement with the number of observed events.
 \renewcommand{\arraystretch}{1.5}

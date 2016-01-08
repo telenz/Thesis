@@ -24,29 +24,29 @@ int makeCutflowTable()
   TString pathName="~/xxl-af-cms/ANALYSIS/workdir/analysis_2016_01_06_METGt100_JetPt110/results/analyzer/ntuples/input_weighted";
   TFile *file1 = TFile::Open(pathName + "/wjets.root","READ");
   file1->GetObject(selection + "/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file2 = TFile::Open(pathName + "/ttjets.root","READ");
   file2->GetObject(selection + "/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file3 = TFile::Open(pathName + "/dytoll.root","READ");
   file3->GetObject(selection + "/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   TFile *file4 = TFile::Open(pathName + "/qcd.root","READ");
   file4->GetObject(selection + "/countsTrackCriteria",hCutflow);
-  samples.push_back(hCutflow);
+  //samples.push_back(hCutflow);
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   TFile *file5 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_10cm.root","READ");
-  file5->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  file5->GetObject(selection + "/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
   TFile *file6 = TFile::Open(pathName + "/Madgraph_signal_mass_100_ctau_100cm.root","READ");
-  file6->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  file6->GetObject(selection + "/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
   TFile *file7 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_10cm.root","READ");
-  file7->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  file7->GetObject(selection + "/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
   TFile *file8 = TFile::Open(pathName + "/Madgraph_signal_mass_500_ctau_100cm.root","READ");
-  file8->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
-  //samples.push_back(hCutflow);
+  file8->GetObject(selection + "/countsTrackCriteria",hCutflow);
+  samples.push_back(hCutflow);
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   TFile *file9 = TFile::Open(pathName + "/data.root","READ");
   file9->GetObject("chiTracksfullSelectionTrigger/countsTrackCriteria",hCutflow);
@@ -63,8 +63,8 @@ int makeCutflowTable()
   cout<<"Number of bins = "<<samples[0]->GetNbinsX()<<endl;
   for(int i=1; i<=samples[0]->GetNbinsX(); i++){
 
-    if(i==1)  cout<<left<<setw(90)<<"after skim";
-    if(i==2)  cout<<left<<setw(90)<<"trigger";
+    if(i==1)  cout<<left<<setw(90)<<"After skim";
+    if(i==2)  cout<<left<<setw(90)<<"Trigger";
     if(i==3)  cout<<left<<setw(90)<<"$\\ptfirstjet>110\\gev$";
     if(i==4)  cout<<left<<setw(90)<<"$\\met>100\\gev$";
     if(i==5)  cout<<left<<setw(90)<<"$\\Delta\\phi_{\\text{max}} \\left( \\text{jet}_i, \\text{jet}_j  \\right)<2.7$";

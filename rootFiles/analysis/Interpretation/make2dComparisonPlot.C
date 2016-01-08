@@ -2,22 +2,30 @@
 #include "TH1.h"
 #include "TStyle.h"
 #include "TGraph.h"
+#include "TLatex.h"
 #include "TLegend.h"
 #include "TLegendEntry.h"
 #include "TPaveLabel.h"
 #include "TFile.h"
 #include "../../plotStyleThesis.h"
+#include "TMath.h"
 
 void DTLimit(){
 
   TeresaPlottingStyle::init();
+  gStyle -> SetPadTopMargin(0.10);
+  gStyle -> SetPadBottomMargin(0.17);
+
+  gStyle -> SetPadRightMargin(0.17);
+  gStyle -> SetPadLeftMargin(0.15);
+
   //gStyle->SetLineWidth(3);
 
-  //TFile *in = new TFile("ObservedLimit.root","READ");
-  TFile *in = new TFile("ObservedLimit_HybridNew.root","READ");
+  TFile *in = new TFile("ObservedLimit.root","READ");
+  //TFile *in = new TFile("ObservedLimit_HybridNew.root","READ");
   TGraph *myLimit = 0;
-  //in -> GetObject("Graph",myLimit);
-  in -> GetObject("Limit_ns",myLimit);
+  in -> GetObject("Graph",myLimit);
+  //in -> GetObject("Limit_ns",myLimit);
   myLimit ->SetLineColor(kRed);
   myLimit ->SetLineWidth(2);
     
@@ -37,11 +45,11 @@ void DTLimit(){
    lifetimeNs_vs_mass->SetLogy();
    lifetimeNs_vs_mass->SetLogz();
    lifetimeNs_vs_mass->SetTickx(1);
-   lifetimeNs_vs_mass->SetTicky(1);
-   lifetimeNs_vs_mass->SetLeftMargin(0.16);
-   lifetimeNs_vs_mass->SetRightMargin(0.06);
-   lifetimeNs_vs_mass->SetTopMargin(0.07);
-   lifetimeNs_vs_mass->SetBottomMargin(0.16);
+   lifetimeNs_vs_mass->SetTicky(0);
+   //   lifetimeNs_vs_mass->SetLeftMargin(0.16);
+   //lifetimeNs_vs_mass->SetRightMargin(0.06);
+   //lifetimeNs_vs_mass->SetTopMargin(0.07);
+   //lifetimeNs_vs_mass->SetBottomMargin(0.16);
    lifetimeNs_vs_mass->SetFrameFillStyle(0);
    lifetimeNs_vs_mass->SetFrameBorderMode(0);
    lifetimeNs_vs_mass->SetFrameFillStyle(0);
@@ -76,7 +84,7 @@ void DTLimit(){
    //Graph_Graph1->GetYaxis()->SetLabelOffset(0.007);
    Graph_Graph1->GetYaxis()->SetLabelSize(0.045);
    Graph_Graph1->GetYaxis()->SetTitleSize(0.06);
-   Graph_Graph1->GetYaxis()->SetTitleOffset(1.23);
+   Graph_Graph1->GetYaxis()->SetTitleOffset(1.3);
    Graph_Graph1->GetYaxis()->SetTitleFont(42);
    //Graph_Graph1->GetZaxis()->SetNdivisions(509);
    Graph_Graph1->GetZaxis()->SetLabelFont(42);
@@ -88,7 +96,7 @@ void DTLimit(){
    graph->SetHistogram(Graph_Graph1);
    
    TFile* out = new TFile("DTLimit.root","RECREATE");
-   graph->Draw("ap");
+   graph->Draw("ap Y+");
    myLimit ->Draw("same");
    
    //   graph->Draw("l");
@@ -140,18 +148,64 @@ void DTLimit(){
    //Graph_Graph1->SetMaximum(300);
    Graph_Graph1->SetMaximum(1);
    //TLegend* leg = new TLegend(0.17,0.46,0.72,0.6);
-   TLegend* leg = new TLegend(0.33,0.2,0.9,0.35);
-   leg->SetTextSize(0.045);
-   leg->AddEntry(myLimit,"Observed limit","l");
-   leg->AddEntry(graph,"#splitline{Observed limit of #font[12]{Search }}{#font[12]{for disappearing tracks}}","l");
+   // Full range
+
+   /*
+   TLegend* leg = new TLegend(0.17,0.42,0.50,0.62);
+   leg->SetTextSize(0.035);
+   leg->AddEntry(myLimit,"#splitline{Observed limit, #font[12]{This search}}{                      #scale[0.7]{(19.7 fb^{-1})}}","l");
+   leg->AddEntry(graph,"#splitline{Observed limit, #font[12]{Search for }}{#font[12]{disappearing tracks} #scale[0.7]{(19.5 fb^{-1})}}","l");
    leg->Draw();
+   */
+
+
+   // Small range
+   TLegend* leg = new TLegend(0.31,0.18,0.7,0.37);
+   leg->SetTextSize(0.035);
+   leg->AddEntry(myLimit,"#splitline{Observed limit, #font[12]{This search}}{                      #scale[0.7]{(19.7 fb^{-1})}}","l");
+   leg->AddEntry(graph,"#splitline{Observed limit, #font[12]{Search for }}{#font[12]{disappearing tracks} #scale[0.7]{(19.5 fb^{-1})}}","l");
+   //  leg->AddEntry(myLimit,"Observed limit, #font[12]{This search} #scale[0.7]{(19.7 fb^{-1})}","l");
+   //leg->AddEntry(graph,"#splitline{Observed limit, #font[12]{Search for }}{#font[12]{disappearing tracks} #scale[0.7]{(19.5 fb^{-1})}}","l");
+   leg->Draw();
+
+
+   TLatex*  info   = new TLatex();
+   info -> SetNDC();
+   info->SetTextSize(0.045);
+   info->DrawLatex(0.70,0.91,"(8 TeV)");
+
 
    // Observed limit
    graph->Draw("l");
    graph->Write();
    out->Close();
 
-   lifetimeNs_vs_mass->SaveAs("Comparison2dLimits_HybridNew_SmallRange.pdf");
+
+   // Draw other axis
+   double max = Graph_Graph1->GetMaximum();
+   cout<<"max in ns = "<<max<<endl;
+   double min = Graph_Graph1->GetMinimum();
+   cout<<"min in ns = "<<min<<endl;
+   
+
+   double lowEdge  = min*pow(10,-9)*TMath::C()*100;
+   double highEdge = max*pow(10,-9)*TMath::C()*100;
+
+
+   TGaxis *axis = new TGaxis(100, min, 100, max, lowEdge, highEdge,505,"-RG");
+   axis->SetTitle("c#tau_{#chi^{#pm}}_{1} [cm]");
+   axis->SetTitleOffset(1.17);
+   //axis->SetLabelOffset(0.07);
+   axis->SetTitleSize(0.06);
+   axis->SetTitleFont(42);
+   axis->SetLabelSize(0.05);
+   axis->SetLabelFont(42);
+   axis->Draw("same");
+
+
+
+
+   lifetimeNs_vs_mass->SaveAs("Comparison2dLimits_SmallRange.pdf");
         
  
 }

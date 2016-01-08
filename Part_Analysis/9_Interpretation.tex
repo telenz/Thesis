@@ -16,23 +16,23 @@ The systematic uncertainties on the number of signal events in the four signal r
 All systematic uncertainties are estimated for each signal model (cf. Section~\ref{sec:SignalSamples}) and each search bin separately.
 In the following, the sources of systematic uncertainties are discussed and the range of the corresponding uncertainty is given.
 
-\subsection*{Uncertainty on the theoretical cross section}
+\subsection*{Theoretical cross section}
 The theoretical cross sections of $\chipm\chimp$ and $\chipm\chiO$ production at a centre-of-mass energy of 8\tev are taken from~\cite{bib:SignalCrossSection_2012,bib:SignalCrossSection_2013}.
 The corresponding theoretical uncertainties range between $4.5-12.1\%$.
 
-\subsection*{Luminosity uncertainty}
+\subsection*{Luminosity}
 The integrated luminosity recorded at CMS during the year 2012 is measured by counting of pixel clusters during the crossing of two bunches (zero-bias event).
 A detailed explanation of this method and the corresponding total uncertainty of 2.6\% can be found in \cite{bib:CMS:Lumi_PAS}.
 
-\subsection*{Uncertainty on the simulation of initial state radiation}
-Initial state radiation affects the transverse momentum distribution of the 2-particle system, $\pt\left(p_1^{\mu} + p_2^{\mu} \right)$, in a 2-body decay.
+\subsection*{Simulation of initial state radiation}
+Initial state radiation (ISR) affects the transverse momentum distribution of the 2-particle system, $\pt\left(p_1^{\mu} + p_2^{\mu} \right)$, in a 2-body decay.
 Differences between data and simulation of ISR are taken into account by reweighting the simulated events, such that the simulated transverse momentum distribution matches the measured distribution in data. 
 The weights and associated systematic uncertainties are determined in~\cite{bib:CMS:ISR_AN} by comparing simulated and observed \pt distributions of $Z$ and $\bar{t}t$ events.
 These weights are applied to the simulated $\chipm\chimp$ and $\chipm\chiO$ events.
 To account for the systematic uncertainties on the reweighting procedure, the event weights are varied up and down by up to 25\% according to~\cite{bib:CMS:ISR_AN} depending on the transverse momentum of the $\chi_1\chi_2$ system.
 The resulting uncertainty on the ISR simulation is between $9.2-12.6\%$.
 
-\subsection*{Uncertainty on the simulation of the trigger efficiency}
+\subsection*{Simulation of the trigger efficiency}
 The HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 trigger with the higher MET threshold of 105\gev active in Run\,C and Run\,D during 2012 was not available in the simulated signal samples.
 It is therefore emulated using HLT trigger information. 
 More details on the emulation of this trigger can be found in Appendix~\ref{app:TriggerEmulation}.
@@ -41,7 +41,7 @@ The trigger uncertainty is assessed by comparing data-simulation differences of 
 This uncertainty has been quantified within~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} by comparing simulated and measured trigger turn-on curves and determining weights for simulated events such that simulated and observed turn-on curves are compatible.
 These event weights are applied on the simulated signal samples in this analysis and lead to changes in the signal prediction of 1.9 to 4.4\%, which are taken as sytematic uncertainties.
 
-\subsection*{Uncertainty on the jet energy scale}
+\subsection*{Jet energy scale}
 The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt and for data-simulation differences~\cite{bib:CMS:JME_PAS}.
 The uncertainty on the jet energy scale (JES) is neatly described and quantified in~\cite{bib:CMS:JME_PAS}. 
 It arises from uncertainties on the measured jet response in data including jet fragmentation, jet flavor composition, etc..
@@ -49,14 +49,14 @@ The JES correction is applied as a multiplicative factor on each jet's transvers
 The corresponding systematic uncertainty is assessed by an up- and downward variation of the correction factor within 1\,$\sigma$.
 The resulting uncertainties are of minor importance and range between $0.4-3.1\%$.
 
-\subsection*{Uncertainty on the jet energy resolution}
+\subsection*{Jet energy resolution}
 The jet energy resolution (JER) is smaller in simulation than in measured data (see Part~\ref{FIXME}). 
 In order to take these differences into account, the simulated jet energy response is smeared to match the measured response.
 The systematic uncertainty on the smearing factors is estimated in~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 It covers the uncertainty on JER in data, including the JES uncertainty, uncertainties arising from out-of-cone showering etc.~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 The resulting uncertainty on the signal efficiency in this study is between $0.1-2.0\%$ and therefore almost negligible.
 
-\subsection*{Uncertainty on the simulation of the parton distribution functions}
+\subsection*{Simulation of the parton distribution functions}
 The parton distribution function (PDF) used for the simulation of proton-proton collisions is provided by the \cteq group~\cite{Pumplin:2002vw} (see Section~\ref{FIXME} for more information about PDFs).
 In~\cite{Pumplin:2002vw}, a detailed description of the determination of a parton distribution function and its uncertainties is given.
 Practically, the estimation of the PDF uncertainty is done by the application of 44 different sets of event weights which take into account 22 different sources of uncertainties~\cite{Botje:2011sn,bib:PDF_practical} 
@@ -64,9 +64,9 @@ Practically, the estimation of the PDF uncertainty is done by the application of
 The sources correspond inter alia to uncertainties in the single distributions of gluons, up/down-quarks, etc, with the gluon distribution being by far the largest source of uncertainty.
 The resulting uncertainties on the signal efficiency for this search are between $2.6-6.8\%$.
 
-\subsection*{Uncertainty of the pileup reweighting}
+\subsection*{Pileup reweighting}
 The distribution of the number of primary vertices in simulation is reweighted to match the measured distribution in data.
-The distribution of the number of primary vertices in data is determined by the luminosity of each bunch-crossing times the proton-proton inelastic cross section which is 69.4\mb~\cite{bib:CMS:PileupUtilities}.
+The distribution of the number of primary vertices in data is estimated by the luminosity of each bunch-crossing times the proton-proton inelastic cross section which is 69.4\mb~\cite{bib:CMS:PileupUtilities}.
 The uncertainty on the number of interactions thus consists of the uncertainty on the luminosity and the uncertainty on the cross section.
 To cover both sources, a variation of the inelastic cross section by plus/minus 5\% is done according to the recommendation by~\cite{bib:CMS:PileupSysUnc}.
 
@@ -74,13 +74,13 @@ For most of the signal models and signal regions, the signal efficiency is only 
 If the statistical precision of the signal prediction in a specific search bin is low, the uncertainty can become significantly larger.
 However, the search sensitivity is always driven by search bins with high signal content so that large values of this uncertainty have no effect on the overall search sensitivity.
 
-\subsection*{Uncertainty on the simulation of the calorimeter isolation}
+\subsection*{Simulation of the calorimeter isolation}
 The uncertainty on the simulation of the calorimeter isolation \ecalo is estimated by comparing simulated and measured selection efficiencies of $\ecalo<5\gev$ in the fake enriched control sample \fakeCR.
 The fake enriched control region is well suited for this estimation, because fake tracks are not correlated to the energy deposits in the calorimeters.
 The selection efficiency in data is higher than in simulation in both \pt bins of $30-50\gev$ and $50-\infty\gev$.
 This difference between data and simulation is taken as systematic uncertainty, resulting in uncertainties of 12.1\% and 3.0\%.
 
-\subsection*{Uncertainty on the simulation of missing middle/inner hits}
+\subsection*{Simulation of missing middle/inner hits}
 The uncertainty on the simulation of the number of missing inner and middle hits is assessed by comparing the probability in simulation and data of passing the selection requirements of $N_{\text{miss}}^{\text{middle/inner}}=0$
 of a candidate track in the muon-veto inverted control region. 
 This control region is particularly suitable because muons are not expected to have intrinsic sources of missing hits, as \eg pions or electrons have.
@@ -93,7 +93,7 @@ The selection efficiency is always higher in simulation, resulting in systematic
 The uncertainties are of very similar size in the signal regions with different \pt.
 No \ias dependence is considered.
 
-\subsection*{Uncertainty on the simulation of \ias}
+\subsection*{Simulation of \ias}
 An uncertainty on the simulation of \ias needs to be estimated in order to account for possible data-simulation differences for highly ionising particles.
 The estimation of the \ias uncertainty is done following the methodology in~\cite{bib:CMS:HSCP_8TeV,bib:CMS:HSCP_8TeV_AN}.
 The \ias uncertainty can be assessed by comparing data and simulation differences of slow protons.
@@ -129,7 +129,7 @@ The systematic uncertainty is estimated to a value of 6\%.
 %The size of the systematic uncertainty is also expected to cover the data-simulation difference for minimal ionisation.
 
 
-\subsection*{Uncertainty on the simulation of the track reconstruction efficiency}
+\subsection*{Simulation of the track reconstruction efficiency}
 One final source of uncertainty is the simulation of the track reconstruction efficiency.
 Possible differences of the reconstruction efficiency in simulation and data can lead to a different signal acceptance.
 Differences in the track reconstruction efficiency are especially expected for short tracks.
@@ -231,20 +231,21 @@ The exclusion limits are derived according to the above presented methodology us
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h] 
 \centering
-\caption{Correlation of systematic and statistical uncertainties between the four different signal regions.}
+\caption{Correlation of systematic and statistical uncertainties between the four different signal regions.
+         Statistical uncertainties include uncertainties arising from the limited size of control regions and the simulated samples.}
 \label{tab:BkgSysUncCorr}
 \begin{tabularx}{\textwidth}{|X|X|X|X|X|}  
 \multicolumn{5}{c}{} \\
 \toprule 
-                                        & Fakes                        & Taus                          & Electrons                      & Muons                       \\ 
+                                        & Fakes                          & Taus                            & Electrons                        & Muons                       \\ 
 \midrule
-Statistical uncertainty                 &0\% correlated                & 100\% for same bins in \ias   & 0\% correlated                 & 100\% for same bins in \ias \\
+Statistical uncertainty                 &0\% correlated                  & 100\% for bins with same \ias   & 0\% correlated                   & 100\% for bins with same \ias \\
 \midrule
-Leptonic scale factor uncertainty       & \makecell[c]{-}              & 100\% for same bins in \ias   & 100\% for same bins in \ias    & 100\% for same bins in \ias \\
+Leptonic scale factor uncertainty       & \makecell[c]{-}                & 100\% for bins with same \ias   & 100\% for bins with same \ias    & 100\% for bins with same \ias \\
 \midrule
-Fake rate  uncertainty                  & 100\% for same bins in \ias  &  \makecell[c]{-}              &  \makecell[c]{-}                &  \makecell[c]{-}           \\
+Fake rate  uncertainty                  & 100\% for bins with same \ias  &  \makecell[c]{-}                &  \makecell[c]{-}                 &  \makecell[c]{-}           \\
 \midrule
-\ias uncertainty                         &0\% correlated                & 100\% for same bins in \pt    & 100\% for same bins in \pt     &  100\% for same bins in \pt \\
+\ias uncertainty                        &0\% correlated                  & 100\% for bins with same \pt    & 100\% for bins with same \pt     &  100\% for bins with same \pt \\
 \bottomrule
 \multicolumn{5}{c}{} \\
 \end{tabularx}  
@@ -261,7 +262,7 @@ As explained in the previous section, the exclusion is done with the help of the
 Two direct production channels are taken into account: chargino pair production and chargino neutralino production. 
 The corresponding cross sections can be found in Table~\ref{tab:SignalCrossSections}.
 
-In total, 37 different lifetimes from $\ctau=1-10000\cm$ for each mass point ($100-600\gev$) are considered, leading to 37 different exclusion limits.
+In total, 37 different lifetimes from $\ctau=1-10000\cm$ for each mass point ($100-600\gev$ in steps of 100\gev) are considered. %, leading to 37 different exclusion limits.
 Four exemplary exclusion limits are shown in Fig.~\ref{fig:1dLimits}, the full set of exclusion limits can be found in Appendix~\ref{app:ExlusionLimits}.
 
 \begin{figure}[!h]
@@ -318,6 +319,8 @@ The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d
 \end{figure} 
 It can be seen that this search is sensitive to mass splittings between $\sim 140\mev-210\mev$.\\
 
+\FloatBarrier
+\section{Comparison of the search sensitivity to the search for disappearing tracks}
 The presented exclusion limits confirm the exclusion from the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} with slight improvements in the low lifetime region.
 The comparison of the two searches is shown in Fig~\ref{fig:Comparison2dLimit}.
 
@@ -335,8 +338,9 @@ The degree of correlation is depicted in Fig.~\ref{fig:AnalysisOverlap} which sh
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_largerRange.pdf}  
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/Comparison2dLimits.pdf} 
+    \includegraphics[width=0.48\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_largerRange.pdf}  
+    \hspace{0.03\textwidth}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_SmallRange.pdf} 
   \end{tabular}
   \caption{Comparison of the excluded regions in the mass versus lifetime space in this analysis (red line) and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} (black line). 
            The right figure is a zoom on the low lifetime region. All SUSY models left of the lines are excluded.}

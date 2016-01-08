@@ -7,7 +7,11 @@
 #include <cmath>
 #include <iostream>
 
+
 int makeFinalResultPlot(){
+
+  gStyle -> SetTextFont(42);
+  gStyle -> SetTitleFont(42,"");
 
   gStyle->SetOptStat(0);
   gStyle -> SetPadBottomMargin(0.15);
@@ -128,9 +132,11 @@ int makeFinalResultPlot(){
   hM->Fill("#splitline{p_{T}>50GeV}{0.30<I_{as}<1.00}"      , measured[3]);
 
   hM->SetMarkerStyle(20);
-  hM->SetMarkerSize(1.5);
+  hM->SetMarkerSize(1.9);
   hM->Draw("same p");
 
+  TH1D* dummy = (TH1D*) hM->Clone();
+  dummy->SetMarkerSize(1.6);
 
   TLegend *leg =  new TLegend(0.52,0.70,0.9,0.9);
   leg->SetFillStyle(0);
@@ -138,10 +144,16 @@ int makeFinalResultPlot(){
   leg->AddEntry(hPred,"Prediction","f");
   //leg->AddEntry(hPredStatUp,"Statistical uncertainty on prediction","f");
   leg->AddEntry(h,"Total uncertainty on prediction","f");
-  leg->AddEntry(hM,"Data","p");
+  leg->AddEntry(dummy,"Data","p");
 
   leg->Draw("same");
   gPad->RedrawAxis();
+
+  TLatex*  info   = new TLatex();
+  info -> SetNDC();
+  info->SetTextSize(0.04);
+  info->DrawLatex(0.78,0.91,"19.7 fb^{-1} (8 TeV)");
+
 
   c1->SaveAs("FinalResultPlot.pdf");
   //c1->SaveAs("FinalResultPlot.eps");
