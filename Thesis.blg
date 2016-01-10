@@ -32,89 +32,80 @@ You're missing a field name---line 182 of file Thesis.bib
  : %   author  = "{F. Pandolfi, D. del Re, M. Voutilainen}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 424 of file Thesis.bib
+I was expecting a `,' or a `}'---line 437 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-JME-13-004",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 446 of file Thesis.bib
+I was expecting a `,' or a `}'---line 459 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-LUM-13-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 473 of file Thesis.bib
+I was expecting a `,' or a `}'---line 486 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-003",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 648 of file Thesis.bib
+I was expecting a `,' or a `}'---line 661 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-005",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 660 of file Thesis.bib
+I was expecting a `,' or a `}'---line 673 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 997 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1010 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-EXO-13-006",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1008 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1021 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 4538 of file Thesis.bib
- : @article{Pumplin:2002vw
- :                        ,
-I'm skipping whatever remains of this entry
-Warning--empty publisher in bib:James:StaticticalMethods_2006
-Warning--empty year in bib:CMS:DT_Thesis
-Name 1 in "J. Brinson, C. Hill, and W. Wulsin" has a comma at the end for entry bib:CMS:DT_8TeV_AN
-while executing---line 1277 of file lucas_unsrt.bst
-Warning--empty title in bib:Neyman_1937
-You've used 64 entries,
+You've used 2 entries,
             2369 wiz_defined-function locations,
-            1064 strings with 18478 characters,
-and the built_in function-call counts, 18036 in all, are:
-= -- 2227
-> -- 393
+            604 strings with 5032 characters,
+and the built_in function-call counts, 666 in all, are:
+= -- 82
+> -- 15
 < -- 0
-+ -- 151
-- -- 87
-* -- 1310
-:= -- 2351
-add.period$ -- 166
-call.type$ -- 64
++ -- 5
+- -- 3
+* -- 61
+:= -- 93
+add.period$ -- 6
+call.type$ -- 2
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 67
-duplicate$ -- 1088
-empty$ -- 1879
-format.name$ -- 72
-if$ -- 4948
+cite$ -- 2
+duplicate$ -- 39
+empty$ -- 63
+format.name$ -- 3
+if$ -- 180
 int.to.chr$ -- 0
-int.to.str$ -- 64
-missing$ -- 160
-newline$ -- 298
-num.names$ -- 42
-pop$ -- 342
+int.to.str$ -- 2
+missing$ -- 6
+newline$ -- 13
+num.names$ -- 1
+pop$ -- 9
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 550
+skip$ -- 20
 stack$ -- 0
-substring$ -- 536
-swap$ -- 350
+substring$ -- 12
+swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 88
-width$ -- 66
-write$ -- 733
-(There were 15 error messages)
+warning$ -- 0
+while$ -- 3
+width$ -- 3
+write$ -- 28
+(There were 13 error messages)

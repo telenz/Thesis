@@ -9,6 +9,7 @@
 \label{sec:Interpretation}
 In order to interpret the result of the search in the context of supersymmetric models with almost mass degenerate charginos and neutralinos, sources of systematic uncertainties on the number of selected signal events must be identified and quantified.
 The interpretation will then be done with statistical methods that allow for the exclusion of parts of the supersymmetric parameter space on a 95\% confidence level.
+The signal models used for this interpretation are listed in Section~\ref{sec:SignalSamples}.
 
 \section{Systematic uncertainties of simulated signal samples}
 The systematic uncertainties on the number of signal events in the four signal regions are caused by uncertainties in the generation and simulation of signal events and the integrated luminosity of the considered data.
@@ -196,28 +197,45 @@ The \CLs method was developed for the Higgs searches at LEP in order not to over
 \CLs = \frac{\CLsb}{\CLb}.
 \end{equation*}
 The confidence level CL is defined as the probability of obtaining less than or equal the number of observed events P($n\leq n_{\text{obs}}$) for a given background (or background+signal) hypothesis.
-In general, the considered distribution can be any test statistics $Q$ and is not necessarily the distribution of the number of events.
-However, For Poissonian statistics it leads to the following expressions for \CLsb and \CLb for one signal region
-\begin{equation*}
+%In general, the considered distribution can refer to any test statistics $q$ and is not necessarily the distribution of the number of events.
+For Poissonian statistics it leads to the following expressions for \CLsb and \CLb for one signal region
+\begin{equation}
+\label{eq:CLsb_CLb}
 \begin{split}
 \CLsb &= \text{Poisson}\left( n\leq n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),\\
 \CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b   \right),
 \end{split}
-\end{equation*}
+\end{equation}
 where $\lambda$ is the mean of the Poisson distribution and the signal strength $\mu$ is the measure for the size of the signal cross section.
 
 Systematic uncertainties are included by varying the background expectation $b$ and the signal expectation $\mu\cdot s$ according to a predefined probability density function (pdf).
 For one Gaussian distributed source of systematic uncertainty on the background, this leads to the following expressions for \CLsb and \CLb
-\begin{equation*}
+\begin{equation}
+\label{eq:CLsb_CLb_withSys}
 \begin{split}
 \CLsb &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
 \CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),
 \end{split}
-\end{equation*}
+\end{equation}
 These expressions can be generalised for more than one signal region and more than one systematic uncertainty~\cite{bib:Ott_Thesis}.
 In case of multiple signal regions, the distribution of the systematic uncertainties becomes a multi-dimensional probability density function that takes the covariance matrix of the systematic uncertainties in different signal regions into account.
-In order to get rid of the nuisance parameters $\delta_s$ and $\delta_b$, the expression for \CLs is integrated over all possible values of $\delta_{s/b}$.
-This integration is generally not solvable analytically, but is calculated with pseudo data drawn from the pdf and inserted into the Poisson distribution.
+
+In this analysis, the procedure for limit setting follows~\cite{bib:LimitSetting_Higgs}.
+Instead of the number of observed events, the profile likelihood ratio 
+%The test statistics used for determining \CLsb and \CLb ($\mu=0$) is the profile likelihood ratio
+\begin{equation}
+q \left( n, \mu \right) = -2 \ln \frac{\mathcal{L}\left(  n | \mu, \hat{\delta}_b, \hat{\delta}_s \right)}{\mathcal{L}\left(  n  | \hat{\mu}, \hat{\delta}_b, \hat{\delta}_s \right)},
+\end{equation}
+is used as the test statistics for determining \CLsb and \CLb ($\mu=0$). $\mathcal{L} $ refers to the likelihood function
+\begin{equation}
+\mathcal{L} =  \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)+\mu\cdot s  (1+\delta_s)  \right)\, p\left(\delta_b\right)\, p\left(\delta_s\right).
+\end{equation}
+that already appeared in Eq.~\ref{eq:CLsb_CLb}.
+The parameters $\hat{\mu}$, $\hat{\delta}_b$ and $\hat{\delta}_s$ are fixed to the values that maximise the likelihood with respect to the observed data.
+Determining \CLsb and \CLb requires knowing the probability distributions of $q$ for the signal+background hypothesis (depending on $\mu$) and the background-only hypothesis ($\mu = 0$).  
+These distributions are determined by toy pseudo data with fixed values for $\delta_s$ and $\delta_b$.
+Finally, the signal strength $\mu$ is adjusted until \CLs - calculated based on $q$ - equals 0.05\%.
+Signal models are considered as excluded on a 95\% confidence level, if the signal strength is larger than the one found by the limit setting procedure.\\ 
 
 In this search, the systematic uncertainties on the background and the signal yields as well as the statistical uncertainty on the fake background are modelled with log-normal distributions, 
 whereas the statistical uncertainties on the leptonic background are modelled using gamma distributions.
@@ -263,7 +281,7 @@ Two direct production channels are taken into account: chargino pair production 
 The corresponding cross sections can be found in Table~\ref{tab:SignalCrossSections}.
 
 In total, 37 different lifetimes from $\ctau=1-10000\cm$ for each mass point ($100-600\gev$ in steps of 100\gev) are considered. %, leading to 37 different exclusion limits.
-Four exemplary exclusion limits are shown in Fig.~\ref{fig:1dLimits}, the full set of exclusion limits can be found in Appendix~\ref{app:ExlusionLimits}.
+Four exemplary exclusion limits are shown in Fig.~\ref{fig:1dLimits}, the full set of exclusion limits can be found in Appendix~\ref{app:ExlusionLimits}.\\
 
 \begin{figure}[!h]
   \centering 
@@ -288,10 +306,10 @@ Also, the \ecalo requirement rejects these charginos with higher efficiency.
 
 Due to the falling spectrum of the chargino production cross section, charginos with lower masses are more effectively excluded than charginos with higher masses.
 A 2-dimensional exclusion limit in the chargino lifetime-mass parameter space is shown in Fig.~\ref{fig:2dLimit}.
-\begin{figure}[!t]
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.79\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_2d_log_cm.pdf} 
+    \includegraphics[width=0.65\textwidth]{figures/analysis/Interpretation/ExclusionLimits/LimitPlot_2d_log_cm.pdf} 
   \end{tabular}
   \caption{Excluded regions in the mass versus lifetime space.
            All excluded models are located left of the contour line.
@@ -301,17 +319,17 @@ A 2-dimensional exclusion limit in the chargino lifetime-mass parameter space is
 \end{figure} 
 
 Charginos with masses of 100\gev can be excluded down to a lifetime of $\ctau=2\cm$.
-Charginos with a higher mass of 500\gev are excluded for lifetimes between $\ctau=70-500\cm$.
+Charginos with a higher mass of 500\gev are excluded for lifetimes between $\ctau=70-500\cm$.\\
 
 Since the lifetime of a wino-like chargino is determined by the mass splitting between $m_{\chipm}$ and $m_{\chiO}$, 
 it is possible to express the lifetime of the chargino as a mass gap $\Delta m_{\chipm\chiO}$ between the chargino and the lightest neutralino.
 The correspondence between lifetime and mass gap is taken from~\cite{bib:MassSplitting_Drees}, where the decay width of $\chipm \rightarrow \chiO\, \pi^{\pm}$ is expressed in terms of chargino, neutralino, and pion mass.
 Thus, the mass gaps that are considered are bounded by the pion mass of $\sim140\mev$.
 The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d}.
-\begin{figure}[!t]
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.55\textwidth]{figures/analysis/Interpretation/MassSplittingLimitPlot.pdf} 
+    \includegraphics[width=0.5\textwidth]{figures/analysis/Interpretation/MassSplittingLimitPlot.pdf} 
   \end{tabular}
   \caption{Excluded parameter region at 95\% CL for wino-like charginos and neutralinos depending on the chargino mass and the mass splitting between \chipm and \chiO, $\Delta m_{\chipm\chiO}$.
           All SUSY models between the red line and the grey area are excluded.}
@@ -320,9 +338,20 @@ The corresponding 2d exclusion limit can be found in Fig.~\ref{fig:DeltaMLimit2d
 It can be seen that this search is sensitive to mass splittings between $\sim 140\mev-210\mev$.\\
 
 \FloatBarrier
-\section{Comparison of the search sensitivity to the search for disappearing tracks}
+\section{Comparison to the search for disappearing tracks}
 The presented exclusion limits confirm the exclusion from the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} with slight improvements in the low lifetime region.
 The comparison of the two searches is shown in Fig~\ref{fig:Comparison2dLimit}.
+\begin{figure}[!b]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_largerRange.pdf}  
+    \hspace{0.03\textwidth}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_SmallRange.pdf} 
+  \end{tabular}
+  \caption{Comparison of the excluded regions in the mass versus lifetime space in this analysis (red line) and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} (black line). 
+           The right figure is a zoom on the low lifetime region. All SUSY models left of the lines are excluded.}
+  \label{fig:Comparison2dLimit}
+\end{figure} 
 
 For charginos with a lifetime of $\tau=0.07\ns$ ($\ctau=2.1\cm$), the observed limit of this search improves the limits derived in~\cite{bib:CMS:DT_8TeV} by $\sim35\gev$ in chargino mass, for a lifetime of $\tau=0.4\ns$ ($\ctau=12.0\cm$) by $\sim25\gev$. 
 For SUSY models with long chargino lifetimes the here presented search shows a higher exclusion power.
@@ -335,19 +364,8 @@ The correlation between simulated signal events, that pass the selection from~\c
 \end{equation*}
 In order to avoid an over- or underestimation of the event overlap, only the most sensitive signal region from this search is included in $N_B$.
 The degree of correlation is depicted in Fig.~\ref{fig:AnalysisOverlap} which shows the event overlap for signal models with chargino masses between $100-600\gev$ and lifetimes between $5\cm-1000\cm$.
+
 \begin{figure}[!t]
-  \centering 
-  \begin{tabular}{c}
-    \includegraphics[width=0.48\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_largerRange.pdf}  
-    \hspace{0.03\textwidth}
-    \includegraphics[width=0.48\textwidth]{figures/analysis/Interpretation/Comparison2dLimits_SmallRange.pdf} 
-  \end{tabular}
-  \caption{Comparison of the excluded regions in the mass versus lifetime space in this analysis (red line) and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} (black line). 
-           The right figure is a zoom on the low lifetime region. All SUSY models left of the lines are excluded.}
-  \label{fig:Comparison2dLimit}
-\end{figure} 
-\begin{figure}[!b]
-\vspace{20pt}
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/AnalysisOverlap.pdf}  

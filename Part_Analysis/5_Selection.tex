@@ -1,6 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
 \FloatBarrier
 \chapter{Event selection}
 \label{sec:EventSelection}
@@ -119,7 +118,7 @@ This selection includes requirements on the position of the vertex with respect 
 
 To maximise the signal acceptance, the trigger related selection cuts are chosen close to the trigger thresholds (see Section~\ref{sec:DatasetsAndTriggers}).
 In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the transverse momentum of the leading jet, \ptfirstjet, are shown for different signal models.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/hMetSmallRange_log_chiTracksnoSelection_4Signals.pdf}
@@ -190,7 +189,7 @@ First, a selection of high-quality tracks is enforced:
 \item The radial and longitudinal  distance of the track to the primary vertex must be small: \mbox{$|d0|<0.02\cm$}, \mbox{$|dz|<0.5\cm$}.
 \end{itemize}
 In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two quality selection cuts is shown.\\
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
@@ -231,10 +230,11 @@ Additionally, the candidate track must not be close to a jet ($\pt>20\gev$ and $
       Some loose isolation requirements are enforced to protect the tau reconstruction from jet contamination.
 \item The track must not be within a cone of $\Delta R< 0.5$ to a reconstructed jet ($\pt>20\gev$ and $|\eta|<4.5$).\\
 \end{itemize}
-These lepton and jet veto selection requirements are of course highly suppressing the background emerging from real lepton/jet production like in \WJets events.
+These lepton and jet veto selection requirements are highly suppressing the background emerging from real lepton/jet production like in \WJets events.
 The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:TrackdRmin} where the minimum $\Delta R$ between the candidate track and a reconstructed electron, muon, tau or jet is shown.\\
 \begin{figure}[!t]
   \centering 
+  \vspace{25pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminElec_log.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminMuon_log.pdf}\\
@@ -243,10 +243,11 @@ The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:T
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminJet_log.pdf}
   \end{tabular}
   \caption{The minimum $\Delta R$ between the candidate track and a reconstructed electron (top left), muon (top right), tau (bottom left) or jet (bottom right) 
-           after the full candidate track selection cuts but without the one shown in the corresponding plot (``N-1 plot''). 
+           after the event-based selection and the high-quality, kinematic and lepton/jet veto selection of the candidate track selection but without the one shown in the corresponding plot (``N-1 plot''). 
            The last bin contains all events where the candidate track has a $\Delta R_{\text{min}}$ larger than 1.5 or 5.0 to the next lepton or jet respectively. 
-           Events with no respective lepton or jet are all contained in the last bin.  }
+           Events with no respective lepton or jet are contained in the last bin.  }
   \label{fig:TrackdRmin}
+  \vspace{25pt}
 \end{figure}
 
 Unfortunately, the lepton veto selection cuts lack efficiency in some of the detector directions.
@@ -259,11 +260,7 @@ These are illustrated in Fig.~\ref{fig:DeadECALmap} showing a map of all ECAL ch
 
 
 Additionally, tracks that point towards intermodule gaps of ECAL cells or to the ECAL barrel endcap gap at $1.42<|\eta|<1.65$ are rejected.
-A list of the ECAL intermodule gaps, that is supplied centrally at CMS, is given in Table~\ref{tab:IntermoduleGaps}.
-
-The muon reconstruction is less efficient for muons in detector regions with bad cathode strip chambers (CSC).
-These bad chambers are also identified centrally at CMS and their $\eta$ and $\phi$ values are visualised in Fig.~\ref{fig:BadCSCMap}.
-Thus, also tracks pointing towards these regions within a distance of $\Delta R<0.25$ are rejected.
+A list of the ECAL intermodule gaps, which is supplied centrally at CMS, is given in Table~\ref{tab:IntermoduleGaps}.
 
 \begin{figure}[!t]
   \centering 
@@ -275,8 +272,16 @@ Thus, also tracks pointing towards these regions within a distance of $\Delta R<
   \label{fig:DeadECALmap}
 \end{figure}
 
+
+
+
+The muon reconstruction is less efficient for muons in detector regions with bad cathode strip chambers (CSC).
+These bad chambers are also identified centrally at CMS and their $\eta$ and $\phi$ values are visualised in Fig.~\ref{fig:BadCSCMap}.
+Thus, also tracks pointing towards these regions within a distance of $\Delta R<0.25$ are rejected.
+
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!b]
+\begin{table}[!t]
+\vspace{20pt}
 \centering
 \caption{Intermodule ECAL gaps.}
 \label{tab:IntermoduleGaps}
@@ -295,15 +300,17 @@ $\eta$-ranges     \\
 1.14164    $< \eta <$ 1.13812 \\
 \bottomrule
 \end{tabular}}
+\vspace{50pt}
 \end{table}  
 
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/BadCSCMap2.pdf}
   \end{tabular}
   \caption{Visualisation of the excluded region by the bad cathode strip chamber veto in the detector's $\phi - \eta$.}
   \label{fig:BadCSCMap}
+\vspace{30pt}
 \end{figure}
 
 To summarise, tracks pointing towards detector regions, that are not working properly or where the lepton reconstruction efficiencies are reduced, are vetoed as follows:
@@ -330,7 +337,7 @@ The resulting selection cuts are as follows
 \item Little calorimeter energy deposits (ECAL+HCAL) in a cone of $\Delta R < 0.5$ around the track: \mbox{$\ecalo<5\gev$}.
 \end{itemize}
 The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackIso_Ecalo_After_Preselection}.\\
-\begin{figure}[!h]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackIsolation_lin.pdf}
@@ -360,7 +367,7 @@ An overview over the full analysis preselection is given in Table~\ref{tab:Summa
                                                                &  \multicolumn{2}{l}{HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95}\\
                                                                &  \multicolumn{2}{l}{HLT\_MET120\_HBHENoiseCleaned }\\\midrule
 
-\multirow{4}{*}{\makecell[l]{Event-based \\ selection}}        &  \multirow{2}{*}{Trigger selection}   & \makecell[l]{$\ptfirstjet>100\gev$ \hfill with $|\eta_{\text{\nth{1}jet}}|<2.4$,  \\
+\multirow{4}{*}{\makecell[l]{Event-based \\ selection}}        &  \multirow{2}{*}{Trigger selection}   & \makecell[l]{$\ptfirstjet>110\gev$ \hfill with $|\eta_{\text{\nth{1}jet}}|<2.4$,  \\
                                                                                                                    \hfill $\text{CHF}_{\text{\nth{1}jet}}>0.2$, \\
                                                                                                                    \hfill $\text{CEF}_{\text{\nth{1}jet}}<0.5$, \\
                                                                                                                    \hfill $\text{NHF}_{\text{\nth{1}jet}}<0.7$, \\
@@ -401,7 +408,7 @@ The event yields after the selections of each of the categories from Table~\ref{
 Detailed event yield tables can be found in Appendix~\ref{app:cutflow}.\\
 %%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\arraystretch}{1.5}
-\begin{sidewaystable}
+\begin{sidewaystable}[!h]
 \centering
 \caption{Event yields in simulation and observed data after the selections of each of the categories from Table~\ref{tab:SummaryCuts}}
 \label{tab:CutflowALL}
@@ -431,13 +438,17 @@ Isolation selection                                                             
 \end{sidewaystable}
 %\end{landscape}
 
-
 Given the presented signal candidate selection, two variables remain that are highly discriminating:
 The transverse momentum \pt and the energy release per path length \dedx of the candidate track.
 In this analysis, the Asymmetric Smirnov discriminator \ias is used to enhance the discriminating power of \dedx.
 See Section~\ref{sec:Ias} for the definition and a detailed explanation of \ias.
 
 In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the selection of signal candidate events.
+These variables are used to optimise the sensitivity of the search.
+The optimisation process will be explained in Section~\ref{ch:Optimisation}.
+However, before the optimisation can be accomplished, a characterisation and estimation of the background is needed.
+This topic will be discussed in the following section.
+
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
@@ -450,10 +461,6 @@ In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaini
            }
   \label{fig:PtAndIasAfterFullPreselection}
 \end{figure}
-These variables are used to optimise the sensitivity of the search.
-The optimisation process will be explained in Section~\ref{ch:Optimisation}.
-However, before the optimisation can be accomplished, a characterisation and estimation of the background is needed.
-This topic will be discussed in the following section.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
