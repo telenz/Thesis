@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \FloatBarrier
 \chapter{General search strategy}
 \label{sec:GeneralSearchStrategy}
@@ -80,7 +81,7 @@ Since this analysis targets a search for Supersymmetry with charginos of lifetim
 %Thus, the signature of chargino events consists of isolated, short tracks that have large ionisation losses due to high chargino masses and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
 Thus, the signature of chargino events consists of isolated, short tracks and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
 
-In case of R-parity conservation one of the chargino decay products, the neutralino, is stable and weakly interacting, thus traversing the detector without leaving any further signature.
+In case of R-parity conservation, one of the chargino decay products, the neutralino, is stable and weakly interacting, thus traversing the detector without leaving any further signature.
 %The missing transverse energy of the neutralino is balanced by the missing transverse energy of the second produced SUSY particle.
 %This is either a neutralino or the decay products of the chargino in events with chargino pairs. 
 
@@ -91,7 +92,7 @@ First of all, the fermionic decay product (\eg a pion) can usually not be recons
 Secondly, it is very low in momentum because of the mass-degeneracy between \chipm and \chiO.
 The typical momentum of a pion originating from a chargino to neutralino decay in the \chipm rest frame is of the order 
 \begin{equation}
-p_{\pi}\sim \sqrt{m_{\chi^{\pm}_1}-m_{\chi^{0}_1}-m_{\pi}}.
+p_{\pi}\sim \sqrt{ \left( m_{\chipm} - m_{\chiO} \right)^2 - m_{\pi}^2}.
 \end{equation}
 %As the \chipm is rather slow for higher masses this is a good approximation also in the detector rest frame.
 For a mass gap between \chipm and \chiO of $\Delta m=150\, \mev$, the pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} (Fig.~\ref{fig:ptOfPions}).
@@ -134,9 +135,9 @@ Since Jet+MET triggers are not very specific for chargino events, it is importan
 One distinctive property of charginos compared to SM particles is their high mass. 
 Therefore, charginos can be identified by selecting high \pt tracks. 
 Furthermore, the energy loss per path length (\dedx) depends quadratically on the particle's mass for low velocities ($0.2<\beta\gamma<0.9$):
-\begin{equation*}
+\begin{equation}
 \langle\frac{dE}{dx}\rangle = K \frac{m^2}{p^2} +C
-\end{equation*}
+\end{equation}
 Therefore, \dedx constitutes a very nice discriminating variable for massive particles like charginos against SM particles.
 The selection of chargino events in this analysis thus relies on the selection of isolated high \pt tracks with high \dedx values. 
 

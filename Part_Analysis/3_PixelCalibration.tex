@@ -1,12 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \FloatBarrier
 \chapter{Improved dE/dx measurement for short tracks}
 \label{sec:DeDxMeasurement}
 As already pointed out in the previous chapter, the inclusion of the pixel energy measurements can increase the sensitivity when searching for short and highly ionising tracks.
 While the energy measurements in the silicon strip detector have already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, no complete calibration has been done for the pixel silicon tracker so far.
-To increase the discrimination power of \dedx for short tracks, such a calibration procedure is therefore conducted within this PhD thesis.
+To increase the discrimination power of \dedx for short tracks, such a calibration procedure is therefore conducted within this PhD thesis.\\
 
 The CMS tracker system provides a measurement of the particle's energy loss for each hit in the tracker.
 This is done by the detection of the number of electrons produced by the ionisation of the silicon.
@@ -49,7 +50,7 @@ p(x) = \frac{1}{\pi} \int_0^\infty\! e^{-t \log t - x t} \sin(\pi t)\, dt.
 The Landau distribution has no free parameters. Its most probable value is around 0.222.
 However, it is possible to introduce artificially a different most probable value and a width (at half maximum) with $x \rightarrow \frac{x-\text{MPV}}{\sigma}-0.222$.
 The Landau distribution is a highly asymmetric distribution with a long tail towards the right end (see Fig.~\ref{fig:landau}).
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/Landau.pdf}
@@ -76,14 +77,7 @@ The most probable energy loss of a charged particle, $\Delta_p$, can be describe
 with $\xi=(K/Z)\langle Z/A \rangle (x/\beta^2)$. 
 The thickness of the absorber $x$ appears explicitly in the Landau-Vavilov-Bichsel equation making the most probable energy loss per path \mbox{length $\Delta_p/dx$} logarithmically dependent on $x$.
 A comparison between the Bethe mean energy loss $\langle \dedx \rangle$ and the most probable energy loss $\Delta_p/dx$ for muons is shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
-\begin{figure}[!bt]
-  \centering 
-  \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis/dEdx_Bethe_Landau.png}
-  \end{tabular}
-  \caption{Comparison between the Bethe mean energy loss, restricted energy loss and the most probable energy loss described by the Landau-Vavilov-Bichsel function for muons for different values of absorber thickness of silicon. Taken from \cite{bib:PDG_2014}.} 
-  \label{fig:dEdx_Bethe_Landau}
-\end{figure}
+
 %However, it is difficult to determine the most probable value for tracks with only a few energy measurements available.
 %Large fluctuations can still lead to a bias towards higher value of the most probable \dedx.
 
@@ -99,7 +93,17 @@ This makes \dedx  a very well discriminating variable.
 %  \caption{Most probable energy loss in silicon, scaled to the mean loss of a minimally ionising particle (388 eV/$\mu$m) for different absorber thicknesses. Taken from \cite{bib:PDG_2014}.} 
 %  \label{fig:dEdx_Landau_Silicon}
 %\end{figure}
+\begin{figure}[!t]
+  \centering 
+  \begin{tabular}{c}
+  \includegraphics[width=0.6\textwidth]{figures/analysis/dEdx_Bethe_Landau.png}
+  \end{tabular}
+  \caption{Comparison between the Bethe mean energy loss, restricted energy loss and the most probable energy loss described by the Landau-Vavilov-Bichsel function for muons for different values of absorber thickness of silicon. Taken from \cite{bib:PDG_2014}.} 
+  \label{fig:dEdx_Bethe_Landau}
+\end{figure}
 Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles due to the different velocity distributions.\\
+
+
 
 As said before, the most probable energy loss is much more stable compared to the Bethe mean energy loss.
 Still, combining only a few measurements of $\Delta E/\Delta x$ can also lead for $\Delta_p/dx$ to large fluctuations towards high \dedx values.
@@ -110,10 +114,8 @@ One of the estimators for determining a track's \dedx is the harmonic-2 estimato
 \label{eq:Harmonic2Estimator}
 \end{equation}
 where $\Delta E_i /\Delta x_i$ corresponds to the $\Delta E$ and $\Delta x$ measurement in the $i$th hit of the track. 
-This estimator is known to be robust and not be easily biased by large fluctuations in  $\Delta E/\Delta x$ because of the suppression by the power of minus two.
+This estimator is known to be robust and is not easily biased by large fluctuations in  $\Delta E/\Delta x$ because of the suppression by the power of minus two~\cite{bib:Quertenmont_2010}.
 %The harmonic mean of all $N$ measurements to the power of two is used as estimator for the MPV of the \dedx distribution of a particle.
-
-%The harmonic-2 estimator is used for the pixel energy calibration described in the following section.
 
 
 \FloatBarrier
@@ -126,7 +128,7 @@ Unfortunately, due to various reasons, such as the imperfect constancy of the re
 
 This imperfection of the gain calibration can be seen in Fig.~\ref{fig:StabilityPlot_beforeCalibration}, where the mean of the harmonic-2 estimator for all tracks $\langle\ihtwo \rangle$ over the full data-taking period in 2012 is shown.
 Four different steps can be spotted.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
@@ -172,7 +174,7 @@ The measurement of $\Delta E/\Delta x$ is done in ADC counts per mm.
 ADC counts are a measure for the deposited charge after digitisation.
 %each $\Delta E/\Delta x$  measurement of all particles crossing the module is filled into a histogram. 
 Figure~\ref{fig:dEdx_Module} shows an example distribution for one module.
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/Landau_Module_352476680.pdf}
@@ -191,24 +193,20 @@ The path length $\Delta x$ is calculated with
 \end{equation}
 where $d_{\text{module}_i}$ is the thickness of module i and $\phi_{\text{track}}$ is the relative angle of the particle's trajectory to the normal axis of the module.
 With the measured MPV extracted from the fit, an inter-calibration factor is calculated for every module
-
 \begin{equation}
 c_{\text{inter}}=\frac{\mpv_{\text{target}}\, [\text{ADC/mm}]}{\mpv\, [\text{ADC/mm}]} = \frac{300 \cdot 265 \, \text{ADC/mm}}{\mpv\, [\text{ADC/mm}]}.
 \end{equation}
-
 The factor 300 $\cdot$ 265 ADC/mm is in principal an arbitrary number since the final response is adjusted by the absolute gain calibration described in the next section.
 However, it is chosen such that the measured calibration factors are close to one.
 The calibration factor can then be used to scale every single measurement in a module to a calibrated $\Delta E/\Delta x$ measurement
-
 \begin{equation}
 \left( \frac{\Delta E}{\Delta x}\right)_{\text{calibrated}}=c_{\text{inter}} \cdot \left(\frac{\Delta E}{\Delta x}\right)_{\text{uncalibrated}}
 \end{equation}
-
 The determination of the calibration factor is done for every of the five time steps, shown in Fig.~\ref{fig:StabilityPlot_beforeCalibration} independently, in order to get rid of the time dependency. 
 The outcome of the application of the calibration factors to the single energy measurements in the pixel tracker can be seen in Fig.~\ref{fig:StabilityPlot_afterCalibration}.
 The variation over time is indeed eliminated, resulting in a maximal time variation of less than $\sim1$\%.
 
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_afterCalibration_withoutStepFits_NEW.pdf}
@@ -229,7 +227,7 @@ The relation between $\Delta E$ in ADC counts and the energy loss in eV is given
 \begin{equation}
 \Delta E\,[\ev] = c_{\text{inter}} \cdot \Delta E\,[\text{ADC}] \cdot \frac{N_e}{\text{ADC}} \cdot 3.61 \, \ev,
 \end{equation}
-where $N_e$/ADC is the number of electrons which correspond to one calibrated ADC count and 3.61\,\ev is the  mean energy needed to create one electron-hole pair in silicon at -10$\degree$C.
+where $N_e$/ADC is the number of electrons which correspond to one calibrated ADC count and 3.61\,\ev is the  mean energy needed to create one electron-hole pair in silicon at $-10\degree$C.
 Such an absolute gain calibration can be done with the help of several methods (all explained in \cite{bib:Quertenmont_2010}).
 The absolute calibration of the silicon pixel tracker can rely on the already conducted absolute calibration of the silicon strip detector.
 In \cite{bib:Quertenmont_2010}, the absolute gain calibration was done with the help of the most probable energy release per path length of muons, 
@@ -239,7 +237,7 @@ Fig.~\ref{fig:StabilityPlot_afterCalibration} to the average measured \dedx in t
 \begin{equation}
 c_{\text{absolute}} = \frac{\langle dE/dx_{\text{strip}} \rangle}{\langle dE/dx_{\text{pixel}} \rangle} = \frac{3.303}{3.509} = 0.941.
 \end{equation}
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Strip_afterCalibration_withoutStepFits_NEW.pdf}
@@ -250,6 +248,7 @@ c_{\text{absolute}} = \frac{\langle dE/dx_{\text{strip}} \rangle}{\langle dE/dx_
 This factor is then applied on top of $c_{\text{inter}}$ for all pixel modules.
 
 Finally, an absolute calibration factor needs to be determined for the simulated samples, where the simulated pixel tracker is calibrated to the average \dedx of the silicon strip measured in data.
+
 
 \section{Discrimination of highly-ionising particles}
 \label{sec:Ias}
@@ -288,7 +287,7 @@ The corresponding templates for the energy release in the silicon strip detector
 
 
 A comparison between the energy release by MIPs (\ias) in data and simulation for high-quality tracks with $p>5\gev$ and $|\eta|<2.1$ can be found in Fig.~\ref{fig:Data-MC-Dedx_MIPs}.
-\begin{figure}[!tb]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/Discriminator_template_data_pixel_2012.png}
@@ -316,7 +315,7 @@ For this reason a data-based approach for analyses exploiting \dedx information 
 \label{sec:DiscriminationImprovements}
 The goal of including the pixel energy information is to increase the discrimination power of \ias between background and signal tracks, especially for shorter lifetimes.
 In Fig.~\ref{fig:MIPs-Signal-Dedx} (left), a comparison of the shapes of the energy release by MIPs and by signal tracks in simulation is shown (details about the simulated samples can be found in the next section Section~\ref{sec:SignalSamples}).
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/htrackASmiSmallRange_log_chiTracksGoodQualitySelection_2Signal_ttjets.pdf}   
@@ -324,7 +323,7 @@ In Fig.~\ref{fig:MIPs-Signal-Dedx} (left), a comparison of the shapes of the ene
   \end{tabular}
   \caption{Normalised \ias distribution for simulated background and signal tracks (left) and for four different signal models (right) 
            for high-purity tracks (as defined in \cite{bib:CMS:Tracking_2010}) with \pt$>10\gev$ and $|\eta|<2.1$.
-           For the illustration of the background tracks' spectrum simulated $t\bar{t}$+jets events are used (more information about this sample is given in Section~\ref{sec:SimulatedSamples}).}
+           For the illustration of the background tracks' spectrum simulated $t\bar{t}$+jets events are used (more information about this sample is given in Chapter~\ref{ch:SimulatedSamples}).}
   \label{fig:MIPs-Signal-Dedx}
 \end{figure} 
 It can be seen, that the \ias distributions of the signal models show a larger tail towards $\ias=1$, whereas the \ias of the background is rapidly falling.
@@ -373,7 +372,7 @@ Figure~\ref{fig:ROCplots} shows the signal selection efficiency against the back
   \label{fig:ROCplots}
 \end{figure} 
 The background selection efficiency is estimated with simulated $W$+jets  events but was additionally checked on simulated $t\bar{t}$+jets  and QCD-multijet events 
-(further information about the simulated samples can be found in the next section).
+(further information about the simulated samples can be found in the next Chapter~\ref{ch:SimulatedSamples}).
 No significant difference between these processes in the background selection efficiency was observed.
 
 The signal selection efficiency and the background suppression depend on the mass and the lifetime of the charginos.

@@ -1,8 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \FloatBarrier
 \chapter{Characterisation and estimation of the Standard Model backgrounds}
 \label{ch:BackgroundEstimation}
-After the application of the signal candidate selection, explained in the previous section, the background arising from Standard Model processes is dramatically reduced.
+After the application of the signal candidate selection, explained in the previous chapter, the background arising from Standard Model processes is dramatically reduced.
 Only two events in the simulated \WJets sample remain.
 One of these originates from an unreconstructed muon, the other one from an unreconstructed electron, both passing the lepton vetoes.
 This implies, that the electron, muon, and tau vetos cannot reject all leptons because some are not properly reconstructed.
@@ -39,7 +40,7 @@ Details on the reconstruction algorithm of tracks at CMS can be found in Section
 
 Reconstructed tracks that are fake tracks consist in general only out of a few hits.
 This can be seen in Fig.~\ref{fig:NValidFakes}, where the normalised distribution of the number of hits from fake tracks in simulated \WJets events is depicted.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/NValidForFakes_chiTracksfullSelectionNoTriggerCuts.pdf}
@@ -61,7 +62,7 @@ First, the background is determined inclusively in \dedx.
 Second, the \dedx (\ias) distribution is estimated with the help of a fake enriched control region. 
 This second step is needed to enable an optimisation in \dedx (see Section~\ref{ch:Optimisation}).
 
-\FloatBarrier
+
 \subsection{Inclusive fake background estimation}
 The inclusive background estimation closely follows the background estimation method done in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
 It aims at determining the probability of having a fake track in an event that passes the full signal candidate selection (Table~\ref{tab:SummaryCuts}) plus a potential additional \pt selection cut that is determined in an
@@ -78,9 +79,8 @@ Since the candidate track selection requires a track with a $\pt>20\gev$ that is
 Thus, applying the track-based signal candidate selection on \Zlep events selects fake tracks with high purity.
 
 
-The selection of two well reconstructed muons and electrons is done with the single-muon and single-electron datasets listed in Table~\ref{tab:ElectronMuonCRDatasets}.
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!b]
 \centering
 \caption{Datasets used for the determination of the fake rate.}
 \label{tab:ElectronMuonCRDatasets}
@@ -103,6 +103,8 @@ Dataset  & Integrated luminosity [\fbinv]   \\
 \multicolumn{2}{c}{} \\
 \end{tabular}}
 \end{table}
+
+The selection of two well reconstructed muons and electrons is done with the single-muon and single-electron datasets listed in Table~\ref{tab:ElectronMuonCRDatasets}.
 These datasets contain at least one muon or one electron in every event.
 For the $Z\rightarrow\mu\bar{\mu}$ selection, an event is required to have two muons with $\pt>25\gev$ and $|\eta|<2.4$.
 To suppress background from cosmic muons, the distance from the primary vertex must be less than $|d0|<0.2\cm$ in radial and $|dz|<0.5\cm$ in longitudinal direction.
@@ -113,7 +115,7 @@ An isolation criterion is applied that requires the sum of transverse momenta of
 Finally, the muons are required to be opposite in charge and to have an invariant mass between 80 to 100\gev.
 The $Z\rightarrow\mu\bar{\mu}\,+\,\text{fake track}$ selection is summarised in Table~\ref{tab:FakeMuonSample}.
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!b]
 \centering
 \caption{Event selection cuts for the $Z\rightarrow\mu\bar{\mu}\,+\,\text{fake}$ control sample to estimate the inclusive fake background.}
 \label{tab:FakeMuonSample}
@@ -153,7 +155,7 @@ of the measurements in the tracker and in the ECAL.
 Again, the two electrons must be opposite in charge and their invariant mass must be between $80-100\gev$.
 A summary of the $Z\rightarrow e\bar{e}\,+\,\text{fake track}$ event selection can be found in Table~\ref{tab:FakeElectronSample}.\\
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!b]
 \centering
 \caption{Event selection cuts for the $Z\rightarrow e\bar{e}\,+\,\text{fake}$ control sample to estimate the inclusive fake background.}
 \label{tab:FakeElectronSample}
@@ -210,7 +212,7 @@ This is not the final result as the optimisation in \pt will add an additional \
 
 As mentioned before, it was checked within~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} that the fake rate is constant for different Standard Model processes.
 This is shown in Fig.~\ref{fig:FakeRate} where the fake rate is depicted for the most important SM processes.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.79\textwidth]{figures/analysis/Background/fakeTrkRates.pdf}
@@ -219,7 +221,7 @@ This is shown in Fig.~\ref{fig:FakeRate} where the fake rate is depicted for the
   \label{fig:FakeRate}
 \end{figure}
 Since the fake rate is constant for different SM processes, the fake rate determined on the \Zlep dataset can be generalised for all SM background possibly contributing to this search.
-Thus, the inclusive fake background can be estimated by multiplying the fake rate with the number of events selected from the MET dataset (Table ~\ref{tab:SearchSamples}) by applying the event-based signal candidate requirements from Table~\ref{tab:SummaryCuts}.
+Thus, the inclusive fake background can be estimated by multiplying the fake rate with the number of events selected from the MET dataset (Table ~\ref{tab:SearchSamples}) by applying the event-based signal candidate requirements from Table~\ref{tab:SummaryCuts}
 \begin{equation*}
 N^{\text{fake, inclusive in I$_{\text{as}}$}}_{\text{bkg}} = \fakerate \cdot N_{\text{event-based selection}}^{\text{MET}}.
 \end{equation*}
@@ -232,7 +234,6 @@ That means that after the definition of the signal region, $N^{\text{fake, inclu
 Possible differences between the fake rate in \Zlep events and other SM processes are estimated on simulated events and taken into account as a systematic uncertainty (see Section~\ref{sec:FakeRateUncertainty}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\FloatBarrier
 \subsection{dE/dx shape of fake background}
 The information about the energy release per path length for fake tracks should not be taken from simulated samples as the simulation of \dedx is not reliable (cf. Fig.~\ref{fig:Data-MC-Dedx_MIPs}).
 Within this analysis the Asymmetric Smirnov discriminator \ias is used to discriminate signal against background with respect to \dedx (see Section~\ref{sec:Ias}). 
@@ -242,12 +243,12 @@ To enrich fake tracks, it is possible to invert the selection cuts on the number
 Figure~\ref{fig:NMissInnerAndMiddle} shows the distribution of the number of missing inner plus missing middle hits for fake and leptonic tracks in simulated \WJets events.
 It can be seen that this selection is enriched by fakes.
 The resulting purity of fakes in \fakeCR is about 98\% (see Fig.~\ref{fig:IasSRCRFakes}). 
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/NLostInnerPlusMiddleForAllBkg_chiTracksQCDsupressionTrigger.pdf}
   \end{tabular}
-  \caption{Normalised number of missing inner plus missing middle hits for fake and leptonic tracks for the full candidate track selection with the selection requirements on $N_{\text{miss}}^{\text{inner}}$ and $N_{\text{miss}}^{\text{middle}}$ removed. Trigger requirements and QCD suppression cuts were removed to enhance the statistical precision.}
+  \caption{Normalised number of missing inner plus missing middle hits for fake and leptonic tracks for the full candidate track selection with the selection requirements on $N_{\text{miss}}^{\text{inner}}$ and $N_{\text{miss}}^{\text{middle}}$ removed. Trigger selection and QCD suppression cuts were removed to enhance the statistical precision.}
   \label{fig:NMissInnerAndMiddle}
 \end{figure}
 
@@ -257,14 +258,14 @@ As the exact definition of the signal region will be addressed during optimisati
 The comparison of the \ias shape of fake tracks can only be done on simulation.
 Thus, simulated \WJets events are used to select fake tracks in both regions.
 A comparison of the shape for the candidate track selection and the \fakeCR is shown in Fig.~\ref{fig:IasSRCRFakes}.
-
-\begin{figure}[!t]
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hASmi_fakes_ECalaoLe5_trackPtGt20.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hASmi_fakes_ECalaoLe5_trackPtGt40.pdf}
   \end{tabular}
-  \caption{Comparison of the \ias shape between \fakeCR and the signal region for two different track \pt selections of $\pt>20\gev$ (left) and $\pt>40\gev$ (right). To enhance the statistical precision only the track-based selection is applied.}
+  \caption{Comparison of the \ias shape between \fakeCR and the signal region for two different track \pt selections of $\pt>20\gev$ (left) and $\pt>40\gev$ (right). 
+           To enhance the statistical precision only the track-based selection is applied.}
   \label{fig:IasSRCRFakes}
 \end{figure}
 
@@ -338,7 +339,7 @@ The ISR jet causes the \met in the event.
 Muons can fail reconstruction if they point towards a bad cathode strip chamber.
 This is taken into account in the candidate track selection.
 However, some of the muons still fail reconstruction if they fall within the gap between stations 0 and 1 of the drift tube system at $|\eta|=0.25$.
-The muon reconstruction efficiency drops from around 99\% to a value of around 94\% as shown in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
+The muon reconstruction efficiency drops from around 99\% to a value of around 94\%, as shown in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
 This possibility is illustrated in a simulated event shown in Fig.~\ref{fig:LostMuon}.
 \begin{figure}[!tb]
   \centering 
@@ -359,7 +360,7 @@ Due to the additional selection in \ias, muons can be efficiently suppressed.
 E.g. in the event shown in Fig.~\ref{fig:LostMuon}, the muon has an \ias value of about 0.007.\\
 
 All of the three lepton types behave like MIPs.
-Thus, they loose much less energy compared to hypothetical new heavy particles and can therefore be further discriminated by their ionisation loss in the tracker system.
+Thus, they loose much less energy than hypothetical new heavy particles and can therefore be further discriminated by their ionisation loss in the tracker system.
 
 To have the possibility to make an optimisation in the two main discriminating variables \pt and \ias, the background estimation methods are designed to work for all different \pt and \ias selection cuts.\\
 
