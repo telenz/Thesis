@@ -2,34 +2,143 @@
 \chapter{The Standard Model of particle physics}
 
 %With the formulation of a relativistic quantum field theory and of spontaneous supersymmetry breaking by the Higgs mechanism, it was made possible to explain almost all observations of particle physics up to today.
-The formulation of a relativistic quantum field theory and of spontaneous symmetry breaking by the Higgs mechanism, allowed to built a theory which is capable to explain almost all observations of particle physics until today~\cite{FIXME}.
-This theory is known as the Standard Model of particle physics.
-The existence of its last missing piece 
-%(to be a full renormalisable and gauge invariant theory that can describe particle masses)
-, the Higgs boson, could be proven at the LHC in the year 2012~\cite{FIXME}.
+The formulation of a relativistic quantum field theory and of spontaneous symmetry breaking (SSB) by the Higgs mechanism, allowed to built a theory which is capable to explain almost all observations of particle physics until today~\cite{bib:Theory:GFitter}.
+This theory is known as the Standard Model of particle physics (SM).
+The existence of its last missing piece, the Higgs boson, could be proven at the LHC in the year 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation}.
 
-The Standard Model is a SU(3)xSU(2)xSU(1) non-abelian gauge theory, of which its symmetries are reduced ``after'' spontaneous symmetry breaking to SU(3)xU(1).
-All particles that were found until today can be explained with it~\cite{FIXME}.
-Furthermore, it is able to describe three of the four fundamental forces, the strong, weak and electromagnic force.
+The Standard Model is a $SU(3)_c  \times SU(2)_L \times SU(1)_Y$ non-abelian gauge theory.
+``After'' spontaneous symmetry breaking, its symmetries are reduced to $SU(3)_c \times U(1)_{EM}$.
+All particles that were found until today are contained in it\footnote{One can argue, that the right-handed neutrino, which is proven to exist, is not contained. But as at least the left-handed neutrino is embedded, we want to ignore that for a moment.}.
+Furthermore, it is able to describe three of the four fundamental forces: the strong, weak and electromagnetic force.
 
 In the following, a small introduction to the theory and phenomenology of the Standard Model is given.
 It is not meant as a complete description.
-The reader is referred to \cite{FIXME}, for a thorough and extensive description.
+The reader is referred to \cite{bib:SM_book_Peskin,bib:SM_book_Ryder,bib:SM_book_Griffiths}, for a thorough and extensive introduction.
 
-\section{The Langrangian density}
-The heart of every quantum field theory is the Lagrangian density with which it can be described.
-For the Standard Model of particle physics, it is the following:
+\section{The particle content}
+It sould be first noted, since the Standard Model is a quantum field theory, every field can be considered also as a particle and vice versa.
+
+The Standard Model of particle physics contains three different particle types, or three different types of fields.
+First, there are the so-called ``matter particles'', which are all spin 1/2 particles in the SM.
+Second, the forces are described by spin 1 vector bosons.
+And finally, in order to give masses to all particles the Standard Model embedds the Higgs boson, a scalar spin 0 particle.
+
+\subsection*{Fermions in the Standard Model}
+The fermionic content can be further subdivided into leptons and quarks.
+In contrast to quarks, leptons are not strongly interacting, thus they only couple electromagentically and weakly to other particles.
+Both, the quarks and the leptons are ordered into three different families.
+Across these families, all quantum numbers are conserved.
+They only differ by their mass.
+
+Each family forms a $SU(2)_L$ doublet, which causes the coupling via the weak force.
+The right-handed partners form $SU(2)$ singlets, thus, don't couple via the weak interaction.
+As quarks carry one further quantum number, the color, they are, additionally, grouped into $SU(3)_c$ triplets.
+All fermions form singlets under $U(1)_Y$ with different hypercharges.
+
+\subsection*{Vector bosons in the Standard Model}
+As mentioned before, the vector bosons describe three of the four fundamental forces.
+There is one gauge boson coressponding to every generator of the above mentioned gauge groups.
+For $U(1)_Y$, it is the $B_{\mu}$, for $SU(2)_L$, there are three gauge bosons $W_{\mu}^{1,2,3}$ and finally eight gauge bosons $G_{\mu}^{1...8}$ for $SU(3)$, which are called gluons.
+As the $B$-field and the neutral $W^3_{\mu}$-field can mix, ``after'' SSB the basis can be changed and lead to the well known photon and $Z$-boson.
+
+\subsection*{The Higgs boson}
+A somehow extraordinary role plays the Higgs boson, that was predicted already 50 years ago by Peter Higgs~\cite{bib:Higgs_Prediction,bib:Higgs_Prediction_2} and could be proven existent by the LHC experiments CMS and Atlas in 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation}.
+This particle is a consequence of the spontanous symmetry breaking after rotating three of the four degerees of freedom to masses of the $W$-and $Z$-bosons.
+It is the only known fundamental scalar particle.\\
+
+
+An overview of all Standard Model particles and their transformation properties are shown in Table~\ref{tab:ParticleContent_SM}.
+If particles transform as singlett under $SU(2)_L$ or $SU(3)_c$, they don't couple via the corresponding force.
+The hypercharges $Y$ are determined by $Q=Y+I_3$, where $Q$ is the electric charge and $I_3$ is the third component of the weak isospin with $I^a = \sigma^a/2$ ($\sigma^a$ are the pauli matrices). 
+
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!h]
+\centering
+\caption{All particles contained in the Standard Model and their transformation properties under $SU(3)_c  \times SU(2)_L \times SU(1)_Y$.}
+\label{tab:ParticleContent_SM}
+\makebox[0.99\textwidth]{
+\begin{tabular}{llll}
+\multicolumn{4}{c}{} \\
+\toprule
+                              & $SU(3)_c$         & $SU(2)_L$    & $U(1)_Y$            \\
+\midrule
+Fermions:                     &                   &              &                     \\
+\midrule
+$\left( \nu_L , e_L \right)^T$ & \textbf{1}         & \textbf{2}            & $-1$ \\
+$e_R$                          & \textbf{1}        & \textbf{1}             & $-2$ \\ 
+$\left( u_L , d_L \right)^T$   & \textbf{3}         & \textbf{2}              & $+\frac{1}{3}$ \\
+$u_R$                          & \textbf{3}        & \textbf{1}             & $+\frac{4}{3}$ \\ 
+$d_R$                          & \textbf{3}        & \textbf{1}             & $-\frac{2}{3}$ \\ 
+\midrule
+ Vector bosons:                &        &          &             \\
+\midrule
+$B_{\mu}$                       & \textbf{1}        & \textbf{1}             & 0 \\ 
+$W_{\mu}^{a}$                    & \textbf{1}        & \textbf{3}             & 0 \\ 
+$G_{\mu}^{a}$                    & \textbf{8}        & \textbf{1}             & 0 \\ 
+\midrule
+
+Higgs boson: $H$            &  \textbf{1}        & \textbf{2}             & $-1$ \\ 
+\bottomrule
+\multicolumn{4}{c}{} \\
+\end{tabular}}
+\end{table}  
+
+
+\section{The Lagrangian density}
+In particle physics, the probability of a decay or an interaction between particles can be calculated with the help of the Lagrangian density.
+The Lagrangian density of the Standard Model is the smallest set of possible Lagrangian terms, that are renormalisable and contain all up to date known particles as well as the above mentioned gauge symmetries.
+It is the following:
 \begin{equation}
-\mathcal{L} = 
+\mathcal{L} = FIXME.
 \end{equation}
-This is the smallest set of possible Lagrangian terms, that is renormilsable and contains all up to date known particles and the above mentioned gauge symmetries.
-
-
-
-
+Laber ein bisschen darueber.
 
 \section{The Higgs mechanism}
+An essiential ingrediant of the Standard Model is the Higgs mechanism, also called Brout-Englert-Higgs mechanism (BEH mechanism).
+It was developed by Peter Higgs, Brout and Engler~\cite{FIXME} and by Weinberg and Salam later applied on a $SU(2) \times U(1)$ gauge theory.
+By this, a renormalisable theory of the weak and the electromagnetic theory was born.
+
+\subsection*{Mass terms of the gauge bosons}
+
+Due to the BEH mechanism, it is possible to give masses to the $W^{\pm}$-and Z-bosons.
+A scalar field $\Phi$ (higgs field) is required, which has a non-zero vacuum expectation value.
+This is possible, when the mass paramater $\mu$ in front of the bilear term in line x of Eq.~\ref{FIXME} is smaller than zero and $\lambda>0$ at the same time.
+
+The resulting potential of the higgs field is, thus, the famous ``mexican-hat'' potential.
+Expanding the Lagrangian density around the minimum of $\Phi = \left( 0,v \right)$, the gauge symmetries of $SU(2)_L \times U(1)_Y$ are spontanously broken and only a remaining electrical charge conserving symmetry $U(1)_{EM}$ remains.
+After an unitary transformation, three of the four degrees of freedom of the higgs field are absorbed by the gauge fields .
+Thus, ``after'' SSB, the part of the Lagrangian containing the scalar field is as follows
+\begin{equation}
+\mathcal{L}_{\text{Higgs}}
+\end{equation}
+
+One kinetic and one mass term for one of the degrees of freedom of the higgs fields remains, which is the Higgs boson ($H$).
+Furthermore, three of the four gauge bosons require a mass.
+The remaining gauge boson, being the photon remains massless because of the conserved $U(1)_{EM}$ gauge symmetry.
+The mass eigenstates of the gauge bosons are obviouls different to the one from Eq.~\eqref{FIXME}.
+
+The diagonilisation of the neutral mass matrices is described by the Weinbergangle $\theta_W$.
+
+xxxx
+
+For the charged gauge bosons, the relation is the followong.
+xxx
+
+The masses are thus the followijg:
+xxx
+
+
+\subsection*{Mass terms of the fermions}
+
+bl
+
 \section{Limitations of the Standard Model}
+
+\subsection*{Dark Matter}
+\subsection*{Hierachy problem}
+\subsection*{Dark Energy}
+\subsection*{Gravity}
+\subsection*{Baryon-Antibaryon assymetery}
 
 \chapter{Supersymmetry}
 \section{Offering answers}

@@ -2,111 +2,117 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
 Database file #1: Thesis.bib
-You're missing a field name---line 48 of file Thesis.bib
+Repeated entry---line 30 of file Thesis.bib
+ : @article{bib:Higgs_Prediction
+ :                              ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 178 of file Thesis.bib
  : 
  : %  title   = {Jet Identification},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 107 of file Thesis.bib
+I was expecting a `,' or a `}'---line 237 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-JME-10-014",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 138 of file Thesis.bib
+I was expecting a `,' or a `}'---line 268 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SMP-14-002",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 163 of file Thesis.bib
+You're missing a field name---line 293 of file Thesis.bib
  : 
  : % author  = {F. Pandolfi, D. del Re, M. Voutilainen},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 173 of file Thesis.bib
+You're missing a field name---line 303 of file Thesis.bib
  : 
  : %   author  = "{F. Pandolfi, D. del Re, M. Voutilainen}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 182 of file Thesis.bib
+You're missing a field name---line 312 of file Thesis.bib
  : 
  : %   author  = "{F. Pandolfi, D. del Re, M. Voutilainen}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 437 of file Thesis.bib
+I was expecting a `,' or a `}'---line 567 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-JME-13-004",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 459 of file Thesis.bib
+I was expecting a `,' or a `}'---line 589 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-LUM-13-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 486 of file Thesis.bib
+I was expecting a `,' or a `}'---line 616 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-003",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 661 of file Thesis.bib
+I was expecting a `,' or a `}'---line 791 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-005",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 673 of file Thesis.bib
+I was expecting a `,' or a `}'---line 803 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1010 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1140 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-EXO-13-006",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1021 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1151 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "FIXME"
-You've used 0 entries,
+Warning--empty publisher in bib:SM_book_Peskin
+Warning--empty publisher in bib:SM_book_Griffiths
+You've used 8 entries,
             2369 wiz_defined-function locations,
-            584 strings with 4568 characters,
-and the built_in function-call counts, 21 in all, are:
-= -- 0
-> -- 0
+            651 strings with 6302 characters,
+and the built_in function-call counts, 2431 in all, are:
+= -- 289
+> -- 57
 < -- 0
-+ -- 0
-- -- 0
-* -- 3
-:= -- 9
-add.period$ -- 0
-call.type$ -- 0
++ -- 23
+- -- 15
+* -- 168
+:= -- 320
+add.period$ -- 24
+call.type$ -- 8
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 10
+duplicate$ -- 138
+empty$ -- 253
+format.name$ -- 9
+if$ -- 652
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 8
+missing$ -- 21
+newline$ -- 49
+num.names$ -- 6
+pop$ -- 50
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 70
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 99
+swap$ -- 39
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There were 13 error messages)
+warning$ -- 2
+while$ -- 15
+width$ -- 9
+write$ -- 96
+(There were 14 error messages)

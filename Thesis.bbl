@@ -1,3 +1,65 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{bib:Theory:GFitter}
+M.~Baak, M.~Goebel, J.~Haller{ et~al.}, ``{The Electroweak Fit of the Standard
+  Model after the Discovery of a New Boson at the LHC}'', {\em Eur. Phys. J.}
+  {\bf C72} (2012) 2205, \href{http://www.arXiv.org/abs/1209.2716}{{\tt
+  arXiv:1209.2716}}.
+\href{http://dx.doi.org/10.1140/epjc/s10052-012-2205-9}{{\tt
+  doi:10.1140/epjc/s10052-012-2205-9}}.
+%%CITATION = ARXIV:1209.2716;%%.
+
+\bibitem{bib:Theory:CMS:HiggsObservation}
+{ CMS} Collaboration, ``{Observation of a new boson at a mass of 125 GeV with
+  the CMS experiment at the LHC}'', {\em Phys. Lett.} {\bf B716} (2012) 30--61,
+  \href{http://www.arXiv.org/abs/1207.7235}{{\tt arXiv:1207.7235}}.
+\href{http://dx.doi.org/10.1016/j.physletb.2012.08.021}{{\tt
+  doi:10.1016/j.physletb.2012.08.021}}.
+%%CITATION = ARXIV:1207.7235;%%.
+
+\bibitem{bib:Theory:Atlas:HiggsObservation}
+{ ATLAS} Collaboration, ``{Observation of a new particle in the search for the
+  Standard Model Higgs boson with the ATLAS detector at the LHC}'', {\em Phys.
+  Lett.} {\bf B716} (2012) 1--29,
+  \href{http://www.arXiv.org/abs/1207.7214}{{\tt arXiv:1207.7214}}.
+\href{http://dx.doi.org/10.1016/j.physletb.2012.08.020}{{\tt
+  doi:10.1016/j.physletb.2012.08.020}}.
+%%CITATION = ARXIV:1207.7214;%%.
+
+\bibitem{bib:SM_book_Peskin}
+M.~E. Peskin and D.~V. Schroeder, ``{An Introduction to quantum field
+  theory}''.
+\newblock
+1995.
+\newblock
+%%CITATION = ISBN-9780201503975;%%.
+
+\bibitem{bib:SM_book_Ryder}
+L.~H. Ryder, ``{QUANTUM FIELD THEORY}''.
+\newblock Cambridge University Press,
+1996.
+\newblock
+%%CITATION = ISBN-9780521237642;%%.
+
+\bibitem{bib:SM_book_Griffiths}
+D.~Griffiths, ``{Introduction to elementary particles}''.
+\newblock
+2008.
+\newblock
+%%CITATION = ISBN-9783527406012;%%.
+
+\bibitem{bib:Higgs_Prediction}
+P.~W. Higgs, ``{Broken symmetries, massless particles and gauge fields}'', {\em
+  Phys. Lett.} {\bf 12} (1964) 132--133.
+\href{http://dx.doi.org/10.1016/0031-9163(64)91136-9}{{\tt
+  doi:10.1016/0031-9163(64)91136-9}}.
+%%CITATION = PHLTA,12,132;%%.
+
+\bibitem{bib:Higgs_Prediction_2}
+P.~W. Higgs, ``{Broken Symmetries and the Masses of Gauge Bosons}'', {\em Phys.
+  Rev. Lett.} {\bf 13} (1964) 508--509.
+\href{http://dx.doi.org/10.1103/PhysRevLett.13.508}{{\tt
+  doi:10.1103/PhysRevLett.13.508}}.
+%%CITATION = PRLTA,13,508;%%.
 
 \end{thebibliography}\endgroup
