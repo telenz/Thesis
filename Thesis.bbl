@@ -139,10 +139,61 @@ A.~Salam, ``{Weak and Electromagnetic Interactions}'', {\em Conf. Proc.} {\bf
   doi:10.1103/PhysRevLett.114.191803}}.
 %%CITATION = ARXIV:1503.07589;%%.
 
+\bibitem{bib:Naturalness_tHooft}
+G.~'t~Hooft, C.~Itzykson, A.~Jaffe{ et~al.}, ``{Recent Developments in Gauge
+  Theories. Proceedings, Nato Advanced Study Institute, Cargese, France, August
+  26 - September 8, 1979}'', {\em NATO Sci. Ser. B} {\bf 59} (1980)
+pp.1--438.
+%%CITATION = INSPIRE-161902;%%.
+
 \bibitem{bib:DM:RotationCurves}
 J.~E. Gunn and B.~A. Peterson, ``{On the Density of Neutral Hydrogen in
   Intergalactic Space}'', {\em Astrophys. J.} {\bf 142} (1965) 1633.
 \href{http://dx.doi.org/10.1086/148444}{{\tt doi:10.1086/148444}}.
 %%CITATION = ASJOA,142,1633;%%.
+
+\bibitem{bib:Planck_2015}
+{ Planck} Collaboration, ``{Planck 2015 results. XIII. Cosmological
+  parameters}'',
+\href{http://www.arXiv.org/abs/1502.01589}{{\tt arXiv:1502.01589}}.
+%%CITATION = ARXIV:1502.01589;%%.
+
+\bibitem{bib:Golfand_Likhtman_1971}
+{\relax Yu}.~A. Golfand and E.~P. Likhtman, ``{Extension of the Algebra of
+  Poincare Group Generators and Violation of p Invariance}'', {\em JETP Lett.}
+  {\bf 13} (1971) 323--326.
+[Pisma Zh. Eksp. Teor. Fiz.13,452(1971)].
+%%CITATION = JTPLA,13,323;%%.
+
+\bibitem{bib:Haag_1974}
+R.~Haag, J.~T. Lopuszanski, and M.~Sohnius, ``{All Possible Generators of
+  Supersymmetries of the s Matrix}'', {\em Nucl. Phys.} {\bf B88} (1975) 257.
+\href{http://dx.doi.org/10.1016/0550-3213(75)90279-5}{{\tt
+  doi:10.1016/0550-3213(75)90279-5}}.
+%%CITATION = NUPHA,B88,257;%%.
+
+\bibitem{bib:Drees_1996}
+M.~Drees, ``{An Introduction to supersymmetry}'', in {\em {Current topics in
+  physics. Proceedings, Inauguration Conference of the Asia-Pacific Center for
+  Theoretical Physics (APCTP), Seoul, Korea, June 4-10, 1996. Vol. 1, 2}}.
+\newblock 1996.
+\newblock
+\href{http://www.arXiv.org/abs/hep-ph/9611409}{{\tt arXiv:hep-ph/9611409}}.
+\newblock
+%%CITATION = HEP-PH/9611409;%%.
+
+\bibitem{bib:Aitchison_2005}
+I.~J.~R. Aitchison, ``{Supersymmetry and the MSSM: An Elementary
+  introduction}'',
+\href{http://www.arXiv.org/abs/hep-ph/0505105}{{\tt arXiv:hep-ph/0505105}}.
+%%CITATION = HEP-PH/0505105;%%.
+
+\bibitem{bib:Drees_2004}
+M.~Drees, R.~Godbole, and P.~Roy, ``{Theory and phenomenology of sparticles: An
+  account of four-dimensional N=1 supersymmetry in high energy physics}''.
+\newblock World Scientific,
+2004.
+\newblock
+%%CITATION = INSPIRE-671271;%%.
 
 \end{thebibliography}\endgroup
