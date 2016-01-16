@@ -196,4 +196,23 @@ M.~Drees, R.~Godbole, and P.~Roy, ``{Theory and phenomenology of sparticles: An
 \newblock
 %%CITATION = INSPIRE-671271;%%.
 
+\bibitem{bib:Unification}
+U.~Amaldi, W.~de~Boer, and H.~Furstenau, ``{Comparison of grand unified
+  theories with electroweak and strong coupling constants measured at LEP}'',
+  {\em Phys. Lett.} {\bf B260} (1991) 447--455.
+\href{http://dx.doi.org/10.1016/0370-2693(91)91641-8}{{\tt
+  doi:10.1016/0370-2693(91)91641-8}}.
+%%CITATION = PHLTA,B260,447;%%.
+
+\bibitem{bib:pMSSM}
+{ MSSM Working Group} Collaboration, A.~Djouadi {et~al.}, ``{The Minimal
+  supersymmetric standard model: Group summary report}'', in {\em {GDR
+  (Groupement De Recherche) - Supersymetrie Montpellier, France, April 15-17,
+  1998}}.
+\newblock 1998.
+\newblock
+\href{http://www.arXiv.org/abs/hep-ph/9901246}{{\tt arXiv:hep-ph/9901246}}.
+\newblock
+%%CITATION = HEP-PH/9901246;%%.
+
 \end{thebibliography}\endgroup

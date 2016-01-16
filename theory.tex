@@ -33,7 +33,7 @@ They only differ by their mass.
 Each family forms a $SU(2)_L$ doublet, which causes the coupling via the weak force.
 The right-handed partners form $SU(2)$ singlets, thus, don't couple via the weak interaction.
 As quarks carry one further quantum number, the colour, they are, additionally, grouped into $SU(3)_C$ triplets.
-All fermions form singlets under $U(1)_Y$ with different hypercharges.
+%All fermions form singlets under $U(1)_Y$ with different hypercharges.
 
 \subsection*{Vector bosons in the Standard Model}
 As mentioned before, the vector bosons describe three of the four fundamental forces.
@@ -224,6 +224,7 @@ Since the Standard Model does not contain right-handed neutrinos, there are no g
 %The last fermion that was discovered in the year xxx is the top quark, 
 
 \section{Limitations of the Standard Model}
+\label{sec:Limitations}
 Despite the great success of the Standard Model, there remain observations and theoretical considerations that cannot be answered within the SM.
 In the following, the most important of such ``limitations'' shall be reviewed.\\
 
@@ -265,21 +266,28 @@ Within the SM, it is not possible to add renormalisable terms, that can describe
 Although, gravity is not important for particle physics at energies that are accessible at current particle colliders (it only becomes important at the Planck scale $\sim 10^{19}\gev$), the fact that it cannot be embedded into the Standard Model leads to an understanding of the SM as effective theory, only valid for lower energies.
 Thus, it is obviously not an ultimate theory and something must be beyond.
 
-Furthermore, there is experimental evidence, which cannot be explained within the Standard Model.
+Furthermore, in particle physics there is always the wish to describe nature with a theory as general as possible.
+This ususally implies the effort to embed the Standard Model into a higher symmetry group.
+To achieve a simplification by unify the three fundamental forces usually done within so-called Grand-Unfified-Theries (GUTs).
+Calculating the running of the coupling constants in the Standard Model, the couplings seems to match at a scale of $M_{\text{GUT}} \sim 10^{15\gev}$.
+Unfortunately, they don\t match exactly.
+Therefore, a unifiaction is not achievalble in the Standard Model under the assupmtion that there are no new particls up to the GUT scale.
 
+
+Furthermore, there is experimental evidence, which cannot be explained within the Standard Model.
 
 Astrophysical observations suggest that there is a large amount of dark matter (DM) in the universe, that cannot be explained with the particle content of the Standard Model.
 Measurements of the velocity curves of galaxies, \eg M33~\cite{bib:DM:RotationCurves} show discrepancies between the observed velocities and the predicted velocities by the visible matter.
 The share of non-visible matter to the total amount of matter in the universe is estimated to be $~84\%$~\cite{bib:Planck_2015}.
-Unfortunately, there is no suitable (only weakly interacting) candidate within the SM, that can make up the full DM contribution.
+Unfortunately, there is no suitable (only weakly interacting) candidate within the SM, that can make up the full DM contribution.\\
 
-Finally, the different abundance of baryonic and antibaryonic matter~\cite{bib:PDG_2014}, the so-called baryon-antibaryon asymmetry is not explainable within the SM.
-In the Standard Model,the only source for CP-violation, which is needed to give rise to a matter-antimatter asymmetry is contained in the CKM matrix, which appears in the SM due to the weak interaction in the quark sector.
-The complex phase in this matrix is however to small to explain the full asymmetry.\\
+%Finally, the different abundance of baryonic and antibaryonic matter~\cite{bib:PDG_2014}, the so-called baryon-antibaryon asymmetry is not explainable within the SM.
+%In the Standard Model,the only source for CP-violation, which is needed to give rise to a matter-antimatter asymmetry is contained in the CKM matrix, which appears in the SM due to the weak interaction in the quark sector.
+%The complex phase in this matrix is however to small to explain the full asymmetry~\cite{bib:Matter_Antimatter}.\\
 
 
 There are far more questions, not all addressed here.
-The reader is referred to~\cite{} to get a more detailed overview about the limitations of the SM.
+The reader is referred to~\cite{FIXME} to get a more detailed overview about the limitations of the SM.
 
 In the following Section~\ref{sec:Supersymmetry}, a theory is introduced, that can address most of the above mentioned problems.
 This theory is called Supersymmetry.
@@ -326,25 +334,205 @@ From the second relation in~\eqref{eq:SUSYal} it follows
 \label{eq:Massen}
  [Q_{\alpha} , P^2] &=  [Q^{\dagger}_{\dot{\alpha}}, P^2] = 0.
 \end{align}
-This means, that particles that are transformed into each other with the generator $Q$ need to have same eigen values of $P^2$.
+Equation~\ref{eq:Massen} implies, that particles that are transformed into each other with the generator $Q$ need to have same eigen values of $P^2$, thus, also same masses.
+This impose obvioulsy a problem, since no ``scalar electron'' was ever found with a mass of 0.512\mev.
+This problem will be discussed later.\\
+
+In Supersymmetry, all particles and their partner particles are discribed by so-called supermultiplets.
+Since the generators of the gauge group commute with the generators of supersymmetry, all particles within one supermultiplet have same quantum numbers, besides the spin (as shown in Eq.~\ref{eq:Massen} they have also same masses).
+In a renormalisable theory, there are two different types of supermultiplets: chiral multiplets, which contain a  two-component Weyl spinor and a complex scalar field and vector mulitplets with a vector boson and a two-component Weyl spinor.
+With this, the number of degrees of freedom are for chiral multiplets for on-shell particles
+\begin{equation*}
+\begin{split}
+& n_f=2,\ \text{due to the two-component Weyl spinor}\\
+& n_b=2,\ \text{due to the complex scalar field}, 
+\end{split}
+\end{equation*}
+and for vector multiplets for on-shell particles
+\begin{equation*}
+\begin{split}
+& n_f=2,\ \text{due to the two-component Weyl spinor}\\
+& n_b=2,\ \text{due to the vector field}. 
+\end{split}
+\end{equation*}
+As mentioned before, in a realistic extension of the Standard Model, Supersymmetry cannot be exact, since no supersymmetric particles have been found which have the same masses as their SM partners.
+This implies, that SUSY must be broken.
+There are many ideas how the breaking can work.
+However, as up to now, little is known about the extact breaking mechanism, usually one add by hands term to the Langrangian which breaks SUSY explicetly.
+These terms paramterise SUSY breaking without knowing how this actually can occure.
+One condition is however imposed on the supersymmetry breaking terms: they should not spoil the naturalleness of the new theory, \ie no new quadartaic dievergencies shall occur by these terms.
+Therefore, they are called sof-breaking terms.
+How they actually look, will be explained in the Section~\ref{sec:MSSM}.
+
+Finally, it shall be discussed how Supersymmetry can give possible answers to the shortcomings of the Standard Model, discussed in Section~\ref{sec:Limitations}.
+
+Radiative corrections by fermions always have a factor $-1$ compared to bosonic corrections.
+Thus, calculating radiative corrections of the Higgs boson mass in a supersymmetric theory leads in addition to the corrections by SM particles also the corrections by SUSY particles.
+If SUSY were exact, the quadratic divergencies $\Delta m^2_H$ would exactly cancel. 
+However, as argued, SUSY must be broken.
+The cancellation of quadratic divergencies can therefore only be assured, if the breaking is not too drastic and only logarithmic divergencies remain.
+To avoid a new source of fine-tuning, the soft-breaking paramaters should be of the order $M_{\rm soft} \sim 100\text{ GeV - } 1000\text{ GeV}$.
+
+
+
+Even though, it is not possible to implement the gravity within a supersymmetric extension of the Standard Model, all possible theories that are able to include gravity (string theory) include also Supersymmetry.
+
+The renormalisation group equations change under a supersymmtric extension of the Standard Model.
+By this, a unification of the gauge couplings at a GUT scale of about $10^{16}\gev$ is possible, as can be seen in Fig.~\ref{fig:Unification}.
+It can be nicely seen, that all three gaguge couplings cross each other within the uncertainties.
+\begin{figure}[b]
+  \centering
+      \includegraphics[width=0.49\textwidth]{figures/theory/running_couplings_SM}
+      \includegraphics[width=0.49\textwidth]{figures/theory/running_couplings_MSSM}
+  \caption{The running of the gauge couplings in the Standard Model (left) and in the minimal supersymmetric extension of the SM (right). Taken from~\cite{bib:Unification}.}  
+  \label{fig:Unification}
+\end{figure}
+
+Besides these arguments, SUSY can also give an answer to the problem of non-visible matter in the universe.
+If the conservation of the so-called partiy is required, the lightest supersymmertic particle (LSP) is stable.
+If this particle is only weakly interacting, it can serve as a good candidate to explain fully or partly the sources of the relic density. 
+R-parity is a multiplicative quantum number with
+\begin{align*}
+P_R & =  1 &&\text{SM particles}&&\\
+P_R & = -1 &&\text{SUSY particles}.&&
+\end{align*}
+If R-parity is consevered, only terms are allowed in the Lagrangian density, that contain an even number of supersymmtric particles.
+Therefore, no single SUSY particle can decay into only SM particles and thus, the LSP is stable.
+
+
 
 \section{The MSSM}
-The MSSM is the specific model
+\label{sec:MSSM}
+The supersymmetric extension of the Standard Model with a minimal particle content is called the Minimal Supersymmertic Standard Model (MSSM).
+In the following section, the particle content of the MSSM is introduced.
 
 \subsection{The particle content of the MSSM}
-Phenomenology
+In $N=1$ Supersymmtry, every SM particle has exactly one supersymmteric partner particle, which leads to a doubling of the particle content in the MSSM compared to the SM.
+Additionally, there is a necessity for a second Higgs dublet.
+The second dublett is needed to ensure the holomorphity of the superpotential when also mass terms for the up-type particles shall be created.
+Furthermore, the MSSM stays only free from anomalies if there is a further Higgs dublett.
+This leads to the fact, that in the MSSM, there are five Higgs bosons instead of only one as in the SM.
+The complete particle content of the MSSM is depicted in Tables~\ref{} and~\ref{}.
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+\centering
+\caption{Chiral supermultiplets in the MSSM}
+\label{tab:chiral_multiplets}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|c|c|c|c}
+\multicolumn{5}{c}{} \\
+\toprule
+                     &           &   spin 0                                     & spin $\frac{1}{2}$              & $SU(3)_C,\ SU(2)_L,\ U(1)_Y$\\ 
+\midrule
+   squarks/quarks    & Q         & $\left(\tilde{u}_L,\tilde{d}_L \right)$      & $\left(u_L,d_L\right)$          & $\bf{3},\ \bf{2},\ \frac{1}{3}$\\ \cline{2-5}  
+                     & $\bar{u}$ & $\tilde{\bar{u}}_L = \tilde{u}_R^{\dagger} $   & $\bar{u}_L = (u_R)^c$           & $\bf{\bar{3}},\ \bf{1},\ -\frac{4}{3}$\\ \cline{2-5}  
+                     & $\bar{d}$ & $\tilde{\bar{d}}_L = \tilde{d}_R^{\dagger}$    & $\bar{d}_L = (d_R)^c$           & $\bf{\bar{3}},\ \bf{1},\ \frac{2}{3}$\\ 
+\midrule
+   sleptons/leptons  & L         & $\left(\tilde{\nu}_{eL},\tilde{e}_L\right)$   & $\left(\nu_{eL},e_L\right)$     & $\bf{1},\ \bf{2},\ -1$\\ \cline{2-5} 
+                     & $\bar{e}$ & $\tilde{\bar{e}}_L = \tilde{e}_R^{\dagger}$    & $\bar{e}_L = (e_R)^c$           & $\bf{\bar{1}},\ \bf{1},\ 2$\\ 
+\midrule
+   higgs/higgsinos   & $H_u$     & $\left(H_u^+,H_u^0\right)$        & $\left(\tilde{H}_u^+,\tilde{H}_u^0\right)$ & $\bf{1},\ \bf{2},\ 1$\\ \cline{2-5}
+                     & $H_d$     & $\left(H_d^0,H_d^-\right)$        & $\left(\tilde{H}_d^0,\tilde{H}_d^-\right)$ & $\bf{1},\ \bf{2},\ -1$ \\ 
+\bottomrule
+\multicolumn{5}{c}{} \\
+\end{tabular}}
+\end{table}  
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+\centering
+\caption{Vector supermultiplets in the MSSM}
+\label{tab:vector_ multiplets}
+\makebox[0.99\textwidth]{
+\begin{tabular}{l|c|c|c}
+\multicolumn{4}{c}{} \\
+\toprule
+                      &   spin $\frac{1}{2}$                                  & spin 0                 & $SU(3)_C,\ SU(2)_L,\ U(1)_Y$\\ 
+\midrule
+   gluinos/gluons     & $\tilde{g}$                       & $g$                 & $\bf{8},\ \bf{1},\ 0$\\ 
+\midrule
+   winos/$W$-bosons   & $\tilde{W}^{\pm},\ \tilde{W}^0$  & $W^{\pm},\ W^0$     & $\bf{1},\ \bf{3},\ 0$\\
+\midrule
+   bino/$B$-boson       & $\tilde{B}$                      & $B$                 & $\bf{1},\ \bf{1},\ 0$ \\  
+\bottomrule
+\multicolumn{4}{c}{} \\
+\end{tabular}}
+\end{table}  
+
+Since in supersymmetric theories only left-handed Weyl spinors appear in the Lagrangian density, the right-handed are described as charge conjugated spinors of the left-handed spinors.
+
+\subsection{The Lagrangian density of the MSSM}
+\label{sec:Lagrange_MSSM}
+In the following only the most important parts of the MSSM Lagrangian density will be described.
+The reader is again referred to~\cite{bib:Drees} for a complete description of the Lagrangian density.
+
+\subsubsection*{The superpotential}
+The superpotential of the MSSM contains the self interaction terms of the Higgs bosons and generates the interaction terms of the Higgs bosons with the fermions and their super partners.
+As already noted, it is very common to assume R-parity conservation.
+Thereby, no terms appear in the Lagrangian that would violate lepton or baryon number coservation and the lightest supersymmetric particle is stable.
+Thus, all possible terms are
+\begin{equation}
+\label{eq:SPMSSM}
+ W_{\text{MSSM}} = \mu H_u \cdot H_d - Y_u^{ij} H_u \cdot Q_L^i u_R^{c\,j} + Y_d^{ij} H_d \cdot Q_L^i d_R^{\,c\,j} + Y_e^{ij} H_d \cdot L_L^i e_R^{c\,j},
+\end{equation}
+with the dot product defined as in ~\cite{} 
+\begin{equation}
+ A \cdot B = \epsilon^{\alpha\beta} A_{\alpha} B_{\beta} = A_1 B_2 - A_2 B_1.
+\end{equation}
+
+\subsubsection*{The soft-breaking Lagrangian density}
+Since Supersymmetry is broken, explicit SUSY breaking terms are added to the Lagrangian density.
+In order not to introduce new sources of quadratic divergencies, only bilinear and tilinear terms appear in the soft-breaking Lagrangian
+\begin{equation}
+ \begin{split}
+  - \mathcal{L}^{MSSM}_{soft} =\,& m_{H_u}^2 H_u^{\dagger} \cdot H_u +m_{H_d}^2 H_d^{\dagger} \cdot H_d + \left(B\mu\, H_u \cdot H_d + h.c.\right) \\
+  & + m_{\tilde{Q}\,ij}^2 \tilde{Q}_{L\,i}^{\dagger} \cdot \tilde{Q}_{L\,j}+ m_{\tilde{u}\,ij}^2 \tilde{u}_{R\,i}^{c\,\dagger} \cdot \tilde{u}_{R\,j}^c
++ m_{\tilde{d}\,ij}^2 \tilde{d}_{R\,i}^{\,c\,\dagger} \cdot \tilde{d}_{R\,j}^{\,c}\\
+& + m_{\tilde{L}\,ij}^2 \tilde{L}_{L\,i}^{\dagger} \cdot \tilde{L}_{L\,j}+ m_{\tilde{e}\,ij}^2 \tilde{e}_{R\,i}^{\,c\,\dagger} \cdot \tilde{e}_{R\,j}^{\,c}\\
+& +\left(- \left( A_u Y_u \right)_{ij} H_u \cdot \tilde{Q}_{L\,i} \tilde{u}_{R\,j}^c +\left( A_d Y_d \right)_{ij} H_d \cdot \tilde{Q}_{L\,i} \tilde{d}_{R\,j}^{\,c} \right.\\
+& \left. +\left( A_e Y_e \right)_{ij} H_d \cdot \tilde{L}_{L\,i} \tilde{e}_{R\,j}^{\,c} + h.c. \right)\\
+& + \left(M_1 \tilde{B} \tilde{B} + M_2 \tilde{W}_a \tilde{W}_a + M_3 \tilde{g}_i \tilde{g}_i + h.c \right)
+ \end{split}
+\end{equation}
+The first line contains mass terms for the Higgs bosons, the second and third line for the sfermions.
+In the fourth and fifth line the trilinear couplings between the Higgs bosons and the sfermions appear.
+Finally, the last line give rise to mass terms for the gauginos.
+
+Because of the soft-breaking terms, the MSSM contains more than 100 free parameters.
+Constraining the MSSM is thus a difficult task and usually in experimental particle physics, constrained versions of the MSSM or assumptions at the GUT scale are used to report the impact of searches on SUSY. 
+In the following a short introduction of the phenomenological MSSM is given.
+With its reduced parameter space it allows to elaborate on long-lived particles in the MSSM in a much easier way.
 
 \subsection{The phenomenological MSSM}
-Simple assumptions
-
-\section{Long-lived particles in the pMSSM}
-Now explain why they can be long-lived.
+The phenomenological MSSM (pMSSM) imposes constraints that are reasonable in the sense to fulfill current observations and still keep the phenomenological richness of the MSSM~\cite{bib:pMSSM}.
+The following assumptions are imposed (in~\cite{bib:pMSSM} more detailed information about these assumptions can be found):
+\begin{itemize}
+\item No new sources of CP violation,
+\item No flavour changing neutral currents,
+\item First and second generation universality.
+\end{itemize}
+These assumption reduce the number of new parameters to only 19.
+The remaining free parameters are the following:
+\begin{itemize}
+\item $\tan \beta$ (the ratio of the vacuum expectation values of the two Higgs dublets)
+\item $M_A$ (the mass of the pseudo-scalar Higgs boson)  
+\item $\mu$ (the Higgs mass parameter)
+\item $M_1$,$M_2$,$M_3$ (bino, wino and gluino mass parameters, respectively)
+\item $m_{\tilde{q}}$, $m_{\tilde{l}}$, $m_{\tilde{u}}$, $m_{\tilde{d}}$ and $m_{\tilde{e}}$ (the first and second generation mass parameters)
+\item  $m_{\tilde{Q}}$, $m_{\tilde{L}}$, $m_{\tilde{t}}$, $m_{\tilde{b}}$ and $m_{\tilde{\tau}}$ (the third generation mass parameters)
+\item $A_t$, $A_b$ and $A_{\tau}$ (third generation trilinear couplings).
+\end{itemize}
 
 \section{Supersymmetry breaking}
-This will be very short
-\subsection{Gauge mediation}
-\subsection{Gravity mediation}
-\subsection{Anomaly-mediated breaking}
+As already noted, the mechanism of supersymmtery breaking is unknown.
+There exists however, several ideas how to spontaneoulsy break supersymmetry.
+All mechanism have in common that they need to happen at high energies in a hidden sector.
+``Messenger'' particles are introduced which mediate the breaking to the TeV scale.
+This, however, implies that supersymmetry breaking is a question of high-energy physics and one can always parametrise the breaking by the soft breaking terms introduced in Section~\ref{sec:Lagrange_MSSM}.
+
+The most popular breaking mechanism is gravity mediated Supersymmtery breaking~\cite{FIXME} and gauge-mediated supersymmetry breaking~\cite{FIXME}.   
+
 
 \chapter{Long-lived particles in the MSSM}
 
