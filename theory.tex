@@ -42,7 +42,7 @@ For $U(1)_Y$, it is the $B$-boson, for $SU(2)_L$, there are three gauge bosons $
 As the $B$-field and the neutral $W^3_{\mu}$-field can mix, ``after'' SSB the basis can be changed and lead to the well known photon and $Z$-boson.
 
 \subsection*{The Higgs boson}
-A somehow extraordinary role plays the Higgs boson, that was predicted already 50 years ago by Peter Higgs~\cite{bib:Higgs_Prediction,bib:Higgs_Prediction_2} and could be proven existent by the LHC experiments CMS and Atlas in 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation}.
+A somehow extraordinary role plays the Higgs boson, that was predicted already 50 years ago by Peter Higgs~\cite{bib:Higgs_Prediction,bib:Higgs_Prediction_2} and could be proven existent by the LHC experiments CMS and ATLAS in 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation}.
 This particle is a consequence of the spontaneous symmetry breaking after rotating three of the four degrees of freedom to masses of the $W$-and $Z$-bosons.
 It is the only known fundamental scalar particle.\\
 
@@ -288,12 +288,12 @@ Unfortunately, there is no suitable (only weakly interacting) candidate within t
 %There are far more open questions, not all addressed here.
 %The reader is referred to~\cite{FIXME} to get a more detailed overview about the limitations of the SM.
 
-In the following Section~\ref{sec:Supersymmetry}, a theory is introduced, that can address most of the above mentioned problems.
+In the following Chapter~\ref{ch:Supersymmetry}, a theory is introduced, that can address most of the above mentioned problems.
 This theory is called Supersymmetry.
 
 
 \chapter{Supersymmetry}
-\label{sec:Supersymmetry}
+\label{ch:Supersymmetry}
 
 As noted in the last chapter, the Higgs boson mass suffers from quadratic divergencies through radiative corrections.
 The reason for the quadratic divergencies is due to the fact, that the Lagrangian density does not contain further symmetries for $\mu\rightarrow 0 $.
@@ -494,6 +494,7 @@ In order not to introduce new sources of quadratic divergencies, only bilinear a
 & \left. +\left( A_e Y_e \right)_{ij} H_d \cdot \tilde{L}_{L\,i} \tilde{e}_{R\,j}^{\,c} + h.c. \right)\\
 & + \left(M_1 \tilde{B} \tilde{B} + M_2 \tilde{W}_a \tilde{W}_a + M_3 \tilde{g}_i \tilde{g}_i + h.c \right)
  \end{split}
+\label{eq:SoftTerms}
 \end{equation}
 The first line contains mass terms for the Higgs bosons, the second and third line for the sfermions.
 In the fourth and fifth line the trilinear couplings between the Higgs bosons and the sfermions appear.
@@ -531,14 +532,87 @@ All mechanism have in common that they need to happen at high energies in a hidd
 ``Messenger'' particles are introduced which mediate the breaking to the TeV scale.
 This, however, implies that supersymmetry breaking is a question of high-energy physics and one can always parametrise the breaking by the soft breaking terms introduced in Section~\ref{sec:Lagrange_MSSM}.
 
-The most popular breaking mechanism is gravity mediated Supersymmetry breaking~\cite{FIXME} and gauge-mediated supersymmetry breaking~\cite{FIXME}.   
+The most popular breaking mechanism is gravity-mediated Supersymmetry breaking~\cite{FIXME} and gauge-mediated supersymmetry breaking~\cite{FIXME}.   
 
+%FIXME, maybe talk about AMSB models.
 
 \chapter{Long-lived particles in the MSSM}
+\label{ch:Longlived_Particles}
+There are various mechanisms how particles can be long-lived, such as small couplings or supressed decays because of high mediator masses (weak interaction).
+For a comprehensive review, the reader is referred to~\cite{bib:LonglivedParticles_Overview}.
 
-\begin{itemize}
-\item Mechanism of long lifetimes
-\end{itemize}
+In this thesis, the focus is set on particles that have a long lifetime due to a small decay phase space. 
+A phase space suppression is possible when the mass splitting between the decay particle and one of the decay products is very small.
+In Part~\ref{part:analysis}, a search for highly ionising, short tracks is presented.
+This search is motivated by long-lived charginos, that are nearly mass-degenerate with the lightest supersymmetric particle, the neutralino.
 
-\section{Previous searches for long-lived charged particles}
+The underlying mechanism of this mass-degeneracy will be addressed in the next paragraphs.
 
+In the MSSM, the lightest chargino (\chipm) and the lightest neutralino (\chiO) can be almost mass-degenerate, when the wino mass parameter ($M_2$) is smaller than the bino ($M_1$) and higgsino ($\mu$) mass parameters.
+This can be seen in the masses of the interaction eigenstates.
+The following expressions are approximate neutralino and chargino mass terms for $M_2 \mu > m_W^2 \sin 2\beta$ and $|M_2 \pm \mu|$, $|M_1 \pm \mu| \gg m_Z$ (taken from~\cite{bib:PAS:CMS:pMSSM_2013})
+\begin{align}
+\label{eq:gaugino_masses}
+\begin{split}
+m_{\tilde{B}}    &\simeq  M_1   + \frac{m_Z^2 \left( M_1 + \mu \sin 2\beta  \right) \sin^2 \theta_W}{M_1^2 - \mu^2} \\
+m_{\tilde{W}}    &\simeq  M_2   + \frac{m_Z^2 \left( M_2 + \mu \sin 2\beta  \right) \cos^2 \theta_W}{M_2^2 - \mu^2} \\
+m_{\tilde{H}_1^0} &\simeq  |\mu| + \frac{m_Z^2 \left( 1 - \sin 2\beta \right) \left( \mu + M_2 \sin^2 \theta_W + M_1 \cos^2 \theta_W \right) sqn\left(\mu \right)}{2 \left(\mu +M_2 \right)\left(\mu +M_1 \right)} \\
+m_{\tilde{H}_2^0} &\simeq  |\mu| + \frac{m_Z^2 \left( 1 + \sin 2\beta \right) \left( \mu - M_2 \sin^2 \theta_W - M_1 \cos^2 \theta_W \right) sqn\left(\mu \right)}{2 \left(\mu -M_2 \right)\left(\mu -M_1 \right)} 
+\end{split}
+\end{align}
+\begin{align}
+\label{eq:chargino_masses}
+\begin{split}
+m_{\tilde{W}^{\pm}} &\simeq  M_2  + m_W^2 \left[ \frac{M_2 + \mu \sin 2\beta}{M_2^2 - \mu^2} \right]\\
+m_{\tilde{H^{\pm}}} &\simeq  |\mu|  + m_W^2 sgn\left( \mu \right) \left[ \frac{\mu + M_2 \sin 2\beta}{\mu^2 - M_2^2} \right]
+\end{split}
+\end{align}
+It is obvious from Eqs.~\ref{eq:gaugino_masses} and~\ref{eq:chargino_masses}, that if $M_2 < M_1,\, |\mu|$, the lightest neutralino state is wino-like and is fully mass-degenerate on tree level with the lightest chargino.
+Thus, the mass differences between \chipm and \chiO is only determined by higher loop contributions, making the mass splitting naturally very small.
+
+Furthermore, recent analyses of the pMSSM parameter space~\cite{bib:pMSSMScan_2013,bib:pMSSMScan_2012} show, that almost pure wino-like neutralinos often come along with wino-like charginos and their mass splitting is typically of the order of $\sim160\mev$~\cite{bib:pMSSMScan_2013}.
+
+
+
+\section{Previous searches and constraints from indirect searches}
+
+Several previous searches are sensitive on SUSY scenarios with almost mass-degenerate wino-like charginos and neutralinos.
+In the following an overview about these previous searches will be given.
+Additionally, constraints from indirect searches are summarised.
+
+%\subsection*{Searches at HERA}
+\subsection*{Searches at LEP}
+Several searches at LEP were hunting for almost mass-degenerate neutralino-chargino scenarios~\cite{bib:PreviousSearches_ALEPH,bib:PreviousSearches_OPAL,bib:PreviousSearches_DELPHI_2003,bib:PreviousSearches_DELPHI}.
+These searches were looking for events with a high-energetic initial state radiated photon leading to missing energy in events with chargino-pair production and invisible decay products.
+The excluded parameter regions by these searches can be found in~\cite{bib:LEP:SUSY_results} and are depicted in Fig.~\ref{fig:LEP}.
+The searches were interpreted for $M_1$ and $M_2$ almost degenerate and with a large unified scalar mass $m_0$ leading to sneutrino masses larger than 500\gev. 
+Charginos are excluded up to a mass of 92.4\gev~\cite{bib:LEP:SUSY_results}.
+
+\subsection*{Searches at ATLAS at 7 and 8\tev}
+At the ATLAS experiment at the LHC, searches for events with a dissapearing track signature were conducted at $\sqrt{s}=7\tev$~\cite{bib:PreviousSearches_Atlas_DT_7TeV} as well as at $\sqrt{s}=8\tev$~\cite{bib:PreviousSearches_Atlas_DT_8TeV}. 
+Furthermore, a search for metastable particles with high ionisation loss was performed with $\sqrt{s}=8\tev$ data~\cite{bib:PreviousSearches_ATLAS_DEDX}.
+These searches were interpreted within an anomaly-mediated Supersymmetry breaking model~\cite{FIXME} with $\tan\beta=5$ and $\mu<0$.
+The excluded parameter space by these searches is shown in Fig.~\ref{fig:ATLAS}.
+Parameter regions ...
+
+\begin{figure}[!t]
+  \centering
+      \includegraphics[width=0.49\textwidth]{figures/theory/mass_adlo_gaug_1.pdf}
+  \caption{Observed and expected exclusion limits in the $m_{\chipm}-\Delta m$ plane for almost degenerate $M_1$ and $M_2$ and a large nified scalar mass $m_0$. Taken from~\cite{bib:LEP:SUSY_results}.}  
+  \label{fig:LEP}
+\end{figure}
+\begin{figure}[!b]
+  \centering
+      \includegraphics[width=0.60\textwidth]{figures/theory/ATLAS_SUSY_LLPChargino.pdf}
+  \caption{. Taken from~\cite{FIXME}.}  
+  \label{fig:ATLAS}
+\end{figure}
+
+
+\subsection*{Searches at CMS at 7 and 8\tev}
+Mention all searches.
+Only show DT plot.
+
+\subsection*{Indirect searches}
+
+You fouond some good papers!!!!
