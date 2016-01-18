@@ -1,96 +1,99 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
 \label{res:ch:Introduction}
 
 The determination and quantification of the quality of the jet transverse-momentum measurement is of crucial interest for many analyses with jet final states, \eg the measurement of the dijet cross section~\cite{bib:CMS:QCD_measurements} or \ttbar production cross sections~\cite{bib:CMS:TopCrossSection_8TeV}. 
-Also searches for physics beyond the standard model with missing transverse momentum, \PTm, in the final state need a good knowledge of \PTm originating from wrongly measured jets~\cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:CMS:AlphaT_8TeV}.
-For analyses relying on information from simulation it is very important to correct the simulated resolution to the resolution actually present in data.
+Also searches for physics beyond the standard model with missing transverse momentum, \PTm, in the final state rely on a good understanding of \PTm originating from wrongly measured jets~\cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:CMS:AlphaT_8TeV}.
+It is therefore important to determine the jet transverse-momentum resolution, \ie the detector resolution of the jet-\pt measurement.
+For analyses relying on information from simulated data it is necessary to correct the simulated resolution to the resolution actually present in data.
 Therefore, scale factors will be presented to adjust the resolution in simulation to the resolution of the real detector.  
   
-In the following sections, a data-based method to measure the jet \pt resolution in \GAMJET events will be presented. 
-A similar method was already accomplished in earlier analyses~\cite{bib:CMS:JERCPaper_2011,CMS:PAS:JETResolution_7TeV} of 7\tev data.  
+In the following sections, a data-based method to measure the jet-\pt resolution in \GAMJET events will be presented. 
+A similar method was already applied in earlier analyses~\cite{bib:CMS:JERCPaper_2011,CMS:PAS:JETResolution_7TeV} of 7\tev data.  
 It is further developed here and applied to 19.7\fbinv of $\sqrt{s}=8\tev$ data.
 
 The method is based on the transverse-momentum balance in the \GAMJET system. 
-It takes advantage of the high resolution of the electromagnetic calorimeter and hence the excellent measurement of the photon energy and momentum.
+It takes advantage of the high resolution of the electromagnetic calorimeter and hence the excellent measurement of the photon momentum.
 Without initial and final state radiation, the photon and the jet are balanced in the transverse plane. 
-Thus, measuring the photon \pt with high accuracy leads to an estimate of the true jet transverse momentum offering a possibility to quantify the resolution of jet \pt measurements.
+Thus, measuring the photon \pt with high accuracy leads to an accurate estimate of the true jet transverse momentum and offers a possibility to quantify the resolution of jet-\pt measurements.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \chapter{General approach of the resolution measurement using photon+jet events}
 \label{res:ch:GeneralApproach}
-
-The jet transverse-momentum resolution is defined as the standard deviation of the jet transverse-momentum response distribution with the response defined as the ratio of the reconstructed to the generator-level jet transverse momentum 
+The quality of the jet transverse-momentum measurement is determined by the jet transverse-momentum response $\mathcal{R}$, \ie by the ratio of the reconstructed to the true jet transverse momentum 
 \begin{equation}\label{res:eq:responseFormula}
-\mathcal{R} =  \frac{\ptrecojet}{\ptgenjet}.
+\mathcal{R} =  \frac{\ptrecojet}{\pttruejet}.
 \end{equation}
-For each reconstructed jet, the underlying generator-level jet is hereby found by matching the closest generator-level jet to the reconstructed jet with $\Delta R = \sqrt{(\Delta \phi)^2 + (\Delta \eta)^2}$ 
-with a maximal value of $\Delta R_{\text{max}}=0.25$.
-Furthermore, the transverse momentum of the generator-level jet is defined as the sum of all particles' transverse momenta from the hadronisation that are clustered into the jet cone.
+Because of the limited detector resolution, the reconstructed jet \pt in general differs from the true jet \pt resulting in a distribution of $\mathcal{R}$.
+In Fig~\ref{res:fig:TypicalResponse} (left), an exemplary distribution of $\mathcal{R}$ in simulation (where the true jet \pt corresponds to the generator-level jet \pt) is depicted.
+%In simulated events, the true jet \pt is known from generator-level information. 
+%For each reconstructed jet, the underlying generator-level jet is hereby found by matching the closest generator-level jet to the reconstructed jet with a maximal value of $\Delta R_{\text{max}}=0.25$. %with $\Delta R = \sqrt{(\Delta \phi)^2 + (\Delta \eta)^2}$ 
+The jet transverse-momentum resolution (JER\footnote{This abbreviation is a historical relic from experiments where the momentum of jets were only measured in the calorimeters and therefore JER referred to jet energy resolution.}) is thereby defined as the width of the distribution while the mean corresponds to the so-called jet transverse-momentum scale (JES)~\cite{bib:CMS:JME_PAS}.
+
+
+
+%Furthermore, the transverse momentum of the generator-level jet is defined as the sum of all particles' transverse momenta from the hadronisation that are clustered into the jet cone.
 %It can therefore differ to the momentum of the original final state quark or gluon by out-of-cone showering effects.
 %Out-of-cone showering refers to particles from the hadronisation process that are not clustered into the jet cone.
-Throughout the following sections, the jet transverse-momentum resolution will be abbreviated JER\footnote{This abbreviation is a historical relic from experiments where the momentum of jets were only measured in the calorimeters and therefore JER referred to jet energy resolution.}.
-The mean of the response distribution will be referred to as jet energy scale (JES).
 
-Figure~\ref{res:fig:TypicalResponse} shows a response distribution for jets in the barrel region.
+It can be seen in Fig.~\ref{res:fig:TypicalResponse} (left), that the core of the response distribution shows a typical Gaussian behaviour whereas the tails deviate from that functional form.
+Physical reasons for the pronounced low response tail are, inter alia, semi-leptonic decays of heavy quarks (c- and b-quarks) where the neutrino cannot be detected and the reconstructed transverse momentum of the jet is too small.
+This effect is visible in Fig.~\ref{res:fig:TypicalResponse} (right) which depicts the response distribution including all jet flavours (blue), as well as the contribution by c- and b-quarks (red), which is the main contribution to the pronounced left tail.
 \begin{figure}[b]
   \centering
+      \includegraphics[width=0.49\textwidth]{figures/resolution/generalApproach/ExampleResponse.pdf}
       \includegraphics[width=0.49\textwidth]{figures/resolution/generalApproach/intrinsicExampleContributionofBCQuarks.pdf}
-  \caption{Normalised number of events over \ptrecojet/\ptgenjet from a simulated \GAMJET sample. 
-           The contribution by c- and b-quark jets is shown in red, which cause almost fully the left tail originating from semi-leptonic decays. }  
+  \caption{Left:  Normalised number of events over \ptrecojet/\ptgenjet from a simulated \GAMJET sample. 
+           Right: The response distribution containing all jet flavours (blue) and the contribution by c- and b-quark jets (red). }  
   \label{res:fig:TypicalResponse}
 \end{figure}
-The core of the response distribution shows the typical Gaussian behaviour whereas the tails deviate from that functional form.
-Physical reasons for the low response tail are inter alia semi-leptonic decays of heavy quarks where the neutrino cannot be detected and the reconstructed transverse momentum of the jet is too small.
-This effect is visible in Fig.~\ref{res:fig:TypicalResponse} because the neutrinos are included into the generator-level jet.
 Some instrumental effects, such as a non-linear response of the calorimeter, inhomogeneities of the detector material and electronic noise can contribute to both tails, 
-others, like dead calorimeter channels only contribute to the left tail. 
-The resolution is therefore determined using only the core of the distribution to avoid the coverage of non-Gaussian tails.
-The resolution is thus defined as the standard deviation of the 99\% truncated response histogram divided by the mean of the histogram:
+others, like dead calorimeter channels only contribute to the left tail~\cite{bib:Matthias_Thesis}. 
 
+
+
+%Figure~\ref{res:fig:TypicalResponse} shows a response distribution for jets in the barrel region.
+In order to avoid the coverage of non-Gaussian tails, the resolution is determined using only the core of the response distribution.
+The resolution is thus defined as the standard deviation of the 99\% truncated response histogram divided by the mean:
 \begin{equation*}\label{res:eq:resolutionFormula}
 \jer = \frac{\sigma_{99\%}}{\mu_{99\%}}.
 \end{equation*}
+The division by the mean aims at making the resolution independent of the absolute scale (= mean) of the response distribution.
+It is done because response distributions with a scale smaller than one are typically narrower while distributions with scales larger than one are broader.
+However, since the scale is very close to one, this is only a tiny effect.
 
 The determination of the 99\% range of the histogram is done in several steps. 
 First the mean of the core is found via a Gaussian fit to the histogram in a 2$\sigma$ range\footnote{The 2$\sigma$ range is defined as the range [$\mu - 2\sigma$,$\mu + 2\sigma$].}. 
 This procedure is done in three iteration steps.
 Then, a symmetric interval around this mean is determined with its integral equal to 99\% of the integral of the full histogram. 
-The division by the mean aims to make the resolution independent of the absolute scale (= mean) of the response distribution.
-It is done because response distributions with a scale smaller than one are typically narrower while distributions with scales larger than one are broader.
-However, since after the application of the jet energy corrections the scale is very close to one, this is only a tiny effect.
 
-The evaluation of the response distribution as reconstructed over generator-level jet transverse momentum (Eq.~\eqref{res:eq:responseFormula})
-is only possible for simulated events where generator-level information is accessible. 
-A determination of the resolution in data, however, has to rely on a different approach.\\
+As noted earlier, in simulated data, the response distribution can be evaluated by the reconstructed over generator-level jet transverse momentum.
+A determination of the resolution in real data, however, has to rely on a different approach.\\
 
 
 
-The main idea of a resolution measurement using \GAMJET events is based on the transverse-momentum balance of the \GAMJET system and the excellent electromagnetic calorimeter resolution
-(which was estimated between 1.4\% and 3.8\% in the barrel region for photons for $\sqrt{s}=8\tev$ data~\cite{bib:CMS:PhotonIdentification_8TeV}).
+The main idea of a resolution measurement using \GAMJET events is based on the transverse-momentum balance of the \GAMJET system and the excellent electromagnetic calorimeter resolution.
 
 In Fig~\ref{res:fig:FeynmanDiagrams}, all tree-level processes contributing to an event topology with one photon and one jet in the final state are depicted. 
 \begin{figure}[b]
   \centering
       \includegraphics[width=0.99\textwidth]{figures/resolution/generalApproach/FeynmanDiagram.pdf}
-  \caption{Tree-level Feynman diagrams of processes at the LHC in $pp$-collisions with one photon and one jet in the final state.}  
+  \caption{Tree-level Feynman diagrams of processes in $pp$-collisions with one photon and one jet in the final state.}  
   \label{res:fig:FeynmanDiagrams}
 \end{figure}
-Due to momentum conversation, the jet and the photon are back to back in the transverse plane, and therefore, $\pvec^{\,\,\gamma} = -\pvec^{\,\,\text{jet}}$. 
-Because of the good resolution of the electromagnetic calorimeter, photon momenta can be very well measured 
-and thus can serve as an excellent estimator for the true jet momentum.
+Due to momentum conservation, the jet and the photon are back to back in the transverse plane, and therefore, $\ptvec^{\,\,\gamma} = -\ptvec^{\,\,\text{jet}}$. 
+Because of the high resolution of the electromagnetic calorimeter, photon energies can be measured very accurately (with an resolution between 1.4\% and 3.8\% in the barrel region for $\sqrt{s}=8\tev$ data~\cite{bib:CMS:PhotonIdentification_8TeV}).
+Thus, they can serve as an excellent estimator for the true jet transverse-momentum.
 
 
-Unfortunately, such clean events are very rare processes, and usually, the momentum balance is spoiled by initial and final state radiation, which lead to further jets in the event 
-(see Fig.~\ref{res:fig:FeynmanDiagramsWithRadiation}). 
-However, in order to select events that are balanced to a large extent, a lower bound 
-on the angular distance in the transverse plane between the photon and the jet with the highest transverse momentum (leading jet) is required: $\Delta\Phi \left(\text{\nth{1}\,jet,\,} \gamma \right)>2.95\,\unit{rad}$. 
+Unfortunately, such clean events are very rare processes, and usually, the momentum balance is spoiled by further jet activity from initial and final state radiation (see Fig.~\ref{res:fig:FeynmanDiagramsWithRadiation}). 
+In order to select events that are balanced to a large extent, a lower bound on the angular distance in the transverse plane between the photon and the jet with the highest transverse momentum (leading jet) is required: $\Delta\Phi \left(\text{\nth{1}\,jet,\,} \gamma \right)>2.95\,\unit{rad}$. 
 
 Additionally, the variable 
 \begin{equation*}
@@ -99,30 +102,32 @@ Additionally, the variable
 \end{equation*} 
 is defined as a measure of further jet activity in an event. 
 It is, however, not sufficient to require only an upper bound on $\alpha$. 
-Instead, the jet transverse-momentum resolution is measured in bins of $\alpha$ (with max($\alpha$) = 0.2), 
-and the extrapolated value to zero further jet \pt ($\alpha=0$) is taken as the measured resolution of the jet \pt in the absence of further jets.
+Instead, the jet transverse-momentum resolution is measured in bins of $\alpha$ with max($\alpha$) = 0.2, 
+and the extrapolated value to zero further jet \pt ($\alpha=0$) is taken as the measured resolution of the jet \pt. % in the absence of further jets.
 \begin{figure}[t]
   \centering
       \includegraphics[width=0.60\textwidth]{figures/resolution/generalApproach/FeynmanDiagramsWithRadiation.pdf}
-  \caption{Tree-level Feynman diagrams with initial and final state radiation.}  
+  \caption{Tree-level Feynman diagrams with final (left) and initial (right) state radiation.}  
   \label{res:fig:FeynmanDiagramsWithRadiation}
 \end{figure}
 
-Measuring the transverse momentum of the photon instead of taking the generator-level jet \pt leads to the fact that the measured resolution consists out of two parts
+More formally, measuring the transverse momentum of the photon instead of taking the generator-level jet \pt leads to the fact that the measured resolution consists of two parts
 \begin{equation*}\label{res:eq:splitting}
-\frac{\ptrecojet}{\ptgamma} = \underbrace{\frac{\ptrecojet}{\ptgenjet}}_{\text{intrinsic}} \cdot \underbrace{\frac{\ptgenjet}{\ptgamma}}_{\text{imbalance}}.
+\underbrace{\frac{\ptrecojet}{\ptgamma}}_{\text{measured}} = \underbrace{\frac{\ptrecojet}{\ptgenjet}}_{\text{intrinsic}} \cdot \underbrace{\frac{\ptgenjet}{\ptgamma}}_{\text{imbalance}}.
 \end{equation*}
-The intrinsic part is the resolution of interest which is independent of further jets in the event whereas the imbalance is strongly dependent on $\alpha$.
+The intrinsic part is the resolution of interest which is independent of further jets in the event, whereas the imbalance is an artifact of further jet activity and is strongly dependent on $\alpha$.
 
-To extract the intrinsic resolution out of the measured one, the residual imbalance $q$ (the imbalance at $\alpha = 0$) is subtracted from the total resolution in the 
-limit of vanishing additional jet activity. 
-Since this information is only available from simulation, the measured resolution in data is corrected by the residual imbalance taken from the simulated dataset.
+%To extract the intrinsic resolution out of the measured one, the residual imbalance $q$ (the imbalance at $\alpha = 0$) is subtracted from the total resolution in the 
+%limit of vanishing additional jet activity. 
+%Since this information is only available from simulation, the measured resolution in data is corrected by the residual imbalance taken from the simulated dataset.
 
 To account for differences in the jet transverse-momentum resolution for different true jet \pt and different jet pseudorapidity regions, the measurement of the resolution is done in \ptgamma bins and bins of $|\eta|$ of the leading jet.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+As noted before, the resolution measurement is important to correct the resolution measured in simulation to the resolution measured in data.
+Therefore, the measurement of the jet transverse-momentum resolution is conducted on real and on simulated events and data-to-simulation resolution scale factors (\rhores) are determined
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \chapter{Datasets and event selection}
 
@@ -341,10 +346,10 @@ This is done according to~\cite{bib:Matthias_Thesis} with the following binning
 
 The binning in the \ptgamma dimension is chosen according to the trigger thresholds for \mbox{$\ptgamma<165\gev$} and ensures sufficient statistical precision for \mbox{$\ptgamma>165\gev$}
 \begin{align*}
-\ptgamma &= 36 -60\gev     &  \ptgamma &= 149-165\gev  & \ptgamma &= 200-300\gev\\
+\ptgamma &= 36 -60\gev     &  \ptgamma &= 149-165\gev   & \ptgamma &= 200-300\gev\\
 \ptgamma &= 60 -88\gev     &  \ptgamma &= 165-176\gev  & \ptgamma &= 300-400\gev\\
 \ptgamma &= 88 -105\gev    &  \ptgamma &= 176-200\gev  & \ptgamma &> 400\gev\\
-\ptgamma &= 105-149\gev    &  \ptgamma  &= 300-400\gev. & \\
+\ptgamma &= 105-149\gev   \quad &  \ptgamma  &= 300-400\gev. \quad& \\
 \end{align*}
 
 
@@ -824,7 +829,7 @@ A comparison of the data-to-simulation resolution scale factors \rhores between 
  \centering
     %\includegraphics[width=0.65\textwidth]{figures/resolution/results/ComparisonTo2012_GAMJET.pdf}
     \includegraphics[width=0.54\textwidth]{figures/resolution/results/resultsComparisonFINAL.pdf}
-  \caption{FIXME (update this plot): Data-to-simulation jet \pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2011.
+  \caption{FIXME (update this plot): Data-to-simulation jet-\pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2011.
            The grey and magenta bands correspond to the full uncertainties, whereas the error bars depict the statistical uncertainties only.}
   \label{res:fig:Comparison_2011}
 \end{figure}
@@ -837,12 +842,12 @@ This is due to the smaller systematic uncertainties of the \GAMJET analysis whic
 
 \section{Comparison to 2012 dijet measurement}
 \label{res:sec:comparison_2012}
-In 2012, also a jet \pt resolution measurement was conducted with the help of dijet events~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
+In 2012, also a jet-\pt resolution measurement was conducted with the help of dijet events~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 A comparison of the here presented measurement using \GAMJET events to the measurement with dijet events can be found in Fig.~\ref{res:fig:Comparison_2012}.
 \begin{figure}[b]
  \centering
     \includegraphics[width=0.55\textwidth]{figures/resolution/results/JER_2012_compPhoton_final_v2.pdf}
-  \caption{FIXME: Data-to-simulation jet \pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2012.
+  \caption{FIXME: Data-to-simulation jet-\pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2012.
            The blue and magenta bands correspond to the full uncertainties, whereas the error bars depict the statistical uncertainties only.}
   \label{res:fig:Comparison_2012}
 \end{figure}
@@ -874,7 +879,7 @@ Thus, the ratio is parametrised with a constant per \etajet-bin.
 
 The relative difference of the data resolution ranges from $\sim 7\%$ to $\sim20\%$ for $|\etajet|$ between $0.0-0.5$ and between $1.7-2.3$, respectively, with total statistical and systematic uncertainties between 3\% and 8\%.
 
-The here presented measurement serves as a cross-check measurement to the jet \pt resolution ratio result using dijet events~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
+The here presented measurement serves as a cross-check measurement to the jet-\pt resolution ratio result using dijet events~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 Both measurements are compatible within their statistical and systematic uncertainties.\\
 
 For a future measurement, a reduction of the uncertainties is desirable.
@@ -885,7 +890,7 @@ Since the simulation of out-of-cone showering should in principal only enter the
 
 Furthermore, an increase in the statistical precision is desirable to allow for the coverage of the measurement of the resolution scale factors in the high pseudorapidity regions which has not been possible so far.
 
-%The significant advantage of a jet \pt resolution measurement using \GAMJET events over a measurement with dijet events is the absolute reference \pt measured with a reconstructed photon.
+%The significant advantage of a jet-\pt resolution measurement using \GAMJET events over a measurement with dijet events is the absolute reference \pt measured with a reconstructed photon.
 %This allows the exclusive binning in alpha 
 
 

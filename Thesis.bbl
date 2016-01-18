@@ -215,6 +215,21 @@ U.~Amaldi, W.~de~Boer, and H.~Furstenau, ``{Comparison of grand unified
 \newblock
 %%CITATION = HEP-PH/9901246;%%.
 
+\bibitem{bib:GravityMediation}
+H.~P. Nilles, ``{Supersymmetry, Supergravity and Particle Physics}'', {\em
+  Phys. Rept.} {\bf 110} (1984) 1--162.
+\href{http://dx.doi.org/10.1016/0370-1573(84)90008-5}{{\tt
+  doi:10.1016/0370-1573(84)90008-5}}.
+%%CITATION = PRPLC,110,1;%%.
+
+\bibitem{bib:GaugeMediation}
+G.~F. Giudice and R.~Rattazzi, ``{Theories with gauge mediated supersymmetry
+  breaking}'', {\em Phys. Rept.} {\bf 322} (1999) 419--499,
+  \href{http://www.arXiv.org/abs/hep-ph/9801271}{{\tt arXiv:hep-ph/9801271}}.
+\href{http://dx.doi.org/10.1016/S0370-1573(99)00042-3}{{\tt
+  doi:10.1016/S0370-1573(99)00042-3}}.
+%%CITATION = HEP-PH/9801271;%%.
+
 \bibitem{bib:LonglivedParticles_Overview}
 M.~Fairbairn, A.~C. Kraan, D.~A. Milstead{ et~al.}, ``{Stable massive particles
   at colliders}'', {\em Phys. Rept.} {\bf 438} (2007) 1--63,
@@ -314,5 +329,36 @@ M.~W. Cahill-Rowley, J.~L. Hewett, S.~Hoeche{ et~al.}, ``{The New Look pMSSM
 \href{http://dx.doi.org/10.1140/epjc/s10052-015-3609-0}{{\tt
   doi:10.1140/epjc/s10052-015-3609-0}}.
 %%CITATION = ARXIV:1506.05332;%%.
+
+\bibitem{bib:Theory_AMSB_1998}
+G.~F. Giudice, M.~A. Luty, H.~Murayama{ et~al.}, ``{Gaugino mass without
+  singlets}'', {\em JHEP} {\bf 12} (1998) 027,
+  \href{http://www.arXiv.org/abs/hep-ph/9810442}{{\tt arXiv:hep-ph/9810442}}.
+\href{http://dx.doi.org/10.1088/1126-6708/1998/12/027}{{\tt
+  doi:10.1088/1126-6708/1998/12/027}}.
+%%CITATION = HEP-PH/9810442;%%.
+
+\bibitem{bib:ATLAS_SUMMARYPLOTS}
+{ATLAS collaboration}, ``Summary plots from the ATLAS Supersymmetry physics
+  group''.
+  \url{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CombinedSummaryPlots/SUS%
+Y/}.
+\newblock Accessed: 2016-01-17.
+
+\bibitem{bib:CMS:HSCP_8TeV}
+{ CMS} Collaboration, ``{Searches for long-lived charged particles in pp
+  collisions at $\sqrt{s}$=7 and 8 TeV}'', {\em JHEP} {\bf 07} (2013) 122,
+  \href{http://www.arXiv.org/abs/1305.0491}{{\tt arXiv:1305.0491}}.
+\href{http://dx.doi.org/10.1007/JHEP07(2013)122}{{\tt
+  doi:10.1007/JHEP07(2013)122}}.
+%%CITATION = ARXIV:1305.0491;%%.
+
+\bibitem{bib:CMS:DT_8TeV}
+{ CMS} Collaboration, ``{Search for disappearing tracks in proton-proton
+  collisions at $ \sqrt{s}=8 $ TeV}'', {\em JHEP} {\bf 01} (2015) 096,
+  \href{http://www.arXiv.org/abs/1411.6006}{{\tt arXiv:1411.6006}}.
+\href{http://dx.doi.org/10.1007/JHEP01(2015)096}{{\tt
+  doi:10.1007/JHEP01(2015)096}}.
+%%CITATION = ARXIV:1411.6006;%%.
 
 \end{thebibliography}\endgroup
