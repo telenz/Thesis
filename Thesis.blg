@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
+I found no \citation commands---while reading file Thesis.aux
 Database file #1: Thesis.bib
 You're missing a field name---line 795 of file Thesis.bib
  : 
@@ -67,46 +68,45 @@ I was expecting a `,' or a `}'---line 1780 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "bib:CMS:PileUpReweighting"
-You've used 16 entries,
+You've used 0 entries,
             2369 wiz_defined-function locations,
-            708 strings with 8395 characters,
-and the built_in function-call counts, 3837 in all, are:
-= -- 490
-> -- 45
+            582 strings with 4558 characters,
+and the built_in function-call counts, 21 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 23
-- -- 7
-* -- 318
-:= -- 495
-add.period$ -- 38
-call.type$ -- 16
++ -- 0
+- -- 0
+* -- 3
+:= -- 9
+add.period$ -- 0
+call.type$ -- 0
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 246
-empty$ -- 419
-format.name$ -- 7
-if$ -- 1059
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 39
-newline$ -- 75
-num.names$ -- 5
-pop$ -- 76
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 105
+skip$ -- 1
 stack$ -- 0
-substring$ -- 56
-swap$ -- 69
+substring$ -- 0
+swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 12
-width$ -- 18
-write$ -- 186
-(There were 13 error messages)
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 14 error messages)
