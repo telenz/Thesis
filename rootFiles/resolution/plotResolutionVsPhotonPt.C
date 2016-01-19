@@ -64,7 +64,7 @@ int plotResolutionVsPhotonPt(){
     TString name = "imbalance";
     cImb[j] = new TCanvas();
     c[j] -> cd();
-    TLegend *legend = new TLegend(0.4,0.75,0.9,0.9);      
+    TLegend *legend = new TLegend(0.5,0.75,0.9,0.9);      
 
     intrinsicJER = GetTGraphErrors(pathToFileMC + sourceIntrinsic,"Graph");  
     imbalanceJER = GetTGraphErrors(pathToFileMC + sourceImbalance,"Graph");
@@ -95,8 +95,8 @@ int plotResolutionVsPhotonPt(){
     dataJER      -> GetXaxis() -> SetTitle("p_{T}^{#gamma} [GeV]");   
     intrinsicJER -> GetYaxis() -> SetTitle("#sigma_{intrinsic}"); 
     imbalanceJER -> GetYaxis() -> SetTitle("#sigma_{imbalance}"); 
-    mcJER        -> GetYaxis() -> SetTitle("Resolution"); 
-    dataJER      -> GetYaxis() -> SetTitle("Resolution"); 
+    mcJER        -> GetYaxis() -> SetTitle("#sigma_{JER}"); 
+    dataJER      -> GetYaxis() -> SetTitle("#sigma_{JER}"); 
                         
     intrinsicJER -> SetMinimum(0.00);
     intrinsicJER -> SetMaximum(0.20);   
@@ -106,7 +106,7 @@ int plotResolutionVsPhotonPt(){
     imbalanceJER -> GetXaxis() -> SetRangeUser(0,600);
 
     mcJER -> SetMinimum(0.00);
-    mcJER -> SetMaximum(0.15);   
+    mcJER -> SetMaximum(0.20);   
     mcJER -> GetXaxis() -> SetRangeUser(0,600);
       
     //intrinsicJER -> Draw("AP");
@@ -126,7 +126,7 @@ int plotResolutionVsPhotonPt(){
     info   = new TLatex();
   
     info -> SetNDC();    
-    info->DrawLatex(0.22,0.65,  etaRegion);
+    info->DrawLatex(0.52,0.65,  etaRegion);
     info->DrawLatex(0.22,0.25, "Anti-k_{T} (R=0.5), PF+CHS");
     c[j] -> SaveAs(pdfFile);
 

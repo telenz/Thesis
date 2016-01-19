@@ -67,11 +67,10 @@ I was expecting a `,' or a `}'---line 1780 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "FIXME"
 Warning--I didn't find a database entry for "bib:CMS:PileUpReweighting"
 You've used 16 entries,
             2369 wiz_defined-function locations,
-            710 strings with 8405 characters,
+            708 strings with 8395 characters,
 and the built_in function-call counts, 3837 in all, are:
 = -- 490
 > -- 45

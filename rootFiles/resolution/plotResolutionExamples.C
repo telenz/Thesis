@@ -80,7 +80,7 @@ int plotResolutionExamples(){
 
       c -> cd();
       
-      legend  = new TLegend(0.4,0.65,0.9,0.9);
+      legend  = new TLegend(0.35,0.65,0.9,0.9);
       legend -> SetTextSize(0.05);
   
       // Intrinsic
@@ -134,7 +134,7 @@ int plotResolutionExamples(){
       Add -> SetTitle("");           
       if(addMC){
 	//	legend -> AddEntry(Add,"#gamma + Jet (pseudo data)","lep");
-	legend -> AddEntry(Add,"#gamma + Jet (simulation)","lep");
+	legend -> AddEntry(Add,"Measured (simulation)","lep");
 	Add    -> Draw("Psame");
 	total  -> Draw("same");
       }
