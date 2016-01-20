@@ -1,3 +1,23 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{}
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{bib:LHC_machine_2008}
+L.~Evans and P.~Bryant, ``{LHC Machine}'', {\em JINST} {\bf 3} (2008) S08001.
+\href{http://dx.doi.org/10.1088/1748-0221/3/08/S08001}{{\tt
+  doi:10.1088/1748-0221/3/08/S08001}}.
+%%CITATION = JINST,3,S08001;%%.
+
+\bibitem{bib:LHC_2004}
+O.~S. Bruning, P.~Collier, P.~Lebrun{ et~al.},
+``{LHC Design Report Vol.1: The LHC Main Ring}'',.
+%%CITATION = CERN-2004-003-V1;%%.
+
+\bibitem{bib:LEP_design_1984}
+
+``{LEP Design Report: Vol.2. The LEP Main Ring}'',.
+%%CITATION = CERN-LEP-84-01;%%.
+
+\bibitem{bib:CERN:web}
+{CERN}, ``CERN, public web page''. \url{www.cern.ch}.
+\newblock Accessed: 2016-01-17.
 
 \end{thebibliography}\endgroup
