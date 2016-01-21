@@ -6,18 +6,18 @@
 
 The determination and quantification of the quality of the jet transverse-momentum measurement is of crucial interest for many analyses with jet final states, \eg the measurement of the dijet cross section~\cite{bib:CMS:QCD_measurements} or \ttbar production cross sections~\cite{bib:CMS:TopCrossSection_8TeV}. 
 Also searches for physics beyond the standard model with missing transverse momentum, \PTm, in the final state rely on a good understanding of \PTm originating from wrongly measured jets~\cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:CMS:AlphaT_8TeV}.
-It is therefore important to determine the jet transverse-momentum resolution, \ie the detector resolution of the jet-\pt measurement.
-For analyses relying on information from simulated data it is necessary to correct the simulated resolution to the resolution actually present in data.
+It is therefore important to determine the jet transverse-momentum resolution, \ie the detector resolution of the jet \pt measurement.
+For analyses relying on information from simulation it is necessary to correct the simulated resolution to the resolution actually present in data.
 Therefore, scale factors will be presented to adjust the resolution in simulation to the resolution of the real detector.  
   
-In the following sections, a data-based method to measure the jet-\pt resolution in \GAMJET events will be presented. 
+In the following sections, a data-based method to measure the jet \pt resolution in \GAMJET events will be presented. 
 A similar method was already applied in earlier analyses~\cite{bib:CMS:JERCPaper_2011,CMS:PAS:JETResolution_7TeV} of 7\tev data.  
 It is further developed here and applied to 19.7\fbinv of $\sqrt{s}=8\tev$ data.
 
 The method is based on the transverse-momentum balance in the \GAMJET system. 
 It takes advantage of the high resolution of the electromagnetic calorimeter and hence the excellent measurement of the photon momentum.
 Without initial and final state radiation, the photon and the jet are balanced in the transverse plane. 
-Thus, measuring the photon \pt with high accuracy leads to an accurate estimate of the true jet transverse momentum and offers a possibility to quantify the resolution of jet-\pt measurements.
+Thus, measuring the photon \pt with high accuracy leads to an accurate estimate of the true jet transverse momentum and offers a possibility to quantify the resolution of jet \pt measurements.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,8 +73,8 @@ First the mean of the core is found via a Gaussian fit to the histogram in a 2$\
 This procedure is done in three iteration steps.
 Then, a symmetric interval around this mean is determined with its integral equal to 99\% of the integral of the full histogram. 
 
-As noted earlier, in simulated data, the response distribution can be evaluated by the reconstructed over generator-level jet transverse momentum.
-A determination of the resolution in real data, however, has to rely on a different approach.\\
+As noted earlier, in simulated events, the response distribution can be evaluated by the reconstructed over generator-level jet transverse momentum.
+A determination of the resolution in data, however, has to rely on a different approach.\\
 
 
 
@@ -121,7 +121,7 @@ The intrinsic part is the resolution of interest which is independent of further
 To account for differences in the jet transverse-momentum resolution for different true jet \pt and different jet pseudorapidity regions, the measurement of the resolution is done in \ptgamma bins and bins of $|\eta|$ of the leading jet.
 
 As noted before, the resolution measurement is important to correct the resolution measured in simulation to the resolution measured in data.
-Therefore, the measurement of the jet transverse-momentum resolution is conducted on real and on simulated events and data-to-simulation resolution scale factors (\rhores) are determined
+Therefore, the measurement of the jet transverse-momentum resolution is performed on data and simulation and data-to-simulation resolution scale factors (\rhores) are determined
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,9 +130,9 @@ Therefore, the measurement of the jet transverse-momentum resolution is conducte
 
 The measurement of the jet transverse-momentum resolution is carried out with \GAMJET data recorded during the year 2012 at a centre-of-mass energy of $\sqrt{s}=8\tev$ at the CMS experiment.
 The datasets and triggers that are exploited for this measurement are introduced in the following Section~\ref{res:sec:DatasetsAndTriggers}.
-The measured resolution in data is compared to the resolution in simulated samples. These are introduced in Section~\ref{res:sec:SimulatedSamples}.
+The measured resolution in data is compared to the resolution in a simulated \GAMJET sample. This is introduced in Section~\ref{res:sec:SimulatedSamples}.
 In order to select \GAMJET events that are well suited for the resolution measurement, an event selection is applied on top.
-This event selection is described in Section~\ref{res:sec:EventSelection}.
+The event selection is described in Section~\ref{res:sec:EventSelection}.
 
 \section{Datasets and triggers}
 \label{res:sec:DatasetsAndTriggers}
@@ -164,7 +164,7 @@ HLT\_Photon150\               & 19.71\\
 On level one (L1), the triggers rely on single-photon triggers, such as L1SingleEG12 and L1SingleEG30.
 The L1 triggers require at least one photon that is above a certain \pt threshold, \eg 12\gev or 30\gev.
 The high-level triggers require a photon with a certain \pt (as indicated in the name) and, in case of thresholds below 135\gev, additional quality and isolation criteria. 
-All triggers with threshold below 150\gev were prescaled.
+All triggers with thresholds below 150\gev were prescaled.
 
 The events that are selected by the above mentioned triggers are contained in the datasets listed in Table~\ref{res:tab:datasets}.
 \renewcommand{\arraystretch}{1.5}
@@ -187,7 +187,7 @@ Dataset                                          & Integrated luminosity [\fbinv
 \end{tabular}}
 \end{table}  
 
-\section{Simulated samples}
+\section{Simulated sample}
 \label{res:sec:SimulatedSamples}
 
 In order to compare the measured resolution in data to the resolution in simulation, a single-photon sample simulated with \pythiaSix is used.
@@ -195,11 +195,11 @@ This sample is generated flat in the photon \pt to have a good statistical preci
 In order to recover a physical \pt spectrum, all simulated events are reweighted.
 Figure~\ref{res:fig:PhotonPtSpectrum} shows the photon \pt spectrum in simulation before and after the reweighting. 
 
-All simulated samples come with a pileup scenario which does not necessarily match the pileup scenario in data. 
+Simulated samples come with a pileup scenario which does not necessarily match the pileup scenario in data. 
 To match the measured distribution of primary vertices, the events are weighted according to their number of primary vertices. 
 Because almost all of the used triggers were differently prescaled over time, the distributions of primary vertices differ among the sets of events recorded by each trigger.
 Thus, the reweighting has to be done separately for each trigger.
-A comparison between the number of primary vertices in real data and simulation for all triggers can be found in Appendix~\ref{res:app:pileup}.
+A comparison between the number of primary vertices in data and simulation for all triggers can be found in Appendix~\ref{res:app:pileup}.
 \begin{figure}[ht]
   \centering
       \includegraphics[width=0.49\textwidth]{figures/resolution/eventSelection/PhotonPtComparison_reweighted.pdf} 
@@ -232,7 +232,7 @@ It comprises the following selection criteria:
  \item Charged electromagnetic fraction $<$ 0.99.
 \end{itemize}
 
-To mitigate effects from pileup, an additional transverse-momentum requirement is imposed:
+To mitigate effects from pileup, an additional transverse momentum requirement is imposed:
 \begin{itemize}
 \item $\ptfirstjet,\ptsecondjet>10\gev$.
 \end{itemize}
@@ -338,8 +338,8 @@ A summary of all selection criteria can be found in Appendix~\ref{res:app:events
 Finally, the leading jet pseudorapidity interval bounds need to be chosen in order to account for resolution differences in different detector regions.
 This is done according to~\cite{bib:Matthias_Thesis} with the following binning
 \begin{align*}
-|\etafirstjet| = 0.0-0.5 && |\etafirstjet| = 1.1-1.7 \\
-|\etafirstjet| = 0.5-1.1 && |\etafirstjet| = 1.7-2.3.
+|\etafirstjet| &= 0.0-0.5  &&|\etafirstjet| = 1.1-1.7 \\
+|\etafirstjet| &= 0.5-1.1  &&|\etafirstjet| = 1.7-2.3.
 \end{align*}
 The binning in the \ptgamma dimension is chosen according to the trigger thresholds for \mbox{$\ptgamma<165\gev$} and ensures sufficient statistical precision for \mbox{$\ptgamma>165\gev$}
 \begin{align*}
@@ -360,7 +360,7 @@ The binning in the \ptgamma dimension is chosen according to the trigger thresho
 The basic methodology of measuring the jet transverse-momentum resolution by exploiting the \pt balance in $\GAMJET$ events and extrapolating the result to small $\alpha$, that was already used in earlier analyses~\cite{bib:CMS:JERCPaper_2011,CMS:PAS:JETResolution_7TeV}, is extended in this measurement in order to explicitly account for the influence of the direction of additional jets on the jet transverse-momentum response.
 % the case of parton radiation in different event hemispheres. FIXME
 
-As already described in Chapter~\ref{res:ch:GeneralApproach}, the idea behind a resolution measurement with $\GAMJET$ events in real data is the usage of the photon \pt instead of the true jet \pt.
+As already described in Chapter~\ref{res:ch:GeneralApproach}, the idea behind a resolution measurement with $\GAMJET$ events in data is the usage of the photon \pt instead of the true jet \pt.
 This results in a twofold contribution to the measured response, the intrinsic response and the imbalance:
 \begin{equation}\label{eq:splittedResolution}
 \underbrace{\frac{\ptrecojet}{\ptgamma}}_{\text{measured}} = \underbrace{\frac{\ptrecojet}{\ptgenjet}}_{\text{intrinsic}} \oplus \underbrace{\frac{\ptgenjet}{\ptgamma}}_{\text{imbalance}}.
@@ -429,7 +429,7 @@ The two response distributions coming from the different event topologies are se
 With the above presented methodology, it is possible to measure the resolution in simulation and data for different values of $\alpha$.
 Since the quantity of interest is the jet transverse-momentum resolution independent of further jet activity, \ie the extrapolated value of the measured resolution at $\alpha=0$, 
 the dependency of the measured resolution on alpha, $\jermeasured \left( \alpha \right)$, is needed.
-Simulated data offers the possibility to study the individual contributions to the measured resolution, the intrinsic resolution $\jerintrinsic\left( \alpha \right)$ and the imbalance $\jerimbalance\left( \alpha \right)$.%, because generator-level information is available.
+Simulated events offer the possibility to study the individual contributions to the measured resolution, the intrinsic resolution $\jerintrinsic\left( \alpha \right)$ and the imbalance $\jerimbalance\left( \alpha \right)$.%, because generator-level information is available.
 
 The intrinsic part of the resolution for a given photon \pt bin is, by definition, independent of secondary jet \pt, and can be considered as constant in terms of $\alpha$
 \begin{equation}\label{eq:intrinsic}
@@ -451,7 +451,7 @@ In Fig.~\ref{fig:AlphaDependenceOfResolutions}, the $\alpha$ dependence of the i
     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/JER_for_1_eta_bin_12_pTGamma_bin_wo_data_PFCHS_RMS99_mc.pdf} 
   \caption{The alpha dependency of the various parts of the resolution in the simulated events for $83 \gev < \pt^{\gamma} < 99 \gev $ (left) and $400 \gev < \pt^{\gamma}$ (right). 
            The total resolution (grey dotted line) is the addition in quadrature of the imbalance (blue line) and the intrinsic (red line) fit functions. 
-           It can be compared to the measured resolution in simulated data (green dots/line).}  
+           It can be compared to the measured resolution in simulation (green dots/line).}  
  \label{fig:AlphaDependenceOfResolutions}
 \end{figure}
 The intrinsic resolution is fitted with Eq.~\eqref{eq:intrinsic} (red line), while the imbalance is fitted with Eq.~\eqref{eq:imbalance} (blue line).
@@ -467,11 +467,11 @@ Due to the existence of a residual imbalance $q$, it is not possible to simply u
 This is already obvious from Eq.~\eqref{eq:total} which evaluates to $\jermeasured  = \sqrt{c^2 + q^2}$ at $\alpha=0$.
 
 For the determination of the intrinsic resolution in data, the method relies on the residual imbalance information from simulation.
-Practically, when fitting the measured resolution (Eq.\eqref{eq:total}) in real data, the residual imbalance $q$ is fixed to the value obtained from the imbalance fit (Eq~\ref{eq:imbalance}) in simulation.
-The intrinsic resolution in real data can then be obtained by extracting the fit parameter $c$.
+Practically, when fitting the measured resolution (Eq.\eqref{eq:total}) in data, the residual imbalance $q$ is fixed to the value obtained from the imbalance fit (Eq~\ref{eq:imbalance}) in simulation.
+The intrinsic resolution in data can then be obtained by extracting the fit parameter $c$.
 In the following the estimator of the intrinsic resolution (fit parameter $c$ from the measured resolution) will be referred to as $\jer$.
 
-For consistency, the same approach is used for simulated data.
+For consistency, the same approach is used for simulated events.
 The fitted function of the measured resolution (green line) in Fig.~\ref{fig:AlphaDependenceOfResolutions} corresponds to the fit function of Eq.~\eqref{eq:total} with the parameter $q$ fixed to the value obtained from the imbalance fit (blue line).
 Finally, the dotted grey line is the total resolution with the analytic expression of function \eqref{eq:total} with the parameters set to the fit values of the intrinsic (red) and the imbalance fit (blue). 
 It can be nicely seen that the total resolution and the fit function of the measured resolution (green line) are well in agreement.
@@ -488,17 +488,16 @@ Further validations of the methodology will be described in Section~\ref{res:sec
 %  \label{fig:ImbalanceOfPtgamma}
 %\end{figure}
 
-In Fig.~\ref{fig:ResolutionOfPtgamma}, the extracted intrinsic resolution in simulation (green) and real data (black) is shown in different photon \pt bins for two different $|\etafirstjet|$ regions.
+In Fig.~\ref{fig:ResolutionOfPtgamma}, the estimated intrinsic resolution in simulation (green) and data (black) is shown in different photon \pt bins for two different $|\etafirstjet|$ regions.
 The resolution improves for increasing photon \pt. 
 \begin{figure}[!b]
   \centering
     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/Resolution_for_1_eta_bin_PFCHS_mc_RMS99.pdf}
     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/Resolution_for_3_eta_bin_PFCHS_mc_RMS99.pdf}
-  \caption{Resolution for $|\etafirstjet| < 0.5$ (left) and $1.1<|\etafirstjet| < 1.7$ (right) in simulation (green) and real data (black). Both are fitted with a particle-flow resolution function introduced in~\cite{bib:CMS:JERCPaper_2011}.}  
+  \caption{Resolution for $|\etafirstjet| < 0.5$ (left) and $1.1<|\etafirstjet| < 1.7$ (right) in simulation (green) and data (black). Both are fitted with a particle-flow resolution function introduced in~\cite{bib:CMS:JERCPaper_2011}.}  
   \label{fig:ResolutionOfPtgamma}
 \end{figure}
-For the $|\etafirstjet|<0.5$ region, the resolution is approximately 10\% for $\pt^{\gamma} \approx 100\gev$ and decreases to values around 6\% for  
-$\pt^{\gamma} \approx 500\gev$.
+For the $|\etafirstjet|<0.5$ region, the resolution is approximately 10\% for $\pt^{\gamma} \approx 100\gev$ and decreases to values around 7\% for $\pt^{\gamma} \approx 300\gev$.
 The increasing statistical uncertainties for low photon \pt arise through the requirement of a maximal $\alpha$ and a minimal \pt of the second jet. 
 This reduces the numbers of events in the low photon \pt bins. 
 For events with $\ptgamma \lesssim 50\gev$, it is not possible at all to fulfil both requirements at the same time.
@@ -640,7 +639,7 @@ An overview of all systematic uncertainties can be found in Table~\ref{res:tab:U
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Uncertainty on the contamination with QCD-multijet events}
 Due to the huge QCD-multijet cross section, a countable fraction of dijet events can survive the strict photon selection (see Section~\ref{subsec:PhotonSelection}) if a jet is misidentified as a photon.
-This happens, when \eg a jet hadronises to a $\pi^0$ that decays to two photons that mimic the signature of an isolated photon from a $\GAMJET$ event.
+This happens, when \eg a jet hadronises to a $\pi^0$ that decays to two close-by photons that mimic the signature of an isolated photon from a $\GAMJET$ event.
 
 The two leading jets in a dijet event are balanced except for initial and final state radiation and have in principle the same topology as \GAMJET events.
 Therefore, the presented method is in principle insensitive to dijet contamination.
@@ -723,9 +722,9 @@ The uncertainty on the simulation of out-of-cone showering is thus the largest s
 \section*{Uncertainty on the jet energy scale}
 A further uncertainty arises from the correction of the jet energy scale.
 The transverse momentum of each jet is corrected in order to have uniform response over the full $\eta^{\text{jet}}$, and $\pt^{\text{jet}}$ range~\cite{bib:CMS:JME_PAS}.
-In simulation, it is additionally corrected to account for data-simulation differences.
+In data, it is additionally corrected to account for data-simulation differences.
 The latter correction can be a important for the evaluation of the data-to-simulation ratio.
-Thus, the uncertainties on the correction factors that are only applied to the simulated samples are varied up and down within their $1\sigma$-uncertainties.
+Thus, the uncertainties on the correction factors that are only applied to the data samples are varied up and down within their $1\sigma$-uncertainties.
 
 The effect of the jet \pt variation on the data-to-simulation ratio is of minor importance and range between $0.5-0.7\%$.
 
@@ -780,7 +779,7 @@ Thus, a horizontal fit is justified, and one value for every $|\etafirstjet|$-bi
   \label{res:fig:RatioEtaBinned}
 \end{figure}
 
-The resulting \rhores is always larger than one which means that the resolution in data is always worse than the resolution in simulation.
+The resulting \rhores is always larger than one, which means that the resolution in data is always worse than the resolution in simulation.
 The values of the fits range from 1.067 (for the first $\etajet$-bin) to 1.199 (for the last $\etajet$-bin). 
 
 The systematic uncertainties are evaluated as described in the previous chapter. 
@@ -828,7 +827,7 @@ A comparison of the data-to-simulation resolution scale factors \rhores between 
  \centering
     %\includegraphics[width=0.65\textwidth]{figures/resolution/results/ComparisonTo2012_GAMJET.pdf}
     \includegraphics[width=0.54\textwidth]{figures/resolution/results/Figure_43_left_Teresa_cmsStyle_updated_5.pdf}
-  \caption{FIXME (update this plot): Data-to-simulation jet-\pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2011.
+  \caption{FIXME (update this plot): Data-to-simulation jet \pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2011.
            The grey and magenta bands correspond to the full uncertainties, whereas the error bars depict the statistical uncertainties only.}
   \label{res:fig:Comparison_2011}
 \end{figure}
@@ -839,12 +838,12 @@ This is due to the smaller systematic uncertainties of this analysis which compe
 
 \section{Comparison to 2012 dijet measurement}
 \label{res:sec:comparison_2012}
-A jet-\pt resolution measurement using dijet events was also carried out in 2012~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
+A jet \pt resolution measurement using dijet events was also carried out in 2012~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 A comparison of the here presented measurement using \GAMJET events to the measurement with dijet events can be found in Fig.~\ref{res:fig:Comparison_2012}.
 \begin{figure}[!t]
  \centering
     \includegraphics[width=0.55\textwidth]{figures/resolution/results/JER_2012_compPhoton_final_v2.pdf}
-  \caption{FIXME (Update this plot): Data-to-simulation jet-\pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2012.
+  \caption{FIXME (Update this plot): Data-to-simulation jet \pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2012.
            The blue and magenta bands correspond to the full uncertainties, whereas the error bars depict the statistical uncertainties only.}
   \label{res:fig:Comparison_2012}
 \end{figure}
