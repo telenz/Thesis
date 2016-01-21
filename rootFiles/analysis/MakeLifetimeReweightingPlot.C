@@ -6,6 +6,7 @@
 #include "TStyle.h"
 #include "TLegend.h"
 #include "TLatex.h"
+#include "TPaveStats.h"
 #include <iostream>
 #include "../plotStyleThesis.h"
 
@@ -68,6 +69,10 @@ void MakeLifetimeReweightingPlot(){
   histo->GetXaxis()->SetRangeUser(0,500);
   c->SetLogy();
   f->Draw("same");
+
+  TPaveStats *st = (TPaveStats*)histo->FindObject("stats");
+  st->SetX1NDC(0.49); //new x start position
+  st->SetX2NDC(.935); //new x end position
 
 
   TLatex box;

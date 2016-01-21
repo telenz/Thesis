@@ -34,7 +34,7 @@ This optimisation is carried out in the track variables \pt and \dedx (see Chapt
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fake background}
 \label{sec:FakeBkg}
-Fake tracks are tracks that are reconstructed out of the tracker hits of more than one particle.
+Fake tracks are reconstructed out of the tracker hits of more than one particle.
 The rate at which this false reconstruction occurs is highly restrained by the quality cuts on $\chi^2$ and the vertex compatibility of the track reconstruction algorithm.
 Details on the reconstruction algorithm of tracks at CMS can be found in Section~\ref{FIXME}.
 
@@ -43,7 +43,7 @@ This can be seen in Fig.~\ref{fig:NValidFakes}, where the normalised distributio
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/NValidForFakes_chiTracksfullSelectionNoTriggerCuts.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/NValidForFakes_chiTracksfullSelectionNoQCDCutsNoTrigger.pdf}
   \end{tabular}
   \caption{Normalised distribution of the number of hits for fake tracks in the simulated \WJets sample. To increase the statistical precision, only the candidate track selection from Table~\ref{tab:SummaryCuts} is applied.}
   \label{fig:NValidFakes}
@@ -74,7 +74,7 @@ Thus, it is possible to determine \fakerate with the help of one SM process and 
 
 The inclusive fake background is estimated with the help of $Z\rightarrow\mu\bar{\mu}$ and $Z\rightarrow e\bar{e}$ events from data.
 \Zlep events can be selected with high purity by requiring two well reconstructed muons or electrons that are opposite in charge and for which the invariant mass is around the $Z$-boson mass of $\sim90\gev$.
-As these events do not contain further leptons from the hard interaction (processes with a further lepton are negligible), any additional track is either a constituent of an ISR jet, a soft particle from pileup events or is a fake, reconstructed out of a combination of hits from several soft particles.
+As these events do not contain further leptons from the hard interaction (processes with a further lepton are negligible), any additional track is either a constituent of an ISR jet, a soft particle from pileup events or is a fake. %, reconstructed out of a combination of hits from several soft particles.
 Since the candidate track selection requires a track with a $\pt>20\gev$ that is no lepton or jet, it suppresses ISR jets and soft tracks from the underlying event.
 Thus, applying the track-based signal candidate selection on \Zlep events selects fake tracks with high purity.
 
@@ -645,7 +645,7 @@ For a signal region definition with $\pt>20\gev$ and $\ias>0.2$ this corresponds
 \label{sec:LeptonScaleUncertainty}
 
 The leptonic scale factor \leptonscalefactor is estimated on simulated \WJets events.
-The corresponding systematic uncertainty that addresses the use of information from simulation is derived by a ``tag-and-probe'' method conducted on real data and simulated events.
+The corresponding systematic uncertainty that addresses the use of information from simulation is derived by a ``tag-and-probe'' method performed on real data and simulated events.
 
 For this method a selection of \Zlep events is done with one ``tagged'' well reconstructed lepton and one ``probed'' candidate track.
 To ensure a selection of \Zlep events, a selection on the invariant mass of  the reconstructed lepton and the candidate track is applied with $80\gev<M_{\text{inv}}\left( \text{lepton}, \text{cand. trk}  \right)<100\gev$ for muons and electrons.
@@ -670,7 +670,7 @@ The selection requirements for the three tag-and-probe samples are listed in Tab
 
 The leptonic scale factors are calculated using simulated \Zlep events and real data from the single-muon and single-electron samples listed in Table~\ref{tab:ElectronMuonCRDatasets}.
 The largest difference from unity of the ratio $\rho^{\text{lep}_i}_{\text{MC}}$/$\rho^{\text{lep}_i}_{\text{Data}}$ and its statistical uncertainty is taken as systematic uncertainty. 
-This results for the signal candidate selection in an uncertainty of 69\% for the electron, 39\% for the muon and 79 \% for the tau scale factor.
+This results for the signal candidate selection in an uncertainty of 69\% for the electron, 39\% for the muon and 79\% for the tau scale factor.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Uncertainty on the leptonic dE/dx shape}

@@ -12,9 +12,8 @@ The chargino then decays via a virtual $W$-boson to the lightest neutralino and 
 This process is illustrated in the Feynman diagram in Fig.~\ref{fig:FeynmanDiagram}.
 Other possible chargino pair production channels include the exchange of a supersymmetric Higgs boson or a t-channel squark exchange (Fig.~\ref{fig:FeynmanDiagramProductionCharginoPair}).
 
-Apart from pair production, charginos can be produced via the chargino neutralino production channel. 
+Apart from pair production, charginos can be generated (produced) FIXME via the chargino-neutralino production channel. 
 On tree-level, there exist two production mechanisms: the s-channel $W$-boson exchange and the t-channel squark exchange (Fig.~\ref{fig:FeynmanDiagramProductionCharginoNeutralino}).
-
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -50,7 +49,7 @@ In the here presented search, the focus is, however, put on the electroweak prod
 
 When searching for supersymmetric models with long-lived \chipm, the strategy is of course highly dependent on the actual lifetime of the chargino. 
 For long lifetimes, the chargino can reach the muon chambers and can be reconstructed as a muon even despite a longer time-of-flight \cite{bib:CMS:HSCP_7TeV}. 
-For lower lifetimes, the chargino can already decay inside the detector (\eg the tracker), and can hence not be reconstructed as a muon but leads to an isolated, potentially disappearing track in the tracker. 
+For lower lifetimes, the chargino can already decay inside the detector (\eg the tracker), and hence can not be reconstructed as a muon but leads to an isolated, potentially disappearing track in the tracker. 
 The detector signatures of these two scenarios are visualised in Fig.~\ref{fig:CharginoPaiEventDisplay}, where simulated chargino-chargino events are shown in a cross-sectional view of the CMS detector.
 \begin{figure}[!t]
   \centering 
@@ -71,13 +70,15 @@ The detector signatures of these two scenarios are visualised in Fig.~\ref{fig:C
   \caption{Visualisation of possible signatures of a chargino pair produced with a lifetime of $\ctau = 10\,\text{m}$ (a) and a lifetime of $\ctau = 0.5\,\text{m}$ (b and c). 
            The muon chambers are the outer layers of the detector and are depicted as red boxes.
            The black lines represent the reconstructed chargino tracks.
-           The right picture is a zoom of the picture in the middle. Here, only the cross-section of the tracker (green wavy lines for the strip and grey lines for the pixel) is displayed. The red arrow shows the missing transverse energy in the event.
-           The red (blue) towers correspond to the energy deposition in the ECAL (HCAL).} 
+           The right picture is a zoom of the picture in the middle. 
+           Here, only the cross-section of the tracker (green wavy lines for the strip and grey lines for the pixel) is displayed. The red arrow shows the missing transverse energy in the event.
+           The red (blue) towers correspond to the energy deposition in the ECAL (HCAL).
+           The ISR jet in the middle and right picture is indicated as yellow line.} 
   \label{fig:CharginoPaiEventDisplay}
 \end{figure}
-In the left picture of Fig.~\ref{fig:CharginoPaiEventDisplay}, both charginos are reconstructed as muons, which can be seen in the energy deposition in the muon chambers.
-In the middle and right pictures both charginos have a lower lifetime of $\ctau=0.5\,$m and thus are only visible as tracks in the tracker, where both trajectories end inside the silicon strip tracker.
-Since this analysis targets a search for Supersymmetry with charginos of lifetimes between $\ctau \approx 10\,\text{cm} - 40\,\text{cm}$, the charginos decay rather early in the detector, even in the inner layers of the tracker.
+In the left picture of Fig.~\ref{fig:CharginoPaiEventDisplay}, both charginos are reconstructed as muons, which can be seen by the energy deposition in the muon chambers.
+In the middle and right pictures both charginos have a lower lifetime of $\ctau=0.5\,$m and thus are only visible as tracks in the tracker, where both trajectories end inside the silicon strip tracker (coincidentally the tracks are equally long).
+Since this analysis targets a search for Supersymmetry with charginos of lifetimes between $\ctau \approx 10\,\text{cm} - 40\,\text{cm}$, the charginos decay rather early in the detector, possibly even in the inner layers of the tracker.
 %Thus, the signature of chargino events consists of isolated, short tracks that have large ionisation losses due to high chargino masses and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
 Thus, the signature of chargino events consists of isolated, short tracks and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
 
@@ -88,14 +89,14 @@ In case of R-parity conservation, one of the chargino decay products, the neutra
 The signature of the other decay product, the fermion pair, can in principle be used to select chargino events. 
 However, for mass-degenerate charginos, it can be very hard or even impossible to detect these fermions as will be explained in detail in the next paragraph.
 
-First of all, the fermionic decay product (\eg a pion) can usually not be reconstructed because it does not origin from the primary vertex.
+First of all, the fermionic decay product (\eg a pion) can usually not be reconstructed because it does not originate from the primary vertex.
 Secondly, it is very low in momentum because of the mass-degeneracy between \chipm and \chiO.
 The typical momentum of a pion originating from a chargino to neutralino decay in the \chipm rest frame is of the order 
 \begin{equation}
 p_{\pi}\sim \sqrt{ \left( m_{\chipm} - m_{\chiO} \right)^2 - m_{\pi}^2}.
 \end{equation}
 %As the \chipm is rather slow for higher masses this is a good approximation also in the detector rest frame.
-For a mass gap between \chipm and \chiO of $\Delta m=150\, \mev$, the pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} (Fig.~\ref{fig:ptOfPions}).
+For a mass gap between \chipm and \chiO of $\Delta m=150\, \mev$, the \pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} in the laboratory frame (Fig.~\ref{fig:ptOfPions}).
 \begin{figure}[!t]
   \centering 
  \vspace{10pt}
@@ -127,12 +128,13 @@ Such a signature is very difficult to detect, especially since CMS doesn't offer
 
 In order to search for such signatures, one therefore needs to trigger on other, less obvious properties of chargino events. 
 This analysis takes advantage of higher order contributions to the Feynman diagrams shown in Figs.~\ref{fig:FeynmanDiagramProductionCharginoPair} and~\ref{fig:FeynmanDiagramProductionCharginoNeutralino}, resulting in initial state radiation (ISR).
-If the initial quarks radiate a high \pt gluon, the resulting jet can be detected and can offer a possibility to search for events with nothing more than isolated tracks.
-Furthermore, the non-detection of the chargino's decay products plus a high \pt ISR jet lead to missing transverse energy (MET) in the event. 
+If the initial quarks radiate a high \pt gluon, the resulting jet can be detected and can offer a possibility to search for events with apart from the ISR jet, nothing more than isolated tracks.
+Furthermore, the non-detection of the chargino's decay products plus a high \pt ISR jet leads to missing transverse energy (MET) in the event. 
 Exploiting these two circumstances, it is possible to detect chargino-pair or chargino-neutralino events with the help of Jet+MET triggers.
 
 Since Jet+MET triggers are not very specific for chargino events, it is important to identify further track properties that can be used to select chargino candidates.
 One distinctive property of charginos compared to SM particles is their high mass. 
+Since at $pp$-colliders the transverse-momentum distribution depends FIXME
 Therefore, charginos can be identified by selecting high \pt tracks. 
 Furthermore, the energy loss per path length (\dedx) depends quadratically on the particle's mass for low velocities ($0.2<\beta\gamma<0.9$):
 \begin{equation}
@@ -163,18 +165,17 @@ This can be very inefficient for shorter lifetimes, where most of the charginos 
 In Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (left), the normalised distribution of the number of measurements (\nhits) of chargino tracks is shown. 
 It can be seen, that \nhits peaks at the minimal possible value needed for track reconstruction of $\nhits=3$ for lower lifetimes.
 %For higher lifetimes ($\ctau=50\cm$) the distribution shifts to higher values with a second peak at $\nhits\sim17$.
-For a lifetime of $\ctau=50\cm$, a second peak at $\sim$17 hits appears corresponding to the number of measurements when crossing all pixel barrel (3) and strip inner and outer barrel (6 from stereo and 8 from normal) layers.
+For a lifetime of $\ctau=100\cm$, a second peak at $\sim$17 hits appears corresponding to the number of measurements when crossing all pixel barrel (3) and strip inner and outer barrel (6 from stereo and 8 from normal) layers.
 However, a notable fraction of $\sim$ 40\% of chargino tracks still has a number of measurements of $\nhits<8$. 
 
 It should be also mentioned, that the track reconstruction efficiency is sufficient for short chargino tracks, such that a loosening of the \nhits requirement is expected to be really improving the signal acceptance.
 The track reconstruction efficiency for different chargino decay points is depicted in Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (right).
 For very short tracks ($\nhits=3$) the efficiency is still around 20\%.\\
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.49\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/htrackNValid_log_chiTracksnoSelection.pdf}
-  %\includegraphics[width=0.49\textwidth]{figures/analysis/htrackNValid_log_chiTracksnoSelection_m500GeV.pdf}
-  \includegraphics[width=0.49\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/RecoEffTracksZoom.png}
+  \includegraphics[width=0.49\textwidth]{figures/analysis_2/MotivationAndGeneralSearchStrategy/htrackNValid_log_chiTracksnoSelection.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis_2/MotivationAndGeneralSearchStrategy/RecoEffTracksZoom.pdf}
   \end{tabular}
   \caption{Left: Number of measurements in the tracker system \nhits for four different signal lifetimes.
            Right: Probability to reconstruct a track (z) in dependency of the chargino's decay point (x and y).
