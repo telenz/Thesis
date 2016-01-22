@@ -211,6 +211,12 @@ F.~James, ``{Statistical methods in experimental physics}''.
   Collisions}'', {\em CMS Physics Analysis Summary} {\bf
   \href{https://cds.cern.ch/record/1258204}{CMS-PAS-TRK-10-001}} (2010).
 
+\bibitem{bib:DataFormats}
+{CMS Collaboration}, ``Data Formats and Data Tiers'', {\em Public CMS Wiki}.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats}{ht%
+tps://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats, Topic
+  revision: r30}.
+
 \bibitem{bib:Madgraph_2014}
 J.~Alwall, R.~Frederix, S.~Frixione{ et~al.}, ``{The automated computation of
   tree-level and next-to-leading order differential cross sections, and their
@@ -428,9 +434,9 @@ T.~Junk, ``{Confidence level computation for combining searches with small
 A.~L. Read, ``{Modified frequentist analysis of search results (The CL(s)
   method)}'', in {\em {Workshop on confidence limits, CERN, Geneva,
   Switzerland, 17-18 Jan 2000: Proceedings}}.
+\newblock 2000.
 \newblock
-2000.
-\newblock
+\url{http://cds.cern.ch/record/451614}.
 %%CITATION = CERN-OPEN-2000-205;%%.
 
 \bibitem{bib:CLS_2002}

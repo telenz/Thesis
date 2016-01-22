@@ -260,7 +260,7 @@ For example, the reconstruction of an electron easily fails in the direction of 
 This reduces the discrimination power of the electron veto.
 For this reason, tracks that point towards dead or noisy ECAL cells are rejected.
 A general list of dead and noisy ECAL cells is provided centrally by the CMS collaboration.
-Further dead cells were identified within a study in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} resulting in a total number of 1234 dead or noisy ECAL channels. 
+Further dead cells were identified within a study in~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} resulting in a total number of 1234 dead or noisy ECAL channels (which is about 1.6\% of all ECAL crystals). 
 These are illustrated in Fig.~\ref{fig:DeadECALmap} showing a map of all ECAL channels not considered in the search.
 
 
@@ -355,7 +355,7 @@ The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackI
 \end{figure}
 
 As emphasised before, this analysis aims at being sensitive especially on shorter lifetimes.
-Still, in order to allow for charginos decaying at any layer of the tracker, no explicit selection cut on the number of missing outer hits is required.
+Still, in order to allow for charginos decaying at any position in the tracker, no explicit selection cut on the number of missing outer hits is required.
 
 Events are selected if they at least contain one track fulfilling all candidate track selection requirements.
 An overview over the full analysis preselection is given in Table~\ref{tab:SummaryCuts}. 
@@ -364,7 +364,7 @@ An overview over the full analysis preselection is given in Table~\ref{tab:Summa
 \centering
 \caption{Summary and categorisation of the analysis selection.}
 \label{tab:SummaryCuts}
-\makebox[0.99\textwidth]{
+\resizebox{\textwidth}{!}{
 \begin{tabular}{l|l|l}
 \multicolumn{3}{c}{} \\
 \toprule
@@ -414,6 +414,7 @@ The event yields after the selections of each of the categories from Table~\ref{
 The discrepancies between data and simulation after the full preselection is stemming from two effects.
 First, not all background samples were available (\eg \ZInvJets sample), leading to a lower prediction in simulation.
 Second, due to the specific selection region (lepton+jet veto), a data-simulation discrepancy is expected.
+Furthermore, it should be noted, that the resulting 31.9 events in the simulated \WJets sample are stemming from only two simulated events due to high event weights.
 This emphasizes once more the need for data-driven background estimation methods.
 FIXME.
 Detailed event yield tables can be found in Appendix~\ref{app:cutflow}.\\

@@ -2,14 +2,15 @@
 
 TCanvas* drawRatioPlot(TH1D *numerator, TH1D *denominator, TString xTitle, TString yTitleRatio, TString legendNum, TString legendDenom, double max = 5, double min=0.05){
 
+  TeresaPlottingStyleRatio::init();
+  gROOT->ForceStyle();
+
+
   // Change these settings
   denominator->SetMaximum(max);
   denominator->SetMinimum(min);
 
   
-  TeresaPlottingStyleRatio::init();
-  gROOT->ForceStyle();
-
   TCanvas *c = new TCanvas();
   c->cd();
 

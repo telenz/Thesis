@@ -24,7 +24,7 @@
 #include <iomanip>
 #include "TPad.h"
 #include "drawRatioPlot.h"
-
+#include "../../plotStyleThesis.h"
 
 class sample{
 
@@ -199,6 +199,9 @@ public:
 
 int makeLeptonIasCRSRplots(int pdgId){
 
+  TeresaPlottingStyleRatio::init();
+  gROOT->ForceStyle();
+
   double ptCut    = 20;
   double ecaloCut = 50000;
   double iasCut   = 0.2;
@@ -265,7 +268,7 @@ int makeLeptonIasCRSRplots(int pdgId){
   cout<<"###########################################################################"<<endl;
   
   
-  TCanvas *c = drawRatioPlot(pred.histoASmi, SR.histoASmi ,"dE/dx discriminator (I_{as})","N_{CR}/N_{SR}","CR_{MC}^{lep veto inverted}","SR_{MC}",10,0.001);
+  TCanvas *c = drawRatioPlot(pred.histoASmi, SR.histoASmi ,"dE/dx discriminator (I_{as})","N_{CR}/N_{SR}","CR_{MC}^{lep veto inverted}","SR_{MC}",10,0.00001);
   c->cd();
   TPad* pad = (TPad*) gPad->GetPrimitive("pad1");
   pad->cd();
@@ -276,7 +279,7 @@ int makeLeptonIasCRSRplots(int pdgId){
   c->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_MCSR.pdf");
 
 
-  TCanvas *c1 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,"dE/dx discriminator (I_{as})","N_{MC}/N_{Data}","CR_{W+Jets MC}^{lep veto inverted}","CR_{MET Data}^{lep veto inverted}",10,0.001);
+  TCanvas *c1 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,"dE/dx discriminator (I_{as})","N_{MC}/N_{Data}","CR_{W+Jets MC}^{lep veto inverted}","CR_{MET Data}^{lep veto inverted}",10,0.00001);
   c1->cd();
   pad = (TPad*) gPad->GetPrimitive("pad1");
   pad->cd();

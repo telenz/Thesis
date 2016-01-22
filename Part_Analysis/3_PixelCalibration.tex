@@ -156,7 +156,8 @@ The main goal of the gain calibration is to get a uniform response in the ionisa
 To also ensure a uniform response over all modules within one time step, an additional inter-calibration on module level is carried out.
 The inter-calibration can in principle be done on various levels: the highest granularity would be a calibration on pixel level, followed by a calibration on read-out-chip (ROC) level and then on module-level.
 Lower granularities in descending order are rings (modules with same z-position) and finally layers (3 layers in the barrel and 4 disks in the endcap). 
-It is verified that all pixels and all ROCs (on one module) are well inter-calibrated, such that the inter-calibration is finally done module-wise.
+It is verified that all pixels~\cite{bib:Danek} and all ROCs (on one module) are sufficiently inter-calibrated, such that the inter-calibration is finally done module-wise.
+For the pixel inter-calibration it is relied on~\cite{bib:Danek}, whereas the spread of derived calibration factors of all ROCs within one module was analysed to be around 5\% for most of the pixel modules (see Fig.~\ref{FIXME} in Appendix{FIXME}). FIXME:talk to Markus
 
 %The applied method for the gain calibration of the pixel tracker closely follows the method in \cite{bib:Quertenmont_2010}.
 
@@ -174,7 +175,7 @@ For every module in the pixel tracker (there are 1440 modules in total), a distr
 The measurement of $\Delta E/\Delta x$ is done in ADC counts per mm.
 ADC counts are a measure for the deposited charge after digitisation.
 %each $\Delta E/\Delta x$  measurement of all particles crossing the module is filled into a histogram. 
-Figure~\ref{fig:dEdx_Module} shows an example distribution for one module.
+Figure~\ref{fig:dEdx_Module} shows an example distribution for one module. 
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
@@ -184,7 +185,7 @@ Figure~\ref{fig:dEdx_Module} shows an example distribution for one module.
            A Landau convoluted with a Gaussian is fitted to the core of the distribution in an iterative procedure.} 
   \label{fig:dEdx_Module}
 \end{figure}
-The underlying Landau distribution can be nicely seen. 
+The underlying Landau distribution can be seen. 
 To extract the MPV for every module a fit to the core distribution is performed.
 The fit is not only done with a Landau but a Landau convoluted with a Gaussian function to be closer to the experimentally observed energy spectrum.
 This also increases the fit performance and the stability of the fit.
@@ -274,7 +275,7 @@ where N is the total number of energy measurements and $P_i$ is the cumulative p
 
 However, this test statistics is not sensitive to the sign of the difference between the measured and the theoretical distribution.
 It can therefore not distinguish between incompatibilities due to variations towards higher or lower energy deposits compared to the hypothesis distribution.
-Thus it is not suitable for the discrimination between MIPs and heavy new particles by \dedx.
+Thus it is not optimal for the discrimination between MIPs and heavy new particles by \dedx.
 A so-called Asymmetric Smirnov-Cram\'{e}r-von Mises discriminator was developed in \cite{bib:Quertenmont_2010} which is only sensitive to incompatibilities to the MIP hypothesis towards higher energy depositions
 \begin{equation}
 \ias = \frac{3}{N} \cdot \left( \frac{1}{12N} + \sum\limits_{i=1}^N \left[ P_i \cdot \left(P_i - \frac{2i-1}{2N} \right)^2 \right] \right).

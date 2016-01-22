@@ -44,16 +44,16 @@ This uncertainty has been quantified within~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8
 These event weights are applied on the simulated signal samples in this analysis and lead to changes in the signal prediction of 1.9 to 4.4\%, which are taken as systematic uncertainties.
 
 \subsection*{Jet energy scale}
-The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt and for data-simulation differences~\cite{bib:CMS:JME_PAS}.
+The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt and for data-simulation differences.
 The uncertainty on the jet energy scale (JES) is neatly described and quantified in~\cite{bib:CMS:JME_PAS}. 
 It arises from uncertainties on the measured jet response in data including jet fragmentation, jet flavor composition, etc..
 The JES correction is applied as a multiplicative factor on each jet's transverse momentum contained in an event.
 The corresponding systematic uncertainty is assessed by an up- and downward variation of the correction factor within 1\,$\sigma$.
 The resulting uncertainties are of minor importance and range between $0.4-3.1\%$.
 
-\subsection*{Jet energy resolution}
-The jet energy resolution (JER) is smaller in simulation than in measured data (see Part~\ref{FIXME}). 
-In order to take these differences into account, the simulated jet energy response is smeared to match the measured response.
+\subsection*{Jet transverse-momentum resolution}
+The jet transverse-momentum resolution (JER) is smaller in simulation than in measured data (see Part~\ref{part:resolution}). 
+In order to take these differences into account, the simulated jet transverse-momentum response is smeared to match the measured response.
 The systematic uncertainty on the smearing factors is estimated in~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 It covers the uncertainty on JER in data, including the JES uncertainty, uncertainties arising from out-of-cone showering etc.~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 The resulting uncertainty on the signal efficiency in this study is between $0.1-2.0\%$ and therefore almost negligible.
@@ -187,7 +187,7 @@ The systematic uncertainties on the simulated signal samples are considered as f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Methods/ Limit setting}
 
-This section is a small interlude to briefly introduce the methods and techniques that are used to exclude theoretical models with the results of this search.
+This section is a small interlude to briefly introduce the methods and techniques that are used to exclude beyond-SM models with the results of this search.
 For a detailed and pedagogical introduction to the methods, the reader is referred to~\cite{bib:Ott_Thesis}.
 
 In this analysis, the exclusion of the underlying theoretical model is achieved with the \CLs method~\cite{bib:CLS_1999,bib:CLS_2000,bib:CLS_2002}.
@@ -229,7 +229,7 @@ q \left( n, \mu \right) = -2 \ln \frac{\mathcal{L}\left(  n | \mu, \hat{\delta}_
 \end{equation}
 is used as the test statistics for determining \CLsb and \CLb ($\mu=0$). $\mathcal{L} $ refers to the likelihood function
 \begin{equation}
-\mathcal{L} =  \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)+\mu\cdot s  (1+\delta_s)  \right)\, p\left(\delta_b\right)\, p\left(\delta_s\right).
+\mathcal{L} \left(n | b,s,\delta_b, \delta_s \right)=  \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)+\mu\cdot s  (1+\delta_s)  \right)\, p\left(\delta_b\right)\, p\left(\delta_s\right).
 \end{equation}
 that already appeared in Eq.~\eqref{eq:CLsb_CLb}.
 The parameters $\hat{\mu}$, $\hat{\delta}_b$ and $\hat{\delta}_s$ are fixed to the values that maximise the likelihood with respect to the observed data.
@@ -358,7 +358,7 @@ For charginos with a lifetime of $\tau=0.07\ns$ ($\ctau=2.1\cm$), the observed l
 For SUSY models with long chargino lifetimes the here presented search shows a higher exclusion power.
 The weaker exclusion for long lifetimes in~\cite{bib:CMS:DT_8TeV} is caused by the additional selection cut on the number of missing outer hits, $\nlostouter\geq3$.
 
-The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is especially interesting since the signal regions of the two searches are little correlated.
+The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is especially interesting since the signal regions of the two searches show little correlation for small lifetimes.
 The correlation between simulated signal events, that pass the selection from~\cite{bib:CMS:DT_8TeV}, $N_A$, and the selection used in this analysis, $N_B$, can be estimated by the event overlap $\rho_{\text{corr}}$
 \begin{equation*}
 \rho_{\text{corr}} = \frac{N_{A\cap B}}{N_{A \cup B}} = \frac{N_{A\cap B}}{N_A + N_B - N_{A \cap B}}.
