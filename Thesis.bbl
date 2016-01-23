@@ -130,9 +130,8 @@ A.~Anandakrishnan, L.~M. Carpenter, and S.~Raby, ``{Degenerate gaugino mass
 \bibitem{bib:pMSSMplot_source_from_DT}
 {CMS Collaboration}, ``Search for disappearing tracks in proton-proton
   collisions at $\sqrt{s}$ = 8 TeV'', {\em Public CMS Wiki} (2015).
-  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034}%
-{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034, Topic
-  revision: r9}.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034}{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034,
+  Topic revision: r9}.
 
 \bibitem{bib:CMS:HSCP_7TeV}
 { CMS} Collaboration, ``{Search for heavy long-lived charged particles in $pp$
@@ -213,9 +212,8 @@ F.~James, ``{Statistical methods in experimental physics}''.
 
 \bibitem{bib:DataFormats}
 {CMS Collaboration}, ``Data Formats and Data Tiers'', {\em Public CMS Wiki}.
-  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats}{ht%
-tps://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats, Topic
-  revision: r30}.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats}{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats,
+  Topic revision: r30}.
 
 \bibitem{bib:Madgraph_2014}
 J.~Alwall, R.~Frederix, S.~Frixione{ et~al.}, ``{The automated computation of
@@ -398,16 +396,14 @@ A.~Vicini, ``Practical implementation of the PDF4LHC recipe''.
 \bibitem{bib:CMS:PileupUtilities}
 {CMS Collaboration}, ``Pileup Reweighting Utilities'', {\em Internal CMS Wiki}
   (2012).
-  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilit%
-ies}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilities,
+  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilities}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilities,
   Topic revision: r29}.
 
 \bibitem{bib:CMS:PileupSysUnc}
 {CMS Collaboration}, ``Estimating Systematic Errors Due to Pileup Modeling'',
   {\em Internal CMS Wiki} (2013).
-  \href{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors}{https%
-://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors, Topic revision:
-  r11}.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors}{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors,
+  Topic revision: r11}.
 
 \bibitem{bib:CMS:HSCP_8TeV_AN}
 {L. Quertenmont at al.}, ``Searches for Heavy Stable Charged Particles with
@@ -456,9 +452,8 @@ A.~L. Read, ``{Presentation of search results: The CL(s) technique}'', {\em J.
 \bibitem{bib:CMS:Combine}
 {CMS Collaboration}, ``\mbox{Documentation} of the RooStats-based statistics
   tools for Higgs PAG'', {\em Internal CMS Wiki} (2015).
-  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombi%
-nedLimit}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCom%
-binedLimit, Topic rev: r124}.
+  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombinedLimit}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombinedLimit,
+  Topic rev: r124}.
 
 \bibitem{bib:MassSplitting_Drees}
 C.~H. Chen, M.~Drees, and J.~F. Gunion, ``{Addendum/erratum for 'searching for
