@@ -18,6 +18,7 @@
 #include "TTree.h"
 #include "TChain.h"
 #include "TRandom3.h"
+#include "TText.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -286,6 +287,10 @@ int makeNLostInnerAndMiddleplots(){
 
   legend->Draw("same");
 
+  TText* text = new TText(.75,.95,"Simulation");
+  text -> SetNDC();
+  text -> SetTextSize(0.045);
+  text -> Draw("same");
 
   TString name = "NLostInnerPlusMiddle";
 

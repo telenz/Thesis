@@ -190,6 +190,13 @@ a4paper,
 \setlength{\cftsubsubsecnumwidth}{5em}
 % arabic numbers for parts
 \renewcommand\thepart{\arabic{part}}
+% No bold chapter titles in TOC
+% \renewcommand\cftchapfont{\mdseries}
+% \renewcommand\cftchappagefont{\mdseries}
+% Remove space between chapter titles in TOC
+\setlength{\cftbeforechapskip}{1pt}
+\setlength{\cftbeforepartskip}{35pt}
+\setlength{\cftbeforesecskip}{-3pt}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -273,7 +280,6 @@ a4paper,
 
 \pagenumbering{arabic}		
 \setcounter{page}{1}
-
 % \part{Introduction}  \label{part:Introduction}
 % \input{introduction.tex}
  
@@ -282,18 +288,18 @@ a4paper,
 % \part{The Standard Model and its supersymmetric extensions} \label{part:Theory}
 % \input{theory.tex}
 
-% \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{part:Detector}
+% % \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{part:Detector}
 % \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{part:Detector}
 % \part{Experimental setup: Collider, detector and algorithms } \label{part:Experiment}
 % \input{experiment.tex}
 
  \part{A search for highly ionising, short tracks at the CMS detector}  \label{part:analysis}
  \input{Part_Analysis/1_Motivation.tex}
- \input{Part_Analysis/2_GeneralSearchStrategy.tex}
  \input{Part_Analysis/3_PixelCalibration.tex}
+ \input{Part_Analysis/2_GeneralSearchStrategy.tex}
  \input{Part_Analysis/4_Samples.tex}
- \input{Part_Analysis/5_Selection.tex}
  \input{Part_Analysis/6_Background.tex}
+ \input{Part_Analysis/5_Selection.tex}
  \input{Part_Analysis/7_Optimisation.tex}
  \input{Part_Analysis/8_Results.tex}
  \input{Part_Analysis/9_Interpretation.tex}
@@ -305,11 +311,11 @@ a4paper,
 % \part{Summary} \label{part:Conclusion}
 % \input{summary.tex}
 
-\cleardoublepage 
+% \cleardoublepage 
 \appendix
-\input{Appendix/appendix_resolution.tex}
+\addtocontents{toc}{\protect\vskip40pt}
 \input{Appendix/appendix_analysis.tex}
-
+% \input{Appendix/appendix_resolution.tex}
 
 \cleardoublepage 
 \bibliographystyle{lucas_unsrt}

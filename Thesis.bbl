@@ -59,6 +59,14 @@ J.~Hisano, S.~Matsumoto, M.~M. Nojiri{ et~al.}, ``{Direct detection of the Wino
   doi:10.1103/PhysRevD.71.015007}}.
 %%CITATION = HEP-PH/0407168;%%.
 
+\bibitem{bib:IndirectSearches_Cohen_2013}
+T.~Cohen, M.~Lisanti, A.~Pierce{ et~al.}, ``{Wino Dark Matter Under Siege}'',
+  {\em JCAP} {\bf 1310} (2013) 061,
+  \href{http://www.arXiv.org/abs/1307.4082}{{\tt arXiv:1307.4082}}.
+\href{http://dx.doi.org/10.1088/1475-7516/2013/10/061}{{\tt
+  doi:10.1088/1475-7516/2013/10/061}}.
+%%CITATION = ARXIV:1307.4082;%%.
+
 \bibitem{bib:Moroi:DarkMatter_1999}
 T.~Moroi and L.~Randall, ``{Wino cold dark matter from anomaly mediated SUSY
   breaking}'', {\em Nucl. Phys.} {\bf B570} (2000) 455--472,
@@ -130,25 +138,9 @@ A.~Anandakrishnan, L.~M. Carpenter, and S.~Raby, ``{Degenerate gaugino mass
 \bibitem{bib:pMSSMplot_source_from_DT}
 {CMS Collaboration}, ``Search for disappearing tracks in proton-proton
   collisions at $\sqrt{s}$ = 8 TeV'', {\em Public CMS Wiki} (2015).
-  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034}{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034,
-  Topic revision: r9}.
-
-\bibitem{bib:CMS:HSCP_7TeV}
-{ CMS} Collaboration, ``{Search for heavy long-lived charged particles in $pp$
-  collisions at $\sqrt{s}=7$ TeV}'', {\em Phys. Lett.} {\bf B713} (2012)
-  408--433, \href{http://www.arXiv.org/abs/1205.0272}{{\tt arXiv:1205.0272}}.
-\href{http://dx.doi.org/10.1016/j.physletb.2012.06.023}{{\tt
-  doi:10.1016/j.physletb.2012.06.023}}.
-%%CITATION = ARXIV:1205.0272;%%.
-
-\bibitem{bib:CMS:tracking_8TeV}
-{ CMS} Collaboration, ``{Description and performance of track and
-  primary-vertex reconstruction with the CMS tracker}'', {\em JINST} {\bf 9}
-  (2014), no.~10, P10009, \href{http://www.arXiv.org/abs/1405.6569}{{\tt
-  arXiv:1405.6569}}.
-\href{http://dx.doi.org/10.1088/1748-0221/9/10/P10009}{{\tt
-  doi:10.1088/1748-0221/9/10/P10009}}.
-%%CITATION = ARXIV:1405.6569;%%.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034}%
+{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034, Topic
+  revision: r9}.
 
 \bibitem{bib:Bethe_1930}
 H.~Bethe, ``{Theory of the Passage of Fast Corpuscular Rays Through Matter}'',
@@ -210,10 +202,28 @@ F.~James, ``{Statistical methods in experimental physics}''.
   Collisions}'', {\em CMS Physics Analysis Summary} {\bf
   \href{https://cds.cern.ch/record/1258204}{CMS-PAS-TRK-10-001}} (2010).
 
+\bibitem{bib:CMS:HSCP_7TeV}
+{ CMS} Collaboration, ``{Search for heavy long-lived charged particles in $pp$
+  collisions at $\sqrt{s}=7$ TeV}'', {\em Phys. Lett.} {\bf B713} (2012)
+  408--433, \href{http://www.arXiv.org/abs/1205.0272}{{\tt arXiv:1205.0272}}.
+\href{http://dx.doi.org/10.1016/j.physletb.2012.06.023}{{\tt
+  doi:10.1016/j.physletb.2012.06.023}}.
+%%CITATION = ARXIV:1205.0272;%%.
+
+\bibitem{bib:CMS:tracking_8TeV}
+{ CMS} Collaboration, ``{Description and performance of track and
+  primary-vertex reconstruction with the CMS tracker}'', {\em JINST} {\bf 9}
+  (2014), no.~10, P10009, \href{http://www.arXiv.org/abs/1405.6569}{{\tt
+  arXiv:1405.6569}}.
+\href{http://dx.doi.org/10.1088/1748-0221/9/10/P10009}{{\tt
+  doi:10.1088/1748-0221/9/10/P10009}}.
+%%CITATION = ARXIV:1405.6569;%%.
+
 \bibitem{bib:DataFormats}
 {CMS Collaboration}, ``Data Formats and Data Tiers'', {\em Public CMS Wiki}.
-  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats}{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats,
-  Topic revision: r30}.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats}{ht%
+tps://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats, Topic
+  revision: r30}.
 
 \bibitem{bib:Madgraph_2014}
 J.~Alwall, R.~Frederix, S.~Frixione{ et~al.}, ``{The automated computation of
@@ -290,25 +300,6 @@ J.~D. Brinson, ``{A search for disappearing tracks in proton-proton collisions
 {J. Brinson, C. Hill, and W. Wulsin}, ``Search for disappearing tracks'', {\em
   CMS Analysis Note} {\bf CMS-AN-12-400} (2014). Internal documentation.
 
-\bibitem{bib:CMS:Tracking_7TeV_PAS}
-{ CMS} Collaboration, ``{Tracking and Primary Vertex Results in First 7 TeV
-  Collisions}'', {\em CMS Physics Analysis Summary} {\bf
-  \href{http://cds.cern.ch/record/1279383/}{CMS-PAS-TRK-10-005}} (2010).
-
-\bibitem{bib:CMS:DM_8TeV_AN}
-{A. Bhatti et. al.}, ``Search for New Physics in the Monojet final state at
-  CMS'', {\em CMS Analysis Note} {\bf CMS-AN-12-421} (2012). Internal
-  documentation.
-
-\bibitem{bib:CMS:DM_8TeV}
-{ CMS} Collaboration, ``{Search for dark matter, extra dimensions, and
-  unparticles in monojet events in proton–proton collisions at $\sqrt{s} = 8$
-  TeV}'', {\em Eur. Phys. J.} {\bf C75} (2015), no.~5, 235,
-  \href{http://www.arXiv.org/abs/1408.3583}{{\tt arXiv:1408.3583}}.
-\href{http://dx.doi.org/10.1140/epjc/s10052-015-3451-4}{{\tt
-  doi:10.1140/epjc/s10052-015-3451-4}}.
-%%CITATION = ARXIV:1408.3583;%%.
-
 \bibitem{bib:CMS:ConversionVeto_PAS}
 { CMS} Collaboration, ``{Studies of Tracker Material}'', {\em CMS Physics
   Analysis Summary} {\bf
@@ -351,6 +342,25 @@ J.~D. Brinson, ``{A search for disappearing tracks in proton-proton collisions
 J.~Neyman {\em Phil. Trans. Royal Soc. London, Series A} {\bf 236} (1937)
   333--80. Reprinted in \textit{A Selection of Early Statistical Papers on J.
   Neyman} (University of California Press, Berkeley, 1967).
+
+\bibitem{bib:CMS:Tracking_7TeV_PAS}
+{ CMS} Collaboration, ``{Tracking and Primary Vertex Results in First 7 TeV
+  Collisions}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{http://cds.cern.ch/record/1279383/}{CMS-PAS-TRK-10-005}} (2010).
+
+\bibitem{bib:CMS:DM_8TeV_AN}
+{A. Bhatti et. al.}, ``Search for New Physics in the Monojet final state at
+  CMS'', {\em CMS Analysis Note} {\bf CMS-AN-12-421} (2012). Internal
+  documentation.
+
+\bibitem{bib:CMS:DM_8TeV}
+{ CMS} Collaboration, ``{Search for dark matter, extra dimensions, and
+  unparticles in monojet events in proton–proton collisions at $\sqrt{s} = 8$
+  TeV}'', {\em Eur. Phys. J.} {\bf C75} (2015), no.~5, 235,
+  \href{http://www.arXiv.org/abs/1408.3583}{{\tt arXiv:1408.3583}}.
+\href{http://dx.doi.org/10.1140/epjc/s10052-015-3451-4}{{\tt
+  doi:10.1140/epjc/s10052-015-3451-4}}.
+%%CITATION = ARXIV:1408.3583;%%.
 
 \bibitem{bib:CMS:Lumi_PAS}
 { CMS} Collaboration, ``{CMS Luminosity Based on Pixel Cluster Counting -
@@ -396,14 +406,16 @@ A.~Vicini, ``Practical implementation of the PDF4LHC recipe''.
 \bibitem{bib:CMS:PileupUtilities}
 {CMS Collaboration}, ``Pileup Reweighting Utilities'', {\em Internal CMS Wiki}
   (2012).
-  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilities}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilities,
+  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilit%
+ies}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilities,
   Topic revision: r29}.
 
 \bibitem{bib:CMS:PileupSysUnc}
 {CMS Collaboration}, ``Estimating Systematic Errors Due to Pileup Modeling'',
   {\em Internal CMS Wiki} (2013).
-  \href{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors}{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors,
-  Topic revision: r11}.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors}{https%
+://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors, Topic revision:
+  r11}.
 
 \bibitem{bib:CMS:HSCP_8TeV_AN}
 {L. Quertenmont at al.}, ``Searches for Heavy Stable Charged Particles with
@@ -437,10 +449,9 @@ A.~L. Read, ``{Modified frequentist analysis of search results (The CL(s)
 
 \bibitem{bib:CLS_2002}
 A.~L. Read, ``{Presentation of search results: The CL(s) technique}'', {\em J.
-  Phys.} {\bf G28} (2002) 2693--2704. [,11(2002)].
-\href{http://dx.doi.org/10.1088/0954-3899/28/10/313}{{\tt
+  Phys.} {\bf G28} (2002) 2693--2704.
+  \href{http://dx.doi.org/10.1088/0954-3899/28/10/313}{{\tt
   doi:10.1088/0954-3899/28/10/313}}.
-%%CITATION = JPAGA,G28,2693;%%.
 
 \bibitem{bib:LimitSetting_Higgs}
 {CMS and ATLAS Collaborations}, ``{Procedure for the LHC Higgs boson search
@@ -452,8 +463,9 @@ A.~L. Read, ``{Presentation of search results: The CL(s) technique}'', {\em J.
 \bibitem{bib:CMS:Combine}
 {CMS Collaboration}, ``\mbox{Documentation} of the RooStats-based statistics
   tools for Higgs PAG'', {\em Internal CMS Wiki} (2015).
-  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombinedLimit}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombinedLimit,
-  Topic rev: r124}.
+  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombi%
+nedLimit}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCom%
+binedLimit, Topic rev: r124}.
 
 \bibitem{bib:MassSplitting_Drees}
 C.~H. Chen, M.~Drees, and J.~F. Gunion, ``{Addendum/erratum for 'searching for

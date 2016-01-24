@@ -41,7 +41,19 @@ More details on the emulation of this trigger can be found in Appendix~\ref{app:
 
 The trigger uncertainty is assessed by comparing data-simulation differences of the trigger efficiency.
 This uncertainty has been quantified within~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} by comparing simulated and measured trigger turn-on curves and determining weights for simulated events such that simulated and observed turn-on curves are compatible.
+In Fig.~\ref{fig:TriggerTurnOn}, the trigger turn-on curves, measured in data and in simulation (90\% \WJets events) are depicted.
+\begin{figure}[!b]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Interpretation/TriggerEfficiency.png} 
+  \end{tabular}
+  \caption{Trigger turn-on curves in data (black triangles) and simulation (red squares) as a function of PF \met (not taking into account the energy of the muons).}
+  \label{fig:TriggerTurnOn}
+\end{figure} 
+It can be seen, that the turn-on in data is slower compared to simulation.
+The ratio is then used to determine the event weights.
 These event weights are applied on the simulated signal samples in this analysis and lead to changes in the signal prediction of 1.9 to 4.4\%, which are taken as systematic uncertainties.
+
 
 \subsection*{Jet energy scale}
 The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt and for data-simulation differences.
@@ -186,7 +198,7 @@ The systematic uncertainties on the simulated signal samples are considered as f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Methods/ Limit setting}
-
+FIXME: Talk to Markus
 This section is a small interlude to briefly introduce the methods and techniques that are used to exclude beyond-SM models with the results of this search.
 For a detailed and pedagogical introduction to the methods, the reader is referred to~\cite{bib:Ott_Thesis}.
 
@@ -204,7 +216,9 @@ For Poissonian statistics it leads to the following expressions for \CLsb and \C
 \label{eq:CLsb_CLb}
 \begin{split}
 \CLsb &= \text{Poisson}\left( n\leq n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),\\
-\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b   \right),
+\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b   \right),\\
+\CLsb &= \sum\limits_{0}^{n_{\text{obs}}}\text{Poisson}\left( n |\lambda = b+\mu\cdot s   \right),\\
+\CLb  &= \sum\limits_{0}^{n_{\text{obs}}}\text{Poisson}\left( n |\lambda = b   \right),
 \end{split}
 \end{equation}
 where $\lambda$ is the mean of the Poisson distribution and the signal strength $\mu$ is the measure for the size of the signal cross section.
@@ -215,7 +229,9 @@ For one Gaussian distributed source of systematic uncertainty on the background,
 \label{eq:CLsb_CLb_withSys}
 \begin{split}
 \CLsb &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
-\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),
+\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
+\CLsb &= \sum\limits_{0}^{n_{\text{obs}}} \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
+\CLb  &= \sum\limits_{0}^{n_{\text{obs}}} \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),
 \end{split}
 \end{equation}
 These expressions can be generalised for more than one signal region and more than one systematic uncertainty~\cite{bib:Ott_Thesis}.
@@ -225,7 +241,8 @@ In this analysis, the procedure for limit setting follows~\cite{bib:LimitSetting
 Instead of the number of observed events, the profile likelihood ratio 
 %The test statistics used for determining \CLsb and \CLb ($\mu=0$) is the profile likelihood ratio
 \begin{equation}
-q \left( n, \mu \right) = -2 \ln \frac{\mathcal{L}\left(  n | \mu, \hat{\delta}_b, \hat{\delta}_s \right)}{\mathcal{L}\left(  n  | \hat{\mu}, \hat{\delta}_b, \hat{\delta}_s \right)},
+%q \left( n, \mu \right) = -2 \ln \frac{\mathcal{L}\left(  n | \mu, \hat{\delta}_b, \hat{\delta}_s \right)}{\mathcal{L}\left(  n  | \hat{\mu}, \hat{\delta}_b, \hat{\delta}_s \right)},\\
+q \left( n, \mu \right) = -2 \ln \frac{\mathcal{L}\left(  n | \mu, \hat{\delta}_b^{\mu}, \hat{\delta}_s^{\mu} \right)}{\mathcal{L}\left(  n  | \hat{\mu}, \hat{\delta}_b, \hat{\delta}_s \right)}, \text{   \qquad with the constraint } 0\leq \hat{\mu} \leq \mu
 \end{equation}
 is used as the test statistics for determining \CLsb and \CLb ($\mu=0$). $\mathcal{L} $ refers to the likelihood function
 \begin{equation}
@@ -358,7 +375,7 @@ For charginos with a lifetime of $\tau=0.07\ns$ ($\ctau=2.1\cm$), the observed l
 For SUSY models with long chargino lifetimes the here presented search shows a higher exclusion power.
 The weaker exclusion for long lifetimes in~\cite{bib:CMS:DT_8TeV} is caused by the additional selection cut on the number of missing outer hits, $\nlostouter\geq3$.
 
-The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is especially interesting since the signal regions of the two searches show little correlation for small lifetimes.
+The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is especially interesting since the signal regions of the two searches show little correlation for small lifetimes. FIXME
 The correlation between simulated signal events, that pass the selection from~\cite{bib:CMS:DT_8TeV}, $N_A$, and the selection used in this analysis, $N_B$, can be estimated by the event overlap $\rho_{\text{corr}}$
 \begin{equation*}
 \rho_{\text{corr}} = \frac{N_{A\cap B}}{N_{A \cup B}} = \frac{N_{A\cap B}}{N_A + N_B - N_{A \cap B}}.
