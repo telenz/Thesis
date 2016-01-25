@@ -11,12 +11,14 @@
 #include <TROOT.h>
 #include <TChain.h>
 #include <TFile.h>
+#include <iostream>
+#include "../../plotStyleThesis.h"
 
 // Header file for the classes stored in the TTree if any.
 
 // Fixed size dimensions of array or collections stored in the TTree if any.
 
-const TString step = "AB_CL2_ReReco";
+const TString step = "AB_CL0";
 const bool saveOutput = true;
 
 class APVGain {
@@ -89,12 +91,14 @@ APVGain::APVGain(TTree *tree) : fChain(0)
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree == 0) {
-     TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("input/Gains_Tree_" + step + ".root");
+     cout<<step<<endl;
+     //TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("~/PixelCalibration/input/Gains_Tree_" + step + ".root");
+     TFile *f = TFile::Open("/afs/desy.de/user/t/tlenz/PixelCalibration/input/Gains_Tree_" + step + ".root");
       if (!f || !f->IsOpen()) {
-         f = new TFile("input/Gains_Tree_" + step + ".root");
+         f = new TFile("~/PixelCalibration/input/Gains_Tree_" + step + ".root");
       }
-      TDirectory * dir = (TDirectory*)f->Get("input/Gains_Tree_" + step + ".root:/alcaSiStripGainsHarvester");
-      dir->GetObject("APVGain",tree);
+      //TDirectory * dir = (TDirectory*)f->Get("~/PixelCalibration/input/Gains_Tree_" + step + ".root:/alcaSiStripGainsHarvester");
+      f->GetObject("alcaSiStripGainsHarvester/APVGain",tree);
 
    }
    Init(tree);

@@ -11,6 +11,8 @@
 #include <vector>
 #include <algorithm>
 #include "TMath.h"
+#include "TPaveStats.h"
+#include "../../plotStyleThesis.h"
 
 int num=0;
 
@@ -37,7 +39,7 @@ public:
     rms  = allGainsPerModule -> GetRMS();
     mean = allGainsPerModule -> GetMean();
 
-    allGainsPerModule->Draw();
+    //allGainsPerModule->Draw();
 
   };
 
@@ -46,6 +48,7 @@ public:
   void APVGain::Loop()
 {
 
+  TeresaPlottingStyle::init();
 
   gStyle -> SetTitleFont(42,"xyz");
   gStyle -> SetLabelFont(42,"xyz");
@@ -107,13 +110,15 @@ public:
   TH1D *stripGain        = new TH1D("stripGain",title,2000,0,2.0);
   title = "step " + step + ": Strip Previous Gain";
   TH1D *stripPrevGain    = new TH1D("stripPrevGain",title,100,-2,2);
-  title = "step " + step + ": rel. diff of calib. factors inside a module (NEntries>" + (long) min + (TString) ")";
+  cout<<step<<endl;
+  cout<<min<<endl;
+  title =  "step " + step + ": rel. diff of calib. factors inside a module (NEntries>0)";
   TH1D *relDiffOfROCs    = new TH1D("relDiffOfROCs",title,100,0,1);  
-  title = "step " + step + ": #sigma of calib. factors inside a module (NEntries>" + (long) min + (TString) ")";
+  title = "step " + step + ": #sigma of calib. factors inside a module (NEntries>0)";
   TH1D *rmsOfCalibration = new TH1D("rmsOfCalibration",title,100,0,1); 
   title = "step " + step +  ": Pixel: Masked Modules";
   TH1D *pixelIsMasked    = new TH1D("pixelIsMasked",title,2,0,2);  
-  title = "step " + step + ": Strip: Masked APVs";
+  //title = "step " + step + ": Strip: Masked APVs";
   TH1D *stripIsMasked    = new TH1D("stripIsMasked",title,2,0,2);  
   title = "Gain vs. FitChi2NDF";
   TH2D *hGainVsChi2NDF    = new TH2D("GainVsFitChi2NDF",title,1000,0,2,1000,0,1000000);  
@@ -186,14 +191,12 @@ public:
       if(NEntries>min){
 
 	if ( gainInModule.find(DetId) == gainInModule.end() ) {
-	  
 	  histo hist;
 	  gainInModule[DetId] = hist;
 	  gainInModule[DetId].allGainsPerModule->Fill(Gain);
 
 	}
 	else{
-	  
 	  gainInModule[DetId].allGainsPerModule->Fill(Gain);
 
 	}
@@ -284,7 +287,7 @@ public:
 
   cout<<"firstROC1/secondROC1 = "<<firstROC1/secondROC1<<endl;
   cout<<"firstROC2/secondROC2 = "<<firstROC2/secondROC2<<endl;
-   
+  /*
   TCanvas *c1 = new TCanvas("c1","c1",0,0,500,500);
   c1->cd();
   c1->SetLogy();
@@ -354,10 +357,10 @@ public:
   stripFitChi2NDF->Draw();
   if(saveOutput)  c12->SaveAs("output/" + step + "/stripFitChi2NDF.pdf");
 
-
+  
   TCanvas *c6666 = new TCanvas("c6666","c6666",0,0,500,500);
   c6666->cd();
-  
+  */
 
   
   
@@ -396,10 +399,8 @@ public:
   for(iterator1 = lowerValue.begin(); iterator1 != lowerValue.end(); iterator1++) {
 
     if(iterator1->second<0) iterator1->second = 0;
-
     std::map<int, double>::iterator iterator2;
     for(iterator2 = upperValue.begin(); iterator2 != upperValue.end(); iterator2++) {
-
       if(iterator1->first==iterator2->first){
 	double relDiff = TMath::Abs(iterator1->second/iterator2->second - 1.);
 	relDiffOfROCs->Fill(relDiff);
@@ -410,14 +411,12 @@ public:
     }
   }
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  
 
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   // Find out what the standard deviation of all ROCs within one module is
 
   std::map<int, histo>::iterator iterator;
   for(iterator = gainInModule.begin(); iterator != gainInModule.end(); iterator++) {
-
     histo hist = iterator->second;
     hist.calculateRMS();
     rmsOfCalibration->Fill(hist.rms/hist.mean);
@@ -429,16 +428,32 @@ public:
 
   }
   //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+  //TCanvas *c100 = new TCanvas("c100","c100",0,0,500,500);
+  //c100->cd();
+  //relDiffOfROCs->Draw();
+  //if(saveOutput) c100->SaveAs((TString) "output/" + step + "/relDiffOfROCs_N" + (long) min + (TString) ".pdf");
+  gStyle->SetStatH(0.4);
+  gStyle->SetStatW(0.4);
+  gStyle->SetOptStat("emr");
+  //gStyle->SetOptFit(001);
+  //gStyle->SetOptStat("e");
+  gStyle->SetStatFontSize(0.025);
 
 
-  TCanvas *c100 = new TCanvas("c100","c100",0,0,500,500);
-  c100->cd();
-  relDiffOfROCs->Draw();
-  if(saveOutput) c100->SaveAs((TString) "output/" + step + "/relDiffOfROCs_N" + (long) min + (TString) ".pdf");
-
-  TCanvas *c101 = new TCanvas("c101","c101",0,0,500,500);
+  TCanvas *c101 = new TCanvas();
   c101->cd();
+  rmsOfCalibration->GetYaxis()->SetTitle("Number of modules");
   rmsOfCalibration->Draw();
-  if(saveOutput) c101->SaveAs((TString) "output/" + step + "/rmsOfROCs_N" + (long) min + (TString) ".pdf");
+  c101->Update();
+
+  TPaveStats *st = (TPaveStats*)rmsOfCalibration->FindObject("stats");
+  cout<<st<<endl;
+  st->SetX1NDC(0.60); //new x start position
+  st->SetX2NDC(.94); //new x end position
+  st->SetY1NDC(0.82); //new x start position
+  st->SetY2NDC(.94); //new x end position
+
+  if(saveOutput) c101->SaveAs((TString) "output/rmsOfROCs_N_" + (long) min + "_"+ + step +  (TString) ".pdf");
   
 }
