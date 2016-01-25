@@ -67,7 +67,7 @@ The advantage of the pseudorapidity $\eta$ is the Lorentz invariance with respec
 The angle $\phi$ covers the direction in the $x-y$ plane (orthogonal to the beam axis).
 
 In the following, the various detector components of the CMS detector from the inside to the outside will be explained.
-In order to ensure a possible measurement of the first detector component, a magnetic field is needed in order to bend the particles' trajectories.
+In order to ensure a possible measurement in the first detector component, a magnetic field is needed in order to bend the particles' trajectories.
 At the CMS experiment, this magnet is lcoated between the hadron calorimeetr and the muon chmabers.
 it is vxxx return yokes and further bla.
 
@@ -92,11 +92,11 @@ As a calibration of the silicon pixel detector was performed within this PhD the
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{The silicon pixel tracker}
-The silicon pixel detector consists of three different cylindrical layers in the barrel region (at radii of 4.4\cm, 7.3\cm and 10.2\cm) and two layers in the encaps (at $z$-distances of 34.5\cm and 46.5\cm) (cf. Fig.~\ref{fig:Tracker}).
-It is made up of 1440 modules in total (barrel + endcap), each module containing 8 or 16 read-out-chips.
-Every read-out-chip is bonded to a pixel system of $52\times80$ pixels, that are read out in double columns.
+The silicon pixel detector consists of three different cylindrical layers in the barrel region (at radii of 4.4\cm, 7.3\cm and 10.2\cm) and two discs in the encaps (at $z$-distances of 34.5\cm and 46.5\cm) (cf. Fig.~\ref{fig:Tracker}).
+It is made up of 1440 modules in total (barrel + endcap), each module containing 8 or 16 read-out-chips (ROCs).
+Each read-out-chip is bumb bonded~\cite{FIXME} to a pixel system of $52\times80$ pixels, that are read out in double columns.
 A visualisation of the pixel system is shown in Fig.~\ref{fig:PixelTracker}.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering
       \includegraphics[width=0.99\textwidth]{figures/experiment/CMS/Pixelement.png}
   \caption{Schematic sketch of a part of a silicon pixel tracker module icnluding the silicon sensors and the read-out-chip (ROC). Taken from~\cite{bib:CMS:tracking_8TeV}.}  
@@ -105,13 +105,14 @@ A visualisation of the pixel system is shown in Fig.~\ref{fig:PixelTracker}.
 
 The silicon pixel detector is very important for the reconstruction of primary and secondary vertices as well as the reconstruction of particles' tracks.
 Therefore a high spatial resolution is needed.
-This is achieved by the small size of the pixels ($ 150 \times 100 \mum^2$) and the exploitation of the spread of the charge (energy depositon in the pixels).
-By the measurement of the spread of the deposited energies accross several pixels, a so-called cenetr-of gravity can be determined making the spactial resolution much better than the pixel size.
-By this charge sharing, a spatial resolution of $13\times14\mum^2$ in the barrel region and $10\times17\mum^2$ in the encaps can be achieved~\cite{FIXME}. 
-This spatial resolution makes the pixel detector perfetcly suited for the reconstruction of vertices.
-
+This is achieved by the small size of the pixels ($ 150 \times 100 \mum^2$) and the exploitation of the spread of the energy deposition across several pixels (in average the energy is deposited across 2-4 pixels FIXME).
+% By the measurement of the spread of the deposited energies accross several pixels, a so-called cenetr-of gravity can be determined making the spactial resolution much better than the pixel size.
+Exploting this spread across pixels, a spatial resolution of $13\times14\mum^2$ in the barrel region and $10\times17\mum^2$ in the encaps can be achieved~\cite{FIXME}. 
+The high spatial resolution makes the pixel detector perfectly suited for the reconstruction of vertices.
 
 \subsection*{The silicon strip tracker}
+The silicon strip tracker is the next to innermost detector of the CMS experiment.
+It is devided into strips
 
 \subsection*{Energy measurements in the tracking system}
 
@@ -120,8 +121,6 @@ This spatial resolution makes the pixel detector perfetcly suited for the recons
 \subsection*{The Hadronic calorimeter}
 
 \section{The muon system}
-
-\section{The magnet}
 
 \section{The trigger system}
 
