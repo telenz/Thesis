@@ -18,7 +18,7 @@
 
 // Fixed size dimensions of array or collections stored in the TTree if any.
 
-const TString step = "AB_CL0";
+const TString step = "D2_CL0";
 const bool saveOutput = true;
 
 class APVGain {

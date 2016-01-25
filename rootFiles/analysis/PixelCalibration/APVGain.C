@@ -419,7 +419,8 @@ public:
   for(iterator = gainInModule.begin(); iterator != gainInModule.end(); iterator++) {
     histo hist = iterator->second;
     hist.calculateRMS();
-    rmsOfCalibration->Fill(hist.rms/hist.mean);
+    //rmsOfCalibration->Fill(hist.rms/hist.mean);
+    rmsOfCalibration->Fill(hist.rms);
 
     if(hist.rms/hist.mean>1.){
       std::cout<<"hist.getEntries() = "<<hist.allGainsPerModule->GetEntries()<<std::endl;
