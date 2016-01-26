@@ -1,6 +1,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A search for highly ionising, short tracks}
+\section{Calibration of the silicon pixel detector}
+\label{app:PixelCalibration}
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/rmsOfROCs_N_0_AB_CL0} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/rmsOfROCs_N_0_C1_CL0} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/rmsOfROCs_N_0_C2_CL0} \\
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/rmsOfROCs_N_0_D1_CL0} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/rmsOfROCs_N_0_D2_CL0} 
+  \end{tabular}
+  \caption{The standard deviation of the pixel calibration factors between all ROCs within one module for all five time steps (first step, second step, .. from top left to bottom right).
+           Most of the modules have an inter-calibration of around 5\%, but never worse than 10\%.}
+  \label{fig:SigmaPixelCalibrationROCs}
+\end{figure} 
+
+\begin{figure}[!h]
+  \centering 
+  \begin{tabular}{c}
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_AB_NEW} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_C1_NEW} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_C2_NEW} \\
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_D1_NEW} 
+    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_D2_NEW} 
+  \end{tabular}
+  \caption{The pixel calibration factors of all of the 1440 pixel modules for all five time steps (first step, second step, .. from top left to bottom right)
+           The deviation between the calibration factors of two modules within one time step is often more than 20\% and reaches up to 100\% within one time step.}
+  \label{fig:PixelCalibrationFactors}
+\end{figure} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\FloatBarrier
 \section{Lifetime reweighting}
 \label{app:LifetimeReweighting}
 The probability density function of a particle's proper lifetime for a sample generated with a particle's mean lifetime $\tau^{\text{gen}}$ is given by
@@ -21,6 +55,7 @@ For more than one non-stable particle, the event weight is calculated by multipl
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 \FloatBarrier
 \section{Event yields for simulated samples and data}
 \label{app:cutflow}
@@ -591,6 +626,7 @@ The correct implementation could be verified with this test.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 \FloatBarrier
 \section{Exclusion limits for all simulated lifetimes}
 \label{app:ExlusionLimits}
