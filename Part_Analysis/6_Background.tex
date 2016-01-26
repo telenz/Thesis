@@ -345,7 +345,7 @@ This event is visualised in Fig.~\ref{fig:LostElectron} (left).
  \caption{Left: Visualisation of a $W\rightarrow e\nu_e$ event contributing to the SM background. 
           In light blue, generator-level particles including \lel and \nue of the \W-boson decay are shown. 
           Black lines represent reconstructed tracks and the red arrow indicates the missing transverse energy in the event.
-          Right: Detailed view of the corresponding towers in the direction of the $e$ track.}
+          Right: Detailed view of the energy deposition in the ECAL towers in the direction of the electron track ($\phi - \eta$ plane).}
   \label{fig:LostElectron}
 \end{figure}
 The neutrino, only weakly interacting does not show any signature in the detector, whereas the electron ($\pt\simeq 90\gev$) leaves a track with $\pt\simeq 70\gev$ in the tracker. 
@@ -557,15 +557,17 @@ Taus                                                           &       $0.0^{+ 0
 \end{tabular}}
 \end{table}
 
-To FIXME
+In order to validate the fake background, the same selection as for the leptonic background validation is applied except for the number of tracker hits.
 The fake rate can only be estimated within the low calorimeter isolation region $\left(\ecalo<10\gev\right)$ to ensure high fake purity.
 To be able to validate the method in the high calorimeter isolation region $\left(\ecalo>10\gev\right)$, a translation factor from the low to the high calorimeter isolation region for the number of fake tracks is determined in the fake enriched control region \fakeCR defined in Section~\ref{sec:FakeIasUncertainty}.
 %As the fake background can only be estimated within the low calorimeter isolation region $\left(\ecalo<10\gev\right)$ to ensure high fake purity, 
 %the information about the number of fake tracks in the high calorimeter isolation region is taken from the fake enriched control region \fakeCR defined in Section~\ref{sec:FakeBkg}.
 In this control region, the ratio of $N_{\ecalo>10\gev}/N_{\ecalo<10\gev}$ is estimated and taken as a multiplicative factor to the number of events predicted from the $\ecalo<10\gev$ region.
-This method is exposed to differences in the \ias shape of the two \ecalo regions.
+Furthermore, also the \ias shape is taken from the low calorimeter region $\left(\ecalo<10\gev\right)$ to ensure a sufficient number of events in the \ias distribution. 
+Thus, this method is exposed to differences in the \ias shape of the two \ecalo regions.
 In Fig.~\ref{fig:IasValidate}, a comparison between the \ias shape of fake tracks with low calorimeter energy deposits and high calorimeter energy deposits in the fake enriched control region is depicted.
-It shows, that fakes with higher associated calorimeter energy have typically lower \ias values. This can thus lead to an overprediction of the fake contribution in the high \ecalo region.
+It shows, that fakes with higher associated calorimeter energy have typically lower \ias values. 
+This can thus lead to an overprediction of the fake contribution in the high \ecalo region.
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
@@ -576,7 +578,7 @@ It shows, that fakes with higher associated calorimeter energy have typically lo
   \label{fig:IasValidate}
 \end{figure}
 However, the differences are covered by statistical uncertainties that are propagated to the final background estimate and can therefore be considered as accounted for.
-Additionally it has to be noted that this
+Additionally, it has to be emphasised that only the validation region with $\ecalo>10\gev$ is affected by the \ias shape difference and that this is not of concern for the signal regions with $\ecalo<5\gev$.
 In Table~\ref{tab:FakeClosure}, two different validation tests are shown, once an inclusive validation in \ias and once with an \ias selection of 0.2.
 Again, the predicted background events is in agreement with the number of observed events.
 
@@ -712,18 +714,23 @@ The ``tag-and-probe'' selection is done for each lepton type separately.
 In order to determine the leptonic scale factors, the number of events is once estimated for the candidate track selection including the corresponding lepton veto which gives the number of events in the ``tag-and-probe'' signal region $N_{SR}^{\text{T\&P}}$, and once inverting the lepton veto selection requirement which gives the number of events in the ``tag-and-probe'' lepton inverted control region $N_{\text{CR, lepton veto inverted}}^{\text{T\&P}}$.
 As for the determination of the tau and electron scale factor with simulated \WJets events, no requirement on the calorimeter isolation is applied in the lepton veto inverted control region for taus and electrons.
 This leads to the following expression of the lepton scale factor for muons
-\begin{equation*}
+\begin{equation}
+\label{eq:ScaleFactorSys_Mu}
 \rho^{\mu} = \frac{N_{\text{SR}}^{\text{T\&P}\mu}}{N_{\text{CR, }\mu\text{ veto inverted}}^{\text{T\&P}}}.
-\end{equation*}
+\end{equation}
 and for electrons and taus 
-\begin{equation*}
+\begin{equation}
+\label{eq:ScaleFactorSys_Tau}
 \rho^{e,\tau} = \frac{N_{\text{SR}}^{\text{T\&P}e,\tau}}{N_{\text{CR, }e,\tau \text{ veto inverted } \cancel{\ecalo<5\gev}}^{\text{T\&P}}}.
-\end{equation*}
+\end{equation}
 
 %As candidate tracks originating from leptons anyway have almost ever \nhits grater five, this does not bias the result (see Fig.~\ref{}).
 The selection requirements for the three tag-and-probe samples are listed in Tables~\ref{tab:MuonTagAndProbeSample},~\ref{tab:TauTagAndProbeSample} and~\ref{tab:ElectronTagAndProbeSample} in Appendix~\ref{app:TagAndProbeRequirements}.
 
 The leptonic scale factors are calculated using simulated \Zlep events and real data from the single-muon and single-electron samples listed in Table~\ref{tab:ElectronMuonCRDatasets}.
+Since only scaling factors are derived within simulation and data, no trigger is applied.
+This does not change the scaling factors since the requirements on the well reconstructed lepton are exactly the same for the numerator and denominator of Eqs.~\eqref{eq:ScaleFactorSys_Mu} and~\eqref{eq:ScaleFactorSys_Tau}.
+This is not expected to influence the scaling factors.
 The largest difference from unity of the ratio $\rho^{\text{lep}_i}_{\text{MC}}$/$\rho^{\text{lep}_i}_{\text{Data}}$ and its statistical uncertainty is taken as systematic uncertainty. 
 In Table~\ref{tab:ScaleFactorUncertainty}, the results of the event yield in all control regions and the corresponding lepton scale factor are depicted.
 This results for the signal candidate selection in an uncertainty of 69\% for the electron, 39\% for the muon and 79\% for the tau scale factor.
