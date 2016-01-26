@@ -198,7 +198,6 @@ The systematic uncertainties on the simulated signal samples are considered as f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Statistical Methods/ Limit setting}
-FIXME: Talk to Markus
 This section is a small interlude to briefly introduce the methods and techniques that are used to exclude beyond-SM models with the results of this search.
 For a detailed and pedagogical introduction to the methods, the reader is referred to~\cite{bib:Ott_Thesis}.
 
@@ -225,7 +224,7 @@ where $\lambda$ is the mean of the Poisson distribution and the signal strength 
 
 Systematic uncertainties are included by varying the background expectation $b$ and the signal expectation $\mu\cdot s$ according to a predefined probability density function (pdf).
 %For one Gaussian distributed source of systematic uncertainty on the background, this leads to the following expressions for \CLsb and \CLb
-For one Gaussian distributed source of systematic uncertainty on the background, this leads to the following expressions for the test statistics of $q_{s+b}$ and $q_b$
+For one Gaussian distributed source of systematic uncertainty on the background, this leads to the following expressions for the test statistics of $q_{\mu}$ and $q_{\mu=0}$
 \begin{equation}
 \label{eq:CLsb_CLb_withSys}
 \begin{split}
@@ -236,8 +235,8 @@ q_{\mu=0}  &=  \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)   \right) 
 \end{split}
 \end{equation}
 These expressions can be generalised for more than one signal region and more than one systematic uncertainty~\cite{bib:Ott_Thesis}.
-In case of multiple signal regions, the distribution of the systematic uncertainties becomes a multi-dimensional probability density function that takes the covariance matrix of the systematic uncertainties in different signal regions into account. FIXME
-In order to get rid of the nuisance paramaters $\delta_b$ and $\delta_s$ either an integration over $\delta_b$ and $\delta_s$ can be done or a maximisation with respect to the nuisance paramaters can be done.
+In case of multiple signal regions, the distribution of the systematic uncertainties becomes a multi-dimensional probability density function that takes the covariance matrix of the systematic uncertainties in different signal regions into account.
+In order to get rid of the nuisance parameters $\delta_b$ and $\delta_s$ either an integration over $\delta_b$ and $\delta_s$ or a maximisation with respect to $\delta_b$ and $\delta_s$ can be performed.
 
 In this analysis, the procedure for limit setting follows~\cite{bib:LimitSetting_Higgs}.
 Instead of the number of observed events, the profile likelihood ratio 
@@ -375,16 +374,17 @@ The comparison of the two searches is shown in Fig.~\ref{fig:Comparison2dLimit}.
 
 For charginos with a lifetime of $\tau=0.07\ns$ ($\ctau=2.1\cm$), the observed limit of this search improves the limits derived in~\cite{bib:CMS:DT_8TeV} by $\sim35\gev$ in chargino mass, for a lifetime of $\tau=0.4\ns$ ($\ctau=12.0\cm$) by $\sim25\gev$. 
 For SUSY models with long chargino lifetimes the here presented search shows a higher exclusion power.
-The weaker exclusion for long lifetimes in~\cite{bib:CMS:DT_8TeV} is caused by the additional selection cut on the number of missing outer hits, $\nlostouter\geq3$.
+The weaker exclusion for long lifetimes in~\cite{bib:CMS:DT_8TeV} is caused by the additional selection cut on the number of missing outer hits, $\nlostouter\geq3$.\\
 
-The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is especially interesting since the signal regions of the two searches show little correlation for small lifetimes. FIXME
-The correlation between simulated signal events, that pass the selection from~\cite{bib:CMS:DT_8TeV}, $N_A$, and the selection used in this analysis, $N_B$, can be estimated by the event overlap $\rho_{\text{corr}}$
+Since the disappearing track analysis and the here presented analysis use the same physics objects (tracks) and are interpreted in terms of the same signal models, one would expect a very high overlap between the selected signal events.
+Interestingly, the two searches show a rather small overlap of selected signal events of around 20\% for short lifetimes of $\ctau=5\cm$.
+%The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is especially interesting since the signal regions of the two searches show little correlation for small lifetimes. FIXME
+The event overlap between simulated signal events, that pass the selection from~\cite{bib:CMS:DT_8TeV}, $N_A$, and the selection used in this analysis, $N_B$, can be estimated by
 \begin{equation*}
 \rho_{\text{corr}} = \frac{N_{A\cap B}}{N_{A \cup B}} = \frac{N_{A\cap B}}{N_A + N_B - N_{A \cap B}}.
 \end{equation*}
-In order to avoid an over- or underestimation of the event overlap, only the most sensitive signal region from this search is included in $N_B$.
-The degree of correlation is depicted in Fig.~\ref{fig:AnalysisOverlap} which shows the event overlap for signal models with chargino masses between $100-600\gev$ and lifetimes between $5\cm-1000\cm$.
-
+In order to avoid an over- or underestimation of the overlap, only the most sensitive signal region from this search is included in $N_B$.
+The signal event overlap for signal models with chargino masses between $100-600\gev$ and lifetimes between $5\cm-1000\cm$ is depicted in Fig.~\ref{fig:AnalysisOverlap}.
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
@@ -396,7 +396,7 @@ The degree of correlation is depicted in Fig.~\ref{fig:AnalysisOverlap} which sh
 \end{figure} 
 It can be seen that the event overlap for intermediate lifetimes of around 100\cm is around 60\% and decreases for shorter lifetimes to small overlaps of around $15-20\%$.
 Additionally, the two events that were observed in data by~\cite{bib:CMS:DT_8TeV} in their signal region are not contained in any of the signal regions in the here presented analysis.
-Thus, this analysis constitutes an independent confirmation of the exclusion limits derived in~\cite{bib:CMS:DT_8TeV}.
+Thus, this analysis constitutes a rather independent confirmation of the exclusion limits derived in~\cite{bib:CMS:DT_8TeV}, especially for short chargino lifetimes.
 
 % with an almost independent set of simulated signal events for low lifetimes.
 %It should also be noted that the two events observed in data in the signal region of~\cite{bib:CMS:DT_8TeV}, are not contained in any of the signal regions in the here presented analysis.
