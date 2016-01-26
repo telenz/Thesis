@@ -145,7 +145,7 @@ public:
   GainPS->GetXaxis()->SetTitle("#frac{MPV (ADC/mm)}{calibration factor (ADC/mm)}");
   pixelGain->GetXaxis() ->SetTitle("#frac{MPV (ADC/mm)}{300 #upoint 265 (ADC/mm)}");
   stripGain->GetXaxis() ->SetTitle("#frac{MPV (ADC/mm)}{300 (ADC/mm)}");
-  rmsOfCalibration->GetXaxis()->SetTitle("#sigma_{Gain within one module}");
+  rmsOfCalibration->GetXaxis()->SetTitle("#sigma_{calib. factors}^{ROCs within one module}");
 
 
   Long64_t nentries = fChain->GetEntriesFast();
