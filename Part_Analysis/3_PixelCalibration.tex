@@ -18,7 +18,7 @@ How to discriminate SM particles and beyond SM particles with the help of a \ded
 
 %The CMS tracker system does not only allow for the precise measurement of particle tracks and primary and secondary vertices but also the measurement of a particle's mean energy loss per path length.
 %This is done by the detection of the number of electrons produced by the ionisation of the particle during its passage through the silicon tracker.
-%A detailed introduction to the CMS tracker system and the energy measurement can be found in Section~\ref{FIXME}.
+%A detailed introduction to the CMS tracker system and the energy measurement can be found in Section~\ref{}.
 
 %It was already pointed out that the inclusion of the pixel energy measurements can increase the sensitivity when searching for short and highly ionising tracks.
 %While the silicon strip detector has already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, no complete calibration has been done for the pixel silicon tracker so far.
@@ -67,7 +67,7 @@ This makes the use of the mean energy loss described by the Bethe formula for th
 
 
 A much better observable is the most probable value (MPV) of the Landau distribution.
-The MPV is much more stable compared to the mean and is not subject (FIXME) to high \dedx fluctuations. 
+The MPV is much more stable compared to the mean and is not subject to high \dedx fluctuations. 
 The most probable energy loss of a charged particle, $\Delta_p$, can be described by the Landau-Vavilov-Bichsel equation \cite{bib:Bichsel:MPV_1988}:
 \begin{equation}
 \Delta_p = \xi \left[ \ln \frac{2m_e c^2\beta^2\gamma^2}{I}  + \ln\frac{\xi}{I} + j - \beta^2 - \delta(\beta\gamma)  \right],
@@ -156,8 +156,7 @@ The main goal of the gain calibration is to get a uniform response in the ionisa
 To also ensure a uniform response over all modules within one time step, an additional inter-calibration on module level is carried out.
 The inter-calibration can in principle be done on various levels: the highest granularity would be a calibration on pixel level, followed by a calibration on read-out-chip (ROC) level and then on module-level.
 Lower granularities in descending order are rings (modules with same z-position) and finally layers (3 layers in the barrel and 4 disks in the endcap). 
-It is verified that all pixels~\cite{bib:Danek} and all ROCs (on one module) are sufficiently inter-calibrated, such that the inter-calibration is finally done module-wise.
-For the pixel inter-calibration it is relied on~\cite{bib:Danek}, whereas the spread of derived calibration factors of all ROCs within one module was analysed to be around 5\% for most of the pixel modules (see Fig.~\ref{FIXME} in Appendix{FIXME}). FIXME:talk to Markus
+Within this anlysis the calibration is performed on module level because ROCs within one module are acceptably calibrated within 10\% (Fig.~\ref{FIXME} in Appendix~\ref{FIXME}) while discrepancies larger than 20\% occur frequently on module level (Fig.~\ref{FIXME} in Appendix~\ref{FIXME}).
 
 %The applied method for the gain calibration of the pixel tracker closely follows the method in \cite{bib:Quertenmont_2010}.
 
@@ -185,7 +184,6 @@ Figure~\ref{fig:dEdx_Module} shows an example distribution for one module.
            A Landau convoluted with a Gaussian is fitted to the core of the distribution in an iterative procedure.} 
   \label{fig:dEdx_Module}
 \end{figure}
-The underlying Landau distribution can be seen. FIXME 
 To extract the MPV for every module a fit to the core distribution is performed.
 The fit is not only done with a Landau but a Landau convoluted with a Gaussian function to be closer to the experimentally observed energy spectrum.
 This also increases the fit performance and the stability of the fit.
@@ -217,7 +215,6 @@ The variation over time is indeed eliminated, resulting in a maximal time variat
   \label{fig:StabilityPlot_afterCalibration}
 \end{figure}
 
-
 Additionally, the same procedure is carried out for a corresponding simulated data sample to ensure the inter-calibration of the pixel modules on all simulated samples.
 
 
@@ -231,7 +228,7 @@ The relation between $\Delta E$ in ADC counts and the energy loss in eV is given
 \end{equation}
 where $N_e$/ADC is the number of electrons which correspond to one calibrated ADC count and 3.61\,\ev is the  mean energy needed to create one electron-hole pair in silicon at $-10\degree$C.
 Such an absolute gain calibration can be done with the help of several methods (all explained in \cite{bib:Quertenmont_2010}).
-The absolute calibration of the silicon pixel tracker can rely on the already performed/accomplished FIXME  absolute calibration of the silicon strip detector.
+The absolute calibration of the silicon pixel tracker can rely on the existing absolute calibration of the silicon strip detector.
 In \cite{bib:Quertenmont_2010}, the absolute gain calibration was done with the help of the most probable energy release per path length of muons, 
 theoretically described by the Landau-Vavilov-Bichsel formula in Eq.~\eqref{eq:Landau_Vavilov_Bichsel}.  
 To calibrate the pixel tracker to the correct energy loss per path length it is therefore sufficient to determine one calibration factor to relate the average \dedx of all tracks in the pixel tracker as shown in 

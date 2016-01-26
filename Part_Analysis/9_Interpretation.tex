@@ -210,32 +210,34 @@ The \CLs method was developed for the Higgs searches at LEP in order not to over
 \CLs = \frac{\CLsb}{\CLb}.
 \end{equation*}
 The confidence level CL is defined as the probability of obtaining less than or equal the number of observed events P($n\leq n_{\text{obs}}$) for a given background (or background+signal) hypothesis.
-%In general, the considered distribution can refer to any test statistics $q$ and is not necessarily the distribution of the number of events.
+In general, the considered distribution can refer to any test statistics $q$ and is not necessarily the distribution of the number of events.
 For Poissonian statistics it leads to the following expressions for \CLsb and \CLb for one signal region
 \begin{equation}
 \label{eq:CLsb_CLb}
-\begin{split}
-\CLsb &= \text{Poisson}\left( n\leq n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),\\
-\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b   \right),\\
-\CLsb &= \sum\limits_{0}^{n_{\text{obs}}}\text{Poisson}\left( n |\lambda = b+\mu\cdot s   \right),\\
-\CLb  &= \sum\limits_{0}^{n_{\text{obs}}}\text{Poisson}\left( n |\lambda = b   \right),
-\end{split}
+\begin{aligned}
+\CLsb &= \sum\limits_{0}^{n_{\text{obs}}} q_{\mu}    &&= \text{Poisson}\left( n\leq n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),\\
+\CLb  &= \sum\limits_{0}^{n_{\text{obs}}} q_{\mu = 0} &&= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b   \right),%\\
+%\CLsb &= \sum\limits_{0}^{n_{\text{obs}}}\text{Poisson}\left( n |\lambda = b+\mu\cdot s   \right),\\
+%\CLb  &= \sum\limits_{0}^{n_{\text{obs}}}\text{Poisson}\left( n |\lambda = b   \right),
+\end{aligned}
 \end{equation}
 where $\lambda$ is the mean of the Poisson distribution and the signal strength $\mu$ is the measure for the size of the signal cross section.
 
 Systematic uncertainties are included by varying the background expectation $b$ and the signal expectation $\mu\cdot s$ according to a predefined probability density function (pdf).
-For one Gaussian distributed source of systematic uncertainty on the background, this leads to the following expressions for \CLsb and \CLb
+%For one Gaussian distributed source of systematic uncertainty on the background, this leads to the following expressions for \CLsb and \CLb
+For one Gaussian distributed source of systematic uncertainty on the background, this leads to the following expressions for the test statistics of $q_{s+b}$ and $q_b$
 \begin{equation}
 \label{eq:CLsb_CLb_withSys}
 \begin{split}
-\CLsb &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
-\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
-\CLsb &= \sum\limits_{0}^{n_{\text{obs}}} \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
-\CLb  &= \sum\limits_{0}^{n_{\text{obs}}} \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),
+%\CLsb &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
+%\CLb  &= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b \cdot (1+\delta_b)   \right) \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
+q_{\mu}    &= \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)+\mu\cdot s   \right) \cdot \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),\\
+q_{\mu=0}  &=  \text{Poisson}\left( n |\lambda = b \cdot (1+\delta_b)   \right) \cdot \text{Gauss}\left(\delta_b|\text{mean}=0, \sigma = \sigma_b\right),
 \end{split}
 \end{equation}
 These expressions can be generalised for more than one signal region and more than one systematic uncertainty~\cite{bib:Ott_Thesis}.
-In case of multiple signal regions, the distribution of the systematic uncertainties becomes a multi-dimensional probability density function that takes the covariance matrix of the systematic uncertainties in different signal regions into account.
+In case of multiple signal regions, the distribution of the systematic uncertainties becomes a multi-dimensional probability density function that takes the covariance matrix of the systematic uncertainties in different signal regions into account. FIXME
+In order to get rid of the nuisance paramaters $\delta_b$ and $\delta_s$ either an integration over $\delta_b$ and $\delta_s$ can be done or a maximisation with respect to the nuisance paramaters can be done.
 
 In this analysis, the procedure for limit setting follows~\cite{bib:LimitSetting_Higgs}.
 Instead of the number of observed events, the profile likelihood ratio 

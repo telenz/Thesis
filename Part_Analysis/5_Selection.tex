@@ -1,6 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \FloatBarrier
 \chapter{Event selection}
 \label{sec:EventSelection}
@@ -71,7 +70,7 @@ Dataset  & Integrated luminosity [\fbinv]   \\
 \end{table}  
 The events that were selected by the described triggers are available in the MET datasets listed in Table~\ref{tab:SearchSamples}.
 Again, because of the size of the datasets ($\sim150\,$TB in total), a reduction of the size is achieved by selecting only events where one of the used triggers fires and that contains at least one jet with a minimum \pt of 50\gev.
-The reduction of almost 80\% was necessary to make this analysis technically feasible. (FIXME)
+This reduction in size of almost 80\% is necessary to make this analysis technically feasible.
 
 %In addition, the analysis makes use of the datasets listed in Table~\ref{tab:ControlSamples}.
 %These datasets are used for background estimation purposes and the estimation of their associated systematic uncertainties.
@@ -334,7 +333,7 @@ Finally, two further characteristics of chargino tracks are exploited.
 As the chargino is produced in a very clean environment (no further particles around the chargino is expected), the isolation of the track can discriminate signal against background events.
 
 Furthermore, for charginos decaying inside the tracker there is no associated energy deposition in the calorimeters in the direction of the track.
-This is a very pronounced characteristics of signal tracks for short chargino lifetimes. (When the chargino lifetime increases, more of the charginos pass the calorimeters and deposit energy within.) FIXME.
+This is a very pronounced characteristics of signal tracks for short chargino lifetimes. 
 
 The resulting selection cuts are as follows
 \begin{itemize}
@@ -342,7 +341,7 @@ The resulting selection cuts are as follows
 \item No further substantial track activity is allowed in a cone of $\Delta R < 0.3$ around the candidate track: \mbox{$\sum \limits_{\Delta R < 0.3} \pt^{\text{trk}}/\pt^{\text{cand}} - 1 < 0.1$} (the subtraction by $1$ corresponds to the contribution of the candidate track itself)
 \item No large calorimeter energy deposits (ECAL+HCAL) in a cone of $\Delta R < 0.5$ around the track: \mbox{$\ecalo<5\gev$}.
 \end{itemize}
-The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackIso_Ecalo_After_Preselection}.\\
+The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackIso_Ecalo_After_Preselection}.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -353,6 +352,7 @@ The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackI
            All events with a track isolation or a calorimeter energy deposit larger than the range shown in the figures are contained in the last bin.}
   \label{fig:TrackIso_Ecalo_After_Preselection}
 \end{figure}
+For even higher chargino lifetimes $\ctau > 100\cm$, the calorimeter isolation requirement starts rejecting signal events because the charginos reach the calorimeters.\\
 
 As emphasised before, this analysis aims at being sensitive especially on shorter lifetimes.
 Still, in order to allow for charginos decaying at any position in the tracker, no explicit selection cut on the number of missing outer hits is required.
@@ -411,12 +411,11 @@ An overview over the full analysis preselection is given in Table~\ref{tab:Summa
 \end{tabular}}
 \end{table}
 The event yields after the selections of each of the categories from Table~\ref{tab:SummaryCuts} are listed in Table~\ref{tab:CutflowALL} for the available simulated background samples, some exemplary simulated signal models and for observed data.
-The discrepancies between data and simulation after the full preselection is stemming from two effects.
-First, not all background samples were available (\eg \ZInvJets sample), leading to a lower prediction in simulation.
-Second, due to the specific selection region (lepton+jet veto), a data-simulation discrepancy is expected.
-Furthermore, it should be noted, that the resulting 31.9 events in the simulated \WJets sample are stemming from only two simulated events due to high event weights.
+The discrepancies between data and simulation after the full preselection is stemming from three effects.
+First, the simulated yield is highly uncertain because of large event weights ($\sim 15$).
+Second, not all relevant background samples were available (\eg \ZInvJets sample), leading to a lower prediction in simulation.
+Third, simulation is not expected to describe the here selected events (lepton/jet veto) very well.
 This emphasizes once more the need for data-driven background estimation methods.
-FIXME.
 Detailed event yield tables can be found in Appendix~\ref{app:cutflow}.\\
 %%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\arraystretch}{1.5}
