@@ -215,12 +215,19 @@ int makeFakeDeDxplots(){
   fakes.histo     = new TH1D("fakes","fakes",4,xbinsNHits);
   */
 
-  Double_t xbinsNHits[5]  = {0.0,0.1,0.2,0.5,1};
-  pions.histo     = new TH1D("pions","pions",4,xbinsNHits);
-  muons.histo     = new TH1D("muons","muons",4,xbinsNHits);
-  elecs.histo     = new TH1D("elecs","elecs",4,xbinsNHits);
-  fakesLowECalo.histo     = new TH1D("fakesLow","fakesLow",4,xbinsNHits);
-  fakesHighECalo.histo    = new TH1D("fakesHigh","fakesHigh",4,xbinsNHits);
+  //Double_t xbinsNHits[5]  = {0.0,0.1,0.2,0.5,1}
+  //pions.histo     = new TH1D("pions","pions",4,xbinsNHits);
+  //muons.histo     = new TH1D("muons","muons",4,xbinsNHits);
+  //elecs.histo     = new TH1D("elecs","elecs",4,xbinsNHits);
+  //fakesLowECalo.histo     = new TH1D("fakesLow","fakesLow",4,xbinsNHits);
+  //fakesHighECalo.histo    = new TH1D("fakesHigh","fakesHigh",4,xbinsNHits);
+
+  Double_t xbinsNHits[3]  = {0.0,0.2,1};
+  pions.histo     = new TH1D("pions","pions",2,xbinsNHits);
+  muons.histo     = new TH1D("muons","muons",2,xbinsNHits);
+  elecs.histo     = new TH1D("elecs","elecs",2,xbinsNHits);
+  fakesLowECalo.histo     = new TH1D("fakesLow","fakesLow",2,xbinsNHits);
+  fakesHighECalo.histo    = new TH1D("fakesHigh","fakesHigh",2,xbinsNHits);
 
   
   /*
