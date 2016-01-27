@@ -1,9 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{A search for highly ionising, short tracks}
+\chapter{\texorpdfstring{A search for highly ionising, short tracks}{Appendix: \quad A search for highly ionising, short tracks}}
 \section{Calibration of the silicon pixel detector}
 \label{app:PixelCalibration}
-\begin{figure}[!h]
+In Fig.~\ref{fig:SigmaPixelCalibrationROCs}, the standard deviation of derived calibration factors of the ROCs within one module is depicted for all modules.
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/rmsOfROCs_N_0_AB_CL0} 
@@ -12,24 +13,26 @@
     \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/rmsOfROCs_N_0_D1_CL0} 
     \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/rmsOfROCs_N_0_D2_CL0} 
   \end{tabular}
-  \caption{The standard deviation of the pixel calibration factors of all ROCs within one module for all five time steps (first step, second step, .. from top left to bottom right).
-           Most of the modules have a $\sigma_{\text{calib. factors}}$ around 5\%, but never worse than 10\%.}
+  \caption{The standard deviation of the pixel calibration factors of all ROCs within one module for all five time steps (first step, second step, .. from top left to bottom right).}
   \label{fig:SigmaPixelCalibrationROCs}
 \end{figure} 
-
-\begin{figure}[!h]
-  \centering 
-  \begin{tabular}{c}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_AB_NEW} 
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_C1_NEW} 
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_C2_NEW} \\
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_D1_NEW} 
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_D2_NEW} 
-  \end{tabular}
-  \caption{The pixel calibration factors of all of the 1440 pixel modules for all five time steps (first step, second step, .. from top left to bottom right)
-           The deviation between the calibration factors of different modules within one time step is often more than 20\% and reaches up to 100\%.}
-  \label{fig:PixelCalibrationFactors}
-\end{figure} 
+Most of the modules have a $\sigma_{\text{calib. factors}}$ around 5\%, but never worse than 10\%.
+In~\cite{bib:Quertenmont_2010}, it was shown that the resolution of the inter-calibration of the silicon strip detector is limited to $\sim 10\%$.
+This is expected to be of similar magnitude for the pixel tracker inter-calibration.
+Therefore, the inter-calibration of ROCs within one module can be considered acceptable.
+%\begin{figure}[!h]
+%  \centering 
+%  \begin{tabular}{c}
+%    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_AB_NEW} 
+%    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_C1_NEW} 
+%    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_C2_NEW} \\
+%    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_D1_NEW} 
+%    \includegraphics[width=0.33\textwidth]{figures/analysis_2/PixelCalibration/PixelGain_D2_NEW} 
+%  \end{tabular}
+%  \caption{The pixel calibration factors of all of the 1440 pixel modules for all five time steps (first step, second step, .. from top left to bottom right)
+%           The deviation between the calibration factors of different modules within one time step is often more than 20\% and reaches up to 100\%.}
+%  \label{fig:PixelCalibrationFactors}
+%\end{figure} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

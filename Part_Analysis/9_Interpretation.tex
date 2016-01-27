@@ -45,7 +45,7 @@ In Fig.~\ref{fig:TriggerTurnOn}, the trigger turn-on curves, measured in data an
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Interpretation/TriggerEfficiency.png} 
+    \includegraphics[width=0.55\textwidth]{figures/analysis_2/Interpretation/TriggerEfficiency.png} 
   \end{tabular}
   \caption{Trigger turn-on curves in data (black triangles) and simulation (red squares) as a function of PF \met (not taking into account the energy of the muons).}
   \label{fig:TriggerTurnOn}
@@ -115,7 +115,13 @@ Slow protons are highly ionising and can thus be used to determine the uncertain
 
 In order to select slow protons, high quality tracks with a momentum smaller than 2.5\gev are selected.
 The \ias versus momentum distribution for the selected tracks is shown in Fig.~\ref{fig:IasVsMomentum}.
-\begin{figure}[!t]
+The kaon and proton line are visible in both datasets. 
+The deuteron line is only visible in data, as deuteron's are not simulated.
+Two different slices in the momentum are extracted where the proton line is contained: p between $0.80-0.85\gev$ and $0.95-1.00\gev$.
+A Gaussian function is fitted to the proton peak and the maximum difference of the mean of the fitted Gaussian between simulation and observed data is taken as systematic uncertainty.
+The \ias distribution for the two momentum ranges with the Gaussian fit is depicted in Fig.~\ref{fig:IasSlowProtons}.
+The systematic uncertainty is estimated to a value of 6\%.
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/IasP_Data.pdf} 
@@ -124,12 +130,8 @@ The \ias versus momentum distribution for the selected tracks is shown in Fig.~\
   \caption{\ias versus momentum for good quality tracks with at least eight hits in observed data (left) and simulation (right).}
   \label{fig:IasVsMomentum}
 \end{figure} 
-The kaon and proton line are visible in both datasets. 
-The deuteron line is only visible in data, as deuteron's are not simulated.
-Two different slices in the momentum are extracted where the proton line is contained: p between $0.80-0.85\gev$ and $0.95-1.00\gev$.
-A Gaussian function is fitted to the proton peak and the maximum difference of the mean of the fitted Gaussian between simulation and observed data is taken as systematic uncertainty.
-The \ias distribution for the two momentum ranges with the Gaussian fit is depicted in Fig.~\ref{fig:IasSlowProtons}.
-\begin{figure}[!h]
+
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/hIas_analysis_2015_11_30_ForThesis_ptmin0p80_ptmax0p85.pdf} 
@@ -139,9 +141,8 @@ The \ias distribution for the two momentum ranges with the Gaussian fit is depic
            For the momentum range of $0.80-0.85\gev$, the proton line is contained between \ias values of $0.4-0.8$, whereas for the momentum range of $0.95-1.00\gev$, the proton line \ias lies between $0.2-0.6$.  }
   \label{fig:IasSlowProtons}
 \end{figure} 
-The systematic uncertainty is estimated to a value of 6\%.
-%The size of the systematic uncertainty is also expected to cover the data-simulation difference for minimal ionisation.
 
+%The size of the systematic uncertainty is also expected to cover the data-simulation difference for minimal ionisation.
 
 \subsection*{Simulation of the track reconstruction efficiency}
 One final source of uncertainty is the simulation of the track reconstruction efficiency.
@@ -158,6 +159,14 @@ The track reconstruction efficiency is higher in simulation than in data and res
 \subsection*{Summary of systematic uncertainties on the simulated signal samples}
 All systematic uncertainties are estimated for all simulated signal samples and in each of the four signal regions.
 An overview of the range of the uncertainties is given in Table~\ref{tab:SignalSysUnc}.
+
+In order to avoid an overestimation of the systematic uncertainties due to limited sizes of the samples (especially for low lifetimes like 1\cm), the corresponding signal sample with longer lifetime (100\cm) is used instead for determining the systematic uncertainty.
+This is possible for uncertainty sources, where the size is not affected by the lifetime of the chargino, including ISR, trigger efficiency, JES, JER, and PDF uncertainties.
+
+It can be seen, that major uncertainties are the simulation of the initial state radiation, of the calorimeter isolation, and of \ias.
+The high maximum value of the pileup uncertainty is caused by limited statistical precision.
+
+The systematic uncertainties on the simulated signal samples are considered as fully correlated among the four signal regions.
 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h] 
@@ -183,17 +192,9 @@ Simulation of missing inner hits        &3.3                &3.7                
 Simulation of \ias                      &6.0                &6.0                \\ 
 Simulation of track reconstruction efficiency    &4.6                &6.0                \\ 
 \bottomrule
-\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{}
 \end{tabular}  
 \end{table} 
-
-In order to avoid an overestimation of the systematic uncertainties due to limited sizes of the samples (especially for low lifetimes like 1\cm), the corresponding signal sample with longer lifetime (100\cm) is used instead for determining the systematic uncertainty.
-This is possible for uncertainty sources, where the size is not affected by the lifetime of the chargino, including ISR, trigger efficiency, JES, JER, and PDF uncertainties.
-
-It can be seen, that major uncertainties are the simulation of the initial state radiation, of the calorimeter isolation, and of \ias.
-The high maximum value of the pileup uncertainty is caused by limited statistical precision.
-
-The systematic uncertainties on the simulated signal samples are considered as fully correlated among the four signal regions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -215,9 +216,7 @@ For Poissonian statistics it leads to the following expressions for \CLsb and \C
 \label{eq:CLsb_CLb}
 \begin{aligned}
 \CLsb &= \sum\limits_{0}^{n_{\text{obs}}} q_{\mu}    &&= \text{Poisson}\left( n\leq n_{\text{obs}} |\lambda = b+\mu\cdot s   \right),\\
-\CLb  &= \sum\limits_{0}^{n_{\text{obs}}} q_{\mu = 0} &&= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b   \right),%\\
-%\CLsb &= \sum\limits_{0}^{n_{\text{obs}}}\text{Poisson}\left( n |\lambda = b+\mu\cdot s   \right),\\
-%\CLb  &= \sum\limits_{0}^{n_{\text{obs}}}\text{Poisson}\left( n |\lambda = b   \right),
+\CLb  &= \sum\limits_{0}^{n_{\text{obs}}} q_{\mu = 0} &&= \text{Poisson}\left( n \leq n_{\text{obs}} |\lambda = b   \right),\
 \end{aligned}
 \end{equation}
 where $\lambda$ is the mean of the Poisson distribution and the signal strength $\mu$ is the measure for the size of the signal cross section.
@@ -262,11 +261,8 @@ A log-normal distribution is used instead of a normal distribution to ensure tha
 The gamma distribution is well suited for statistical uncertainties arising from very limited statistical precision in control regions or in simulated samples that are used for the background estimation~\cite{bib:CMS:Combine}.
 
 Correlations between systematic uncertainties on the background expectation in different search bins are assumed as shown in Table~\ref{tab:BkgSysUncCorr}.
-The systematic uncertainties on the expected signal yields are considered fully correlated across search bins.
-
-The exclusion limits are derived according to the above presented methodology using the \textit{Combine} framework~\cite{bib:CMS:Combine} which was developed for the Higgs searches at CMS.
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[!h] 
+\renewcommand{\arraystretch}{1.2}
+\begin{table}[!b] 
 \centering
 \caption{Correlation of systematic and statistical uncertainties between the four different signal regions.
          Statistical uncertainties include uncertainties arising from the limited size of control regions and the simulated samples.}
@@ -276,7 +272,7 @@ The exclusion limits are derived according to the above presented methodology us
 \toprule 
                                         & Fakes                          & Taus                            & Electrons                        & Muons                       \\ 
 \midrule
-Statistical uncertainty                 &0\% correlated                  & 100\% for bins with same \ias   & 0\% correlated                   & 100\% for bins with same \ias \\
+Statistical uncertainty                 & 0\% correlated                  & 100\% for bins with same \ias   & 0\% correlated                   & 100\% for bins with same \ias \\
 \midrule
 Leptonic scale factor uncertainty       & \makecell[c]{-}                & 100\% for bins with same \ias   & 100\% for bins with same \ias    & 100\% for bins with same \ias \\
 \midrule
@@ -284,9 +280,12 @@ Fake rate  uncertainty                  & 100\% for bins with same \ias  &  \mak
 \midrule
 \ias uncertainty                        &0\% correlated                  & 100\% for bins with same \pt    & 100\% for bins with same \pt     &  100\% for bins with same \pt \\
 \bottomrule
-\multicolumn{5}{c}{} \\
+%\multicolumn{5}{c}{} 
 \end{tabularx}  
 \end{table} 
+The systematic uncertainties on the expected signal yields are considered fully correlated across search bins.
+
+The exclusion limits are derived according to the above presented methodology using the \textit{Combine} framework~\cite{bib:CMS:Combine} which was developed for the Higgs searches at CMS.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -378,7 +377,6 @@ The weaker exclusion for long lifetimes in~\cite{bib:CMS:DT_8TeV} is caused by t
 
 Since the disappearing track analysis and the here presented analysis use the same physics objects (tracks) and are interpreted in terms of the same signal models, one would expect a very high overlap between the selected signal events.
 Interestingly, the two searches show a rather small overlap of selected signal events of around 20\% for short lifetimes of $\ctau=5\cm$.
-%The confirmation of the excluded parameter space in~\cite{bib:CMS:DT_8TeV} is especially interesting since the signal regions of the two searches show little correlation for small lifetimes. FIXME
 The event overlap between simulated signal events, that pass the selection from~\cite{bib:CMS:DT_8TeV}, $N_A$, and the selection used in this analysis, $N_B$, can be estimated by
 \begin{equation*}
 \rho_{\text{corr}} = \frac{N_{A\cap B}}{N_{A \cup B}} = \frac{N_{A\cap B}}{N_A + N_B - N_{A \cap B}}.

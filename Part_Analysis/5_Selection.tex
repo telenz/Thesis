@@ -26,7 +26,7 @@ The HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 trigger was active during Run\,
 %To consider the event in the analysis, at least one of them must have fired.
 %In Table~\ref{tab:triggers} the three triggers are listed together with the corresponding recorded integrated luminosity in the time when they were active.
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!b]
+\begin{table}[!t]
 \centering
 \caption{\met and \met+ jet triggers used in this analysis together with the corresponding recorded integrated luminosity during the time when they were in place.}
 \label{tab:triggers}
@@ -40,7 +40,7 @@ Trigger  & Integrated luminosity [\fbinv]   \\
  HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95    &  14.4  \\
  HLT\_MET120\_HBHENoiseCleaned                    &  19.7  \\
 \bottomrule
-\multicolumn{2}{c}{}\\
+\multicolumn{2}{c}{}
 \end{tabular}}
 \end{table}  
 
@@ -50,7 +50,7 @@ The HBHENoise-filter reduces background from electronic noise in the HCAL.
 This trigger was active during the full data taking period in 2012.
 
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!t]
+\begin{table}[!b]
 \centering
 \caption{MET data samples used in the search with the contained integrated luminosity.}
 \label{tab:SearchSamples}
@@ -65,12 +65,13 @@ Dataset  & Integrated luminosity [\fbinv]   \\
  /MET/Run2012C-22Jan2013-v1/RECO         &  7.055  \\
  /METParked/Run2012D-22Jan2013-v1/RECO   &  7.354  \\ 
 \bottomrule
-\multicolumn{2}{c}{}\\
+\multicolumn{2}{c}{}
 \end{tabular}}
-\end{table}  
-The events that were selected by the described triggers are available in the MET datasets listed in Table~\ref{tab:SearchSamples}.
+\end{table} 
+The events that were selected by the described triggers are available in the MET datasets listed in Table~\ref{tab:SearchSamples}. 
 Again, because of the size of the datasets ($\sim150\,$TB in total), a reduction of the size is achieved by selecting only events where one of the used triggers fires and that contains at least one jet with a minimum \pt of 50\gev.
 This reduction in size of almost 80\% is necessary to make this analysis technically feasible.
+
 
 %In addition, the analysis makes use of the datasets listed in Table~\ref{tab:ControlSamples}.
 %These datasets are used for background estimation purposes and the estimation of their associated systematic uncertainties.
@@ -158,15 +159,7 @@ Therefore, special requirements are enforced in order to suppress events emergin
 QCD-multijet events can be characterised by topologies where two jets are almost back-to back.
 Additionally, in QCD-multijet events the missing energy is usually aligned with one of the leading jets in the event.
 Figure~\ref{fig:QCDcuts} shows the maximum $\Delta\phi$ of any of two jets ($\pt>20\gev, |\eta|<4.5$) and the minimum $\Delta\phi$ between the \met vector and any of the two leading jets for the SM background and two different signal datasets.
-
-The following two requirements are sufficient to suppress QCD-multijet events efficiently:
-\begin{itemize}
-\renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
-\item $\Delta\phi$ between any of two jets (with $\pt>20\gev$ and $|\eta|<4.5$) in the event must be smaller than 2.5. %: \mbox{$\Delta\phi\left( j_i, j_j\right)<2.5$}.
-\item $\Delta\phi$ between any of the two leading jets (with $\pt>20\gev$ and $|\eta|<4.5$) and the \met must be larger than 0.5. %: \mbox{$\Delta\phi\left( j_{1,2}, \metvec \right) > 0.5$.} 
-\end{itemize}
-
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiMaxbeforeCut_lin.pdf}
@@ -176,6 +169,14 @@ The following two requirements are sufficient to suppress QCD-multijet events ef
            Only jets with $\pt>20\gev$ and $|\eta|<4.5$ are considered.}
   \label{fig:QCDcuts}
 \end{figure}
+
+The following two requirements are sufficient to suppress QCD-multijet events efficiently:
+\begin{itemize}
+\renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
+\item $\Delta\phi$ between any of two jets (with $\pt>20\gev$ and $|\eta|<4.5$) in the event must be smaller than 2.5. %: \mbox{$\Delta\phi\left( j_i, j_j\right)<2.5$}.
+\item $\Delta\phi$ between any of the two leading jets (with $\pt>20\gev$ and $|\eta|<4.5$) and the \met must be larger than 0.5. %: \mbox{$\Delta\phi\left( j_{1,2}, \metvec \right) > 0.5$.} 
+\end{itemize}
+
 
 
 \subsection{Candidate track selection}
@@ -191,22 +192,20 @@ First, a selection of high-quality tracks is enforced:
 \item The radial and longitudinal  distance of the track to the primary vertex must be small: \mbox{$|d0|<0.02\cm$}, \mbox{$|dz|<0.5\cm$}.
 \end{itemize}
 In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two quality selection cuts is shown.\\
-\begin{figure}[!b]
-%\vspace{10pt}
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostInner_lin.pdf}
+    \includegraphics[width=0.475\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
+    \includegraphics[width=0.475\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostInner_lin.pdf}
   \end{tabular}
   \caption{Normalised number of missing middle (left) and inner (right) hits of background and signal tracks after trigger selection and QCD suppression cuts.}
   \label{fig:LostHits}
 \end{figure}
-\begin{figure}[!t]
-%\vspace{30pt}
+\begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackd0_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackdz_lin.pdf}
+    \includegraphics[width=0.475\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackd0_lin.pdf}
+    \includegraphics[width=0.475\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackdz_lin.pdf}
   \end{tabular}
   \caption{Absolute value of the radial (left) and longitudinal (right) distance between the track and the primary vertex after trigger selection and QCD-multijet suppression cuts. 
            All events with a candidate track with a radial (longitudinal) distance larger than 0.2\cm (5\cm) are contained in the last bin.}
@@ -238,7 +237,7 @@ These lepton and jet veto selection requirements are highly suppressing the back
 The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:TrackdRmin} where the minimum $\Delta R$ between the candidate track and a reconstructed electron, muon, tau or jet is shown.\\
 \begin{figure}[!b]
   \centering 
-  %\vspace{25pt}
+  \vspace{25pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/htrackdRminElec_log.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/htrackdRminMuon_log.pdf}\\
@@ -251,7 +250,7 @@ The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:T
            The last bin contains all events where the candidate track has a $\Delta R_{\text{min}}$ larger than 1.5 or 5.0 to the next lepton or jet respectively. 
            Events with no respective lepton or jet are also contained in the last bin.}
   \label{fig:TrackdRmin}
-  %\vspace{25pt}
+  \vspace{25pt}
 \end{figure}
 
 Unfortunately, the lepton veto selection cuts are less effective in some of the detector directions.
@@ -267,6 +266,7 @@ Additionally, tracks that point towards intermodule gaps of ECAL cells or to the
 A list of the ECAL intermodule gaps, which is supplied centrally by CMS, is given in Table~\ref{tab:IntermoduleGaps}.
 
 \begin{figure}[!b]
+  \vspace{10pt}
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/DeadECALMap2.pdf}
@@ -274,6 +274,7 @@ A list of the ECAL intermodule gaps, which is supplied centrally by CMS, is give
   \caption{Visualisation of dead and noisy ECAL cells in the detector's $\phi - \eta$ plane according to~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
            The radius of the dots correspond to $\Delta R=0.05$.}
   \label{fig:DeadECALmap}
+  \vspace{10pt}
 \end{figure}
 
 
@@ -305,7 +306,7 @@ $\eta$-ranges     \\
 \bottomrule
 \multicolumn{1}{c}{} \\
 \end{tabular}}
-%\vspace{50pt}
+\vspace{50pt}
 \end{table}  
 
 \begin{figure}[!b]
@@ -315,7 +316,7 @@ $\eta$-ranges     \\
   \end{tabular}
   \caption{Visualisation of the excluded region by the bad cathode strip chamber veto in the detector's $\phi - \eta$.}
   \label{fig:BadCSCMap}
-%\vspace{30pt}
+\vspace{30pt}
 \end{figure}
 
 To summarise, tracks pointing towards detector regions, that are not working properly or where the lepton reconstruction efficiencies are reduced, are vetoed as follows:
@@ -331,10 +332,8 @@ To summarise, tracks pointing towards detector regions, that are not working pro
 
 Finally, two further characteristics of chargino tracks are exploited.
 As the chargino is produced in a very clean environment (no further particles around the chargino is expected), the isolation of the track can discriminate signal against background events.
-
 Furthermore, for charginos decaying inside the tracker there is no associated energy deposition in the calorimeters in the direction of the track.
 This is a very pronounced characteristics of signal tracks for short chargino lifetimes. 
-
 The resulting selection cuts are as follows
 \begin{itemize}
 \renewcommand{\labelitemi}{\footnotesize{\ding{118}}}
@@ -352,15 +351,16 @@ The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackI
            All events with a track isolation or a calorimeter energy deposit larger than the range shown in the figures are contained in the last bin.}
   \label{fig:TrackIso_Ecalo_After_Preselection}
 \end{figure}
-For even higher chargino lifetimes $\ctau > 100\cm$, the calorimeter isolation requirement starts rejecting signal events because the charginos reach the calorimeters.\\
+For even higher chargino lifetimes $\ctau > 100\cm$, the calorimeter isolation requirement starts rejecting signal events because the charginos reach the calorimeters.
 
 As emphasised before, this analysis aims at being sensitive especially on shorter lifetimes.
 Still, in order to allow for charginos decaying at any position in the tracker, no explicit selection cut on the number of missing outer hits is required.
 
 Events are selected if they at least contain one track fulfilling all candidate track selection requirements.
 An overview over the full analysis preselection is given in Table~\ref{tab:SummaryCuts}. 
-\renewcommand{\arraystretch}{1.39}
+\renewcommand{\arraystretch}{1.40}
 \begin{table}[!h]
+\vspace{5pt}
 \centering
 \caption{Summary and categorisation of the analysis selection.}
 \label{tab:SummaryCuts}
@@ -409,13 +409,14 @@ An overview over the full analysis preselection is given in Table~\ref{tab:Summa
 
 \bottomrule
 \end{tabular}}
+\vspace{5pt}
 \end{table}
 The event yields after the selections of each of the categories from Table~\ref{tab:SummaryCuts} are listed in Table~\ref{tab:CutflowALL} for the available simulated background samples, some exemplary simulated signal models and for observed data.
 The discrepancies between data and simulation after the full preselection is stemming from three effects.
 First, the simulated yield is highly uncertain because of large event weights ($\sim 15$).
 Second, not all relevant background samples were available (\eg \ZInvJets sample), leading to a lower prediction in simulation.
 Third, simulation is not expected to describe the here selected events (lepton/jet veto) very well.
-This emphasizes once more the need for data-driven background estimation methods.
+This emphasises once more the need for data-driven background estimation methods.
 Detailed event yield tables can be found in Appendix~\ref{app:cutflow}.\\
 %%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\arraystretch}{1.5}
@@ -454,9 +455,8 @@ Given the presented signal candidate selection, two variables remain that are hi
 The transverse momentum \pt and the energy release per path length \dedx of the candidate track.
 In this analysis, the Asymmetric Smirnov discriminator \ias is used to enhance the discriminating power of \dedx.
 See Section~\ref{sec:Ias} for the definition and a detailed explanation of \ias.
-
 In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaining two variables are shown after the selection of signal candidate events.
-\begin{figure}[!h]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts_Wjets/htrackPtSmallRangeCoarseBinning_log.pdf}

@@ -1,7 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \FloatBarrier
 \chapter{General search strategy}
 \label{sec:GeneralSearchStrategy}
@@ -48,7 +47,7 @@ In the here presented search, the focus is, however, put on the electroweak prod
 
 
 When searching for supersymmetric models with long-lived \chipm, the strategy is of course highly dependent on the actual lifetime of the chargino. 
-For long lifetimes, the chargino can reach the muon chambers and can be reconstructed as a muon even despite a longer time-of-flight \cite{bib:CMS:HSCP_7TeV}. 
+For long lifetimes, the chargino can reach the muon chambers and can be reconstructed as a muon even despite a longer time-of-flight~\cite{bib:CMS:HSCP_7TeV}. 
 For lower lifetimes, the chargino can already decay inside the detector (\eg the tracker), and hence can not be reconstructed as a muon but leads to an isolated, potentially disappearing track in the tracker. 
 The detector signatures of these two scenarios are visualised in Fig.~\ref{fig:CharginoPaiEventDisplay}, where simulated chargino-chargino events are shown in a cross-sectional view of the CMS detector.
 \begin{figure}[!t]
@@ -77,8 +76,8 @@ The detector signatures of these two scenarios are visualised in Fig.~\ref{fig:C
   \label{fig:CharginoPaiEventDisplay}
 \end{figure}
 In the left picture of Fig.~\ref{fig:CharginoPaiEventDisplay}, both charginos are reconstructed as muons, which can be seen by the energy deposition in the muon chambers.
-In the middle and right pictures both charginos have a lower lifetime of $\ctau=0.5\,$m and thus are only visible as tracks in the tracker, where both trajectories end inside the silicon strip tracker (coincidentally the tracks are equally long).
-Since this analysis targets a search for Supersymmetry with charginos of lifetimes between $\ctau \approx 10\,\text{cm} - 40\,\text{cm}$, the charginos decay rather early in the detector, possibly even in the inner layers of the tracker.
+In the middle and right pictures both charginos have a lower lifetime of $\ctau=0.5\,$m and thus are only visible as tracks in the tracker, where both trajectories end inside the silicon strip tracker (by coincidence the tracks are equally long).
+Since this analysis targets a search for Supersymmetry with charginos of lifetimes between $\ctau \approx 1\,\text{cm} - 10\,\text{cm}$, the charginos decay rather early in the detector, possibly even in the inner layers of the tracker.
 %Thus, the signature of chargino events consists of isolated, short tracks that have large ionisation losses due to high chargino masses and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
 Thus, the signature of chargino events consists of isolated, short tracks and the signatures of the decay products, \ie of a neutralino and a fermion pair. 
 
@@ -96,7 +95,7 @@ The typical momentum of a pion originating from a chargino to neutralino decay i
 p_{\pi}\sim \sqrt{ \left( m_{\chipm} - m_{\chiO} \right)^2 - m_{\pi}^2}.
 \end{equation}
 %As the \chipm is rather slow for higher masses this is a good approximation also in the detector rest frame.
-For a mass gap between \chipm and \chiO of $\Delta m=150\, \mev$, the \pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} in the laboratory frame (Fig.~\ref{fig:ptOfPions}).
+For a mass gap between \chipm and \chiO of 150\mev, the \pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} in the laboratory frame (Fig.~\ref{fig:ptOfPions}).
 \begin{figure}[!t]
   \centering 
  \vspace{10pt}
@@ -144,7 +143,7 @@ The selection of chargino events in this analysis thus relies on the selection o
 
 If the chargino decays before it has crossed the full pixel and strip detector, the associated track is disappearing. 
 For low lifetimes, the tracks can be very short and can have only a few hits in the detector. 
-In order to reconstruct a particle's trajectory, a minimum of three hits are required since defining a helical path requires five parameters (see \cite{bib:CMS:tracking_8TeV}). 
+In order to reconstruct a particle's trajectory, a minimum of three hits are required since defining a helical path requires five parameters (see~\cite{bib:CMS:tracking_8TeV}). 
 A specific challenge for this analysis is hence the combination of searching for short tracks and utilising the measurement of the energy deposition of the chargino. 
 For very short tracks, eventually only passing the first couple of layers of the whole tracker system, the pixel tracker information becomes very important. 
 Therefore, an accurate energy measurement in the pixel system is of great importance to this analysis. 
@@ -154,23 +153,15 @@ This analysis thus requires a thorough study of the quality of the pixel energy 
 
 
 \section{Comparison to earlier searches}
-As already mentioned before, there are two analyses at CMS at $\sqrt{s}=8\,\tev$ with 20\fbinv data that search for intermediate lifetime charginos, the search for long-lived charged \mbox{particles \cite{bib:CMS:HSCP_8TeV}} and the search for disappearing tracks \cite{bib:CMS:DT_8TeV}.
+As already mentioned before, there are two analyses at CMS at $\sqrt{s}=8\,\tev$ with 20\fbinv data that search for intermediate lifetime charginos, the search for long-lived charged particles~\cite{bib:CMS:HSCP_8TeV} and the search for disappearing tracks~\cite{bib:CMS:DT_8TeV}.
 The here presented analysis aims at achieving an increase in sensitivity towards shorter lifetimes compared to the earlier analyses in a twofold way.
 First, the selection is optimised for the inclusion of very short tracks.
-Second, the inclusion of the variable \dedx is used to increase the search sensitivity compared to \cite{bib:CMS:DT_8TeV}.\\
+Second, the inclusion of the variable \dedx is used to increase the search sensitivity compared to~\cite{bib:CMS:DT_8TeV}.\\
 
-In \cite{bib:CMS:HSCP_8TeV}, a minimum number of eight hits were required for every track, whereas \cite{bib:CMS:DT_8TeV} required a minimum of seven hits.
+In~\cite{bib:CMS:HSCP_8TeV}, a minimum number of eight hits were required for every track, whereas~\cite{bib:CMS:DT_8TeV} required a minimum of seven hits.
 This can be very inefficient for shorter lifetimes, where most of the charginos already decay shortly after the pixel tracker.
 In Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (left), the normalised distribution of the number of measurements (\nhits) of chargino tracks is shown. 
-It can be seen, that \nhits peaks at the minimal possible value needed for track reconstruction of $\nhits=3$ for lower lifetimes.
-%For higher lifetimes ($\ctau=50\cm$) the distribution shifts to higher values with a second peak at $\nhits\sim17$.
-For a lifetime of $\ctau=100\cm$, a second peak at $\sim$17 hits appears corresponding to the number of measurements when crossing all pixel barrel (3) and strip inner and outer barrel (6 from stereo and 8 from normal) layers.
-However, a notable fraction of $\sim$ 40\% of chargino tracks still has a number of measurements of $\nhits<8$. 
-
-It should be also mentioned, that the track reconstruction efficiency is sufficient for short chargino tracks, such that a loosening of the \nhits requirement is expected to be really improving the signal acceptance.
-The track reconstruction efficiency for different chargino decay points is depicted in Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (right).
-For very short tracks ($\nhits=3$) the efficiency is still around 20\%.\\
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis_2/MotivationAndGeneralSearchStrategy/htrackNValid_log_chiTracksnoSelection.pdf}
@@ -181,14 +172,22 @@ For very short tracks ($\nhits=3$) the efficiency is still around 20\%.\\
            More information on the generation of the simulated signal samples can be found in Section~\ref{sec:SignalSamples}.} 
   \label{fig:NHits_2Signal_noSelection_normalized}
 \end{figure}
+It can be seen, that \nhits peaks at the minimal possible value needed for track reconstruction of $\nhits=3$ for lower lifetimes.
+%For higher lifetimes ($\ctau=50\cm$) the distribution shifts to higher values with a second peak at $\nhits\sim17$.
+For a lifetime of $\ctau=100\cm$, a second peak at $\sim$17 hits appears corresponding to the number of measurements when crossing all pixel barrel (3) and strip inner and outer barrel (6 from stereo and 8 from normal) layers.
+However, a notable fraction of $\sim$ 40\% of chargino tracks still has a number of measurements of $\nhits<8$. 
+
+It should be also mentioned, that the track reconstruction efficiency is sufficient for short chargino tracks, such that a loosening of the \nhits requirement is expected to be really improving the signal acceptance.
+The track reconstruction efficiency for different chargino decay points is depicted in Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (right).
+For very short tracks ($\nhits=3$) the efficiency is still around 20\%.
 
 
 
 Additionally, the search for disappearing tracks which targets models with charginos decaying inside the tracker did not make use of the high energy deposition of heavy particles. 
 Although this variable was indeed used in the search for long-lived charged particles, this search was not optimised for intermediate lifetimes (\eg no explicit muon veto on the selected tracks was required). 
-Thus, it shows less sensitivity compared to the disappearing track search in the lifetime region between $35\,\text{cm} \lesssim c\tau \lesssim 100\,\text{cm}$ (see Fig.~\ref{fig:pMSSMplot}).\\
+Thus, it shows less sensitivity compared to the disappearing track search in the lifetime region between $10\,\text{cm} \lesssim c\tau \lesssim 100\,\text{cm}$ (see Fig.~\ref{fig:pMSSMplot}).\\
 
-To conclude, the general search strategy of the here presented analysis is to unite the strategies of \cite{bib:CMS:HSCP_8TeV} and \cite{bib:CMS:DT_8TeV} and to lower the strong selection on the number of hits in these analyses in order to get an optimised selection for lifetimes around $10\,\text{cm} \lesssim c\tau \lesssim  40\,\text{cm}$.
+To conclude, the general search strategy of the here presented analysis is to unite the strategies of~\cite{bib:CMS:HSCP_8TeV} and~\cite{bib:CMS:DT_8TeV} and to lower the strong selection on the number of hits in these analyses in order to get an optimised selection for lifetimes around $1\,\text{cm} \lesssim c\tau \lesssim  30\,\text{cm}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

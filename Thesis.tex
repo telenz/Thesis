@@ -83,6 +83,7 @@ a4paper,
 \usepackage{amsmath,amssymb}
 \usepackage{slashed}
 \usepackage{bbm}
+\usepackage{amsfonts}
 % \usepackage{subfigure}
 % \usepackage{subfig}
 %\usepackage{hepnames}
@@ -102,7 +103,9 @@ a4paper,
 \author{Teresa Lenz}
 
 % pdflatex packages
-\usepackage[pdftex]{hyperref}
+%\usepackage[pdftex]{hyperref}
+\usepackage[hypertexnames=false]{hyperref}
+\usepackage{bookmark}
 % to get hyperrefs right
 % \hypersetup{
 %         %bookmarks=false,         % show bookmarks bar?
@@ -276,7 +279,7 @@ a4paper,
 % \quad 
 % 
 % \newpage
-% \tableofcontents \cleardoublepage
+\tableofcontents \cleardoublepage
 
 
 \pagenumbering{arabic}		
@@ -312,6 +315,7 @@ a4paper,
 % \part{Summary} \label{part:Conclusion}
 % \input{summary.tex}
 
+\bookmarksetup{startatroot}
 \cleardoublepage 
 \appendix
 \addtocontents{toc}{\protect\vskip40pt}

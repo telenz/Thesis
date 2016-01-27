@@ -42,7 +42,7 @@ This can be seen in Fig.~\ref{fig:NValidFakes}, where the normalised distributio
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/NValidForFakes_chiTracksfullSelectionNoQCDCutsNoTrigger.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis_2/Background/NValidForFakes_chiTracksfullSelectionNoQCDCutsNoTrigger.pdf}
   \end{tabular}
   \caption{Normalised distribution of the number of hits for fake tracks in the simulated \WJets sample. To increase the statistical precision, only the candidate track selection from Table~\ref{tab:SummaryCuts} is applied.}
   \label{fig:NValidFakes}
@@ -78,8 +78,9 @@ Since the candidate track selection requires a track with a $\pt>20\gev$ that is
 Thus, applying the track-based signal candidate selection on \Zlep events selects fake tracks with high purity.
 
 The selection of two well reconstructed muons and electrons is done with the single-muon and single-electron datasets listed in Table~\ref{tab:ElectronMuonCRDatasets}.
+These datasets contain at least one muon or one electron in every event.
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!t]
+\begin{table}[!b]
 \centering
 \caption{Datasets used for the determination of the fake rate.}
 \label{tab:ElectronMuonCRDatasets}
@@ -99,10 +100,10 @@ Dataset  & Integrated luminosity [\fbinv]   \\
 /SingleElectron/Run2012C-22Jan2013-v1/AOD  &  7.050 \\
 /SingleElectron/Run2012D-22Jan2013-v1/AOD  &  7.368 \\
 \bottomrule
-\multicolumn{2}{c}{} \\
+%\multicolumn{2}{c}{}
 \end{tabular}}
 \end{table}
-These datasets contain at least one muon or one electron in every event.
+
 For the $Z\rightarrow\mu\bar{\mu}$ selection, an event is required to have two muons with $\pt>25\gev$ and $|\eta|<2.4$.
 To suppress background from cosmic muons, the distance from the primary vertex must be less than $|d0|<0.2\cm$ in radial and $|dz|<0.5\cm$ in longitudinal direction.
 In order to suppress background arising from jets that fake muons, various quality criteria are applied: it is required that there is at least one hit in the muon detector that is considered in the global muon fit, 
@@ -111,8 +112,8 @@ Concerning the track of the muon in the silicon tracker system, at least six hit
 An isolation criterion is applied that requires the sum of transverse momenta of all particle-flow particles in a cone of $\Delta R<0.4$ around the muon to be less than 12\% of the muon \pt.
 Finally, the muons are required to be opposite in charge and to have an invariant mass between 80 to 100\gev.
 The $Z\rightarrow\mu\bar{\mu}\,+\,\text{fake track}$ selection is summarised in Table~\ref{tab:FakeMuonSample}.
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[!t]
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!b]
 \centering
 \caption{Event selection cuts for the $Z\rightarrow\mu\bar{\mu}\,+\,\text{fake}$ control sample to estimate the inclusive fake background.}
 \label{tab:FakeMuonSample}
@@ -140,7 +141,7 @@ The $Z\rightarrow\mu\bar{\mu}\,+\,\text{fake track}$ selection is summarised in 
                                                               &  Lepton/jet veto        \\   
                                                               &  Isolation selection    \\  
 \bottomrule
-\multicolumn{3}{c}{} \\
+%\multicolumn{3}{c}{} 
 \end{tabular}}
 \end{table}
 
@@ -150,9 +151,9 @@ An isolation requirement similar to the muon isolation criterion is applied with
 The electron identification is further based on a multivariate technique developed within~\cite{bib:CMS:ElectronMVA} that exploits electron characteristics concerning the track quality, the ECAL cluster shapes, and the combination 
 of the measurements in the tracker and in the ECAL.
 Again, the two electrons must be opposite in charge and their invariant mass must be between $80-100\gev$.
-A summary of the $Z\rightarrow e\bar{e}\,+\,\text{fake track}$ event selection can be found in Table~\ref{tab:FakeElectronSample}.\\
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[!t]
+A summary of the $Z\rightarrow e\bar{e}\,+\,\text{fake track}$ event selection can be found in Table~\ref{tab:FakeElectronSample}.
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[!b]
 \centering
 \caption{Event selection cuts for the $Z\rightarrow e\bar{e}\,+\,\text{fake}$ control sample to estimate the inclusive fake background.}
 \label{tab:FakeElectronSample}
@@ -176,9 +177,10 @@ A summary of the $Z\rightarrow e\bar{e}\,+\,\text{fake track}$ event selection c
                                                               &  Lepton/jet veto        \\   
                                                               &  Isolation selection    \\  
 \bottomrule
-\multicolumn{3}{c}{} \\
+%\multicolumn{3}{c}{} 
 \end{tabular}}
 \end{table}  
+
 In Fig.~\ref{fig:Zpeak}, the invariant mass distribution $M_{\text{inv}}$ is shown for $Z\rightarrow \mu \bar{\mu}$ and $Z\rightarrow e \bar{e}$ events in simulation and data after the event-based selections described above (Tables~\ref{tab:FakeElectronSample} and~\ref{tab:FakeMuonSample}).
 \begin{figure}[!tb]
   \centering 
@@ -186,7 +188,7 @@ In Fig.~\ref{fig:Zpeak}, the invariant mass distribution $M_{\text{inv}}$ is sho
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hMinvMuons_lin_chiTracksnoSelectionTightMuons.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hMinvElectrons_lin_chiTracksnoSelectionTightElectrons.pdf}
   \end{tabular}
-  \caption{The invariant mass of the two selected muons (left) and the two selected electrons (right) after the event-based selection from Tables~\ref{tab:FakeElectronSample} and~\ref{tab:FakeMuonSample}, respectevily.}
+  \caption{The invariant mass of the two selected muons (left) and the two selected electrons (right) after the event-based selection from Tables~\ref{tab:FakeElectronSample} and~\ref{tab:FakeMuonSample}, respectively.}
   \label{fig:Zpeak}
 \end{figure}
 
@@ -196,6 +198,7 @@ Whether this is indeed the case can be tested on simulated \Zlep events.
 As can be seen in Fig.~\ref{fig:BkgComposition}, a reasonable purity in fake tracks can be achieved by applying the candidate track selection on top of the \Zlep selection.
 \begin{figure}[!tb]
   \centering 
+  \vspace{20pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/ParticleCompositionInFakeCS_Mu.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/ParticleCompositionInFakeCS_Ele.pdf}
@@ -221,7 +224,7 @@ The averaged fake rate is thus $\left( 6.86 \pm 0.25 \right) \cdot 10^{-5}$.
 This is not the final result as the optimisation in \pt will add an additional \pt selection cut to the candidate track selection.
 
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!t]
+\begin{table}[!b]
 \centering
 \caption{Results of $N_{Z\rightarrow ll}^{\text{cand trk selection}}$, $N_{Z\rightarrow ll}$ and \fakerate for the candidate track selection given in Table~\ref{tab:SummaryCuts}.}
 \label{tab:FakeRateResults}
@@ -234,7 +237,7 @@ Channel                     & $N_{Z\rightarrow ll}^{\text{cand trk selection}}$ 
 $Z\rightarrow \mu\bar{\mu}$ & 403 & $6.17 \cdot 10^6$  & (6.53 $\pm$ 0.33) $\cdot 10^{-5}$\\
 $Z\rightarrow e\bar{e}$     & 369 & $5.08 \cdot 10^6$  & (7.26 $\pm$ 0.38) $\cdot 10^{-5}$\\
 \bottomrule
-\multicolumn{4}{c}{} \\
+%\multicolumn{4}{c}{}
 \end{tabular}}
 \end{table}  
 
@@ -272,7 +275,7 @@ To enrich fake tracks, it is possible to invert the selection cuts on the number
 Figure~\ref{fig:NMissInnerAndMiddle} shows the distribution of the number of missing inner plus missing middle hits for fake and leptonic tracks in simulated \WJets events.
 It can be seen that this selection is enriched by fakes.
 The resulting purity of fakes in \fakeCR is about 98\% (see Fig.~\ref{fig:IasSRCRFakes}). 
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/NLostInnerPlusMiddleForAllBkg_chiTracksQCDsupressionTrigger.pdf}
@@ -287,7 +290,7 @@ As the exact definition of the signal region will be addressed during optimisati
 The comparison of the \ias shape of fake tracks can only be done with simulated events.
 Thus, simulated \WJets events are used to select fake tracks in both regions.
 A comparison of the shape for the candidate track selection and the \fakeCR is shown in Fig.~\ref{fig:IasSRCRFakes}.
-\begin{figure}[!h]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hASmi_fakes_ECalaoLe5_trackPtGt20.pdf}
@@ -327,7 +330,7 @@ Alternatively, there is also the possibility that an electron track is pointing 
 This possibility can be seen in the single event in the \WJets sample that pass the full signal candidate selection and where the candidate track can be matched to a generator-level electron. 
 %In the simulated \WJets sample only one simulated event remains that passes all signal candidate selection criteria and for which the candidate track can be matched to a generator-level electron.
 This event is visualised in Fig.~\ref{fig:LostElectron} (left). 
-\begin{figure}[!p]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \begin{minipage}[c]{0.49\textwidth}
@@ -462,7 +465,7 @@ electrons                                                      &       $1.25^{+1
 muons                                                          &       $2.17^{+1.65}_{-0.93} \cdot 10^{-4}$        & 76664                     & $16.64^{+12.64}_{-7.12}$    \\
 taus                                                           &       $< 2.13 \cdot 10^{-2}$                  & 445                      &  $<9.46$ \\
 \bottomrule
-\multicolumn{4}{c}{} \\
+%\multicolumn{4}{c}{}
 \end{tabular}}
 \end{table}
 
@@ -537,7 +540,7 @@ Electrons                                                      &       $14.67^{+
 Muons                                                          &       $7.99^{ + 10.90}_{-5.00}$            &            \\
 Taus                                                           &       $109.04^{+21.18}_{-16.58}$           &          \\
 \bottomrule
-\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{}
 \end{tabular}
 \hspace{10pt}
 \begin{tabular}{l|c |c}
@@ -553,7 +556,7 @@ Taus                                                           &       $0.0^{+ 0
 
 
 \bottomrule
-\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{}
 \end{tabular}}
 \end{table}
 
@@ -568,7 +571,7 @@ Thus, this method is exposed to differences in the \ias shape of the two \ecalo 
 In Fig.~\ref{fig:IasValidate}, a comparison between the \ias shape of fake tracks with low calorimeter energy deposits and high calorimeter energy deposits in the fake enriched control region is depicted.
 It shows, that fakes with higher associated calorimeter energy have typically lower \ias values. 
 This can thus lead to an overprediction of the fake contribution in the high \ecalo region.
-\begin{figure}[!h]
+\begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/IasForFakes_chiTrackspreselectionNoTrigger.pdf}
@@ -584,7 +587,7 @@ Again, the predicted background events is in agreement with the number of observ
 
 
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!b]
+\begin{table}[!t]
 \centering
 \caption{Validation test of fake and leptonic background estimation methods. Left: $\ecalo>10\gev$ . Right: $\ecalo>10\gev$ and $\ias>0.2$. Only statistical uncertainties are included.}
 \label{tab:FakeClosure}
@@ -601,7 +604,7 @@ Muons                                                          &     $8.04^{ + 1
 Taus                                                           &     $173.06^{+ 24.62}_{- 20.23}$            &          \\
 Fakes                                                          &     $67.34^{+11.61}_{-11.61}$              &          \\
 \bottomrule
-\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{}
 \end{tabular}
 \hspace{10pt}
 \begin{tabular}{l|c |c}
@@ -616,7 +619,7 @@ Muons                                                          &       $0.00^{ +
 Taus                                                           &       $2.33^{ + 0.74}_{- 0.55}$            &          \\
 Fakes                                                          &       $11.61^{+2.78}_{-2.78}$            &          \\
 \bottomrule
-\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{} 
 \end{tabular}}
 \end{table}
 
@@ -626,7 +629,7 @@ All validation tests show good agreement.
 Results of a variety of validation tests with different \pt and \ias selections can be found in Appendix~\ref{app:Validation}.
 
 Still, systematic uncertainties need to be estimated.
-The sources of systematic uncertainties and how they are estimated will be explained in the following section.
+The sources of systematic uncertainties and how they are estimated will be explained in the following section.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -656,6 +659,9 @@ In order to enhance the statistical precision of the estimation, the selection r
 These variables are not expected to be correlated with the fake rate and thus should not affect it.
 That this is indeed the case, can be seen in Table~\ref{tab:FakeRateUnc}.
 
+The systematic uncertainty is estimated as the largest difference from one of the ratio $\fakerate^{\WJets}$/$\fakerate^{\Zlep}$ and its statistical uncertainty.
+For the candidate track selection, this is estimated to $\fakerate^{\WJets}/\fakerate^{\Zlep}$ $ =  0.96 \pm 0.16 $ leading to a systematic uncertainty on the fake rate of 20\%.
+
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
@@ -675,8 +681,6 @@ $\met>0\gev$, $\ptfirstjet>70\gev$ , no QCD cuts               &       $\left( 3
 \end{tabular}}
 \end{table}
 
-The systematic uncertainty is estimated as the largest difference from one of the ratio $\fakerate^{\WJets}$/$\fakerate^{\Zlep}$ and its statistical uncertainty.
-For the candidate track selection, this is estimated to $\fakerate^{\WJets}/\fakerate^{\Zlep}$ $ =  0.96 \pm 0.16 $ leading to a systematic uncertainty on the fake rate of 20\%.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Uncertainty on the dE/dx shape of fake tracks}
 \label{sec:FakeIasUncertainty}
@@ -737,6 +741,7 @@ This results for the signal candidate selection in an uncertainty of 69\% for th
 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
+\vspace{10pt}
 \centering
 \caption{Event yields in the tag-and-probe signal region and control region with the resulting scale factors in simulation and data.}
 \label{tab:ScaleFactorUncertainty}
@@ -754,7 +759,7 @@ This results for the signal candidate selection in an uncertainty of 69\% for th
                             &$N_{\text{CR, }\text{lep}_i\text{ veto inverted}}^{\text{T\&P}}$       &  $\left(4.284 \pm 0.003\right) \cdot 10^6$        &   $\left(4.112 \pm 0.003\right) \cdot 10^6 $   & $30.9 \pm 7.8 $                               \\
                             &$\rho^{\text{lep}_i}$                                       & $\left(3.59 \pm 0.36 \right) \cdot 10^{-5}$        &   $\left( 3.04 \pm 0.39 \right) \cdot 10^{-5}$ & $\left( 2.95 \pm 1.49 \right) \cdot 10^{-1}$   \\
 \bottomrule
-\multicolumn{5}{c}{} \\
+%\multicolumn{5}{c}{} 
 \end{tabular}}
 \end{table}
 
@@ -767,6 +772,7 @@ The uncertainty on lepton \ias shape is estimated by a comparison of the \ias sh
 Figure~\ref{fig:LeptonIasUnc} shows the leptonic \ias distributions for all three lepton types in the lepton veto inverted control region in data and simulation.
 The largest difference from one  of the ratio (and its statistical uncertainty) of the number of events in the control region in data and simulation is taken as systematic uncertainty.
 This leads for example to uncertainties between $37\%-81\%$ for the signal candidate selection plus a selection requirement of $\ias>0.2$.
+
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
