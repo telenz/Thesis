@@ -555,27 +555,32 @@ The underlying mechanism of this mass-degeneracy in the MSSM will be addressed i
 
 In the MSSM, the lightest chargino (\chipm) and the lightest neutralino (\chiO) can be almost mass-degenerate, when the wino mass parameter ($M_2$) is smaller than the bino ($M_1$) and higgsino ($\mu$) mass parameters.
 This can be seen from the chargino and neutralino mass matrices.
-The chargino mass matrix in the basis $\Psi^+_i= \left(-i \tilde{W}^+,\tilde{h}_u^+  \right)$ and $\Psi^-_i= \left(-i \tilde{W}^-,\tilde{h}_d^-  \right)$ is given by 
+The chargino mass matrix in the basis $\Psi^+_i= \left(-i \tilde{W}^+,\tilde{h}_u^+  \right)$ and \mbox{$\Psi^-_i= \left(-i \tilde{W}^-,\tilde{h}_d^-  \right)$} is given by 
 \begin{flalign}
-&\mathcal{M}_{\Psi^{\pm}} = 
+\label{eq:CharginoMassMatrix}
+\mathcal{M}_{\Psi^{\pm}} = 
 \begin{pmatrix} 
 M_2    & g v_d                    \\
-g v_u  & \lambda v_S                  
-\end{pmatrix}.&
+g v_u  & \mu                  
+\end{pmatrix}.
 \end{flalign} 
-The mass eigenstates can be deduced with the help of orthoganal matrices $V$ and $U$, $\chi^+_i=V_{ij}\Psi^+_j$, $\chi^-_i = U_{ij} \Psi^-_j$.
-The neutralino mass matrix in the basis  $\Psi_i^0= \left(-i\tilde{B},-i\tilde{W}^0,\tilde{h}_u^0,\tilde{h}_d^0, \tilde{s}^0\right)$ is
+The mass eigenstates can be deduced with the help of orthogonal matrices $V$ and $U$, \mbox{$\chi^+_i=V_{ij}\Psi^+_j$} and \mbox{$\chi^-_i = U_{ij} \Psi^-_j$}.
+
+The neutralino mass matrix in the basis  $\Psi_i^0= \left(-i\tilde{B},-i\tilde{W}^0,\tilde{h}_u^0,\tilde{h}_d^0\right)$ is
 \begin{flalign}
-&\mathcal{M}_{\Psi^0} = 
+\label{eq:NeutralinoMassMatrix}
+\mathcal{M}_{\Psi^0} = 
 \begin{pmatrix} 
 M_1                     & 0                       & \frac{g'v_u}{\sqrt{2}}  & -\frac{g'v_d}{\sqrt{2}}  \\
 0                       & M_2                     & -\frac{g v_u}{\sqrt{2}} & \frac{g v_d}{\sqrt{2}}   \\
 \frac{g'v_u}{\sqrt{2}}  & -\frac{g v_u}{\sqrt{2}} & 0                       & -\mu                     \\
 -\frac{g'v_d}{\sqrt{2}} & \frac{g v_d}{\sqrt{2}}  & -\mu                    &  0                      
-\end{pmatrix}.&
+\end{pmatrix}.
 \end{flalign}
-In first order approximation - neglecting the off-diagonal elements which are of electroweak strength - the lightest chargino and the lightest neutralino are both wino-like for $M_2 < M_1,\mu$ with a mass of $m_\chi = M_2$. 
-Thus, the mass difference between \chipm and \chiO is only determined by higher order corrections (radiative corrections as well as tree-level mixing with other states)loop contributions, making the mass splitting naturally very small.
+The mass matrix can be diagonalised with an orthogonal matrix $N$ leading to four different mass eigenstates of $\tilde{\chi}^0_i = N_{ij} \Psi_j^0  $.
+
+It can be easily seen from the mass matrices~\eqref{eq:CharginoMassMatrix} and~\eqref{eq:NeutralinoMassMatrix}, that in first order approximation - neglecting the off-diagonal elements which are of electroweak strength - the lightest chargino and the lightest neutralino are both wino-like for $M_2 < M_1,\mu$ with a mass of $m_\chi \simeq M_2$. 
+Thus, the mass difference between \chipm and \chiO is only determined by higher order corrections: radiative corrections as well as tree-level mixing with other states.\\
 
 %The following expressions are approximate neutralino and chargino mass terms for $M_2 \mu > m_W^2 \sin 2\beta$ and $|M_2 \pm \mu|$, $|M_1 \pm \mu| \gg m_Z$ (taken from~\cite{bib:PAS:CMS:pMSSM_2013})
 %\begin{align}
@@ -597,8 +602,15 @@ Thus, the mass difference between \chipm and \chiO is only determined by higher 
 %It is obvious from Eqs.~\ref{eq:gaugino_masses} and~\ref{eq:chargino_masses}, that if $M_2 < M_1,\, |\mu|$, the lightest neutralino state is wino-like and is fully mass-degenerate on tree level with the lightest chargino.
 
 
-Furthermore, recent analyses of the pMSSM parameter space~\cite{bib:pMSSMScan_2013,bib:pMSSMScan_2012} show, that almost pure wino-like neutralinos are very frequent for flat scans in the pMSSM parameter space and that they mostly come along with wino-like charginos being the next-to leading lightest supersymmetric particle (NLSP).
-For these scenarios, their mass splitting is typically of the order of $\sim160\mev$~\cite{bib:pMSSMScan_2013}.
+Furthermore, recent analyses of the pMSSM parameter space~\cite{bib:pMSSMScan_2013,bib:pMSSMScan_2012} show, that models with almost pure wino-like neutralinos as LSPs mostly come along with wino-like charginos being the next-to lightest supersymmetric particle (NLSP).
+In~\cite{bib:pMSSMScan_2013}, a parameter scan in the pMSSM parameter space is performed, flat in the 19 different SUSY parameters.
+Afterwards, the generated 3 million pMSSM models are confronted with theoretical constraints as well as experimental observations.
+Theoretical constraints are \eg requiring stable vacua and no colour- or charge breaking minima.
+Furthermore, the agreement with precision electroweak data, heavy flavour physics and collider results from LEP, Tevatron and LHC is required.
+The accordance with relic density data is only implemented as an upper bound.
+Phenomenological MSSM models surviving these constraints and which have a wino-like neutralino as lightest supersymmetric particle do also contain frequently a metastable chargino.
+In a fraction of $\sim 25\%$ of these models, the metastable chargino decays inside the tracker, calorimeter or muon chamber.
+Furthermore, in these scenarios, the mass splitting between chargino and neutralino is typically of the order of $\sim160\mev$~\cite{bib:pMSSMScan_2013}.
 
 
 
@@ -615,7 +627,7 @@ These searches were looking for events with a high-energetic initial state radia
 The excluded parameter regions by these searches can be found in~\cite{bib:LEP:SUSY_results} and are depicted in Fig.~\ref{fig:LEP}.
 The searches were interpreted for $M_1$ and $M_2$ almost degenerate and with a large unified scalar mass $m_0$ leading to sneutrino masses larger than 500\gev. 
 Charginos are excluded up to a mass of 92.4\gev~\cite{bib:LEP:SUSY_results}.
-\begin{figure}[!t]
+\begin{figure}[!h]
   \centering
       \includegraphics[width=0.45\textwidth]{figures/theory/mass_adlo_gaug_1.pdf}
   \caption{Observed and expected exclusion limits in the $m_{\chipm}-\Delta m \left( \chipm, \chiO \right)$ plane for almost degenerate $M_1$ and $M_2$ and a large unified scalar mass $m_0$. Taken from~\cite{bib:LEP:SUSY_results}.}  
@@ -628,7 +640,7 @@ Furthermore, a search for metastable particles with high ionisation losses was p
 These searches were interpreted within an anomaly-mediated supersymmetry breaking model~\cite{bib:Theory_AMSB_1998} with $\tan\beta=5$ and $\mu<0$.
 The excluded parameter space by these searches is shown in Fig.~\ref{fig:ATLAS}.
 Models with charginos down to lifetimes of 0.06\ns could be excluded.
-\begin{figure}[!b]
+\begin{figure}[!h]
   \centering
       \includegraphics[width=0.49\textwidth]{figures/theory/ATLAS_SUSY_LLPChargino.pdf}
   \caption{Excluded parameter space in the $m_{\chipm}-\tau_{\chipm}$ plane for an AMSB model with $\tan\beta=5$ and $\mu>0$. Only chargino pair production is taken into account. The area below the curves is excluded. Taken from~\cite{bib:ATLAS_SUMMARYPLOTS}.}  

@@ -1,87 +1,242 @@
 \providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
 
-\bibitem{bib:Tevatron:SUSY_results}
-{ CDF, D0} Collaboration, T.~Adams, ``{SUSY Searches at the Tevatron}'', in
-  {\em {Hadron collider physics. Proceedings, 19th Symposium, HCP2008, Galena,
-  USA, May 27-31, 2008}}.
-\newblock 2008.
+\bibitem{bib:Theory:GFitter}
+M.~Baak, M.~Goebel, J.~Haller{ et~al.}, ``{The Electroweak Fit of the Standard
+  Model after the Discovery of a New Boson at the LHC}'', {\em Eur. Phys. J.}
+  {\bf C72} (2012) 2205, \href{http://www.arXiv.org/abs/1209.2716}{{\tt
+  arXiv:1209.2716}}.
+\href{http://dx.doi.org/10.1140/epjc/s10052-012-2205-9}{{\tt
+  doi:10.1140/epjc/s10052-012-2205-9}}.
+%%CITATION = ARXIV:1209.2716;%%.
+
+\bibitem{bib:Theory:CMS:HiggsObservation}
+{ CMS} Collaboration, ``{Observation of a new boson at a mass of 125 GeV with
+  the CMS experiment at the LHC}'', {\em Phys. Lett.} {\bf B716} (2012) 30--61,
+  \href{http://www.arXiv.org/abs/1207.7235}{{\tt arXiv:1207.7235}}.
+\href{http://dx.doi.org/10.1016/j.physletb.2012.08.021}{{\tt
+  doi:10.1016/j.physletb.2012.08.021}}.
+%%CITATION = ARXIV:1207.7235;%%.
+
+\bibitem{bib:Theory:Atlas:HiggsObservation}
+{ ATLAS} Collaboration, ``{Observation of a new particle in the search for the
+  Standard Model Higgs boson with the ATLAS detector at the LHC}'', {\em Phys.
+  Lett.} {\bf B716} (2012) 1--29,
+  \href{http://www.arXiv.org/abs/1207.7214}{{\tt arXiv:1207.7214}}.
+\href{http://dx.doi.org/10.1016/j.physletb.2012.08.020}{{\tt
+  doi:10.1016/j.physletb.2012.08.020}}.
+%%CITATION = ARXIV:1207.7214;%%.
+
+\bibitem{bib:SM_book_Peskin}
+{Peskin, Michael E. and Schroeder, Daniel V.}, ``{An Introduction To Quantum
+  Field Theory}''.
+\newblock Westview Press, {1995}.
+
+\bibitem{bib:SM_book_Ryder}
+{Ryder, L. H.}, ``{QUANTUM FIELD THEORY}''.
+\newblock Cambridge University Press,
+1996.
 \newblock
-\href{http://www.arXiv.org/abs/0808.0728}{{\tt arXiv:0808.0728}}.
+%%CITATION = ISBN-9780521237642;%%.
+
+\bibitem{bib:SM_book_Griffiths}
+D.~Griffiths, ``{Introduction to Elementary Particles}''.
+\newblock Wiley,
+2008.
 \newblock
-%%CITATION = ARXIV:0808.0728;%%.
+%%CITATION = ISBN-9783527406012;%%.
 
-\bibitem{bib:LEP:SUSY_results}
-{ALEPH, DELPHI, L3 and OPAL Collaborations}, ``Joint SUSY Working Group''.
-  \url{http://lepsusy.web.cern.ch/lepsusy}.
-\newblock LEPSUSYWG (June 2004).
+\bibitem{bib:Higgs_Prediction}
+P.~W. Higgs, ``{Broken symmetries, massless particles and gauge fields}'', {\em
+  Phys. Lett.} {\bf 12} (1964) 132--133.
+\href{http://dx.doi.org/10.1016/0031-9163(64)91136-9}{{\tt
+  doi:10.1016/0031-9163(64)91136-9}}.
+%%CITATION = PHLTA,12,132;%%.
 
-\bibitem{bib:CMS:RA2_8TeV}
-{ CMS} Collaboration, ``{Search for new physics in the multijet and missing
-  transverse momentum final state in proton-proton collisions at $\sqrt{s}$= 8
-  TeV}'', {\em JHEP} {\bf 06} (2014) 055,
-  \href{http://www.arXiv.org/abs/1402.4770}{{\tt arXiv:1402.4770}}.
-\href{http://dx.doi.org/10.1007/JHEP06(2014)055}{{\tt
-  doi:10.1007/JHEP06(2014)055}}.
-%%CITATION = ARXIV:1402.4770;%%.
+\bibitem{bib:Higgs_Prediction_2}
+P.~W. Higgs, ``{Broken Symmetries and the Masses of Gauge Bosons}'', {\em Phys.
+  Rev. Lett.} {\bf 13} (1964) 508--509.
+\href{http://dx.doi.org/10.1103/PhysRevLett.13.508}{{\tt
+  doi:10.1103/PhysRevLett.13.508}}.
+%%CITATION = PRLTA,13,508;%%.
 
-\bibitem{bib:CMS:MT2_8TeV}
-{ CMS} Collaboration, ``{Searches for Supersymmetry using the M$_{T2}$ Variable
-  in Hadronic Events Produced in pp Collisions at 8 TeV}'', {\em JHEP} {\bf 05}
-  (2015) 078, \href{http://www.arXiv.org/abs/1502.04358}{{\tt
-  arXiv:1502.04358}}.
-\href{http://dx.doi.org/10.1007/JHEP05(2015)078}{{\tt
-  doi:10.1007/JHEP05(2015)078}}.
-%%CITATION = ARXIV:1502.04358;%%.
+\bibitem{bib:HiggsMechanism_Brout_Englert}
+F.~Englert and R.~Brout, ``{Broken Symmetry and the Mass of Gauge Vector
+  Mesons}'', {\em Phys. Rev. Lett.} {\bf 13} (1964) 321--323.
+\href{http://dx.doi.org/10.1103/PhysRevLett.13.321}{{\tt
+  doi:10.1103/PhysRevLett.13.321}}.
+%%CITATION = PRLTA,13,321;%%.
 
-\bibitem{bib:ATLAS:JetPlusMET_8TeV}
-{ ATLAS} Collaboration, ``{Search for squarks and gluinos with the ATLAS
-  detector in final states with jets and missing transverse momentum using
-  $\sqrt{s}=8$ TeV proton--proton collision data}'', {\em JHEP} {\bf 09} (2014)
-  176, \href{http://www.arXiv.org/abs/1405.7875}{{\tt arXiv:1405.7875}}.
-\href{http://dx.doi.org/10.1007/JHEP09(2014)176}{{\tt
-  doi:10.1007/JHEP09(2014)176}}.
-%%CITATION = ARXIV:1405.7875;%%.
+\bibitem{bib:HiggsMechanism_Guralnik_Hagen_Kibble}
+G.~S. Guralnik, C.~R. Hagen, and T.~W.~B. Kibble, ``{Global Conservation Laws
+  and Massless Particles}'', {\em Phys. Rev. Lett.} {\bf 13} (1964) 585--587.
+\href{http://dx.doi.org/10.1103/PhysRevLett.13.585}{{\tt
+  doi:10.1103/PhysRevLett.13.585}}.
+%%CITATION = PRLTA,13,585;%%.
 
-\bibitem{bib:Ibe:DarkMatter_2015}
-M.~Ibe, S.~Matsumoto, S.~Shirai{ et~al.}, ``{Wino Dark Matter in light of the
-  AMS-02 2015 Data}'', {\em Phys. Rev.} {\bf D91} (2015), no.~11, 111701,
-  \href{http://www.arXiv.org/abs/1504.05554}{{\tt arXiv:1504.05554}}.
-\href{http://dx.doi.org/10.1103/PhysRevD.91.111701}{{\tt
-  doi:10.1103/PhysRevD.91.111701}}.
-%%CITATION = ARXIV:1504.05554;%%.
+\bibitem{bib:HiggsMechanism_Higgs_1966}
+P.~W. Higgs, ``{Spontaneous Symmetry Breakdown without Massless Bosons}'', {\em
+  Phys. Rev.} {\bf 145} (1966) 1156--1163.
+\href{http://dx.doi.org/10.1103/PhysRev.145.1156}{{\tt
+  doi:10.1103/PhysRev.145.1156}}.
+%%CITATION = PHRVA,145,1156;%%.
 
-\bibitem{bib:Hisano:DarkMatter_2005}
-J.~Hisano, S.~Matsumoto, M.~M. Nojiri{ et~al.}, ``{Direct detection of the Wino
-  and Higgsino-like neutralino dark matters at one-loop level}'', {\em Phys.
-  Rev.} {\bf D71} (2005) 015007,
-  \href{http://www.arXiv.org/abs/hep-ph/0407168}{{\tt arXiv:hep-ph/0407168}}.
-\href{http://dx.doi.org/10.1103/PhysRevD.71.015007}{{\tt
-  doi:10.1103/PhysRevD.71.015007}}.
-%%CITATION = HEP-PH/0407168;%%.
+\bibitem{bib:HiggsMechanism_Kibble_1967}
+T.~W.~B. Kibble, ``{Symmetry breaking in nonAbelian gauge theories}'', {\em
+  Phys. Rev.} {\bf 155} (1967) 1554--1561.
+\href{http://dx.doi.org/10.1103/PhysRev.155.1554}{{\tt
+  doi:10.1103/PhysRev.155.1554}}.
+%%CITATION = PHRVA,155,1554;%%.
 
-\bibitem{bib:IndirectSearches_Cohen_2013}
-T.~Cohen, M.~Lisanti, A.~Pierce{ et~al.}, ``{Wino Dark Matter Under Siege}'',
-  {\em JCAP} {\bf 1310} (2013) 061,
-  \href{http://www.arXiv.org/abs/1307.4082}{{\tt arXiv:1307.4082}}.
-\href{http://dx.doi.org/10.1088/1475-7516/2013/10/061}{{\tt
-  doi:10.1088/1475-7516/2013/10/061}}.
-%%CITATION = ARXIV:1307.4082;%%.
+\bibitem{bib:HiggsMechanism_Glashow_1961}
+S.~L. Glashow, ``{Partial Symmetries of Weak Interactions}'', {\em Nucl. Phys.}
+  {\bf 22} (1961) 579--588.
+\href{http://dx.doi.org/10.1016/0029-5582(61)90469-2}{{\tt
+  doi:10.1016/0029-5582(61)90469-2}}.
+%%CITATION = NUPHA,22,579;%%.
 
-\bibitem{bib:Moroi:DarkMatter_1999}
-T.~Moroi and L.~Randall, ``{Wino cold dark matter from anomaly mediated SUSY
-  breaking}'', {\em Nucl. Phys.} {\bf B570} (2000) 455--472,
-  \href{http://www.arXiv.org/abs/hep-ph/9906527}{{\tt arXiv:hep-ph/9906527}}.
-\href{http://dx.doi.org/10.1016/S0550-3213(99)00748-8}{{\tt
-  doi:10.1016/S0550-3213(99)00748-8}}.
-%%CITATION = HEP-PH/9906527;%%.
+\bibitem{bib:HiggsMechanism_Weinberg_1967}
+S.~Weinberg, ``{A Model of Leptons}'', {\em Phys. Rev. Lett.} {\bf 19} (1967)
+  1264--1266.
+\href{http://dx.doi.org/10.1103/PhysRevLett.19.1264}{{\tt
+  doi:10.1103/PhysRevLett.19.1264}}.
+%%CITATION = PRLTA,19,1264;%%.
 
-\bibitem{bib:Moroi:DarkMatter_2013}
-T.~Moroi, M.~Nagai, and M.~Takimoto, ``{Non-Thermal Production of Wino Dark
-  Matter via the Decay of Long-Lived Particles}'', {\em JHEP} {\bf 07} (2013)
-  066, \href{http://www.arXiv.org/abs/1303.0948}{{\tt arXiv:1303.0948}}.
-\href{http://dx.doi.org/10.1007/JHEP07(2013)066}{{\tt
-  doi:10.1007/JHEP07(2013)066}}.
-%%CITATION = ARXIV:1303.0948;%%.
+\bibitem{bib:HiggsMechanism_Salam_1968}
+A.~Salam, ``{Weak and Electromagnetic Interactions}'', {\em Conf. Proc.} {\bf
+  C680519} (1968)
+367--377.
+%%CITATION = CONFP,C680519,367;%%.
+
+\bibitem{bib:W_discovery}
+{ UA1} Collaboration, ``{Experimental Observation of Isolated Large Transverse
+  Energy Electrons with Associated Missing Energy at s**(1/2) = 540-GeV}'',
+  {\em Phys. Lett.} {\bf B122} (1983) 103--116. [,611(1983)].
+\href{http://dx.doi.org/10.1016/0370-2693(83)91177-2}{{\tt
+  doi:10.1016/0370-2693(83)91177-2}}.
+%%CITATION = PHLTA,B122,103;%%.
+
+\bibitem{bib:Z_discovery}
+{ UA1} Collaboration, ``{Experimental Observation of Lepton Pairs of Invariant
+  Mass Around 95-GeV/c**2 at the CERN SPS Collider}'', {\em Phys. Lett.} {\bf
+  B126} (1983) 398--410.
+\href{http://dx.doi.org/10.1016/0370-2693(83)90188-0}{{\tt
+  doi:10.1016/0370-2693(83)90188-0}}.
+%%CITATION = PHLTA,B126,398;%%.
+
+\bibitem{bib:PDG_2014}
+{ Particle Data Group} Collaboration, ``{Review of Particle Physics}'', {\em
+  Chin. Phys.} {\bf C38} (2014) 090001.
+\href{http://dx.doi.org/10.1088/1674-1137/38/9/090001}{{\tt
+  doi:10.1088/1674-1137/38/9/090001}}.
+%%CITATION = CHPHD,C38,090001;%%.
+
+\bibitem{bib:HiggsMass}
+{ ATLAS, CMS} Collaboration, ``{Combined Measurement of the Higgs Boson Mass in
+  $pp$ Collisions at $\sqrt{s}=7$ and 8 TeV with the ATLAS and CMS
+  Experiments}'', {\em Phys. Rev. Lett.} {\bf 114} (2015) 191803,
+  \href{http://www.arXiv.org/abs/1503.07589}{{\tt arXiv:1503.07589}}.
+\href{http://dx.doi.org/10.1103/PhysRevLett.114.191803}{{\tt
+  doi:10.1103/PhysRevLett.114.191803}}.
+%%CITATION = ARXIV:1503.07589;%%.
+
+\bibitem{bib:Naturalness_tHooft}
+G.~'t~Hooft, C.~Itzykson, A.~Jaffe{ et~al.}, ``{Recent Developments in Gauge
+  Theories. Proceedings, Nato Advanced Study Institute, Cargese, France, August
+  26 - September 8, 1979}'', {\em NATO Sci. Ser. B} {\bf 59} (1980)
+pp.1--438.
+%%CITATION = INSPIRE-161902;%%.
+
+\bibitem{bib:DM:RotationCurves}
+J.~E. Gunn and B.~A. Peterson, ``{On the Density of Neutral Hydrogen in
+  Intergalactic Space}'', {\em Astrophys. J.} {\bf 142} (1965) 1633.
+\href{http://dx.doi.org/10.1086/148444}{{\tt doi:10.1086/148444}}.
+%%CITATION = ASJOA,142,1633;%%.
+
+\bibitem{bib:Planck_2015}
+{ Planck} Collaboration, ``{Planck 2015 results. XIII. Cosmological
+  parameters}'',
+\href{http://www.arXiv.org/abs/1502.01589}{{\tt arXiv:1502.01589}}.
+%%CITATION = ARXIV:1502.01589;%%.
+
+\bibitem{bib:Golfand_Likhtman_1971}
+{\relax Yu}.~A. Golfand and E.~P. Likhtman, ``{Extension of the Algebra of
+  Poincare Group Generators and Violation of p Invariance}'', {\em JETP Lett.}
+  {\bf 13} (1971) 323--326.
+[Pisma Zh. Eksp. Teor. Fiz.13,452(1971)].
+%%CITATION = JTPLA,13,323;%%.
+
+\bibitem{bib:Haag_1974}
+R.~Haag, J.~T. Lopuszanski, and M.~Sohnius, ``{All Possible Generators of
+  Supersymmetries of the s Matrix}'', {\em Nucl. Phys.} {\bf B88} (1975) 257.
+\href{http://dx.doi.org/10.1016/0550-3213(75)90279-5}{{\tt
+  doi:10.1016/0550-3213(75)90279-5}}.
+%%CITATION = NUPHA,B88,257;%%.
+
+\bibitem{bib:Drees_1996}
+M.~Drees, ``{An Introduction to Supersymmetry}'', in {\em {Current topics in
+  physics. Proceedings, Inauguration Conference of the Asia-Pacific Center for
+  Theoretical Physics (APCTP), Seoul, Korea, June 4-10, 1996. Vol. 1, 2}}.
+\newblock 1996.
+\newblock
+\href{http://www.arXiv.org/abs/hep-ph/9611409}{{\tt arXiv:hep-ph/9611409}}.
+\newblock
+%%CITATION = HEP-PH/9611409;%%.
+
+\bibitem{bib:Aitchison_2005}
+I.~J.~R. Aitchison, ``{Supersymmetry and the MSSM: An Elementary
+  introduction}'',
+\href{http://www.arXiv.org/abs/hep-ph/0505105}{{\tt arXiv:hep-ph/0505105}}.
+%%CITATION = HEP-PH/0505105;%%.
+
+\bibitem{bib:Drees_2004}
+M.~Drees, R.~Godbole, and P.~Roy, ``{Theory and phenomenology of sparticles: An
+  account of four-dimensional N=1 supersymmetry in high energy physics}''.
+\newblock World Scientific,
+2004.
+\newblock
+%%CITATION = INSPIRE-671271;%%.
+
+\bibitem{bib:Unification}
+U.~Amaldi, W.~de~Boer, and H.~Furstenau, ``{Comparison of grand unified
+  theories with electroweak and strong coupling constants measured at LEP}'',
+  {\em Phys. Lett.} {\bf B260} (1991) 447--455.
+\href{http://dx.doi.org/10.1016/0370-2693(91)91641-8}{{\tt
+  doi:10.1016/0370-2693(91)91641-8}}.
+%%CITATION = PHLTA,B260,447;%%.
+
+\bibitem{bib:pMSSM}
+{ MSSM Working Group} Collaboration, A.~Djouadi {et~al.}, ``{The Minimal
+  supersymmetric standard model: Group summary report}'', in {\em {GDR
+  (Groupement De Recherche) - Supersymetrie Montpellier, France, April 15-17,
+  1998}}.
+\newblock 1998.
+\newblock
+\href{http://www.arXiv.org/abs/hep-ph/9901246}{{\tt arXiv:hep-ph/9901246}}.
+\newblock
+%%CITATION = HEP-PH/9901246;%%.
+
+\bibitem{bib:GravityMediation}
+H.~P. Nilles, ``{Supersymmetry, Supergravity and Particle Physics}'', {\em
+  Phys. Rept.} {\bf 110} (1984) 1--162.
+\href{http://dx.doi.org/10.1016/0370-1573(84)90008-5}{{\tt
+  doi:10.1016/0370-1573(84)90008-5}}.
+%%CITATION = PRPLC,110,1;%%.
+
+\bibitem{bib:GaugeMediation}
+G.~F. Giudice and R.~Rattazzi, ``{Theories with gauge mediated supersymmetry
+  breaking}'', {\em Phys. Rept.} {\bf 322} (1999) 419--499,
+  \href{http://www.arXiv.org/abs/hep-ph/9801271}{{\tt arXiv:hep-ph/9801271}}.
+\href{http://dx.doi.org/10.1016/S0370-1573(99)00042-3}{{\tt
+  doi:10.1016/S0370-1573(99)00042-3}}.
+%%CITATION = HEP-PH/9801271;%%.
+
+\bibitem{bib:LonglivedParticles_Overview}
+M.~Fairbairn, A.~C. Kraan, D.~A. Milstead{ et~al.}, ``{Stable massive particles
+  at colliders}'', {\em Phys. Rept.} {\bf 438} (2007) 1--63,
+  \href{http://www.arXiv.org/abs/hep-ph/0611040}{{\tt arXiv:hep-ph/0611040}}.
+\href{http://dx.doi.org/10.1016/j.physrep.2006.10.002}{{\tt
+  doi:10.1016/j.physrep.2006.10.002}}.
+%%CITATION = HEP-PH/0611040;%%.
 
 \bibitem{bib:pMSSMScan_2013}
 M.~W. Cahill-Rowley, J.~L. Hewett, A.~Ismail{ et~al.}, ``{More energy, more
@@ -92,13 +247,96 @@ M.~W. Cahill-Rowley, J.~L. Hewett, A.~Ismail{ et~al.}, ``{More energy, more
   doi:10.1103/PhysRevD.88.035002}}.
 %%CITATION = ARXIV:1211.1981;%%.
 
-\bibitem{bib:CMS:DT_8TeV}
-{ CMS} Collaboration, ``{Search for disappearing tracks in proton-proton
-  collisions at $ \sqrt{s}=8 $ TeV}'', {\em JHEP} {\bf 01} (2015) 096,
-  \href{http://www.arXiv.org/abs/1411.6006}{{\tt arXiv:1411.6006}}.
-\href{http://dx.doi.org/10.1007/JHEP01(2015)096}{{\tt
-  doi:10.1007/JHEP01(2015)096}}.
-%%CITATION = ARXIV:1411.6006;%%.
+\bibitem{bib:pMSSMScan_2012}
+M.~W. Cahill-Rowley, J.~L. Hewett, S.~Hoeche{ et~al.}, ``{The New Look pMSSM
+  with Neutralino and Gravitino LSPs}'', {\em Eur. Phys. J.} {\bf C72} (2012)
+  2156, \href{http://www.arXiv.org/abs/1206.4321}{{\tt arXiv:1206.4321}}.
+\href{http://dx.doi.org/10.1140/epjc/s10052-012-2156-1}{{\tt
+  doi:10.1140/epjc/s10052-012-2156-1}}.
+%%CITATION = ARXIV:1206.4321;%%.
+
+\bibitem{bib:PreviousSearches_ALEPH}
+{ ALEPH} Collaboration, ``{Search for charginos nearly mass degenerate with the
+  lightest neutralino in e+ e- collisions at center-of-mass energies up to
+  209-GeV}'', {\em Phys. Lett.} {\bf B533} (2002) 223--236,
+  \href{http://www.arXiv.org/abs/hep-ex/0203020}{{\tt arXiv:hep-ex/0203020}}.
+\href{http://dx.doi.org/10.1016/S0370-2693(02)01584-8}{{\tt
+  doi:10.1016/S0370-2693(02)01584-8}}.
+%%CITATION = HEP-EX/0203020;%%.
+
+\bibitem{bib:PreviousSearches_OPAL}
+{ OPAL} Collaboration, ``{Search for nearly mass degenerate charginos and
+  neutralinos at LEP}'', {\em Eur. Phys. J.} {\bf C29} (2003) 479--489,
+  \href{http://www.arXiv.org/abs/hep-ex/0210043}{{\tt arXiv:hep-ex/0210043}}.
+\href{http://dx.doi.org/10.1140/epjc/s2003-01237-x}{{\tt
+  doi:10.1140/epjc/s2003-01237-x}}.
+%%CITATION = HEP-EX/0210043;%%.
+
+\bibitem{bib:PreviousSearches_DELPHI_2003}
+{ DELPHI} Collaboration, ``{Searches for supersymmetric particles in e+ e-
+  collisions up to 208-GeV and interpretation of the results within the
+  MSSM}'', {\em Eur. Phys. J.} {\bf C31} (2003) 421--479,
+  \href{http://www.arXiv.org/abs/hep-ex/0311019}{{\tt arXiv:hep-ex/0311019}}.
+\href{http://dx.doi.org/10.1140/epjc/s2003-01355-5}{{\tt
+  doi:10.1140/epjc/s2003-01355-5}}.
+%%CITATION = HEP-EX/0311019;%%.
+
+\bibitem{bib:PreviousSearches_DELPHI}
+{ DELPHI} Collaboration, ``{Search for SUSY in the AMSB scenario with the
+  DELPHI detector}'', {\em Eur. Phys. J.} {\bf C34} (2004) 145--156,
+  \href{http://www.arXiv.org/abs/hep-ex/0403047}{{\tt arXiv:hep-ex/0403047}}.
+\href{http://dx.doi.org/10.1140/epjc/s2004-01715-7}{{\tt
+  doi:10.1140/epjc/s2004-01715-7}}.
+%%CITATION = HEP-EX/0403047;%%.
+
+\bibitem{bib:LEP:SUSY_results}
+{ALEPH, DELPHI, L3 and OPAL Collaborations}, ``Joint SUSY Working Group''.
+  \url{http://lepsusy.web.cern.ch/lepsusy}.
+\newblock LEPSUSYWG (June 2004).
+
+\bibitem{bib:PreviousSearches_Atlas_DT_7TeV}
+{ ATLAS} Collaboration, ``{Search for direct chargino production in
+  anomaly-mediated supersymmetry breaking models based on a disappearing-track
+  signature in $pp$ collisions at $\sqrt{s}=7$ TeV with the ATLAS detector}'',
+  {\em JHEP} {\bf 01} (2013) 131,
+  \href{http://www.arXiv.org/abs/1210.2852}{{\tt arXiv:1210.2852}}.
+\href{http://dx.doi.org/10.1007/JHEP01(2013)131}{{\tt
+  doi:10.1007/JHEP01(2013)131}}.
+%%CITATION = ARXIV:1210.2852;%%.
+
+\bibitem{bib:PreviousSearches_Atlas_DT_8TeV}
+{ ATLAS} Collaboration, ``{Search for charginos nearly mass degenerate with the
+  lightest neutralino based on a disappearing-track signature in pp collisions
+  at $\sqrt(s)$=8  TeV with the ATLAS detector}'', {\em Phys. Rev.} {\bf
+  D88} (2013), no.~11, 112006, \href{http://www.arXiv.org/abs/1310.3675}{{\tt
+  arXiv:1310.3675}}.
+\href{http://dx.doi.org/10.1103/PhysRevD.88.112006}{{\tt
+  doi:10.1103/PhysRevD.88.112006}}.
+%%CITATION = ARXIV:1310.3675;%%.
+
+\bibitem{bib:PreviousSearches_ATLAS_DEDX}
+{ ATLAS} Collaboration, ``{Search for metastable heavy charged particles with
+  large ionisation energy loss in pp collisions at $\sqrt{s} = 8$ TeV using the
+  ATLAS experiment}'', {\em Eur. Phys. J.} {\bf C75} (2015), no.~9, 407,
+  \href{http://www.arXiv.org/abs/1506.05332}{{\tt arXiv:1506.05332}}.
+\href{http://dx.doi.org/10.1140/epjc/s10052-015-3609-0}{{\tt
+  doi:10.1140/epjc/s10052-015-3609-0}}.
+%%CITATION = ARXIV:1506.05332;%%.
+
+\bibitem{bib:Theory_AMSB_1998}
+G.~F. Giudice, M.~A. Luty, H.~Murayama{ et~al.}, ``{Gaugino mass without
+  singlets}'', {\em JHEP} {\bf 12} (1998) 027,
+  \href{http://www.arXiv.org/abs/hep-ph/9810442}{{\tt arXiv:hep-ph/9810442}}.
+\href{http://dx.doi.org/10.1088/1126-6708/1998/12/027}{{\tt
+  doi:10.1088/1126-6708/1998/12/027}}.
+%%CITATION = HEP-PH/9810442;%%.
+
+\bibitem{bib:ATLAS_SUMMARYPLOTS}
+{ATLAS collaboration}, ``Summary plots from the ATLAS Supersymmetry physics
+  group''.
+  \url{https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CombinedSummaryPlots/SUS%
+Y/}.
+\newblock Accessed: 2016-01-17.
 
 \bibitem{bib:CMS:HSCP_8TeV}
 { CMS} Collaboration, ``{Searches for long-lived charged particles in pp
@@ -108,355 +346,80 @@ M.~W. Cahill-Rowley, J.~L. Hewett, A.~Ismail{ et~al.}, ``{More energy, more
   doi:10.1007/JHEP07(2013)122}}.
 %%CITATION = ARXIV:1305.0491;%%.
 
-\bibitem{bib:CMS:pMSSMinterpretation_7TeV_PAS}
-{ CMS} Collaboration, ``{Phenomenological MSSM interpretation of the CMS 2011
-  5fb-1 results}'', {\em CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1552402}{CMS-PAS-SUS-12-030}} (2013).
+\bibitem{bib:CMS:DT_8TeV}
+{ CMS} Collaboration, ``{Search for disappearing tracks in proton-proton
+  collisions at $ \sqrt{s}=8 $ TeV}'', {\em JHEP} {\bf 01} (2015) 096,
+  \href{http://www.arXiv.org/abs/1411.6006}{{\tt arXiv:1411.6006}}.
+\href{http://dx.doi.org/10.1007/JHEP01(2015)096}{{\tt
+  doi:10.1007/JHEP01(2015)096}}.
+%%CITATION = ARXIV:1411.6006;%%.
 
-\bibitem{bib:CMS:HSCPReinterpreation_PAS}
-{ CMS} Collaboration, ``{Reinterpreting the results of the search for
-  long-lived charged particles in the pMSSM and other BSM scenarios}'', {\em
-  CMS Physics Analysis Summary} {\bf
-  \href{http://cdsweb.cern.ch/record/1648902}{CMS-PAS-EXO-13-006}} (2014).
+\bibitem{bib:Fermi}
+{ Fermi-LAT} Collaboration, ``{The Large Area Telescope on the Fermi Gamma-ray
+  Space Telescope Mission}'', {\em Astrophys. J.} {\bf 697} (2009) 1071--1102,
+  \href{http://www.arXiv.org/abs/0902.1089}{{\tt arXiv:0902.1089}}.
+\href{http://dx.doi.org/10.1088/0004-637X/697/2/1071}{{\tt
+  doi:10.1088/0004-637X/697/2/1071}}.
+%%CITATION = ARXIV:0902.1089;%%.
 
-\bibitem{bib:pMSSMplot_source_from_DT}
-{CMS Collaboration}, ``Search for disappearing tracks in proton-proton
-  collisions at $\sqrt{s}$ = 8 TeV'', {\em Public CMS Wiki} (2015).
-  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034}%
-{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsEXO12034, Topic
-  revision: r9}.
+\bibitem{bib:HESS}
+{ HESS} Collaboration, ``{The Status of the H.E.S.S. project}'', {\em New
+  Astron. Rev.} {\bf 48} (2004) 331--337,
+  \href{http://www.arXiv.org/abs/astro-ph/0403052}{{\tt
+  arXiv:astro-ph/0403052}}.
+\href{http://dx.doi.org/10.1016/j.newar.2003.12.004}{{\tt
+  doi:10.1016/j.newar.2003.12.004}}.
+%%CITATION = ASTRO-PH/0403052;%%.
 
-\bibitem{bib:CMS:HSCP_7TeV}
-{ CMS} Collaboration, ``{Search for heavy long-lived charged particles in $pp$
-  collisions at $\sqrt{s}=7$ TeV}'', {\em Phys. Lett.} {\bf B713} (2012)
-  408--433, \href{http://www.arXiv.org/abs/1205.0272}{{\tt arXiv:1205.0272}}.
-\href{http://dx.doi.org/10.1016/j.physletb.2012.06.023}{{\tt
-  doi:10.1016/j.physletb.2012.06.023}}.
-%%CITATION = ARXIV:1205.0272;%%.
+\bibitem{bib:Fermi_DM}
+{ Fermi-LAT} Collaboration, ``{Searching for Dark Matter Annihilation from
+  Milky Way Dwarf Spheroidal Galaxies with Six Years of Fermi Large Area
+  Telescope Data}'', {\em Phys. Rev. Lett.} {\bf 115} (2015), no.~23, 231301,
+  \href{http://www.arXiv.org/abs/1503.02641}{{\tt arXiv:1503.02641}}.
+\href{http://dx.doi.org/10.1103/PhysRevLett.115.231301}{{\tt
+  doi:10.1103/PhysRevLett.115.231301}}.
+%%CITATION = ARXIV:1503.02641;%%.
 
-\bibitem{bib:CMS:tracking_8TeV}
-{ CMS} Collaboration, ``{Description and performance of track and
-  primary-vertex reconstruction with the CMS tracker}'', {\em JINST} {\bf 9}
-  (2014), no.~10, P10009, \href{http://www.arXiv.org/abs/1405.6569}{{\tt
-  arXiv:1405.6569}}.
-\href{http://dx.doi.org/10.1088/1748-0221/9/10/P10009}{{\tt
-  doi:10.1088/1748-0221/9/10/P10009}}.
-%%CITATION = ARXIV:1405.6569;%%.
+\bibitem{bib:HESS_DM}
+{ HESS} Collaboration, ``{Search for photon line-like signatures from Dark
+  Matter annihilations with H.E.S.S.}'', {\em Phys. Rev. Lett.} {\bf 110}
+  (2013) 041301, \href{http://www.arXiv.org/abs/1301.1173}{{\tt
+  arXiv:1301.1173}}.
+\href{http://dx.doi.org/10.1103/PhysRevLett.110.041301}{{\tt
+  doi:10.1103/PhysRevLett.110.041301}}.
+%%CITATION = ARXIV:1301.1173;%%.
 
-\bibitem{bib:Bethe_1930}
-H.~Bethe, ``{Theory of the Passage of Fast Corpuscular Rays Through Matter}'',
-  {\em Annalen Phys.} {\bf 5} (1930) 325--400. [Annalen Phys.397,325(1930)].
-\href{http://dx.doi.org/10.1002/andp.19303970303}{{\tt
-  doi:10.1002/andp.19303970303}}.
-%%CITATION = ANPYA,5,325;%%.
+\bibitem{bib:IndirectSearches_Fan_2013}
+J.~Fan and M.~Reece, ``{In Wino Veritas? Indirect Searches Shed Light on
+  Neutralino Dark Matter}'', {\em JHEP} {\bf 10} (2013) 124,
+  \href{http://www.arXiv.org/abs/1307.4400}{{\tt arXiv:1307.4400}}.
+\href{http://dx.doi.org/10.1007/JHEP10(2013)124}{{\tt
+  doi:10.1007/JHEP10(2013)124}}.
+%%CITATION = ARXIV:1307.4400;%%.
 
-\bibitem{bib:NIST}
-``National Institute of Standards and Technology''.
-  \url{http://physics.nist.gov/cgi-bin/Star/compos.pl?mode=text&matno=014}.
-\newblock Accessed: 2015-10-21.
+\bibitem{bib:IndirectSearches_Cohen_2013}
+T.~Cohen, M.~Lisanti, A.~Pierce{ et~al.}, ``{Wino Dark Matter Under Siege}'',
+  {\em JCAP} {\bf 1310} (2013) 061,
+  \href{http://www.arXiv.org/abs/1307.4082}{{\tt arXiv:1307.4082}}.
+\href{http://dx.doi.org/10.1088/1475-7516/2013/10/061}{{\tt
+  doi:10.1088/1475-7516/2013/10/061}}.
+%%CITATION = ARXIV:1307.4082;%%.
 
-\bibitem{bib:PDG_2014}
-{ Particle Data Group} Collaboration, ``{Review of Particle Physics}'', {\em
-  Chin. Phys.} {\bf C38} (2014) 090001.
-\href{http://dx.doi.org/10.1088/1674-1137/38/9/090001}{{\tt
-  doi:10.1088/1674-1137/38/9/090001}}.
-%%CITATION = CHPHD,C38,090001;%%.
+\bibitem{bib:IndirectSearches_Hryczuk_2014}
+A.~Hryczuk, I.~Cholis, R.~Iengo{ et~al.}, ``{Indirect Detection Analysis: Wino
+  Dark Matter Case Study}'', {\em JCAP} {\bf 1407} (2014) 031,
+  \href{http://www.arXiv.org/abs/1401.6212}{{\tt arXiv:1401.6212}}.
+\href{http://dx.doi.org/10.1088/1475-7516/2014/07/031}{{\tt
+  doi:10.1088/1475-7516/2014/07/031}}.
+%%CITATION = ARXIV:1401.6212;%%.
 
-\bibitem{bib:Landau_1944}
-L.~Landau, ``{On the energy loss of fast particles by ionization}'', {\em J.
-  Phys.(USSR)} {\bf 8} (1944)
-201--205.
-%%CITATION = JOPYA,8,201;%%.
-
-\bibitem{bib:Bichsel:MPV_1988}
-H.~Bichsel, ``{Straggling in Thin Silicon Detectors}'', {\em Rev. Mod. Phys.}
-  {\bf 60} (1988) 663--699.
-\href{http://dx.doi.org/10.1103/RevModPhys.60.663}{{\tt
-  doi:10.1103/RevModPhys.60.663}}.
-%%CITATION = RMPHA,60,663;%%.
-
-\bibitem{bib:Quertenmont_2010}
-L.~Quertenmont, ``{Search for Heavy Stable Charged Particles with the CMS
-  detector at the LHC}''.
-\newblock PhD thesis, Louvain, U., 2010.
-\newblock
-\url{https://inspirehep.net/record/1088192/files/openfile.pdf}.
-%%CITATION = CERN-THESIS-2010-236;%%.
-
-\bibitem{bib:Danek}
-D.~Kotlinski. personal communication.
-
-\bibitem{bib:Anderson:CramerVonMises_1962}
-T.~W. Anderson, ``On the Distribution of the Two-Sample Cramér-von Mises
-  Criterion'', {\em The Annals of Mathematical Statistics} {\bf 33} (1962),
-  no.~3, pp. 1148--1159.
-
-\bibitem{bib:James:StaticticalMethods_2006}
-F.~James, ``{Statistical methods in experimental physics}''.
-\newblock
-2006.
-\newblock
-%%CITATION = ISBN-9789812567956;%%.
-
-\bibitem{bib:CMS:Tracking_2010}
-{ CMS} Collaboration, ``{Tracking and Vertexing Results from First
-  Collisions}'', {\em CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1258204}{CMS-PAS-TRK-10-001}} (2010).
-
-\bibitem{bib:DataFormats}
-{CMS Collaboration}, ``Data Formats and Data Tiers'', {\em Public CMS Wiki}.
-  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats}{ht%
-tps://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats, Topic
-  revision: r30}.
-
-\bibitem{bib:Madgraph_2014}
-J.~Alwall, R.~Frederix, S.~Frixione{ et~al.}, ``{The automated computation of
-  tree-level and next-to-leading order differential cross sections, and their
-  matching to parton shower simulations}'', {\em JHEP} {\bf 07} (2014) 079,
-  \href{http://www.arXiv.org/abs/1405.0301}{{\tt arXiv:1405.0301}}.
-\href{http://dx.doi.org/10.1007/JHEP07(2014)079}{{\tt
-  doi:10.1007/JHEP07(2014)079}}.
-%%CITATION = ARXIV:1405.0301;%%.
-
-\bibitem{bib:Pyhtia6_2006}
-T.~Sjostrand, S.~Mrenna, and P.~Z. Skands, ``{PYTHIA 6.4 Physics and Manual}'',
-  {\em JHEP} {\bf 05} (2006) 026,
-  \href{http://www.arXiv.org/abs/hep-ph/0603175}{{\tt arXiv:hep-ph/0603175}}.
-\href{http://dx.doi.org/10.1088/1126-6708/2006/05/026}{{\tt
-  doi:10.1088/1126-6708/2006/05/026}}.
-%%CITATION = HEP-PH/0603175;%%.
-
-\bibitem{bib:Geant4_2003}
-{ GEANT4} Collaboration, ``{GEANT4: A Simulation toolkit}'', {\em Nucl.
-  Instrum. Meth.} {\bf A506} (2003) 250--303.
-\href{http://dx.doi.org/10.1016/S0168-9002(03)01368-8}{{\tt
-  doi:10.1016/S0168-9002(03)01368-8}}.
-%%CITATION = NUIMA,A506,250;%%.
-
-\bibitem{bib:Geant4_2006}
-J.~Allison {et~al.}, ``{Geant4 developments and applications}'', {\em IEEE
-  Trans. Nucl. Sci.} {\bf 53} (2006) 270.
-\href{http://dx.doi.org/10.1109/TNS.2006.869826}{{\tt
-  doi:10.1109/TNS.2006.869826}}.
-%%CITATION = IETNA,53,270;%%.
-
-\bibitem{bib:FEWZ}
-R.~Gavin {et~al.}, ``FEWZ 3.1: A User's Guide''.
-  \url{http://www.hep.anl.gov/fpetriello/FEWZManual_3.1.pdf}.
-\newblock Accessed: 2015-10-27.
-
-\bibitem{bib:ttbar:Czakon_2013}
-M.~Czakon, P.~Fiedler, and A.~Mitov, ``{Total Top-Quark Pair-Production Cross
-  Section at Hadron Colliders Through $O(α\frac{4}{S})$}'', {\em Phys. Rev.
-  Lett.} {\bf 110} (2013) 252004,
-  \href{http://www.arXiv.org/abs/1303.6254}{{\tt arXiv:1303.6254}}.
-\href{http://dx.doi.org/10.1103/PhysRevLett.110.252004}{{\tt
-  doi:10.1103/PhysRevLett.110.252004}}.
-%%CITATION = ARXIV:1303.6254;%%.
-
-\bibitem{bib:SignalCrossSection_2012}
-B.~Fuks, M.~Klasen, D.~R. Lamprea{ et~al.}, ``{Gaugino production in
-  proton-proton collisions at a center-of-mass energy of 8 TeV}'', {\em JHEP}
-  {\bf 1210} (2012) 081, \href{http://www.arXiv.org/abs/1207.2159}{{\tt
-  arXiv:1207.2159}}.
-\href{http://dx.doi.org/10.1007/JHEP10(2012)081}{{\tt
-  doi:10.1007/JHEP10(2012)081}}.
-%%CITATION = ARXIV:1207.2159;%%.
-
-\bibitem{bib:SignalCrossSection_2013}
-B.~Fuks, M.~Klasen, D.~R. Lamprea{ et~al.}, ``{Precision predictions for
-  electroweak superpartner production at hadron colliders with Resummino}'',
-  {\em Eur.Phys.J.} {\bf C73} (2013) 2480,
-  \href{http://www.arXiv.org/abs/1304.0790}{{\tt arXiv:1304.0790}}.
-\href{http://dx.doi.org/10.1140/epjc/s10052-013-2480-0}{{\tt
-  doi:10.1140/epjc/s10052-013-2480-0}}.
-%%CITATION = ARXIV:1304.0790;%%.
-
-\bibitem{bib:CMS:DT_Thesis}
-J.~D. Brinson, ``{A search for disappearing tracks in proton-proton collisions
-  at $\sqrt{s}$ = 8 TeV}''.
-\newblock PhD thesis, Ohio State U.
-\newblock
-\url{https://inspirehep.net/record/1381347/files/CERN-THESIS-2015-030.pdf}.
-%%CITATION = CERN-THESIS-2015-030;%%.
-
-\bibitem{bib:CMS:DT_8TeV_AN}
-{J. Brinson, C. Hill, and W. Wulsin}, ``Search for disappearing tracks'', {\em
-  CMS Analysis Note} {\bf CMS-AN-12-400} (2014). Internal documentation.
-
-\bibitem{bib:CMS:Tracking_7TeV_PAS}
-{ CMS} Collaboration, ``{Tracking and Primary Vertex Results in First 7 TeV
-  Collisions}'', {\em CMS Physics Analysis Summary} {\bf
-  \href{http://cds.cern.ch/record/1279383/}{CMS-PAS-TRK-10-005}} (2010).
-
-\bibitem{bib:CMS:DM_8TeV_AN}
-{A. Bhatti et. al.}, ``Search for New Physics in the Monojet final state at
-  CMS'', {\em CMS Analysis Note} {\bf CMS-AN-12-421} (2012). Internal
-  documentation.
-
-\bibitem{bib:CMS:DM_8TeV}
-{ CMS} Collaboration, ``{Search for dark matter, extra dimensions, and
-  unparticles in monojet events in proton–proton collisions at $\sqrt{s} = 8$
-  TeV}'', {\em Eur. Phys. J.} {\bf C75} (2015), no.~5, 235,
-  \href{http://www.arXiv.org/abs/1408.3583}{{\tt arXiv:1408.3583}}.
-\href{http://dx.doi.org/10.1140/epjc/s10052-015-3451-4}{{\tt
-  doi:10.1140/epjc/s10052-015-3451-4}}.
-%%CITATION = ARXIV:1408.3583;%%.
-
-\bibitem{bib:CMS:ConversionVeto_PAS}
-{ CMS} Collaboration, ``{Studies of Tracker Material}'', {\em CMS Physics
-  Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1279138}{CMS-PAS-TRK-10-003}} (2010).
-
-\bibitem{bib:CMS:ElectronMVA}
-{ CMS} Collaboration, ``{Measurement of Higgs boson production and properties
-  in the WW decay channel with leptonic final states}'', {\em JHEP} {\bf 01}
-  (2014) 096, \href{http://www.arXiv.org/abs/1312.1129}{{\tt arXiv:1312.1129}}.
-\href{http://dx.doi.org/10.1007/JHEP01(2014)096}{{\tt
-  doi:10.1007/JHEP01(2014)096}}.
-%%CITATION = ARXIV:1312.1129;%%.
-
-\bibitem{bib:CMS:elec_recoEff}
-{ CMS} Collaboration, ``{Performance of Electron Reconstruction and Selection
-  with the CMS Detector in Proton-Proton Collisions at √s = 8 TeV}'', {\em
-  JINST} {\bf 10} (2015), no.~06, P06005,
-  \href{http://www.arXiv.org/abs/1502.02701}{{\tt arXiv:1502.02701}}.
-\href{http://dx.doi.org/10.1088/1748-0221/10/06/P06005}{{\tt
-  doi:10.1088/1748-0221/10/06/P06005}}.
-%%CITATION = ARXIV:1502.02701;%%.
-
-\bibitem{bib:CMS:muon_recoEff}
-{ CMS} Collaboration, ``{Performance of CMS muon reconstruction in $pp$
-  collision events at $\sqrt{s}=7$ TeV}'', {\em JINST} {\bf 7} (2012) P10002,
-  \href{http://www.arXiv.org/abs/1206.4071}{{\tt arXiv:1206.4071}}.
-\href{http://dx.doi.org/10.1088/1748-0221/7/10/P10002}{{\tt
-  doi:10.1088/1748-0221/7/10/P10002}}.
-%%CITATION = ARXIV:1206.4071;%%.
-
-\bibitem{bib:CMS:tau_recoEff}
-{ CMS} Collaboration, ``{Performance of tau-lepton reconstruction and
-  identification in CMS}'', {\em JINST} {\bf 7} (2012) P01001,
-  \href{http://www.arXiv.org/abs/1109.6034}{{\tt arXiv:1109.6034}}.
-\href{http://dx.doi.org/10.1088/1748-0221/7/01/P01001}{{\tt
-  doi:10.1088/1748-0221/7/01/P01001}}.
-%%CITATION = ARXIV:1109.6034;%%.
-
-\bibitem{bib:Neyman_1937}
-J.~Neyman {\em Phil. Trans. Royal Soc. London, Series A} {\bf 236} (1937)
-  333--80. Reprinted in \textit{A Selection of Early Statistical Papers on J.
-  Neyman} (University of California Press, Berkeley, 1967).
-
-\bibitem{bib:CMS:Lumi_PAS}
-{ CMS} Collaboration, ``{CMS Luminosity Based on Pixel Cluster Counting -
-  Summer 2013 Update}'', {\em CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1598864}{CMS-PAS-LUM-13-001}} (2013).
-
-\bibitem{bib:CMS:ISR_AN}
-{D. Barge et. al.}, ``Hadronic Recoil Studies of Heavy Boosted Systems'', {\em
-  CMS Analysis Note} {\bf CMS-AN-13-059} (2013). Internal documentation.
-
-\bibitem{bib:CMS:JME_PAS}
-{ CMS} Collaboration, ``{Jet Energy Scale and Resolution in the CMS
-  Experiment}'', {\em CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/2033232}{CMS-PAS-JME-13-004}} (2015).
-
-\bibitem{bib:Kristin_Thesis}
-K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the
-  CMS experiment}''.
-\newblock PhD thesis, U. Hamburg, Dept. Phys., 2015.
-\newblock
-\url{http://www-library.desy.de/cgi-bin/showprep.pl?thesis15-003}.
-%%CITATION = DESY-THESIS-2015-003;%%.
-
-\bibitem{Pumplin:2002vw}
-J.~Pumplin, D.~R. Stump, J.~Huston{ et~al.}, ``{New generation of parton
-  distributions with uncertainties from global QCD analysis}'', {\em JHEP} {\bf
-  07} (2002) 012, \href{http://www.arXiv.org/abs/hep-ph/0201195}{{\tt
-  arXiv:hep-ph/0201195}}.
-\href{http://dx.doi.org/10.1088/1126-6708/2002/07/012}{{\tt
-  doi:10.1088/1126-6708/2002/07/012}}.
-%%CITATION = HEP-PH/0201195;%%.
-
-\bibitem{Botje:2011sn}
-M.~Botje {et~al.}, ``{The PDF4LHC Working Group Interim Recommendations}'',
-\href{http://www.arXiv.org/abs/1101.0538}{{\tt arXiv:1101.0538}}.
-%%CITATION = ARXIV:1101.0538;%%.
-
-\bibitem{bib:PDF_practical}
-A.~Vicini, ``Practical implementation of the PDF4LHC recipe''.
-  \url{http://www.hep.ucl.ac.uk/pdf4lhc/PDF4LHC_practical_guide.pdf}.
-\newblock Accessed: 2015-11-27.
-
-\bibitem{bib:CMS:PileupUtilities}
-{CMS Collaboration}, ``Pileup Reweighting Utilities'', {\em Internal CMS Wiki}
-  (2012).
-  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilit%
-ies}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupMCReweightingUtilities,
-  Topic revision: r29}.
-
-\bibitem{bib:CMS:PileupSysUnc}
-{CMS Collaboration}, ``Estimating Systematic Errors Due to Pileup Modeling'',
-  {\em Internal CMS Wiki} (2013).
-  \href{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors}{https%
-://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors, Topic revision:
-  r11}.
-
-\bibitem{bib:CMS:HSCP_8TeV_AN}
-{L. Quertenmont at al.}, ``Searches for Heavy Stable Charged Particles with
-  Combined 2011 and 2012 Datasets'', {\em CMS Analysis Note} {\bf
-  CMS-AN-12-293} (2013). Internal documentation.
-
-\bibitem{bib:Ott_Thesis}
-J.~Ott, ``{Search for Resonant Top Quark Pair Production in the Muon+Jets
-  Channel with the CMS Detector}''.
-\newblock PhD thesis, Hamburg U., 2013.
-\newblock
-\url{https://inspirehep.net/record/1296889/files/TS2013_046.pdf}.
-%%CITATION = CERN-THESIS-2012-262;%%.
-
-\bibitem{bib:CLS_1999}
-T.~Junk, ``{Confidence level computation for combining searches with small
-  statistics}'', {\em Nucl. Instrum. Meth.} {\bf A434} (1999) 435--443,
-  \href{http://www.arXiv.org/abs/hep-ex/9902006}{{\tt arXiv:hep-ex/9902006}}.
-\href{http://dx.doi.org/10.1016/S0168-9002(99)00498-2}{{\tt
-  doi:10.1016/S0168-9002(99)00498-2}}.
-%%CITATION = HEP-EX/9902006;%%.
-
-\bibitem{bib:CLS_2000}
-A.~L. Read, ``{Modified frequentist analysis of search results (The CL(s)
-  method)}'', in {\em {Workshop on confidence limits, CERN, Geneva,
-  Switzerland, 17-18 Jan 2000: Proceedings}}.
-\newblock 2000.
-\newblock
-\url{http://cds.cern.ch/record/451614}.
-%%CITATION = CERN-OPEN-2000-205;%%.
-
-\bibitem{bib:CLS_2002}
-A.~L. Read, ``{Presentation of search results: The CL(s) technique}'', {\em J.
-  Phys.} {\bf G28} (2002) 2693--2704.
-  \href{http://dx.doi.org/10.1088/0954-3899/28/10/313}{{\tt
-  doi:10.1088/0954-3899/28/10/313}}.
-
-\bibitem{bib:LimitSetting_Higgs}
-{CMS and ATLAS Collaborations}, ``{Procedure for the LHC Higgs boson search
-  combination in summer 2011}'', {\em Technical Report} {\bf {}} (2011).
-\href{http://cds.cern.ch/record/1379837}{CMS-NOTE-2011-005},
-  \href{http://cds.cern.ch/record/1375842}{ATL-PHYS-PUB-2011-011}.
-%%CITATION = ATL-PHYS-PUB-2011-011;%%.
-
-\bibitem{bib:CMS:Combine}
-{CMS Collaboration}, ``\mbox{Documentation} of the RooStats-based statistics
-  tools for Higgs PAG'', {\em Internal CMS Wiki} (2015).
-  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCombi%
-nedLimit}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/SWGuideHiggsAnalysisCom%
-binedLimit, Topic rev: r124}.
-
-\bibitem{bib:MassSplitting_Drees}
-C.~H. Chen, M.~Drees, and J.~F. Gunion, ``{Addendum/erratum for 'searching for
-  invisible and almost invisible particles at e+ e- colliders' [hep-ph/9512230]
-  and 'a nonstandard string/SUSY scenario and its phenomenological
-  implications' [hep-ph/9607421]}'',
-\href{http://www.arXiv.org/abs/hep-ph/9902309}{{\tt arXiv:hep-ph/9902309}}.
-%%CITATION = HEP-PH/9902309;%%.
+\bibitem{bib:IndirectSearches_Beneke_2015}
+M.~Beneke, C.~Hellmann, and P.~Ruiz-Femenia, ``{Heavy neutralino relic
+  abundance with Sommerfeld enhancements - a study of pMSSM scenarios}'', {\em
+  JHEP} {\bf 03} (2015) 162, \href{http://www.arXiv.org/abs/1411.6930}{{\tt
+  arXiv:1411.6930}}.
+\href{http://dx.doi.org/10.1007/JHEP03(2015)162}{{\tt
+  doi:10.1007/JHEP03(2015)162}}.
+%%CITATION = ARXIV:1411.6930;%%.
 
 \end{thebibliography}\endgroup

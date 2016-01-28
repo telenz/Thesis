@@ -77,49 +77,45 @@ I was expecting a `,' or a `}'---line 1957 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty publisher in bib:James:StaticticalMethods_2006
-Warning--empty year in bib:DataFormats
-Warning--empty year in bib:CMS:DT_Thesis
-Warning--empty title in bib:Neyman_1937
-You've used 65 entries,
+You've used 54 entries,
             2369 wiz_defined-function locations,
-            1065 strings with 18827 characters,
-and the built_in function-call counts, 18022 in all, are:
-= -- 2221
-> -- 389
+            1059 strings with 17577 characters,
+and the built_in function-call counts, 18287 in all, are:
+= -- 2294
+> -- 369
 < -- 0
-+ -- 152
-- -- 87
-* -- 1298
-:= -- 2359
-add.period$ -- 167
-call.type$ -- 65
++ -- 140
+- -- 86
+* -- 1376
+:= -- 2299
+add.period$ -- 158
+call.type$ -- 54
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 69
-duplicate$ -- 1094
-empty$ -- 1892
-format.name$ -- 71
-if$ -- 4943
+cite$ -- 54
+duplicate$ -- 1057
+empty$ -- 1823
+format.name$ -- 66
+if$ -- 5025
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 163
-newline$ -- 299
-num.names$ -- 43
-pop$ -- 352
+int.to.str$ -- 54
+missing$ -- 148
+newline$ -- 282
+num.names$ -- 34
+pop$ -- 271
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 538
+skip$ -- 628
 stack$ -- 0
-substring$ -- 513
-swap$ -- 345
+substring$ -- 849
+swap$ -- 398
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 87
-width$ -- 67
-write$ -- 738
+warning$ -- 0
+while$ -- 103
+width$ -- 56
+write$ -- 662
 (There were 15 error messages)
