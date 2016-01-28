@@ -193,7 +193,7 @@ In Fig.~\ref{fig:Zpeak}, the invariant mass distribution $M_{\text{inv}}$ is sho
 \end{figure}
 
 
-When applying a \Zlep selection plus the candidate track selection, the selected tracks are mostly fakes.
+When applying a \Zlep selection plus the candidate track selection, the selected tracks should be mostly fakes.
 Whether this is indeed the case can be tested on simulated \Zlep events.
 As can be seen in Fig.~\ref{fig:BkgComposition}, a reasonable purity in fake tracks can be achieved by applying the candidate track selection on top of the \Zlep selection.
 \begin{figure}[!tb]
@@ -214,9 +214,9 @@ In simulated $Z\rightarrow\mu\bar{\mu}$ events, a purity of 88\% is achieved, wh
 
 As already mentioned, the fake rate is defined as the probability that an event contains a fake track that fulfils the candidate track selection.
 Thus, for the \Zlep datasets it is defined as the number of events passing the full selection described in Table~\ref{tab:FakeMuonSample} (Table~\ref{tab:FakeElectronSample}) divided by the number of events that pass only the event-based selection in Table~\ref{tab:FakeMuonSample} (Table~\ref{tab:FakeElectronSample})
-\begin{equation*}
+\begin{equation}
 \fakerate = \frac{N_{Z\rightarrow ll}^{\text{cand trk selection}}}{N_{Z\rightarrow ll}}
-\end{equation*}
+\end{equation}
 Fake rates are determined independently for the $Z\rightarrow \mu\bar{\mu}\,+\,\text{fake}$ and $Z\rightarrow e\bar{e}\,+\,\text{fake}$ event selection and then averaged to obtain the final fake rate. 
 In Table~\ref{tab:FakeRateResults} the results of $N_{Z\rightarrow ll}^{\text{cand trk selection}}$, $N_{Z\rightarrow ll}$ and the resulting fake rate for the candidate track selection given in Table~\ref{tab:SummaryCuts} are presented.
 The averaged fake rate is thus $\left( 6.86 \pm 0.25 \right) \cdot 10^{-5}$.
@@ -226,7 +226,7 @@ This is not the final result as the optimisation in \pt will add an additional \
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!b]
 \centering
-\caption{Results of $N_{Z\rightarrow ll}^{\text{cand trk selection}}$, $N_{Z\rightarrow ll}$ and \fakerate for the candidate track selection given in Table~\ref{tab:SummaryCuts}.}
+\caption{Results of $N_{Z\rightarrow ll}^{\text{cand trk selection}}$, $N_{Z\rightarrow ll}$ and \fakerate for the $Z\rightarrow \mu\bar{\mu}\,+\,\text{fake}$ (Table~\ref{tab:FakeMuonSample}) and $Z\rightarrow e\bar{e}\,+\,\text{fake}$ (Table~\ref{tab:FakeElectronSample}) selection.}
 \label{tab:FakeRateResults}
 \makebox[0.99\textwidth]{
 \begin{tabular}{l|c c c }
@@ -254,9 +254,9 @@ This is shown in Fig.~\ref{fig:FakeRate} where the fake rate is depicted for the
 \end{figure}
 Since the fake rate is constant for different SM processes, the fake rate determined on the \Zlep dataset can be generalised for all SM background possibly contributing to this search.
 Thus, the inclusive fake background can be estimated by multiplying the fake rate with the number of events selected from the MET dataset (Table ~\ref{tab:SearchSamples}) by applying the event-based signal candidate requirements from Table~\ref{tab:SummaryCuts}
-\begin{equation*}
+\begin{equation}
 N^{\text{fake, inclusive in I$_{\text{as}}$}}_{\text{bkg}} = \fakerate \cdot N_{\text{event-based selection}}^{\text{MET}}.
-\end{equation*}
+\end{equation}
 Given the number of events after the event-based selection of $N_{\text{event-based selection}}^{\text{MET}} = 1.38\cdot10^6$ and the fake rate cited above, 
 the inclusive fake background can be estimated to $94.7\pm3.4$ for the candidate track selection.
 
@@ -351,7 +351,7 @@ This event is visualised in Fig.~\ref{fig:LostElectron} (left).
           Right: Detailed view of the energy deposition in the ECAL towers in the direction of the electron track ($\phi - \eta$ plane).}
   \label{fig:LostElectron}
 \end{figure}
-The neutrino, only weakly interacting does not show any signature in the detector, whereas the electron ($\pt\simeq 90\gev$) leaves a track with $\pt\simeq 70\gev$ in the tracker. 
+The neutrino, only weakly interacting does not show any signature in the detector, whereas the electron ($\ptgen\simeq 90\gev$) leaves a track with $\pt\simeq 70\gev$ in the tracker. 
 Only little ECAL energy deposits in the direction of the electron are visible. 
 This is caused by the fact that one of the corresponding ECAL crystal is not working properly and thus no energy deposition can be recorded (cf. Fig.~\ref{fig:LostElectron} (right)).
 An ISR jet ($\pt\simeq 230\gev$) causes the \met in the event. 
@@ -379,7 +379,7 @@ Such an event is shown in Fig.~\ref{fig:LostTau}.
 \end{figure}
 The transverse momentum of the generator-level pion is only $\pt\sim10\gev$, but because the reconstructed track is very short, it leads to a high mismeasurement of the track \pt of $\sim40\gev$.
 The shortness of the track is caused by nuclear interactions of the pion.
-As no corresponding ECAL or HCAL energy deposits are measured, the reconstruction of the pion fails.
+As only little corresponding ECAL or HCAL energy deposits are measured, the reconstruction of the pion fails.
 The ISR jet causes the \met in the event.
 
 \subsection*{Muons}
@@ -405,7 +405,7 @@ In~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} events are rejected if the track 
 In this search, this cut was omitted to maximise signal acceptance. 
 Due to the additional selection in \ias, muons can be efficiently suppressed.
 E.g. in the event shown in Fig.~\ref{fig:LostMuon}, the muon has an \ias value of about 0.007.\\
-
+\vspace{13pt}
 
 As for the fakes, the leptonic background estimation is splitted into two parts.
 First, the estimation of the inclusive background without \ias information.
@@ -420,24 +420,24 @@ In order to estimate the number of events in the signal region originating from 
 With the help of simulated \WJets events, the ratio \leptonscalefactor between the number of events in the signal region with the selected track matched to a generator-level lepton $N_{SR}^{\text{trk matched to lepton}_i}$
  and the number of events in a control region $N_{CR}^{\text{lepton}_i\text{ veto inverted}}$ with a inverted lepton veto is determined.
 For muons, this lead to the following expression
-\begin{equation*}
+\begin{equation}
 \rho_{\text{MC}}^{\mu} = \frac{N_{\text{SR,MC}}^{\text{trk matched to }\mu}}{N_{\text{CR,MC}}^{\mu \text{ veto inverted}}}.
-\end{equation*}
+\end{equation}
 Since for electrons and taus the reconstruction efficiency is highly correlated with the \ecalo selection requirement, the \ecalo requirement is additionally removed in the control regions for these two lepton types 
-\begin{equation*}
+\begin{equation}
 \rho_{\text{MC}}^{e,\tau} = \frac{N_{\text{SR,MC}}^{\text{trk matched to }e,\tau}}{N_{\text{CR,MC}}^{e,\tau\text{ veto inverted}, \cancel{\ecalo<5\gev}}}.
-\end{equation*}
+\end{equation}
 
 In order to estimate the inclusive background for all three lepton types, the scale factor \leptonscalefactor is applied to the number of events in the lepton veto inverted control region measured in data.
 Also in data the control region for electrons and taus is defined with the \ecalo requirement removed. 
 Thus, the inclusive number of predicted background events can be estimated with  
-\begin{equation*}
+\begin{equation}
 N^{\mu \text{, inclusive in I$_{\text{as}}$}}_{\text{predicted}} = \rho_{\text{MC}}^{\mu} \cdot N_{\text{CR,data}}^{\mu\text{ veto inverted}}.
-\end{equation*}
+\end{equation}
 for muons, and 
-\begin{equation*}
+\begin{equation}
 N^{e,\tau\text{, inclusive in I$_{\text{as}}$}}_{\text{predicted}} = \rho_{\text{MC}}^{e,\tau} \cdot N_{\text{CR,data}}^{e,\tau\text{ veto inverted}, \cancel{\ecalo<5\gev}}.
-\end{equation*}
+\end{equation}
 for electrons and taus.
 
 This method relies on the simulation of the lepton reconstruction efficiencies which is known to be reasonably accurate~\cite{bib:CMS:elec_recoEff,bib:CMS:muon_recoEff,bib:CMS:tau_recoEff}.
@@ -734,9 +734,8 @@ The selection requirements for the three tag-and-probe samples are listed in Tab
 The leptonic scale factors are calculated using simulated \Zlep events and real data from the single-muon and single-electron samples listed in Table~\ref{tab:ElectronMuonCRDatasets}.
 Since only scaling factors are derived within simulation and data, no trigger is applied.
 This does not change the scaling factors since the requirements on the well reconstructed lepton are exactly the same for the numerator and denominator of Eqs.~\eqref{eq:ScaleFactorSys_Mu} and~\eqref{eq:ScaleFactorSys_Tau}.
-This is not expected to influence the scaling factors.
+In Table~\ref{tab:ScaleFactorUncertainty}, the results of the event yields in the ``tag-and-probe'' control and signal regions as well as the corresponding lepton scale factor are depicted.
 The largest difference from unity of the ratio $\rho^{\text{lep}_i}_{\text{MC}}$/$\rho^{\text{lep}_i}_{\text{Data}}$ and its statistical uncertainty is taken as systematic uncertainty. 
-In Table~\ref{tab:ScaleFactorUncertainty}, the results of the event yield in all control regions and the corresponding lepton scale factor are depicted.
 This results for the signal candidate selection in an uncertainty of 69\% for the electron, 39\% for the muon and 79\% for the tau scale factor.
 
 \renewcommand{\arraystretch}{1.5}

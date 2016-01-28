@@ -554,26 +554,48 @@ This search is motivated by long-lived charginos, that are nearly mass-degenerat
 The underlying mechanism of this mass-degeneracy in the MSSM will be addressed in the next paragraphs.
 
 In the MSSM, the lightest chargino (\chipm) and the lightest neutralino (\chiO) can be almost mass-degenerate, when the wino mass parameter ($M_2$) is smaller than the bino ($M_1$) and higgsino ($\mu$) mass parameters.
-This can be seen in the masses of the interaction eigenstates.
-The following expressions are approximate neutralino and chargino mass terms for $M_2 \mu > m_W^2 \sin 2\beta$ and $|M_2 \pm \mu|$, $|M_1 \pm \mu| \gg m_Z$ (taken from~\cite{bib:PAS:CMS:pMSSM_2013})
-\begin{align}
-\label{eq:gaugino_masses}
-\begin{split}
-m_{\tilde{B}}    &\simeq  M_1   + \frac{m_Z^2 \left( M_1 + \mu \sin 2\beta  \right) \sin^2 \theta_W}{M_1^2 - \mu^2} \\
-m_{\tilde{W}}    &\simeq  M_2   + \frac{m_Z^2 \left( M_2 + \mu \sin 2\beta  \right) \cos^2 \theta_W}{M_2^2 - \mu^2} \\
-m_{\tilde{H}_1^0} &\simeq  |\mu| + \frac{m_Z^2 \left( 1 - \sin 2\beta \right) \left( \mu + M_2 \sin^2 \theta_W + M_1 \cos^2 \theta_W \right) sqn\left(\mu \right)}{2 \left(\mu +M_2 \right)\left(\mu +M_1 \right)} \\
-m_{\tilde{H}_2^0} &\simeq  |\mu| + \frac{m_Z^2 \left( 1 + \sin 2\beta \right) \left( \mu - M_2 \sin^2 \theta_W - M_1 \cos^2 \theta_W \right) sqn\left(\mu \right)}{2 \left(\mu -M_2 \right)\left(\mu -M_1 \right)} 
-\end{split}
-\end{align}
-\begin{align}
-\label{eq:chargino_masses}
-\begin{split}
-m_{\tilde{W}^{\pm}} &\simeq  M_2  + m_W^2 \left[ \frac{M_2 + \mu \sin 2\beta}{M_2^2 - \mu^2} \right]\\
-m_{\tilde{H^{\pm}}} &\simeq  |\mu|  + m_W^2 sgn\left( \mu \right) \left[ \frac{\mu + M_2 \sin 2\beta}{\mu^2 - M_2^2} \right]
-\end{split}
-\end{align}
-It is obvious from Eqs.~\ref{eq:gaugino_masses} and~\ref{eq:chargino_masses}, that if $M_2 < M_1,\, |\mu|$, the lightest neutralino state is wino-like and is fully mass-degenerate on tree level with the lightest chargino.
-Thus, the mass differences between \chipm and \chiO is only determined by higher loop contributions, making the mass splitting naturally very small.
+This can be seen from the chargino and neutralino mass matrices.
+The chargino mass matrix in the basis $\Psi^+_i= \left(-i \tilde{W}^+,\tilde{h}_u^+  \right)$ and $\Psi^-_i= \left(-i \tilde{W}^-,\tilde{h}_d^-  \right)$ is given by 
+\begin{flalign}
+&\mathcal{M}_{\Psi^{\pm}} = 
+\begin{pmatrix} 
+M_2    & g v_d                    \\
+g v_u  & \lambda v_S                  
+\end{pmatrix}.&
+\end{flalign} 
+The mass eigenstates can be deduced with the help of orthoganal matrices $V$ and $U$, $\chi^+_i=V_{ij}\Psi^+_j$, $\chi^-_i = U_{ij} \Psi^-_j$.
+The neutralino mass matrix in the basis  $\Psi_i^0= \left(-i\tilde{B},-i\tilde{W}^0,\tilde{h}_u^0,\tilde{h}_d^0, \tilde{s}^0\right)$ is
+\begin{flalign}
+&\mathcal{M}_{\Psi^0} = 
+\begin{pmatrix} 
+M_1                     & 0                       & \frac{g'v_u}{\sqrt{2}}  & -\frac{g'v_d}{\sqrt{2}}  \\
+0                       & M_2                     & -\frac{g v_u}{\sqrt{2}} & \frac{g v_d}{\sqrt{2}}   \\
+\frac{g'v_u}{\sqrt{2}}  & -\frac{g v_u}{\sqrt{2}} & 0                       & -\mu                     \\
+-\frac{g'v_d}{\sqrt{2}} & \frac{g v_d}{\sqrt{2}}  & -\mu                    &  0                      
+\end{pmatrix}.&
+\end{flalign}
+In first order approximation - neglecting the off-diagonal elements which are of electroweak strength - the lightest chargino and the lightest neutralino are both wino-like for $M_2 < M_1,\mu$ with a mass of $m_\chi = M_2$. 
+Thus, the mass difference between \chipm and \chiO is only determined by higher order corrections (radiative corrections as well as tree-level mixing with other states)loop contributions, making the mass splitting naturally very small.
+
+%The following expressions are approximate neutralino and chargino mass terms for $M_2 \mu > m_W^2 \sin 2\beta$ and $|M_2 \pm \mu|$, $|M_1 \pm \mu| \gg m_Z$ (taken from~\cite{bib:PAS:CMS:pMSSM_2013})
+%\begin{align}
+%\label{eq:gaugino_masses}
+%\begin{split}
+%m_{\tilde{B}}    &\simeq  M_1   + \frac{m_Z^2 \left( M_1 + \mu \sin 2\beta  \right) \sin^2 \theta_W}{M_1^2 - \mu^2} \\
+%m_{\tilde{W}}    &\simeq  M_2   + \frac{m_Z^2 \left( M_2 + \mu \sin 2\beta  \right) \cos^2 \theta_W}{M_2^2 - \mu^2} \\
+%m_{\tilde{H}_1^0} &\simeq  |\mu| + \frac{m_Z^2 \left( 1 - \sin 2\beta \right) \left( \mu + M_2 \sin^2 \theta_W + M_1 \cos^2 \theta_W \right) sqn\left(\mu \right)}{2 \left(\mu +M_2 \right)\left(\mu +M_1 \right)} \\
+%m_{\tilde{H}_2^0} &\simeq  |\mu| + \frac{m_Z^2 \left( 1 + \sin 2\beta \right) \left( \mu - M_2 \sin^2 \theta_W - M_1 \cos^2 \theta_W \right) sqn\left(\mu \right)}{2 \left(\mu -M_2 \right)\left(\mu -M_1 \right)} 
+%\end{split}
+%\end{align}
+%\begin{align}
+%\label{eq:chargino_masses}
+%\begin{split}
+%m_{\tilde{W}^{\pm}} &\simeq  M_2  + m_W^2 \left[ \frac{M_2 + \mu \sin 2\beta}{M_2^2 - \mu^2} \right]\\
+%m_{\tilde{H^{\pm}}} &\simeq  |\mu|  + m_W^2 sgn\left( \mu \right) \left[ \frac{\mu + M_2 \sin 2\beta}{\mu^2 - M_2^2} \right]
+%\end{split}
+%\end{align}
+%It is obvious from Eqs.~\ref{eq:gaugino_masses} and~\ref{eq:chargino_masses}, that if $M_2 < M_1,\, |\mu|$, the lightest neutralino state is wino-like and is fully mass-degenerate on tree level with the lightest chargino.
+
 
 Furthermore, recent analyses of the pMSSM parameter space~\cite{bib:pMSSMScan_2013,bib:pMSSMScan_2012} show, that almost pure wino-like neutralinos are very frequent for flat scans in the pMSSM parameter space and that they mostly come along with wino-like charginos being the next-to leading lightest supersymmetric particle (NLSP).
 For these scenarios, their mass splitting is typically of the order of $\sim160\mev$~\cite{bib:pMSSMScan_2013}.

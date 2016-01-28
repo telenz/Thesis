@@ -152,11 +152,11 @@ To also ensure a uniform response over all modules within one time step, an addi
 The inter-calibration can in principle be done on various levels: the highest granularity would be a calibration on pixel level, followed by a calibration on read-out-chip (ROC) level and then on module level.
 Lower granularities in descending order are rings (modules with same z-position) and finally layers (3 layers in the barrel and 4 disks in the endcap). 
 Within this analysis the calibration is performed on module level since the response variations between all ROCs on one module of $\sim5\%$ are acceptable (see Appendix~\ref{app:PixelCalibration}). 
+The applied method for the gain calibration of the pixel tracker closely follows the method in~\cite{bib:Quertenmont_2010}.
 
 The gain calibration of the pixel silicon tracker is carried out with the help of minimally ionising particles (MIPs).
 MIPs in this context are not defined as particles at the minimum of the Bethe formula, but more generally as particles located at or near the plateau of the \dedx distribution vs. momentum (see Fig.~\ref{fig:dEdx_Bethe_Landau}).
 This approach ensures that all particles deposit similar amounts of energy so that the variation due to different momenta is minimised.
-
 MIPs are selected by a momentum selection of $\text{p}>2\,$\gev.
 Additionally, only tracks with at least eight hits and a $\chi^2/\text{n.d.o.f.}<3$ are used to ensure a high-quality track reconstruction.
 A sample containing around $~$50 million ``minimum bias'' events is used for calibration.

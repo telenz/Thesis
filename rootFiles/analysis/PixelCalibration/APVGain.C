@@ -43,6 +43,16 @@ public:
 
   };
 
+  double maxDiff(){
+
+    int minBin = allGainsPerModule->FindFirstBinAbove(0);
+    int maxBin = allGainsPerModule->FindLastBinAbove(0);
+    double max= abs(allGainsPerModule->GetBinCenter(minBin)/allGainsPerModule->GetBinCenter(maxBin) - 1);
+
+    return max;
+  };
+
+
 };
 
   void APVGain::Loop()
@@ -420,7 +430,9 @@ public:
     histo hist = iterator->second;
     hist.calculateRMS();
     //rmsOfCalibration->Fill(hist.rms/hist.mean);
-    rmsOfCalibration->Fill(hist.rms);
+    //rmsOfCalibration->Fill(hist.rms);
+    double maxDiff = hist.maxDiff();
+    rmsOfCalibration->Fill(maxDiff);
 
     if(hist.rms/hist.mean>1.){
       std::cout<<"hist.getEntries() = "<<hist.allGainsPerModule->GetEntries()<<std::endl;

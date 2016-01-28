@@ -52,7 +52,7 @@ This trigger was active during the full data taking period in 2012.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!b]
 \centering
-\caption{MET data samples used in the search with the contained integrated luminosity.}
+\caption{MET data samples used in the search with the contained integrated \mbox{luminosity}.}
 \label{tab:SearchSamples}
 \makebox[0.99\textwidth]{
 \begin{tabular}{lr}
@@ -191,12 +191,12 @@ First, a selection of high-quality tracks is enforced:
 \item The track is required to have no missing middle or inner hits: $N_{\text{miss}}^{\text{middle/inner}}=0$
 \item The radial and longitudinal  distance of the track to the primary vertex must be small: \mbox{$|d0|<0.02\cm$}, \mbox{$|dz|<0.5\cm$}.
 \end{itemize}
-In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two quality selection cuts is shown.\\
+In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two quality selection cuts is shown.
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.475\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
-    \includegraphics[width=0.475\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostInner_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostInner_lin.pdf}
   \end{tabular}
   \caption{Normalised number of missing middle (left) and inner (right) hits of background and signal tracks after trigger selection and QCD suppression cuts.}
   \label{fig:LostHits}
@@ -204,8 +204,8 @@ In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two qua
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.475\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackd0_lin.pdf}
-    \includegraphics[width=0.475\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackdz_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackd0_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackdz_lin.pdf}
   \end{tabular}
   \caption{Absolute value of the radial (left) and longitudinal (right) distance between the track and the primary vertex after trigger selection and QCD-multijet suppression cuts. 
            All events with a candidate track with a radial (longitudinal) distance larger than 0.2\cm (5\cm) are contained in the last bin.}
@@ -265,7 +265,7 @@ These are illustrated in Fig.~\ref{fig:DeadECALmap} showing a map of all ECAL ch
 Additionally, tracks that point towards intermodule gaps of ECAL cells or to the ECAL barrel endcap gap at $1.42<|\eta|<1.65$ are rejected.
 A list of the ECAL intermodule gaps, which is supplied centrally by CMS, is given in Table~\ref{tab:IntermoduleGaps}.
 
-\begin{figure}[!b]
+\begin{figure}[!t]
   \vspace{10pt}
   \centering 
   \begin{tabular}{c}
@@ -325,7 +325,7 @@ To summarise, tracks pointing towards detector regions, that are not working pro
 \item Veto tracks within a cone of $\Delta R<0.05$ to a dead or noisy ECAL cell (visualised in Fig.~\ref{fig:DeadECALmap}).
 \item Veto tracks that point towards the direction of the ECAL intermodule gap listed in Table~\ref{tab:IntermoduleGaps}.
 \item Veto tracks that point towards a bad CSC within $\Delta R<0.25$ (visualised in Fig.~\ref{fig:BadCSCMap}).
-\item Veto tracks that point towards the region between ECAL barrel and endcap at $1.42<|\eta|<1.65$
+\item Veto tracks that point towards the region between ECAL barrel and endcap at $1.42<|\eta|<1.65$\\
 \end{itemize}
 
 

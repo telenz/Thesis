@@ -8,6 +8,7 @@
 #include "TBranch.h"
 #include "TH1D.h"
 #include "TCanvas.h"
+#include "TPaveStats.h"
 #include "../../plotStyleThesis.h"
 
 
@@ -35,10 +36,11 @@ typedef struct {
 int plotGainDistributionsForAllSteps()
 {
 
-  gStyle->SetOptStat(1110);
-  gStyle -> SetPadBottomMargin(0.15);
+  //gStyle->SetOptStat(1110);
+  //gStyle -> SetPadBottomMargin(0.15);
 
   TeresaPlottingStyle::init();
+  //gStyle->SetOptStat("emr");
 
   TString Cstep[5];
   Cstep[0]="AB";
@@ -95,6 +97,13 @@ int plotGainDistributionsForAllSteps()
     calibFactors -> Draw("hist");
     calibFactors->SetTitle("");
     c->Update();
+    /*
+    TPaveStats *st = (TPaveStats*)calibFactors->FindObject("stats");
+    st->SetX1NDC(0.60); //new x start position
+    st->SetX2NDC(.94); //new x end position
+    st->SetY1NDC(0.82); //new x start position
+    st->SetY2NDC(.94); //new x end position
+    */
   
     c->SaveAs("PixelGain_"+Cstep[i]+"_NEW.pdf");
 
