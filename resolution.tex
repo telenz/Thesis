@@ -5,9 +5,9 @@
 \label{res:ch:Introduction}
 
 The determination and quantification of the quality of the jet transverse-momentum measurement is of crucial interest for many analyses with jet final states, \eg the measurement of the dijet cross section~\cite{bib:CMS:QCD_measurements} or \ttbar production cross sections~\cite{bib:CMS:TopCrossSection_8TeV}. 
-Also searches for physics beyond the standard model with missing transverse momentum, \PTm, in the final state rely on a good understanding of \PTm originating from wrongly measured jets~\cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:CMS:AlphaT_8TeV}.
+Also searches for physics beyond the Standard Model with missing transverse momentum, \PTm, in the final state rely on a good understanding of \PTm originating from wrongly measured jets~\cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:CMS:AlphaT_8TeV}.
 It is therefore important to determine the jet transverse-momentum resolution, \ie the detector resolution of the jet \pt measurement.
-For analyses relying on information from simulation it is necessary to correct the simulated resolution to the resolution actually present in data.
+For analyses relying on information from simulation, it is necessary to correct the simulated resolution to the resolution actually present in data.
 Therefore, scale factors will be presented to adjust the resolution in simulation to the resolution of the real detector.  
   
 In the following sections, a data-based method to measure the jet \pt resolution in \GAMJET events will be presented. 
@@ -95,12 +95,12 @@ Thus, they can serve as an excellent estimator for the true jet transverse-momen
 Unfortunately, such clean events are very rare processes, and usually, the momentum balance is spoiled by further jet activity from initial and final state radiation (see Fig.~\ref{res:fig:FeynmanDiagramsWithRadiation}). 
 In order to select events that are balanced to a large extent, a lower bound on the angular distance in the transverse plane between the photon and the jet with the highest transverse momentum (leading jet) is required: $\Delta\Phi \left(\text{\nth{1}\,jet,\,} \gamma \right)>2.95\,\unit{rad}$. 
 
-Additionally, the variable 
-\begin{equation*}
+Additionally, the variable $\alpha$ is defined as the ratio of the transverse momentum of the second jet to the transverse momentum of the photon
+\begin{equation}
 \label{res:eq:alphaDef}
-\alpha \doteq \frac{\ptsecondrecojet}{\ptgamma}
-\end{equation*} 
-is defined as a measure of further jet activity in an event. 
+\alpha \doteq \frac{\ptsecondrecojet}{\ptgamma},
+\end{equation} 
+and is thus a measure of further jet activity in an event. 
 It is, however, not sufficient to require only an upper bound on $\alpha$. 
 Instead, the jet transverse-momentum resolution is measured in bins of $\alpha$ with max($\alpha$) = 0.2, 
 and the extrapolated value to zero further jet momentum at $\alpha=0$ is taken as the measured resolution of the jet \pt. % in the absence of further jets.
@@ -112,9 +112,9 @@ and the extrapolated value to zero further jet momentum at $\alpha=0$ is taken a
 \end{figure}
 
 More formally, measuring the transverse momentum of the photon instead of taking the generator-level jet \pt leads to the fact that the measured resolution consists of two parts
-\begin{equation*}\label{res:eq:splitting}
+\begin{equation}\label{res:eq:splitting}
 \underbrace{\frac{\ptrecojet}{\ptgamma}}_{\text{measured}} = \underbrace{\frac{\ptrecojet}{\ptgenjet}}_{\text{intrinsic}} \oplus \underbrace{\frac{\ptgenjet}{\ptgamma}}_{\text{imbalance}}.
-\end{equation*}
+\end{equation}
 The intrinsic part is the resolution of interest which is independent of further jets in the event, whereas the imbalance is an artifact of further jet activity and is strongly dependent on $\alpha$.
 
 
@@ -130,9 +130,10 @@ Therefore, the measurement of the jet transverse-momentum resolution is performe
 
 The measurement of the jet transverse-momentum resolution is carried out with \GAMJET data recorded during the year 2012 at a centre-of-mass energy of $\sqrt{s}=8\tev$ at the CMS experiment.
 The datasets and triggers that are exploited for this measurement are introduced in the following Section~\ref{res:sec:DatasetsAndTriggers}.
-The measured resolution in data is compared to the resolution in a simulated \GAMJET sample. This is introduced in Section~\ref{res:sec:SimulatedSamples}.
+The measured resolution in data is compared to the resolution in a simulated \GAMJET sample. % (Section~\ref{res:sec:SimulatedSamples}). 
+Information about the simulated sample is given in Section~\ref{res:sec:SimulatedSamples}.
 In order to select \GAMJET events that are well suited for the resolution measurement, an event selection is applied on top.
-The event selection is described in Section~\ref{res:sec:EventSelection}.
+This event selection is described in Section~\ref{res:sec:EventSelection}.
 
 \section{Datasets and triggers}
 \label{res:sec:DatasetsAndTriggers}
@@ -161,8 +162,8 @@ HLT\_Photon150\               & 19.71\\
 \multicolumn{2}{c}{} \\
 \end{tabular}}
 \end{table}  
-On level one (L1), the triggers rely on single-photon triggers, such as L1SingleEG12 and L1SingleEG30.
-The L1 triggers require at least one photon that is above a certain \pt threshold, \eg 12\gev or 30\gev.
+On level one (L1), the triggers rely on single-photon/electron triggers, such as L1SingleEG12 and L1SingleEG30.
+The L1 triggers require at least one photon or electron candidate that is above a certain \et threshold, \eg 12\gev or 30\gev.
 The high-level triggers require a photon with a certain \pt (as indicated in the name) and, in case of thresholds below 135\gev, additional quality and isolation criteria. 
 All triggers with thresholds below 150\gev were prescaled.
 
@@ -214,7 +215,7 @@ Events are reconstructed with the particle-flow reconstruction algorithm, which 
 In the following, the selection of well reconstructed jets and photons will be explained as well as the event selection of \GAMJET events.
 
 \subsection{Jet selection}
-Particles belonging to a jet are clustered with the Anti-k$_{\text{t}}$ jet clustering algorithm with a radius of R=0.5~\cite{Cacciari:2008gp}.
+Particles belonging to a jet are clustered with the anti-k$_{\text{t}}$ jet clustering algorithm~\cite{bib:JetClustering_2008} with a radius parameter of R=0.5~\cite{Cacciari:2008gp}.
 Furthermore, all reconstructed jets undergo a so-called ``charged hadron subtraction'' (CHS) which removes hadrons that are likely caused by pileup events.
 
 To select clean \GAMJET events, it is required that the leading jet meets the ``tight ID'' selection requirements for jets~\cite{bib:JetIDRecommendation_7TeV,bib:AN:JetId_8TeV}.
@@ -232,7 +233,7 @@ It comprises the following selection criteria:
  \item Charged electromagnetic fraction $<$ 0.99.
 \end{itemize}
 
-To mitigate effects from pileup, an additional transverse momentum requirement is imposed:
+To mitigate effects from pileup, an additional requirement on the  transverse momentum is imposed:
 \begin{itemize}
 \item $\ptfirstjet,\ptsecondjet>10\gev$.
 \end{itemize}
@@ -266,7 +267,7 @@ $\pt^{\gamma}$-bins           & Trigger         \\
 \end{tabular}}
 \end{table}
 
-QCD-multijet events constitute an important background to \GAMJET events: A photon can be faked by a $\pi^{0}$ decaying into two close-by photons. 
+QCD-multijet events constitute an important background to \GAMJET events: A primary photon can be faked by a $\pi^{0}$ decaying into two close-by photons. 
 Therefore, a very clean selection of the photons is necessary to suppress this background.
 The following variables are used (see~\cite{CMS-PAS-EGM-10-006} for further explanation of the variables):
 
@@ -281,9 +282,8 @@ The following variables are used (see~\cite{CMS-PAS-EGM-10-006} for further expl
                                          background which is typically spatially broader.  
  \item \textbf{Tower-based HCAL isolation}: The isolation criterion requires the energy deposited in all HCAL towers around the photon in cone of R=0.4 to be small compared to the 
                                             photon's energy. 
- \item \textbf{Hollow cone track isolation}: Requires absence of high-energetic tracks around the photon.
- \item \textbf{Pixel seed veto}: In order to reduce the background from electrons and positrons, the absence of a pixel-seed in the pixel tracker along the photons 
-                                 trajectory is required.
+ \item \textbf{Hollow cone track isolation}: Requires the absence of high-energetic tracks around the photon.
+ \item \textbf{Pixel seed veto}: In order to reduce the background from electrons and positrons further, the absence of a pixel-seed in the pixel tracker along the photon trajectory is required.
 \end{itemize}
 
 The upper bounds that are set on these observables can be found in Table~\ref{res:tab:PhotonIsolation}. 
@@ -399,15 +399,14 @@ Events can thus be distinguished by the relative direction of the second jet (se
 \end{figure}
 
 As can be seen in Fig.~\ref{fig:fullResponseAndContributions}, events containing a second jet in the leading jet hemisphere lead to a response histogram with mean smaller one, while events with a second jet in photon direction result in a distribution with mean larger one. 
-The former occurs more frequently because it contains jets from final and initial state radiation, while the latter mainly consists only from initial state radiation.
+The former occurs more frequently because it contains jets from final and initial state radiation, while the latter mainly consists of jets from initial state radiation.
 
 The two response distributions coming from the different event topologies are separately evaluated. First, the resolution is determined for each of the configurations 
 (cf. Fig.~\ref{fig:fullResponseAndContributions}), and then, the weighted mean of the two contributions is calculated.\\
 \begin{figure}[!t]
   \centering
       \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/fullResponseAndContributions_6_alpha_bin.pdf}
-  \caption{The measured response with the two contributions visualised. Events with a second jet in photon hemisphere (red) lead to a mean response larger one, while events with a
-           second jet in the leading jet hemisphere (green) have a mean smaller one.}  
+  \caption{The measured jet transverse-momentum response. Events with a second jet in the photon hemisphere (red) lead to a mean response larger one, while events with a second jet in the leading jet hemisphere (green) have a mean smaller one. The sum of both contributions is depicted in black.}  
   \label{fig:fullResponseAndContributions}
 \end{figure}
 
@@ -459,7 +458,7 @@ The intrinsic resolution is fitted with Eq.~\eqref{eq:intrinsic} (red line), whi
 It is apparent that the imbalance is not zero for $\alpha=0$. 
 This has two reasons.
 First and most important, only the photon and the parton are balanced in the transverse plane.
-But since the transverse momentum of a jet is defined as the sum of all particles' transverse momenta that are clustered into the jet cone, the jet \pt can be lower than the \pt of the original parton.
+But since the transverse momentum of a jet is defined as the sum of all particles' transverse momenta that are clustered within a jet cone of FIXME, the jet \pt can be lower than the \pt of the original parton.
 This effect is called out-of-cone showering and leads to a residual imbalance between the photon \pt and the generator-level jet \pt at $\alpha=0$ (parameter $q$ in Eq.~\eqref{eq:imbalance}).
 Second, the photon \pt can be wrongly measured and spoil the residual imbalance $q$. 
 
@@ -498,7 +497,7 @@ The resolution improves for increasing photon \pt.
   \label{fig:ResolutionOfPtgamma}
 \end{figure}
 For the $|\etafirstjet|<0.5$ region, the resolution is approximately 10\% for $\pt^{\gamma} \approx 100\gev$ and decreases to values around 7\% for $\pt^{\gamma} \approx 300\gev$.
-The increasing statistical uncertainties for low photon \pt arise through the requirement of a maximal $\alpha$ and a minimal \pt of the second jet. 
+The increasing statistical uncertainties for low photon \pt arise through the requirements of $\alpha=\frac{\ptsecondrecojet}{\ptgamma}<0.2$ and FIXME \pt of the second jet. 
 This reduces the numbers of events in the low photon \pt bins. 
 For events with $\ptgamma \lesssim 50\gev$, it is not possible at all to fulfil both requirements at the same time.
 
@@ -617,7 +616,7 @@ An overview of all systematic uncertainties can be found in Table~\ref{res:tab:U
 \multirow{2}{*}{\textbf{Multijet contamination}}& $+2.0 \% $ & $+2.0 \% $ & $+2.3 \% $ & $+2.5 \% $ \\
                                                 & $-2.0 \% $ & $-2.0 \% $ & $-2.3 \% $ & $-2.5 \% $ \\
 \multicolumn{5}{c}{} \\
-\multirow{2}{*}{\textbf{Simulation of flavor composition}}& $+0.9 \% $ & $+0.9 \% $ & $+0.8 \% $ & $+0.6 \% $ \\
+\multirow{2}{*}{\textbf{Simulation of flavour composition}}& $+0.9 \% $ & $+0.9 \% $ & $+0.8 \% $ & $+0.6 \% $ \\
 & $-0.9 \% $ & $-0.9 \% $ & $-0.8 \% $ & $-0.6 \% $ \\
 \multicolumn{5}{c}{} \\
 \multirow{2}{*}{\textbf{Simulation of out-of-cone showering}}& $+0.5 \% $ & $+2.8 \% $ & $+3.6 \% $ & $+5.7 \% $ \\
@@ -638,13 +637,13 @@ An overview of all systematic uncertainties can be found in Table~\ref{res:tab:U
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Uncertainty on the contamination with QCD-multijet events}
-Due to the huge QCD-multijet cross section, a countable fraction of dijet events can survive the strict photon selection (see Section~\ref{subsec:PhotonSelection}) if a jet is misidentified as a photon.
+Due to the huge QCD-multijet cross section, a sizable fraction of dijet events can survive the strict photon selection (see Section~\ref{subsec:PhotonSelection}) if a jet is misidentified as a photon.
 This happens, when \eg a jet hadronises to a $\pi^0$ that decays to two close-by photons that mimic the signature of an isolated photon from a $\GAMJET$ event.
 
 The two leading jets in a dijet event are balanced except for initial and final state radiation and have in principle the same topology as \GAMJET events.
 Therefore, the presented method is in principle insensitive to dijet contamination.
 Adverse effects of dijet background contamination are only expected due to a mismeasurement of the \pt of the jet misidentified as photon, because only the energy of the $\pi^0$ is counted and not the full jet energy.
-Another aspect is the different flavor composition of a QCD-multijet sample. 
+Another aspect is the different flavour composition of a QCD-multijet sample. 
 Due to the different production mechanism, QCD-dijets are predominantly initiated by gluons while the leading jet in $\GAMJET$ events often stems from a light quark.
 The number of particles after hadronisation is typically larger for gluon jets, hence the single particles are less energetic and out-of-cone showering is more pronounced.
 Since the residual imbalance~$q$ in this analysis is taken from simulation considering \GAMJET events only, it is not expected to accurately describe the residual imbalance in the data sample that is contaminated with dijet events.
@@ -662,35 +661,37 @@ It can be seen from Fig.~\ref{res:fig:QCDuncertainty} that the jet transverse-mo
   \label{res:fig:QCDuncertainty}
 \end{figure}
 
-The impact on the data-to-simulation ratio is estimated by adding the QCD-multijet sample on top of the simulated \GAMJET sample and redoing the evaluation of the scale factors.
+The observed difference in the results of the two approaches is taken as a systematic uncertainty FIXME.
+%The impact on the data-to-simulation ratio is estimated by adding the QCD-multijet sample on top of the simulated \GAMJET sample and redoing the evaluation of the scale factors.
 The resulting uncertainties vary between $2.0-2.5\%$ for the different $|\etafirstjet|$ regions (cf. Table~\ref{res:tab:Uncertainties}).
 
-\section*{Uncertainty on the flavor composition in simulation}
-A possible difference between the resolution of different jet flavors (\eg caused by more pronounced out-of-cone showering of gluon jets) should in principle not play a role for the data-to-simulation scale factors \rhores as long as the flavor composition in data and simulation is the same.
+\section*{Uncertainty on the flavour composition in simulation}
+A possible difference between the resolution of different jet flavours (\eg caused by more pronounced out-of-cone showering of gluon jets) should in principle not play a role for the data-to-simulation scale factors \rhores as long as the flavour composition in data and simulation is the same.
 
-To account for possible discrepancies in the flavor composition between data and simulation, the gluon and quark flavor fractions of the simulated sample (Fig~\ref{res:fig:FlavorFraction}) are varied by 10\%.
+To account for possible discrepancies in the flavour composition between data and simulation, the gluon and quark flavour fractions of the simulated sample (Fig~\ref{res:fig:FlavorFraction}) are varied by 10\%.
 \begin{figure}[!b]
   \centering
       \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/flavorFraction_barrel_algo.pdf}
-  \caption{The flavor composition in the simulated \GAMJET sample in the barrel region of the detector. The ``algorithmic'' flavor definition is used (see Appendix~\ref{res:app:FlavorDefinition} for more details).}  
+  \caption{The flavour composition in the simulated \GAMJET sample in the barrel region of the detector. The ``algorithmic'' flavour definition is used (see Appendix~\ref{res:app:FlavorDefinition} for more details).}  
   \label{res:fig:FlavorFraction}
 \end{figure}
 To estimate the effect of different flavour compositions, the resolution in simulation is separately evaluated for quarks ($\jer^\text{quarks}$) and gluons ($\jer^\text{gluons}$). 
 
-There are various definitions used in the CMS collaboration how to assign the underlying generator-level quark/gluon flavor to a jet.
-In this measurement the so-called ``algorithmic'' flavor definition is used which classifies b- or c-jets from gluon splitting as b- or c-quarks (see Appendix~\ref{res:app:FlavorDefinition} for more details on this definition).
+There are various definitions used in the CMS collaboration how to assign the underlying generator-level quark/gluon flavour to a jet.
+In this measurement the so-called ``algorithmic'' flavour definition is used (see Appendix~\ref{res:app:FlavorDefinition} for more details on this definition).
+%which classifies b- or c-jets from gluon splitting as b- or c-quarks 
 The composition in the simulated \pythia \GAMJET sample is around 60\% light quarks and 20\% to 35\% gluons (see Fig.~\ref{res:fig:FlavorFraction}). 
 The missing fraction is mainly made up out of charm quarks. 
 
 
-The left panel of Figure~\ref{res:fig:ResolutionDifferences} depicts the intrinsic resolution for all flavors separately for $|\etafirstjet|<1.3$.
+The left panel of Figure~\ref{res:fig:ResolutionDifferences} depicts the intrinsic resolution for all flavours separately for $|\etafirstjet|<1.3$.
 \begin{figure}[!t]
   \centering
       \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Figure_38_withNu_Teresa_updated_4.pdf}
       \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Figure_38_noNu_Teresa_updated_4.pdf}
       %\includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Figure_39_withNu_Teresa_updated_3.pdf}
       %\includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Figure_39_noNu_Teresa_updated_3.pdf}
-  \caption{The intrinsic resolution \jerintr for $|\etafirstjet| < 1.3$ for different jet flavors with (left) and without (right) including the neutrinos in the generator-level jet.
+  \caption{The intrinsic resolution \jerintr for $|\etafirstjet| < 1.3$ for different jet flavours with (left) and without (right) including the neutrinos in the generator-level jet.
            Here, JER refers to \jerintr, and $p_{\text{T,\,ptcl}}$ to the generator-level jet \pt. }  
   \label{res:fig:ResolutionDifferences}
 \end{figure}
@@ -701,17 +702,18 @@ This is not the case, if the neutrino \pt is not added to the generator-level je
 %However, for the here presented measurement is does not play a role whether the neutrino \pt is added to the generator-level jet \pt, because in case it is not included into the intrinsic response the long left tail of the response function for b- and c-quarks is then transferred to the imbalance response.
 %Thus, the right tail of b- and c-quarks does anyway enter the jet transverse-momentum resolution measurement with \GAMJET events, either in the intrinsic or in the imbalance response.
 
-In order to estimate the uncertainty, the flavor composition in simulation is varied by 10\% and the weighted mean of the quark and the gluon resolution is calculated.
-Finally, the constant fit to the data-to-simulation ratio $\jer^{\text{data}}/\jer^{\text{MC}}$ is reevaluated, leading to a final systematic uncertainty between $0.6-0.9\%$.
+In order to estimate the uncertainty, the flavour composition in simulation is varied by 10\% 
+%and the weighted mean of the quark and the gluon resolution is calculated. Finally,
+and the constant fit to the data-to-simulation ratio $\jer^{\text{data}}/\jer^{\text{MC}}$ is reevaluated, leading to a final systematic uncertainty between 0.6 and 0.9\%.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Uncertainty on the simulation of out-of-cone showering}
 Another source of uncertainty is the use of information from Monte Carlo simulation by determining the residual imbalance $q$ from the simulated \GAMJET sample (Eq.~\eqref{eq:total}).
 
-Since it cannot be expected that out-of-cone showering is well modelled in simulation, possible differences between real and simulated out-of-cone showering are estimated by the evaluation of the ratio $\jer^{\text{data}}/\jer^{\text{MC}}$ using different jet radii of the jet reconstruction algorithm. 
+Since it cannot be expected that out-of-cone showering is perfectly modelled in simulation, possible differences between real and simulated out-of-cone showering are estimated by the evaluation of the ratio $\jer^{\text{data}}/\jer^{\text{MC}}$ using different jet radii in the jet reconstruction algorithm. 
 
-For the primary analysis, jets reconstructed by the Anti-k$_{\text{t}}$ algorithm with a radius of $R=0.5$ are used (AK5-jets). 
-In order to evaluate the systematic uncertainty on the out-of-cone showering simulation, the measurement of \rhores redone with jets reconstructed with a jet radius of $R=0.7$ (AK7-jets). 
+For the primary analysis, jets reconstructed by the anti-k$_{\text{t}}$ algorithm with a radius parameter of $R=0.5$ are used (AK5-jets). 
+In order to evaluate the systematic uncertainty on the out-of-cone showering simulation, the measurement of \rhores is redone with jets reconstructed with a jet radius of $R=0.7$ (AK7-jets). 
 
 The data-to-simulation ratio is in all $|\etafirstjet|$ bins larger for AK7-jets, resulting in uncertainties between $0.5-5.7\%$.
 The uncertainty on the simulation of out-of-cone showering is thus the largest systematic uncertainty of this measurement.
@@ -723,8 +725,8 @@ The uncertainty on the simulation of out-of-cone showering is thus the largest s
 A further uncertainty arises from the correction of the jet energy scale.
 The transverse momentum of each jet is corrected in order to have uniform response over the full $\eta^{\text{jet}}$, and $\pt^{\text{jet}}$ range~\cite{bib:CMS:JME_PAS}.
 In data, it is additionally corrected to account for data-simulation differences.
-The latter correction can be a important for the evaluation of the data-to-simulation ratio.
-Thus, the uncertainties on the correction factors that are only applied to the data samples are varied up and down within their $1\sigma$-uncertainties.
+The latter correction can impact the evaluation of the data-to-simulation ratio.
+To estimate this effect, the uncertainties on the correction factors that are only applied to the data samples are varied up and down within their $1\sigma$-uncertainties.
 
 The effect of the jet \pt variation on the data-to-simulation ratio is of minor importance and range between $0.5-0.7\%$.
 
@@ -758,13 +760,13 @@ Exemplary extrapolations for the imbalance, the intrinsic and the measured resol
 \end{figure}
 The full set of figures for each \ptgamma and $|\etafirstjet|$ bin can be found in Appendix~\ref{res:app:extrapolationPlots}.
 
-Finally, the extracted resolutions in data and simulation in every \ptgamma bin are divided and a horizontal fit is applied to this ratio
+Finally, the extracted resolutions in data and simulation in every \ptgamma bin are divided and a constant is fitted to this ratio
 \begin{equation*}
 \frac{\jer^{\text{data}}}{\jer^{\text{MC}}} \left( \pt^{\gamma} \right).
 \end{equation*}
 In Fig.~\ref{res:fig:RatioEtaBinned}, the results for all four $|\etafirstjet|$-ranges are depicted. 
 The $\chi^2$/NDF-values for the four fits vary between 0.23 and 2.53. 
-Thus, a horizontal fit is justified, and one value for every $|\etafirstjet|$-bin will be reported.
+Thus, a constant fit is justified, and one value for every $|\etafirstjet|$-bin will be reported.
 
 \begin{figure}[!t]
  \centering
@@ -881,7 +883,7 @@ Both measurements are compatible within their statistical and systematic uncerta
 For a future measurement, a reduction of the uncertainties is desirable.
 The main source of uncertainty is the systematic uncertainty on the simulation of out-of-cone showering.
 Within this analysis, this uncertainty was estimated by varying the jet clustering radius from R=0.5 to R=0.7.
-This approach might be conservative, since the difference in \rhores associated with different jet clustering radii may include other effects than out-of-cone showering.
+This approach might overestimate the uncertainty FIXME, since the difference in \rhores associated with different jet clustering radii may include other effects than out-of-cone showering.
 Thus, a more detailed investigation of the quality of out-of-cone showering simulation could yield a reduced uncertainty of the \rhores measurement using \GAMJET events.
 
 Furthermore, an increase in the statistical precision is desirable to allow for the determination of resolution scale factors in the high pseudorapidity regions which have not been accessible so far.

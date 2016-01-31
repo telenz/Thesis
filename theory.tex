@@ -2,9 +2,9 @@
 \chapter{The Standard Model of particle physics}
 
 %With the formulation of a relativistic quantum field theory and of spontaneous supersymmetry breaking by the Higgs mechanism, it was made possible to explain almost all observations of particle physics up to today.
-The formulation of a relativistic quantum field theory and of spontaneous symmetry breaking (SSB) by the Brout-Englert-Higgs mechanism, allowed to built a theory which is capable to explain almost all observations of particle physics at colliders until today~\cite{bib:Theory:GFitter}.
-This theory is known as the Standard Model of particle physics (SM).
-The existence of its last missing piece, the Higgs boson, could be proven at the LHC in the year 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation}.
+The formulation of a relativistic quantum field theory and of spontaneous symmetry breaking (SSB) by the Brout-Englert-Higgs mechanism, allowed to build a theory which is capable of explaining almost all observations of particle physics at colliders until today~\cite{bib:Theory:GFitter}.
+This theory is known as the Standard Model (SM) of particle physics.
+Its last missing piece, the Higgs boson, was found at the LHC in the year 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation}.
 
 The Standard Model is a $SU(3)_C  \times SU(2)_L \times SU(1)_Y$ non-abelian gauge theory.
 ``After'' spontaneous symmetry breaking, its symmetries are reduced to $SU(3)_C \times U(1)_{EM}$.
@@ -13,18 +13,18 @@ Furthermore, it is able to describe three of the four fundamental forces: the st
 
 Despite its great success, there are many open questions that cannot be addressed within the Standard Model.
 These ``shortcomings'' of the Standard Model will be discussed in Section~\ref{sec:Limitations}.
-Before, however, a small introduction to the theory (Sections~\ref{sec:ParticleContent_SM}-~\ref{sec:HiggsMechanism}) of the Standard Model is given.
+Before, however, a small introduction to the theory (Sections~\ref{sec:ParticleContent_SM}-\ref{sec:HiggsMechanism}) of the Standard Model is given.
 It is not meant as a complete description.
-The reader is referred to~\cite{bib:SM_book_Peskin,bib:SM_book_Ryder,bib:SM_book_Griffiths}, for a thorough and extensive introduction.
+For a thorough and extensive introduction, the reader is referred to~\cite{bib:SM_book_Peskin,bib:SM_book_Ryder,bib:SM_book_Griffiths}. 
 
 \section{The particle content}
 \label{sec:ParticleContent_SM}
-It should be first noted, since the Standard Model is a quantum field theory, every field (to be more precise every degree of freedom of a field) can be considered also as a particle and vice versa.
+First, it should be noted, that since the Standard Model is a quantum field theory, every particle is considered as a field (to be more precise a degree of freedom of a field) and vice versa.
 
 The Standard Model of particle physics contains three different particle types, or three different types of fields.
 First, there are the so-called ``matter particles'', which are all spin\,1/2 particles in the SM.
 Second, the forces are described by spin\,1 vector bosons.
-And finally, in order to give masses to all particles the Standard Model embeds the Higgs boson, a scalar spin\,0 particle.
+And finally, in order to give masses to all particles, the Standard Model embeds the Higgs boson, a scalar spin\,0 particle.
 
 \subsection*{Fermions in the Standard Model}
 The fermionic content can be further subdivided into leptons and quarks.
@@ -45,8 +45,8 @@ For $U(1)_Y$, it is the $B$-boson, for $SU(2)_L$, there are three gauge bosons $
 As the $B$-field and the neutral $W^3$-field can mix, a change in the basis is possible ``after'' SSB and leads to the well known photon and $Z$-boson.
 
 \subsection*{The Higgs boson}
-A somehow extraordinary role plays the Higgs boson, that was predicted already 50 years ago by Peter Higgs~\cite{bib:Higgs_Prediction,bib:Higgs_Prediction_2} and could be proven existent by the LHC experiments CMS and ATLAS in 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation}.
-This particle is a consequence of the spontaneous symmetry breaking after rotating three of the four degrees of freedom to masses of the $W$-and $Z$-bosons.
+The Higgs boson which was already predicted 50 years ago by Peter Higgs~\cite{bib:Higgs_Prediction,bib:Higgs_Prediction_2} and was found by the LHC experiments CMS and ATLAS in 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation} plays a somehow extraordinary role.
+This particle is a consequence of spontaneous symmetry breaking after rotating three of the four degrees of freedom of the Higgs field to masses of the $W$-and $Z$-bosons.
 It is the only known fundamental scalar particle.\\
 
 
@@ -57,7 +57,8 @@ The hypercharges $Y$ are determined by $Q=Y+I_3$, where $Q$ is the electric char
 \renewcommand{\arraystretch}{1.4}
 \begin{table}[!h]
 \centering
-\caption{All particles contained in the Standard Model and their transformation properties under $SU(3)_C  \times SU(2)_L \times SU(1)_Y$.}
+\caption{All particles contained in the Standard Model and their transformation properties under $SU(3)_C  \times SU(2)_L \times U(1)_Y$. 
+         For the gauge groups $SU(3)_C$ and $SU(2)_L$, the representations are listed whereas for $U(1)_Y$ the hypercharge is given.}
 \label{tab:ParticleContent_SM}
 \makebox[0.99\textwidth]{
 \begin{tabular}{llll}
@@ -90,7 +91,7 @@ Higgs boson: $H$            &  \textbf{1}        & \textbf{2}             & $-1$
 \section{The Lagrangian density}
 In particle physics, the probability of a decay or an interaction between particles can be calculated with the help of the Lagrangian density.
 The Lagrangian density of the Standard Model is the most general set of Lagrangian terms, that are renormalisable and contain all up to date known particles as well as the above mentioned gauge symmetries.
-It is the following:
+The full SM Lagrangian density reads as follows:
 \begin{equation}
 \begin{split}
  \mathcal{L} =& \left( D_{\mu} \Phi \right)^{\dagger} \left( D^{\mu} \Phi \right) -\mu^2\Phi^{\dagger} \Phi -\frac{\lambda}{4} \left( \Phi^{\dagger} \Phi \right)^2\\
@@ -101,13 +102,13 @@ It is the following:
 \end{split}
 \label{eq:LagrangianDensity}
 \end{equation}
-with $\slashed{D} = \gamma_{\mu} D^{\mu}$ and the covariant derivative $D^{\mu}=\partial^{\mu} + i g' Y_W B^{\mu} - i g C_1  I^a W_a^{\mu}  - i g_S C_2 T^a G_a^{\mu}$.
-$I^a$ and $T^a$ denote hereby the generators of the $SU(2)_L$ and $SU(3)_C$, respectively.
+with $\slashed{D} = \gamma_{\mu} D^{\mu}$ and the covariant derivative $D^{\mu}=\partial^{\mu} + i g' Y_W B^{\mu} - i g C_1  I^a W_a^{\mu}  - i g_S C_2 T^a G_a^{\mu}$ where the three gauge couplings $g$, $g'$ and $g_S$ appear.
+$I^a$ and $T^a$ denote the generators of the $SU(2)_L$ and $SU(3)_C$, respectively.
 They are connected to the three Pauli matrices and the eight Gell-Mann matrices by $I^a = \frac{\sigma^a}{2}$ and $T^a = \frac{\lambda^a}{2}$.
-Adding the hypercharge $Y_W$ and the third component of the weak isospin result in the electrical charge $Q=Y_W + I_3$.
+The sum of the hypercharge $Y_W$ and the third component of the weak isospin yields the electrical charge $Q=Y_W + I_3$.
 Furthermore, it is $C_1=1 $ for doublets and $C_1=0$ for singlets under $SU(2)_L$, $C_2=1$ for triplets and $C_2=0 $ for singlets under $SU(3)_C$.  
 
-The first line in Eq.~\eqref{eq:LagrangianDensity} correspond to the kinetic term of the Higgs field and its potential.
+The first line in Eq.~\eqref{eq:LagrangianDensity} corresponds to the kinetic term of the Higgs field and its potential.
 Via this Higgs field, it is possible to give masses to the $Z$-and $W^{\pm}$-bosons as well as the fermions.
 This will be explained in detail in the following Section~\ref{sec:HiggsMechanism}.
 The second line describes the kinetic terms of the leptons and quarks.
@@ -117,7 +118,7 @@ The left-handed leptons and quarks are described as $SU(2)_L$ doublets, $L_I^L =
 Quarks carry a further quantum number, the colour, which is indicated by the index $b$ with $b=1,2,3$.
 Quarks transform as triplets under the $SU(3)_C$ gauge group.
 The third line contains the interaction terms between the fermions and the Higgs boson, called Yukawa interactions.
-These terms lead after SSB to the fermion mass terms, as can be seen later.
+After SSB, these terms lead to the fermion mass terms as can be seen later.
 The last line correspond to the kinetic terms of the gauge fields.
 These are connected to the field strength tensors by
 \begin{equation}
@@ -129,25 +130,24 @@ These are connected to the field strength tensors by
             =& \left( \partial^{\mu} G_a^{\nu} -\partial^{\nu} G_a^{\mu} + g_S f_{abc} G_b^{\mu} G_b^{\nu}  \right) \frac{\lambda_a}{2} \equiv \frac{\lambda_a}{2} G_a^{\mu\nu}.\\
  \end{split}
 \end{equation}
-The factors $\epsilon_{ijk}$ and $f_{abc}$ are hereby the structure constants of the corresponding Lie groups.
-The summation over all indices that appear twice is included.
+The factors $\epsilon_{ijk}$ and $f_{abc}$ are the structure constants of the corresponding Lie groups.
+The notation implies a summation over all indices that appear twice.
 
 \section{The Brout-Englert-Higgs mechanism}
 \label{sec:HiggsMechanism}
 An essential ingredient of the Standard Model is the Brout-Englert-Higgs mechanism (BEH mechanism), earlier also called Higgs mechanism.
-It was developed by Peter Higgs, Robert Brout and Fran\c{c}ois Englert in 1960s~\cite{bib:HiggsMechanism_Brout_Englert,bib:Higgs_Prediction,bib:Higgs_Prediction_2,bib:HiggsMechanism_Guralnik_Hagen_Kibble,bib:HiggsMechanism_Higgs_1966,bib:HiggsMechanism_Kibble_1967}. Based on a work from Sheldon Glashow~\cite{bib:HiggsMechanism_Glashow_1961}, Steven Weinberg and Abdus Salam later applied it on a $SU(2) \times U(1)$ gauge theory~\cite{bib:HiggsMechanism_Weinberg_1967,bib:HiggsMechanism_Salam_1968}.
-By this, a renormalisable theory of the weak and the electromagnetic theory was born.
-Together with the theory of strong interaction, the formulation of the Standard Model was thus by this time complete.
+It was developed by Peter Higgs, Robert Brout and Fran\c{c}ois Englert in the 1960s~\cite{bib:HiggsMechanism_Brout_Englert,bib:Higgs_Prediction,bib:Higgs_Prediction_2,bib:HiggsMechanism_Guralnik_Hagen_Kibble,bib:HiggsMechanism_Higgs_1966,bib:HiggsMechanism_Kibble_1967}. Based on work from Sheldon Glashow~\cite{bib:HiggsMechanism_Glashow_1961}, Steven Weinberg and Abdus Salam later applied it to a $SU(2) \times U(1)$ gauge theory~\cite{bib:HiggsMechanism_Weinberg_1967,bib:HiggsMechanism_Salam_1968}.
+By this, a renormalisable theory of the weak and the electromagnetic interactions was born.
+Together with the theory of strong interaction, the formulation of the Standard Model was thus complete by this time.
 
 \subsection*{Mass terms of the gauge bosons}
-
 Due to the BEH mechanism, it is possible to give masses to the $W^{\pm}$-and Z-bosons.
 A scalar field $\Phi$ (Higgs field) is required, which has a non-zero vacuum expectation value.
-This is possible, when the mass parameter $\mu$ in front of the bilinear term in line one of Eq.~\eqref{eq:LagrangianDensity} is smaller than zero and $\lambda>0$ at the same time.
+This is possible, if the mass parameter $\mu$ in front of the bilinear term in line one of Eq.~\eqref{eq:LagrangianDensity} is smaller than zero and $\lambda>0$ at the same time.
 
 The resulting potential of the Higgs field is then the famous ``Mexican hat'' potential.
-Expanding the Lagrangian density around the minimum of $\Phi = \left( 0,v \right)$, the gauge symmetries of $SU(2)_L \times U(1)_Y$ are spontaneously broken and only a remaining electrical charge conserving symmetry $U(1)_{EM}$ remains.
-After an unitary transformation, three of the four degrees of freedom of the Higgs field are absorbed by the gauge fields .
+Expanding the Lagrangian density around the minimum of $\Phi = \left( 0,v \right)$, the gauge symmetries of $SU(2)_L \times U(1)_Y$ are spontaneously broken and only the electrical charge conserving symmetry $U(1)_{EM}$ remains.
+After a unitary transformation, three of the four degrees of freedom of the Higgs field are absorbed by the gauge fields.
 Thus, ``after'' SSB, the part of the Lagrangian containing the scalar field is as follows
 \begin{equation}
 \begin{split}
@@ -158,8 +158,8 @@ Thus, ``after'' SSB, the part of the Lagrangian containing the scalar field is a
 \label{eq:LHiggs}
 \end{equation}
 One kinetic and one mass term for one of the degrees of freedom of the Higgs fields remains, which is the Higgs boson ($h^0$).
-Furthermore, three of the four gauge bosons require a mass.
-The remaining gauge boson, being the photon remains massless because of the conserved $U(1)_{EM}$ gauge symmetry.
+Furthermore, three of the four gauge bosons acquire a mass.
+The remaining gauge boson, the photon, remains massless because of the conserved $U(1)_{EM}$ gauge symmetry.
 
 The mass eigenstates of the gauge bosons in Eq.~\eqref{eq:LHiggs} are obviously different to the interaction eigenstates in Eq.~\eqref{eq:LagrangianDensity}.
 The diagonalisation of the neutral mass matrices is described by the Weinberg angle $\theta_W$
@@ -171,7 +171,7 @@ For the charged gauge bosons, the relation between $W_{1,2}$ and $W^{\pm}$ is th
 \begin{equation}
  W_{\mu}^{\pm}= \frac{1}{\sqrt{2}} \left[ W_{\mu}^1 \mp W_{\mu}^2  \right].
 \end{equation}
-Consequently, the masses of the gauge bosons are the following
+Consequently, the masses of the gauge bosons are the following (with $\sin{\theta_W} = \frac{g'}{\sqrt{g^2 + g'^2}}$)
 \begin{equation}
  \begin{split}
   M_H =\,&  \sqrt{2} \mu\\
@@ -187,7 +187,7 @@ The mass is measured to $m_{h^0}=125.09 \pm 0.21\text{(stat.)} \pm 0.11\text{(sy
 
 \subsection*{Mass terms of the fermions}
 Fermion mass terms cannot be easily inserted into the Lagrangian density in Eq.~\eqref{eq:LagrangianDensity}, since they would violate the imposed gauge symmetries.
-With the help of the BEH mechanism it is possible to generate fermion mass terms via the Yukawa interactions terms (line three of Eq.~\eqref{eq:LagrangianDensity}).
+With the help of the BEH mechanism it is possible to generate fermion mass terms via the Yukawa interaction terms (line three of Eq.~\eqref{eq:LagrangianDensity}).
 After spontaneous symmetry breaking, the Yukawa interactions lead to the following mass terms (colour indices are suppressed)
 \begin{equation}
  \begin{split}
@@ -231,20 +231,21 @@ Since the Standard Model does not contain right-handed neutrinos, there are no g
 Despite the great success of the Standard Model, there remain observations and theoretical considerations that cannot be answered within the SM.
 In the following, the most important of such ``limitations'' shall be reviewed.\\
 
-First of all, the Standard Model suffers of the so-called hierarchy problem.
-By this, the problem is addressed that quadratic divergencies occur in the calculation of the Higgs self-coupling.
+First of all, the Standard Model suffers from the so-called hierarchy problem.
+It is caused by the occurrence of quadratic divergencies in the calculation of the Higgs mass.
 The appearance of infinities is not uncommon in higher order calculations and happens for all particles. 
 Still, for scalar particles the infinite term is quadratically divergent, which makes a huge difference compared to the logarithmic divergencies for fermion self-energies. 
 When considering the Standard Model valid up to the Planck scale, an extraordinary fine-tuning would be needed to cancel a large bare mass with large counter terms 
 \begin{equation}
- m^{\text{ren}\,2}_{h^0} = m_{h^0}^{\text{bare}\,2} + \Delta m^2_{h^0}.
+ m^{\text{ren}\,2}_{h^0} = m_{h^0}^{\text{bare}\,2} + \Delta m^2_{h^0}
 \end{equation}
-to end up with a mass of about 125\gev.
-Thus, this renormalisation procedure, even if mathematically possible, is regarded as highly unnatural in physics.
-The question which is usually imposed is, why is the Higgs mass so small, when there are such massive corrections to the bare bass?
+to end up with a Higgs mass of about 125\gev.
+Thus, this renormalisation procedure, even if mathematically possible, is regarded as highly unnatural.
+This raises the question why the Higgs mass is so small, despite the presence of such massive radiative corrections to the bare bass.
 A formulation of naturalness was given by t'Hooft in 1977~\cite{bib:Naturalness_tHooft}. 
-He stated, that a small parameter can be regarded only natural, if the symmetries of the theory are enhanced by setting this parameter to zero.
-In the Standard Model, though,  there is no enhancement of the symmetries of the Lagrangian by setting $\mu=0$, thus the small mass of the Higgs boson compared to the Planck scale is considered as highly unnatural.
+He stated, that a small parameter can only be regarded natural, if the symmetries of the theory are enhanced by setting this parameter to zero.
+In the Standard Model, though, there is no enhancement of the symmetries of the Lagrangian by setting $\mu=0$.
+Thus, the small mass of the Higgs boson compared to the Planck scale is considered as highly unnatural.
 
 
 %The question to solve ois thus, why is the higgs mass so small, 
@@ -266,7 +267,7 @@ In the Standard Model, though,  there is no enhancement of the symmetries of the
 
 A further and probably the most striking shortcoming of the Standard Model is the missing fourth fundamental force, the gravitational force.
 Within the SM, it is not possible to add renormalisable terms, that can describe the gravitational force.
-Although, gravity is not important for particle physics at energies that are accessible at current particle colliders (it only becomes important at the Planck scale $\sim 10^{19}\gev$), the fact that it cannot be embedded into the Standard Model leads to an understanding of the SM as effective theory, only valid for lower energies.
+Although, gravity is not important for particle physics at energies that are accessible at current particle colliders (it only becomes important at the Planck scale $\sim 10^{19}\gev$), the fact that it cannot be embedded into the Standard Model leads to an understanding of the SM as an effective theory, only valid for low energies.
 Thus, it is obviously not an ultimate theory and something must be beyond.
 
 Furthermore, in particle physics there is always the wish to describe nature with a theory as simple as possible.
@@ -277,7 +278,7 @@ Unfortunately, they don't meet exactly.
 Therefore, a unification is not achievable in the Standard Model under the assumption that there are no new particles up to the GUT scale.
 
 
-Finally, there is experimental evidence, which cannot be explained within the Standard Model.
+Finally, there is experimental evidence that cannot be explained within the Standard Model.
 Astrophysical observations suggest that there is a large amount of dark matter (DM) in the universe, that cannot be explained with the particle content of the Standard Model.
 Measurements of the velocity curves of galaxies, \eg M33~\cite{bib:DM:RotationCurves} show discrepancies between the observed velocities and the predicted velocities by the visible matter.
 The share of non-visible matter to the total amount of matter in the universe is estimated to be $~84\%$~\cite{bib:Planck_2015}.
@@ -289,7 +290,7 @@ Unfortunately, there is no suitable (only weakly interacting) candidate within t
 
 
 %There are far more open questions, not all addressed here.
-%The reader is referred to~\cite{FIXME} to get a more detailed overview about the limitations of the SM.
+%The reader is referred to~\cite{} to get a more detailed overview about the limitations of the SM.
 
 In the following Chapter~\ref{ch:Supersymmetry}, a theory is introduced, that can address most of the above mentioned problems.
 This theory is called supersymmetry.
@@ -305,16 +306,17 @@ For fermions, on the other hand, there is a further symmetry for $m_f=0$.
 The Lagrangian density becomes invariant under chiral transformations of the form $\Psi \rightarrow e^{i\vec{\alpha}\frac{\vec{\sigma}}{2} \gamma_5} \Psi$.
 Although the mass terms of the fermions break this symmetry, it protects the fermions against large radiative corrections.
 
-Due to these considerations, it seems natural to protect also the scalar mass by an additional symmetry.
+Due to these considerations, it seems natural to transfer the mechanism of protecting fermion masses to scalar masses as well.
+This can only be done by connecting fermions with bosons and vice versa.
 A work from Golfand and Likhtman in the year 1971 stated that an extension of the Poincar\'e  algebra is possible via fermionic generators~\cite{bib:Golfand_Likhtman_1971}.
 R.~Haag, J.~Lopuszanski and M.~Sohnius finalised these considerations by showing that with the help of fermionic generators a connection between space-time symmetries and internal symmetries is possible~\cite{bib:Haag_1974}.
 The extensions of a symmetry group by fermionic generators is called supersymmetry (SUSY).
 These were the foundation of supersymmetric theories.\\
 
-In the following, few aspects of supersymmetric theories are discussed.
+In the following, the most important aspects of supersymmetric theories are discussed.
 For a detailed introduction the reader is referred to~\cite{bib:Drees_1996,bib:Aitchison_2005,bib:Drees_2004}.
 
-In the subsequent sections, the descriptions is restricted to the case of $N=1$ supersymmetry, \ie there is only one supersymmetric generator and thus only one supersymmetric partner for every particle.
+In the subsequent sections, the description is restricted to the case of $N=1$ supersymmetry, \ie there is only one supersymmetric generator and thus only one supersymmetric partner for every particle.
 A supersymmetric transformation transfers every bosonic state into a fermionic state and vice versa  
 \begin{equation}
 \begin{split}
@@ -322,43 +324,22 @@ A supersymmetric transformation transfers every bosonic state into a fermionic s
  Q\, |\text{fermion}\rangle  &= |\text{boson}\rangle.
 \end{split}
 \end{equation}
-The most important (anti-) commutation relations for SUSY algebra with spinors Q are
+The most important (anti-) commutation relations for SUSY algebra with fermionic generators Q are
 \begin{align}
 \label{eq:SUSYal}
  \{Q_{\alpha},Q_{\beta} \} &=  \{Q^{\dagger}_{\dot{\alpha}},Q^{\dagger}_{\dot{\beta}} \} = 0,\nonumber \\
    [Q_{\alpha} , P_{\mu}] &=  [Q^{\dagger}_{\dot{\alpha}}, P_{\mu}] = 0 ,\\
 \{Q_{\alpha},  Q^{\dagger}_{\dot{\alpha}}\} &= 2 \sigma_{\alpha\dot{\alpha}}^{\mu} P_{\mu} \nonumber.
 \end{align}
-$P_{\mu}$ denotes hereby the four component generator of translations. 
-Additionally, it is $\sigma^{\mu} = \left( \mathbbm{1}, \sigma_i  \right)$ with the Pauli matrices $\sigma_i$.
-From the second relation in~\eqref{eq:SUSYal} it follows
+Here, $P_{\mu}$ denotes the four component generator of translations and $\sigma^{\mu} = \left( \mathbbm{1}, \sigma_i  \right)$ with the Pauli matrices $\sigma_i$.
+From the second relation in~\eqref{eq:SUSYal} follows
 \begin{align}
 \label{eq:Massen}
  [Q_{\alpha} , P^2] &=  [Q^{\dagger}_{\dot{\alpha}}, P^2] = 0.
 \end{align}
-Equation~\ref{eq:Massen} implies, that particles that are transformed into each other with the generator $Q$ need to have same eigenvalues of $P^2$, thus, also same masses.
-This impose obviously a problem, since no ``scalar electron'' was ever found with a mass of 0.51\mev.
-This problem will be discussed later.\\
-
-In supersymmetry, all particles and their partner particles are described by so-called supermultiplets.
-Since the generators of the gauge group commute with the generators of supersymmetry, all particles within one supermultiplet have same quantum numbers, besides the spin (as shown in Eq.~\ref{eq:Massen}, they have also same masses).
-In a renormalisable theory, there are two different types of supermultiplets: chiral multiplets, which contain a  two-component Weyl spinor and a complex scalar field and vector multiplets with a vector boson and a two-component Weyl spinor.
-The number of degrees of freedom are thus for chiral multiplets for on-shell particles
-\begin{equation*}
-\begin{split}
-& n_f=2,\ \text{due to the two-component Weyl spinor}\\
-& n_b=2,\ \text{due to the complex scalar field}, 
-\end{split}
-\end{equation*}
-and for vector multiplets for on-shell particles
-\begin{equation*}
-\begin{split}
-& n_f=2,\ \text{due to the two-component Weyl spinor}\\
-& n_b=2,\ \text{due to the vector field}. 
-\end{split}
-\end{equation*}
-As mentioned before, in a realistic extension of the Standard Model, supersymmetry cannot be exact, since no supersymmetric particles have been found which have the same masses as their SM partners.
-This implies, that SUSY must be broken.
+Equation~\ref{eq:Massen} implies, that particles that are transformed into each other with the generator $Q$ need to have the same eigenvalues of $P^2$, thus, also the same masses.
+This obviously imposes a problem, since no ``scalar electron'' was ever found with a mass of 0.51\mev.
+Therefore, SUSY must be broken.
 There are many ideas how the breaking can actually happen.
 However, since up to now, only little is known about the breaking mechanism, usually further terms which break SUSY explicitly, are added by hand to the Lagrangian density.
 These terms can parametrise SUSY breaking without any knowledge about the breaking mechanism.
@@ -373,7 +354,7 @@ Thus, calculating radiative corrections of the Higgs boson mass in a supersymmet
 If SUSY were exact, the quadratic divergencies $\Delta m^2_{h^0}$ would exactly cancel. 
 However, as argued, SUSY must be broken.
 The cancellation of quadratic divergencies can therefore only be assured, if the breaking is not too drastic and only logarithmic divergencies remain.
-To avoid a new source of fine-tuning, the soft-breaking parameters should be of the order $M_{\rm soft} \sim 100\gev - 1000\gev$.
+%To avoid a new source of fine-tuning, the soft-breaking parameters should be of the order $M_{\rm soft} \sim 100\gev - 1000\gev$.
 
 It is not possible to implement gravity within a renormalisable supersymmetric extension of the Standard Model.
 However, so-called string theories are able to incorporate quantum gravity and, furthermore, such string theories usually are based on supersymmetry.
@@ -383,7 +364,7 @@ Therefore, supersymmetry is usually considered as a crucial ingredient for the d
 The renormalisation group equations change under a supersymmetric extension of the Standard Model.
 By this, a unification of the gauge couplings at a GUT scale of about $10^{16}\gev$ is possible, as can be seen in Fig.~\ref{fig:Unification}.
 It can be nicely seen, that all three gauge couplings cross each other within the uncertainties.
-\begin{figure}[t]
+\begin{figure}[!b]
   \centering
       \includegraphics[width=0.49\textwidth]{figures/theory/running_couplings_SM}
       \includegraphics[width=0.49\textwidth]{figures/theory/running_couplings_MSSM}
@@ -394,7 +375,7 @@ It can be nicely seen, that all three gauge couplings cross each other within th
 Besides these arguments, SUSY can also provide an answer to the problem of non-visible matter in the universe.
 If the conservation of the so-called R-parity is required, the lightest supersymmetric particle (LSP) is stable.
 If this particle is only weakly interacting, it can serve as a good candidate to explain fully or partially the sources of the relic density. 
-R-parity is a multiplicative quantum number with
+R-parity is a multiplicative quantum number with 
 \begin{equation}
 \begin{aligned}
 P_R & =  1 \qquad &&\text{SM particles}\\
@@ -413,18 +394,36 @@ In the following section, the particle content of the MSSM is introduced.
 
 \subsection{The particle content of the MSSM}
 In $N=1$ supersymmetry, every SM particle has exactly one supersymmetric partner particle, which leads to a doubling of the particle content in the MSSM with respect to the SM.
-Additionally, there is a necessity for a second Higgs doublet.
-The second doublet is needed to ensure the holomorphicity of the superpotential when also mass terms for the up-type particles shall be created.
-Furthermore, the MSSM stays only free from anomalies if there is a further Higgs doublet.
+Additionally, it is necessary to introduce a second Higgs doublet to ensure the holomorphicity of the superpotential in the presence of mass terms for the up-type particles.
+Furthermore, the MSSM only stays free from anomalies if there is a further Higgs doublet~\cite{bib:SUSYPrimer}.
 This leads to the fact, that in the MSSM, there are five Higgs bosons instead of only one as in the SM.
+
+In supersymmetry, all particles and their partner particles are described by so-called supermultiplets.
+Since the generators of the gauge group commute with the generators of supersymmetry, all particles within one supermultiplet have same quantum numbers, besides the spin.
+In a renormalisable theory, there are two different types of supermultiplets: chiral multiplets, which contain a two-component Weyl spinor describing the fermionic degrees of freedom and a complex scalar field for the bosonic degrees of freedom; vector multiplets containing a vector field and a two-component Weyl spinor.
+%The number of degrees of freedom are thus for chiral multiplets for on-shell particles
+%\begin{equation*}
+%\begin{split}
+%& n_f=2,\ \text{due to the two-component Weyl spinor}\\
+%& n_b=2,\ \text{due to the complex scalar field}, 
+%\end{split}
+%\end{equation*}
+%and for vector multiplets for on-shell particles
+%\begin{equation*}
+%\begin{split}
+%& n_f=2,\ \text{due to the two-component Weyl spinor}\\
+%& n_b=2,\ \text{due to the vector field}. 
+%\end{split}
+%\end{equation*}
+%As mentioned before, in a realistic extension of the Standard Model, supersymmetry cannot be exact, since no supersymmetric particles have been found which have the same masses as their SM partners.
 The complete particle content of the MSSM is depicted in Tables~\ref{tab:chiral_multiplets} and~\ref{tab:vector_multiplets}.
 
-Since in supersymmetric theories only left-handed Weyl spinors appear in the Lagrangian density, the right-handed are described as charge conjugated spinors of the left-handed spinors.
+Since in supersymmetric theories only left-handed Weyl spinors appear in the Lagrangian density, the right-handed particles are described as charge conjugated spinors of the left-handed spinors.
 
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
-\caption{Chiral supermultiplets in the MSSM}
+\caption{Chiral supermultiplets in the MSSM.}
 \label{tab:chiral_multiplets}
 \makebox[0.99\textwidth]{
 \begin{tabular}{l|c|c|c|c}
@@ -449,13 +448,13 @@ Since in supersymmetric theories only left-handed Weyl spinors appear in the Lag
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
-\caption{Vector supermultiplets in the MSSM}
+\caption{Vector supermultiplets in the MSSM.}
 \label{tab:vector_multiplets}
 \makebox[0.99\textwidth]{
 \begin{tabular}{l|c|c|c}
 \multicolumn{4}{c}{} \\
 \toprule
-                      &   spin $\frac{1}{2}$                                  & spin 0                 & $SU(3)_C,\ SU(2)_L,\ U(1)_Y$\\ 
+                      &   spin $\frac{1}{2}$                                  & spin 1                 & $SU(3)_C,\ SU(2)_L,\ U(1)_Y$\\ 
 \midrule
    gluinos/gluons     & $\tilde{g}$                       & $g$                 & $\bf{8},\ \bf{1},\ 0$\\ 
 \midrule
@@ -471,8 +470,8 @@ Since in supersymmetric theories only left-handed Weyl spinors appear in the Lag
 
 \subsection{The Lagrangian density of the MSSM}
 \label{sec:Lagrange_MSSM}
-In the following only the most important parts of the MSSM Lagrangian density will be described.
-The reader is again referred to~\cite{bib:Drees_2004} for a complete description of the Lagrangian density.
+In the following, only the most important parts of the MSSM Lagrangian density will be described.
+For a complete description of the Lagrangian density, the reader is again referred to~\cite{bib:Drees_2004}.
 
 \subsubsection*{The superpotential}
 The superpotential of the MSSM contains the self interaction terms of the Higgs bosons and generates the interaction terms of the Higgs bosons with the fermions and their superpartners.
@@ -505,7 +504,7 @@ In order not to introduce new sources of quadratic divergencies, only bilinear a
 \end{equation}
 The first line contains mass terms for the Higgs bosons, the second and third line for the sfermions.
 In the fourth and fifth line the trilinear couplings between the Higgs bosons and the sfermions appear.
-Finally, the last line give rise to mass terms for the gauginos.
+Finally, the last line gives rise to mass terms for the gauginos (gluinos, winos, bino).
 
 Because of the soft-breaking terms, the MSSM contains more than 100 free parameters.
 Constraining the MSSM is thus a difficult task and usually in experimental particle physics, constrained versions of the MSSM or assumptions at the GUT scale are used to report the impact of searches on SUSY. 
@@ -514,7 +513,7 @@ With its reduced parameter space, it allows to elaborate on long-lived particles
 
 \subsection{The phenomenological MSSM}
 \label{subsec:pMSSM}
-The phenomenological MSSM (pMSSM) imposes constraints that are reasonable in the sense to fulfil current observations and still keep the phenomenological richness of the MSSM~\cite{bib:pMSSM}.
+The phenomenological MSSM (pMSSM) imposes constraints that are reasonable in the sense that the pMSSM fulfils current observations and still keeps the phenomenological richness of the MSSM~\cite{bib:pMSSM}.
 The following assumptions are imposed (in~\cite{bib:pMSSM} more detailed information about these assumptions can be found):
 \begin{itemize}
 \item No new sources of CP violation,
@@ -535,10 +534,10 @@ The remaining free parameters are the following:
 
 \section{Supersymmetry breaking}
 As already noted, the mechanism of supersymmetry breaking is unknown.
-There exists however, several ideas how to spontaneously break supersymmetry.
-All mechanism have in common that they need to happen at high energies in a hidden sector.
+There exist, however, several ideas how to spontaneously break supersymmetry.
+All mechanisms have in common that they need to happen at high energies in a hidden sector.
 ``Messenger'' particles are introduced which mediate the breaking to the TeV scale.
-This, however, implies that supersymmetry breaking is a question of high-energy physics and one can always parametrise the breaking by the soft breaking terms introduced in Section~\ref{sec:Lagrange_MSSM}.
+This, however, implies that supersymmetry breaking is a question of extraordinary high energies and one can parametrise the breaking by the soft breaking terms introduced in Section~\ref{sec:Lagrange_MSSM}.
 
 The most popular breaking mediation mechanisms are gravity-mediated supersymmetry breaking~\cite{bib:GravityMediation} and gauge-mediated supersymmetry breaking~\cite{bib:GaugeMediation}.
 
@@ -548,12 +547,12 @@ There are various mechanisms how particles can be long-lived, such as small coup
 For a comprehensive review, the reader is referred to~\cite{bib:LonglivedParticles_Overview}.
 
 In this thesis, the focus is set on particles that have a long lifetime due to a small decay phase space. 
-A phase space suppression is possible when the mass splitting between the decayed particle and one of the decay products is very small.
+A phase space suppression is possible when the mass splitting between the decaying particle and one of the decay products is very small.
 In Part~\ref{part:analysis}, a search for highly ionising, short tracks is presented.
 This search is motivated by long-lived charginos, that are nearly mass-degenerate with the lightest supersymmetric particle, the neutralino.
 The underlying mechanism of this mass-degeneracy in the MSSM will be addressed in the next paragraphs.
 
-In the MSSM, the lightest chargino (\chipm) and the lightest neutralino (\chiO) can be almost mass-degenerate, when the wino mass parameter ($M_2$) is smaller than the bino ($M_1$) and higgsino ($\mu$) mass parameters.
+In the MSSM, the lightest chargino (\chipm) and the lightest neutralino (\chiO) can be almost mass-degenerate, if the wino mass parameter ($M_2$) is smaller than the bino ($M_1$) and higgsino ($\mu$) mass parameters.
 This can be seen from the chargino and neutralino mass matrices.
 The chargino mass matrix in the basis $\Psi^+_i= \left(-i \tilde{W}^+,\tilde{h}_u^+  \right)$ and \mbox{$\Psi^-_i= \left(-i \tilde{W}^-,\tilde{h}_d^-  \right)$} is given by 
 \begin{flalign}
@@ -608,9 +607,9 @@ Afterwards, the generated 3 million pMSSM models are confronted with theoretical
 Theoretical constraints are \eg requiring stable vacua and no colour- or charge breaking minima.
 Furthermore, the agreement with precision electroweak data, heavy flavour physics and collider results from LEP, Tevatron and LHC is required.
 The accordance with relic density data is only implemented as an upper bound.
-Phenomenological MSSM models surviving these constraints and which have a wino-like neutralino as lightest supersymmetric particle do also contain frequently a metastable chargino.
+Phenomenological MSSM models that survive these constraints and have a wino-like neutralino as lightest supersymmetric particle, do frequently contain  a metastable chargino.
 In a fraction of $\sim 25\%$ of these models, the metastable chargino decays inside the tracker, calorimeter or muon chamber.
-Furthermore, in these scenarios, the mass splitting between chargino and neutralino is typically of the order of $\sim160\mev$~\cite{bib:pMSSMScan_2013}.
+The mass splitting between chargino and neutralino in these scenarios is typically of the order of $\sim160\mev$~\cite{bib:pMSSMScan_2013}.
 
 
 
@@ -630,20 +629,20 @@ Charginos are excluded up to a mass of 92.4\gev~\cite{bib:LEP:SUSY_results}.
 \begin{figure}[!h]
   \centering
       \includegraphics[width=0.45\textwidth]{figures/theory/mass_adlo_gaug_1.pdf}
-  \caption{Observed and expected exclusion limits in the $m_{\chipm}-\Delta m \left( \chipm, \chiO \right)$ plane for almost degenerate $M_1$ and $M_2$ and a large unified scalar mass $m_0$. Taken from~\cite{bib:LEP:SUSY_results}.}  
+  \caption{Observed and expected exclusion limits by LEP searches in the $m_{\chipm}-\Delta m \left( \chipm, \chiO \right)$ plane for almost degenerate $M_1$ and $M_2$ and a large unified scalar mass $m_0$. Taken from~\cite{bib:LEP:SUSY_results}.}  
   \label{fig:LEP}
 \end{figure}
 
 \subsection*{Searches at ATLAS at 7 and 8\tev}
 At the ATLAS experiment at the LHC, searches for events with a disappearing track signature were conducted at $\sqrt{s}=7\tev$~\cite{bib:PreviousSearches_Atlas_DT_7TeV} as well as at $\sqrt{s}=8\tev$~\cite{bib:PreviousSearches_Atlas_DT_8TeV}. 
 Furthermore, a search for metastable particles with high ionisation losses was performed with $\sqrt{s}=8\tev$ data~\cite{bib:PreviousSearches_ATLAS_DEDX}.
-These searches were interpreted within an anomaly-mediated supersymmetry breaking model~\cite{bib:Theory_AMSB_1998} with $\tan\beta=5$ and $\mu<0$.
+These searches were interpreted within an anomaly-mediated supersymmetry breaking model~\cite{bib:Theory_AMSB_1998} with $\tan\beta=5$ and $\mu>0$.
 The excluded parameter space by these searches is shown in Fig.~\ref{fig:ATLAS}.
 Models with charginos down to lifetimes of 0.06\ns could be excluded.
 \begin{figure}[!h]
   \centering
       \includegraphics[width=0.49\textwidth]{figures/theory/ATLAS_SUSY_LLPChargino.pdf}
-  \caption{Excluded parameter space in the $m_{\chipm}-\tau_{\chipm}$ plane for an AMSB model with $\tan\beta=5$ and $\mu>0$. Only chargino pair production is taken into account. The area below the curves is excluded. Taken from~\cite{bib:ATLAS_SUMMARYPLOTS}.}  
+  \caption{Excluded parameter space by ATLAS searches in the $m_{\chipm}-\tau_{\chipm}$ plane for an AMSB model with $\tan\beta=5$ and $\mu>0$. Only chargino pair production is taken into account. The area below the curves is excluded. Taken from~\cite{bib:ATLAS_SUMMARYPLOTS}.}  
   \label{fig:ATLAS}
 \end{figure}
 
@@ -653,16 +652,16 @@ Among them is the search for long-lived charged particles~\cite{bib:CMS:HSCP_8Te
 Furthermore, there is the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} which analysed events with disappearing tracks in the tracker with respect to wino-like charginos almost mass-degenerate with the lightest neutralino.
 This search was conducted at the CMS experiment at a centre-of mass energy of $\sqrt{s}=8\tev$.
 Since the latter search is more sensitive to shorter lifetime, only the exclusion limits derived by this search are shown in Fig.~\ref{fig:CMS}.
-The disappearing track search by CMS shows are very similar sensitivity as the searches done at the ATLAS experiment.
+The disappearing track search by CMS shows a very similar sensitivity as the searches done at the ATLAS experiment.
 \begin{figure}[!h]
   \centering
       \includegraphics[width=0.54\textwidth]{figures/theory/lifetimeNs_vs_mass.pdf}
-  \caption{Excluded parameter space in the $\tau_{\chipm}-m_{\chipm}$ plane for wino-like charginos. The region left to the curve is excluded. Taken from~\cite{bib:CMS:DT_8TeV}.}  
+  \caption{Excluded parameter space by the Disappearing track search of CMS in the $\tau_{\chipm}-m_{\chipm}$ plane for wino-like charginos. The region left to the curve is excluded. Taken from~\cite{bib:CMS:DT_8TeV}.}  
   \label{fig:CMS}
 \end{figure}
 
 \subsection*{Indirect searches}
-Finally, also results from indirect dark matter searches constrain the SUSY parameter region of wino-like charginos and neutralinos.
+Finally, also results from indirect dark matter searches constrain the parameter region of SUSY models with wino-like charginos and neutralinos.
 The most stringent limits are due to results by the Fermi Gamma-Ray Space Telescope (Fermi)~\cite{bib:Fermi} and the High Energy Spectroscopic System (H.E.S.S.)~\cite{bib:HESS}.
 
 By the comparison of the observed gamma-ray signal to the theoretical prediction, Fermi sets upper limits on the dark matter annihilation cross-section considering six different decay channels~\cite{bib:Fermi_DM}.
