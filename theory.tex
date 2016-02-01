@@ -6,7 +6,7 @@ The formulation of a relativistic quantum field theory and of spontaneous symmet
 This theory is known as the Standard Model (SM) of particle physics.
 Its last missing piece, the Higgs boson, was found at the LHC in the year 2012~\cite{bib:Theory:CMS:HiggsObservation,bib:Theory:Atlas:HiggsObservation}.
 
-The Standard Model is a $SU(3)_C  \times SU(2)_L \times SU(1)_Y$ non-abelian gauge theory.
+The Standard Model is a $SU(3)_C  \times SU(2)_L \times U(1)_Y$ non-abelian gauge theory.
 ``After'' spontaneous symmetry breaking, its symmetries are reduced to $SU(3)_C \times U(1)_{EM}$.
 All particles that were found until today are contained in it\footnote{One can argue, that the right-handed neutrino, which is proven to exist, is not contained. But as at least the left-handed neutrino is embedded, we want to ignore that for a moment.}.
 Furthermore, it is able to describe three of the four fundamental forces: the strong, weak and electromagnetic force.\\
@@ -19,7 +19,7 @@ For a thorough and extensive introduction, the reader is referred to~\cite{bib:S
 
 \section{The particle content}
 \label{sec:ParticleContent_SM}
-First, it should be noted, that since the Standard Model is a quantum field theory, every particle is considered as a field (to be more precise a degree of freedom of a field) and vice versa.
+First, it should be noted, that since the Standard Model is a quantum field theory, every particle can be considered as a field (to be more precise a degree of freedom of a field) and vice versa.
 
 The Standard Model of particle physics contains three different particle types, or three different types of fields.
 First, there are the so-called ``matter particles'', which are all spin\,1/2 particles in the SM.
@@ -51,6 +51,8 @@ It is the only known fundamental scalar particle.\\
 
 
 An overview of all Standard Model particles and their transformation properties are shown in Table~\ref{tab:ParticleContent_SM}.
+For the $SU(3)_C$ and $SU(2)_L$ gauge groups, the corresponding representations are given for each of the particle types.
+For the $U(1)_Y$ gauge group, the corresponding quantum number, the so-called hypercharge, is depicted.
 If particles transform as singlets under $SU(2)_L$ or $SU(3)_C$, they don't couple via the corresponding force.
 The hypercharges $Y$ are determined by $Q=Y+I_3$, where $Q$ is the electric charge and $I_3$ is the third component of the weak isospin with $I^a = \sigma^a/2$, $\sigma^a$ being the Pauli matrices. 
 
@@ -89,8 +91,8 @@ Higgs boson: $H$            &  \textbf{1}        & \textbf{2}             & $-1$
 
 
 \section{The Lagrangian density}
-In particle physics, the probability of a decay or an interaction between particles can be calculated with the help of the Lagrangian density.
-The Lagrangian density of the Standard Model is the most general set of Lagrangian terms, that are renormalisable and contain all up to date known particles as well as the above mentioned gauge symmetries.
+In particle physics, the dynamics of a particle system is described by the Lagrangian density.
+The Lagrangian density of the Standard Model is the most general set of Lagrangian terms, that are renormalisable and contain all up to date known particles as well as the above mentioned symmetries.
 The full SM Lagrangian density reads as follows:
 \begin{equation}
 \begin{split}
@@ -102,7 +104,7 @@ The full SM Lagrangian density reads as follows:
 \end{split}
 \label{eq:LagrangianDensity}
 \end{equation}
-with $\slashed{D} = \gamma_{\mu} D^{\mu}$ and the covariant derivative $D^{\mu}=\partial^{\mu} + i g' Y_W B^{\mu} - i g C_1  I^a W_a^{\mu}  - i g_S C_2 T^a G_a^{\mu}$ where the three gauge couplings $g$, $g'$ and $g_S$ appear.
+with $\slashed{D} = \gamma_{\mu} D^{\mu}$ and the covariant derivative $D^{\mu}=\partial^{\mu} + i g' Y_W B^{\mu} - i g C_1  I^a W_a^{\mu}  - i g_S C_2 T^a G_a^{\mu}$ including the three gauge couplings $g$, $g'$ and $g_S$.
 $I^a$ and $T^a$ denote the generators of the $SU(2)_L$ and $SU(3)_C$, respectively.
 They are connected to the three Pauli matrices and the eight Gell-Mann matrices by $I^a = \frac{\sigma^a}{2}$ and $T^a = \frac{\lambda^a}{2}$.
 The sum of the hypercharge $Y_W$ and the third component of the weak isospin yields the electrical charge $Q=Y_W + I_3$.
@@ -138,7 +140,7 @@ The notation implies a summation over all indices that appear twice.
 An essential ingredient of the Standard Model is the Brout-Englert-Higgs mechanism (BEH mechanism), earlier also called Higgs mechanism.
 It was developed by Peter Higgs, Robert Brout and Fran\c{c}ois Englert in the 1960s~\cite{bib:HiggsMechanism_Brout_Englert,bib:Higgs_Prediction,bib:Higgs_Prediction_2,bib:HiggsMechanism_Guralnik_Hagen_Kibble,bib:HiggsMechanism_Higgs_1966,bib:HiggsMechanism_Kibble_1967}. Based on work from Sheldon Glashow~\cite{bib:HiggsMechanism_Glashow_1961}, Steven Weinberg and Abdus Salam later applied it to a $SU(2) \times U(1)$ gauge theory~\cite{bib:HiggsMechanism_Weinberg_1967,bib:HiggsMechanism_Salam_1968}.
 By this, a renormalisable theory of the weak and the electromagnetic interactions was born.
-Together with the theory of strong interaction, the formulation of the Standard Model was thus complete by this time.
+%Together with the theory of strong interaction, quantum chromodynamics, the formulation of the Standard Model was thus complete by the early 1970s.
 
 \subsection*{Mass terms of the gauge bosons}
 Due to the BEH mechanism, it is possible to give masses to the $W^{\pm}$-and Z-bosons.
@@ -356,15 +358,15 @@ However, as argued, SUSY must be broken.
 The cancellation of quadratic divergencies can therefore only be assured, if the breaking is not too drastic and only logarithmic divergencies remain.
 %To avoid a new source of fine-tuning, the soft-breaking parameters should be of the order $M_{\rm soft} \sim 100\gev - 1000\gev$.
 
-It is not possible to implement gravity within a renormalisable supersymmetric extension of the Standard Model.
-However, so-called string theories are able to incorporate quantum gravity and, furthermore, such string theories usually are based on supersymmetry.
-Therefore, supersymmetry is usually considered as a crucial ingredient for the description of a quantum field theory of gravity.
+It is not possible to implement gravity within a renormalisable $N=1$ supersymmetric extension of the Standard Model.
+However, so-called string theories are able to incorporate quantum gravity and, furthermore, string theories that allow for bosons and fermions are based on supersymmetry.
+Therefore, supersymmetry is considered as a crucial ingredient for the description of a quantum field theory of gravity.
 
 
 The renormalisation group equations change under a supersymmetric extension of the Standard Model.
 By this, a unification of the gauge couplings at a GUT scale of about $10^{16}\gev$ is possible, as can be seen in Fig.~\ref{fig:Unification}.
 It can be nicely seen, that all three gauge couplings cross each other within the uncertainties.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering
       \includegraphics[width=0.49\textwidth]{figures/theory/running_couplings_SM}
       \includegraphics[width=0.49\textwidth]{figures/theory/running_couplings_MSSM}
@@ -384,6 +386,7 @@ P_R & = -1 &&\text{SUSY particles}.
 \end{equation}
 If R-parity is conserved, only terms are allowed in the Lagrangian density, that contain an even number of supersymmetric particles.
 Therefore, no single SUSY particle can decay into only SM particles and thus, the LSP is stable.
+The following discussions are restricted to R-parity conserving supersymmetric models.
 
 
 
@@ -393,7 +396,7 @@ The supersymmetric extension of the Standard Model with a minimal particle conte
 In the following section, the particle content of the MSSM is introduced.
 
 \subsection{The particle content of the MSSM}
-In $N=1$ supersymmetry, every SM particle has exactly one supersymmetric partner particle, which leads to a doubling of the particle content in the MSSM with respect to the SM.
+In $N=1$ supersymmetry, every SM particle has exactly one supersymmetric partner particle, which leads to a doubling of the particle content in the MSSM with respect to the SM\footnote{The supersymmetric partner particles of the fermions are called sfermions, whereas the partner particles of the gauge (higgs) bosons are referred to as gauginos (higgsinos).}.
 Additionally, it is necessary to introduce a second Higgs doublet to ensure the holomorphicity of the superpotential in the presence of mass terms for the up-type particles.
 Furthermore, the MSSM only stays free from anomalies if there is a further Higgs doublet~\cite{bib:SUSYPrimer}.
 This leads to the fact, that in the MSSM, there are five Higgs bosons instead of only one as in the SM.
@@ -426,22 +429,22 @@ Since in supersymmetric theories only left-handed Weyl spinors appear in the Lag
 \caption{Chiral supermultiplets in the MSSM.}
 \label{tab:chiral_multiplets}
 \makebox[0.99\textwidth]{
-\begin{tabular}{l|c|c|c|c}
-\multicolumn{5}{c}{} \\
+\begin{tabular}{l|c|c|c}
+\multicolumn{4}{c}{} \\
 \toprule
-                     &           &   spin 0                                     & spin $\frac{1}{2}$              & $SU(3)_C,\ SU(2)_L,\ U(1)_Y$\\ 
+                     &   spin 0                                     & spin $\frac{1}{2}$              & $SU(3)_C,\ SU(2)_L,\ U(1)_Y$\\ 
 \midrule
-   squarks/quarks    & Q         & $\left(\tilde{u}_L,\tilde{d}_L \right)$      & $\left(u_L,d_L\right)$          & $\bf{3},\ \bf{2},\ \frac{1}{3}$\\ \cline{2-5}  
-                     & $\bar{u}$ & $\tilde{\bar{u}}_L = \tilde{u}_R^{\dagger} $   & $\bar{u}_L = (u_R)^c$           & $\bf{\bar{3}},\ \bf{1},\ -\frac{4}{3}$\\ \cline{2-5}  
-                     & $\bar{d}$ & $\tilde{\bar{d}}_L = \tilde{d}_R^{\dagger}$    & $\bar{d}_L = (d_R)^c$           & $\bf{\bar{3}},\ \bf{1},\ \frac{2}{3}$\\ 
+   squarks/quarks    & $\left(\tilde{u}_L,\tilde{d}_L \right)$      & $\left(u_L,d_L\right)$          & $\bf{3},\ \bf{2},\ \frac{1}{3}$\\ \cline{2-4}  
+                     & $\tilde{\bar{u}}_L = \tilde{u}_R^{\dagger} $   & $\bar{u}_L = (u_R)^c$           & $\bf{\bar{3}},\ \bf{1},\ -\frac{4}{3}$\\ \cline{2-4}  
+                     & $\tilde{\bar{d}}_L = \tilde{d}_R^{\dagger}$    & $\bar{d}_L = (d_R)^c$           & $\bf{\bar{3}},\ \bf{1},\ \frac{2}{3}$\\ 
 \midrule
-   sleptons/leptons  & L         & $\left(\tilde{\nu}_{eL},\tilde{e}_L\right)$   & $\left(\nu_{eL},e_L\right)$     & $\bf{1},\ \bf{2},\ -1$\\ \cline{2-5} 
-                     & $\bar{e}$ & $\tilde{\bar{e}}_L = \tilde{e}_R^{\dagger}$    & $\bar{e}_L = (e_R)^c$           & $\bf{\bar{1}},\ \bf{1},\ 2$\\ 
+   sleptons/leptons  & $\left(\tilde{\nu}_{eL},\tilde{e}_L\right)$   & $\left(\nu_{eL},e_L\right)$     & $\bf{1},\ \bf{2},\ -1$\\ \cline{2-4} 
+                     & $\tilde{\bar{e}}_L = \tilde{e}_R^{\dagger}$    & $\bar{e}_L = (e_R)^c$           & $\bf{\bar{1}},\ \bf{1},\ 2$\\ 
 \midrule
-   Higgs/higgsinos   & $H_u$     & $\left(H_u^+,H_u^0\right)$        & $\left(\tilde{H}_u^+,\tilde{H}_u^0\right)$ & $\bf{1},\ \bf{2},\ 1$\\ \cline{2-5}
-                     & $H_d$     & $\left(H_d^0,H_d^-\right)$        & $\left(\tilde{H}_d^0,\tilde{H}_d^-\right)$ & $\bf{1},\ \bf{2},\ -1$ \\ 
+   Higgs/higgsinos   & $\left(H_u^+,H_u^0\right)$        & $\left(\tilde{H}_u^+,\tilde{H}_u^0\right)$ & $\bf{1},\ \bf{2},\ 1$\\ \cline{2-4}
+                     & $\left(H_d^0,H_d^-\right)$        & $\left(\tilde{H}_d^0,\tilde{H}_d^-\right)$ & $\bf{1},\ \bf{2},\ -1$ \\ 
 \bottomrule
-\multicolumn{5}{c}{} \\
+\multicolumn{4}{c}{} \\
 \end{tabular}}
 \end{table}  
 
@@ -617,9 +620,7 @@ The mass splitting between chargino and neutralino in these scenarios is typical
 
 Several previous searches are sensitive on SUSY scenarios with almost mass-degenerate wino-like charginos and neutralinos.
 In the following an overview about these previous searches will be given.
-%Additionally, constraints from indirect searches are summarised.
 
-%\subsection*{Searches at HERA}
 \subsection*{Searches at LEP}
 Several searches at LEP were hunting for almost mass-degenerate neutralino-chargino scenarios~\cite{bib:PreviousSearches_ALEPH,bib:PreviousSearches_OPAL,bib:PreviousSearches_DELPHI_2003,bib:PreviousSearches_DELPHI}.
 These searches were looking for events with a high-energetic initial state radiated photon leading to missing energy in events with chargino-pair production and invisible decay products.
@@ -628,7 +629,7 @@ The searches were interpreted for $M_1$ and $M_2$ almost degenerate and with a l
 Charginos are excluded up to a mass of 92.4\gev~\cite{bib:LEP:SUSY_results}.
 \begin{figure}[!h]
   \centering
-      \includegraphics[width=0.45\textwidth]{figures/theory/mass_adlo_gaug_1.pdf}
+      \includegraphics[width=0.59\textwidth]{figures/theory/mass_adlo_gaug_1.pdf}
   \caption{Observed and expected exclusion limits by LEP searches in the $m_{\chipm}-\Delta m \left( \chipm, \chiO \right)$ plane for almost degenerate $M_1$ and $M_2$ and a large unified scalar mass $m_0$. Taken from~\cite{bib:LEP:SUSY_results}.}  
   \label{fig:LEP}
 \end{figure}
@@ -641,7 +642,7 @@ The excluded parameter space by these searches is shown in Fig.~\ref{fig:ATLAS}.
 Models with charginos down to lifetimes of 0.06\ns could be excluded.
 \begin{figure}[!h]
   \centering
-      \includegraphics[width=0.49\textwidth]{figures/theory/ATLAS_SUSY_LLPChargino.pdf}
+      \includegraphics[width=0.59\textwidth]{figures/theory/ATLAS_SUSY_LLPChargino.pdf}
   \caption{Excluded parameter space by ATLAS searches in the $m_{\chipm}-\tau_{\chipm}$ plane for an AMSB model with $\tan\beta=5$ and $\mu>0$. Only chargino pair production is taken into account. The area below the curves is excluded. Taken from~\cite{bib:ATLAS_SUMMARYPLOTS}.}  
   \label{fig:ATLAS}
 \end{figure}
@@ -655,7 +656,7 @@ Since the latter search is more sensitive to shorter lifetime, only the exclusio
 The disappearing track search by CMS shows a very similar sensitivity as the searches done at the ATLAS experiment.
 \begin{figure}[!h]
   \centering
-      \includegraphics[width=0.54\textwidth]{figures/theory/lifetimeNs_vs_mass.pdf}
+      \includegraphics[width=0.59\textwidth]{figures/theory/lifetimeNs_vs_mass.pdf}
   \caption{Excluded parameter space by the Disappearing track search of CMS in the $\tau_{\chipm}-m_{\chipm}$ plane for wino-like charginos. The region left to the curve is excluded. Taken from~\cite{bib:CMS:DT_8TeV}.}  
   \label{fig:CMS}
 \end{figure}

@@ -190,6 +190,7 @@
    gre->GetYaxis()->SetTitle("Data/MC ratio for JER");
    gre->Draw("e");
    
+   /*
    TLegend *leg = new TLegend(0.18,0.77,0.55,0.87,NULL,"NDC");
    leg->SetBorderSize(0);
    leg->SetTextSize(0.045);
@@ -199,7 +200,7 @@
    leg->SetFillColor(0);
    leg->SetFillStyle(0);
    TLegendEntry *entry=leg->AddEntry("statPlusSys_2012","20/fb (8 TeV)","pfl");
-
+   
    ci = TColor::GetColor("#cccccc");
    entry->SetFillColor(ci);
    entry->SetFillStyle(1001);
@@ -212,7 +213,7 @@
    entry->SetMarkerStyle(24);
    entry->SetMarkerSize(1.2);
    leg->Draw();
-
+   */
    gPad->RedrawAxis();
 
    CMS_lumi( cNew, iPeriod, 11 );
@@ -220,6 +221,7 @@
    cNew->cd();
    cNew->SetSelected(cNew);
 
+   /*
    TLatex*  info   = new TLatex();
    info->SetNDC();
    info->SetTextSize(0.045); 
@@ -227,7 +229,39 @@
    info->DrawLatex(0.67,0.77,"PF+CHS");
    info->SetTextSize(0.055); 
    info->DrawLatex(0.79,0.20,"#gamma+jet");
+   */
 
+   TLatex*  info   = new TLatex();
+   info->SetNDC();
+   info->SetTextSize(0.04); 
+   info->SetTextFont(42);
+   info->DrawLatex(0.20,0.80,"Anti-k_{T} (R=0.5) PF+CHS Jets");
+
+   TLegend *leg2 = new TLegend(0.17,0.73,0.85,0.78,NULL,"NDC");
+   leg2->SetBorderSize(0);
+   leg2->SetTextSize(0.04);
+   leg2->SetLineColor(1);
+   leg2->SetLineStyle(1);
+   leg2->SetLineWidth(1);
+   leg2->SetFillColor(0);
+   leg2->SetFillStyle(0);
+
+   entry=leg2->AddEntry("statPlusSys_2012","19.7 fb^{-1} (8 TeV) #gamma+jet","pfl");
+
+   ci = TColor::GetColor("#cc0066");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3244);
+
+   ci = TColor::GetColor("#cc0066");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+
+   ci = TColor::GetColor("#cc0066");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(1.2);
+   leg2->Draw();
 
    cNew->Print("MySingleFinalResult.pdf");
 }
