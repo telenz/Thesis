@@ -3,7 +3,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
 \label{res:ch:Introduction}
-\cite{bib:Quertenmont_2010}
 The determination and quantification of the quality of the jet transverse-momentum measurement is of crucial interest for many analyses with jet final states, \eg the measurement of the dijet cross section~\cite{bib:CMS:QCD_measurements} or \ttbar production cross sections~\cite{bib:CMS:TopCrossSection_8TeV}. 
 Also searches for physics beyond the Standard Model with missing transverse momentum, \PTm, in the final state rely on a good understanding of \PTm originating from wrongly measured jets~\cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:CMS:AlphaT_8TeV}.
 It is therefore important to determine the jet transverse-momentum resolution, \ie the detector resolution of the jet \pt measurement.
@@ -64,8 +63,8 @@ The resolution is thus defined as the standard deviation of the 99\% truncated r
 \begin{equation*}\label{res:eq:resolutionFormula}
 \jer = \frac{\sigma_{99\%}}{\mu_{99\%}}.
 \end{equation*}
-The division by the mean aims at making the resolution independent of the absolute scale (= mean) of the response distribution.
-% FIXME: It is done because response distributions with a scale smaller than one are typically narrower while distributions with scales larger than one are broader.
+As in previous measurements~\cite{bib:CMS-AN-2010-076}, the division by the mean aims at making the resolution independent of the absolute scale (= mean) of the response distribution.
+% It is done because response distributions with a scale smaller than one are typically narrower while distributions with scales larger than one are broader.
 %However, since the scale is very close to one, this is only a tiny effect.
 
 The determination of the 99\% range of the histogram is done in several steps. 
@@ -660,7 +659,7 @@ It can be seen from Fig.~\ref{res:fig:QCDuncertainty} that the jet transverse-mo
   \label{res:fig:QCDuncertainty}
 \end{figure}
 
-FIXME: The observed difference in the resolution measurement of the two approaches is taken as a systematic uncertainty on the measured resolution in data and propagated to the final data-to-simulation ratio.
+The observed difference in the resolution measurement of the two approaches is taken as a systematic uncertainty on the measured resolution in data and propagated to the final data-to-simulation ratio.
 %The impact on the data-to-simulation ratio is estimated by adding the QCD-multijet sample on top of the simulated \GAMJET sample and redoing the evaluation of the scale factors.
 The resulting uncertainties vary between $2.0-2.5\%$ for the different $|\etafirstjet|$ regions (cf. Table~\ref{res:tab:Uncertainties}).
 
@@ -707,26 +706,26 @@ and the constant fit to the data-to-simulation ratio $\jer^{\text{data}}/\jer^{\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Uncertainty on the simulation of out-of-cone showering}
-FIXME: Another source of uncertainty is the use of information from Monte Carlo simulation by determining the residual imbalance $q$ from the simulated \GAMJET sample (Eq.~\eqref{eq:total}).
+Another source of uncertainty is the use of information from Monte Carlo simulation for determining the residual imbalance $q$ from the simulated \GAMJET sample (Eq.~\eqref{eq:total}).
 
 Since it cannot be expected that out-of-cone showering is perfectly modelled in simulation, possible differences between real and simulated out-of-cone showering are estimated by the evaluation of the ratio $\jer^{\text{data}}/\jer^{\text{MC}}$ using different jet radii in the jet reconstruction algorithm. 
 
 For the primary analysis, jets reconstructed by the anti-k$_{\text{t}}$ algorithm with a radius parameter of $R=0.5$ are used (AK5-jets). 
 In order to evaluate the systematic uncertainty on the out-of-cone showering simulation, the measurement of \rhores is redone with jets reconstructed with a jet radius of $R=0.7$ (AK7-jets). 
-In Fig.~\ref{res:fig:MCuncertainty} (left), the measured resolution in simulation and data with AK5-jets and AK7-jets is depicted for $1.1<|\etafirstjet|<1.7$.
-It can be seen that the resolution is simulation improves for the higher jet radius parameter of $R=0.7$, whereas in data only a minor effect is visible.
-Thus, the data-to-simulation ratio is worse using AK7-jets as can be seen in Fig~\ref{res:fig:MCuncertainty} (right).
+%In Fig.~\ref{res:fig:MCuncertainty} (left), the measured resolution in simulation and data with AK5-jets and AK7-jets is depicted for $1.1<|\etafirstjet|<1.7$.
+%It can be seen that the resolution is simulation improves for the higher jet radius parameter of $R=0.7$, whereas in data only a minor effect is visible.
+%Thus, the data-to-simulation ratio is worse using AK7-jets as can be seen in Fig~\ref{res:fig:MCuncertainty} (right).
 
 The data-to-simulation ratio is in all $|\etafirstjet|$ bins larger for AK7-jets, resulting in uncertainties between $0.5-5.7\%$.
 The uncertainty on the simulation of out-of-cone showering is thus the largest systematic uncertainty of this measurement.
 
-\begin{figure}[!t]
-  \centering
-      \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Resolution_for_3_eta_bin_MCUncertainty_RMS99.pdf}
-      \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Ratio_Resolution_for_3_eta_bin_PFCHS_RMS99_ak5_ak7_comparison.pdf}
-  \caption{Left: The measured resolution in simulation and data with AK5-jets and AK7-jets for $1.1<|\etafirstjet|<1.7$. Right: Data-to-simulation ratio for AK5- and AK7-jets for $1.1<|\etafirstjet|<1.7$.}  
-  \label{res:fig:MCuncertainty}
-\end{figure}
+%\begin{figure}[!t]
+%  \centering
+%      \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Resolution_for_3_eta_bin_MCUncertainty_RMS99.pdf}
+%      \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Ratio_Resolution_for_3_eta_bin_PFCHS_RMS99_ak5_ak7_comparison.pdf}
+%  \caption{Left: The measured resolution in simulation and data with AK5-jets and AK7-jets for $1.1<|\etafirstjet|<1.7$. Right: Data-to-simulation ratio for AK5- and AK7-jets for $1.1<|\etafirstjet|<1.7$.}  
+%  \label{res:fig:MCuncertainty}
+%\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Uncertainty on the jet energy scale}
@@ -888,7 +887,7 @@ The accuracy of the measurement is dominated by systematic uncertainties, leadin
 The results of this analysis compare well to similar studies, including a dijet study at 8\tev ~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
 Both measurements are compatible within their statistical and systematic uncertainties.\\
 
-FIXME: For a future measurement, a reduction of the uncertainties is desirable.
+For a future measurement, a reduction of the uncertainties is desirable.
 The main source of uncertainty is the systematic uncertainty on the simulation of out-of-cone showering.
 Within this analysis, this uncertainty was estimated by varying the jet clustering radius from R=0.5 to R=0.7.
 This approach might overestimate the uncertainty, since the difference in \rhores associated with different jet clustering radii may include other effects than out-of-cone showering.
