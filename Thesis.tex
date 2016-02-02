@@ -156,7 +156,7 @@ a4paper,
 % Line spacing
 \onehalfspacing
 % Line numbers
-% \linenumbers
+\linenumbers
 % Don't skip paragraphs with equations in line numbering
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
@@ -189,9 +189,13 @@ a4paper,
 \usepackage{tocloft}
 \counterwithin{chapter}{part}
 \setlength{\cftchapnumwidth}{3em}
-\setlength{\cftsecnumwidth}{4em}
-\setlength{\cftsubsecnumwidth}{4em}
-\setlength{\cftsubsubsecnumwidth}{5em}
+\setlength{\cftsecnumwidth}{3em}
+\setlength{\cftsubsecnumwidth}{3em}
+\setlength{\cftsubsubsecnumwidth}{4em}
+
+% No bold chapter title in TOC
+% \renewcommand\cftchapfont{\mdseries}
+% \renewcommand\cftchappagefont{\mdseries}
 
 % Figure numbering
 \counterwithout{figure}{chapter}

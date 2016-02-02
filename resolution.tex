@@ -59,11 +59,11 @@ others, like dead calorimeter channels only contribute to the left tail~\cite{bi
 
 %Figure~\ref{res:fig:TypicalResponse} shows a response distribution for jets in the barrel region.
 In order to avoid the coverage of non-Gaussian tails, the resolution is determined using only the core of the response distribution.
-The resolution is thus defined as the standard deviation of the 99\% truncated response histogram divided by the mean:
+The resolution is thus defined as the standard deviation of the 99\% truncated response histogram divided by the mean~\cite{bib:CMS-AN-2010-076}:
 \begin{equation*}\label{res:eq:resolutionFormula}
 \jer = \frac{\sigma_{99\%}}{\mu_{99\%}}.
 \end{equation*}
-The division by the mean aims at making the resolution independent of the absolute scale (= mean) of the response distribution~\cite{bib:CMS-AN-2010-076}.
+The division by the mean aims at making the resolution independent of the absolute scale (= mean) of the response distribution.
 %As in previous measurements~\cite{bib:CMS-AN-2010-076}, the division by the mean aims at making the resolution independent of the absolute scale (= mean) of the response distribution.
 % It is done because response distributions with a scale smaller than one are typically narrower while distributions with scales larger than one are broader.
 %However, since the scale is very close to one, this is only a tiny effect.
@@ -113,7 +113,7 @@ and the extrapolated value to zero further jet momentum at $\alpha=0$ is taken a
 
 More formally, measuring the transverse momentum of the photon instead of taking the generator-level jet \pt leads to the fact that the measured resolution consists of two parts
 \begin{equation}\label{res:eq:splitting}
-\underbrace{\frac{\ptrecojet}{\ptgamma}}_{\text{measured}} = \underbrace{\frac{\ptrecojet}{\ptgenjet}}_{\text{intrinsic}} \oplus \underbrace{\frac{\ptgenjet}{\ptgamma}}_{\text{imbalance}}.
+\underbrace{\frac{\ptrecojet}{\ptgamma}}_{\text{measured}} = \underbrace{\frac{\ptrecojet}{\ptgenjet}}_{\text{intrinsic}} \cdot \underbrace{\frac{\ptgenjet}{\ptgamma}}_{\text{imbalance}}.
 \end{equation}
 The intrinsic part is the resolution of interest which is independent of further jets in the event, whereas the imbalance is an artifact of further jet activity and is strongly dependent on $\alpha$.
 
@@ -137,9 +137,6 @@ This event selection is described in Section~\ref{res:sec:EventSelection}.
 
 \section{Datasets and triggers}
 \label{res:sec:DatasetsAndTriggers}
-This analysis exploits several triggers which were active during the year 2012 at the CMS experiment.
-Because of the high production cross section of \GAMJET events, especially for low photon \pt, almost all of these triggers were highly prescaled, \ie only a fraction of events were actually recorded when the triggers fired.
-All triggers that are utilised in this measurement are listed in Table~\ref{res:tab:triggers} together with their recorded luminosity.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!b]
 \centering
@@ -159,10 +156,13 @@ HLT\_Photon90\_CaloIdVL\_IsoL & 0.373\\
 HLT\_Photon135\               & 13.77\\
 HLT\_Photon150\               & 19.71\\
 \bottomrule
-\multicolumn{2}{c}{} \\
+\multicolumn{2}{c}{}
 \end{tabular}}
 \end{table}  
-On level one (L1), the triggers rely on single-photon/electron triggers, such as L1SingleEG12 and L1SingleEG30.
+This analysis exploits several triggers which were active during the year 2012 at the CMS experiment.
+Because of the high production cross section of \GAMJET events, especially for low photon \pt, almost all of these triggers were highly prescaled, \ie only a fraction of events were actually recorded when the triggers fired.
+All triggers that are utilised in this measurement are listed in Table~\ref{res:tab:triggers} together with their recorded luminosity.
+On level-1 (L1), the triggers rely on single-photon/electron triggers, such as L1SingleEG12 and L1SingleEG30.
 The L1 triggers require at least one photon or electron candidate that is above a certain \et threshold, \eg 12\gev or 30\gev.
 The high-level triggers require a photon with a certain \pt (as indicated in the name) and, in case of thresholds below 135\gev, additional quality and isolation criteria. 
 All triggers with thresholds below 150\gev were prescaled.
@@ -184,7 +184,7 @@ Dataset                                          & Integrated luminosity [\fbinv
  /SinglePhoton/Run2012C-22Jan2013-v1/AOD         &  7.055  \\
  /SinglePhotonParked/Run2012D-22Jan2013-v1/AOD   &  7.354  \\ 
 \bottomrule
-\multicolumn{2}{c}{} \\
+\multicolumn{2}{c}{}
 \end{tabular}}
 \end{table}  
 
@@ -197,7 +197,7 @@ In order to recover a physical \pt spectrum, all simulated events are reweighted
 Figure~\ref{res:fig:PhotonPtSpectrum} shows the photon \pt spectrum in simulation before and after the reweighting. 
 
 Simulated samples come with a pileup scenario which does not necessarily match the pileup scenario in data. 
-To match the measured distribution of pileup interactions, the events are weighted according to their number of pileup vertices. 
+To match the measured distribution of interactions, the events are weighted according to their number of pileup vertices. 
 Because almost all of the used triggers were differently prescaled over time, the distributions of pileup interactions differ among the sets of events recorded by each trigger.
 Thus, the weighting has to be done separately for each trigger.
 A comparison between the number of primary vertices in data and simulation for all triggers can be found in Appendix~\ref{res:app:pileup}.
@@ -226,6 +226,7 @@ It comprises the following selection criteria:
  \item Neutral electromagnetic fraction $<$ 0.90
  \item Number of constituents $>$ 1
 \end{itemize}
+\newpage
  And for jets in the pseudorapidity range $|\eta| < 2.4 $ :
 \begin{itemize}
  \item Charged hadron fraction $>$ 0
@@ -262,7 +263,7 @@ $\pt^{\gamma}$-bins           & Trigger         \\
 149-165\gev \qquad\qquad   & HLT\_Photon135\_v*                \\
 165-$\infty$\gev   & HLT\_Photon150\_v*                \\
 \bottomrule
-\multicolumn{2}{c}{} \\
+\multicolumn{2}{c}{} 
 \end{tabular}}
 \end{table}
 
@@ -304,7 +305,7 @@ HCAL isolation                & $<2.2\gev + 0.0025 \cdot \pt^{\gamma}$   \\
 Track Isolation               & $<2.0\gev + 0.0010 \cdot \pt^{\gamma}$   \\
 Pixel seed veto               & yes                              \\
 \bottomrule
-\multicolumn{2}{c}{} \\
+\multicolumn{2}{c}{} 
 \end{tabular}}
 \end{table}
 %\begin{table}[bt]
@@ -362,7 +363,7 @@ The basic methodology of measuring the jet transverse-momentum resolution by exp
 As already described in Chapter~\ref{res:ch:GeneralApproach}, the idea behind a resolution measurement with $\GAMJET$ events in data is the usage of the photon \pt instead of the true jet \pt.
 This results in a twofold contribution to the measured response, the intrinsic response and the imbalance:
 \begin{equation}\label{eq:splittedResolution}
-\underbrace{\frac{\ptrecojet}{\ptgamma}}_{\text{measured}} = \underbrace{\frac{\ptrecojet}{\ptgenjet}}_{\text{intrinsic}} \oplus \underbrace{\frac{\ptgenjet}{\ptgamma}}_{\text{imbalance}}.
+\underbrace{\frac{\ptrecojet}{\ptgamma}}_{\text{measured}} = \underbrace{\frac{\ptrecojet}{\ptgenjet}}_{\text{intrinsic}} \cdot \underbrace{\frac{\ptgenjet}{\ptgamma}}_{\text{imbalance}}.
 \end{equation}
 Taking the photon \pt as true jet \pt estimator instead of the generator-level jet \pt, and thus measuring the response defined as \ptrecojet/\ptgamma, results in a different shape of the response distribution compared to the intrinsic response (Fig.~\ref{fig:responseExamples}). 
 \begin{figure}[b]
@@ -427,7 +428,7 @@ The two response distributions coming from the different event topologies are se
 With the above presented methodology, it is possible to measure the resolution in simulation and data for different values of $\alpha$.
 Since the quantity of interest is the jet transverse-momentum resolution independent of further jet activity, \ie the extrapolated value of the measured resolution at $\alpha=0$, 
 the dependency of the measured resolution on alpha, $\jermeasured \left( \alpha \right)$, is needed.
-Simulated events offer the possibility to study the individual contributions to the measured resolution, the intrinsic resolution $\jerintrinsic\left( \alpha \right)$ and the imbalance $\jerimbalance\left( \alpha \right)$.%, because generator-level information is available.
+Simulated events offer the possibility to study the individual contributions to the measured resolution: the intrinsic resolution $\jerintrinsic\left( \alpha \right)$ and the imbalance $\jerimbalance\left( \alpha \right)$.%, because generator-level information is available.
 
 The intrinsic part of the resolution for a given photon \pt bin is, by definition, independent of secondary jet \pt, and can be considered as constant in terms of $\alpha$
 \begin{equation}\label{eq:intrinsic}
@@ -538,7 +539,7 @@ How to apply these scale factors and adjust the jet transverse-momentum resoluti
 It has already been shown that the decomposition of the measured resolution into intrinsic resolution and imbalance works well for the two shown \ptgamma bins in Fig.~\ref{fig:AlphaDependenceOfResolutions}.
 In order to further validate the method, a comparison between \jer extracted from the measured resolution and the real \jer of the intrinsic resolution is performed on simulated events. 
 Figure~\ref{fig:MCClosure} depicts the results of this comparison for one exemplary $|\etafirstjet|$ bin.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering
     \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/MCClosure_for_1_eta_bin_RMS99.pdf}
   \caption{Consistency check of the method: Comparison between \jer obtained from the measured resolution (Eq.~\eqref{eq:total}) and from the intrinsic resolution (Eq.~\eqref{eq:intrinsic}) in simulation.}  
@@ -769,9 +770,9 @@ Exemplary extrapolations for the imbalance, the intrinsic and the measured resol
 The full set of figures for each \ptgamma and $|\etafirstjet|$ bin can be found in Appendix~\ref{res:app:extrapolationPlots}.
 
 Finally, the extracted resolutions in data and simulation in every \ptgamma bin are divided and a constant is fitted to this ratio
-\begin{equation*}
+\begin{equation}
 \frac{\jer^{\text{data}}}{\jer^{\text{MC}}} \left( \pt^{\gamma} \right).
-\end{equation*}
+\end{equation}
 In Fig.~\ref{res:fig:RatioEtaBinned}, the results for all four $|\etafirstjet|$-ranges are depicted. 
 The $\chi^2$/NDF-values for the four fits vary between 0.23 and 2.53. 
 Thus, a constant fit is justified, and one value for every $|\etafirstjet|$-bin will be reported.
