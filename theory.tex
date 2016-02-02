@@ -26,7 +26,7 @@ First, it should be noted, that since the Standard Model is a quantum field theo
 The Standard Model of particle physics contains three different particle types, or three different types of fields.
 First, there are the so-called ``matter particles'', which are all spin\,1/2 particles in the SM.
 Second, the forces are described by spin\,1 vector bosons.
-And finally, in order to give masses to all particles, the Standard Model embeds the Higgs boson, a scalar spin\,0 particle.
+And finally, in order to give masses to all particles, the Standard Model embeds the Higgs boson, a scalar spin~0 particle.
 
 \subsection*{Fermions in the Standard Model}
 The fermionic content can be further subdivided into leptons and quarks.
@@ -312,6 +312,7 @@ Although the mass terms of the fermions break this symmetry, it protects the fer
 
 Due to these considerations, it seems natural to transfer the mechanism of protecting fermion masses to scalar masses as well.
 This can only be done by connecting fermions with bosons and vice versa.
+FIXME: In the 1970s, exactly this linking between the different particle types could be achieved.
 A work from Golfand and Likhtman in the year 1971 stated that an extension of the Poincar\'e  algebra is possible via fermionic generators~\cite{bib:Golfand_Likhtman_1971}.
 R.~Haag, J.~Lopuszanski and M.~Sohnius finalised these considerations by showing that with the help of fermionic generators a connection between space-time symmetries and internal symmetries is possible~\cite{bib:Haag_1974}.
 The extensions of a symmetry group by fermionic generators is called supersymmetry (SUSY).
@@ -320,7 +321,7 @@ These were the foundation of supersymmetric theories.\\
 In the following, the most important aspects of supersymmetric theories are discussed.
 For a detailed introduction the reader is referred to~\cite{bib:Drees_1996,bib:Aitchison_2005,bib:Drees_2004}.
 
-In the subsequent sections, the description is restricted to the case of $N=1$ supersymmetry, \ie there is only one supersymmetric generator and thus only one supersymmetric partner for every particle.
+In the subsequent sections, the description is restricted to the case of $\mathcal{N}=1$ supersymmetry, \ie there is only one supersymmetric generator and thus only one supersymmetric partner for every particle.
 A supersymmetric transformation transfers every bosonic state into a fermionic state and vice versa  
 \begin{equation}
 \begin{split}
@@ -349,20 +350,25 @@ However, since up to now, only little is known about the breaking mechanism, usu
 These terms can parametrise SUSY breaking without any knowledge about the breaking mechanism.
 One condition is however imposed on the supersymmetry breaking terms: they should not spoil the naturalness of the new theory, \ie no new quadratic divergencies shall occur due to these terms.
 Therefore, they are called soft-breaking terms.
-How they actually look, will be explained in the Section~\ref{sec:MSSM}.
+How they actually look, will be explained in the Section~\ref{sec:MSSM}.\\
 
 Finally, it shall be discussed how a supersymmetric extension of the Standard Model can give possible answers to the shortcomings of the Standard Model, discussed in Section~\ref{sec:Limitations}.
 
 Radiative corrections by fermions always have a factor $-1$ compared to bosonic corrections.
-Thus, calculating radiative corrections of the Higgs boson mass in a supersymmetric theory leads in addition to the corrections by SM particles also to further corrections by SUSY particles.
+Thus, calculating radiative corrections of the Higgs boson mass in a supersymmetric theory leads in addition to the corrections by SM particles to further corrections by SUSY particles.
 If SUSY were exact, the quadratic divergencies $\Delta m^2_{h^0}$ would exactly cancel. 
 However, as argued, SUSY must be broken.
 The cancellation of quadratic divergencies can therefore only be assured, if the breaking is not too drastic and only logarithmic divergencies remain.
 %To avoid a new source of fine-tuning, the soft-breaking parameters should be of the order $M_{\rm soft} \sim 100\gev - 1000\gev$.
 
-It is not possible to implement gravity within a renormalisable $N=1$ supersymmetric extension of the Standard Model.
-However, so-called string theories are able to incorporate quantum gravity and, furthermore, string theories that allow for bosons and fermions are based on supersymmetry.
-Therefore, supersymmetry is considered as a crucial ingredient for the description of a quantum field theory of gravity.
+FIXME: Embedding gravity into a four dimensional quantum field theory reveals difficult because of its non-renormalisability. % of the Einstein-Hilbert action. 
+A possible answer, beyond quantum field theory, are string theories~\cite{bib:Strings_1974}, where the existence of a fundamental length - that of the strings - regularises the ultraviolet behaviour and allows a quantum description of objects in curved space.
+Yet, the only known procedure to incorporate fermions within a string Lagrangian density consists in adding supersymmetry as a condition. 
+Supersymmetry thus appears as a fundamental ingredient for a description of quantum gravity. % and it might be partially preserved at low energy (close to the TeV scale).
+
+%FIXME: It is not possible to implement gravity within a renormalisable $\mathcal{N}=1$ supersymmetric extension of the Standard Model.
+%However, so-called string theories are able to incorporate quantum gravity and, furthermore, string theories that allow for bosons and fermions are based on supersymmetry.
+%Therefore, supersymmetry is considered as a crucial ingredient for the description of a quantum field theory of gravity.
 
 
 The renormalisation group equations change under a supersymmetric extension of the Standard Model.
@@ -398,7 +404,7 @@ The supersymmetric extension of the Standard Model with a minimal particle conte
 In the following section, the particle content of the MSSM is introduced.
 
 \subsection{The particle content of the MSSM}
-In $N=1$ supersymmetry, every SM particle has exactly one supersymmetric partner particle, which leads to a doubling of the particle content in the MSSM with respect to the SM\footnote{The supersymmetric partner particles of the fermions are called sfermions, whereas the partner particles of the gauge (Higgs) bosons are referred to as gauginos (higgsinos).}.
+In $\mathcal{N}=1$ supersymmetry, every SM particle has exactly one supersymmetric partner particle, which leads to a doubling of the particle content in the MSSM with respect to the SM\footnote{The supersymmetric partner particles of the fermions are called sfermions, whereas the partner particles of the gauge (Higgs) bosons are referred to as gauginos (higgsinos).}.
 Additionally, it is necessary to introduce a second Higgs doublet to ensure the holomorphicity of the superpotential in the presence of mass terms for the up-type particles.
 Furthermore, the MSSM only stays free from anomalies if there is a further Higgs doublet~\cite{bib:SUSYPrimer}.
 This leads to the fact, that in the MSSM, there are five Higgs bosons instead of only one as in the SM.
@@ -406,21 +412,6 @@ This leads to the fact, that in the MSSM, there are five Higgs bosons instead of
 In supersymmetry, all particles and their partner particles are described by so-called supermultiplets.
 Since the generators of the gauge group commute with the generators of supersymmetry, all particles within one supermultiplet have same quantum numbers, besides the spin.
 In a renormalisable theory, there are two different types of supermultiplets: chiral multiplets, which contain a two-component Weyl spinor describing the fermionic degrees of freedom and a complex scalar field for the bosonic degrees of freedom; vector multiplets containing a vector field and a two-component Weyl spinor.
-%The number of degrees of freedom are thus for chiral multiplets for on-shell particles
-%\begin{equation*}
-%\begin{split}
-%& n_f=2,\ \text{due to the two-component Weyl spinor}\\
-%& n_b=2,\ \text{due to the complex scalar field}, 
-%\end{split}
-%\end{equation*}
-%and for vector multiplets for on-shell particles
-%\begin{equation*}
-%\begin{split}
-%& n_f=2,\ \text{due to the two-component Weyl spinor}\\
-%& n_b=2,\ \text{due to the vector field}. 
-%\end{split}
-%\end{equation*}
-%As mentioned before, in a realistic extension of the Standard Model, supersymmetry cannot be exact, since no supersymmetric particles have been found which have the same masses as their SM partners.
 The complete particle content of the MSSM is depicted in Tables~\ref{tab:chiral_multiplets} and~\ref{tab:vector_multiplets}.
 
 Since in supersymmetric theories only left-handed Weyl spinors appear in the Lagrangian density, the right-handed particles are described as charge conjugated spinors of the left-handed spinors.
@@ -631,7 +622,7 @@ The searches were interpreted for $M_1$ and $M_2$ almost degenerate and with a l
 Charginos are excluded up to a mass of 92.4\gev~\cite{bib:LEP:SUSY_results}.
 \begin{figure}[!h]
   \centering
-      \includegraphics[width=0.59\textwidth]{figures/theory/mass_adlo_gaug_1.pdf}
+      \includegraphics[width=0.45\textwidth]{figures/theory/mass_adlo_gaug_1.pdf}
   \caption{Observed and expected exclusion limits by LEP searches in the $m_{\chipm}-\Delta m \left( \chipm, \chiO \right)$ plane for almost degenerate $M_1$ and $M_2$ and a large unified scalar mass $m_0$. Taken from~\cite{bib:LEP:SUSY_results}.}  
   \label{fig:LEP}
 \end{figure}
@@ -642,12 +633,7 @@ Furthermore, a search for metastable particles with high ionisation losses was p
 These searches were interpreted within an anomaly-mediated supersymmetry breaking model~\cite{bib:Theory_AMSB_1998} with $\tan\beta=5$ and $\mu>0$.
 The excluded parameter space by these searches is shown in Fig.~\ref{fig:ATLAS}.
 Models with charginos down to lifetimes of 0.06\ns could be excluded.
-\begin{figure}[!h]
-  \centering
-      \includegraphics[width=0.59\textwidth]{figures/theory/ATLAS_SUSY_LLPChargino.pdf}
-  \caption{Excluded parameter space by ATLAS searches in the $m_{\chipm}-\tau_{\chipm}$ plane for an AMSB model with $\tan\beta=5$ and $\mu>0$. Only chargino pair production is taken into account. The area below the curves is excluded. Taken from~\cite{bib:ATLAS_SUMMARYPLOTS}.}  
-  \label{fig:ATLAS}
-\end{figure}
+
 
 \subsection*{Searches at CMS at 7 and 8\tev}
 There are several searches at the CMS experiment at the LHC that are sensitive to long-lived wino-like charginos.
@@ -656,9 +642,16 @@ Furthermore, there is the search for disappearing tracks~\cite{bib:CMS:DT_8TeV} 
 This search was conducted at the CMS experiment at a centre-of mass energy of $\sqrt{s}=8\tev$.
 Since the latter search is more sensitive to shorter lifetime, only the exclusion limits derived by this search are shown in Fig.~\ref{fig:CMS}.
 The disappearing track search by CMS shows a very similar sensitivity as the searches done at the ATLAS experiment.
+
 \begin{figure}[!h]
   \centering
-      \includegraphics[width=0.59\textwidth]{figures/theory/lifetimeNs_vs_mass.pdf}
+      \includegraphics[width=0.54\textwidth]{figures/theory/ATLAS_SUSY_LLPChargino.pdf}
+  \caption{Excluded parameter space by ATLAS searches in the $m_{\chipm}-\tau_{\chipm}$ plane for an AMSB model with $\tan\beta=5$ and $\mu>0$. Only chargino pair production is taken into account. The area below the curves is excluded. Taken from~\cite{bib:ATLAS_SUMMARYPLOTS}.}  
+  \label{fig:ATLAS}
+\end{figure}
+\begin{figure}[!h]
+  \centering
+      \includegraphics[width=0.54\textwidth]{figures/theory/lifetimeNs_vs_mass.pdf}
   \caption{Excluded parameter space by the Disappearing track search of CMS in the $\tau_{\chipm}-m_{\chipm}$ plane for wino-like charginos. The region left to the curve is excluded. Taken from~\cite{bib:CMS:DT_8TeV}.}  
   \label{fig:CMS}
 \end{figure}

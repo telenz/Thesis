@@ -73,7 +73,7 @@ In the following, the various detector components of the CMS detector from the i
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \section{The tracking system}
-The tracking detector~\cite{bib:CMS:Tracker_1997,bib:CMS:Tracker_2000} is the innermost detector of the CMS experiment. 
+The tracking detector~\cite{bib:CMS:TDR_2006,bib:CMS:Tracker_1997,bib:CMS:Tracker_2000} is the innermost detector of the CMS experiment. 
 It is a silicon semiconductor detector and is included for the tasks of vertex and track reconstruction by the measurement of particles' energy losses.
 A schematic sketch of the tracker at CMS is depicted in Fig.~\ref{fig:Tracker}.
 \begin{figure}[!b]
@@ -112,20 +112,20 @@ The spatial resolution of the primary vertex depends on the number of tracks tak
 For more than 50 tracks originating from the primary vertex the spatial resolution is around $10-12\mum$ for each of the three spatial dimensions~\cite{bib:CMS:tracking_8TeV}.
 The reconstruction efficiency of primary vertices is close to 100\% if more than two tracks are used for the vertex reconstruction~\cite{bib:CMS:tracking_8TeV}.
 
-%The momentum resolution of the full tracking system will be discussed in Section~\ref{FIXME}.
-
 \subsection*{The silicon strip tracker}
 The silicon strip tracker is the next-to innermost detector of the CMS experiment and ranges up to a radius of 1.1\m.
 The barrel region consists of a tracker inner barrel (TIB) and a tracker outer barrel (TOB).
 The TIB has four layers with two layers equipped with stereo modules to measure the hit position additionally in the $r-z$ plane.
-The TOB has six different layers with two layers of stereo modules. 
+The silicon sensors in the TIB are of 320\mum thickness with a strip pitch variing between $80-120\mum$.
+The TOB has six different layers (two layers of stereo modules) with silicon sensors of 500\mum thickness and strip pitches between 120 and 180\mum. 
 
 The endcaps are subdivided into a tracker endcap (TEC) and a tracker inner disk (TID).
 They ensure a coverage of a pseudorapidity up to $|\eta|=2.5$.
 In each TEC, 9 disks between a z-position of $120\cm < z < 280\cm$ are contained.
 Each of the TID comprises three disks between $60\cm < z < 110\cm$.
 
-FIXME sizes and resolution!
+In the barrel region, a single-point resolution between $23 - 52\mum$ in the $r-\phi$ plane and $230 - 530\mum$  in the z-direction is achieved.
+%FIXME: What about momentum resolution
 
 \subsection*{Energy measurements in the tracking system}
 A charged particle traversing the above mentioned silicon detectors produces electron-hole pairs in the semiconducting material along its trajectory, thus loosing energy due to ionisation.

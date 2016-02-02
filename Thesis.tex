@@ -97,6 +97,7 @@ a4paper,
 \hyphenation{brems-strahl-ung}
 \hyphenation{PFMET-no-Mu}
 \hyphenation{trans-verse}
+\hyphenation{va-li-date}
 
 \input{definitions.tex}
 
@@ -188,14 +189,14 @@ a4paper,
 \usepackage{chngcntr}
 \usepackage{tocloft}
 \counterwithin{chapter}{part}
-\setlength{\cftchapnumwidth}{3em}
-\setlength{\cftsecnumwidth}{3em}
-\setlength{\cftsubsecnumwidth}{3em}
+\setlength{\cftchapnumwidth}{2.5em}
+\setlength{\cftsecnumwidth}{2.5em}
+\setlength{\cftsubsecnumwidth}{3.5em}
 \setlength{\cftsubsubsecnumwidth}{4em}
 
 % No bold chapter title in TOC
-% \renewcommand\cftchapfont{\mdseries}
-% \renewcommand\cftchappagefont{\mdseries}
+\renewcommand\cftchapfont{\bfseries}
+\renewcommand\cftchappagefont{\bfseries}
 
 % Figure numbering
 \counterwithout{figure}{chapter}
@@ -212,9 +213,19 @@ a4paper,
 % \renewcommand\cftchappagefont{\mdseries}
 % Remove space between chapter titles in TOC
 \setlength{\cftbeforechapskip}{1pt}
+\setlength{\cftbeforesecskip}{1pt}
+\setlength{\cftbeforesubsecskip}{1pt}
 \setlength{\cftbeforepartskip}{35pt}
-\setlength{\cftbeforesecskip}{-3pt}
-\setlength{\cftbeforesubsecskip}{-3pt}
+
+% Dots after chapter numbers
+\renewcommand{\cftchapaftersnum}{.}%
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+%Indent section numbres
+\setlength{\cftsecindent}{2.6em}
+\setlength{\cftsubsecindent}{2.6em}
+\setlength{\cftsubsecindent}{5.2em}
+\setlength{\cftsubsubsecindent}{5.2em}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -302,8 +313,8 @@ a4paper,
 % \input{introduction.tex}
  
 % \part{The standard model of particle physics and its supersymmetric extensions} \label{part:Theory}
-% \part{The Standard Model and its supersymmetric extension} \label{part:Theory}
-% \input{theory.tex}
+\part{The Standard Model and its supersymmetric extension} \label{part:Theory}
+\input{theory.tex}
 
 % % \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{part:Detector}
 % \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{part:Detector}
@@ -322,18 +333,18 @@ a4paper,
 %  \input{Part_Analysis/9_Interpretation.tex}
 %  \input{Part_Analysis/10_Conclusion.tex}
 
- \part{Measurement of the jet transverse-momentum resolution} \label{part:resolution}
- \input{resolution.tex}
+%  \part{Measurement of the jet transverse-momentum resolution} \label{part:resolution}
+%  \input{resolution.tex}
 
 % \part{Summary} \label{part:Conclusion}
 % \input{summary.tex}
 
-\bookmarksetup{startatroot}
-\cleardoublepage 
-\appendix
-\addtocontents{toc}{\protect\vskip40pt}
+% \bookmarksetup{startatroot}
+% \cleardoublepage 
+% \appendix
+% \addtocontents{toc}{\protect\vskip40pt}
 % \input{Appendix/appendix_analysis.tex}
-\input{Appendix/appendix_resolution.tex}
+% \input{Appendix/appendix_resolution.tex}
 
 \cleardoublepage 
 \bibliographystyle{lucas_unsrt}
