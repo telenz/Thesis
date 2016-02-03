@@ -23,7 +23,7 @@
 \newblock Westview Press, {1995}.
 
 \bibitem{bib:SM_book_Ryder}
-{Ryder, L. H.}, ``{QUANTUM FIELD THEORY}''.
+{Ryder, L. H.}, ``{Quantum field theory}''.
 \newblock Cambridge University Press,
 1996.
 \newblock
@@ -44,49 +44,49 @@ P.~W. Higgs, ``{Broken symmetries, massless particles and gauge fields}'', {\em
 %%CITATION = PHLTA,12,132;%%.
 
 \bibitem{bib:Higgs_Prediction_2}
-P.~W. Higgs, ``{Broken Symmetries and the Masses of Gauge Bosons}'', {\em Phys.
+P.~W. Higgs, ``{Broken symmetries and the masses of gauge bosons}'', {\em Phys.
   Rev. Lett.} {\bf 13} (1964) 508--509.
 \href{http://dx.doi.org/10.1103/PhysRevLett.13.508}{{\tt
   doi:10.1103/PhysRevLett.13.508}}.
 %%CITATION = PRLTA,13,508;%%.
 
 \bibitem{bib:HiggsMechanism_Brout_Englert}
-F.~Englert and R.~Brout, ``{Broken Symmetry and the Mass of Gauge Vector
-  Mesons}'', {\em Phys. Rev. Lett.} {\bf 13} (1964) 321--323.
+F.~Englert and R.~Brout, ``{Broken symmetry and the mass of gauge vector
+  mesons}'', {\em Phys. Rev. Lett.} {\bf 13} (1964) 321--323.
 \href{http://dx.doi.org/10.1103/PhysRevLett.13.321}{{\tt
   doi:10.1103/PhysRevLett.13.321}}.
 %%CITATION = PRLTA,13,321;%%.
 
 \bibitem{bib:HiggsMechanism_Guralnik_Hagen_Kibble}
-G.~S. Guralnik, C.~R. Hagen, and T.~W.~B. Kibble, ``{Global Conservation Laws
-  and Massless Particles}'', {\em Phys. Rev. Lett.} {\bf 13} (1964) 585--587.
+G.~S. Guralnik, C.~R. Hagen, and T.~W.~B. Kibble, ``{Global conservation laws
+  and massless particles}'', {\em Phys. Rev. Lett.} {\bf 13} (1964) 585--587.
 \href{http://dx.doi.org/10.1103/PhysRevLett.13.585}{{\tt
   doi:10.1103/PhysRevLett.13.585}}.
 %%CITATION = PRLTA,13,585;%%.
 
 \bibitem{bib:HiggsMechanism_Higgs_1966}
-P.~W. Higgs, ``{Spontaneous Symmetry Breakdown without Massless Bosons}'', {\em
+P.~W. Higgs, ``{Spontaneous symmetry breakdown without massless bosons}'', {\em
   Phys. Rev.} {\bf 145} (1966) 1156--1163.
 \href{http://dx.doi.org/10.1103/PhysRev.145.1156}{{\tt
   doi:10.1103/PhysRev.145.1156}}.
 %%CITATION = PHRVA,145,1156;%%.
 
 \bibitem{bib:HiggsMechanism_Kibble_1967}
-T.~W.~B. Kibble, ``{Symmetry breaking in nonAbelian gauge theories}'', {\em
+T.~W.~B. Kibble, ``{Symmetry breaking in non-Abelian gauge theories}'', {\em
   Phys. Rev.} {\bf 155} (1967) 1554--1561.
 \href{http://dx.doi.org/10.1103/PhysRev.155.1554}{{\tt
   doi:10.1103/PhysRev.155.1554}}.
 %%CITATION = PHRVA,155,1554;%%.
 
 \bibitem{bib:HiggsMechanism_Glashow_1961}
-S.~L. Glashow, ``{Partial Symmetries of Weak Interactions}'', {\em Nucl. Phys.}
+S.~L. Glashow, ``{Partial symmetries of weak interactions}'', {\em Nucl. Phys.}
   {\bf 22} (1961) 579--588.
 \href{http://dx.doi.org/10.1016/0029-5582(61)90469-2}{{\tt
   doi:10.1016/0029-5582(61)90469-2}}.
 %%CITATION = NUPHA,22,579;%%.
 
 \bibitem{bib:HiggsMechanism_Weinberg_1967}
-S.~Weinberg, ``{A Model of Leptons}'', {\em Phys. Rev. Lett.} {\bf 19} (1967)
+S.~Weinberg, ``{A model of leptons}'', {\em Phys. Rev. Lett.} {\bf 19} (1967)
   1264--1266.
 \href{http://dx.doi.org/10.1103/PhysRevLett.19.1264}{{\tt
   doi:10.1103/PhysRevLett.19.1264}}.
@@ -94,21 +94,21 @@ S.~Weinberg, ``{A Model of Leptons}'', {\em Phys. Rev. Lett.} {\bf 19} (1967)
 
 \bibitem{bib:HiggsMechanism_Salam_1968}
 A.~Salam, ``{Weak and Electromagnetic Interactions}'', {\em Conf. Proc.} {\bf
-  C680519} (1968)
-367--377.
+  C680519} (1968) 367--377.
+\href{http://dx.doi.org/10.1007/BF02726525}{{\tt doi:10.1007/BF02726525}}.
 %%CITATION = CONFP,C680519,367;%%.
 
 \bibitem{bib:W_discovery}
-{ UA1} Collaboration, ``{Experimental Observation of Isolated Large Transverse
-  Energy Electrons with Associated Missing Energy at s**(1/2) = 540-GeV}'',
+{ UA1} Collaboration, ``{Experimental observation of isolated large transverse
+  energy electrons with associated missing energy at $\sqrt{s}=540\gev$}'',
   {\em Phys. Lett.} {\bf B122} (1983) 103--116. [,611(1983)].
 \href{http://dx.doi.org/10.1016/0370-2693(83)91177-2}{{\tt
   doi:10.1016/0370-2693(83)91177-2}}.
 %%CITATION = PHLTA,B122,103;%%.
 
 \bibitem{bib:Z_discovery}
-{ UA1} Collaboration, ``{Experimental Observation of Lepton Pairs of Invariant
-  Mass Around 95-GeV/c**2 at the CERN SPS Collider}'', {\em Phys. Lett.} {\bf
+{ UA1} Collaboration, ``{Experimental observation of lepton pairs of invariant
+  mass around $95\gev/c^2$ at the CERN SPS collider}'', {\em Phys. Lett.} {\bf
   B126} (1983) 398--410.
 \href{http://dx.doi.org/10.1016/0370-2693(83)90188-0}{{\tt
   doi:10.1016/0370-2693(83)90188-0}}.
@@ -138,8 +138,8 @@ pp.1--438.
 %%CITATION = INSPIRE-161902;%%.
 
 \bibitem{bib:DM:RotationCurves}
-J.~E. Gunn and B.~A. Peterson, ``{On the Density of Neutral Hydrogen in
-  Intergalactic Space}'', {\em Astrophys. J.} {\bf 142} (1965) 1633.
+J.~E. Gunn and B.~A. Peterson, ``{On the density of neutral hydrogen in
+  intergalactic space}'', {\em Astrophys. J.} {\bf 142} (1965) 1633.
 \href{http://dx.doi.org/10.1086/148444}{{\tt doi:10.1086/148444}}.
 %%CITATION = ASJOA,142,1633;%%.
 
@@ -150,15 +150,15 @@ J.~E. Gunn and B.~A. Peterson, ``{On the Density of Neutral Hydrogen in
 %%CITATION = ARXIV:1502.01589;%%.
 
 \bibitem{bib:Golfand_Likhtman_1971}
-{\relax Yu}.~A. Golfand and E.~P. Likhtman, ``{Extension of the Algebra of
-  Poincare Group Generators and Violation of p Invariance}'', {\em JETP Lett.}
+{\relax Yu}.~A. Golfand and E.~P. Likhtman, ``{Extension of the algebra of
+  Poincare group generators and violation of p invariance}'', {\em JETP Lett.}
   {\bf 13} (1971) 323--326.
 [Pisma Zh. Eksp. Teor. Fiz.13,452(1971)].
 %%CITATION = JTPLA,13,323;%%.
 
 \bibitem{bib:Haag_1974}
-R.~Haag, J.~T. Lopuszanski, and M.~Sohnius, ``{All Possible Generators of
-  Supersymmetries of the s Matrix}'', {\em Nucl. Phys.} {\bf B88} (1975) 257.
+R.~Haag, J.~T. Lopuszanski, and M.~Sohnius, ``{All possible generators of
+  supersymmetries of the S-matrix}'', {\em Nucl. Phys.} {\bf B88} (1975) 257.
 \href{http://dx.doi.org/10.1016/0550-3213(75)90279-5}{{\tt
   doi:10.1016/0550-3213(75)90279-5}}.
 %%CITATION = NUPHA,B88,257;%%.
@@ -175,7 +175,7 @@ M.~Drees, ``{An Introduction to Supersymmetry}'', in {\em {Current topics in
 
 \bibitem{bib:Aitchison_2005}
 I.~J.~R. Aitchison, ``{Supersymmetry and the MSSM: An Elementary
-  introduction}'',
+  Introduction}'',
 \href{http://www.arXiv.org/abs/hep-ph/0505105}{{\tt arXiv:hep-ph/0505105}}.
 %%CITATION = HEP-PH/0505105;%%.
 
@@ -188,7 +188,7 @@ M.~Drees, R.~Godbole, and P.~Roy, ``{Theory and phenomenology of sparticles: An
 %%CITATION = INSPIRE-671271;%%.
 
 \bibitem{bib:Strings_1974}
-J.~Scherk, ``{An Introduction to the Theory of Dual Models and Strings}'', {\em
+J.~Scherk, ``{An introduction to the theory of dual models and strings}'', {\em
   Rev. Mod. Phys.} {\bf 47} (1975) 123--164.
 \href{http://dx.doi.org/10.1103/RevModPhys.47.123}{{\tt
   doi:10.1103/RevModPhys.47.123}}.
@@ -203,7 +203,7 @@ U.~Amaldi, W.~de~Boer, and H.~Furstenau, ``{Comparison of grand unified
 %%CITATION = PHLTA,B260,447;%%.
 
 \bibitem{bib:SUSYPrimer}
-S.~P. Martin, ``{A Supersymmetry primer}'',
+S.~P. Martin, ``{A Supersymmetry Primer}'',
 \href{http://www.arXiv.org/abs/hep-ph/9709356}{{\tt arXiv:hep-ph/9709356}}.
 %%CITATION = HEP-PH/9709356;%%.
 
@@ -219,7 +219,7 @@ S.~P. Martin, ``{A Supersymmetry primer}'',
 %%CITATION = HEP-PH/9901246;%%.
 
 \bibitem{bib:GravityMediation}
-H.~P. Nilles, ``{Supersymmetry, Supergravity and Particle Physics}'', {\em
+H.~P. Nilles, ``{Supersymmetry, supergravity and particle physics}'', {\em
   Phys. Rept.} {\bf 110} (1984) 1--162.
 \href{http://dx.doi.org/10.1016/0370-1573(84)90008-5}{{\tt
   doi:10.1016/0370-1573(84)90008-5}}.
@@ -251,8 +251,8 @@ M.~W. Cahill-Rowley, J.~L. Hewett, A.~Ismail{ et~al.}, ``{More energy, more
 %%CITATION = ARXIV:1211.1981;%%.
 
 \bibitem{bib:pMSSMScan_2012}
-M.~W. Cahill-Rowley, J.~L. Hewett, S.~Hoeche{ et~al.}, ``{The New Look pMSSM
-  with Neutralino and Gravitino LSPs}'', {\em Eur. Phys. J.} {\bf C72} (2012)
+M.~W. Cahill-Rowley, J.~L. Hewett, S.~Hoeche{ et~al.}, ``{The new look pMSSM
+  with neutralino and gravitino LSPs}'', {\em Eur. Phys. J.} {\bf C72} (2012)
   2156, \href{http://www.arXiv.org/abs/1206.4321}{{\tt arXiv:1206.4321}}.
 \href{http://dx.doi.org/10.1140/epjc/s10052-012-2156-1}{{\tt
   doi:10.1140/epjc/s10052-012-2156-1}}.
@@ -384,8 +384,8 @@ Y/}.
 %%CITATION = ARXIV:1503.02641;%%.
 
 \bibitem{bib:HESS_DM}
-{ HESS} Collaboration, ``{Search for photon line-like signatures from Dark
-  Matter annihilations with H.E.S.S.}'', {\em Phys. Rev. Lett.} {\bf 110}
+{ HESS} Collaboration, ``{Search for Photon-Linelike Signatures from Dark
+  Matter Annihilations with H.E.S.S.}'', {\em Phys. Rev. Lett.} {\bf 110}
   (2013) 041301, \href{http://www.arXiv.org/abs/1301.1173}{{\tt
   arXiv:1301.1173}}.
 \href{http://dx.doi.org/10.1103/PhysRevLett.110.041301}{{\tt
@@ -393,15 +393,15 @@ Y/}.
 %%CITATION = ARXIV:1301.1173;%%.
 
 \bibitem{bib:IndirectSearches_Fan_2013}
-J.~Fan and M.~Reece, ``{In Wino Veritas? Indirect Searches Shed Light on
-  Neutralino Dark Matter}'', {\em JHEP} {\bf 10} (2013) 124,
+J.~Fan and M.~Reece, ``{In wino veritas? Indirect searches shed light on
+  neutralino dark matter}'', {\em JHEP} {\bf 10} (2013) 124,
   \href{http://www.arXiv.org/abs/1307.4400}{{\tt arXiv:1307.4400}}.
 \href{http://dx.doi.org/10.1007/JHEP10(2013)124}{{\tt
   doi:10.1007/JHEP10(2013)124}}.
 %%CITATION = ARXIV:1307.4400;%%.
 
 \bibitem{bib:IndirectSearches_Cohen_2013}
-T.~Cohen, M.~Lisanti, A.~Pierce{ et~al.}, ``{Wino Dark Matter Under Siege}'',
+T.~Cohen, M.~Lisanti, A.~Pierce{ et~al.}, ``{Wino dark matter under siege}'',
   {\em JCAP} {\bf 1310} (2013) 061,
   \href{http://www.arXiv.org/abs/1307.4082}{{\tt arXiv:1307.4082}}.
 \href{http://dx.doi.org/10.1088/1475-7516/2013/10/061}{{\tt
@@ -409,8 +409,8 @@ T.~Cohen, M.~Lisanti, A.~Pierce{ et~al.}, ``{Wino Dark Matter Under Siege}'',
 %%CITATION = ARXIV:1307.4082;%%.
 
 \bibitem{bib:IndirectSearches_Hryczuk_2014}
-A.~Hryczuk, I.~Cholis, R.~Iengo{ et~al.}, ``{Indirect Detection Analysis: Wino
-  Dark Matter Case Study}'', {\em JCAP} {\bf 1407} (2014) 031,
+A.~Hryczuk, I.~Cholis, R.~Iengo{ et~al.}, ``{Indirect detection analysis: wino
+  dark matter case study}'', {\em JCAP} {\bf 1407} (2014) 031,
   \href{http://www.arXiv.org/abs/1401.6212}{{\tt arXiv:1401.6212}}.
 \href{http://dx.doi.org/10.1088/1475-7516/2014/07/031}{{\tt
   doi:10.1088/1475-7516/2014/07/031}}.

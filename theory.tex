@@ -310,9 +310,9 @@ For fermions, on the other hand, there is a further symmetry for $m_f=0$.
 The Lagrangian density becomes invariant under chiral transformations of the form $\Psi \rightarrow e^{i\vec{\alpha}\frac{\vec{\sigma}}{2} \gamma_5} \Psi$.
 Although the mass terms of the fermions break this symmetry, it protects the fermions against large radiative corrections.
 
-Due to these considerations, it seems natural to transfer the mechanism of protecting fermion masses to scalar masses as well.
+Due to these considerations, it seems natural to transfer the mechanism of protecting fermion masses by a chiral symmetry to scalar masses as well.
 This can only be done by connecting fermions with bosons and vice versa.
-FIXME: In the 1970s, exactly this linking between the different particle types could be achieved.
+In the 1970s, exactly this linking between the different particle types was achieved.
 A work from Golfand and Likhtman in the year 1971 stated that an extension of the Poincar\'e  algebra is possible via fermionic generators~\cite{bib:Golfand_Likhtman_1971}.
 R.~Haag, J.~Lopuszanski and M.~Sohnius finalised these considerations by showing that with the help of fermionic generators a connection between space-time symmetries and internal symmetries is possible~\cite{bib:Haag_1974}.
 The extensions of a symmetry group by fermionic generators is called supersymmetry (SUSY).
@@ -361,12 +361,12 @@ However, as argued, SUSY must be broken.
 The cancellation of quadratic divergencies can therefore only be assured, if the breaking is not too drastic and only logarithmic divergencies remain.
 %To avoid a new source of fine-tuning, the soft-breaking parameters should be of the order $M_{\rm soft} \sim 100\gev - 1000\gev$.
 
-FIXME: Embedding gravity into a four dimensional quantum field theory reveals difficult because of its non-renormalisability. % of the Einstein-Hilbert action. 
-A possible answer, beyond quantum field theory, are string theories~\cite{bib:Strings_1974}, where the existence of a fundamental length - that of the strings - regularises the ultraviolet behaviour and allows a quantum description of objects in curved space.
+Embedding gravity into a four dimensional quantum field theory proves difficult because of the non-renormalisability of the resulting theory.
+A possible answer, beyond quantum field theory, are string theories~\cite{bib:Strings_1974}, where the existence of a fundamental length - that of the strings - regularises the ultraviolet behaviour and allows for a quantum description of objects in curved space.
 Yet, the only known procedure to incorporate fermions within a string Lagrangian density consists in adding supersymmetry as a condition. 
 Supersymmetry thus appears as a fundamental ingredient for a description of quantum gravity. % and it might be partially preserved at low energy (close to the TeV scale).
 
-%FIXME: It is not possible to implement gravity within a renormalisable $\mathcal{N}=1$ supersymmetric extension of the Standard Model.
+%It is not possible to implement gravity within a renormalisable $\mathcal{N}=1$ supersymmetric extension of the Standard Model.
 %However, so-called string theories are able to incorporate quantum gravity and, furthermore, string theories that allow for bosons and fermions are based on supersymmetry.
 %Therefore, supersymmetry is considered as a crucial ingredient for the description of a quantum field theory of gravity.
 
@@ -409,15 +409,8 @@ Additionally, it is necessary to introduce a second Higgs doublet to ensure the 
 Furthermore, the MSSM only stays free from anomalies if there is a further Higgs doublet~\cite{bib:SUSYPrimer}.
 This leads to the fact, that in the MSSM, there are five Higgs bosons instead of only one as in the SM.
 
-In supersymmetry, all particles and their partner particles are described by so-called supermultiplets.
-Since the generators of the gauge group commute with the generators of supersymmetry, all particles within one supermultiplet have same quantum numbers, besides the spin.
-In a renormalisable theory, there are two different types of supermultiplets: chiral multiplets, which contain a two-component Weyl spinor describing the fermionic degrees of freedom and a complex scalar field for the bosonic degrees of freedom; vector multiplets containing a vector field and a two-component Weyl spinor.
-The complete particle content of the MSSM is depicted in Tables~\ref{tab:chiral_multiplets} and~\ref{tab:vector_multiplets}.
-
-Since in supersymmetric theories only left-handed Weyl spinors appear in the Lagrangian density, the right-handed particles are described as charge conjugated spinors of the left-handed spinors.
-
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!b]
 \centering
 \caption{Chiral supermultiplets in the MSSM.}
 \label{tab:chiral_multiplets}
@@ -427,22 +420,21 @@ Since in supersymmetric theories only left-handed Weyl spinors appear in the Lag
 \toprule
                      &   spin 0                                     & spin $\frac{1}{2}$              & $SU(3)_C,\ SU(2)_L,\ U(1)_Y$\\ 
 \midrule
-   squarks/quarks    & $\left(\tilde{u}_L,\tilde{d}_L \right)$      & $\left(u_L,d_L\right)$          & $\bf{3},\ \bf{2},\ \frac{1}{3}$\\ \cline{2-4}  
-                     & $\tilde{\bar{u}}_L = \tilde{u}_R^{\dagger} $   & $\bar{u}_L = (u_R)^c$           & $\bf{\bar{3}},\ \bf{1},\ -\frac{4}{3}$\\ \cline{2-4}  
-                     & $\tilde{\bar{d}}_L = \tilde{d}_R^{\dagger}$    & $\bar{d}_L = (d_R)^c$           & $\bf{\bar{3}},\ \bf{1},\ \frac{2}{3}$\\ 
+   squarks/quarks    & $\left(\tilde{u}_L,\tilde{d}_L \right)$      & $\left(u_L,d_L\right)$           & $\mathbf{3},\ \mathbf{2},\ +\frac{1}{3}$\\ \cline{2-4}  
+                     & $\tilde{\bar{u}}_L = \tilde{u}_R^{\dagger} $   & $\bar{u}_L = (u_R)^c$            & $\mathbf{\bar{3}},\ \mathbf{1},\ -\frac{4}{3}$\\ \cline{2-4}  
+                     & $\tilde{\bar{d}}_L = \tilde{d}_R^{\dagger}$    & $\bar{d}_L = (d_R)^c$            & $\mathbf{\bar{3}},\ \mathbf{1},\ +\frac{2}{3}$\\ 
 \midrule
-   sleptons/leptons  & $\left(\tilde{\nu}_{eL},\tilde{e}_L\right)$   & $\left(\nu_{eL},e_L\right)$     & $\bf{1},\ \bf{2},\ -1$\\ \cline{2-4} 
-                     & $\tilde{\bar{e}}_L = \tilde{e}_R^{\dagger}$    & $\bar{e}_L = (e_R)^c$           & $\bf{\bar{1}},\ \bf{1},\ 2$\\ 
+   sleptons/leptons  & $\left(\tilde{\nu}_{eL},\tilde{e}_L\right)$   & $\left(\nu_{eL},e_L\right)$      & $\mathbf{1},\ \mathbf{2},\ -1$\\ \cline{2-4} 
+                     & $\tilde{\bar{e}}_L = \tilde{e}_R^{\dagger}$    & $\bar{e}_L = (e_R)^c$            & $\mathbf{\bar{1}},\ \mathbf{1},\ +2$\\ 
 \midrule
-   Higgs/higgsinos   & $\left(H_u^+,H_u^0\right)$        & $\left(\tilde{H}_u^+,\tilde{H}_u^0\right)$ & $\bf{1},\ \bf{2},\ 1$\\ \cline{2-4}
-                     & $\left(H_d^0,H_d^-\right)$        & $\left(\tilde{H}_d^0,\tilde{H}_d^-\right)$ & $\bf{1},\ \bf{2},\ -1$ \\ 
+   Higgs/higgsinos   & $\left(H_u^+,H_u^0\right)$        & $\left(\tilde{H}_u^+,\tilde{H}_u^0\right)$   & $\mathbf{1},\ \mathbf{2},\ +1$\\ \cline{2-4}
+                     & $\left(H_d^0,H_d^-\right)$        & $\left(\tilde{H}_d^0,\tilde{H}_d^-\right)$   & $\mathbf{1},\ \mathbf{2},\ -1$ \\ 
 \bottomrule
-\multicolumn{4}{c}{} \\
+\multicolumn{4}{c}{} 
 \end{tabular}}
 \end{table}  
-
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!b]
 \centering
 \caption{Vector supermultiplets in the MSSM.}
 \label{tab:vector_multiplets}
@@ -452,15 +444,22 @@ Since in supersymmetric theories only left-handed Weyl spinors appear in the Lag
 \toprule
                       &   spin $\frac{1}{2}$                                  & spin 1                 & $SU(3)_C,\ SU(2)_L,\ U(1)_Y$\\ 
 \midrule
-   gluinos/gluons     & $\tilde{g}$                       & $g$                 & $\bf{8},\ \bf{1},\ 0$\\ 
+   gluinos/gluons     & $\tilde{g}$                       & $g$                 & $\mathbf{8},\ \mathbf{1},\ 0$\\ 
 \midrule
-   winos/$W$-bosons   & $\tilde{W}^{\pm},\ \tilde{W}^0$  & $W^{\pm},\ W^0$     & $\bf{1},\ \bf{3},\ 0$\\
+   winos/$W$-bosons   & $\tilde{W}^{\pm},\ \tilde{W}^0$  & $W^{\pm},\ W^0$     & $\mathbf{1},\ \mathbf{3},\ 0$\\
 \midrule
-   bino/$B$-boson       & $\tilde{B}$                      & $B$                 & $\bf{1},\ \bf{1},\ 0$ \\  
+   bino/$B$-boson     & $\tilde{B}$                      & $B$                 & $\mathbf{1},\ \mathbf{1},\ 0$ \\  
 \bottomrule
-\multicolumn{4}{c}{} \\
+\multicolumn{4}{c}{}
 \end{tabular}}
-\end{table}  
+\end{table} 
+In supersymmetry, all particles and their partner particles are described by so-called supermultiplets.
+Since the generators of the gauge group commute with the generators of supersymmetry, all particles within one supermultiplet have same quantum numbers, besides the spin.
+In a renormalisable theory, there are two different types of supermultiplets: chiral multiplets, which contain a two-component Weyl spinor describing the fermionic degrees of freedom and a complex scalar field for the bosonic degrees of freedom; vector multiplets containing a vector field and a two-component Weyl spinor.
+The complete particle content of the MSSM is depicted in Tables~\ref{tab:chiral_multiplets} and~\ref{tab:vector_multiplets}. 
+Since in supersymmetric theories only left-handed Weyl spinors appear in the Lagrangian density, the right-handed particles are described as charge conjugated spinors of the left-handed spinors.
+
+
 
 
 
