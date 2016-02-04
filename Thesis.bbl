@@ -164,4 +164,73 @@ https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013, Topic
 (1997).
 %%CITATION = CERN-LHCC-97-032;%%.
 
+\bibitem{CMS-PAS-PFT-09-001}
+{ CMS} Collaboration, ``Particle-Flow Event Reconstruction in CMS and
+  Performance for Jets, Taus, and MET'', {\em CMS Physics Analysis Summary}
+  {\bf \href{http://cds.cern.ch/record/1194487}{CMS-PAS-PFT-09-001}}
+(2009).
+%%CITATION = CMS-PAS-PFT-09-001;%%.
+
+\bibitem{bib:TrackAlgorithm_1989}
+P.~Billoir, ``{Progressive track recognition with a Kalman like fitting
+  procedure}'', {\em Comput. Phys. Commun.} {\bf 57} (1989) 390--394.
+\href{http://dx.doi.org/10.1016/0010-4655(89)90249-X}{{\tt
+  doi:10.1016/0010-4655(89)90249-X}}.
+%%CITATION = CPHCB,57,390;%%.
+
+\bibitem{bib:TrackAlgorithm_1990}
+P.~Billoir and S.~Qian, ``{Simultaneous pattern recognition and track fitting
+  by the Kalman filtering method}'', {\em Nucl. Instrum. Meth.} {\bf A294}
+  (1990) 219--228.
+\href{http://dx.doi.org/10.1016/0168-9002(90)91835-Y}{{\tt
+  doi:10.1016/0168-9002(90)91835-Y}}.
+%%CITATION = NUIMA,A294,219;%%.
+
+\bibitem{bib:TrackAlgorithm_1997}
+R.~Mankel, ``{A Concurrent track evolution algorithm for pattern recognition in
+  the HERA-B main tracking system}'', {\em Nucl. Instrum. Meth.} {\bf A395}
+  (1997) 169--184.
+\href{http://dx.doi.org/10.1016/S0168-9002(97)00705-5}{{\tt
+  doi:10.1016/S0168-9002(97)00705-5}}.
+%%CITATION = NUIMA,A395,169;%%.
+
+\bibitem{bib:CMS:muon_recoEff}
+{ CMS} Collaboration, ``{Performance of CMS muon reconstruction in $pp$
+  collision events at $\sqrt{s}=7$ TeV}'', {\em JINST} {\bf 7} (2012) P10002,
+  \href{http://www.arXiv.org/abs/1206.4071}{{\tt arXiv:1206.4071}}.
+\href{http://dx.doi.org/10.1088/1748-0221/7/10/P10002}{{\tt
+  doi:10.1088/1748-0221/7/10/P10002}}.
+%%CITATION = ARXIV:1206.4071;%%.
+
+\bibitem{bib:KalmanFilter_1987}
+R.~Fruhwirth, ``{Application of Kalman filtering to track and vertex
+  fitting}'', {\em Nucl. Instrum. Meth.} {\bf A262} (1987) 444--450.
+\href{http://dx.doi.org/10.1016/0168-9002(87)90887-4}{{\tt
+  doi:10.1016/0168-9002(87)90887-4}}.
+%%CITATION = NUIMA,A262,444;%%.
+
+\bibitem{bib:StandaloneMuonReconstruction}
+{ CMS} Collaboration, ``{Performance of CMS Muon Reconstruction in Cosmic-Ray
+  Events}'', {\em JINST} {\bf 5} (2010) T03022,
+  \href{http://www.arXiv.org/abs/0911.4994}{{\tt arXiv:0911.4994}}.
+\href{http://dx.doi.org/10.1088/1748-0221/5/03/T03022}{{\tt
+  doi:10.1088/1748-0221/5/03/T03022}}.
+%%CITATION = ARXIV:0911.4994;%%.
+
+\bibitem{bib:StandaloneElectronReconstruction}
+S.~Baffioni, C.~Charlot, F.~Ferri{ et~al.}, ``{Electron reconstruction in
+  CMS}'', {\em Eur. Phys. J.} {\bf C49} (2007) 1099--1116.
+\href{http://dx.doi.org/10.1140/epjc/s10052-006-0175-5}{{\tt
+  doi:10.1140/epjc/s10052-006-0175-5}}.
+%%CITATION = EPHJA,C49,1099;%%.
+
+\bibitem{bib:CMS:elec_recoEff}
+{ CMS} Collaboration, ``{Performance of electron reconstruction and selection
+  with the CMS detector in proton-proton collisions at $\sqrt{s}=8\tev$}'',
+  {\em JINST} {\bf 10} (2015), no.~06, P06005,
+  \href{http://www.arXiv.org/abs/1502.02701}{{\tt arXiv:1502.02701}}.
+\href{http://dx.doi.org/10.1088/1748-0221/10/06/P06005}{{\tt
+  doi:10.1088/1748-0221/10/06/P06005}}.
+%%CITATION = ARXIV:1502.02701;%%.
+
 \end{thebibliography}\endgroup

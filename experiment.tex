@@ -73,7 +73,7 @@ In the following, the various detector components of the CMS detector from the i
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \section{The tracking system}
-The tracking detector~\cite{bib:CMS:TDR_2006,bib:CMS:Tracker_1997,bib:CMS:Tracker_2000} is the innermost detector of the CMS experiment. 
+The tracking detector~\cite{bib:CMS:TDR_2006,bib:CMS:Tracker_1997,bib:CMS:Tracker_2000} is the innermost detector at CMS. 
 It is a silicon semiconductor detector and is included for the tasks of vertex and track reconstruction by the measurement of particles' energy losses.
 A schematic sketch of the tracker at CMS is depicted in Fig.~\ref{fig:Tracker}.
 \begin{figure}[!b]
@@ -113,7 +113,7 @@ For more than 50 tracks originating from the primary vertex the spatial resoluti
 The reconstruction efficiency of primary vertices is close to 100\% if more than two tracks are used for the vertex reconstruction~\cite{bib:CMS:tracking_8TeV}.
 
 \subsection*{The silicon strip tracker}
-The silicon strip tracker is the next-to innermost detector of the CMS experiment and ranges up to a radius of 1.1\m.
+The silicon strip tracker is the next-to innermost detector of the CMS detector and ranges up to a radius of 1.1\m.
 The barrel region consists of a tracker inner barrel (TIB) and a tracker outer barrel (TOB).
 The TIB has four layers with two layers equipped with stereo modules to measure the hit position additionally in the $r-z$ plane.
 The silicon sensors in the TIB are of 320\mum thickness with a strip pitch varying between $80-120\mum$.
@@ -140,7 +140,7 @@ A more detailed description of the energy measurement in silicon sensors can be 
 The electromagnetic calorimeter (ECAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_ECAL} encloses the tracking system and starts at a radius of 129\cm in the barrel region.
 It is divided into a barrel part and two endcaps, which are at a distance of 314\cm from the vertex.
 Figure~\ref{fig:ECAL} depicts a schematic sketch of the electromagnetic calorimeter system in the transverse plane.
-\begin{figure}[!h]
+\begin{figure}[!ht]
   \centering
       \includegraphics[width=0.89\textwidth]{figures/experiment/CMS/Figures_Experimental_Apparatus_ECALRapidity.png}
   \caption{A quarter section of the ECAL in a transverse view. Taken from~\cite{bib:CMS:TDR_2006}.}  
@@ -168,9 +168,9 @@ These numbers lead to an energy resolution of around 0.4\% for an electron with 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The hadronic calorimeter}
-The hadronic calorimeter (HCAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_HCAL} of the CMS experiment is splitted into four different detector modules: the hadron barrel (HB), the hadron outer (HO), the hadron endcap (HE) and the hadron forward (HF) calorimeters.
+The hadronic calorimeter (HCAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_HCAL} of the CMS detector is splitted into four different detector modules: the hadron barrel (HB), the hadron outer (HO), the hadron endcap (HE) and the hadron forward (HF) calorimeters.
 A schematic sketch is depicted in Fig.~\ref{fig:HCAL}.
-\begin{figure}[!h]
+\begin{figure}[!ht]
   \centering
       \includegraphics[width=0.79\textwidth]{figures/experiment/CMS/fig_HCALdiagram.png}
   \caption{A quarter section of the HCAL in a transverse view. Taken from~\cite{bib:CMS:HCAL_Performance_2009}.}  
@@ -243,17 +243,119 @@ On HLT level, the decision time amounts to 50\ms and a reduction from 100\khz to
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \chapter{Event reconstruction and particle identification}
-12 pages
-\section{PF algorithm}
-2 pages
+A crucial ingredient of data analysis at the CMS experiment, is the translation of the energy measurements in the various sub-detector components into physical objects, like muons, electrons, \etc.
+For this translation, \ie particle identification, information from all detector components are used.
+This is know as the particle-flow event reconstruction algorithm~\cite{CMS-PAS-PFT-09-001}.
+In Fig.~\ref{fig:CMSslice}, a slice through the CMS detector is shown with the signatures of different particles indicated as coloured lines.
+
+In the next section an introduction into this algorithm is given, followed by the definition and classification of physics objects at the CMS experiment.
+
+\begin{figure}[!ht]
+  \centering
+      \includegraphics[width=0.99\textwidth]{figures/experiment/ObjectReconstruction/slice_white.pdf}
+  \caption{A radial slice through the CMS detector with several particle signatures indicated as coloured lines.}  
+  \label{fig:CMSslice}
+\end{figure}
+
+%This is done by defining what kind of energy deposits are necessary in order to classify signals during an event as a muon, \etc.
+%For this classification, a certain catalogue is set up, which specifies when to classify energy signals as a certain particle.
+
+\section{The particle-flow algorithm}
+\label{sec:PFalgorithm}
+The particle-flow (PF) event description~\cite{CMS-PAS-PFT-09-001} aims at optimising particle identification by the usage of all sub-detector components of the CMS detector.
+There are three main building bricks used for the global event description: reconstructed charged-particle tracks, calorimeter clusters, and muon tracks.
+The main requirements for these building bricks is a high reconstruction efficiency as well as a small fake rate.
+Therefore, a special emphasis was put on developing a very efficient tracking algorithm (see Section~\ref{sec:ObjectReconstruction}) and a well performing calorimeter clustering algorithm~\cite{CMS-PAS-PFT-09-001}. 
+
+The particle-flow algorithm proceeds as follows in an event (the following steps are a bit simplistic, the reader is referred to~\cite{CMS-PAS-PFT-09-001} for a detailed discussion):
+\begin{enumerate}
+\item For each pair of detected building bricks, a distance in the $\eta-\phi$ plane is calculated in order to quantify the quality of their link (whether the two building bricks stem from the same particle). 
+\item ``Blocks'' are produced from the building bricks that are linked together (with a typical number of one, two or three building bricks contained in a block).
+\item For each block the following steps are performed:
+\begin{enumerate}
+\item Each global muon (hits detected in the tracker as well as in the muon system) where the \pt measured in both sub-detectors is compatible with the tracker measurement only is defined as particle-flow muon and the track in both sub-detectors is removed from the event.
+\item Electron reconstruction and identification follows using blocks with tracker hits and ECAL clusters. 
+      For an identified particle-flow electron, the corresponding tracker hits and the ECAL clusters (including energy deposits from Bremsstrahlung photons) are removed. 
+\item Tighter tracker quality criteria are applied.
+\item The compatibility of the remaining ECAL and HCAL energy deposits to transverse momentum of the reconstructed tracks within a block is checked. 
+      This allows for the identification of particle-flow charged hadrons with a momentum estimate using tracker and calorimeter information. 
+      Only, if the energy deposits in the ECAL or HCAL are much larger than the corresponding track \pt, it gives rise to a particle-flow photon or particle-flow neutral hadron. 
+      All used ECAL and HCAL clusters used for the identification as well as the reconstructed tracks are removed from the event.
+\item Finally, the remaining HCAL and ECAL clusters (which are all not linked to any other building block) give rise to particle-flow photons or particle-flow neutral hadrons.
+\end{enumerate}
+\end{enumerate}
+These identified particle-flow objects are used to identify further objects in the event, \eg the missing transverse-energy or decay products of a tau lepton.
+
 \section{Object reconstruction}
+\label{sec:ObjectReconstruction}
+In this section, an overview about the required criteria for the identification of particles and other physics object is given.
 \subsection*{Reconstruction of tracks}
-\subsection*{Reconstruction of jets}
-\subsection*{Reconstruction of muons}
-\subsection*{Reconstruction of electrons}
+The reconstruction of tracks aims at linking several hits in the tracking system to one reconstructed track that matches with a high probability the original trajectory of the particle.
+With the track reconstruction an estimate of the particle's momentum as well as the position can be achieved.
+The challenge arise due to the high combinatorial complexity because of the large number of hits detected in each event, especially in the layers close to the interaction vertex.
+In the following an overview about the tracking algorithm used at CMS is given.
+The reader is referred to~\cite{bib:CMS:tracking_8TeV} for a thorough description of the reconstruction of tracks at CMS.
+
+The developed tracking software used at CMS is usually referred to as the Combinatorial Track Finder (CTF).
+It grounds on the so-called combinatorial Kalman filter~\cite{bib:TrackAlgorithm_1989,bib:TrackAlgorithm_1990,bib:TrackAlgorithm_1997}, which is mathematically equivalent to a global least square minimisation for linear models with Gaussian noise.
+
+The basic idea of the tracking algorithm at CMS is to not apply the combinatorial Kalman filter on all hits in one step but to reduce the level of complexity by an iterative procedure (called iterative tracking).
+A reduction of complexity can be achieved by reconstructing tracks in the first step that are easy to identify because of \eg a high \pt. 
+These tracks are removed afterwards and the remaining tracker hits are subject to further reconstruction iterations.
+%In the following, the various iteration steps are described.
+%These were in place in the year 2011.
+%Adjustment in the algorithm were applied due to higher pileup conditions in the year 2012.
+%However, the principle structure of the tracking algorithm remained.
+The following iterations are performed:
+\begin{itemize}
+\item Iteration 0: Tracks near to the $pp$ interaction point that have three pixel hits and a $\pt>0.8\gev$ are reconstructed.
+\item Iteration 1: Tracks with only two pixel hits and $\pt>0.8\gev$ are recovered.
+\item Iteration 2: Low \pt tracks from the $pp$ interaction point are reconstructed.
+\item Iteration 3-5: Reconstruction of tracks that are not originating from the primary vertex and recovering of tracks not found by previous iterations
+\end{itemize}
+Within these iterations, the reconstruction is subdivided into four different steps:
+\begin{itemize}
+\item Seed generation: Only 2-3 hits are used to define track candidates.
+\item Extrapolation: Based on expected flight path, additional hits are assigned to the candidate track (use of Kalman filter)
+\item Parameter estimates: With the usage of the Kalman filter and a smoother the trajectory parameters are determined
+\item Setting of quality flags: Quality flags are assigned to all tracks and tracks that fail certain quality criteria are discarded.
+\end{itemize}
+The configuration of the first and the fourth step differ across the different iterations.  
+
+\subsection*{Reconstruction of jets} 
+The reconstruction of jets is done by a anti-kt method at CMS.
+\begin{itemize}
+\item Clustering methods: anti kt method
+\item jet energy corrections
+\end{itemize}
+
+\subsection{Reconstruction of muons}
+There are three different muon definitions at CMS~\cite{bib:CMS:muon_recoEff}: global muons (correspond to particle-flow muons), tracker muons, and standalone muons.
+They have all in common that they require energy deposits in the muon system.
+The reconstruction of each of the three muon types is explained in the following.
+\begin{description}
+\item \textbf{Standalone muons:} For the reconstruction of standalone muons, all reconstructed segments in the muon system are utilised. Similar to the track reconstruction in the tracking system, Kalman filter techniques~\cite{bib:KalmanFilter_1987} are exploited to reconstruct muon trajectories in the muon chambers.
+A compatibility to the interaction point is imposed to reconstruct only muons produced at the LHC (no cosmic muons).
+Further details about the reconstruction of standalone muons can be found in~\cite{bib:StandaloneMuonReconstruction,bib:CMS:TDR_2006} 
+\item \textbf{Tracker muons:} To reconstruct so-called tracker muons, all tracker tracks with a $\pt>0.5\gev$ and $p>2.5\gev$ are extrapolated to the muon system. If at least one muon segment is matched to a reconstructed track within certain quality criteria, the trajectory is considered as a tracker muon (see~\cite{bib:CMS:muon_recoEff} for more detailed information).
+\item \textbf{Global muons:} For the reconstruction of global muons an outside-in approach is utilised. For each reconstructed standalone muon, the compatibility to the reconstructed tracks in the tracking system is checked. If compatible, a global muon track is reconstructed using Kalman filter techniques. For high-\pt muons, the momentum resolution can be increased compared to the momentum estimated using tracker information only~\cite{bib:CMS:muon_recoEff}.
+\end{description}
+
+\subsection{Reconstruction of electrons}
+The reconstruction of electrons at the CMS experiment is based on a mixture of the particle-flow algorithm explained in Section~\ref{sec:PFalgorithm} and a standalone approach~\cite{bib:StandaloneElectronReconstruction}.
+Thus, it is a very complex procedure and a complete description would go beyond the scope of this thesis.
+Therefore, only the rough idea of the electron reconstruction shall be reviewed here.
+The reader is referred to~\cite{bib:CMS:elec_recoEff} for a complete description of the reconstruction procedure.
+
+The difficulty of the electron reconstruction lies in the possibly large energy losses due to bremsstrahlung.
+This can change the direction of the electron significantly and lead to a reduced efficiency of the standard track reconstruction used for tracker tracks.
+Therefore, an optimised track reconstruction for electrons is performed in order to account for direction changes due to the radiation of photons.
+Because the dedicated electron track reconstruction can be very time consuming, a seeding of tracker hits rely already on ECAL information to reduce the number of candidate tracks.
+
+
 \subsection*{Reconstruction of taus}
 \subsection*{Reconstruction of missing transverse energy}
-\section{Event cleaning}
+\section*{Event cleaning}
 
 
 
