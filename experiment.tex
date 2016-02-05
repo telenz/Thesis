@@ -289,7 +289,7 @@ These identified particle-flow objects are used to identify further objects in t
 \section{Object reconstruction}
 \label{sec:ObjectReconstruction}
 In this section, an overview about the required criteria for the identification of particles and other physics object is given.
-\subsection*{Reconstruction of tracks}
+\subsection{Reconstruction of tracks}
 The reconstruction of tracks aims at linking several hits in the tracking system to one reconstructed track that matches with a high probability the original trajectory of the particle.
 With the track reconstruction an estimate of the particle's momentum as well as the position can be achieved.
 The challenge arise due to the high combinatorial complexity because of the large number of hits detected in each event, especially in the layers close to the interaction vertex.
@@ -321,6 +321,7 @@ Within these iterations, the reconstruction is subdivided into four different st
 \item Setting of quality flags: Quality flags are assigned to all tracks and tracks that fail certain quality criteria are discarded.
 \end{itemize}
 The configuration of the first and the fourth step differ across the different iterations.  
+FIXME: Think about writin about chi2 cut and the supression of fake tracks.
 
 \subsection{Reconstruction of jets} 
 \label{sec:JetReconstruction}
