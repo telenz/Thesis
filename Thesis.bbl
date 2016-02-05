@@ -194,6 +194,71 @@ R.~Mankel, ``{A Concurrent track evolution algorithm for pattern recognition in
   doi:10.1016/S0168-9002(97)00705-5}}.
 %%CITATION = NUIMA,A395,169;%%.
 
+\bibitem{bib:JetClustering_2008}
+M.~Cacciari, G.~P. Salam, and G.~Soyez, ``{The anti-$k_t$ jet clustering
+  algorithm}'', {\em JHEP} {\bf 04} (2008) 063,
+  \href{http://www.arXiv.org/abs/0802.1189}{{\tt arXiv:0802.1189}}.
+\href{http://dx.doi.org/10.1088/1126-6708/2008/04/063}{{\tt
+  doi:10.1088/1126-6708/2008/04/063}}.
+%%CITATION = ARXIV:0802.1189;%%.
+
+\bibitem{bib:Cambridge_1997}
+Y.~L. Dokshitzer, G.~D. Leder, S.~Moretti{ et~al.}, ``{Better jet clustering
+  algorithms}'', {\em JHEP} {\bf 08} (1997) 001,
+  \href{http://www.arXiv.org/abs/hep-ph/9707323}{{\tt arXiv:hep-ph/9707323}}.
+\href{http://dx.doi.org/10.1088/1126-6708/1997/08/001}{{\tt
+  doi:10.1088/1126-6708/1997/08/001}}.
+%%CITATION = HEP-PH/9707323;%%.
+
+\bibitem{bib:Cambridge_1998}
+M.~Wobisch and T.~Wengler, ``{Hadronization corrections to jet cross-sections
+  in deep inelastic scattering}'', in {\em {Monte Carlo generators for HERA
+  physics. Proceedings, Workshop, Hamburg, Germany, 1998-1999}}.
+\newblock 1998.
+\newblock
+\href{http://www.arXiv.org/abs/hep-ph/9907280}{{\tt arXiv:hep-ph/9907280}}.
+\newblock
+%%CITATION = HEP-PH/9907280;%%.
+
+\bibitem{bib:kT_algorithm_1993}
+S.~Catani, Y.~L. Dokshitzer, M.~H. Seymour{ et~al.}, ``{Longitudinally
+  invariant $K_t$ clustering algorithms for hadron hadron collisions}'', {\em
+  Nucl. Phys.} {\bf B406} (1993) 187--224.
+\href{http://dx.doi.org/10.1016/0550-3213(93)90166-M}{{\tt
+  doi:10.1016/0550-3213(93)90166-M}}.
+%%CITATION = NUPHA,B406,187;%%.
+
+\bibitem{bib:kT_algorithm_Ellis}
+S.~D. Ellis and D.~E. Soper, ``{Successive combination jet algorithm for hadron
+  collisions}'', {\em Phys. Rev.} {\bf D48} (1993) 3160--3166,
+  \href{http://www.arXiv.org/abs/hep-ph/9305266}{{\tt arXiv:hep-ph/9305266}}.
+\href{http://dx.doi.org/10.1103/PhysRevD.48.3160}{{\tt
+  doi:10.1103/PhysRevD.48.3160}}.
+%%CITATION = HEP-PH/9305266;%%.
+
+\bibitem{bib:Kristin_Thesis}
+K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the
+  CMS experiment}''.
+\newblock PhD thesis, Hamburg University, 2015.
+\newblock
+\url{http://www-library.desy.de/cgi-bin/showprep.pl?thesis15-003}.
+%%CITATION = DESY-THESIS-2015-003;%%.
+
+\bibitem{bib:CMS:JERCPaper_2011}
+{ CMS} Collaboration, ``{Determination of jet energy calibration and transverse
+  momentum resolution in CMS}'', {\em JINST} {\bf 6} (2011) P11002,
+  \href{http://www.arXiv.org/abs/1107.4277}{{\tt arXiv:1107.4277}}.
+\href{http://dx.doi.org/10.1088/1748-0221/6/11/P11002}{{\tt
+  doi:10.1088/1748-0221/6/11/P11002}}.
+%%CITATION = ARXIV:1107.4277;%%.
+
+\bibitem{bib:CHS_2012}
+{ CMS} Collaboration, ``{Pileup measurement and mitigation techniques in
+  CMS}'', {\em J. Phys. Conf. Ser.} {\bf 404} (2012) 012045.
+\href{http://dx.doi.org/10.1088/1742-6596/404/1/012045}{{\tt
+  doi:10.1088/1742-6596/404/1/012045}}.
+%%CITATION = 00462,404,012045;%%.
+
 \bibitem{bib:CMS:muon_recoEff}
 { CMS} Collaboration, ``{Performance of CMS muon reconstruction in $pp$
   collision events at $\sqrt{s}=7$ TeV}'', {\em JINST} {\bf 7} (2012) P10002,
@@ -232,5 +297,37 @@ S.~Baffioni, C.~Charlot, F.~Ferri{ et~al.}, ``{Electron reconstruction in
 \href{http://dx.doi.org/10.1088/1748-0221/10/06/P06005}{{\tt
   doi:10.1088/1748-0221/10/06/P06005}}.
 %%CITATION = ARXIV:1502.02701;%%.
+
+\bibitem{bib:GSF_2003}
+W.~Adam, R.~Fruhwirth, A.~Strandlie{ et~al.}, ``{Reconstruction of electrons
+  with the Gaussian sum filter in the CMS tracker at LHC}'', {\em eConf} {\bf
+  C0303241} (2003) TULT009,
+  \href{http://www.arXiv.org/abs/physics/0306087}{{\tt arXiv:physics/0306087}}.
+  [J. Phys.G31,N9(2005)].
+\href{http://dx.doi.org/10.1088/0954-3899/31/9/N01}{{\tt
+  doi:10.1088/0954-3899/31/9/N01}}.
+%%CITATION = PHYSICS/0306087;%%.
+
+\bibitem{bib:CMS:TauReconstruction}
+{ CMS} Collaboration, ``{Performance of tau-lepton reconstruction and
+  identification in CMS}'', {\em JINST} {\bf 7} (2012) P01001,
+  \href{http://www.arXiv.org/abs/1109.6034}{{\tt arXiv:1109.6034}}.
+\href{http://dx.doi.org/10.1088/1748-0221/7/01/P01001}{{\tt
+  doi:10.1088/1748-0221/7/01/P01001}}.
+%%CITATION = ARXIV:1109.6034;%%.
+
+\bibitem{bib:CMS:METReconstruction}
+{ CMS} Collaboration, ``{Performance of the CMS missing transverse momentum
+  reconstruction in pp data at $\sqrt{s}$ = 8 TeV}'', {\em JINST} {\bf 10}
+  (2015), no.~02, P02006, \href{http://www.arXiv.org/abs/1411.0511}{{\tt
+  arXiv:1411.0511}}.
+\href{http://dx.doi.org/10.1088/1748-0221/10/02/P02006}{{\tt
+  doi:10.1088/1748-0221/10/02/P02006}}.
+%%CITATION = ARXIV:1411.0511;%%.
+
+\bibitem{bib:CMS:Tracking_2010}
+{ CMS} Collaboration, ``{Tracking and Vertexing Results from First
+  Collisions}'', {\em CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1258204}{CMS-PAS-TRK-10-001}} (2010).
 
 \end{thebibliography}\endgroup

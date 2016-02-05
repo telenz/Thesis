@@ -14,7 +14,7 @@ Before the bunches are actually filled into the LHC ring they are pre-accelerate
 The injector chain and the LHC ring with its experiments is visualised in Fig~\ref{fig:LHC}.
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.90\textwidth]{figures/experiment/LHC/LHC_small.png}
+      \includegraphics[width=0.87\textwidth]{figures/experiment/LHC/LHC_small.png}
   \caption{Visualisation of the LHC with its experiments and the injector chain. Taken from~\cite{bib:CERNBrochure}.}  
   \label{fig:LHC}
 \end{figure}
@@ -172,7 +172,7 @@ The hadronic calorimeter (HCAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_HCAL} of the 
 A schematic sketch is depicted in Fig.~\ref{fig:HCAL}.
 \begin{figure}[!ht]
   \centering
-      \includegraphics[width=0.79\textwidth]{figures/experiment/CMS/fig_HCALdiagram.png}
+      \includegraphics[width=0.79\textwidth]{figures/experiment/CMS/fig_HCALdiagram_smaller_size.png}
   \caption{A quarter section of the HCAL in a transverse view. Taken from~\cite{bib:CMS:HCAL_Performance_2009}.}  
   \label{fig:HCAL}
 \end{figure}
@@ -252,7 +252,7 @@ In the next section an introduction into this algorithm is given, followed by th
 
 \begin{figure}[!ht]
   \centering
-      \includegraphics[width=0.99\textwidth]{figures/experiment/ObjectReconstruction/slice_white.pdf}
+      \includegraphics[width=0.99\textwidth]{figures/experiment/ObjectReconstruction/slice_white_smaller_size.pdf}
   \caption{A radial slice through the CMS detector with several particle signatures indicated as coloured lines.}  
   \label{fig:CMSslice}
 \end{figure}
@@ -322,12 +322,98 @@ Within these iterations, the reconstruction is subdivided into four different st
 \end{itemize}
 The configuration of the first and the fourth step differ across the different iterations.  
 
-\subsection*{Reconstruction of jets} 
-The reconstruction of jets is done by a anti-kt method at CMS.
-\begin{itemize}
-\item Clustering methods: anti kt method
-\item jet energy corrections
-\end{itemize}
+\subsection{Reconstruction of jets} 
+\label{sec:JetReconstruction}
+%In this thesis, a measurement of the jet transverse-momentum resolution (Part~\ref{part:resolution}) is presented.
+%Therefore, a special emphasis is put on the reconstruction of jets at the CMS experiment, explained in the following sections.
+In Section~\ref{sec:PFalgorithm}, the reconstruction of particle-flow neutral and charged hadrons was already introduced.
+Charged and neutral hadrons are usually formed due to the hadronisation process of final state quarks and gluons.
+Since the interest at particle colliders concerns the sum of all particles arising from one final state gluons or quarks, which is referred to as a jet, the reconstruction of jets is a very important task at particle colliders.
+Foremost, the clustering of the particle-flow candidates to a jet is a crucial ingredient for the reconstruction of jets.
+Furthermore, the calibration of the measured jet transverse momentum as well as the subtraction of energy due to pileup interactions is a crucial ingredient for jet reconstruction at CMS.
+All three subjects are explained in detail in the following sections.
+\subsubsection*{Clustering of jets}
+As already noted, jets are formed by quarks or gluons in the final state that hadronise due to colour confinement. 
+The reconstruction of jets is therefore subject to a clustering algorithm that clusters reconstructed particle-flow objects into a jet.
+At CMS, the so-called \antikt cluster algorithm~\cite{bib:JetClustering_2008} is used.
+This cluster algorithm belongs to the class of sequential recombination jet algorithms.
+
+In sequential recombination algorithms, a distance measure between two particles - or more generally objects - is used to cluster them into jet cones.
+For this purposes, two quantities are defined
+\begin{equation}
+\begin{aligned}
+\label{eq:Antikt}
+d_{ij} &= \text{min}\left( p_{\text{T,}i}^{2k},p_{\text{T,}j}^{2k} \right) \frac{\Delta_{ij}^2}{R^2},\\
+d_{iB} &= p_{\text{T,}i}^{2k},
+\end{aligned} 
+\end{equation}
+with $\Delta_{ij}$ referring to the distance between particles $i$ and $j$ in the $\eta - \phi$ plane and $R$ denoting the radius parameter of the algorithm which determines the cluster scale.
+The quantity $k$ can be any integer and specifies the behaviour of the algorithm, as will be seen later.
+The algorithm is an iterative procedure comprising the following steps: 
+First, the quantities $d_{iB}$ and $d_{ij}$ are calculated for every single and every pair of ``objects'' in the event, respectively.
+An object can be a particle or a set of already clustered particles.
+If the smallest quantity is a distance between a pair of objects, these objects are clustered together.
+If the smallest quantity is $d_{iB}$, the corresponding object is considered a jet and removed from the object list.
+If all objects are removed from the input list of the algorithm, the clustering comes to an end.
+
+As noted before, the integer $k$ in Eq.~\eqref{eq:Antikt} defines different types of algorithms.
+For the choice of $k=0$, the algorithm is referred to as Cambridge/Aachen algorithm~\cite{bib:Cambridge_1997,bib:Cambridge_1998}.
+It doesn't take the momentum of particles into account for the clustering but is only based on spatial information.
+The \kt algorithm~\cite{bib:kT_algorithm_1993,bib:kT_algorithm_Ellis} exploits the configuration with $k=1$, and starts the clustering therefore with low momentum particles.
+At CMS, the \antikt algorithm is used with $k=-1$. It begins with clustering high momentum particles and thus lead to very regular shapes of the jet cones.
+The behaviour of the three different clustering algorithm is illustrated in Fig.~\ref{fig:ClusteringAlgorithms}. 
+One single parton-level event was subject to the three different jet clustering algorithms.
+Roughly 1000 soft particles are added to the event in order to test the adaptiveness of the jet algorithms to soft particles.
+It can be seen, that the Cambridge/Aachen and the \kt algorithm are both much more influenced by the addition of soft particles than the \antikt method.
+\begin{figure}[!t]
+  \centering
+      \includegraphics[width=0.32\textwidth]{figures/experiment/ObjectReconstruction/herwig-parton-level-ev-cam.pdf}
+      \includegraphics[width=0.32\textwidth]{figures/experiment/ObjectReconstruction/herwig-parton-level-ev-kt.pdf}
+      \includegraphics[width=0.32\textwidth]{figures/experiment/ObjectReconstruction/herwig-parton-level-ev-antikt.pdf}
+  \caption{Parton-level event with $\sim 1000$ soft particles added. Three different algorithms are used to cluster the particles into jet cones: the Cambridge/Aachen algorithm (left), the \kt algorithm (middle), and the \antikt algorithm (right).}  
+  \label{fig:ClusteringAlgorithms}
+\end{figure}
+
+Throughout this thesis jets clustered with the \antikt algorithm with a radius parameter of $R=0.5$ are used.
+
+\subsubsection*{Jet energy calibration}
+In order to account for possible mismeasurements of the jet transverse momentum, all jets at CMS are subject to a calibration procedure.
+This calibration aims at eliminating discrepancies between the measured jet \pt and the true jet \pt because of pileup interactions (level-1 corrections) as well as discrepancies depending on jet \pt and $\eta$ (level-2 and level-3 corrections).
+Finally, in order to get rid of differences between data and simulation, jets measured in data are additional calibrated by residual correction factors (level-2 and level-3 residual corrections).
+An overview of the applied correction factors on the measured jet \pt in simulation and data is shown in Fig.~\ref{fig:JetEnergyCorrections}.
+\begin{figure}[!bt]
+  \centering
+      \includegraphics[width=0.99\textwidth]{figures/experiment/ObjectReconstruction/JEC.jpg}
+  \caption{Visualisation of the various steps of the jet energy calibration at the CMS experiment. Taken from~\cite{bib:Kristin_Thesis}.}  
+  \label{fig:JetEnergyCorrections}
+\end{figure}
+
+In the following, a more detailed description of the determination of the factorised calibration factors will be given.
+For a extensive description of the calibration approach, the reader is referred to~\cite{bib:CMS:JERCPaper_2011}
+\begin{description}
+\item \textbf{L1 pileup offset corrections:} In order to eliminate a mismeasurement of the jet \pt because of pileup interactions, correction factors are determined that are suppose to restore the true jet \pt. This correction is determined in bins of jet \pt, jet $\eta$, the effective jet area $A$, and the event energy density $\rho$. The correction factors are determined with a simulated QCD-multijet sample and are applied to measured data as well as simulated events.
+\item \textbf{L2 relative + L3 absolute corrections:} These two corrections are devoted to correct the measured jet \pt in order to ensure a uniform response vs. $\eta$ (L2) and \pt (L3). They are also determined on a simulated QCD-multijet sample and applied on simulation and data.
+\item \textbf{L2L3 residual corrections:} Finally, correction factors aer determined which are applied on data. They ensure the elimination of differences between simulation and data. They are estimated with the help of QCD-multijet events to eliminate differences in $\eta$ (L2) and with $\gamma/Z+$ jets events in order to eliminate differences in \pt (L3).\\
+\end{description}
+
+The derived correction factors are applied on the measured transverse momentum in a factorised approach according to the following equation:
+\begin{equation}
+\pt^\mathrm{cor} = C_{\mathrm{offset}}(\pt^\mathrm{raw}, \eta) \cdot C_{\mathrm{rel}}(\eta) \cdot C_{\mathrm{abs}}(\pt') \cdot C_\mathrm{res}(\pt'', \eta) \cdot \pt^\mathrm{raw},
+\end{equation}
+where $\pt^\mathrm{cor}$ is the corrected jet \pt and  $\pt^\mathrm{raw}$ is the fully uncorrected jet \pt.
+By the application of the various correction factors, the jet transverse momentum is calibrated in a factorised manner.
+
+Throughout this thesis, all jets are calibrated by the application of the jet transverse momentum correction factors, referred to as jet energy corrections.
+
+
+\subsubsection*{Charged hadron subtraction}
+Particles originating from pileup pileup vertices can be clustered into jets leading to higher energies of the reconstructed jet.
+Therefore a procedure called charged hadron subtraction (CHS) is applied.
+It removes reconstructed charged particles that do not originate from the primary vertex (see~\cite{bib:CHS_2012} for more details).
+
+In this thesis, all jets are subject to charged hadron subtraction.
+
+
 
 \subsection{Reconstruction of muons}
 There are three different muon definitions at CMS~\cite{bib:CMS:muon_recoEff}: global muons (correspond to particle-flow muons), tracker muons, and standalone muons.
@@ -343,20 +429,56 @@ Further details about the reconstruction of standalone muons can be found in~\ci
 
 \subsection{Reconstruction of electrons}
 The reconstruction of electrons at the CMS experiment is based on a mixture of the particle-flow algorithm explained in Section~\ref{sec:PFalgorithm} and a standalone approach~\cite{bib:StandaloneElectronReconstruction}.
-Thus, it is a very complex procedure and a complete description would go beyond the scope of this thesis.
-Therefore, only the rough idea of the electron reconstruction shall be reviewed here.
+Thus, it is a very complex procedure and only the basic approach shall be reviewed here.
 The reader is referred to~\cite{bib:CMS:elec_recoEff} for a complete description of the reconstruction procedure.
 
+Electrons are identified using clustered energy deposits in the ECAL and reconstructed tracks in the tracker system. 
+Both inputs are tested on compatibility and finally used to estimate the electron properties. 
+
 The difficulty of the electron reconstruction lies in the possibly large energy losses due to bremsstrahlung.
-This can change the direction of the electron significantly and lead to a reduced efficiency of the standard track reconstruction used for tracker tracks.
-Therefore, an optimised track reconstruction for electrons is performed in order to account for direction changes due to the radiation of photons.
-Because the dedicated electron track reconstruction can be very time consuming, a seeding of tracker hits rely already on ECAL information to reduce the number of candidate tracks.
+This can change the direction of the electron significantly and lead to a reduced efficiency of the standard track reconstruction used for tracker tracks as well as a reduced efficiency of the association of ECAL clusters to the reconstructed track in the inner tracking system.
+Therefore, an optimised track reconstruction for electrons is additionally performed in order to account for direction changes due to the radiation of photons.
+Because the dedicated electron track reconstruction can be very time consuming, a seeding of tracker hits rely already on ECAL information to reduce the number of candidate tracks (ECAL-based seeding).
+
+The electron reconstruction proceeds therefore as follows.
+First, ECAL clusters (so-called superclusters) are formed using a ``hybrid'' algorithm in the barrel region and ``multi-$5\times 5$'' algorithm in the endcaps.
+Due to bremsstrahlung, the energy deposits by electrons are usually spread out over several crystals.
+Additionally, so-called PF clusters are formed that add all contiguous crystals to the above mentioned superclusters. 
+Afterwards, the standard track reconstruction is used to reconstruct electron tracks when bremsstrahlung is negligible.
+However, very short reconstructed tracks or tracks with a bad $\chi^2$, are refitted using a so-called Gaussian sum filter (GSF)~\cite{bib:GSF_2003} to account for electrons with high radiative energy losses.
+As mentioned above, these tracks use ECAL-based seeding to reduce the number of candidate tracks.  
+To identify these refitted tracks as candidate electron tracks, a multivariate analysis is performed using tracker and ECAL information.
+For the GSF tracks, all ECAL PF clusters are added tangent to the electron track in order to add the energies from bremsstrahlung photons.
+Finally, track-cluster association criteria are applied in order to reduce misidentification when preserving a high reconstruction efficiency.
+The association criteria rely on spatial distances between the superclusters and the tracker track for ECAL-seeded tracks (GSF tracks) and rely on multivariate techniques for the tracker-seeded (standard track reconstruction) electrons.
+
+\subsection{Reconstruction of taus}
+The tau reconstruction at CMS refers to the reconstruction of hadronically decaying taus.
+At CMS, the main algorithm used to identify and reconstruct taus is the so-called hadron plus strip algorithm (HPS)~\cite{bib:CMS:TauReconstruction}.
 
 
-\subsection*{Reconstruction of taus}
-\subsection*{Reconstruction of missing transverse energy}
-\section*{Event cleaning}
+\subsection{Reconstruction of missing transverse energy}
+The particle-flow missing transverse energy, PF \met, in an event is defined as the negative vectorial sum of all particle-flow particles.
+Thus - neglecting momentum mismeasurements- it refers to the transverse momentum of all invisible particles in the event.
+In order to avoid negative effects from \eg tracker inefficiencies, non-linear calorimeter responses, \etc, \met can be more precisely measured by correcting the transverse momentum of all jets contained in an event with the jet energy corrections (see Section~\ref{sec:JetReconstruction}).
 
+For a more detailed explanation of \met as well as for information of the performance of the reconstruction, the reader is referred to~\cite{bib:CMS:METReconstruction}
+
+\section{Event cleaning}
+The two analysis described in this thesis are subject to an event cleaning procedure.
+It refers to the application of several filters to remove events with detector signals not caused by particles from the hard interaction. 
+In the following, the filters are listed and a short description will be given.
+\begin{description} 
+\item \textbf{HBHE noise filter:} This filter rejects anomalous HCAL noise in the barrel (HB) and in the endcap (HE). The noise in the HCAL is mainly related to the hybrid photodiodes (HPD) and readout boxes (RBX). It rejects events considering pulse shape and hit multiplicity information into account.
+\item \textbf{CSC beam halo filter:} Particles contained in the beam halo can induce signals in the detector. Therefore, events with a muon moving parallel to the beam are rejected.  
+\item \textbf{HCAL laser event filter:} This filter provides a list of events, where the laser used for the HCAL calibration fired when a bunch crossing occurred. Detector signals from the laser can be misinterpreted as particle signals and therefore, these events are removed.
+\item \textbf{ECAL dead cell filter:} Events in which jets point towards a non-working ECAL cell are rejected. This filter relies on information of the surrounding crystals as well as on ``trigger-primitive'' information.
+\item \textbf{EE bad supercrystal filter:} In the ECAL endcap, two supercrystals were not working properly. Therefore, events where at least one of the two crystals detected unnatural high energy deposits were removed. 
+\item \textbf{Tracking failure filter:} Sometimes, unnatural high energy deposits are recorded in the calorimeters without corresponding tracks in the inner tracking system. The reconstruction of tracks can fail, because of too many tracker seeds or because the hard interaction was too far away from the interaction point.
+This filter rejects therefore events, where less than 10\% of the energy in the event was measured by the tracker.  
+\item \textbf{Scraping filter (data only):} When there are at least ten tracks in the event, at least 25\% of them need to be flagged as high-purity tracks as defined in~\cite{bib:CMS:Tracking_2010}.
+\item \textbf{Tracking POG filter:} Events with aborted track reconstruction and/or strip tracker noise are rejected.
+\end{description}
 
 
 
