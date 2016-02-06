@@ -487,12 +487,26 @@ This filter rejects therefore events, where less than 10\% of the energy in the 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
-\chapter{Event simulation}
+\chapter{Simulation of events}
 
-Needed:
+A very important input for physics analyses at particle colliders, is the use of simulated $pp$-collision events.
+They serve as comparison for Standard Model processes and can give an estimation of the expected number of background events for a given selection.
+Furthermore, they are used to study event kinematics for Standard Model and beyond-SM processes.
+
+The full simulation of particle collisions as well as the subsequent particle decays and showering and the simulation of the detector response is a highly complex task and expensive considering computing resources.
+In the following paragrafs, an introduction into the various steps of event simulation will be given. 
+
+\subsection{Event generators}
+The first step of the simulation of $pp$-collision events consists of the simulation of the hard process, \ie the primary interaction of two partons for two colliding protons.
+Which type of partons are involved in the primary interaction is specified by so-called parton distribution functions (pdf).
+They describe the probability of a parton (up-, down-quarks, gluons, sea quarks) carrying a certain energy fraction of the proton energy.
+All simulated samples used in this thesis used pdf from the \cteq group.
+%They were measured \eg at the HERA collider 
+ 
+
+
 \begin{itemize}
 \item Some information on simulation
-\item PDF !
 \end{itemize}
 
 3-4 pages
