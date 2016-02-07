@@ -321,7 +321,7 @@ Within these iterations, the reconstruction is subdivided into four different st
 \item Setting of quality flags: Quality flags are assigned to all tracks and tracks that fail certain quality criteria are discarded.
 \end{itemize}
 The configuration of the first and the fourth step differ across the different iterations.  
-FIXME: Think about writin about chi2 cut and the supression of fake tracks.
+FIXME: Think about writing about chi2 cut and the suppression of fake tracks.
 
 \subsection{Reconstruction of jets} 
 \label{sec:JetReconstruction}
@@ -490,23 +490,41 @@ This filter rejects therefore events, where less than 10\% of the energy in the 
 \chapter{Simulation of events}
 
 A very important input for physics analyses at particle colliders, is the use of simulated $pp$-collision events.
-They serve as comparison for Standard Model processes and can give an estimation of the expected number of background events for a given selection.
+They serve as comparison to measured data and can give an estimation of the expected number of background events for a given selection.
 Furthermore, they are used to study event kinematics for Standard Model and beyond-SM processes.
 
-The full simulation of particle collisions as well as the subsequent particle decays and showering and the simulation of the detector response is a highly complex task and expensive considering computing resources.
-In the following paragrafs, an introduction into the various steps of event simulation will be given. 
+The generation of simulated samples is done with the help of Monte Carlo (MC) methods (see \eg~\cite{FIXME}).
+Monte Carlo techniques are used to randomly sample points according to a specified probability distribution.
+The underlying probability distributions for the event generation are the transition probabilities from the initial into all possible final states.
 
-\subsection{Event generators}
-The first step of the simulation of $pp$-collision events consists of the simulation of the hard process, \ie the primary interaction of two partons for two colliding protons.
-Which type of partons are involved in the primary interaction is specified by so-called parton distribution functions (pdf).
-They describe the probability of a parton (up-, down-quarks, gluons, sea quarks) carrying a certain energy fraction of the proton energy.
-All simulated samples used in this thesis used pdf from the \cteq group.
-%They were measured \eg at the HERA collider 
- 
+Besides the simulation of the hard interaction of the event, also the subsequent showering and hadronisation as well as the detector response needs to be simulated.
+In the following sections, a short introduction into the various steps of event simulation is given (see e.g.~\cite{bib:Matthias_Thesis} for a more thorough introduction).\\
+
+The first step of the event generation of $pp$-collision events consists of the simulation of the hard process, \ie the primary interaction of two partons of the two colliding protons.
+Which type of partons are involved in the primary interaction is specified by the so-called parton distribution functions (PDFs).
+They describe the probability of a parton (up-, down-quarks, gluons, sea quarks) to carry a certain energy fraction of the proton energy and thus define the probability for each parton taking part at the hard interaction process.
+In this thesis, all simulated samples make use of the PDFs provided by the \cteq group~\cite{Pumplin:2002vw} FIXME: Check this.
 
 
-\begin{itemize}
-\item Some information on simulation
-\end{itemize}
+Afterwards, the generation of the matrix element as well as the simulation of showering and hadronisation is performed.
+Throughout this thesis, the matrix element generator \madgraph~\cite{bib:Madgraph_2014} plus the event generator \pythia~\cite{bib:Pyhtia6_2006} or the event generator \pythia only are used.
+Since \madgraph only provides the generation of matrix elements, the subsequent showering and hadronisation is done by \pythia.
+For this task, particles produced in the hard interaction are matched to the particles produced in the showers in order to avoid a double-counting of emissions in multijet processes.
+Since \madgraph is responsible for the simulation of well separated partons whereas \pythia is suppose to simulate the soft and collinear showers, the event is rejected if the simulated shower - clustered with the \kt method~\cite{FIXME} - has a too large radius parameter (MLM matching scheme~\cite{FIXME}).
 
-3-4 pages
+The formation of colour neutral particles, called hadronisation, and the subsequent decay of unstable particles is simulated with \pythia for all samples used in this thesis.
+A visualisation of the various steps performed for the generation of events is shown in Fig.~\ref{fig:MCsimulation}. 
+\begin{figure}[!t]
+  \centering
+      \includegraphics[width=0.80\textwidth]{figures/experiment/Simulation/MCGeneration2}
+  \caption{Visualisation of the various steps performed in the simulation of events. Taken from~\cite{bib:Kristin_Thesis}.}  
+  \label{fig:MCsimulation}
+\end{figure}
+
+In order to account for signals caused by the interaction of the non-primary partons of the interacting protons - called the underlying event (UE) -  various models (tunes) are exploited.
+They rely on the measured signals in data in proton collisions without any hard interaction.
+Detector signals caused by additional interactions (pileup interactions) during a bunch-crossing, are also mixed into every simulated sample.
+
+Finally, the interaction of the traversing particles with the detector material is simulated with \geant~\cite{bib:Geant4_2003,bib:Geant4_2006} throughout this thesis.
+
+

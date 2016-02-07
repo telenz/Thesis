@@ -77,47 +77,48 @@ I was expecting a `,' or a `}'---line 2274 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "FIXME"
 Warning--empty author in bib:LEP_design_1984
 Warning--empty year in bib:TWIKI:PixelClusterSize
-You've used 45 entries,
+You've used 51 entries,
             2369 wiz_defined-function locations,
-            931 strings with 14730 characters,
-and the built_in function-call counts, 13179 in all, are:
-= -- 1680
-> -- 216
+            984 strings with 16202 characters,
+and the built_in function-call counts, 15165 in all, are:
+= -- 1923
+> -- 292
 < -- 0
-+ -- 93
-- -- 48
-* -- 952
-:= -- 1640
-add.period$ -- 120
-call.type$ -- 45
++ -- 121
+- -- 70
+* -- 1097
+:= -- 1919
+add.period$ -- 139
+call.type$ -- 51
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 840
-empty$ -- 1358
-format.name$ -- 35
-if$ -- 3655
+cite$ -- 53
+duplicate$ -- 950
+empty$ -- 1538
+format.name$ -- 47
+if$ -- 4190
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 124
-newline$ -- 226
-num.names$ -- 19
-pop$ -- 238
+int.to.str$ -- 51
+missing$ -- 139
+newline$ -- 258
+num.names$ -- 24
+pop$ -- 266
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 452
+skip$ -- 509
 stack$ -- 0
-substring$ -- 426
-swap$ -- 301
+substring$ -- 478
+swap$ -- 338
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 52
-width$ -- 47
-write$ -- 517
+while$ -- 63
+width$ -- 53
+write$ -- 593
 (There were 15 error messages)
