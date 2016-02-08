@@ -171,6 +171,17 @@ https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013, Topic
 (2009).
 %%CITATION = CMS-PAS-PFT-09-001;%%.
 
+\bibitem{bib:Signatures_figure}
+J.~Nielsen, ``{Fundamentals of LHC Experiments}'', in {\em {Proceedings,
+  Theoretical Advanced Study Institute in Elementary Particle Physics (TASI
+  2010). String Theory and Its Applications: From meV to the Planck Scale}},
+  pp.~127--152.
+\newblock 2011.
+\newblock
+\href{http://www.arXiv.org/abs/1106.2516}{{\tt arXiv:1106.2516}}.
+\newblock
+%%CITATION = ARXIV:1106.2516;%%.
+
 \bibitem{bib:TrackAlgorithm_1989}
 P.~Billoir, ``{Progressive track recognition with a Kalman like fitting
   procedure}'', {\em Comput. Phys. Commun.} {\bf 57} (1989) 390--394.
@@ -193,6 +204,13 @@ R.~Mankel, ``{A Concurrent track evolution algorithm for pattern recognition in
 \href{http://dx.doi.org/10.1016/S0168-9002(97)00705-5}{{\tt
   doi:10.1016/S0168-9002(97)00705-5}}.
 %%CITATION = NUIMA,A395,169;%%.
+
+\bibitem{bib:KalmanFilter_1987}
+R.~Fruhwirth, ``{Application of Kalman filtering to track and vertex
+  fitting}'', {\em Nucl. Instrum. Meth.} {\bf A262} (1987) 444--450.
+\href{http://dx.doi.org/10.1016/0168-9002(87)90887-4}{{\tt
+  doi:10.1016/0168-9002(87)90887-4}}.
+%%CITATION = NUIMA,A262,444;%%.
 
 \bibitem{bib:JetClustering_2008}
 M.~Cacciari, G.~P. Salam, and G.~Soyez, ``{The anti-$k_t$ jet clustering
@@ -267,13 +285,6 @@ K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the
   doi:10.1088/1748-0221/7/10/P10002}}.
 %%CITATION = ARXIV:1206.4071;%%.
 
-\bibitem{bib:KalmanFilter_1987}
-R.~Fruhwirth, ``{Application of Kalman filtering to track and vertex
-  fitting}'', {\em Nucl. Instrum. Meth.} {\bf A262} (1987) 444--450.
-\href{http://dx.doi.org/10.1016/0168-9002(87)90887-4}{{\tt
-  doi:10.1016/0168-9002(87)90887-4}}.
-%%CITATION = NUIMA,A262,444;%%.
-
 \bibitem{bib:StandaloneMuonReconstruction}
 { CMS} Collaboration, ``{Performance of CMS Muon Reconstruction in Cosmic-Ray
   Events}'', {\em JINST} {\bf 5} (2010) T03022,
@@ -308,7 +319,16 @@ W.~Adam, R.~Fruhwirth, A.~Strandlie{ et~al.}, ``{Reconstruction of electrons
   doi:10.1088/0954-3899/31/9/N01}}.
 %%CITATION = PHYSICS/0306087;%%.
 
-\bibitem{bib:CMS:TauReconstruction}
+\bibitem{bib:CMS:TauReconstruction_8TeV}
+{ CMS} Collaboration, ``{Reconstruction and identification of $\tau$ lepton
+  decays to hadrons and $\nu_\tau$ at CMS}'', {\em JINST} {\bf 11} (2016),
+  no.~01, P01019, \href{http://www.arXiv.org/abs/1510.07488}{{\tt
+  arXiv:1510.07488}}.
+\href{http://dx.doi.org/10.1088/1748-0221/11/01/P01019}{{\tt
+  doi:10.1088/1748-0221/11/01/P01019}}.
+%%CITATION = ARXIV:1510.07488;%%.
+
+\bibitem{bib:CMS:TauReconstruction_7TeV}
 { CMS} Collaboration, ``{Performance of tau-lepton reconstruction and
   identification in CMS}'', {\em JINST} {\bf 7} (2012) P01001,
   \href{http://www.arXiv.org/abs/1109.6034}{{\tt arXiv:1109.6034}}.
@@ -329,6 +349,11 @@ W.~Adam, R.~Fruhwirth, A.~Strandlie{ et~al.}, ``{Reconstruction of electrons
 { CMS} Collaboration, ``{Tracking and Vertexing Results from First
   Collisions}'', {\em CMS Physics Analysis Summary} {\bf
   \href{https://cds.cern.ch/record/1258204}{CMS-PAS-TRK-10-001}} (2010).
+
+\bibitem{bib:MC_Introduction}
+S.~Weinzierl, ``{Introduction to Monte Carlo methods}'',
+\href{http://www.arXiv.org/abs/hep-ph/0006269}{{\tt arXiv:hep-ph/0006269}}.
+%%CITATION = HEP-PH/0006269;%%.
 
 \bibitem{bib:Matthias_Thesis}
 M.~Schr{\"o}der, ``{Quality of jet measurements and impact on a search for new
@@ -363,6 +388,15 @@ T.~Sjostrand, S.~Mrenna, and P.~Z. Skands, ``{PYTHIA 6.4 Physics and Manual}'',
 \href{http://dx.doi.org/10.1088/1126-6708/2006/05/026}{{\tt
   doi:10.1088/1126-6708/2006/05/026}}.
 %%CITATION = HEP-PH/0603175;%%.
+
+\bibitem{bib:MLM_matching}
+M.~L. Mangano, M.~Moretti, F.~Piccinini{ et~al.}, ``{Matching matrix elements
+  and shower evolution for top-quark production in hadronic collisions}'', {\em
+  JHEP} {\bf 01} (2007) 013,
+  \href{http://www.arXiv.org/abs/hep-ph/0611129}{{\tt arXiv:hep-ph/0611129}}.
+\href{http://dx.doi.org/10.1088/1126-6708/2007/01/013}{{\tt
+  doi:10.1088/1126-6708/2007/01/013}}.
+%%CITATION = HEP-PH/0611129;%%.
 
 \bibitem{bib:Geant4_2003}
 { GEANT4} Collaboration, ``{GEANT4: A Simulation toolkit}'', {\em Nucl.
