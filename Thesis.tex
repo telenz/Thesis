@@ -215,7 +215,7 @@ a4paper,
 \setlength{\cftbeforechapskip}{1pt}
 \setlength{\cftbeforesecskip}{1pt}
 \setlength{\cftbeforesubsecskip}{1pt}
-\setlength{\cftbeforepartskip}{40pt}
+\setlength{\cftbeforepartskip}{30pt}
 
 % Dots after chapter numbers
 \renewcommand{\cftchapaftersnum}{.}%
@@ -228,100 +228,37 @@ a4paper,
 \setlength{\cftsubsubsecindent}{5.2em}
 
 %Expand bookmark level
-% \hypersetup{bookmarksdepth=5}
+\hypersetup{bookmarksdepth=3}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \pagenumbering{roman}
-% ----- Title page ----------------------------------------------------- 
-% \begin{titlepage}
-%   \begin{center}
-%     \thispagestyle{empty}
-%     \vspace*{1cm}
-%     \begin{doublespace} 
-%       \textbf{\huge A search for for highly ionizing short tracks and a measurement of the jet transverse-momentum resolution at the CMS detector}\\
-% %       \textbf{\huge short tracks at the CMS detector}\\
-% %       \textbf{\huge and}\\
-% %       \textbf{\huge jet energy resolution measurement} \\
-%       \vskip1.5cm
-%       \begin{Large} 
-%         \textbf{Dissertation\\
-%           zur Erlangung des Doktorgrades\\
-%           des Fachbereichs Physik\\
-%           der Universit\"{a}t Hamburg\\}
-%       \end{Large}
-%       \vskip2cm
-%       \begin{large}
-%         vorgelegt von\\
-%         {\bf Teresa Lenz\\
-%         aus Zweibr\"{u}cken}
-%         \vfill
-%         \noindent{Hamburg\\2016}
-%       \end{large}
-%     \end{doublespace} 
-%   \end{center}
-% \end{titlepage}
+% \input{titlepage.tex}
+% 
+
+% \input{abstract.tex}
 % 
 % 
 % \newpage 
 % \thispagestyle{empty}
 % \quad 
-% \newpage
-% \thispagestyle{empty}
-% 
-% \quad
-% \vfill
-% \noindent{
-% \begin{tabular}{ll}
-% Gutachter der Dissertation:                & Prof.\ Dr.\ Peter Schleper\\ 
-%                                            & Dr.\ Isabell-Alissandra Melzer-Pellmann\\
-%                                            & Prof.\ Dr.\ Volker B\"uscher \\
-%                                            & \\
-% Gutachter der Disputation:                 & Prof.\ Dr.\ Robert Klanner\\ 
-%                                            & Prof.\ Dr.\ Christian Sander\\
-%                                            & \\
-% Datum der Disputation:                     & 13. Juli 2012\\
-%                                            & \\
-% Vorsitzender des Pr\"{u}fungsausschusses:  & Dr.\ Georg Steinbr\"uck\\
-%                                            & \\
-% Vorsitzender des Promotionsausschusses:    & Prof.\ Dr.\ Peter Hauschildt\\ 
-%                                            & \\
-% Leiterin des Fachbereichs Physik:          & Prof.\ Dr.\ Daniela Pfannkuche \\
-%                                            & \\
-% Dekan der Fakult\"{a}t f\"{u}r Mathematik, & \\
-% \quad Informatik und Naturwissenschaften:  & Prof.\ Dr.\ Heinrich Graener \\
-% \end{tabular}
-% }
-% 
-% 
-% \newpage 
-% \thispagestyle{empty}
-% \quad 
-% \newpage
-% % \input{Abstract.tex}
-% 
-% 
-% \newpage 
-% \thispagestyle{empty}
-% \quad 
-% 
 % \newpage
 \tableofcontents \cleardoublepage
 
 
 \pagenumbering{arabic}		
 \setcounter{page}{1}
-% \part{Introduction}  \label{part:Introduction}
-% \input{introduction.tex}
+\part{Introduction}  \label{part:Introduction}
+\input{introduction.tex}
  
 % \part{The Standard Model and its supersymmetric extension} \label{part:Theory}
 % \input{theory.tex}
 
 % % \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{part:Detector}
 % \part{Experimental setup/ Experiment and ... Experimental Setup: Collider, detector and algorithms } \label{part:Detector}
-\part{Experimental setup: Collider, detector and algorithms } \label{part:Experiment}
-\input{experiment.tex}
+% \part{Experimental setup: Collider, detector and algorithms } \label{part:Experiment}
+% \input{experiment.tex}
 
 %  \part{A search for highly ionising, short tracks at the CMS detector}  \label{part:analysis}
 %  \input{Part_Analysis/1_Motivation.tex}

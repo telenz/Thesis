@@ -77,47 +77,45 @@ I was expecting a `,' or a `}'---line 2336 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty author in bib:LEP_design_1984
-Warning--empty year in bib:TWIKI:PixelClusterSize
-You've used 55 entries,
+You've used 7 entries,
             2369 wiz_defined-function locations,
-            1014 strings with 17162 characters,
-and the built_in function-call counts, 16424 in all, are:
-= -- 2079
-> -- 318
+            644 strings with 6299 characters,
+and the built_in function-call counts, 1956 in all, are:
+= -- 254
+> -- 7
 < -- 0
-+ -- 131
-- -- 76
-* -- 1189
-:= -- 2074
-add.period$ -- 151
-call.type$ -- 55
++ -- 7
+- -- 0
+* -- 185
+:= -- 239
+add.period$ -- 17
+call.type$ -- 7
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 57
-duplicate$ -- 1028
-empty$ -- 1663
-format.name$ -- 52
-if$ -- 4534
+cite$ -- 7
+duplicate$ -- 123
+empty$ -- 212
+format.name$ -- 0
+if$ -- 545
 int.to.chr$ -- 0
-int.to.str$ -- 55
-missing$ -- 149
-newline$ -- 281
-num.names$ -- 27
-pop$ -- 287
+int.to.str$ -- 7
+missing$ -- 21
+newline$ -- 34
+num.names$ -- 0
+pop$ -- 29
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 555
+skip$ -- 60
 stack$ -- 0
-substring$ -- 524
-swap$ -- 367
+substring$ -- 59
+swap$ -- 41
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 70
-width$ -- 57
-write$ -- 642
+warning$ -- 0
+while$ -- 7
+width$ -- 8
+write$ -- 86
 (There were 15 error messages)
