@@ -243,7 +243,7 @@ On HLT level, the decision time amounts to 50\ms and a reduction from 100\khz to
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \chapter{Event reconstruction and particle identification}
-A crucial ingredient of data analysis at the CMS experiment is the translation of the energy measurements in the various sub-detector components into physical objects, like muons, electrons, \etc.
+A crucial ingredient of data analysis at the CMS experiment is the translation of the energy measurements in the various sub-detector components into physical objects, like muons, electrons, etc..
 For this translation, \ie for particle identification, information from all detector components is used.
 This is known as the particle-flow event reconstruction algorithm~\cite{CMS-PAS-PFT-09-001}.
 In Fig.~\ref{fig:CMSslice}, a slice through the CMS detector is shown with the signatures of different particles indicated as coloured lines.
@@ -306,9 +306,9 @@ These tracks are removed afterwards and the remaining tracker hits are subject t
 The following iterations are performed:
 \begin{itemize}
 \item Iteration 0: Tracks near to the $pp$-interaction point that have three pixel hits and a $\pt>0.8\gev$ are reconstructed.
-\item Iteration 1: Tracks with only two pixel hits and $\pt>0.8\gev$ are recovered. FIXME
+\item Iteration 1: Tracks with only two pixel hits and $\pt>0.8\gev$ are reconstructed. 
 \item Iteration 2: Low \pt tracks from the $pp$-interaction point are reconstructed.
-\item Iteration 3-5: Reconstruction of tracks that are not originating from the primary vertex and recovering of tracks not found by previous iterations.
+\item Iteration 3-5: Reconstruction of tracks that are not originating from the primary vertex or that were not found by previous iterations.
 \end{itemize}
 Within these iterations, the reconstruction is subdivided into four different steps:
 \begin{itemize}
@@ -326,11 +326,11 @@ Therefore, the requirement of fulfilling certain quality criteria (fourth step) 
 \item A minimum number of layers in which the track has an associated hit.
 \item A minimum number of layers in which the track has an associated 3-D hit.
 \item A maximum number of layers in which the track has no associated hit.
-\item $\chi^2/\text{ndof} < \alpha_0 N_{layers}$.
-\item $|d_0^{\text{BS}}|/\delta d_0 < \left( \alpha_3 N_{layers} \right)^{\beta}$.
-\item $|z_0^{\text{PV}}|/\delta z_0 < \left( \alpha_4 N_{layers} \right)^{\beta}$.
-\item $|d_0^{\text{BS}}|/\sigma_{d_0} \left(\pt\right) < \left( \alpha_1 N_{layers} \right)^{\beta}$.
-\item $|z_0^{\text{PV}}|/\sigma_{z_0} \left(\pt,\eta\right) < \left( \alpha_2 N_{layers} \right)^{\beta}$.
+\item $\chi^2/\text{ndof} < \alpha_0 N_{\text{layers}}$.
+\item $|d_0^{\text{BS}}|/\delta d_0 < \left( \alpha_3 N_{\text{layers}} \right)^{\beta}$.
+\item $|z_0^{\text{PV}}|/\delta z_0 < \left( \alpha_4 N_{\text{layers}} \right)^{\beta}$.
+\item $|d_0^{\text{BS}}|/\sigma_{d_0} \left(\pt\right) < \left( \alpha_1 N_{\text{layers}} \right)^{\beta}$.
+\item $|z_0^{\text{PV}}|/\sigma_{z_0} \left(\pt,\eta\right) < \left( \alpha_2 N_{\text{layers}} \right)^{\beta}$.
 \end{itemize}
 The variable $d_0^{\text{BS}}$ is the distance of the track to the centre of the beam-spot in the transverse plane to the beam-line and $z_0^{\text{PV}}$ is the distance along the beam-line to the closest pixel.
 The variables $\delta d_0$ and $\delta z_0$ are the uncertainties on the distance (impact) parameters and $\sigma$ is the standard deviation corresponding to the length of the beam-spot in z-direction.
@@ -338,8 +338,6 @@ The values of the parameters $\alpha$ and $\beta$ vary across iterations.
 
 \subsection{Reconstruction of jets} 
 \label{sec:JetReconstruction}
-%In this thesis, a measurement of the jet transverse-momentum resolution (Part~\ref{part:resolution}) is presented.
-%Therefore, a special emphasis is put on the reconstruction of jets at the CMS experiment, explained in the following sections.
 In Section~\ref{sec:PFalgorithm}, the reconstruction of particle-flow neutral and charged hadrons was already introduced.
 Charged and neutral hadrons are usually formed due to the hadronisation process of final state quarks and gluons.
 Since the interest at particle colliders concerns the sum of all particles arising from one final state gluon or quark, which is referred to as a jet, the reconstruction of jets is a very important task at particle colliders.
@@ -385,7 +383,7 @@ It can be seen, that the Cambridge/Aachen and the \kt algorithm are both much mo
       \includegraphics[width=0.32\textwidth]{figures/experiment/ObjectReconstruction/herwig-parton-level-ev-cam.pdf}
       \includegraphics[width=0.32\textwidth]{figures/experiment/ObjectReconstruction/herwig-parton-level-ev-kt.pdf}
       \includegraphics[width=0.32\textwidth]{figures/experiment/ObjectReconstruction/herwig-parton-level-ev-antikt.pdf}
-  \caption{Parton-level event in the $\eta - \phi$ plane with $\sim 1000$ soft particles added. Three different algorithms are used to cluster the particles into jet cones (coloured areas): the Cambridge/Aachen algorithm (left), the \kt algorithm (middle), and the \antikt algorithm (right). Taken from~\cite{FIXME}.}  
+  \caption{Parton-level event in the $\eta - \phi$ plane with $\sim 1000$ soft particles added. Three different algorithms are used to cluster the particles into jet cones (coloured areas): the Cambridge/Aachen algorithm (left), the \kt algorithm (middle), and the \antikt algorithm (right). Taken from~\cite{bib:JetClustering_2008}.}  
   \label{fig:ClusteringAlgorithms}
 \end{figure}
 
@@ -393,9 +391,9 @@ Throughout this thesis jets clustered with the \antikt algorithm with a radius p
 
 \subsubsection*{Jet energy calibration}
 In order to account for possible mismeasurements of the jet transverse momentum, all jets at CMS are subject to a calibration procedure.
-This calibration aims at eliminating discrepancies between the measured jet \pt and the true jet \pt because of pileup interactions (level-1 corrections) as well as discrepancies depending on jet \pt and $\eta$ (level-2 and level-3 corrections).
-Since, all previously applied calibration factors are determined on simulation, it cannot yet be ensured that data is equally well calibrated.
-Therefore, additional correction factors are applied on data only (level-2 and \mbox{level-3} residual corrections).
+This calibration aims at eliminating discrepancies between the measured jet \pt and the true jet \pt because of pileup interactions (level-1 corrections) as well as discrepancies depending on jet \pt and $\eta$ (level-2 and level-3 corrections). 
+The calibration factors of the level-1, level-2 and level-3 corrections are determined fully in simulation.
+To ensure also a complete calibration of jets in data, additional correction factors are determined which are only applied on the jet \pt measured in data (level-2 and \mbox{level-3} residual corrections).
 These calibration factors are determined with the help of reference objects in data, such as photons.
 An overview of the applied correction factors in simulation and data is shown in Fig.~\ref{fig:JetEnergyCorrections}.
 \begin{figure}[!b] 
@@ -410,13 +408,13 @@ For a extensive description of the calibration approach, the reader is referred 
 \begin{description}
 \item \textbf{L1 pileup offset corrections:} In order to eliminate a mismeasurement of the jet \pt because of pileup interactions, correction factors are determined that are supposed to restore the true jet \pt. This correction is determined in bins of jet \pt, jet $\eta$, the effective jet area $A$, and the event energy density $\rho$. The correction factors are determined with a simulated QCD-multijet sample and are applied to measured data as well as simulated events.
 \item \textbf{L2 relative + L3 absolute corrections:} These two corrections are devoted to correct the measured jet \pt in order to ensure a uniform response vs. \mbox{$\eta$ (L2)} and \mbox{\pt (L3)}. They are also determined on a simulated QCD-multijet sample and applied on simulation and data.
-\item \textbf{L2L3 residual corrections:} Finally, correction factors are determined in order to remove any residual bias in data. They are estimated in data with the help of QCD-multijet events to eliminate differences in $\eta$ (L2) and with $\gamma/Z+$ jets events in order to eliminate differences in \pt (L3).
+\item \textbf{L2L3 residual corrections:} Finally, correction factors are determined in order to remove any residual bias in data. They are estimated in data with the help of QCD-multijet events to ensure a uniform response vs. $\eta$ (L2) and with $\gamma/Z+$ jets events in order to ensure a uniform response vs. \pt (L3).
 These factors are not applied to simulation.\\
 \end{description}
 
 The derived correction factors are applied on the measured transverse momentum in a factorised approach according to the following equation:
 \begin{equation}
-\pt^\mathrm{cor} = C_{\mathrm{offset}}(\pt^\mathrm{raw}, \eta) \cdot C_{\mathrm{rel}}(\eta) \cdot C_{\mathrm{abs}}(\pt') \cdot C_\mathrm{res}(\pt'', \eta) \cdot \pt^\mathrm{raw},
+\pt^\mathrm{cor} =  C_\mathrm{res}(\pt'', \eta) \cdot C_{\mathrm{rel}}(\eta) \cdot C_{\mathrm{abs}}(\pt') \cdot C_{\mathrm{offset}}(\pt^\mathrm{raw}, \eta) \cdot  \pt^\mathrm{raw},
 \end{equation}
 where $\pt^\mathrm{cor}$ is the corrected jet \pt and  $\pt^\mathrm{raw}$ is the fully uncorrected jet \pt.
 By the application of the various correction factors, the jet transverse momentum is calibrated in a factorised manner.
@@ -481,8 +479,8 @@ Second, multivariate techniques are used in order to discriminate the candidate 
 The HPS algorithm starts from reconstructed jets with a radius parameter of $R=0.5$ and $\pt>14\gev$ and $|\eta|<2.5$.
 
 The successful identification of a tau requires the reconstruction of a neutral pion which is present in most of the hadronic decays.
-The neutral pions decay into two photons with a probability of $\sim 99\%$. 
-The photons in turn convert into electron pairs with a high probability.
+The neutral pion decays into two photons with a probability of $\sim 99\%$. 
+The photons in turn convert into electron pairs with a high probability inside the tracker volume.
 Therefore, photons and electrons are clustered into strips in the $\eta-\phi$ plane in order to identify possible $\pi^0$.
 The initial position of the strip equals the position of the seed electron or photon, \ie the photon or electron with the highest \pt not yet clustered into any strip.
 The next-highest \pt electron/photon within a certain distance ($\eta \times \phi = 0.05 \times 0.20$) to the original strip is merged into the strip.
@@ -493,7 +491,7 @@ After the reconstruction of the neutral pion, multiple decay mode hypotheses are
 For all hypotheses, several restrictions on the invariant mass of the hadronically decaying tau are imposed.
 Finally, the hypothesis fulfilling the invariant mass requirement and - in case this happens for more than one hypothesis - with the highest \pt tau is chosen.
 
-Furthermore, for all taus in this thesis, the discriminators which are used for the reduction of jet, electron and muon contamination are required to be less than zero (see~\cite{bib:CMS:TauReconstruction_8TeV} for further details on the discriminators).
+Furthermore, for all taus in this thesis, the discriminators used for the reduction of jet, electron and muon contamination are required to be less than zero (see~\cite{bib:CMS:TauReconstruction_8TeV} for further details on the discriminators).
 
 Finally, a loose isolation criterion is imposed, which is calculated by the pileup corrected scalar sum of the transverse momentum of all charged particles and photons with a \pt larger than 0.5\gev in a cone of $R=0.5$ around the tau.
 
@@ -505,13 +503,13 @@ In order to avoid negative effects from \eg tracker inefficiencies, non-linear c
 For a more detailed explanation of \met as well as for information on the performance of the reconstruction, the reader is referred to~\cite{bib:CMS:METReconstruction}
 
 \section{Event cleaning}
-The two analysis described in this thesis are subject to an event cleaning procedure as recommended by the CMS collaboration~\cite{FIXME internal twiki}.
+The two analysis described in this thesis are subject to an event cleaning procedure as recommended by the CMS collaboration~\cite{bib:CMS:EventCleaning}.
 It refers to the application of several filters to remove events with detector signals not caused by particles from the hard interaction. 
 In the following, the filters are listed and a short description will be given.
 \begin{description} 
 \item \textbf{HBHE noise filter:} This filter rejects anomalous HCAL noise in the barrel (HB) and in the endcap (HE). The noise in the HCAL is mainly related to the hybrid photodiodes (HPD) and readout boxes (RBX). It rejects events considering pulse shape and hit multiplicity information.
 \item \textbf{CSC beam halo filter:} Particles contained in the beam halo can induce signals in the detector. Therefore, events with a muon moving parallel to the beam are rejected.  
-\item \textbf{HCAL laser event filter:} This filter provides a list of events, where the laser used for the HCAL calibration fired when a bunch crossing occurred. Detector signals from the laser can be misinterpreted as particle signals and therefore, these events are removed.
+\item \textbf{HCAL laser event filter:} This filter provides a list of events, where the laser used for the HCAL calibration fired when a bunch crossing occurred. Detector signals from the laser can be misinterpreted as particle signals and, therefore, these events are removed.
 \item \textbf{ECAL dead cell filter:} Events with jets pointing towards a non-working ECAL cell are rejected. This filter relies on information of the surrounding crystals as well as on ``trigger-primitive'' information.
 \item \textbf{EE bad supercrystal filter:} In the ECAL endcap, two supercrystals were not working properly during the data taking period in 2012. Therefore, events where at least one of the two crystals detected unnaturally high energy deposits are removed. 
 \item \textbf{Tracking failure filter:} Sometimes, unnaturally high energy deposits are recorded in the calorimeters without corresponding tracks in the inner tracking system. The reconstruction of tracks can fail, because of too many tracker seeds or because the hard interaction was too far away from the interaction point.
@@ -543,13 +541,15 @@ For more information, the reader is referred to~\cite{bib:Matthias_Thesis}.\\
 The first step of the generation of $pp$-collision events consists of the simulation of the hard process, \ie the primary interaction of two partons of the two colliding protons.
 Which types of partons are involved in the primary interaction is specified by so-called parton distribution functions (PDFs).
 They describe the probability of a parton (up-, down-quarks, gluons, sea quarks) to carry a certain energy fraction of the proton and thus define the probability for each parton taking part in the hard interaction process.
-In this thesis, all simulated samples are generated with the PDFs provided by the \cteq group~\cite{Pumplin:2002vw} FIXME: Check this.
+%In this thesis, all simulated samples are generated with the PDFs provided by the \cteq group~\cite{Pumplin:2002vw} 
 
-Afterwards, the hard interaction between the selected partons is simulated, followed by the simulation of showering and hadronisation.
+After the simulation of the hard interaction between the selected partons, the showering and hadronisation of the particles is simulated.
 Throughout this thesis, the matrix element generator \madgraph~\cite{bib:Madgraph_2014} plus the event generator \pythia~\cite{bib:Pyhtia6_2006} or the event generator \pythia only are used.
 Since \madgraph only provides the generation of matrix elements, the subsequent showering and hadronisation is done by \pythia.
 For this task, particles produced in the hard interaction are matched to the particles produced in the showers in order to avoid a double-counting of emissions in multijet processes.
-Since \madgraph is responsible for the simulation of well separated partons whereas \pythia is designed for simulating the soft and collinear showers, the event is rejected if the simulated shower - clustered with the \kt method (see Section~\ref{sec:JetReconstruction}) - has a too large radius parameter (MLM matching scheme~\cite{bib:MLM_matching}). FIXME: Is this correct.
+Since \madgraph is responsible for the simulation of well separated partons whereas \pythia is designed for simulating the soft and collinear showers, the event is rejected if a parton from the matrix element generator cannot be matched within a certain distance $\Delta R$ to any of the simulated showers (MLM matching scheme~\cite{bib:MLM_matching}).
+The showers are clustered with the \kt method (see Section~\ref{sec:JetReconstruction}).
+Additionally, events are rejected if there are more showers than partons in the event
 
 The formation of colour neutral particles, called hadronisation, and the subsequent decay of unstable particles is simulated with \pythia for all samples used in this thesis.
 A visualisation of the various steps performed for the generation of events is shown in Fig.~\ref{fig:MCsimulation}. 
