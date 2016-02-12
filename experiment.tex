@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Large Hadron Collider}
 
-The Large Hadron Collider (LHC)~\cite{bib:LHC_machine_2008,bib:LHC_2004} is a particle accelerator installed in the former LEP~\cite{bib:LEP_design_1984} tunnel at CERN~\cite{bib:CERN:web}.
+The Large Hadron Collider (LHC)~\cite{bib:LHC_machine_2008,bib:LHC_2004} is a particle accelerator installed in the former LEP~\cite{bib:LEP_design_1984} tunnel at CERN\footnote{European Organisation for Nuclear Research}.
 It is 26.7\km in circumference and consists of two separate rings, which are, in periods of operation, inhabited by two counter-circulating beams.
 At the interaction points of the two beams, either proton-proton collisions or heavy ion collisions take place.
 In this thesis, only $pp$-collision data from the year 2012 is analysed.
@@ -11,23 +11,23 @@ Thus, all machine values cited in the following chapters and paragraphs refer to
 
 The beams are separated into bunches which rotate with a bunch spacing of 50\ns corresponding to a collision frequency of 20\mhz.
 Before the bunches are actually filled into the LHC ring they are pre-accelerated in other accelerators, which are in the order they are actually passed by the protons: Linac2, Proton  Synchrotron Booster (PSB), Proton Synchrotron (PS), Super Proton Synchrotron (SPS).
-The injector chain and the LHC ring with its experiments is visualised in Fig~\ref{fig:LHC}.
+The beam energy is 450\gev when the beams enter the LHC ring.
+The injector chain and the LHC ring with its experiments are visualised in Fig~\ref{fig:LHC}.
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.87\textwidth]{figures/experiment/LHC/LHC_small.png}
+      \includegraphics[width=0.83\textwidth]{figures/experiment/LHC/LHC_small.png}
   \caption{Visualisation of the LHC with its experiments and the injector chain. Taken from~\cite{bib:CERNBrochure}.}  
   \label{fig:LHC}
 \end{figure}
 
-In the LHC, the beams are kept on their circular path with the help of a magnetic field of 4.76\tesla.
+In the LHC, the beams are kept on their circular path with the help of a magnetic dipole field of 4.76\tesla.
 Further quadrupole and sextupole magnets squeeze and focus the bunches resulting in a bunch spread of roughly 8\cm length and a Gaussian shape radius of 20\mum RMS at the interaction point.
 The number of protons contained in each bunch is of the order $10^{11}$.
 The LHC hosts four main particle physics experiments: the CMS, ATLAS, LHCb and ALICE experiments.
 CMS~\cite{bib:CMS:experiment,bib:CMS:TDR} and ATLAS~\cite{bib:ATLAS:experiment,bib:ATLAS:TDR_1,bib:ATLAS:TDR_2} are so-called ``general purpose experiments'', that are used for a variety of different physics analyses.
 In contrast, the LHCb~\cite{bib:LHCb:experiment} and ALICE~\cite{bib:ALICE:experiment} experiments are designed with an emphasis on CP-violation measurements and heavy ion collisions, respectively.
-Each experiment is thus interested in different processes that happen at the beam collision points.
 
-The number of expected events for a given process can be expressed in terms of the corresponding cross section $\sigma$ times the integrated luminosity
+The number of expected events $N$ for a given process can be expressed in terms of the corresponding cross section $\sigma$ times the integrated luminosity $L$
 \begin{equation}
 N = L \cdot \sigma,
 \end{equation}
@@ -41,7 +41,7 @@ In 2012, the peak luminosity was $7.7 \cdot 10^{33} \frac{1}{\text{cm}^2\,\text{
 The total integrated luminosity of $pp$-collisions over time recorded at the CMS experiment is shown in Fig.~\ref{fig:Lumi}.
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.55\textwidth]{figures/experiment/LHC/int_lumi_per_day_cumulative_pp_2012.pdf}
+      \includegraphics[width=0.57\textwidth]{figures/experiment/LHC/int_lumi_per_day_cumulative_pp_2012.pdf}
   \caption{Integrated luminosity delivered by LHC (blue) and recorded by CMS (orange) in the year 2012. Taken from~\cite{bib:LumiWiki}.}  
   \label{fig:Lumi}
 \end{figure}
@@ -57,36 +57,43 @@ The CMS detector measures 21.6\m in length and 14.6\m in diameter with a total w
 In Fig.~\ref{fig:CMSdetector}, a perspective view of the CMS detector is depicted. 
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.89\textwidth]{figures/experiment/CMS/cms_complete_labelled.png}
+      \includegraphics[width=0.84\textwidth]{figures/experiment/CMS/cms_complete_labelled.png}
   \caption{A perspective view of the CMS detector. Taken from~\cite{bib:CMS:experiment}}  
   \label{fig:CMSdetector}
 \end{figure}
 
-The coordinate system used at CMS consists of the pseudorapidity $\eta = -\ln \tan{\frac{\theta}{2}}$ and the azimuthal angle $\phi$.
+The coordinate system used at CMS consists of the pseudorapidity $\eta = -\ln \left[ \tan{\left(\theta/2\right)} \right]$ and the azimuthal angle $\phi$.
 The advantage of the pseudorapidity $\eta$ is the Lorentz invariance with respect to the z-axis (beam axis).
 The angle $\phi$ covers the direction in the $x-y$ plane (orthogonal to the beam axis).
+Since the CMS experiment utilises proton-proton collisions, where the inelastic scattering happens on parton level, the initial total momentum of the corresponding partons are unknown.
+Thus, instead of exploiting the conservation of total momentum, only the conservation of transverse momentum is usually used.
+This can be done because the partons have no (or only an negligible amount) of initial momentum in the transverse plane.
+Thus the initial state is characterised by $\sum{\pt}=0$, with $\pt = \sqrt{p_x^2 + p_y^2}$.
 
-In order to measure the momentum of charged particles a superconducting solenoid is incorporated between the calorimeter system and the muon system providing a uniform axial magnet field of 3.8\tesla.
+In order to bend the particle trajectories and thus to measure the momentum of charged particles a superconducting solenoid is incorporated between the calorimeter system and the muon system (see Fig.~\ref{fig:CMSdetector}) providing a uniform axial magnet field of 3.8\tesla.
 Iron yokes contained within the muon system ensure the return of the magnetic flux. 
 
 In the following, the various detector components of the CMS detector from the inside to the outside as well as the trigger system will be explained.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \section{The tracking system}
+\label{sec:TrackingSystem}
 The tracking detector~\cite{bib:CMS:TDR_2006,bib:CMS:Tracker_1997,bib:CMS:Tracker_2000} is the innermost detector at CMS. 
 It is a silicon semiconductor detector and is included for the tasks of vertex and track reconstruction by the measurement of particles' energy losses.
 A schematic sketch of the tracker at CMS is depicted in Fig.~\ref{fig:Tracker}.
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.99\textwidth]{figures/experiment/CMS/Figures_Experimental_Apparatus_Tracker.png}
-  \caption{Schematic sketch of the silicon tracker at CMS in the $z - \phi$ plane including the silicon pixel detector (PIXEL) as well as the different components of the silicon strip detector: tracker inner barrel (TIB), tracker outer barrel (TOB), tracker endcap (TEC), and tracker inner disk (TID). Taken from~\cite{bib:CMS:tracking_8TeV}.
+      \includegraphics[width=0.95\textwidth]{figures/experiment/CMS/TrackerLayoutNew.pdf}
+  \caption{Schematic sketch of the silicon tracker at CMS in the $r - z$ plane including the silicon pixel detector (PIXEL) as well as the different components of the silicon strip detector: tracker inner barrel (TIB), tracker outer barrel (TOB), tracker endcap (TEC), and tracker inner disk (TID). Taken from~\cite{bib:CMS:tracking_8TeV}.
            }  
   \label{fig:Tracker}
 \end{figure}
 The tracking system is divided into two parts: the innermost tracker is a silicon pixel detector surrounded by a silicon strip detector.
-Both parts will be explained in detail in the upcoming sections, followed by a short description of how the energy of a traversing particle is measured with the silicon sensors.
-As a calibration of the silicon pixel detector was performed within this PhD thesis (see Section~\ref{sec:EnergyCalibration}), an emphasis will be put on the pixel detector.
+Since the silicon pixel tracker is closest to the interaction point and has thus to deal with much higher particle fluxes, its granularity is higher compared to the silicon strip detector.
 
+Both parts will be explained in detail in the upcoming sections.
+Because, the variable \dedx, the energy loss per path length, is used in this thesis for the search for highly ionising, short tracks (Part~\ref{part:analysis}), the last part of this section is dedicated to a short description of how the energy of a traversing particle is measured with the silicon sensors.
+Furthermore, since a calibration of the silicon pixel detector was performed within this PhD thesis (see Section~\ref{sec:EnergyCalibration}), an emphasis will be put on the pixel detector.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{The silicon pixel tracker}
@@ -96,8 +103,8 @@ The read-out-chips are bump bonded~\cite{Thesis_Jenny} to a pixel system of $52\
 A visualisation of a part of a pixel module is shown in Fig.~\ref{fig:PixelTracker}.
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.90\textwidth]{figures/experiment/CMS/Pixelement.png}
-  \caption{Schematic sketch of a part of a silicon pixel tracker module including the silicon sensors and the read-out-chip (ROC). Taken from~\cite{bib:CMS:tracking_8TeV}.}  
+      \includegraphics[width=0.60\textwidth]{figures/experiment/CMS/Pixelement.png}
+  \caption{Schematic sketch of a part of a silicon pixel tracker module including the silicon sensors and the read-out-chip (ROC). Taken from~\cite{bib:PixelModule}.}  
   \label{fig:PixelTracker}
 \end{figure}
 In total, there are 65 million pixels comprised in the pixel detector.
@@ -105,7 +112,7 @@ The large number of pixels and their small size ensure a low occupancy close to 
 
 The silicon pixel detector is very important for the reconstruction of primary and secondary vertices as well as the reconstruction of particle tracks.
 Therefore, a high spatial resolution is needed.
-This is achieved by the small size of the pixels ($ 150 \times 100 \mum^2$) and the exploitation of the spread of the energy deposition across several pixels (in average the energy is deposited across 3-5 pixels~\cite{bib:TWIKI:PixelClusterSize}).
+This is achieved by the small size of the pixels ($ 150 \times 100 \mum^2$) and the exploitation of the spread of the energy deposition across several pixels, called charge sharing (in average the energy is deposited across 3-5 pixels~\cite{bib:TWIKI:PixelClusterSize}).
 Exploiting the energy spread across pixels, a spatial resolution in the barrel region of 9.4\mum in the $r - \phi$ plane and - dependent on the incident angle of a track - a hit resolution between $20-45\mum$ in the z-direction is achieved~\cite{bib:CMS:tracking_8TeV}. 
 %The high spatial resolution makes the pixel detector perfectly suited for the reconstruction of vertices and tracks.
 The spatial resolution of the primary vertex depends on the number of tracks taken into account for the reconstruction of the primary vertex.
@@ -115,7 +122,7 @@ The reconstruction efficiency of primary vertices is close to 100\% if more than
 \subsection*{The silicon strip tracker}
 The silicon strip tracker is the next-to innermost detector of the CMS detector and ranges up to a radius of 1.1\m.
 The barrel region consists of a tracker inner barrel (TIB) and a tracker outer barrel (TOB).
-The TIB has four layers with two layers equipped with stereo modules to measure the hit position additionally in the $r-z$ plane.
+The TIB has four layers with two layers equipped with so-called ``stereo'' modules that can measure the hit position additionally in the $r-z$ plane.
 The silicon sensors in the TIB are of 320\mum thickness with a strip pitch varying between $80-120\mum$.
 The TOB has six different layers (two layers of stereo modules) with silicon sensors of 500\mum thickness and strip pitches between 120 and 180\mum. 
 
@@ -132,29 +139,31 @@ A charged particle traversing the above mentioned silicon detectors produces ele
 For silicon, the mean energy to create an electron-hole pair is 3.61\ev at $-10\degree$C.
 Minimally ionising particles produce an average of 22\,000 electron-hole pairs in silicon sensors~\cite{Thesis_Jenny}.
 Electrons that are subject to a hard collision with the incoming particle (so-called delta-rays), produce further ionisation and can thus lead to much higher energy deposits in the silicon.
-Because of the applied bias voltage at the sensors (for the creation of a depletion zone), the released electrons (holes) travel to the n-contacts (p-contacts), thereby inducing a current which is measured by the readout electronics. 
+Because of the applied bias voltage at the sensors (for the creation of a depletion zone), the released electrons (holes) travel to the n-contacts (p-contacts), thereby inducing a current proportional the released energy, which is measured by the readout electronics. 
 A more detailed description of the energy measurement in silicon sensors can be found in~\cite{Thesis_Jenny}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The electromagnetic calorimeter}
 The electromagnetic calorimeter (ECAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_ECAL} encloses the tracking system and starts at a radius of 129\cm in the barrel region.
+It measures the energy and position of a traversing particle.
 It is divided into a barrel part and two endcaps, which are at a distance of 314\cm from the vertex.
 Figure~\ref{fig:ECAL} depicts a schematic sketch of the electromagnetic calorimeter system in the transverse plane.
-\begin{figure}[!ht]
+\begin{figure}[!t]
   \centering
-      \includegraphics[width=0.89\textwidth]{figures/experiment/CMS/Figures_Experimental_Apparatus_ECALRapidity.png}
-  \caption{A quarter section of the ECAL in a transverse view. Taken from~\cite{bib:CMS:TDR_2006}.}  
+      \includegraphics[width=0.65\textwidth]{figures/experiment/CMS/Figures_Experimental_Apparatus_ECALRapidity.png}
+  \caption{A quarter section of the ECAL in the $r-z$ plane. Taken from~\cite{bib:CMS:TDR_2006}.}  
   \label{fig:ECAL}
 \end{figure}
 It can be seen, that the ECAL barrel~(EB) covers a pseudorapidity region up to $|\eta|=1.479$.
 The ECAL endcaps~(EE) start at $|\eta|=1.653$ and reach up to $|\eta|=3.0$.
-Before the endcaps, a preshower detector ($1.653<|\eta|<2.6$) is installed with the main task to identify neutral pions in the endcaps.
+In front of the endcaps, a preshower detector ($1.653<|\eta|<2.6$) is installed with the main task to identify neutral pions.
 It additionally improves the position measurement of electrons and photons.
 
-The EB and EE consist of lead tungstate (PbWO$_4$) scintillating crystals, 61200 in the barrel region and 7324 in the endcaps. 
-Their advantage is the short radiation length (X$_0$=0.89\cm) and a small Moli\`ere radius (2.2\cm).
+The EB and EE consist of lead tungstate (PbWO$_4$) scintillating crystals, 61200 in the barrel region and 7324 in each of the endcaps. 
+Their advantage is the short radiation length ($X_0=0.89\cm$) and a small Moli\`ere radius (2.2\cm).
 Thus, particles deposit their energy on rather short distances and a compact design is possible.
-To detect the rather low light yield (30$\gamma$/\mev) of a traversing particle, silicon avalanche photodiodes (APDs) are used in the barrel region and vacuum  phototriodes (VPTs) in the endcaps.
+Since they lack a fine longitudinal segmentation, the information on the shower development is limited.
+To detect the rather low light yield ($30\,\gamma/\mev$) of a traversing particle, silicon avalanche photodiodes (APDs) are used in the barrel region and vacuum  phototriodes (VPTs) in the endcaps.
 For information on the readout electronics, the reader is referred to~\cite{bib:CMS:TDR_2006}.
 
 The resolution of an energy measurement in the calorimeter can be expressed by 
@@ -163,7 +172,7 @@ The resolution of an energy measurement in the calorimeter can be expressed by
 \left( \frac{\sigma}{E} \right)^2 = \left( \frac{S}{\sqrt{E}} \right)^2 + \left( \frac{N}{E} \right)^2 +C^2,
 \end{equation}
 with $S$ referring to the stochastic term, $N$ to the noise term, and $C$ to a constant term.
-For the ECAL the parameters of Eq.~\eqref{eq:CaloResolution} are measured to $S=3.63\sqrt{\text{GeV}}$, $N=0.124\gev$, and $C=0.26$~\cite{bib:CMS:TDR_2006}. 
+For the ECAL at CMS the parameters of Eq.~\eqref{eq:CaloResolution} are measured to $S=3.63\,\sqrt{\text{GeV}}$, $N=0.124\gev$, and $C=0.26$~\cite{bib:CMS:TDR_2006}. 
 These numbers lead to an energy resolution of around 0.4\% for an electron with $E \approx 200\gev$ and around 0.6\% for an electron with $E \approx 50\gev$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,23 +181,23 @@ The hadronic calorimeter (HCAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_HCAL} of the 
 A schematic sketch is depicted in Fig.~\ref{fig:HCAL}.
 \begin{figure}[!ht]
   \centering
-      \includegraphics[width=0.79\textwidth]{figures/experiment/CMS/fig_HCALdiagram_smaller_size.png}
+      \includegraphics[width=0.65\textwidth]{figures/experiment/CMS/fig_HCALdiagram_smaller_size.png}
   \caption{A quarter section of the HCAL in a transverse view. Taken from~\cite{bib:CMS:HCAL_Performance_2009}.}  
   \label{fig:HCAL}
 \end{figure}
 
-The HCAL is dedicated to measuring the energy of hadrons as well as providing a good estimate of the missing energy in the event.
+The HCAL is dedicated to measuring the energy of hadrons as well as improving the estimate of the missing energy in the event because of its large pseudorapidity coverage.
 The latter one is achieved by the high pseudorapidity coverage ($|\eta|<5.0$) that assures the detection of most of the visible particles.
 
 The HCAL is a so-called sampling calorimeter which consists of brass absorber material, initiating the hadronic shower, as well as active plastic scintillators.
 The emitted photons are read out with wavelength-shifting (WLS) fibres which are embedded into the scintillators.
-These in turn are connected to clear fibres that transfer the light to the readout system.
+These in turn are connected to fibres that transfer the light to the readout system.
 
 The hadron barrel (HB) covers the pseudorapidity range between $-1.4 < \eta < 1.4$.
 It is composed of 17 layers of absorber material (15 brass and 2 steel layers) interleaved with scintillator layers.
 The scintillator layers are divided into 2304 towers with a size of $\Delta \eta \times \Delta \phi = 0.087 \times 0.087$.
 
-The hadron outer (HO) covers a pseudorapidity range up to $|\eta|=1.26$ and is divided into sectors which match the $\phi$ segmentation of the drift-tube chambers of the muon system (see Section~\ref{sec:MuonSystem}).
+The hadron outer (HO) covers a pseudorapidity range up to $|\eta|=1.26$.
 It is located between the solenoid and the barrel detector of the muon system.
 The HO is dedicated to measuring the energy of the shower leakage of hadrons.
 Its thickness corresponds to over ten interaction lengths.
@@ -197,18 +206,18 @@ The hadron endcap (HE) extends the pseudorapidity coverage of the HCAL up to $|\
 It consists of 2304 towers in total, which vary in size between $5-10\degree$ in the $\phi$ direction and $0.087-0.35$ in $\eta$ direction.
 
 Finally, the hadron forward (HF) calorimeter extends the pseudorapidity range up to $|\eta|=5.0$, starting from $|\eta|=3.0$.
-It is build out of steel plates, which contain $1\mm^2$ grooves containing quartz fibres.
+It is build out of steel plates with $1\mm^2$ grooves containing quartz fibres.
 The emitted light by the quartz fibres is transferred to photomultipliers.
 The HF is divided into 13 towers where almost all towers have a spread of $\Delta \eta \approx 0.175$ in $\eta$ direction and $\sim 10\degree$ in $\phi$ direction.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The muon system}
 \label{sec:MuonSystem}
-The muon system~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_MuonSystem} is the outermost detector component at CMS.
+The muon system~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_MuonSystem} is the outermost component of the CMS detector.
 It comprises three different types of gaseous detectors, mounted into the iron return yokes: drift tube (DT) chambers in the barrel region ($|\eta|<1.2$), cathode strip chambers (CSC) in the endcap region ($1.04<|\eta|<2.4$) and resistive plate chambers (RPC) in the barrel as well as the endcap region ($|\eta|<1.6$) (see Fig.~\ref{fig:MuonSystem} for a schematic sketch of the muon system).
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.69\textwidth]{figures/experiment/CMS/Figures_Experimental_Apparatus_MuonDetector.png}
+      \includegraphics[width=0.60\textwidth]{figures/experiment/CMS/Figures_Experimental_Apparatus_MuonDetector.png}
   \caption{A quarter section of the CMS detector in the transverse plane with a detailed view on the muon system. Taken from~\cite{bib:CMS:TDR_2006}.}  
   \label{fig:MuonSystem}
 \end{figure}
@@ -218,14 +227,15 @@ The position of a muon traversing these layers can be measured with a precision 
 The four endcap disks are made up of 468 cathode strip chambers in total.
 By measuring the centre-of-gravity, they achieve a spatial resolution of $\approx 100-200\mum$ and an angular resolution of $\approx 10\,$mrad in $\phi$ direction.
 They are designed in order to cope with a high particle flux of about 1kHz/cm$^2$ and a non-uniform magnetic field.
-As signals can be transferred very fast, they are used for the level-1 trigger system.
+As signals can be transferred very fast, they are used for the level-1 trigger system (see Section~\ref{sec:TriggerSystem}).
 
 Finally, the resistive plate chambers cover the barrel as well as the endcap region up to a pseudorapidity of $\eta=1.6$. 
 They provide a fast response with a good time resolution enabling the exact identification of the respective bunch-crossing.
 It is used for the level-1 trigger system as well.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The trigger system}
-Because of the impossibility of storing each event occurring at the CMS experiment, a multistage trigger system~\cite{bib:CMS:TDR_2006} is used to achieve a drastic reduction of recorded events by nearly six orders of magnitude.
+\label{sec:TriggerSystem}
+Because of the impossibility of storing each event occurring at the CMS experiment (cf. bunch crossing rate of 20\mhz), a multistage trigger system~\cite{bib:CMS:TDR_2006} is used to achieve a drastic reduction of recorded events by nearly six orders of magnitude.
 It comprises two main parts: a so-called level-1 (L1) trigger system and a high-level trigger (HLT) system.
 
 The L1 triggers need to provide a very fast decision (3.2\mus, where around 1\mus is allocated to the actual L1 trigger calculations) whether an event shall be recorded or not.
@@ -286,7 +296,9 @@ These particle-flow objects are used to identify further objects in the event, \
 \section{Object reconstruction}
 \label{sec:ObjectReconstruction}
 In this section, an overview of the required criteria for the identification of particles and other physics objects is given.
+
 \subsection{Reconstruction of tracks}
+\label{subsec:TrackReconstruction}
 The reconstruction of tracks aims at linking several hits in the tracking system to one reconstructed track that matches the original trajectory of the particle with a high probability.
 With the track reconstruction, an estimate of the particle's momentum as well as its position can be achieved.
 Track reconstruction is challenging because the large number of hits, especially in the layers close to the interaction vertex, leads to a high combinatorial complexity. 
@@ -432,6 +444,7 @@ In this thesis, all jets are subject to charged hadron subtraction.
 
 
 \subsection{Reconstruction of muons}
+\label{subsec:MuonReconstruction}
 There are three different muon definitions at CMS~\cite{bib:CMS:muon_recoEff}: global muons, tracker muons, and standalone muons.
 They all have in common that they require energy deposits in the muon system.
 The reconstruction of each of the three muon types is explained in the following.
@@ -444,6 +457,7 @@ Further details about the reconstruction of standalone muons can be found in~\ci
 \end{description}
 
 \subsection{Reconstruction of electrons}
+\label{subsec:ElectronReconstruction}
 The reconstruction of electrons at the CMS experiment is based on a mixture of the particle-flow algorithm explained in Section~\ref{sec:PFalgorithm} and a standalone approach~\cite{bib:StandaloneElectronReconstruction}.
 Thus, it is a very complex procedure and only the basic approach shall be explained here.
 The reader is referred to~\cite{bib:CMS:elec_recoEff} for a complete description of the reconstruction procedure.
@@ -469,6 +483,7 @@ Finally, track-cluster association criteria are applied in order to reduce misid
 The association criteria rely on spatial distances between the superclusters and the tracker track for ECAL-seeded tracks (GSF tracks) and rely on multivariate techniques for the tracker-seeded (standard track reconstruction) electrons.
 
 \subsection{Reconstruction of taus}
+\label{subsec:TauReconstruction}
 The tau reconstruction at CMS refers to the reconstruction of hadronically decaying taus (a fraction of around 65\% of taus decays hadronically).
 At CMS, the main algorithm used to identify and reconstruct taus is the so-called hadron plus strip algorithm (HPS)~\cite{bib:CMS:TauReconstruction_8TeV,bib:CMS:TauReconstruction_7TeV}, which is also used in this thesis.
 The description of the tau reconstruction algorithm within this thesis follows~\cite{bib:CMS:TauReconstruction_8TeV}.
@@ -525,6 +540,7 @@ This filter rejects therefore events, where less than 10\% of the energy in the 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \chapter{Simulation of events}
+\label{ch:SimulationOfEvents}
 
 A very important input for physics analyses at particle colliders is the use of simulated collision events.
 They serve as a comparison to measured data and can give an estimation of the expected number of background and signal events for a given selection.

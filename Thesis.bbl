@@ -1,53 +1,17 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
-
-\bibitem{bib:Theory:CMS:HiggsObservation}
-{ CMS} Collaboration, ``{Observation of a new boson at a mass of 125 GeV with
-  the CMS experiment at the LHC}'', {\em Phys. Lett.} {\bf B716} (2012) 30--61,
-  \href{http://www.arXiv.org/abs/1207.7235}{{\tt arXiv:1207.7235}}.
-\href{http://dx.doi.org/10.1016/j.physletb.2012.08.021}{{\tt
-  doi:10.1016/j.physletb.2012.08.021}}.
-%%CITATION = ARXIV:1207.7235;%%.
-
-\bibitem{bib:Theory:Atlas:HiggsObservation}
-{ ATLAS} Collaboration, ``{Observation of a new particle in the search for the
-  Standard Model Higgs boson with the ATLAS detector at the LHC}'', {\em Phys.
-  Lett.} {\bf B716} (2012) 1--29,
-  \href{http://www.arXiv.org/abs/1207.7214}{{\tt arXiv:1207.7214}}.
-\href{http://dx.doi.org/10.1016/j.physletb.2012.08.020}{{\tt
-  doi:10.1016/j.physletb.2012.08.020}}.
-%%CITATION = ARXIV:1207.7214;%%.
-
-\bibitem{bib:CMS:QCD_measurements}
-{ CMS} Collaboration, ``{Measurements of differential dijet cross section in
-  proton-proton collisions at $\sqrt(s)=8$ TeV with the CMS detector}'', {\em
-  CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1709826}{CMS-PAS-SMP-14-002}} (2014).
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
 
 \bibitem{bib:CMS:RA2_8TeV}
 { CMS} Collaboration, ``{Search for new physics in the multijet and missing
-  transverse momentum final state in proton-proton collisions at $\sqrt{s}$= 8
-  TeV}'', {\em JHEP} {\bf 06} (2014) 055,
+  transverse momentum final state in proton-proton collisions at
+  $\sqrt{s}=8\tev$}'', {\em JHEP} {\bf 06} (2014) 055,
   \href{http://www.arXiv.org/abs/1402.4770}{{\tt arXiv:1402.4770}}.
 \href{http://dx.doi.org/10.1007/JHEP06(2014)055}{{\tt
   doi:10.1007/JHEP06(2014)055}}.
 %%CITATION = ARXIV:1402.4770;%%.
 
-\bibitem{bib:CMS:JERCPaper_2011}
-{ CMS} Collaboration, ``{Determination of jet energy calibration and transverse
-  momentum resolution in CMS}'', {\em JINST} {\bf 6} (2011) P11002,
-  \href{http://www.arXiv.org/abs/1107.4277}{{\tt arXiv:1107.4277}}.
-\href{http://dx.doi.org/10.1088/1748-0221/6/11/P11002}{{\tt
-  doi:10.1088/1748-0221/6/11/P11002}}.
-%%CITATION = ARXIV:1107.4277;%%.
-
-\bibitem{CMS:PAS:JETResolution_7TeV}
-{ CMS} Collaboration, ``{Jet Energy Resolution in CMS at sqrt(s)=7 TeV}'', {\em
-  CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1339945}{CMS-PAS-JME-10-014}} (2011).
-
 \bibitem{bib:CMS:MT2_8TeV}
 { CMS} Collaboration, ``{Searches for supersymmetry using the M$_{T2}$ Variable
-  in Hadronic Events Produced in pp Collisions at 8 TeV}'', {\em JHEP} {\bf 05}
+  in Hadronic Events Produced in pp Collisions at 8\tev}'', {\em JHEP} {\bf 05}
   (2015) 078, \href{http://www.arXiv.org/abs/1502.04358}{{\tt
   arXiv:1502.04358}}.
 \href{http://dx.doi.org/10.1007/JHEP05(2015)078}{{\tt
@@ -63,6 +27,12 @@
 \href{http://dx.doi.org/10.1140/epjc/s10052-013-2568-6}{{\tt
   doi:10.1140/epjc/s10052-013-2568-6}}.
 %%CITATION = ARXIV:1303.2985;%%.
+
+\bibitem{bib:CMS:QCD_measurements}
+{ CMS} Collaboration, ``{Measurements of differential dijet cross section in
+  proton-proton collisions at $\sqrt(s)=8$ TeV with the CMS detector}'', {\em
+  CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1709826}{CMS-PAS-SMP-14-002}} (2014).
 
 \bibitem{bib:CMS:TopCrossSection_8TeV}
 { CMS} Collaboration, ``{Measurement of the differential cross section for top
