@@ -163,7 +163,7 @@ a4paper,
 % Line spacing
 \onehalfspacing
 % Line numbers
-\linenumbers
+%\linenumbers
 % Don't skip paragraphs with equations in line numbering
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
@@ -253,8 +253,8 @@ a4paper,
 % \part{Introduction}  \label{part:Introduction}
 % \input{introduction.tex}
 
-% \part{The Standard Model and its supersymmetric extension} \label{part:Theory}
-% \input{theory.tex}
+\part{The Standard Model and its supersymmetric extension} \label{part:Theory}
+\input{theory.tex}
 
 % \part{Experimental setup: Collider, detector and algorithms} \label{part:Experiment}
 % \input{experiment.tex}
@@ -274,8 +274,8 @@ a4paper,
 %  \part{Measurement of the jet transverse-momentum resolution} \label{part:resolution}
 %  \input{resolution.tex}
 
-\part{Summary} \label{part:Summary}
-\input{summary.tex}
+% \input{summary.tex}
+% \part{Summary} \label{part:Summary}
 
 % \bookmarksetup{startatroot}
 % \cleardoublepage 

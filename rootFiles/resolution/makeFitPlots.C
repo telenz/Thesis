@@ -42,7 +42,7 @@ int makeFitPlots(){
   gStyle->SetHistLineWidth(width);
   gStyle->SetNdivisions(506,"Y");
 
-  TString pathToFile = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS/";
+  TString pathToFile = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS_primary_analysis/";
 
   const TString JetType = "PFCHS";
   TString Method = "RMS99";
@@ -163,7 +163,9 @@ int makeFitPlots(){
     TLatex*  info   = new TLatex();
     info -> SetNDC();
     info -> SetTextSize(0.045);
-    info -> DrawLatex(0.22,0.23,Form("#chi^{2}/ndof = %4.2f/%i",f1 -> GetChisquare(),f1 -> GetNDF()));
+    //info -> DrawLatex(0.22,0.23,Form("#chi^{2}/ndof = %4.2f/%i",f1 -> GetChisquare(),f1 -> GetNDF()));
+    info -> DrawLatex(0.22,0.28,Form("#chi^{2}/ndof  = %4.2f/%i",f1 -> GetChisquare(),f1 -> GetNDF()));
+    info -> DrawLatex(0.22,0.21,Form("fit prob. = %4.2f",f1 ->GetProb()));
     info -> SetTextSize(0.05);
     info -> DrawLatex(0.51,0.69,Form("#rho_{res} = %4.3f #pm %4.3f", f1 -> GetParameter(0), f1->GetParError(0)));
     info -> DrawLatex(0.56,0.78,Form("#bf{%4.1f < |#eta^{jet}| < %4.1f}",etaBins[eta],etaBins[eta+1]));
