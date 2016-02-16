@@ -1,19 +1,4 @@
-\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
-
-\bibitem{bib:CMS:QCD_measurements}
-{ CMS} Collaboration, ``{Measurements of differential dijet cross section in
-  proton-proton collisions at $\sqrt(s)=8$ TeV with the CMS detector}'', {\em
-  CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1709826}{CMS-PAS-SMP-14-002}} (2014).
-
-\bibitem{bib:CMS:TopCrossSection_8TeV}
-{ CMS} Collaboration, ``{Measurement of the differential cross section for top
-  quark pair production in pp collisions at $\sqrt{s} = 8\,\text {TeV} $}'',
-  {\em Eur. Phys. J.} {\bf C75} (2015), no.~11, 542,
-  \href{http://www.arXiv.org/abs/1505.04480}{{\tt arXiv:1505.04480}}.
-\href{http://dx.doi.org/10.1140/epjc/s10052-015-3709-x}{{\tt
-  doi:10.1140/epjc/s10052-015-3709-x}}.
-%%CITATION = ARXIV:1505.04480;%%.
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
 
 \bibitem{bib:CMS:RA2_8TeV}
 { CMS} Collaboration, ``{Search for new physics in the multijet and missing
@@ -43,82 +28,14 @@
   doi:10.1140/epjc/s10052-013-2568-6}}.
 %%CITATION = ARXIV:1303.2985;%%.
 
-\bibitem{bib:CMS:JERCPaper_2011}
-{ CMS} Collaboration, ``{Determination of jet energy calibration and transverse
-  momentum resolution in CMS}'', {\em JINST} {\bf 6} (2011) P11002,
-  \href{http://www.arXiv.org/abs/1107.4277}{{\tt arXiv:1107.4277}}.
-\href{http://dx.doi.org/10.1088/1748-0221/6/11/P11002}{{\tt
-  doi:10.1088/1748-0221/6/11/P11002}}.
-%%CITATION = ARXIV:1107.4277;%%.
-
-\bibitem{CMS:PAS:JETResolution_7TeV}
-{ CMS} Collaboration, ``{Jet Energy Resolution in CMS at sqrt(s)=7 TeV}'', {\em
-  CMS Physics Analysis Summary} {\bf
-  \href{https://cds.cern.ch/record/1339945}{CMS-PAS-JME-10-014}} (2011).
-
-\bibitem{bib:Matthias_Thesis}
-M.~Schr{\"o}der, ``{Quality of jet measurements and impact on a search for new
-  physics at CMS}''.
-\newblock PhD thesis, Hamburg University, 2012.
-\newblock
-\url{http://www-library.desy.de/cgi-bin/showprep.pl?thesis12-042}.
-%%CITATION = DESY-THESIS-2012-042;%%.
-
-\bibitem{bib:CMS-AN-2010-076}
-M.~V. F.~Pandolfi, D. del~Re, ``Jet Response and Resolution Measurement with
-  Photon+Jet Events'', {\em CMS Analysis Note} {\bf
-  \href{http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2010_076_v2.%
-pdf}{CMS-AN-10-076}} (2010). Internal documentation.
-
-\bibitem{bib:CMS:PhotonIdentification_8TeV}
-{ CMS} Collaboration, ``{Performance of photon reconstruction and
-  identification with the CMS detector in proton-proton collisions at $\sqrt{s}
-  = 8\tev$}'', {\em JINST} {\bf 10} (2015), no.~08, P08010,
-  \href{http://www.arXiv.org/abs/1502.02702}{{\tt arXiv:1502.02702}}.
-\href{http://dx.doi.org/10.1088/1748-0221/10/08/P08010}{{\tt
-  doi:10.1088/1748-0221/10/08/P08010}}.
-%%CITATION = ARXIV:1502.02702;%%.
-
-\bibitem{CMS-PAS-PFT-09-001}
-{ CMS} Collaboration, ``Particle-Flow Event Reconstruction in CMS and
-  Performance for Jets, Taus, and MET'', {\em CMS Physics Analysis Summary}
-  {\bf \href{http://cds.cern.ch/record/1194487}{CMS-PAS-PFT-09-001}}
-(2009).
-%%CITATION = CMS-PAS-PFT-09-001;%%.
-
-\bibitem{bib:JetClustering_2008}
-M.~Cacciari, G.~P. Salam, and G.~Soyez, ``{The anti-$k_t$ jet clustering
-  algorithm}'', {\em JHEP} {\bf 04} (2008) 063,
-  \href{http://www.arXiv.org/abs/0802.1189}{{\tt arXiv:0802.1189}}.
-\href{http://dx.doi.org/10.1088/1126-6708/2008/04/063}{{\tt
-  doi:10.1088/1126-6708/2008/04/063}}.
-%%CITATION = ARXIV:0802.1189;%%.
-
-\bibitem{bib:JetIDRecommendation_7TeV}
-N.~Odell, ``PF Jet ID Recommendation''.
-  \url{https://indico.cern.ch/event/89919/contribution/0/attachments/1091238/1%
-556772/PF_JET_ID_Reccomendation.pdf}, April, 2010.
-
-\bibitem{bib:AN:JetId_8TeV}
-{N. Saoulidou and E. Tziaferi}, ``Performance of the Particle-Flow jet
-  identification criteria using proton-proton collisions at $\sqrt{s}=
-  8\tev$'', {\em CMS Analysis Note} {\bf
-  \href{http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2014_227_v4.%
-pdf}{CMS-AN-14-227}} (2014). Internal documentation.
-
-\bibitem{CMS-PAS-EGM-10-006}
-{ CMS} Collaboration, ``Isolated Photon Reconstruction and Identification at
-  $\sqrt{s}=7\tev$'', {\em CMS Physics Analysis Summary} {\bf
-  \href{http://cds.cern.ch/record/1324545}{CMS-PAS-EGM-10-006}}
-(2011).
-%%CITATION = CMS-PAS-EGM-10-006;%%.
-
-\bibitem{bib:CMS:PileupSysUnc}
-{CMS Collaboration}, ``Estimating Systematic Errors Due to Pileup Modeling'',
-  {\em Internal CMS Wiki} (2013).
-  \href{https://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors}{https%
-://twiki.cern.ch/twiki/bin/view/CMS/PileupSystematicErrors, Topic revision:
-  r11}.
+\bibitem{bib:CMS:TopCrossSection_8TeV}
+{ CMS} Collaboration, ``{Measurement of the differential cross section for top
+  quark pair production in pp collisions at $\sqrt{s} = 8\,\text {TeV} $}'',
+  {\em Eur. Phys. J.} {\bf C75} (2015), no.~11, 542,
+  \href{http://www.arXiv.org/abs/1505.04480}{{\tt arXiv:1505.04480}}.
+\href{http://dx.doi.org/10.1140/epjc/s10052-015-3709-x}{{\tt
+  doi:10.1140/epjc/s10052-015-3709-x}}.
+%%CITATION = ARXIV:1505.04480;%%.
 
 \bibitem{bib:Kristin_Thesis}
 K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the
