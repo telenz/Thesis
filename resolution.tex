@@ -89,7 +89,7 @@ Additionally, the variable $\alpha$ is defined as the ratio of the transverse mo
 \end{equation} 
 and is thus a measure of further jet activity in an event. 
 It is, however, not sufficient to require only an upper bound on $\alpha$. 
-Instead, the jet transverse-momentum resolution is measured in bins of $\alpha$ with max($\alpha$) = 0.2, 
+Instead, the jet transverse-momentum resolution is measured in bins of $\alpha$ with max$\left( \alpha \right) =0.2 $, 
 and the extrapolated value to zero further jet momentum at $\alpha=0$ is taken as the measured resolution of the jet \pt. % in the absence of further jets.
 \begin{figure}[t]
   \centering
@@ -464,16 +464,6 @@ It can be nicely seen that the total resolution and the fit function of the meas
 This implies, that the assumed functional forms of the resolution components and the assumed convolution leads indeed to a good description of the measured resolution.
 Further validations of the methodology will be described in Section~\ref{res:sec:validation}.
 
-%Figure~\ref{fig:ImbalanceOfPtgamma} shows the residual imbalance for two exemplary $|\etafirstjet|$ bins. 
-%It is almost stable and around 2\% over the whole photon \pt range.
-%\begin{figure}[b]
-%  \centering
-%    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/Imbalance_for_1_eta_bin_PFCHS_mc_RMS99.pdf}
-%    \includegraphics[width=0.49\textwidth]{figures/resolution/methodology/Imbalance_for_3_eta_bin_PFCHS_mc_RMS99.pdf}
-%  \caption{Imbalance for $|\etafirstjet| < 0.5$ (left) and $1.1<|\etafirstjet| < 1.7$ (right) in simulation.}  
-%  \label{fig:ImbalanceOfPtgamma}
-%\end{figure}
-
 In Fig.~\ref{fig:ResolutionOfPtgamma}, the estimated intrinsic resolution in simulation (green) and data (black) is shown in different photon \pt bins for two different $|\etafirstjet|$ regions.
 The resolution improves for increasing photon \pt. 
 \begin{figure}[!b]
@@ -488,14 +478,6 @@ The increasing statistical uncertainties for low photon \pt arise through the re
 This reduces the numbers of events in the low photon \pt bins. 
 For events with $\ptgamma \lesssim 50\gev$, it is not possible at all to fulfil both requirements at the same time.
 
-%The extrapolated intrinsic resolutions for the various photon \pt are fitted with the following function
-%\begin{equation}
-%\label{eq:PFresolution}
-%\jer = \sqrt{\text{sgn(N)} \cdot \frac{\text{N}}{\pt}  + \text{S}^2 \cdot \pt^{\text{M}-1} +  \text{C}^2 }
-%\end{equation}
-%which was introduced for particle flow jets in~\cite{bib:CMS:JERCPaper_2011}.
-%It is an extended fit function compared to the usual calorimeter resolution parametrisation to account for the higher resolution due to tracking information. 
-
 From Fig.~\ref{fig:ResolutionOfPtgamma}, it can be seen that the resolution in data is always worse than the resolution in simulation.
 Thus, in order to measure data-to-simulation scale factors \rhores for the jet transverse-momentum resolution, the measured resolution in data is divided by the resolution in Monte Carlo simulation (MC).
 \begin{equation}
@@ -506,19 +488,6 @@ The results will show (Chapter~\ref{res:ch:results}), that this ratio is indepen
 The measurement of the data-to-simulation scale factors is therefore only done in bins of $|\etafirstjet|$.
 
 How to apply these scale factors and adjust the jet transverse-momentum resolution in simulation to the measured resolution in data is well described in~\cite{bib:Matthias_Thesis}.
-
-
-%Finally, in order to measure data-to-simulation scale factors \rhores for the jet transverse-momentum resolution, the measured resolution in data is divided by the resolution in Monte Carlo simulation (MC)
-%\begin{equation}
-%\label{res:eq:rhores}
-%\rhores = \frac{\jer^{\text{data}}}{\jer^{\text{MC}}}
-%\end{equation}
-%It was found empirically, that this ratio is independent of \ptgamma, and can be fitted with a constant.
-%Thus, to account for differences in the data-to-simulation ratio for different pseudorapidity ranges of the jet, the measurement of the scale factors is only done in bins of $|\etafirstjet|$.
-
-%How to adjust finally the jet transverse-momentum resolution in simulation to the measured resolution in data is well described in~\cite{bib:Matthias_Thesis}.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \section{Validation of the method}
@@ -534,8 +503,6 @@ Figure~\ref{fig:MCClosure} depicts the results of this comparison for one exempl
 \end{figure}
 It can be seen that the method has a bias of up to~15\% towards an underestimation of the resolution for small \ptgamma. 
 For $\ptgamma>100\gev$ the bias is less than 5\% and reduces to less than 1\% for $\ptgamma>200\gev$.
-
-%It is evaluated as the ratio of the predicted intrinsic resolution by fitting Eq.~\eqref{eq:total} with $q$ fixed to the value obtained by Eq.~\eqref{eq:imbalance} over the intrinsic resolution directly obtained from the intrinsic response distribution \ptrecojet/\ptgenjet.
 
 The residual bias of the method is caused by the accumulation of high \ptfirstjet events in the low alpha bins and low \ptfirstjet events in the high alpha bins, as will be explained in the following paragraph  FIXME.
 Since the jet transverse-momentum resolution decreases for higher \ptfirstjet, this leads to an upward slope of the resolution with increasing alpha (cf. red dots in Fig~\ref{fig:AlphaDependenceOfResolutions} (left)).
@@ -702,13 +669,13 @@ In order to evaluate the systematic uncertainty on the out-of-cone showering sim
 The data-to-simulation ratio is in all $|\etafirstjet|$ bins larger for AK7-jets, resulting in uncertainties between $0.5-5.7\%$.
 The uncertainty on the simulation of out-of-cone showering is thus the largest systematic uncertainty of this measurement.
 
-%\begin{figure}[!t]
-%  \centering
-%      \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Resolution_for_3_eta_bin_MCUncertainty_RMS99.pdf}
-%      \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Ratio_Resolution_for_3_eta_bin_PFCHS_RMS99_ak5_ak7_comparison.pdf}
-%  \caption{Left: The measured resolution in simulation and data with AK5-jets and AK7-jets for $1.1<|\etafirstjet|<1.7$. Right: Data-to-simulation ratio for AK5- and AK7-jets for $1.1<|\etafirstjet|<1.7$.}  
-%  \label{res:fig:MCuncertainty}
-%\end{figure}
+\begin{figure}[!t]
+  \centering
+      \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Resolution_for_3_eta_bin_MCUncertainty_RMS99.pdf}
+      \includegraphics[width=0.49\textwidth]{figures/resolution/systematicUncertainties/Ratio_Resolution_for_3_eta_bin_PFCHS_RMS99_ak5_ak7_comparison.pdf}
+  \caption{Left: The measured resolution in simulation and data with AK5-jets and AK7-jets for $1.1<|\etafirstjet|<1.7$. Right: Data-to-simulation ratio for AK5- and AK7-jets for $1.1<|\etafirstjet|<1.7$.}  
+  \label{res:fig:MCuncertainty}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Uncertainty on the jet energy scale}
@@ -817,11 +784,10 @@ A comparison of the data-to-simulation resolution scale factors \rhores between 
 \end{figure}
 \begin{figure}[!t]
  \centering
-    %\includegraphics[width=0.65\textwidth]{figures/resolution/results/ComparisonTo2012_GAMJET.pdf}
-    \includegraphics[width=0.54\textwidth]{figures/resolution/results/Figure_43_left_Teresa_cmsStyle_updated_5.pdf}
-  \caption{Data-to-simulation jet \pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2011.
-           The grey and magenta bands correspond to the full uncertainties, whereas the error bars depict the statistical uncertainties only.}
-  \label{res:fig:Comparison_2011}
+ \includegraphics[width=0.54\textwidth]{figures/resolution/results/Figure_43_left_Teresa_cmsStyle_updated_5.pdf}
+ \caption{Data-to-simulation jet \pt resolution ratio determined from \GAMJET events from 2012 compared to dijet results from 2011.
+             The grey and magenta bands correspond to the full uncertainties, whereas the error bars depict the statistical uncertainties only.}
+ \label{res:fig:Comparison_2011}
 \end{figure}
 It can be seen, that throughout the whole \etajet-range the data-to-simulation resolution ratios \rhores are systematically larger for the result in 2011. 
 Comparing the precision of both measurements, the \GAMJET analysis is for all $\eta$-bins more precise than the analysis done with dijet events.
@@ -844,9 +810,6 @@ It can be seen that the statistical precision is much better for the measurement
 The systematic uncertainties are of comparable size for small pseudorapidity bins and are larger for high $|\etajet|$ in the here presented measurement.
 This is due to the uncertainty on the simulation of the out-of-cone showering.
 This uncertainty plays a smaller role in the dijet measurement (between 0.4\% and 1.5\%) as the effect by out-of-cone showering partly cancels out in case of two balanced jets.
-%Also, the different evaluation in the two measurements influences the size of this uncertainty.
-%In the dijet measurement this uncertainty was evaluated by varying the residual imbalance by $\pm$25\%.
-%Such an evaluation would result in smaller uncertainties for the large pseudorapidity region in the \GAMJET measurement.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -876,14 +839,4 @@ This approach might overestimate the uncertainty, since the difference in \rhore
 Thus, a more detailed investigation of the quality of out-of-cone showering simulation could yield a reduced uncertainty of the \rhores measurement using \GAMJET events.
 
 Furthermore, an increase in the statistical precision is desirable to allow for the determination of resolution scale factors in the high pseudorapidity regions which have not been accessible so far.
-
-%take account of the double peak structure when applying an exclusive binning in the variable $\alpha$ which measures the additional jet activity in the event, the event selection explicitly distinguishes the case of parton radiation in the leading jet/photon hemispheres.
-%This change in methodology is introduced for the first time by this measurement.\\
-
-%Since the systematic uncertainty is dominating, most notably the uncertainty on the simulation of out-of-cone showering, an improved evaluation of the out-of-cone showering uncertainty could significantly improve the precision of the data-to-simulation ratio $\jer^{\text{data}}/\jer^{\text{MC}}$.
-%A better evaluation can possibly be achieved by a better understanding, whether the difference of \rhores using clustered jets within a radius of 0.7 and 0.5 is only originating from out-of-cone showering effects.
-%Since the simulation of out-of-cone showering should in principal only enter the result by the residual imbalance $q$, an overestimation by the here presented method might be possible.
-%The significant advantage of a jet-\pt resolution measurement using \GAMJET events over a measurement with dijet events is the absolute reference \pt measured with a reconstructed photon.
-%This allows the exclusive binning in alpha 
-
 
