@@ -6,7 +6,7 @@
 The determination and quantification of the quality of the jet transverse-momentum measurement is of crucial interest for many analyses with jet final states, \eg the measurement of the dijet cross section~\cite{bib:CMS:QCD_measurements} or \ttbar production cross sections~\cite{bib:CMS:TopCrossSection_8TeV}. 
 Also searches for physics beyond the Standard Model with missing transverse momentum, \PTm, in the final state rely on a good understanding of \PTm originating from wrongly measured jets~\cite{bib:CMS:RA2_8TeV,bib:CMS:MT2_8TeV,bib:CMS:AlphaT_8TeV}.
 It is therefore important to calibrate the measured jet transverse momentum in order to eliminate biases in the measured jet \pt.
-Thus, each jet is subject to a calibration procedure which is in detail explained in Section~\ref{sec:JetReconstruction}.
+Thus, each jet is subject to a calibration procedure which is explained in detail in Section~\ref{sec:JetReconstruction}.
 Furthermore, it is necessary to determine the jet transverse-momentum resolution, \ie the detector resolution of the jet \pt measurement.
 For analyses relying on information from simulation, it is necessary to correct the simulated resolution to the resolution actually present in data.
 Therefore, scale factors will be presented to adjust the resolution in simulation to the resolution of the real detector.  
@@ -32,7 +32,7 @@ The quality of the jet transverse-momentum measurement is determined by the jet 
 \mathcal{R} =  \frac{\ptrecojet}{\pttruejet}.
 \end{equation}
 Because of the limited detector resolution, the reconstructed jet \pt in general differs from the true jet \pt resulting in a distribution of $\mathcal{R}$.
-In Fig~\ref{res:fig:TypicalResponse} (blue dots), an exemplary distribution of $\mathcal{R}$ in simulation (where the true jet \pt corresponds to the generator-level jet \pt) is depicted\footnote{For each reconstructed jet, the underlying generator-level jet is found by matching the closest generator-level jet to the reconstructed jet with a maximal value of $\Delta R_{\text{max}}=0.25$. }.
+In Fig~\ref{res:fig:TypicalResponse}, an exemplary distribution of $\mathcal{R}$ in simulation (where the true jet \pt corresponds to the generator-level jet \pt)\footnote{For each reconstructed jet, the underlying generator-level jet is found by matching the closest generator-level jet to the reconstructed jet with a maximal value of $\Delta R_{\text{max}}=0.25$.} is depicted (blue dots).
 It can be seen, that the core of the response distribution shows a typical Gaussian behaviour whereas the tails deviate from that functional form.
 Physical reasons for the pronounced low response tail are, inter alia, semi-leptonic decays of heavy quarks (c- and b-quarks) where the neutrino cannot be detected and the reconstructed transverse momentum of the jet is too small.
 This effect is visible in Fig.~\ref{res:fig:TypicalResponse} which depicts the response distribution including all jet flavours (blue), as well as the contribution by c- and b-quarks (red), which is the main contribution to the pronounced left tail.
@@ -181,7 +181,7 @@ Dataset                                          & Integrated luminosity [\fbinv
 In order to compare the measured resolution in data to the resolution in simulation, a single-photon sample simulated with \pythiaSix is used.
 This sample is generated with a non-physical photon \pt spectrum (slower decrease) to have a good statistical precision also for the high photon \pt region.
 In order to recover a physical \pt spectrum, all simulated events are reweighted.
-Figure~\ref{res:fig:PhotonPtSpectrum} shows the photon \pt spectrum in simulation before and after the reweighting. 
+Figure~\ref{res:fig:PhotonPtSpectrum} shows the photon \pt spectrum in simulation before and after reweighting. 
 
 Simulated samples come with a pileup scenario which does not necessarily match the pileup scenario in data. 
 To match the measured distribution of interactions, the events are weighted according to their number of pileup vertices. 

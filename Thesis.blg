@@ -77,46 +77,45 @@ I was expecting a `,' or a `}'---line 2340 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "FIXME"
-You've used 5 entries,
+You've used 17 entries,
             2369 wiz_defined-function locations,
-            633 strings with 5905 characters,
-and the built_in function-call counts, 1398 in all, are:
-= -- 192
-> -- 9
+            712 strings with 8727 characters,
+and the built_in function-call counts, 4087 in all, are:
+= -- 521
+> -- 54
 < -- 0
-+ -- 6
-- -- 1
-* -- 127
-:= -- 179
-add.period$ -- 16
-call.type$ -- 5
++ -- 26
+- -- 9
+* -- 327
+:= -- 537
+add.period$ -- 42
+call.type$ -- 17
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 87
-empty$ -- 137
-format.name$ -- 1
-if$ -- 386
+cite$ -- 17
+duplicate$ -- 261
+empty$ -- 448
+format.name$ -- 9
+if$ -- 1127
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 12
-newline$ -- 30
-num.names$ -- 1
-pop$ -- 17
+int.to.str$ -- 17
+missing$ -- 42
+newline$ -- 80
+num.names$ -- 7
+pop$ -- 83
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 45
+skip$ -- 106
 stack$ -- 0
-substring$ -- 26
-swap$ -- 30
+substring$ -- 56
+swap$ -- 70
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 5
-width$ -- 6
-write$ -- 69
+while$ -- 14
+width$ -- 19
+write$ -- 197
 (There were 15 error messages)
