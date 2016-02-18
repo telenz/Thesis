@@ -57,7 +57,7 @@ The CMS detector measures 21.6\m in length and 14.6\m in diameter with a total w
 In Fig.~\ref{fig:CMSdetector}, a perspective view of the CMS detector is depicted. 
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.84\textwidth]{figures/experiment/CMS/cms_complete_labelled.png}
+      \includegraphics[width=0.84\textwidth]{figures/experiment/CMS/cms_complete_labelled_reduced_size.pdf}
   \caption{A perspective view of the CMS detector. Taken from~\cite{bib:CMS:experiment}}  
   \label{fig:CMSdetector}
 \end{figure}
@@ -348,6 +348,26 @@ The variable $d_0^{\text{BS}}$ is the distance of the track to the centre of the
 The variables $\delta d_0$ and $\delta z_0$ are the uncertainties on the distance (impact) parameters and $\sigma$ is the standard deviation corresponding to the length of the beam-spot in z-direction.
 The values of the parameters $\alpha$ and $\beta$ vary across iterations.
 
+\subsection{Reconstruction of primary vertices} 
+\label{sec:VertexReconstruction}
+The reconstruction of primary vertices is important in order to determine the location of the interaction point and to get an estimate of the corresponding uncertainty.
+At the CMS experiment, the reconstruction of vertices proceeds as follows~\cite{bib:CMS:tracking_8TeV}:
+First, a track selection is perfomered which depends on the number of hits in the tracker, on the significance of the transverse impact parameters, and the normalised $\chi^2$ of the track fit.
+All selected tracks are afterwards clustered to several vertices based on their point of closest approach in $z$-direction to the beam spot.
+The clustering first identifies candidate vertices using a so-called deterministic annealing (DA) algorithm~\cite{bib:VertexReconstruction_DA}.
+Subsequently, the candidate vertices are evaluated with the adaptive vertex fitter~\cite{bib:VertexReconstruction_AVF}, which estimates the location of the vertices as well as performance parameters of the fit.
+For each tracks is, a weight is assigned that is close to one in case for a good compatibility and close to zero for a bad compatibiltiy with the vertex.
+The track with the largest sum of all squared track transverse momenta is referred to as the primary vertex. 
+All other vertices during a bunch-crossing are so-called pileup interactions.
+
+Further quality criteria of the primary vertex can be required.
+For this purpose, the ``number of degrees of freedom'' of the primary vertex is introduced: 
+\begin{equation}
+n_{\text{dof}} = -3 + 2 \sum_{\text{tracks}} w_i.
+\end{equation}
+The requirement of a well reconstructed primary vertex is  $n_{\text{dof}}>4$.
+Furthermore, the vertex is required to be within 24\cm in $z$- and 2\cm in $r$-direction.
+
 \subsection{Reconstruction of jets} 
 \label{sec:JetReconstruction}
 In Section~\ref{sec:PFalgorithm}, the reconstruction of particle-flow neutral and charged hadrons was already introduced.
@@ -441,14 +461,30 @@ It removes reconstructed charged particles that do not originate from the primar
 
 In this thesis, all jets are subject to charged hadron subtraction.
 
-
 \subsection{Reconstruction of photons}
-The following description of the photon reconstruction is based on~\cite{bib:CMS:PhotonIdentification_8TeV}.
+The following description of the photon reconstruction is based on~\cite{bib:CMS:PhotonIdentification_8TeV}, where also a more detailed explanation of the photon reconstruction algorithms can be found.
+
 Photons are reconstucted from energy deposits in the ECAL.
 The clustering algorithms of the ECAL energy deposits do not differentiate between electrons and photons.
-Thus they are the same as used for electron identification (see Section~\ref{subsec:ElectronReconstruction}).
-The clustering collects energy from radiating electrons as well as converted photons and proceeds as follows:
+Thus, they are the same as used for electron identification (Section~\ref{subsec:ElectronReconstruction}).
+So-called ``superclusters'' are formed from a ``seed crystal'' which has an energy deposit greater than all of its neighbouring crystals and above a certain threshold.
+In the barrel region a so-called ``hybrid'' algorithm is used which proceeds by adding in $\phi$ direction fixed arrays of $5 \times 1$ crystals in $\eta \times \phi$ if their energy deposists are larger than a certain minimal energy.
+In the endcap region, the so-called ``multi $5 \times 5$'' clustering algorithm is used.
+It proceeds by adding fixed arrays of $5 \times 5$ crystals if their energy exceeds a certain threshold.
+These clustering procedures collect energy from radiating electrons as well as converted photons.
 
+After the clustering the measured energy in a supercluster is subject to an energy correction procedure~\cite{bib:CMS:PhotonIdentification_8TeV}.
+The energy estimate is finally based on the variable $R_9$.
+It is the ratio of the energy deposit within a $3\times 3$ array of crystals around the seed crystal divided by the total energy in the supercluster.
+This variable nicely discriminates between converted and unconverted photons as can be seen in Fig.~\ref{fig:PhotonR9}.
+\begin{figure}[!t]
+  \centering
+      \includegraphics[width=0.50\textwidth]{figures/experiment/ObjectReconstruction/convUnconvR9Linear}
+      \caption{Normalised distribution of the $R_9$ variable for converted and unconverted (or late converted) photons. Taken from~\cite{bib:CMS:PhotonIdentification_8TeV}}  
+  \label{fig:PhotonR9}
+\end{figure}
+The energy spread is wider for converted photons than for unconverted photons.
+Thus, the energy is estimated as the sum of energy deposits in the superclusters for converted photons ($R_9<0.94$ in the barrel and $R_9<0.94$ in the endcap region) and as the sum of energy deposits in the $5\times5$ crystal matrix for the unconverted photons.
 
 
 \subsection{Reconstruction of muons}
@@ -577,7 +613,7 @@ Additionally, events are rejected if there are more showers than partons in the 
 
 The formation of colour neutral particles, called hadronisation, and the subsequent decay of unstable particles is simulated with \pythia for all samples used in this thesis.
 A visualisation of the various steps performed for the generation of events is shown in Fig.~\ref{fig:MCsimulation}. 
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering
       \includegraphics[width=0.60\textwidth]{figures/experiment/Simulation/MCGeneration}
   \caption{Visualisation of the various steps performed in the simulation of events. Taken from~\cite{bib:Kristin_Thesis}.}  

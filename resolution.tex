@@ -269,7 +269,7 @@ The following variables are used (see~\cite{CMS-PAS-EGM-10-006} for further expl
                                 background which is typically spatially broader.  
  \item \textbf{Tower-based HCAL isolation}: The isolation criterion requires the energy deposited in all HCAL towers around the photon in cone of $R=0.4$ to be small compared to the 
                                             photon's energy. 
- \item \textbf{Hollow cone track isolation}: Requires the absence of high-energetic tracks around the photon on a cone of $R=0.4$.
+ \item \textbf{Hollow cone track isolation}: Requires the absence of high-energetic tracks around the photon on a cone of $R=0.4$. Tracks in an inner cone of $R=0.04$ and an $\eta$-slice of $\eta=0.015$ are not included in order to avoid a misidentification of converted photons.
  \item \textbf{Pixel seed veto}: In order to reduce the background from electrons and positrons further, the absence of a pixel-seed in the pixel tracker along the photon trajectory is required.
 \end{itemize}
 
@@ -517,8 +517,11 @@ For a fixed \ptgamma, the \pt of the first jet gets smaller for larger \ptsecond
 This effect is directly opposite for events with a second jet in the photon hemisphere, where the first jet \pt gets larger for larger \ptsecondjet and thus a positive correlation between \ptfirstjet and \ptsecondjet. 
 In principle, the effect should thus cancel out, but since the topology of a second jet in the leading jet hemisphere is much more frequent, a residual upward trend in the resolution vs. $\alpha$ is conserved. 
 
-The second source of the accumulation of high \ptfirstjet events in low $\alpha$~bins arises from the alpha definition $\alpha = \ptsecondjet/\ptgamma$ and the non-zero width of the \ptgamma bins. 
-Because of the inclusion of \ptgamma in $\alpha$ with $\alpha \propto 1/\ptgamma$, the high photon \pt events accumulate in the low alpha regions. 
+FIXME: The second source of the accumulation of high \ptfirstjet events in low $\alpha$~bins arises from the requirement of $\ptsecondjet>10\gev$.
+This selection requirement induces threshold effects for low \ptgamma~bins ($\ptgamma\lesssim 150\gev$) since the tighter $\alpha$~requirements can only be fulfilled for higher transverse momenta of the photons in the corresponding \ptgamma-bin.
+Thus, high photon \pt events accumulate in the low alpha regions. 
+%the alpha definition $\alpha = \ptsecondjet/\ptgamma$ and the non-zero width of the \ptgamma bins. 
+%Because of the inclusion of \ptgamma in $\alpha$ with $\alpha \propto 1/\ptgamma$, the high photon \pt events accumulate in the low alpha regions. 
 As the selected events are almost balanced, a high \ptgamma is associated with a high jet \pt, thus also the high jet \pt events accumulate in the low alpha bins, leading to  an upward trend in the resolution vs. $\alpha$. \\
 
 
@@ -612,7 +615,7 @@ It can be seen from Fig.~\ref{res:fig:QCDuncertainty} that the jet transverse-mo
   \label{res:fig:QCDuncertainty}
 \end{figure}
 
-The observed difference in the resolution measurement of the two approaches is taken as a systematic uncertainty on the measured resolution in data and propagated to the final data-to-simulation ratio.
+FIXME: The observed difference in the resolution measurement of the two approaches is taken as a systematic uncertainty on the measured resolution in data and propagated to the final data-to-simulation ratio which are assessed in different $\etajet$ regions.
 %The impact on the data-to-simulation ratio is estimated by adding the QCD-multijet sample on top of the simulated \GAMJET sample and redoing the evaluation of the scale factors.
 The resulting uncertainties vary between $2.0-2.5\%$ for the different $|\etafirstjet|$ regions (cf. Table~\ref{res:tab:Uncertainties}).
 
