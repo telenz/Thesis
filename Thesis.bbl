@@ -183,8 +183,21 @@ J.~Nielsen, ``{Fundamentals of LHC Experiments}'', in {\em {Proceedings,
 \newblock
 %%CITATION = ARXIV:1106.2516;%%.
 
+\bibitem{bib:VertexReconstruction_DA}
+K.~Rose, ``Deterministic Annealing for Clustering, Compression, Classification,
+  Regression, and Related Optimization Problems'', in {\em Proceedings of the
+  IEEE}, pp.~2210--2239.
+\newblock 1998.
+
+\bibitem{bib:VertexReconstruction_AVF}
+R.~Fruhwirth, W.~Waltenberger, and P.~Vanlaer, ``{Adaptive vertex fitting}'',
+  {\em J. Phys.} {\bf G34} (2007) N343.
+\href{http://dx.doi.org/10.1088/0954-3899/34/12/N01}{{\tt
+  doi:10.1088/0954-3899/34/12/N01}}.
+%%CITATION = JPAGA,G34,N343;%%.
+
 \bibitem{bib:TrackAlgorithm_1989}
-P.~Billoir, ``{Progressive track recognition with a Kalman like fitting
+P.~Billoir, ``{Progressive track recognition with a Kalman-like fitting
   procedure}'', {\em Comput. Phys. Commun.} {\bf 57} (1989) 390--394.
 \href{http://dx.doi.org/10.1016/0010-4655(89)90249-X}{{\tt
   doi:10.1016/0010-4655(89)90249-X}}.
@@ -212,27 +225,6 @@ R.~Fruhwirth, ``{Application of Kalman filtering to track and vertex
 \href{http://dx.doi.org/10.1016/0168-9002(87)90887-4}{{\tt
   doi:10.1016/0168-9002(87)90887-4}}.
 %%CITATION = NUIMA,A262,444;%%.
-
-\bibitem{bib:VertexReconstruction_DA}
-K.~Rose, ``Deterministic Annealing for Clustering, Compression, Classification,
-  Regression, and Related Optimization Problems'', in {\em Proceedings of the
-  IEEE}, pp.~2210--2239.
-\newblock 1998.
-
-\bibitem{bib:VertexReconstruction_AVF}
-R.~Fruhwirth, W.~Waltenberger, and P.~Vanlaer, ``{Adaptive vertex fitting}'',
-  {\em J. Phys.} {\bf G34} (2007) N343.
-\href{http://dx.doi.org/10.1088/0954-3899/34/12/N01}{{\tt
-  doi:10.1088/0954-3899/34/12/N01}}.
-%%CITATION = JPAGA,G34,N343;%%.
-
-\bibitem{bib:JetClustering_2008}
-M.~Cacciari, G.~P. Salam, and G.~Soyez, ``{The anti-$k_t$ jet clustering
-  algorithm}'', {\em JHEP} {\bf 04} (2008) 063,
-  \href{http://www.arXiv.org/abs/0802.1189}{{\tt arXiv:0802.1189}}.
-\href{http://dx.doi.org/10.1088/1126-6708/2008/04/063}{{\tt
-  doi:10.1088/1126-6708/2008/04/063}}.
-%%CITATION = ARXIV:0802.1189;%%.
 
 \bibitem{bib:Cambridge_1997}
 Y.~L. Dokshitzer, G.~D. Leder, S.~Moretti{ et~al.}, ``{Better jet clustering
@@ -267,6 +259,14 @@ S.~D. Ellis and D.~E. Soper, ``{Successive combination jet algorithm for hadron
 \href{http://dx.doi.org/10.1103/PhysRevD.48.3160}{{\tt
   doi:10.1103/PhysRevD.48.3160}}.
 %%CITATION = HEP-PH/9305266;%%.
+
+\bibitem{bib:JetClustering_2008}
+M.~Cacciari, G.~P. Salam, and G.~Soyez, ``{The anti-$k_t$ jet clustering
+  algorithm}'', {\em JHEP} {\bf 04} (2008) 063,
+  \href{http://www.arXiv.org/abs/0802.1189}{{\tt arXiv:0802.1189}}.
+\href{http://dx.doi.org/10.1088/1126-6708/2008/04/063}{{\tt
+  doi:10.1088/1126-6708/2008/04/063}}.
+%%CITATION = ARXIV:0802.1189;%%.
 
 \bibitem{bib:Kristin_Thesis}
 K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the

@@ -6,8 +6,8 @@
 The Large Hadron Collider (LHC)~\cite{bib:LHC_machine_2008,bib:LHC_2004} is a particle accelerator installed in the former LEP~\cite{bib:LEP_design_1984} tunnel at CERN\footnote{European Organisation for Nuclear Research}.
 It is 26.7\km in circumference and consists of two separate rings, which are, in periods of operation, inhabited by two counter-circulating beams.
 At the interaction points of the two beams, either proton-proton collisions or heavy ion collisions take place.
-In this thesis, only $pp$-collision data from the year 2012 is analysed.
-Thus, all machine values cited in the following chapters and paragraphs refer to the setup for $pp$-collisions in 2012 if not stated otherwise.
+In this thesis, only \pp-collision data from the year 2012 is analysed.
+Thus, all machine values cited in the following chapters and paragraphs refer to the setup for $pp$~collisions in 2012 if not stated otherwise.
 
 The beams are separated into bunches which rotate with a bunch spacing of 50\ns corresponding to a collision frequency of 20\mhz.
 Before the bunches are actually filled into the LHC ring they are pre-accelerated in other accelerators, which are in the order they are actually passed by the protons: Linac2, Proton  Synchrotron Booster (PSB), Proton Synchrotron (PS), Super Proton Synchrotron (SPS).
@@ -38,14 +38,17 @@ the spread in the transverse plane of the bunches $\sigma_x$ and $\sigma_y$, and
 \mathcal{L} = \frac{f n_1 n_2 }{4 \pi \sigma_x \sigma_y} \cdot F.
 \end{equation}
 In 2012, the peak luminosity was $7.7 \cdot 10^{33} \frac{1}{\text{cm}^2\,\text{s}}$.
-The total integrated luminosity of $pp$-collisions over time recorded at the CMS experiment is shown in Fig.~\ref{fig:Lumi}.
+The total integrated luminosity of $pp$~collisions over time recorded at the CMS experiment is shown in Fig.~\ref{fig:Lumi}.
 \begin{figure}[!b]
   \centering
       \includegraphics[width=0.57\textwidth]{figures/experiment/LHC/int_lumi_per_day_cumulative_pp_2012.pdf}
   \caption{Integrated luminosity delivered by LHC (blue) and recorded by CMS (orange) in the year 2012. Taken from~\cite{bib:LumiWiki}.}  
   \label{fig:Lumi}
 \end{figure}
-
+Events recorded at the CMS experiment are grouped together within ``luminosity blocks''.
+They refer to short intervals of data taking ($\sim$2-3\,min) in which the instantaneous luminosity is stable.
+In addition, luminosity blocks are comprised to so-called ``runs''.
+They correspond to periods of data taking over which the overall conditions remain almost stable.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -179,7 +182,7 @@ These numbers lead to an energy resolution of around 0.4\% for an electron with 
 \section{The hadronic calorimeter}
 The hadronic calorimeter (HCAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_HCAL} of the CMS detector is splitted into four different detector modules: the hadron barrel (HB), the hadron outer (HO), the hadron endcap (HE) and the hadron forward (HF) calorimeters.
 A schematic sketch is depicted in Fig.~\ref{fig:HCAL}.
-\begin{figure}[!ht]
+\begin{figure}[!b]
   \centering
       \includegraphics[width=0.65\textwidth]{figures/experiment/CMS/fig_HCALdiagram_smaller_size.png}
   \caption{A quarter section of the HCAL in a transverse view. Taken from~\cite{bib:CMS:HCAL_Performance_2009}.}  
@@ -253,7 +256,7 @@ On HLT level, the decision time amounts to 50\ms and a reduction from 100\khz to
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \chapter{Event reconstruction and particle identification}
-A crucial ingredient of data analysis at the CMS experiment is the translation of the energy measurements in the various sub-detector components into physical objects, like muons, electrons, etc..
+A crucial ingredient of data analysis at the CMS experiment is the translation of the signal measurements in the various sub-detector components into physical objects, like muons, electrons, etc..
 For this translation, \ie for particle identification, information from all detector components is used.
 This is known as the particle-flow event reconstruction algorithm~\cite{CMS-PAS-PFT-09-001}.
 In Fig.~\ref{fig:CMSslice}, a slice through the CMS detector is shown with the signatures of different particles indicated as coloured lines.
@@ -269,18 +272,20 @@ In the next section an introduction to this algorithm is given, followed by the 
 
 \section{The particle-flow algorithm}
 \label{sec:PFalgorithm}
-The particle-flow (PF) event description~\cite{CMS-PAS-PFT-09-001} aims at optimising particle identification by the usage of all sub-detector components of the CMS detector.
+The particle-flow (PF) event description~\cite{CMS-PAS-PFT-09-001} aims at optimising particle identification and reconstruction by the usage of all sub-detector components of the CMS detector.
 There are three main building bricks used for global event description: reconstructed charged-particle tracks, calorimeter clusters, and muon tracks.
-The main requirements for these building bricks is a high reconstruction efficiency as well as a small fake rate.
+The main requirements for these building bricks are a high reconstruction efficiency and a small fake rate.
 Therefore, a special emphasis was put on developing a very efficient tracking algorithm (see Section~\ref{sec:ObjectReconstruction}) and a well performing calorimeter clustering algorithm~\cite{CMS-PAS-PFT-09-001}. 
 
 The particle-flow algorithm proceeds as follows for each event (the description is based on~\cite{CMS-PAS-PFT-09-001}):
 \begin{enumerate}
-\item For each pair of detected building bricks, a distance in the $\eta-\phi$ plane is calculated in order to quantify the quality of their link (whether the two building bricks stem from the same particle). 
-\item ``Blocks'' are produced from the building bricks that are linked together (with a typical number of one, two or three building bricks contained in a block).
+\item For each pair of detected building bricks, a ``link distance'' is calculated in order to quantify the quality of their link, \ie whether the two building bricks stem from the same particle. 
+\item ``Blocks'' are produced from the building bricks that are linked together (with a typical number of one, two or three building bricks contained in a block) using different algorithms for different sets of building bricks (see~\cite{CMS-PAS-PFT-09-001} for detailed information about these algorithms).
+      Blocks comprise either charged-particle tracks and calorimeter clusters, or several calorimeter clusters, or a charged-particle track in the tracker and a muon track in the muon system.
+      The latter is called a global muon.
 \item For each block the following steps are performed:
 \begin{enumerate}
-\item Each global muon (hits detected in the tracker as well as in the muon system) where the \pt measured in both sub-detectors is compatible with the  \pt  measurement in the tracker is defined as a particle-flow muon and the track in both sub-detectors is removed from the block.
+\item Each global muon where the \pt measured in both sub-detectors is compatible with the  \pt  measurement in the tracker is defined as a particle-flow muon and the track in both sub-detectors is removed from the block.
 \item Next, electrons are reconstructed and identified using tracker hits and ECAL clusters. 
       For an identified particle-flow electron, the corresponding tracker hits and the ECAL clusters (including energy deposits from Bremsstrahlung photons) are removed from the block. 
 \item Tighter track quality criteria are applied.
@@ -291,97 +296,96 @@ The particle-flow algorithm proceeds as follows for each event (the description 
 \item Finally, the remaining ECAL and HCAL clusters (which are all not linked to any other building block) are identified as particle-flow photons or particle-flow neutral hadrons, respectively.
 \end{enumerate}
 \end{enumerate}
-These particle-flow objects are used to identify further objects in the event, \eg the missing transverse-energy or decay products of a tau lepton.
+For the final identification of particles and other objects further reconstruction criteria are applied (see Section~\ref{sec:ObjectReconstruction}).
 
 \section{Object reconstruction}
 \label{sec:ObjectReconstruction}
 In this section, an overview of the required criteria for the identification of particles and other physics objects is given.
 
-\subsection{Reconstruction of tracks}
-\label{subsec:TrackReconstruction}
-The reconstruction of tracks aims at linking several hits in the tracking system to one reconstructed track that matches the original trajectory of the particle with a high probability.
-With the track reconstruction, an estimate of the particle's momentum as well as its position can be achieved.
-Track reconstruction is challenging because the large number of hits, especially in the layers close to the interaction vertex, leads to a high combinatorial complexity. 
-In the following, an overview of the tracking algorithm used at CMS is given.
-It is based on~\cite{bib:CMS:tracking_8TeV} and the reader is referred to this reference for more information on the reconstruction of tracks at CMS.\\
-
-The tracking software used at CMS is usually referred to as the Combinatorial Track Finder (CTF).
-It it based on the so-called combinatorial Kalman filter~\cite{bib:TrackAlgorithm_1989,bib:TrackAlgorithm_1990,bib:TrackAlgorithm_1997} (which in turn is based on the Kalman filter~\cite{bib:KalmanFilter_1987}), which is mathematically equivalent to a global least square minimisation for linear models with Gaussian noise.
-
-The basic idea of the tracking algorithm at CMS is to avoid applying the combinatorial Kalman filter on all hits in one step by an iterative procedure (called iterative tracking).
-A reduction of complexity can be achieved by first reconstructing tracks that are easy to identify because of \eg a high \pt. 
-These tracks are removed afterwards and the remaining tracker hits are subject to further reconstruction iterations.
-%In the following, the various iteration steps are described.
-%These were in place in the year 2011.
-%Adjustment in the algorithm were applied due to higher pileup conditions in the year 2012.
-%However, the principle structure of the tracking algorithm remained.
-The following iterations are performed:
-\begin{itemize}
-\item Iteration 0: Tracks near to the $pp$-interaction point that have three pixel hits and a $\pt>0.8\gev$ are reconstructed.
-\item Iteration 1: Tracks with only two pixel hits and $\pt>0.8\gev$ are reconstructed. 
-\item Iteration 2: Low \pt tracks from the $pp$-interaction point are reconstructed.
-\item Iteration 3-5: Reconstruction of tracks that are not originating from the primary vertex or that were not found by previous iterations.
-\end{itemize}
-Within these iterations, the reconstruction is subdivided into four different steps:
-\begin{itemize}
-\item Seed generation: Only 2-3 hits are used to define track candidates.
-\item Extrapolation: Based on expected flight path, additional hits are assigned to the candidate track using a combinatorial Kalman filter.
-\item Parameter estimates: With the usage of the Kalman filter and a smoother, the trajectory parameters are determined.
-\item Setting of quality flags: Quality flags are assigned to all tracks and tracks that fail certain quality criteria are discarded.
-\end{itemize}
-The configuration of the first and the fourth step differs across the different iterations.  
-
-A special task when reconstruction tracks consists of the suppression of fake tracks, \ie tracks that are not associated with a charged particle.
-Therefore, the requirement of fulfilling certain quality criteria (fourth step) is crucial to substantially reduce the contamination of fake tracks.
- For this purpose, requirements on the following variables are imposed:
-\begin{itemize}
-\item A minimum number of layers in which the track has an associated hit.
-\item A minimum number of layers in which the track has an associated 3-D hit.
-\item A maximum number of layers in which the track has no associated hit.
-\item $\chi^2/\text{ndof} < \alpha_0 N_{\text{layers}}$.
-\item $|d_0^{\text{BS}}|/\delta d_0 < \left( \alpha_3 N_{\text{layers}} \right)^{\beta}$.
-\item $|z_0^{\text{PV}}|/\delta z_0 < \left( \alpha_4 N_{\text{layers}} \right)^{\beta}$.
-\item $|d_0^{\text{BS}}|/\sigma_{d_0} \left(\pt\right) < \left( \alpha_1 N_{\text{layers}} \right)^{\beta}$.
-\item $|z_0^{\text{PV}}|/\sigma_{z_0} \left(\pt,\eta\right) < \left( \alpha_2 N_{\text{layers}} \right)^{\beta}$.
-\end{itemize}
-The variable $d_0^{\text{BS}}$ is the distance of the track to the centre of the beam-spot in the transverse plane to the beam-line and $z_0^{\text{PV}}$ is the distance along the beam-line to the closest pixel.
-The variables $\delta d_0$ and $\delta z_0$ are the uncertainties on the distance (impact) parameters and $\sigma$ is the standard deviation corresponding to the length of the beam-spot in z-direction.
-The values of the parameters $\alpha$ and $\beta$ vary across iterations.
-
 \subsection{Reconstruction of primary vertices} 
 \label{sec:VertexReconstruction}
-The reconstruction of primary vertices is important in order to determine the location of the interaction point and to get an estimate of the corresponding uncertainty.
+The reconstruction of primary vertices (PVs) is important in order to determine the location of the interaction point and to get an estimate of the corresponding uncertainty.
 At the CMS experiment, the reconstruction of vertices proceeds as follows~\cite{bib:CMS:tracking_8TeV}:
-First, a track selection is perfomered which depends on the number of hits in the tracker, on the significance of the transverse impact parameters, and the normalised $\chi^2$ of the track fit.
+First, a track selection is performed which depends on the number of hits in the tracker, on the significance of the transverse distance to the beam spot ($|d_0^{\text{BS}}|/\delta d_0$), and the normalised $\chi^2$ of the track fit (see the subsequent Section~\ref{subsec:TrackReconstruction} for more information on the track reconstruction algorithms).
 All selected tracks are afterwards clustered to several vertices based on their point of closest approach in $z$-direction to the beam spot.
 The clustering first identifies candidate vertices using a so-called deterministic annealing (DA) algorithm~\cite{bib:VertexReconstruction_DA}.
 Subsequently, the candidate vertices are evaluated with the adaptive vertex fitter~\cite{bib:VertexReconstruction_AVF}, which estimates the location of the vertices as well as performance parameters of the fit.
-For each tracks is, a weight is assigned that is close to one in case for a good compatibility and close to zero for a bad compatibiltiy with the vertex.
-The track with the largest sum of all squared track transverse momenta is referred to as the primary vertex. 
+A weight is assigned to each track that is close to one in case for a good compatibility and close to zero for a bad compatibility with the vertex.
+The track with the largest sum of all squared track transverse momenta, $\sum \pt^2$, is referred to as the primary vertex. 
 All other vertices during a bunch-crossing are so-called pileup interactions.
 
-Further quality criteria of the primary vertex can be required.
+Further quality criteria of the primary vertex are required in the search for highly ionising, short tracks (Part~\ref{part:analysis}) and the measurement of the jet transverse-momentum resolution (Part~\ref{part:resolution}).
 For this purpose, the ``number of degrees of freedom'' of the primary vertex is introduced: 
 \begin{equation}
 n_{\text{dof}} = -3 + 2 \sum_{\text{tracks}} w_i.
 \end{equation}
 The requirement of a well reconstructed primary vertex is  $n_{\text{dof}}>4$.
-Furthermore, the vertex is required to be within 24\cm in $z$- and 2\cm in $r$-direction.
+Furthermore, the vertex is required to be within 24\cm in $z$- and 2\cm in $r$-direction with respect to the nominal interaction point.
+
+
+\subsection{Reconstruction of tracks}
+\label{subsec:TrackReconstruction}
+The reconstruction of tracks aims at linking several hits in the tracking system to one reconstructed track that matches the original trajectory of the particle with a high probability.
+With the track reconstruction, an estimate of the particle momentum as well as its position can be achieved.
+Track reconstruction is challenging because the large number of hits\footnote{At design luminosity around 1000 charged particles are expected to traverse the tracker in each bunch-crossing~\cite{bib:CMS:tracking_8TeV}}, especially in the layers close to the interaction vertex, leads to a high combinatorial complexity. 
+In the following, an overview of the tracking algorithm used at CMS is given.
+It is based on~\cite{bib:CMS:tracking_8TeV} and the reader is referred to this reference for more information on the reconstruction of tracks at CMS.\\
+
+The tracking software used at CMS is usually referred to as the Combinatorial Track Finder (CTF).
+It it based on the so-called combinatorial Kalman filter~\cite{bib:TrackAlgorithm_1989,bib:TrackAlgorithm_1990,bib:TrackAlgorithm_1997} which in turn is based on the Kalman filter~\cite{bib:KalmanFilter_1987}.
+The Kalman filter is an algorithm that allows for the estimation of parameters of interest based on a set of observations that are subject to noise or other inaccuracies.
+It is mathematically equivalent to a global least square minimisation for linear models with Gaussian noise.
+
+The basic idea of the tracking algorithm at CMS is to avoid applying the combinatorial Kalman filter on all hits in one step by using an iterative procedure (called iterative tracking).
+A reduction of complexity can be achieved by first reconstructing tracks that are easy to identify because of \eg a relatively high \pt. 
+These tracks are removed afterwards and the remaining tracker hits are subject to further reconstruction iterations.
+The following iterations are performed (these steps refer to the setting from May to August in 2011 but are in their basic structure retained in the year 2012):
+\begin{itemize}
+\item Iteration 0: Tracks near the \pp-interaction point that have three pixel hits and a $\pt>0.8\gev$ are reconstructed.
+\item Iteration 1: Tracks with only two pixel hits and $\pt>0.8\gev$ are reconstructed. 
+\item Iteration 2: Low \pt tracks from the \pp-interaction point are reconstructed.
+\item Iteration 3-5: Reconstruction of tracks that are not originating from the primary vertex or that were not found by previous iterations.
+\end{itemize}
+Within these iterations, the reconstruction is subdivided into four different steps:
+\begin{itemize}
+\item Seed generation: Only 2-3 hits are used to define track candidates.
+\item Extrapolation: Based on the expected flight path, additional hits are assigned to the candidate track using a combinatorial Kalman filter.
+\item Track fitting: With the usage of the Kalman filter and a smoother, the trajectory is fitted in order to estimate the track parameters.
+\item Setting of quality flags: Quality flags are assigned to all tracks and tracks that fail certain quality criteria are discarded.\\
+\end{itemize}
+%The configuration of the first and the fourth step differs across the different iterations.  
+
+A special task when reconstruction tracks consists of the suppression of fake tracks, \ie tracks that are not associated with a charged particle.
+Therefore, the requirement of fulfilling certain quality criteria (fourth step) is crucial to substantially reduce the contamination of fake tracks.
+ For this purpose, requirements on the following variables are imposed (the values of the parameters $\alpha$ and $\beta$ vary across iterations):
+\begin{itemize}
+\item A minimum number of layers in which the track has an associated hit.
+\item A minimum number of layers in which the track has an associated 3D hit\footnote{A 3D hit refers to a measurement that provides 3D position information, such as a pixel hit or a strip hit in a stereo module.}.
+\item A maximum number of layers in which the track has no associated hit.
+\item A high quality of the trajectory fit: $\chi^2/\text{ndof} < \alpha_0 N_{\text{layers}}$.
+\item A low transverse impact parameter significance:  $|d_0^{\text{BS}}|/\delta d_0 < \left( \alpha_3 N_{\text{layers}} \right)^{\beta}$,\\
+\hspace*{231pt}                                        $|d_0^{\text{BS}}|/\sigma_{d_0} \left(\pt\right) < \left( \alpha_1 N_{\text{layers}} \right)^{\beta}$.
+\item A low longitudinal impact parameter significance: $|z_0^{\text{PV}}|/\delta z_0 < \left( \alpha_4 N_{\text{layers}} \right)^{\beta}$\\
+\hspace*{240pt}                                         $|z_0^{\text{PV}}|/\sigma_{z_0} \left(\pt,\eta\right) < \left( \alpha_2 N_{\text{layers}} \right)^{\beta}$.
+\end{itemize}
+The variable $d_0^{\text{BS}}$ is the distance of the track to the centre of the beam spot in the transverse plane to the beam line and $z_0^{\text{PV}}$ is the distance along the beam line to the closest pixel.
+The variables $\delta d_0$ and $\delta z_0$ are the uncertainties on the distance (impact) parameters and $\sigma$ is the standard deviation corresponding to the length of the beam spot in z-direction.
+
+
 
 \subsection{Reconstruction of jets} 
 \label{sec:JetReconstruction}
 In Section~\ref{sec:PFalgorithm}, the reconstruction of particle-flow neutral and charged hadrons was already introduced.
-Charged and neutral hadrons are usually formed due to the hadronisation process of final state quarks and gluons.
+Charged and neutral hadrons are usually formed in the hadronisation process of final state quarks and gluons.
 Since the interest at particle colliders concerns the sum of all particles arising from one final state gluon or quark, which is referred to as a jet, the reconstruction of jets is a very important task at particle colliders.
 Foremost, the clustering of the particle-flow candidates to a jet is a crucial ingredient for the reconstruction of jets.
 Furthermore, the calibration of the measured jet transverse momentum as well as the subtraction of energy due to pileup interactions is important to ensure a good quality \pt measurement of jets at CMS.
 All three subjects are explained in detail in the following sections.
 \subsubsection*{Clustering of jets}
-As already noted, jets are formed by quarks or gluons in the final state that hadronise due to colour confinement. 
-The reconstruction of jets is therefore subject to a clustering algorithm that clusters reconstructed particle-flow objects into a jet.
-At CMS, the so-called \antikt cluster algorithm~\cite{bib:JetClustering_2008} is used.
-This cluster algorithm belongs to the class of sequential recombination jet algorithms.
-
+%As already noted, jets are formed by quarks or gluons in the final state that hadronise due to colour confinement. 
+%The reconstruction of jets is therefore subject to a clustering algorithm that clusters reconstructed particle-flow objects into a jet.
+%At CMS, the so-called \antikt cluster algorithm~\cite{bib:JetClustering_2008} is used.
+The clustering algorithm used at the CMS experiment belongs to the class of sequential recombination jet algorithms.
 In sequential recombination algorithms, a distance measure between two particles - or more generally objects - is used to cluster them into jet cones.
 For this purposes, two quantities are defined
 \begin{equation}
@@ -409,7 +413,7 @@ It begins with clustering high momentum particles and leads to very regular shap
 The behaviour of the three different clustering algorithm is illustrated in Fig.~\ref{fig:ClusteringAlgorithms}. 
 One single parton-level event was subject to the three different jet clustering algorithms.
 Roughly 1000 soft particles are added to the event in order to test the adaptiveness of the jet algorithms to soft particles.
-It can be seen, that the Cambridge/Aachen and the \kt algorithm are both much more influenced by the addition of soft particles than the \antikt method.
+It can be seen, that the Cambridge/Aachen and the \kt algorithm are both more irregular in shape, while jets clustered with the \antikt method result in circular shapes.
 \begin{figure}[!t]
   \centering
       \includegraphics[width=0.32\textwidth]{figures/experiment/ObjectReconstruction/herwig-parton-level-ev-cam.pdf}
@@ -418,6 +422,7 @@ It can be seen, that the Cambridge/Aachen and the \kt algorithm are both much mo
   \caption{Parton-level event in the $\eta - \phi$ plane with $\sim 1000$ soft particles added. Three different algorithms are used to cluster the particles into jet cones (coloured areas): the Cambridge/Aachen algorithm (left), the \kt algorithm (middle), and the \antikt algorithm (right). Taken from~\cite{bib:JetClustering_2008}.}  
   \label{fig:ClusteringAlgorithms}
 \end{figure}
+Furthermore, jets clustered with sequential recombination jet algorithms are infrared and collinear safe.
 
 Throughout this thesis jets clustered with the \antikt algorithm with a radius parameter of $R=0.5$ are used.
 
@@ -436,11 +441,11 @@ An overview of the applied correction factors in simulation and data is shown in
 \end{figure}
 
 In the following, a more detailed description of the determination of the factorised calibration factors will be given.
-For a extensive description of the calibration approach, the reader is referred to~\cite{bib:CMS:JERCPaper_2011}
+For an extensive description of the calibration approach, the reader is referred to~\cite{bib:CMS:JERCPaper_2011}
 \begin{description}
-\item \textbf{L1 pileup offset corrections:} In order to eliminate a mismeasurement of the jet \pt because of pileup interactions, correction factors are determined that are supposed to restore the true jet \pt. This correction is determined in bins of jet \pt, jet $\eta$, the effective jet area $A$, and the event energy density $\rho$. The correction factors are determined with a simulated QCD-multijet sample and are applied to measured data as well as simulated events.
-\item \textbf{L2 relative + L3 absolute corrections:} These two corrections are devoted to correct the measured jet \pt in order to ensure a uniform response vs. \mbox{$\eta$ (L2)} and \mbox{\pt (L3)}. They are also determined on a simulated QCD-multijet sample and applied on simulation and data.
-\item \textbf{L2L3 residual corrections:} Finally, correction factors are determined in order to remove any residual bias in data. They are estimated in data with the help of QCD-multijet events to ensure a uniform response vs. $\eta$ (L2) and with $\gamma/Z+$ jets events in order to ensure a uniform response vs. \pt (L3).
+\item \textbf{L1 pileup offset corrections:} In order to eliminate a mismeasurement of the jet \pt because of pileup interactions, correction factors ($C_{\mathrm{offset}}$) are determined that are supposed to restore the true jet \pt. This correction is determined in bins of jet \pt, jet $\eta$, the jet area $A$, and the event energy density $\rho$. The correction factors are determined with simulated samples and are applied to measured data as well as simulated events.
+\item \textbf{L2 relative + L3 absolute corrections:} These two corrections are devoted to correct the measured jet \pt in order to ensure a uniform response ($\ptrecojet/\pttruejet$) vs. \mbox{$\eta$ (L2)} ($C_{\mathrm{rel}}$) and \mbox{\pt (L3)} ($C_{\mathrm{abs}}$). They are also determined in simulated samples and applied to simulated and measured events.
+\item \textbf{L2L3 residual corrections:} Finally, correction factors ($C_\mathrm{res}$) are determined in order to remove any residual bias in data. They are estimated in data with the help of QCD-multijet events to ensure a uniform response vs. $\eta$ (L2) and with $\gamma/Z+$ jets events in order to ensure a uniform response vs. \pt (L3).
 These factors are not applied to simulation.\\
 \end{description}
 
@@ -462,13 +467,14 @@ It removes reconstructed charged particles that do not originate from the primar
 In this thesis, all jets are subject to charged hadron subtraction.
 
 \subsection{Reconstruction of photons}
+\label{subsec:PhotonReconstruction}
 The following description of the photon reconstruction is based on~\cite{bib:CMS:PhotonIdentification_8TeV}, where also a more detailed explanation of the photon reconstruction algorithms can be found.
 
-Photons are reconstucted from energy deposits in the ECAL.
+Photons are reconstructed from energy deposits in the ECAL.
 The clustering algorithms of the ECAL energy deposits do not differentiate between electrons and photons.
 Thus, they are the same as used for electron identification (Section~\ref{subsec:ElectronReconstruction}).
 So-called ``superclusters'' are formed from a ``seed crystal'' which has an energy deposit greater than all of its neighbouring crystals and above a certain threshold.
-In the barrel region a so-called ``hybrid'' algorithm is used which proceeds by adding in $\phi$ direction fixed arrays of $5 \times 1$ crystals in $\eta \times \phi$ if their energy deposists are larger than a certain minimal energy.
+In the barrel region a so-called ``hybrid'' algorithm is used which proceeds by adding in $\phi$ direction fixed arrays of $5 \times 1$ crystals in $\eta \times \phi$ if their energy deposits are larger than a certain minimal energy.
 In the endcap region, the so-called ``multi $5 \times 5$'' clustering algorithm is used.
 It proceeds by adding fixed arrays of $5 \times 5$ crystals if their energy exceeds a certain threshold.
 These clustering procedures collect energy from radiating electrons as well as converted photons.
@@ -493,11 +499,16 @@ There are three different muon definitions at CMS~\cite{bib:CMS:muon_recoEff}: g
 They all have in common that they require energy deposits in the muon system.
 The reconstruction of each of the three muon types is explained in the following.
 \begin{description}
-\item \textbf{Standalone muons:} For the reconstruction of standalone muons, all reconstructed segments in the muon system are utilised. Similar to the track reconstruction in the tracking system, Kalman filter techniques~\cite{bib:KalmanFilter_1987} are exploited to reconstruct muon trajectories in the muon chambers.
-A compatibility to the interaction point is imposed to reconstruct only muons produced at the LHC (no cosmic muons).
-Further details about the reconstruction of standalone muons can be found in~\cite{bib:StandaloneMuonReconstruction,bib:CMS:TDR_2006} 
-\item \textbf{Tracker muons:} To reconstruct so-called tracker muons, all tracker tracks with a $\pt>0.5\gev$ and $p>2.5\gev$ are extrapolated to the muon system. If at least one muon segment is matched to a reconstructed track within certain quality criteria, the trajectory is considered as a tracker muon (see~\cite{bib:CMS:muon_recoEff} for more detailed information).
-\item \textbf{Global muons:} For the reconstruction of global muons an outside-in approach is utilised. For each reconstructed standalone muon, the compatibility to the reconstructed tracks in the tracking system is checked. If compatible, a global muon track is reconstructed using Kalman filter techniques. For high-\pt muons, the momentum resolution can be increased compared to the momentum estimated using tracker information only~\cite{bib:CMS:muon_recoEff}.
+\item \textbf{Standalone muons:} For the reconstruction of standalone muons, all reconstructed segments in the muon system are utilised. 
+                                 Similar to the track reconstruction in the tracking system, Kalman filter techniques~\cite{bib:KalmanFilter_1987} are exploited to reconstruct muon trajectories in the muon chambers.
+                                 A compatibility to the interaction point is imposed to reconstruct only muons produced at the LHC (no cosmic muons).
+                                 Further details about the reconstruction of standalone muons can be found in~\cite{bib:StandaloneMuonReconstruction,bib:CMS:TDR_2006} 
+\item \textbf{Tracker muons:} To reconstruct so-called tracker muons, all tracker tracks with a $\pt>0.5\gev$ and $p>2.5\gev$ are extrapolated to the muon system. 
+                              If at least one muon segment is matched to a reconstructed track fulfilling certain quality criteria, the trajectory is considered as a tracker muon (see~\cite{bib:CMS:muon_recoEff} for more detailed information).
+\item \textbf{Global muons:} For the reconstruction of global muons an outside-in approach is utilised. 
+                             For each reconstructed standalone muon, the compatibility to the reconstructed tracks in the tracking system is checked. 
+                             If compatible, a global muon track is reconstructed using Kalman filter techniques. 
+                             For high-\pt muons, the momentum resolution can be increased this way compared to the momentum estimated using tracker information only~\cite{bib:CMS:muon_recoEff}.
 \end{description}
 
 \subsection{Reconstruction of electrons}
@@ -514,12 +525,13 @@ This can change the direction of the electron significantly and lead to a reduce
 Therefore, an optimised track reconstruction for electrons is additionally performed in order to account for direction changes due to the radiation of photons.
 Because the dedicated electron track reconstruction can be very time consuming, the seeding of tracker hits relies already on ECAL information to reduce the number of candidate tracks (ECAL-based seeding).
 
-Therefore, the electron reconstruction proceeds as follows.
-First, ECAL clusters (so-called superclusters) are formed using a ``hybrid'' algorithm in the barrel region and a ``multi-$5\times 5$'' algorithm in the endcaps.
-Due to bremsstrahlung, the energy deposits by electrons are usually spread out over several crystals.
+Therefore, the electron reconstruction proceeds in detail as follows.
+First, ECAL clusters, so-called superclusters, are formed using a ``hybrid'' algorithm in the barrel region and a ``multi-$5\times 5$'' algorithm in the endcaps.
+It is the same clustering used for photons (see Section~\ref{subsec:PhotonReconstruction} where the more information about these algorithms can be found).
+Superclusters are used, since due to bremsstrahlung, the energy deposits by electrons are usually spread out over several crystals.
 Additionally, so-called PF clusters are formed that add all neighbouring crystals to the above mentioned superclusters. 
-Afterwards, the standard track reconstruction is used to reconstruct electron tracks when bremsstrahlung is negligible.
-However, very short reconstructed tracks or tracks with a bad $\chi^2$, are refitted using a so-called Gaussian sum filter (GSF)~\cite{bib:GSF_2003} to account for electrons with high radiative energy losses.
+Afterwards, the standard track reconstruction is performed which is able to reconstruct electron tracks when bremsstrahlung is negligible.
+Very short reconstructed tracks or tracks with a bad $\chi^2$ are refitted using a so-called Gaussian sum filter (GSF)~\cite{bib:GSF_2003} to account for electrons with high radiative energy losses.
 As mentioned above, these tracks use ECAL-based seeding to reduce the number of candidate tracks.  
 To identify these refitted tracks as candidate electron tracks, a multivariate analysis is performed using tracker and ECAL information.
 All ECAL PF clusters tangent to the electron track are added in order to capture the energy of bremsstrahlung photons.
@@ -529,6 +541,8 @@ The association criteria rely on spatial distances between the superclusters and
 \subsection{Reconstruction of taus}
 \label{subsec:TauReconstruction}
 The tau reconstruction at CMS refers to the reconstruction of hadronically decaying taus (a fraction of around 65\% of taus decays hadronically).
+Leptonically decaying taus can be identified through the reconstruction of the muon or the electron in the final state.
+In the following a tau refers therefore to hadronically decaying taus only.
 At CMS, the main algorithm used to identify and reconstruct taus is the so-called hadron plus strip algorithm (HPS)~\cite{bib:CMS:TauReconstruction_8TeV,bib:CMS:TauReconstruction_7TeV}, which is also used in this thesis.
 The description of the tau reconstruction algorithm within this thesis follows~\cite{bib:CMS:TauReconstruction_8TeV}.
 
@@ -537,8 +551,8 @@ First, reconstructed PF particles are combined in a way that they are compatible
 Second, multivariate techniques are used in order to discriminate the candidate taus against decays from gluon or quark jets and from muons and electrons. 
 The HPS algorithm starts from reconstructed jets with a radius parameter of $R=0.5$ and $\pt>14\gev$ and $|\eta|<2.5$.
 
-The successful identification of a tau requires the reconstruction of a neutral pion which is present in most of the hadronic decays.
-The neutral pion decays into two photons with a probability of $\sim 99\%$. 
+The successful identification of a tau requires the reconstruction of a neutral pion.
+A neutral pion is present in most of the hadronic decays and decays into two photons with a probability of $\sim 99\%$. 
 The photons in turn convert into electron pairs with a high probability inside the tracker volume.
 Therefore, photons and electrons are clustered into strips in the $\eta-\phi$ plane in order to identify possible $\pi^0$.
 The initial position of the strip equals the position of the seed electron or photon, \ie the photon or electron with the highest \pt not yet clustered into any strip.
@@ -546,33 +560,40 @@ The next-highest \pt electron/photon within a certain distance ($\eta \times \ph
 Afterwards, the strip position is recalculated and the step is repeated.
 The clustering stops if no more electrons/photons are found.
 
-After the reconstruction of the neutral pion, multiple decay mode hypotheses are tested by combining up to two clustered strips with one or three charged particles.
+After the reconstruction of the neutral pion, multiple decay mode hypotheses are tested by combining up to two clustered strips with one or three charged PF hadrons.
 For all hypotheses, several restrictions on the invariant mass of the hadronically decaying tau are imposed.
-Finally, the hypothesis fulfilling the invariant mass requirement and - in case this happens for more than one hypothesis - with the highest \pt tau is chosen.
+Finally, the hypothesis fulfilling the invariant mass requirement and - in case this happens for more than one hypothesis - the one with the highest \pt tau is chosen.
 
-Furthermore, for all taus in this thesis, the discriminators used for the reduction of jet, electron and muon contamination are required to be less than zero (see~\cite{bib:CMS:TauReconstruction_8TeV} for further details on the discriminators).
+Furthermore, for all taus in this thesis, the discriminators used for the reduction of jet, electron and muon contamination are required to be zero (see~\cite{bib:CMS:TauReconstruction_8TeV} for further details on the discriminators).
 
 Finally, a loose isolation criterion is imposed, which is calculated by the pileup corrected scalar sum of the transverse momentum of all charged particles and photons with a \pt larger than 0.5\gev in a cone of $R=0.5$ around the tau.
 
 \subsection{Reconstruction of missing transverse energy}
 The particle-flow missing transverse energy, PF \met, in an event is defined as the negative vectorial sum of all particle-flow particles' \pt.
-Thus - neglecting momentum mismeasurements - it refers to the transverse momentum of all invisible particles in the event.
+Thus - neglecting momentum mismeasurements - it refers to the transverse momentum of all only weakly interacting particles in the event.
 In order to avoid negative effects from \eg tracker inefficiencies, non-linear calorimeter responses, etc., \met can be measured more precisely by correcting the transverse momentum of all jets contained in an event with the jet energy corrections (see Section~\ref{sec:JetReconstruction}).
 
 For a more detailed explanation of \met as well as for information on the performance of the reconstruction, the reader is referred to~\cite{bib:CMS:METReconstruction}
 
 \section{Event cleaning}
-The two analysis described in this thesis are subject to an event cleaning procedure as recommended by the CMS collaboration~\cite{bib:CMS:EventCleaning}.
+The two analyses described in this thesis are subject to an event cleaning procedure as recommended by the CMS collaboration~\cite{bib:CMS:EventCleaning}.
 It refers to the application of several filters to remove events with detector signals not caused by particles from the hard interaction. 
 In the following, the filters are listed and a short description will be given.
 \begin{description} 
-\item \textbf{HBHE noise filter:} This filter rejects anomalous HCAL noise in the barrel (HB) and in the endcap (HE). The noise in the HCAL is mainly related to the hybrid photodiodes (HPD) and readout boxes (RBX). It rejects events considering pulse shape and hit multiplicity information.
-\item \textbf{CSC beam halo filter:} Particles contained in the beam halo can induce signals in the detector. Therefore, events with a muon moving parallel to the beam are rejected.  
-\item \textbf{HCAL laser event filter:} This filter provides a list of events, where the laser used for the HCAL calibration fired when a bunch crossing occurred. Detector signals from the laser can be misinterpreted as particle signals and, therefore, these events are removed.
-\item \textbf{ECAL dead cell filter:} Events with jets pointing towards a non-working ECAL cell are rejected. This filter relies on information of the surrounding crystals as well as on ``trigger-primitive'' information.
-\item \textbf{EE bad supercrystal filter:} In the ECAL endcap, two supercrystals were not working properly during the data taking period in 2012. Therefore, events where at least one of the two crystals detected unnaturally high energy deposits are removed. 
-\item \textbf{Tracking failure filter:} Sometimes, unnaturally high energy deposits are recorded in the calorimeters without corresponding tracks in the inner tracking system. The reconstruction of tracks can fail, because of too many tracker seeds or because the hard interaction was too far away from the interaction point.
-This filter rejects therefore events, where less than 10\% of the energy in the event was measured by the tracker.  
+\item \textbf{HBHE noise filter:} This filter rejects anomalous HCAL noise in the barrel (HB) and in the endcap (HE). 
+                                  The noise in the HCAL is mainly related to the hybrid photodiodes (HPD) and readout boxes (RBX). 
+                                  It rejects events considering pulse shape information and anomalous high hit multiplicities in an HPD or RBX.
+\item \textbf{CSC beam halo filter:} Particles contained in the beam halo can induce signals in the detector. 
+                                     Therefore, events with a muon moving parallel to the beam are rejected.  
+\item \textbf{HCAL laser event filter:} This filter provides a list of events, where the laser used for the HCAL calibration fired when a bunch crossing occurred. 
+                                        Detector signals from the laser can be misinterpreted as particle signals and, therefore, these events are removed.
+\item \textbf{ECAL dead cell filter:} Events with jets pointing towards a non-working ECAL cell are rejected. 
+                                      This filter relies on information of the surrounding crystals as well as on ``trigger-primitive'' information.
+\item \textbf{EE bad supercrystal filter:} In the ECAL endcap, two supercrystals were not working properly during the data taking period in 2012. 
+                                           Therefore, events where at least one of the two crystals detected unnaturally high energy deposits are removed. 
+\item \textbf{Tracking failure filter:} Sometimes, unnaturally high energy deposits are recorded in the calorimeters without corresponding tracks in the inner tracking system. 
+                                        The reconstruction of tracks can fail, because of too many tracker seeds or because the hard interaction was too far away from the interaction point.
+                                        This filter rejects therefore events, where less than 10\% of the energy in the event was measured by the tracker.  
 \item \textbf{Scraping filter (data only):} When there are at least ten tracks in the event, at least 25\% of them need to be flagged as high-purity tracks as defined in~\cite{bib:CMS:Tracking_2010}.
 \item \textbf{Tracking POG filter:} Events with aborted track reconstruction and/or strip tracker noise are rejected.
 \end{description}
@@ -588,19 +609,19 @@ This filter rejects therefore events, where less than 10\% of the energy in the 
 
 A very important input for physics analyses at particle colliders is the use of simulated collision events.
 They serve as a comparison to measured data and can give an estimation of the expected number of background and signal events for a given selection.
-Furthermore, they are used to study event kinematics for Standard Model and beyond-SM processes.
+Furthermore, they are used to study event kinematics for Standard Model (SM) and beyond-SM processes.
 
 The generation of simulated samples is done with the help of Monte Carlo (MC) methods (see \eg~\cite{bib:MC_Introduction}).
-Monte Carlo techniques are used to randomly sample points according to a specified probability distribution.
+MC techniques are used to randomly sample points according to a specified probability distribution.
 The underlying probability distributions for the event generation are the transition probabilities from the initial into all possible final states.
 
 Besides the simulation of the hard interaction of the event, also the subsequent showering and hadronisation as well as the detector response needs to be simulated.
 In the following sections, a short introduction into the various steps of event simulation is given.
 For more information, the reader is referred to~\cite{bib:Matthias_Thesis}.\\
 
-The first step of the generation of $pp$-collision events consists of the simulation of the hard process, \ie the primary interaction of two partons of the two colliding protons.
+The first step of the generation of \pp-collision events consists of the simulation of the hard process, \ie the primary interaction of two partons of the two colliding protons.
 Which types of partons are involved in the primary interaction is specified by so-called parton distribution functions (PDFs).
-They describe the probability of a parton (up-, down-quarks, gluons, sea quarks) to carry a certain energy fraction of the proton and thus define the probability for each parton taking part in the hard interaction process.
+They describe the probability of a parton (up-quarks, down-quarks, gluons, sea quarks) to carry a certain energy fraction of the proton and thus define the probability for each parton to take part in the hard interaction process.
 %In this thesis, all simulated samples are generated with the PDFs provided by the \cteq group~\cite{Pumplin:2002vw} 
 
 After the simulation of the hard interaction between the selected partons, the showering and hadronisation of the particles is simulated.
@@ -609,16 +630,16 @@ Since \madgraph only provides the generation of matrix elements, the subsequent 
 For this task, particles produced in the hard interaction are matched to the particles produced in the showers in order to avoid a double-counting of emissions in multijet processes.
 Since \madgraph is responsible for the simulation of well separated partons whereas \pythia is designed for simulating the soft and collinear showers, the event is rejected if a parton from the matrix element generator cannot be matched within a certain distance $\Delta R$ to any of the simulated showers (MLM matching scheme~\cite{bib:MLM_matching}).
 The showers are clustered with the \kt method (see Section~\ref{sec:JetReconstruction}).
-Additionally, events are rejected if there are more showers than partons in the event
+Additionally, events are rejected if there are more showers than partons in the event.
 
 The formation of colour neutral particles, called hadronisation, and the subsequent decay of unstable particles is simulated with \pythia for all samples used in this thesis.
 A visualisation of the various steps performed for the generation of events is shown in Fig.~\ref{fig:MCsimulation}. 
-\begin{figure}[!t]
-  \centering
-      \includegraphics[width=0.60\textwidth]{figures/experiment/Simulation/MCGeneration}
-  \caption{Visualisation of the various steps performed in the simulation of events. Taken from~\cite{bib:Kristin_Thesis}.}  
-  \label{fig:MCsimulation}
-\end{figure}
+%\begin{figure}[!t]
+%  \centering
+%      \includegraphics[width=0.60\textwidth]{figures/experiment/Simulation/MCGeneration}
+%  \caption{Visualisation of the various steps performed in the simulation of events. Taken from~\cite{bib:Kristin_Thesis}.}  
+%  \label{fig:MCsimulation}
+%\end{figure}
 
 In order to account for signals caused by the interaction of the non-primary partons of the interacting protons - called the underlying event (UE) -  various models (tunes) are exploited.
 They rely on the measured signals in data in proton collisions without any hard interaction.
