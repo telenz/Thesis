@@ -2,10 +2,6 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
 Database file #1: Thesis.bib
-Repeated entry---line 52 of file Thesis.bib
- : @inproceedings{bib:Signatures_figure
- :                                     ,
-I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 400 of file Thesis.bib
  :   
  :   year    = {2015}
@@ -81,47 +77,51 @@ I was expecting a `,' or a `}'---line 2374 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty author in bib:LEP_design_1984
-Warning--empty year in bib:TWIKI:PixelClusterSize
-You've used 57 entries,
+Warning--empty publisher in bib:James:StaticticalMethods_2006
+Warning--empty year in bib:DataFormats
+Warning--empty year in bib:CMS:DT_Thesis
+Warning--empty title in bib:Neyman_1937
+Warning--empty author in bib:CMS:JME_PAS
+Warning--empty title in bib:CMS:JME_PAS
+You've used 115 entries,
             2369 wiz_defined-function locations,
-            1026 strings with 17621 characters,
-and the built_in function-call counts, 17017 in all, are:
-= -- 2150
-> -- 323
+            1485 strings with 30858 characters,
+and the built_in function-call counts, 34836 in all, are:
+= -- 4335
+> -- 715
 < -- 0
-+ -- 132
-- -- 75
-* -- 1215
-:= -- 2143
-add.period$ -- 155
-call.type$ -- 57
++ -- 274
+- -- 159
+* -- 2557
+:= -- 4465
+add.period$ -- 314
+call.type$ -- 115
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 59
-duplicate$ -- 1069
-empty$ -- 1734
-format.name$ -- 54
-if$ -- 4697
+cite$ -- 121
+duplicate$ -- 2057
+empty$ -- 3577
+format.name$ -- 131
+if$ -- 9563
 int.to.chr$ -- 0
-int.to.str$ -- 57
-missing$ -- 153
-newline$ -- 288
-num.names$ -- 29
-pop$ -- 304
+int.to.str$ -- 115
+missing$ -- 302
+newline$ -- 559
+num.names$ -- 76
+pop$ -- 600
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 578
+skip$ -- 1105
 stack$ -- 0
-substring$ -- 566
-swap$ -- 381
+substring$ -- 1344
+swap$ -- 700
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 75
-width$ -- 59
-write$ -- 661
-(There were 16 error messages)
+warning$ -- 6
+while$ -- 186
+width$ -- 118
+write$ -- 1341
+(There were 15 error messages)

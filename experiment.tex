@@ -45,10 +45,13 @@ The total integrated luminosity of $pp$~collisions over time recorded at the CMS
   \caption{Integrated luminosity delivered by LHC (blue) and recorded by CMS (orange) in the year 2012. Taken from~\cite{bib:LumiWiki}.}  
   \label{fig:Lumi}
 \end{figure}
-Events recorded at the CMS experiment are grouped together within ``luminosity blocks''.
-They refer to short intervals of data taking ($\sim$2-3\,min) in which the instantaneous luminosity is stable.
-In addition, luminosity blocks are comprised to so-called ``runs''.
-They correspond to periods of data taking over which the overall conditions remain almost stable.
+The recording of events at the CMS experiment is devided into so-called ``runs'', where one run refers to a period of data taking in which the detector is working under stable conditions.
+These runs are furthermore subdevided into ``luminosity blocks''.
+They refer to short intervals of data taking ($<1\min$) in which the instantaneous luminosity is stable.
+%Events recorded at the CMS experiment are grouped together within ``luminosity blocks''.
+%They refer to short intervals of data taking ($\sim$2-3\,min) in which the instantaneous luminosity is stable.
+%In addition, luminosity blocks are comprised to so-called ``runs''.
+%They correspond to periods of data taking over which the overall conditions remain almost stable.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,7 +85,7 @@ In the following, the various detector components of the CMS detector from the i
 \section{The tracking system}
 \label{sec:TrackingSystem}
 The tracking detector~\cite{bib:CMS:TDR_2006,bib:CMS:Tracker_1997,bib:CMS:Tracker_2000} is the innermost detector at CMS. 
-It is a silicon semiconductor detector and is included for the tasks of vertex and track reconstruction by the measurement of particles' energy losses.
+FIXME: It is a silicon semiconductor detector and is included for the tasks of vertex and track reconstruction by the measurement of particle energy losses.
 A schematic sketch of the tracker at CMS is depicted in Fig.~\ref{fig:Tracker}.
 \begin{figure}[!b]
   \centering
@@ -138,9 +141,9 @@ In the barrel region, a single-point resolution between $23 - 52\mum$ in the $r-
 %FIXME: What about momentum resolution
 
 \subsection*{Energy measurements in the tracking system}
-A charged particle traversing the above mentioned silicon detectors produces electron-hole pairs in the semiconducting material along its trajectory, thus loosing energy due to ionisation.
+A charged particle traversing the above mentioned silicon detectors produces electron hole pairs in the semiconducting material along its trajectory, thus loosing energy due to ionisation.
 For silicon, the mean energy to create an electron-hole pair is 3.61\ev at $-10\degree$C.
-Minimally ionising particles produce an average of 22\,000 electron-hole pairs in silicon sensors~\cite{Thesis_Jenny}.
+Minimally ionising particles produce an average of 22\,000 electron hole pairs in silicon sensors~\cite{Thesis_Jenny}.
 Electrons that are subject to a hard collision with the incoming particle (so-called delta-rays), produce further ionisation and can thus lead to much higher energy deposits in the silicon.
 Because of the applied bias voltage at the sensors (for the creation of a depletion zone), the released electrons (holes) travel to the n-contacts (p-contacts), thereby inducing a current proportional the released energy, which is measured by the readout electronics. 
 A more detailed description of the energy measurement in silicon sensors can be found in~\cite{Thesis_Jenny}.

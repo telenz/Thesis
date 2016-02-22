@@ -9,10 +9,11 @@ While the energy measurements in the silicon strip detector have already been ca
 To increase the discrimination power of \dedx for short tracks, such a calibration procedure has therefore been performed within this PhD thesis.
 
 The CMS tracker system provides a measurement of the particle's energy loss for each hit in the tracker.
-This is done by the detection of the number of electrons produced by the ionisation of the silicon.
+%This is done by the detection of the number of electrons produced by the ionisation of the silicon.
+FIXME: This is done by the measurement of the charge induced by the electron hole pairs produced by the ionisation of the silicon.
 A detailed introduction to the CMS tracker system and the energy measurement can be found in Section~\ref{sec:TrackingSystem}.
 
-How to combine the single energy measurements for each tracker hit into one track \dedx estimator that can be used for analysis purposes will be explained in the following Section~\ref{sec:sub:MeasuringDeDx}.
+The procedure to combine single energy measurements for each tracker hit into one track \dedx estimator that can be used for analysis purposes will be explained in the following Section~\ref{sec:sub:MeasuringDeDx}.
 The pixel energy calibration is then described in Section~\ref{sec:EnergyCalibration}. 
 How to discriminate SM particles and beyond SM particles with the help of a \dedx measurement is discussed in Section~\ref{sec:Ias}, followed by an exploration of how the inclusion of the pixel energy measurements in the \dedx estimates leads to a better discrimination between Standard Model particles and long-lived charginos (Section~\ref{sec:DiscriminationImprovements}).
 
@@ -60,7 +61,7 @@ The Landau distribution is a highly asymmetric distribution with a long tail tow
 Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
 %The mean and the variance of a landau distribution are not defined.
 
-Because of its strong asymmetry, measurements of the mean energy loss per path length $\langle \dedx \rangle$ with only a few single measurements are easily fluctuating towards high values.
+FIXME: Because of its strong asymmetry, measurements of the mean energy loss per path length $\langle \dedx \rangle$, consisting of only a few single measurements $\Delta E/ \Delta x $, are easily fluctuating towards high values.
 This makes the use of the mean energy loss described by the Bethe formula for the discrimination of new heavy particles problematic, because fluctuations to high values reduce the discrimination power against massive particles which release in general higher amounts of energy in matter.
 %This is again different for a (limited) measurment, as there it is always possible to calucalute a mean.
 %Still, this leads to the fact that the definition of the mean energy loss per path length is a problematic and unstable concept.
@@ -76,25 +77,19 @@ The most probable energy loss of a charged particle, $\Delta_p$, can be describe
 with $\xi=(K/Z)\langle Z/A \rangle (x/\beta^2)$. 
 The thickness of the absorber $x$ appears explicitly in the Landau-Vavilov-Bichsel equation making the most probable energy loss per path \mbox{length $\Delta_p/dx$} logarithmically dependent on $x$.
 A comparison between the Bethe mean energy loss $\langle \dedx \rangle$ and the most probable energy loss $\Delta_p/dx$ for muons is shown in Fig.~\ref{fig:dEdx_Bethe_Landau}.
+The restricted energy loss refers to the energy loss when the maximal transfer energy $T_{\text{max}}$ is restricted to a certain value $T_{\text{cut}}$.
 
 Particles such as  muons are minimally ionising in silicon for $\beta\gamma \sim 3-4$. 
 For higher momenta the deposited energies increase again reaching a plateau at around $\beta\gamma\sim100$. 
-However, new heavy charged particles would mainly be unrelativistic because of their high mass and would therefore deposit much higher energies in the detector.
+However, new heavy charged particles would mainly be non-relativistic because of their high mass and would therefore deposit much higher energies in the detector.
 This makes \dedx  a very well discriminating variable.
-%\begin{figure}[!bt]
-%  \centering 
-%  \begin{tabular}{c}
-%  \includegraphics[width=0.6\textwidth]{figures/analysis/dEdx_Landau_Silicon.png}
-%  \end{tabular}
-%  \caption{Most probable energy loss in silicon, scaled to the mean loss of a minimally ionising particle (388 eV/$\mu$m) for different absorber thicknesses. Taken from \cite{bib:PDG_2014}.} 
-%  \label{fig:dEdx_Landau_Silicon}
-%\end{figure}
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis/dEdx_Bethe_Landau.png}
+  \includegraphics[width=0.6\textwidth]{figures/analysis_2/dEdx_Bethe_Landau.png}
   \end{tabular}
-  \caption{Comparison between the Bethe mean energy loss, restricted energy loss and the most probable energy loss described by the Landau-Vavilov-Bichsel function for muons for different values of absorber thickness of silicon. Taken from \cite{bib:PDG_2014}.} 
+  \caption{FIXME: Comparison between the Bethe mean energy loss, restricted energy loss and the most probable energy loss described by the Landau-Vavilov-Bichsel function for muons for different values of absorber thickness of silicon. 
+           The absorber thickness is normalised to the absorber density $\rho$, thus $[x] = g \cdot cm^{-2}$. Taken from \cite{bib:PDG_2014}.} 
   \label{fig:dEdx_Bethe_Landau}
 \end{figure}
 Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles due to the different velocity distributions.\\
@@ -141,14 +136,14 @@ The following sections explain the method of the gain calibration of the pixel s
 It is splitted into two sections. 
 The first section is dedicated to the gain inter-calibration of the pixel tracker which ensures a homogeneous energy response of all tracker modules.
 In the second section, the absolute gain calibration is discussed. 
-This calibration step is needed to ensure that the measurement of the energy release of a particle is actually translated to the correct physical value.
+FIXME: This calibration step is needed to ensure that the measurement of the energy release of a particle can actually be translated to a correct physical value.
 
 %Detailed technical information about the pixel tracker can be found in Section~\ref{sec:Detector:Pixel}.
 
 
 \subsection*{Inter-calibration of gain}
 The main goal of the gain calibration is to get a uniform response in the ionisation energy loss \dedx over the full data taking period in 2012.
-To also ensure a uniform response over all modules within one time step, an additional inter-calibration on module level is carried out.
+To also ensure a uniform response over all modules within one time period, an additional inter-calibration on module level is carried out.
 The inter-calibration can in principle be done on various levels: the highest granularity would be a calibration on pixel level, followed by a calibration on read-out-chip (ROC) level and then on module level.
 Lower granularities in descending order are rings (modules with same z-position) and finally layers (3 layers in the barrel and 4 disks in the endcap). 
 Within this analysis the calibration is performed on module level since the response variations between all ROCs on one module of $\sim5\%$ are acceptable (see Appendix~\ref{app:PixelCalibration}). 

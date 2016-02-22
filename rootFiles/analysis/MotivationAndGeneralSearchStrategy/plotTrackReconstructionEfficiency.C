@@ -49,7 +49,7 @@ void plotTrackReconstructionEfficiency(TString zoom="Zoom"){
   //plotTH2(foundTracks, "z [cm]", "rho [cm]", "nFoundTracks"+zoom);
   //plotTH2(allTracks, "z [cm]", "rho [cm]", "nAllTracks" +zoom);
   foundTracks->Divide(allTracks);
-  plotTH2(foundTracks, "z [cm]", "rho [cm]", "RecoEffTracks" +zoom);
+  plotTH2(foundTracks, "z [cm]", "#rho [cm]", "RecoEffTracks" +zoom);
 
 
   
