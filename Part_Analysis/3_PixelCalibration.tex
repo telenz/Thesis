@@ -118,6 +118,7 @@ Unfortunately, due to various reasons, such as the imperfect constancy of the re
 %was not adequate enough to use the measured energy deposition without a further offline calibration procedure.
 
 This imperfection of the gain calibration can be seen in Fig.~\ref{fig:StabilityPlot_beforeCalibration}, where the mean of the harmonic-2 estimator for all tracks $\langle\ihtwo \rangle$ over the full data-taking period in 2012 is shown.
+FIXME
 Four different steps can be spotted.
 \begin{figure}[!t]
   \centering 
@@ -153,33 +154,33 @@ The gain calibration of the pixel silicon tracker is carried out with the help o
 MIPs in this context are not defined as particles at the minimum of the Bethe formula, but more generally as particles located at or near the plateau of the \dedx distribution vs. momentum (see Fig.~\ref{fig:dEdx_Bethe_Landau}).
 This approach ensures that all particles deposit similar amounts of energy so that the variation due to different momenta is minimised.
 MIPs are selected by a momentum selection of $\text{p}>2\,$\gev.
-Additionally, only tracks with at least eight hits and a $\chi^2/\text{n.d.o.f.}<3$ are used to ensure a high-quality track reconstruction.
+FIXME: Additionally, only tracks with at least eight hits and a quality of the trajectory fit of $\chi^2/\text{ndof}<3$ are used to ensure a high-quality track reconstruction.
 A sample containing around $~$50 million ``minimum bias'' events is used for calibration.
 The ``minimum bias'' sample was specifically recorded for tracker calibration purposes.
-%Its distinctive property is that neither an online nor offline selection was applied.
+FIXME: Its distinctive property is that only a minimum of detector activity is required to record an event, \eg pixel hits in the tracking system.
 
 For every module in the pixel tracker (there are 1440 modules in total), a distribution of the energy loss per path length $\Delta E/\Delta x$ is built.
+The path length $\Delta x$ is calculated with
+\begin{equation}
+\Delta x = \frac{d_{\text{module}_i}}{\cos(\phi_{\text{track}})},
+\end{equation}
+where $d_{\text{module}_i}$ is the thickness of module i and $\phi_{\text{track}}$ is the relative angle of the particle trajectory to the normal axis of the module.
 The measurement of $\Delta E/\Delta x$ is done in ADC counts per mm.
 ADC counts are a measure for the deposited charge after digitisation.
 %each $\Delta E/\Delta x$  measurement of all particles crossing the module is filled into a histogram. 
 Figure~\ref{fig:dEdx_Module} shows an example distribution for one module. 
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/Landau_Module_352476680.pdf}
   \end{tabular}
-  \caption{An example of the $\Delta E/\Delta x$ distribution measured in ADC count per mm for one module of the CMS pixel tracker. 
-           A Landau convoluted with a Gaussian is fitted to the core of the distribution in an iterative procedure.} 
+  \caption{An example of the $\Delta E/\Delta x$ distribution measured in ADC count per mm for one module of the CMS pixel tracker within one time interval. 
+           A Landau convoluted with a Gaussian is fitted to the core of the distribution.}% in an iterative procedure.} 
   \label{fig:dEdx_Module}
 \end{figure}
 To extract the MPV for every module a fit to the core distribution is performed.
 The fit is not only done with a Landau but a Landau convoluted with a Gaussian function to be closer to the experimentally observed energy spectrum.
-This also increases the fit performance and the stability of the fit.
-The path length $\Delta x$ is calculated with
-\begin{equation}
-\Delta x = d_{\text{module}_i} \cdot \cos(\phi_{\text{track}}),
-\end{equation}
-where $d_{\text{module}_i}$ is the thickness of module i and $\phi_{\text{track}}$ is the relative angle of the particle's trajectory to the normal axis of the module.
+This also improves the fit performance and the stability of the fit.
 With the measured MPV extracted from the fit, an inter-calibration factor is calculated for every module
 \begin{equation}
 c_{\text{inter}}=\frac{\mpv_{\text{target}}\, [\text{ADC/mm}]}{\mpv\, [\text{ADC/mm}]} = \frac{300 \cdot 265 \, \text{ADC/mm}}{\mpv\, [\text{ADC/mm}]}.
@@ -190,7 +191,7 @@ The calibration factor can then be used to scale every single measurement in a m
 \begin{equation}
 \left( \frac{\Delta E}{\Delta x}\right)_{\text{calibrated}}=c_{\text{inter}} \cdot \left(\frac{\Delta E}{\Delta x}\right)_{\text{uncalibrated}}
 \end{equation}
-The determination of the calibration factor is done for every of the five time steps, shown in Fig.~\ref{fig:StabilityPlot_beforeCalibration} independently, in order to get rid of the time dependency. 
+The determination of the calibration factor is done for every of the five time intervals, shown in Fig.~\ref{fig:StabilityPlot_beforeCalibration} independently, in order to get rid of the time dependency. 
 The outcome of the application of the calibration factors to the single energy measurements in the pixel tracker can be seen in Fig.~\ref{fig:StabilityPlot_afterCalibration}.
 \begin{figure}[!b]
   \centering 
@@ -220,7 +221,7 @@ theoretically described by the Landau-Vavilov-Bichsel formula in Eq.~\eqref{eq:L
 To calibrate the pixel tracker to the correct energy loss per path length it is therefore sufficient to determine one calibration factor to relate the average \dedx of all tracks in the pixel tracker as shown in 
 Fig.~\ref{fig:StabilityPlot_afterCalibration} to the average measured \dedx in the strip tracker, shown in Fig.~\ref{fig:StabilityPlot_Strip} by
 \begin{equation}
-c_{\text{absolute}} = \frac{\langle dE/dx_{\text{strip}} \rangle}{\langle dE/dx_{\text{pixel}} \rangle} = \frac{3.303}{3.509} = 0.941.
+c_{\text{absolute}} = \frac{\langle dE/dx_{\text{strip}} \rangle}{\langle dE/dx_{\text{pixel}} \rangle} = \frac{3.303 \mev/\cm}{3.509 \mev/\cm} = 0.941.
 \end{equation}
 \begin{figure}[!t]
   \centering 
@@ -304,7 +305,7 @@ In Fig.~\ref{fig:MIPs-Signal-Dedx} (left), a comparison of the shapes of the ene
   \end{tabular}
   \caption{Normalised \ias distribution for simulated background and signal tracks (left) and for four different signal models (right) 
            for high-purity tracks (as defined in \cite{bib:CMS:Tracking_2010}) with \pt$>10\gev$ and $|\eta|<2.1$.
-           For the illustration of the background tracks' spectrum simulated $t\bar{t}$+jets events are used (more information about this sample is given in Chapter~\ref{ch:SimulatedSamples}).}
+           For the illustration of the background track spectrum simulated $t\bar{t}$+jets events are used (more information about this sample is given in Chapter~\ref{ch:SimulatedSamples}).}
   \label{fig:MIPs-Signal-Dedx}
 \end{figure} 
 It can be seen, that the \ias distributions of the signal models show a larger tail towards $\ias=1$, whereas the \ias of the background is rapidly falling.
@@ -313,7 +314,7 @@ In the right part of Fig.~\ref{fig:MIPs-Signal-Dedx}, a comparison of the \ias d
 Charginos with longer lifetimes have a more pronounced tail toward $\ias=1$.
 This can be understood with the help of Eq.~\eqref{eq:Landau_Vavilov_Bichsel}, where the influence of the velocity ($\beta$) on the ionisation loss can be seen.
 The velocity distribution of the charginos is mostly affected by the mass of the chargino.
-However, also for charginos with same mass, the velocity is higher in average for shorter lifetimes.
+However, also for charginos with same mass, the velocity is higher on average for shorter lifetimes.
 This is caused by the fact, that for shorter lifetimes (\eg $\ctau=10\cm$), already a sizable fraction of the charginos decay before reaching the tracker system.
 The probability of reaching the detector increases for higher velocities because of the boost, which can be clearly seen at the survival probability
 \begin{equation}
