@@ -1,5 +1,28 @@
 \providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
 
+\bibitem{bib:Theory:CMS:HiggsObservation}
+{ CMS} Collaboration, ``{Observation of a new boson at a mass of 125 GeV with
+  the CMS experiment at the LHC}'', {\em Phys. Lett.} {\bf B716} (2012) 30--61,
+  \href{http://www.arXiv.org/abs/1207.7235}{{\tt arXiv:1207.7235}}.
+\href{http://dx.doi.org/10.1016/j.physletb.2012.08.021}{{\tt
+  doi:10.1016/j.physletb.2012.08.021}}.
+%%CITATION = ARXIV:1207.7235;%%.
+
+\bibitem{bib:Theory:Atlas:HiggsObservation}
+{ ATLAS} Collaboration, ``{Observation of a new particle in the search for the
+  Standard Model Higgs boson with the ATLAS detector at the LHC}'', {\em Phys.
+  Lett.} {\bf B716} (2012) 1--29,
+  \href{http://www.arXiv.org/abs/1207.7214}{{\tt arXiv:1207.7214}}.
+\href{http://dx.doi.org/10.1016/j.physletb.2012.08.020}{{\tt
+  doi:10.1016/j.physletb.2012.08.020}}.
+%%CITATION = ARXIV:1207.7214;%%.
+
+\bibitem{bib:CMS:QCD_measurements}
+{ CMS} Collaboration, ``{Measurements of differential dijet cross section in
+  proton-proton collisions at $\sqrt(s)=8$ TeV with the CMS detector}'', {\em
+  CMS Physics Analysis Summary} {\bf
+  \href{https://cds.cern.ch/record/1709826}{CMS-PAS-SMP-14-002}} (2014).
+
 \bibitem{bib:CMS:RA2_8TeV}
 { CMS} Collaboration, ``{Search for new physics in the multijet and missing
   transverse momentum final state in proton-proton collisions at
@@ -8,34 +31,6 @@
 \href{http://dx.doi.org/10.1007/JHEP06(2014)055}{{\tt
   doi:10.1007/JHEP06(2014)055}}.
 %%CITATION = ARXIV:1402.4770;%%.
-
-\bibitem{bib:CMS:MT2_8TeV}
-{ CMS} Collaboration, ``{Searches for supersymmetry using the M$_{T2}$ Variable
-  in Hadronic Events Produced in pp Collisions at 8\tev}'', {\em JHEP} {\bf 05}
-  (2015) 078, \href{http://www.arXiv.org/abs/1502.04358}{{\tt
-  arXiv:1502.04358}}.
-\href{http://dx.doi.org/10.1007/JHEP05(2015)078}{{\tt
-  doi:10.1007/JHEP05(2015)078}}.
-%%CITATION = ARXIV:1502.04358;%%.
-
-\bibitem{bib:CMS:AlphaT_8TeV}
-{ CMS} Collaboration, ``{Search for supersymmetry in hadronic final states with
-  missing transverse energy using the variables $\alpha_T$ and b-quark
-  multiplicity in pp collisions at $\sqrt s=8$ TeV}'', {\em Eur. Phys. J.} {\bf
-  C73} (2013), no.~9, 2568, \href{http://www.arXiv.org/abs/1303.2985}{{\tt
-  arXiv:1303.2985}}.
-\href{http://dx.doi.org/10.1140/epjc/s10052-013-2568-6}{{\tt
-  doi:10.1140/epjc/s10052-013-2568-6}}.
-%%CITATION = ARXIV:1303.2985;%%.
-
-\bibitem{bib:CMS:TopCrossSection_8TeV}
-{ CMS} Collaboration, ``{Measurement of the differential cross section for top
-  quark pair production in pp collisions at $\sqrt{s} = 8\,\text {TeV} $}'',
-  {\em Eur. Phys. J.} {\bf C75} (2015), no.~11, 542,
-  \href{http://www.arXiv.org/abs/1505.04480}{{\tt arXiv:1505.04480}}.
-\href{http://dx.doi.org/10.1140/epjc/s10052-015-3709-x}{{\tt
-  doi:10.1140/epjc/s10052-015-3709-x}}.
-%%CITATION = ARXIV:1505.04480;%%.
 
 \bibitem{bib:CMS:JERCPaper_2011}
 { CMS} Collaboration, ``{Determination of jet energy calibration and transverse
@@ -49,13 +44,5 @@
 { CMS} Collaboration, ``{Jet Energy Resolution in CMS at sqrt(s)=7 TeV}'', {\em
   CMS Physics Analysis Summary} {\bf
   \href{https://cds.cern.ch/record/1339945}{CMS-PAS-JME-10-014}} (2011).
-
-\bibitem{bib:Kristin_Thesis}
-K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the
-  CMS experiment}''.
-\newblock PhD thesis, Hamburg University, 2015.
-\newblock
-\url{http://www-library.desy.de/cgi-bin/showprep.pl?thesis15-003}.
-%%CITATION = DESY-THESIS-2015-003;%%.
 
 \end{thebibliography}\endgroup
