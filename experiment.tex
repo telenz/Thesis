@@ -232,7 +232,7 @@ They are designed in order to cope with a high particle flux of about 1kHz/cm$^2
 As signals can be transferred very fast, they are used for the level-1 trigger system (see Section~\ref{sec:TriggerSystem}).
 
 Finally, the resistive plate chambers cover the barrel as well as the endcap region up to a pseudorapidity of $\eta=1.6$. 
-They provide a fast response with a good time resolution enabling the exact identification of the respective bunch-crossing.
+They provide a fast response with a good time resolution enabling the exact identification of the respective bunch crossing.
 It is used for the level-1 trigger system as well.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The trigger system}
@@ -309,17 +309,18 @@ First, a track selection is performed which depends on the number of hits in the
 All selected tracks are afterwards clustered to several vertices based on their point of closest approach in $z$-direction to the beam spot.
 The clustering first identifies candidate vertices using a so-called deterministic annealing (DA) algorithm~\cite{bib:VertexReconstruction_DA}.
 Subsequently, the candidate vertices are evaluated with the adaptive vertex fitter~\cite{bib:VertexReconstruction_AVF}, which estimates the location of the vertices as well as performance parameters of the fit.
-FIXME: To each track, a weight is assigned that is close to one in case of good compatibility and close to zero for a bad compatibility with the vertex.
 The vertex with the largest sum of all squared track transverse momenta, $\sum \pt^2$, is referred to as the primary vertex. 
-All other vertices during a bunch-crossing are so-called pileup interactions.
+All other vertices during a bunch crossing are so-called pileup interactions.
 
-Further quality criteria of the primary vertex are required in the search for highly ionising, short tracks (Part~\ref{part:analysis}) and the measurement of the jet transverse-momentum resolution (Part~\ref{part:resolution}).
-For this purpose, the ``number of degrees of freedom'' of the primary vertex is introduced: 
+To each track in an event, a weight is assigned that is close to one in case of good compatibility and close to zero for a bad compatibility with the vertex.
+The ``number of degrees of freedom'' of the primary vertex is a variable that defines the quality of a vertex and is defined as follows: 
 \begin{equation}
 n_{\text{dof}} = -3 + 2 \sum_{\text{tracks}} w_i.
 \end{equation}
-The requirement of a well reconstructed primary vertex is  $n_{\text{dof}}>4$.
-Furthermore, the vertex is required to be within 24\cm in $z$- and 2\cm in $r$-direction with respect to the nominal interaction point.
+%Further quality criteria of the primary vertex are required in the search for highly ionising, short tracks (Part~\ref{part:analysis}) and the measurement of the jet transverse-momentum resolution (Part~\ref{part:resolution}).
+
+In the two analyses presented in this thesis the primary vertex is required to have a number of degrees of freedom larger than four, $n_{\text{dof}}>4$.
+Furthermore, the primary vertex is required to be within 24\cm in $z$- and 2\cm in $r$-direction with respect to the nominal interaction point.
 
 
 \subsection{Reconstruction of tracks}
@@ -642,7 +643,7 @@ A visualisation of the various steps performed for the generation of events is s
 
 In order to account for signals caused by the interaction of the non-primary partons of the interacting protons - called the underlying event (UE) -  various models (tunes) are exploited.
 They rely on the measured signals in data in proton collisions without any hard interaction.
-Detector signals caused by additional interactions (pileup interactions) during a bunch-crossing, are also mixed into every simulated sample.
+Detector signals caused by additional interactions (pileup interactions) during a bunch crossing, are also mixed into every simulated sample.
 
 Finally, the interaction of the traversing particles with the detector material as well as the response and the readout electronics is simulated with \geant~\cite{bib:Geant4_2003,bib:Geant4_2006} throughout this thesis.
 
