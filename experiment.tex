@@ -45,13 +45,9 @@ The total integrated luminosity of $pp$~collisions over time recorded at the CMS
   \caption{Integrated luminosity delivered by LHC (blue) and recorded by CMS (orange) in the year 2012. Taken from~\cite{bib:LumiWiki}.}  
   \label{fig:Lumi}
 \end{figure}
-The recording of events at the CMS experiment is devided into so-called ``runs'', where one run refers to a period of data taking in which the detector is working under stable conditions.
-These runs are furthermore subdevided into ``luminosity blocks''.
-They refer to short intervals of data taking ($<1\min$) in which the instantaneous luminosity is stable.
-%Events recorded at the CMS experiment are grouped together within ``luminosity blocks''.
-%They refer to short intervals of data taking ($\sim$2-3\,min) in which the instantaneous luminosity is stable.
-%In addition, luminosity blocks are comprised to so-called ``runs''.
-%They correspond to periods of data taking over which the overall conditions remain almost stable.
+The recorded events are divided into so-called ``runs'', where one run refers to a period of data taking under stable detector conditions.
+These runs are furthermore subdivided into ``luminosity blocks''.
+They refer to short intervals of data taking ($<1\min$) with stable instantaneous luminosity.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -275,7 +271,7 @@ In the next section an introduction to this algorithm is given, followed by the 
 
 \section{The particle-flow algorithm}
 \label{sec:PFalgorithm}
-The particle-flow (PF) event description~\cite{CMS-PAS-PFT-09-001} aims at optimising particle identification and reconstruction by the usage of all sub-detector components of the CMS detector.
+The particle-flow (PF) event description~\cite{CMS-PAS-PFT-09-001} aims at optimising particle identification and reconstruction by using all sub-detector components of the CMS detector.
 There are three main building bricks used for global event description: reconstructed charged-particle tracks, calorimeter clusters, and muon tracks.
 The main requirements for these building bricks are a high reconstruction efficiency and a small fake rate.
 Therefore, a special emphasis was put on developing a very efficient tracking algorithm (see Section~\ref{sec:ObjectReconstruction}) and a well performing calorimeter clustering algorithm~\cite{CMS-PAS-PFT-09-001}. 
@@ -309,12 +305,12 @@ In this section, an overview of the required criteria for the identification of 
 \label{sec:VertexReconstruction}
 The reconstruction of primary vertices (PVs) is important in order to determine the location of the interaction point and to get an estimate of the corresponding uncertainty.
 At the CMS experiment, the reconstruction of vertices proceeds as follows~\cite{bib:CMS:tracking_8TeV}:
-First, a track selection is performed which depends on the number of hits in the tracker, on the significance of the transverse distance to the beam spot ($|d_0^{\text{BS}}|/\delta d_0$), and the normalised $\chi^2$ of the track fit (see the subsequent Section~\ref{subsec:TrackReconstruction} for more information on the track reconstruction algorithms).
+First, a track selection is performed which depends on the number of hits in the tracker, on the significance of the transverse distance to the beam spot ($|d_0^{\text{BS}}|/\delta d_0$), and on the normalised $\chi^2$ of the track fit (see the subsequent Section~\ref{subsec:TrackReconstruction} for more information on the track reconstruction algorithms).
 All selected tracks are afterwards clustered to several vertices based on their point of closest approach in $z$-direction to the beam spot.
 The clustering first identifies candidate vertices using a so-called deterministic annealing (DA) algorithm~\cite{bib:VertexReconstruction_DA}.
 Subsequently, the candidate vertices are evaluated with the adaptive vertex fitter~\cite{bib:VertexReconstruction_AVF}, which estimates the location of the vertices as well as performance parameters of the fit.
-A weight is assigned to each track that is close to one in case for a good compatibility and close to zero for a bad compatibility with the vertex.
-The track with the largest sum of all squared track transverse momenta, $\sum \pt^2$, is referred to as the primary vertex. 
+FIXME: To each track, a weight is assigned that is close to one in case of good compatibility and close to zero for a bad compatibility with the vertex.
+The vertex with the largest sum of all squared track transverse momenta, $\sum \pt^2$, is referred to as the primary vertex. 
 All other vertices during a bunch-crossing are so-called pileup interactions.
 
 Further quality criteria of the primary vertex are required in the search for highly ionising, short tracks (Part~\ref{part:analysis}) and the measurement of the jet transverse-momentum resolution (Part~\ref{part:resolution}).
@@ -328,9 +324,9 @@ Furthermore, the vertex is required to be within 24\cm in $z$- and 2\cm in $r$-d
 
 \subsection{Reconstruction of tracks}
 \label{subsec:TrackReconstruction}
-The reconstruction of tracks aims at linking several hits in the tracking system to one reconstructed track that matches the original trajectory of the particle with a high probability.
+The reconstruction of tracks aims at linking several hits in the tracking system to one reconstructed track that matches the original trajectory of a particle with a high probability.
 With the track reconstruction, an estimate of the particle momentum as well as its position can be achieved.
-Track reconstruction is challenging because the large number of hits\footnote{At design luminosity around 1000 charged particles are expected to traverse the tracker in each bunch-crossing~\cite{bib:CMS:tracking_8TeV}}, especially in the layers close to the interaction vertex, leads to a high combinatorial complexity. 
+Track reconstruction is challenging because the large number of hits\footnote{At design luminosity around 1000 charged particles are expected to traverse the tracker during each bunch crossing~\cite{bib:CMS:tracking_8TeV}}, especially in the layers close to the interaction point, leads to a high combinatorial complexity. 
 In the following, an overview of the tracking algorithm used at CMS is given.
 It is based on~\cite{bib:CMS:tracking_8TeV} and the reader is referred to this reference for more information on the reconstruction of tracks at CMS.\\
 
@@ -339,7 +335,7 @@ It it based on the so-called combinatorial Kalman filter~\cite{bib:TrackAlgorith
 The Kalman filter is an algorithm that allows for the estimation of parameters of interest based on a set of observations that are subject to noise or other inaccuracies.
 It is mathematically equivalent to a global least square minimisation for linear models with Gaussian noise.
 
-The basic idea of the tracking algorithm at CMS is to avoid applying the combinatorial Kalman filter on all hits in one step by using an iterative procedure (called iterative tracking).
+The basic idea of the tracking algorithm at CMS is to avoid applying the combinatorial Kalman filter to all hits by using an iterative procedure (called iterative tracking).
 A reduction of complexity can be achieved by first reconstructing tracks that are easy to identify because of \eg a relatively high \pt. 
 These tracks are removed afterwards and the remaining tracker hits are subject to further reconstruction iterations.
 The following iterations are performed (these steps refer to the setting from May to August in 2011 but are in their basic structure retained in the year 2012):
@@ -354,13 +350,11 @@ Within these iterations, the reconstruction is subdivided into four different st
 \item Seed generation: Only 2-3 hits are used to define track candidates.
 \item Extrapolation: Based on the expected flight path, additional hits are assigned to the candidate track using a combinatorial Kalman filter.
 \item Track fitting: With the usage of the Kalman filter and a smoother, the trajectory is fitted in order to estimate the track parameters.
-\item Setting of quality flags: Quality flags are assigned to all tracks and tracks that fail certain quality criteria are discarded.\\
+\item Setting of quality flags: Quality flags are assigned to all tracks and tracks that fail certain quality criteria are discarded.
 \end{itemize}
 %The configuration of the first and the fourth step differs across the different iterations.  
-
-A special task when reconstruction tracks consists of the suppression of fake tracks, \ie tracks that are not associated with a charged particle.
-Therefore, the requirement of fulfilling certain quality criteria (fourth step) is crucial to substantially reduce the contamination of fake tracks.
- For this purpose, requirements on the following variables are imposed (the values of the parameters $\alpha$ and $\beta$ vary across iterations):
+The last point is crucial for suppressing fake tracks, \ie tracks that are not associated with a charged particle.
+For this purpose, quality flags are assigned based on the following variables:
 \begin{itemize}
 \item A minimum number of layers in which the track has an associated hit.
 \item A minimum number of layers in which the track has an associated 3D hit\footnote{A 3D hit refers to a measurement that provides 3D position information, such as a pixel hit or a strip hit in a stereo module.}.
@@ -371,8 +365,9 @@ Therefore, the requirement of fulfilling certain quality criteria (fourth step) 
 \item A low longitudinal impact parameter significance: $|z_0^{\text{PV}}|/\delta z_0 < \left( \alpha_4 N_{\text{layers}} \right)^{\beta}$\\
 \hspace*{240pt}                                         $|z_0^{\text{PV}}|/\sigma_{z_0} \left(\pt,\eta\right) < \left( \alpha_2 N_{\text{layers}} \right)^{\beta}$.
 \end{itemize}
+The values of the parameters $\alpha$ and $\beta$ vary across iterations.
 The variable $d_0^{\text{BS}}$ is the distance of the track to the centre of the beam spot in the transverse plane to the beam line and $z_0^{\text{PV}}$ is the distance along the beam line to the closest pixel.
-The variables $\delta d_0$ and $\delta z_0$ are the uncertainties on the distance (impact) parameters and $\sigma$ is the standard deviation corresponding to the length of the beam spot in z-direction.
+The variables $\delta d_0$ and $\delta z_0$ are the uncertainties on the distance (impact) parameters and FIXME: $\sigma$ is the standard deviation corresponding to the length of the beam spot in z-direction.
 
 
 
@@ -471,18 +466,19 @@ In this thesis, all jets are subject to charged hadron subtraction.
 
 \subsection{Reconstruction of photons}
 \label{subsec:PhotonReconstruction}
-The following description of the photon reconstruction is based on~\cite{bib:CMS:PhotonIdentification_8TeV}, where also a more detailed explanation of the photon reconstruction algorithms can be found.
+The following description of the photon reconstruction is based on~\cite{bib:CMS:PhotonIdentification_8TeV}, where a more detailed explanation of the photon reconstruction algorithms can be found.
 
 Photons are reconstructed from energy deposits in the ECAL.
 The clustering algorithms of the ECAL energy deposits do not differentiate between electrons and photons.
 Thus, they are the same as used for electron identification (Section~\ref{subsec:ElectronReconstruction}).
 So-called ``superclusters'' are formed from a ``seed crystal'' which has an energy deposit greater than all of its neighbouring crystals and above a certain threshold.
-In the barrel region a so-called ``hybrid'' algorithm is used which proceeds by adding in $\phi$ direction fixed arrays of $5 \times 1$ crystals in $\eta \times \phi$ if their energy deposits are larger than a certain minimal energy.
-In the endcap region, the so-called ``multi $5 \times 5$'' clustering algorithm is used.
+Further arrays of crystals are added to the supercluster according to the following algorithms:
+in the barrel region a so-called ``hybrid'' algorithm is used which proceeds by adding strips of $5 \times 1$ ($\eta \times \phi$) crystals in $\phi$ direction if their energy is larger than a certain minimal energy;
+in the endcap region, the so-called ``multi $5 \times 5$'' clustering algorithm is used.
 It proceeds by adding fixed arrays of $5 \times 5$ crystals if their energy exceeds a certain threshold.
-These clustering procedures collect energy from radiating electrons as well as converted photons.
+These clustering procedures collect energy from radiating electrons as well as converted photons (photons converted to an electron-positron pair).
 
-After the clustering the measured energy in a supercluster is subject to an energy correction procedure~\cite{bib:CMS:PhotonIdentification_8TeV}.
+After the clustering, the measured energy in a supercluster is subject to an energy correction procedure~\cite{bib:CMS:PhotonIdentification_8TeV}.
 The energy estimate is finally based on the variable $R_9$.
 It is the ratio of the energy deposit within a $3\times 3$ array of crystals around the seed crystal divided by the total energy in the supercluster.
 This variable nicely discriminates between converted and unconverted photons as can be seen in Fig.~\ref{fig:PhotonR9}.
@@ -493,7 +489,7 @@ This variable nicely discriminates between converted and unconverted photons as 
   \label{fig:PhotonR9}
 \end{figure}
 The energy spread is wider for converted photons than for unconverted photons.
-Thus, the energy is estimated as the sum of energy deposits in the superclusters for converted photons ($R_9<0.94$ in the barrel and $R_9<0.94$ in the endcap region) and as the sum of energy deposits in the $5\times5$ crystal matrix for the unconverted photons.
+Thus, the energy is estimated as the sum of energy deposits in the superclusters for converted photons ($R_9<0.94$ in the barrel and $R_9<0.95$ in the endcap region) and as the sum of energy deposits in the $5\times5$ crystal matrix for the unconverted photons.
 
 
 \subsection{Reconstruction of muons}
@@ -530,7 +526,7 @@ Because the dedicated electron track reconstruction can be very time consuming, 
 
 Therefore, the electron reconstruction proceeds in detail as follows.
 First, ECAL clusters, so-called superclusters, are formed using a ``hybrid'' algorithm in the barrel region and a ``multi-$5\times 5$'' algorithm in the endcaps.
-It is the same clustering used for photons (see Section~\ref{subsec:PhotonReconstruction} where the more information about these algorithms can be found).
+It is the same clustering used for photons (see Section~\ref{subsec:PhotonReconstruction} where more information about these algorithms can be found).
 Superclusters are used, since due to bremsstrahlung, the energy deposits by electrons are usually spread out over several crystals.
 Additionally, so-called PF clusters are formed that add all neighbouring crystals to the above mentioned superclusters. 
 Afterwards, the standard track reconstruction is performed which is able to reconstruct electron tracks when bremsstrahlung is negligible.
