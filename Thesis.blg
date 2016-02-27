@@ -1,8 +1,11 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
-I found no \citation commands---while reading file Thesis.aux
 Database file #1: Thesis.bib
+Repeated entry---line 52 of file Thesis.bib
+ : @inproceedings{bib:Signatures_figure
+ :                                     ,
+I'm skipping whatever remains of this entry
 I was expecting a `,' or a `}'---line 400 of file Thesis.bib
  :   
  :   year    = {2015}
@@ -78,45 +81,48 @@ I was expecting a `,' or a `}'---line 2374 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 0 entries,
+Warning--I didn't find a database entry for "FIXME"
+Warning--empty author in bib:LEP_design_1984
+Warning--empty year in bib:TWIKI:PixelClusterSize
+You've used 57 entries,
             2369 wiz_defined-function locations,
-            582 strings with 4558 characters,
-and the built_in function-call counts, 21 in all, are:
-= -- 0
-> -- 0
+            1031 strings with 17684 characters,
+and the built_in function-call counts, 17212 in all, are:
+= -- 2165
+> -- 337
 < -- 0
-+ -- 0
-- -- 0
-* -- 3
-:= -- 9
-add.period$ -- 0
-call.type$ -- 0
++ -- 137
+- -- 80
+* -- 1239
+:= -- 2168
+add.period$ -- 154
+call.type$ -- 57
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 59
+duplicate$ -- 1080
+empty$ -- 1751
+format.name$ -- 56
+if$ -- 4750
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 57
+missing$ -- 156
+newline$ -- 286
+num.names$ -- 29
+pop$ -- 306
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 586
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 572
+swap$ -- 388
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
+warning$ -- 2
+while$ -- 76
+width$ -- 59
+write$ -- 661
 (There were 16 error messages)

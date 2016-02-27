@@ -235,6 +235,7 @@ a4paper,
 
 %Expand bookmark level
 % \hypersetup{bookmarksdepth=3	}
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -256,8 +257,8 @@ a4paper,
 % \part{The Standard Model and its supersymmetric extension} \label{part:Theory}
 % \input{theory.tex}
 
-% \part{Experimental setup: Collider, detector and algorithms} \label{part:Experiment}
-% \input{experiment.tex}
+\part{Experimental setup: Collider, detector and algorithms} \label{part:Experiment}
+\input{experiment.tex}
 
 %  \part{A search for highly ionising, short tracks at the CMS detector}  \label{part:analysis}
 %  \input{Part_Analysis/1_Motivation.tex}
@@ -286,14 +287,27 @@ a4paper,
 % \input{Appendix/appendix_resolution.tex}
 
 \cleardoublepage 
+% Add bibliography to TOC
+\addcontentsline{toc}{part}{Bibliography}
 \bibliographystyle{lucas_unsrt}
 \bibliography{Thesis}
 
-
-% \cleardoublepage
-% \thispagestyle{empty}
-% \chapter*{~}
-% \input{Danksagung.tex}
+\cleardoublepage
+\thispagestyle{empty}
+\part*{~}
+\chapter*{~}
+\thispagestyle{empty}
+\input{publication.tex}
+\cleardoublepage
+\thispagestyle{empty}
+\chapter*{~}
+\thispagestyle{empty}
+\input{erklaerung.tex}
+\cleardoublepage
+\thispagestyle{empty}
+\chapter*{~}
+\thispagestyle{empty}
+\input{danksagung.tex}
 
 
 \end{document}
