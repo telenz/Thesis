@@ -84,7 +84,8 @@ a4paper,
 \usepackage{slashed}
 \usepackage{bbm}
 \usepackage{amsfonts}
- \usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+
 % \usepackage{subfigure}
 % \usepackage{subfig}
 %\usepackage{hepnames}
@@ -286,27 +287,24 @@ a4paper,
 % \input{Appendix/appendix_analysis.tex}
 % \input{Appendix/appendix_resolution.tex}
 
-\cleardoublepage 
 % Add bibliography to TOC
+\cleardoublepage 
+\phantomsection
 \addcontentsline{toc}{part}{Bibliography}
 \bibliographystyle{lucas_unsrt}
 \bibliography{Thesis}
 
 \cleardoublepage
-\thispagestyle{empty}
 \part*{~}
-\chapter*{~}
-\thispagestyle{empty}
-\input{publication.tex}
-\cleardoublepage
-\thispagestyle{empty}
-\chapter*{~}
-\thispagestyle{empty}
-\input{erklaerung.tex}
-\cleardoublepage
-\thispagestyle{empty}
-\chapter*{~}
-\thispagestyle{empty}
+% \thispagestyle{headings}
+
+% \input{publication.tex}
+% \cleardoublepage
+% \thispagestyle{headings}
+% \input{erklaerung.tex}
+% \cleardoublepage
+% \thispagestyle{empty}
+% \thispagestyle{empty}
 \input{danksagung.tex}
 
 

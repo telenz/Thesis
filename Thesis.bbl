@@ -74,9 +74,8 @@ O.~S. Bruning, P.~Collier, P.~Lebrun{ et~al.}, ``{LHC Design Report Vol.1: The
 \bibitem{bib:LumiWiki}
 {CMS Collaboration}, ``CMS Luminosity - Public Results'', {\em Public CMS Wiki}
   (2015).
-  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults}{http%
-s://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults, Topic revision:
-  r111}.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults}{https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults,
+  Topic revision: r111}.
 
 \bibitem{bib:CMS:TDR_2006}
 { CMS} Collaboration, ``{CMS Physics: Technical Design Report Volume 1:
@@ -131,9 +130,8 @@ L.~Taylor, ``Silicon Pixels''.
 \bibitem{bib:TWIKI:PixelClusterSize}
 {CMS Collaboration}, ``Pixel Performance plots for 2012 data and simulation'',
   {\em Public CMS Wiki}.
-  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013}{%
-https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013, Topic
-  revision: r22}.
+  \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013}{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013,
+  Topic revision: r22}.
 
 \bibitem{bib:CMS:TDR_ECAL}
 { CMS} Collaboration, ``{The CMS electromagnetic calorimeter project: Technical
@@ -361,9 +359,8 @@ W.~Adam, R.~Fruhwirth, A.~Strandlie{ et~al.}, ``{Reconstruction of electrons
 
 \bibitem{bib:CMS:EventCleaning}
 {CMS Collaboration}, ``MET Optional Filters'', {\em Internal CMS Wiki} (2015).
-  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/MissingETOptionalFilters}%
-{https://twiki.cern.ch/twiki/bin/viewauth/CMS/MissingETOptionalFilters, Topic
-  revision: r66}.
+  \href{https://twiki.cern.ch/twiki/bin/viewauth/CMS/MissingETOptionalFilters}{https://twiki.cern.ch/twiki/bin/viewauth/CMS/MissingETOptionalFilters,
+  Topic revision: r66}.
 
 \bibitem{bib:CMS:Tracking_2010}
 { CMS} Collaboration, ``{Tracking and Vertexing Results from First
