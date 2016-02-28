@@ -242,12 +242,12 @@ a4paper,
 \begin{document}
 
 \pagenumbering{roman}
-\input{titlepage.tex}
+% \input{titlepage.tex}
 
 % \input{abstract.tex}
 % \input{Zusammenfassung.tex}
 
-\tableofcontents \cleardoublepage
+% \tableofcontents \cleardoublepage
 
 
 \pagenumbering{arabic}		
@@ -258,20 +258,20 @@ a4paper,
 % \part{The Standard Model and its supersymmetric extension} \label{part:Theory}
 % \input{theory.tex}
 
-\part{Experimental setup: Collider, detector and algorithms} \label{part:Experiment}
-\input{experiment.tex}
+% \part{Experimental setup: Collider, detector and algorithms} \label{part:Experiment}
+% \input{experiment.tex}
 
-%  \part{A search for highly ionising, short tracks at the CMS detector}  \label{part:analysis}
-%  \input{Part_Analysis/1_Motivation.tex}
-%  \input{Part_Analysis/2_GeneralSearchStrategy.tex}
-%  \input{Part_Analysis/3_PixelCalibration.tex}
-%  \input{Part_Analysis/4_Samples.tex}
-%  \input{Part_Analysis/5_Selection.tex}
-%  \input{Part_Analysis/6_Background.tex}
-%  \input{Part_Analysis/7_Optimisation.tex}
-%  \input{Part_Analysis/8_Results.tex}
-%  \input{Part_Analysis/9_Interpretation.tex}
-%  \input{Part_Analysis/10_Conclusion.tex}
+ \part{A search for highly ionising, short tracks at the CMS detector}  \label{part:analysis}
+ \input{Part_Analysis/1_Motivation.tex}
+ \input{Part_Analysis/2_GeneralSearchStrategy.tex}
+ \input{Part_Analysis/3_PixelCalibration.tex}
+ \input{Part_Analysis/4_Samples.tex}
+ \input{Part_Analysis/5_Selection.tex}
+ \input{Part_Analysis/6_Background.tex}
+ \input{Part_Analysis/7_Optimisation.tex}
+ \input{Part_Analysis/8_Results.tex}
+ \input{Part_Analysis/9_Interpretation.tex}
+ \input{Part_Analysis/10_Conclusion.tex}
 
 %  \part{Measurement of the jet transverse-momentum resolution} \label{part:resolution}
 %  \input{resolution.tex}
@@ -280,12 +280,7 @@ a4paper,
 % \input{summary.tex}
 
 
-% \bookmarksetup{startatroot}
-% \cleardoublepage 
-% \appendix
-% \addtocontents{toc}{\protect\vskip40pt}
-% \input{Appendix/appendix_analysis.tex}
-% \input{Appendix/appendix_resolution.tex}
+%  \bookmarksetup{startatroot} \cleardoublepage  \appendix \addtocontents{toc}{\protect\vskip40pt} \input{Appendix/appendix_analysis.tex} \input{Appendix/appendix_resolution.tex}
 
 % Add bibliography to TOC
 \cleardoublepage 
@@ -294,10 +289,9 @@ a4paper,
 \bibliographystyle{lucas_unsrt}
 \bibliography{Thesis}
 
-\cleardoublepage
-\part*{~}
+% \cleardoublepage
+% \part*{~}
 % \thispagestyle{headings}
-
 % \input{publication.tex}
 % \cleardoublepage
 % \thispagestyle{headings}
@@ -305,7 +299,7 @@ a4paper,
 % \cleardoublepage
 % \thispagestyle{empty}
 % \thispagestyle{empty}
-\input{danksagung.tex}
+% \input{danksagung.tex}
 
 
 \end{document}
