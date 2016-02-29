@@ -152,7 +152,8 @@ public:
     }
 
     histo->GetXaxis()->SetTitle("N_{hits}");
-    histo->GetYaxis()->SetTitle("a.u.");
+    //histo->GetYaxis()->SetTitle("a.u.");
+    histo->GetYaxis()->SetTitle("Number of tracks");
     
     purity=statistics/purity;
   };

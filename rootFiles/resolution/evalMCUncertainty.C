@@ -271,8 +271,8 @@ int evalMCUncertainty(){
     double ak5      = f1ak5 -> GetParameter(0);
     double ak5Error = f1ak5 -> GetParError(0);
 
-    AuxString = Form("#delta^{Out-of-cone} = %4.3f", abs(ak7/ak5-1.));
-    info1->DrawLatex(0.52,0.25,AuxString);
+    AuxString = Form("#delta^{residual imbalance} = %4.3f", abs(ak7/ak5-1.));
+    info1->DrawLatex(0.48,0.25,AuxString);
 
     TString pdfFile = (TString) "output/Ratio_Resolution_for_" + (long) (eta+1) + (TString) "_eta_bin_" + type + (TString) "_" + method + (TString) "_ak5_ak7_comparison.pdf";
     c11 -> SaveAs(pdfFile);

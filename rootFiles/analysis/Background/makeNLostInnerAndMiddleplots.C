@@ -254,7 +254,6 @@ int makeNLostInnerAndMiddleplots(){
   muons.histo->SetMarkerStyle(21);
   fakes.histo->SetMarkerStyle(24);
   elecs.histo->SetMarkerStyle(25);
-  // muons.histo->SetMarkerSize(1.3);
 
   double min = 0.001;
   double max = 1;
@@ -273,9 +272,9 @@ int makeNLostInnerAndMiddleplots(){
   //pions.histo->Draw();
   //muons.histo->Draw("same");
   //elecs.histo->Draw("same");
-  fakes.histo->Draw("");
   //pions.histo->Draw("same");
-  leptons.histo->Draw("same");
+  leptons.histo->Draw("");
+  fakes.histo->Draw("same");
   
   TLegend *legend =  new TLegend(0.60,0.65,0.9,0.93);
   legend->SetTextSize(0.05);

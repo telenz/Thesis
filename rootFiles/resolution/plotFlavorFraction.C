@@ -43,7 +43,7 @@ int plotFlavorFraction(){
   gStyle->SetHistLineWidth(width);
   TGaxis::SetMaxDigits(5);
 
-  TString pathToFile = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS/mc/root_files/";
+  TString pathToFile = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS_primary_analysis/mc/root_files/";
 
   TString definition = "algo";
 
@@ -176,7 +176,7 @@ int plotFlavorFraction(){
     // Plot the results
     lightQuarkComp[i] -> SetTitle("Flavor Composition in #gamma + Jet Events");
     lightQuarkComp[i] -> GetXaxis()->SetTitle("p_{T}^{#gamma} [GeV]");
-    lightQuarkComp[i] -> GetYaxis()->SetTitle("Flavor Fraction");
+    lightQuarkComp[i] -> GetYaxis()->SetTitle("Flavour Fraction");
     lightQuarkComp[i] -> SetMinimum(0.0001);
     lightQuarkComp[i] -> SetMaximum(999);
     lightQuarkComp[i] -> Draw(); 

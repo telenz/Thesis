@@ -108,9 +108,9 @@ public:
 
     histoECalo  = new TH1D("predECalo","predECalo",2,xbinsECalo);
 
-    //Double_t xbinsASmi[5]   = {0,0.05,0.1,0.2,1};
-    Double_t xbinsASmi[3]   = {0,0.2,1};
-    histoASmi   = new TH1D("predASmi","predASmi",2,xbinsASmi);
+    Double_t xbinsASmi[5]   = {0,0.05,0.1,0.2,1};
+    //Double_t xbinsASmi[3]   = {0,0.2,1};
+    histoASmi   = new TH1D("predASmi","predASmi",4,xbinsASmi);
 
     histoNValid = new TH1D("predNValid","predNValid",3,xbinsNHits);
     histoPt     = new TH1D("predPt","predPt",5,xbinsPt);
@@ -243,7 +243,6 @@ int makeLeptonIasCRSRplots(int pdgId){
   pred.getTreeVariables();
   dataCR.getTreeVariables();
   
-  cout<<"1"<<endl;
   int nbins=20;
   double xmin=-2.4;
   double xmax=2.4;
@@ -268,7 +267,7 @@ int makeLeptonIasCRSRplots(int pdgId){
   cout<<"###########################################################################"<<endl;
   
   
-  TCanvas *c = drawRatioPlot(pred.histoASmi, SR.histoASmi ,"dE/dx discriminator (I_{as})","N_{CR}/N_{SR}","CR_{MC}^{lep veto inverted}","SR_{MC}",10,0.00001);
+  TCanvas *c = drawRatioPlot(pred.histoASmi, SR.histoASmi ,"dE/dx discriminator (I_{as})","N_{CR}/N_{SR}","CR_{MC}^{lep veto inverted}","SR_{MC}",10,0.001);
   c->cd();
   TPad* pad = (TPad*) gPad->GetPrimitive("pad1");
   pad->cd();
@@ -276,10 +275,11 @@ int makeLeptonIasCRSRplots(int pdgId){
   info1-> SetNDC();
   info1->SetTextSize(0.06);
   info1->DrawLatex(0.55,0.60,particleType);
-  c->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_MCSR.pdf");
+  //c->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_MCSR.pdf");
+  c->SaveAs("plots/hASmi_" + particleType + "_MCCR_MCSR.pdf");
 
 
-  TCanvas *c1 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,"dE/dx discriminator (I_{as})","N_{MC}/N_{Data}","CR_{W+Jets MC}^{lep veto inverted}","CR_{MET Data}^{lep veto inverted}",10,0.00001);
+  TCanvas *c1 = drawRatioPlot(pred.histoASmi, dataCR.histoASmi ,"dE/dx discriminator (I_{as})","N_{MC}/N_{Data}","CR_{W+Jets MC}^{lep veto inverted}","CR_{MET Data}^{lep veto inverted}",10,0.001);
   c1->cd();
   pad = (TPad*) gPad->GetPrimitive("pad1");
   pad->cd();
@@ -287,7 +287,8 @@ int makeLeptonIasCRSRplots(int pdgId){
   info1-> SetNDC();
   info1->SetTextSize(0.06);
   info1->DrawLatex(0.55,0.60,particleType);
-  c1->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_DataCR.pdf");
+  //c1->SaveAs("plots/hASmi_SRbinning_" + particleType + "_MCCR_DataCR.pdf");
+  c1->SaveAs("plots/hASmi_" + particleType + "_MCCR_DataCR.pdf");
  
   return 0;
  

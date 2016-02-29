@@ -56,8 +56,8 @@ These event weights are applied on the simulated signal samples in this analysis
 
 \subsection*{Jet energy scale}
 The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt and for data-simulation differences.
-The uncertainty on the jet energy scale (JES) is neatly described and quantified in~\cite{bib:CMS:JME_PAS}. 
-It arises from uncertainties on the measured jet response in data including jet fragmentation, jet flavor composition, etc..
+The uncertainty on the jet energy scale (JES) is neatly described and quantified in~\cite{bib:CMS:JERCPaper_InPreparation}. 
+It arises from uncertainties on the measured jet response in data including jet fragmentation, jet flavour composition, etc.
 The JES correction is applied as a multiplicative factor on each jet's transverse momentum contained in an event.
 The corresponding systematic uncertainty is assessed by an up- and downward variation of the correction factor within 1\,$\sigma$.
 The resulting uncertainties are of minor importance and range between $0.4-3.1\%$.
@@ -65,8 +65,8 @@ The resulting uncertainties are of minor importance and range between $0.4-3.1\%
 \subsection*{Jet transverse-momentum resolution}
 The jet transverse-momentum resolution (JER) is smaller in simulation than in measured data (see Part~\ref{part:resolution}). 
 In order to take these differences into account, the simulated jet transverse-momentum response is smeared to match the measured response.
-The systematic uncertainty on the smearing factors is estimated in~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
-It covers the uncertainty on JER in data, including the JES uncertainty, uncertainties arising from out-of-cone showering etc.~\cite{bib:CMS:JME_PAS,bib:Kristin_Thesis}.
+The systematic uncertainty on the smearing factors is estimated in~\cite{bib:CMS:JERCPaper_InPreparation,bib:Kristin_Thesis}.
+FIXME: It covers the uncertainty on JER in data, including the JES uncertainty, uncertainties of the jet flavour composition in simulation, etc.~\cite{bib:CMS:JERCPaper_2011,bib:Kristin_Thesis}.
 The resulting uncertainty on the signal efficiency in this study is between $0.1-2.0\%$ and therefore almost negligible.
 
 \subsection*{Simulation of the parton distribution functions}
@@ -79,7 +79,7 @@ The resulting uncertainties on the signal efficiency for this search are between
 
 \subsection*{Pileup reweighting}
 The distribution of the number of pileup interactions in simulation is reweighted to match the measured distribution in data.
-The distribution of the number of pileup interactions in data is estimated by the luminosity of each bunch-crossing times the proton-proton inelastic cross section which is 69.4\mb~\cite{bib:CMS:PileupUtilities}.
+The distribution of the number of pileup interactions in data is estimated by the luminosity of each bunch crossing times the proton-proton inelastic cross section which is 69.4\mb~\cite{bib:CMS:PileupUtilities}.
 The uncertainty on the number of interactions thus consists of the uncertainty on the luminosity and the uncertainty on the cross section.
 To cover both sources, a variation of the inelastic cross section by plus/minus 5\% is done according to the recommendation by~\cite{bib:CMS:PileupSysUnc}.
 
@@ -152,7 +152,7 @@ Possible differences of the reconstruction efficiency in simulation and data can
 Differences in the track reconstruction efficiency are especially expected for short tracks.
 Therefore, a worst case estimation is done, comparing the track reconstruction efficiency in data and simulation for tracks with only three hits.
 
-In simulation and observed data, well reconstructed muon tracks are selected and all hits after the third hit are removed.
+In data and simulation, well reconstructed muon tracks are selected and all hits after the third hit are removed.
 Afterwards the full track reconstruction is performed again.
 The relative difference of this track reconstruction efficiency in data and simulation is taken as systematic uncertainty. %($\epsilon = N_{\text{recon. trk matched to muon trk}}/N_{\text{selected muon trks}}$) 
 The track reconstruction efficiency is higher in simulation than in data and results in uncertainties between $4.6-6.0\%$.\\

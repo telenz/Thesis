@@ -135,7 +135,8 @@ In each TEC, 9 disks between a z-position of $120\cm < z < 280\cm$ are contained
 Each of the TID comprises three disks between $60\cm < z < 110\cm$.
 
 In the barrel region, a single-point resolution between $23 - 52\mum$ in the $r-\phi$ plane and $230 - 530\mum$  in the z-direction is achieved.
-%FIXME: What about momentum resolution
+FIXME: Together, with the silicon pixel tracker, a relative momentum resolution of $2-3\%$ for 100\gev tracks up to a pseudorapitity of $\eta = 1.6$ is achieved.
+
 
 \subsection*{Energy measurements in the tracking system}
 A charged particle traversing the above mentioned silicon detectors produces electron hole pairs in the semiconducting material along its trajectory, thus loosing energy due to ionisation.
@@ -623,7 +624,7 @@ If \madgraph is used as the matrix element generator, \pythia only simulates the
 Since \madgraph is responsible for the simulation of well separated partons whereas \pythia is designed for simulating the soft and collinear showers, the event is rejected if a parton from the matrix element generator cannot be matched within a certain distance $\Delta R$ to any of the simulated showers (MLM matching scheme~\cite{bib:MLM_matching}).
 Additionally, events are rejected if there are more showers than partons in the event.
 The showers are clustered with the \kt method (see Section~\ref{sec:JetReconstruction}).
-Furthermore, \pythia simulates signals that are caused by the interaction of non-primary partons of the interacting protons, called the underlying event (UE)~\cite{FIXME}.
+Furthermore, \pythia simulates signals that are caused by the interaction of non-primary partons of the interacting protons, called the underlying event (UE)~\cite{bib:CMS:UE_2011}.
 For this purpose, several models, so-called tunes, are provided by \pythia.
 
 Finally, the interaction of the traversing particles with the detector, the detector response and the readout electronics are simulated with \geant~\cite{bib:Geant4_2003,bib:Geant4_2006} throughout this thesis.

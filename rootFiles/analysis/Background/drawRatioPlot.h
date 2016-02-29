@@ -22,8 +22,8 @@ TCanvas* drawRatioPlot(TH1D *numerator, TH1D *denominator, TString xTitle, TStri
   ratio = (TH1D*) numerator->Clone();
   ratio -> Divide(denominator);
   ratio -> SetLineColor(kBlack);
-  //ratio -> GetYaxis() -> SetRangeUser(0.5,1.5);
-  ratio -> GetYaxis() -> SetRangeUser(0.0,2);
+  //ratio -> GetYaxis() -> SetRangeUser(0.5,1.5); // for fake
+  ratio -> GetYaxis() -> SetRangeUser(0.0,2); // for leptons
   ratio -> GetYaxis() -> CenterTitle();
 
   double titleSize = gStyle->GetTitleSize()*(1-y)/y;

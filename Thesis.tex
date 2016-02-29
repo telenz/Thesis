@@ -242,24 +242,24 @@ a4paper,
 \begin{document}
 
 \pagenumbering{roman}
-% \input{titlepage.tex}
+\input{titlepage.tex}
 
-% \input{abstract.tex}
-% \input{Zusammenfassung.tex}
+\input{abstract.tex}
+\input{Zusammenfassung.tex}
 
-% \tableofcontents \cleardoublepage
+\tableofcontents \cleardoublepage
 
 
 \pagenumbering{arabic}		
 \setcounter{page}{1}
-% \part{Introduction}  \label{part:Introduction}
-% \input{introduction.tex}
+\part{Introduction}  \label{part:Introduction}
+\input{introduction.tex}
 
-% \part{The Standard Model and its supersymmetric extension} \label{part:Theory}
-% \input{theory.tex}
+\part{The Standard Model and its supersymmetric extension} \label{part:Theory}
+\input{theory.tex}
 
-% \part{Experimental setup: Collider, detector and algorithms} \label{part:Experiment}
-% \input{experiment.tex}
+\part{Experimental setup: Collider, detector and algorithms} \label{part:Experiment}
+\input{experiment.tex}
 
  \part{A search for highly ionising, short tracks at the CMS detector}  \label{part:analysis}
  \input{Part_Analysis/1_Motivation.tex}
@@ -273,14 +273,14 @@ a4paper,
  \input{Part_Analysis/9_Interpretation.tex}
  \input{Part_Analysis/10_Conclusion.tex}
 
-%  \part{Measurement of the jet transverse-momentum resolution} \label{part:resolution}
-%  \input{resolution.tex}
+ \part{Measurement of the jet transverse-momentum resolution} \label{part:resolution}
+ \input{resolution.tex}
 
-% \part{Summary} \label{part:Summary}
-% \input{summary.tex}
+\part{Summary} \label{part:Summary}
+\input{summary.tex}
 
 
-%  \bookmarksetup{startatroot} \cleardoublepage  \appendix \addtocontents{toc}{\protect\vskip40pt} \input{Appendix/appendix_analysis.tex} \input{Appendix/appendix_resolution.tex}
+\bookmarksetup{startatroot} \cleardoublepage  \appendix \addtocontents{toc}{\protect\vskip40pt} \input{Appendix/appendix_analysis.tex} \input{Appendix/appendix_resolution.tex}
 
 % Add bibliography to TOC
 \cleardoublepage 
@@ -289,17 +289,15 @@ a4paper,
 \bibliographystyle{lucas_unsrt}
 \bibliography{Thesis}
 
-% \cleardoublepage
-% \part*{~}
-% \thispagestyle{headings}
-% \input{publication.tex}
-% \cleardoublepage
-% \thispagestyle{headings}
-% \input{erklaerung.tex}
-% \cleardoublepage
-% \thispagestyle{empty}
-% \thispagestyle{empty}
-% \input{danksagung.tex}
+
+%% No page numbers from here on
+\part*{~}
+\ohead{~}
+\input{publication.tex}
+\cleardoublepage
+\input{erklaerung.tex}
+\cleardoublepage
+\input{danksagung.tex}
 
 
 \end{document}

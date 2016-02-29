@@ -88,7 +88,7 @@ public:
     histo=0;
     statistics=0;
     purity=0;
-
+    
     trackEta        = 0;
     trackEta        = 0;
     trackPt         = 0;
@@ -202,6 +202,9 @@ public:
 
 
 int makeFakeIasCRSRplots(double ptCut=20){
+
+  TeresaPlottingStyleRatio::init();
+  gROOT->ForceStyle();
 
   double ecaloCut=5;
   double iasCut=0.2;

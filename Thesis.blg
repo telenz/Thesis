@@ -2,126 +2,130 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: Thesis.aux
 The style file: lucas_unsrt.bst
 Database file #1: Thesis.bib
-I was expecting a `,' or a `}'---line 400 of file Thesis.bib
+Repeated entry---line 68 of file Thesis.bib
+ : @inproceedings{bib:Signatures_figure
+ :                                     ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 416 of file Thesis.bib
  :   
  :   year    = {2015}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1420 of file Thesis.bib
+You're missing a field name---line 1436 of file Thesis.bib
  : 
  : %  title   = {Jet Identification},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1477 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1493 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-JME-10-014",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1508 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1524 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SMP-14-002",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1543 of file Thesis.bib
+You're missing a field name---line 1559 of file Thesis.bib
  : 
  : %   author  = "{F. Pandolfi, D. del Re, M. Voutilainen}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1552 of file Thesis.bib
+You're missing a field name---line 1568 of file Thesis.bib
  : 
  : %   author  = "{F. Pandolfi, D. del Re, M. Voutilainen}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1568 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1584 of file Thesis.bib
  :   
  :   year    = {2015}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1676 of file Thesis.bib
+You're missing a field name---line 1692 of file Thesis.bib
  :       
  :       %note           = "[,11(2002)]",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1790 of file Thesis.bib
+You're missing a field name---line 1806 of file Thesis.bib
  : 
  : %      author         = "CMS Collaboration",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1818 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1834 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-LUM-13-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1845 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1861 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-003",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2017 of file Thesis.bib
+I was expecting a `,' or a `}'---line 2033 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-005",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2029 of file Thesis.bib
+I was expecting a `,' or a `}'---line 2045 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2364 of file Thesis.bib
+I was expecting a `,' or a `}'---line 2380 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-EXO-13-006",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2374 of file Thesis.bib
+I was expecting a `,' or a `}'---line 2390 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--empty author in bib:LEP_design_1984
+Warning--empty year in bib:TWIKI:PixelClusterSize
 Warning--empty publisher in bib:James:StaticticalMethods_2006
 Warning--empty year in bib:DataFormats
 Warning--empty year in bib:CMS:DT_Thesis
 Warning--empty title in bib:Neyman_1937
-Warning--empty author in bib:CMS:JME_PAS
-Warning--empty title in bib:CMS:JME_PAS
-You've used 65 entries,
+You've used 171 entries,
             2369 wiz_defined-function locations,
-            1063 strings with 19005 characters,
-and the built_in function-call counts, 17952 in all, are:
-= -- 2210
-> -- 389
+            1869 strings with 43606 characters,
+and the built_in function-call counts, 50673 in all, are:
+= -- 6321
+> -- 997
 < -- 0
-+ -- 152
-- -- 87
-* -- 1289
-:= -- 2346
-add.period$ -- 167
-call.type$ -- 65
++ -- 392
+- -- 221
+* -- 3699
+:= -- 6466
+add.period$ -- 458
+call.type$ -- 171
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 71
-duplicate$ -- 1089
-empty$ -- 1882
-format.name$ -- 71
-if$ -- 4922
+cite$ -- 177
+duplicate$ -- 3057
+empty$ -- 5254
+format.name$ -- 179
+if$ -- 13940
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 163
-newline$ -- 299
-num.names$ -- 43
-pop$ -- 353
+int.to.str$ -- 171
+missing$ -- 452
+newline$ -- 829
+num.names$ -- 104
+pop$ -- 908
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 538
+skip$ -- 1603
 stack$ -- 0
-substring$ -- 513
-swap$ -- 344
+substring$ -- 1836
+swap$ -- 1027
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 87
-width$ -- 67
-write$ -- 733
-(There were 15 error messages)
+while$ -- 254
+width$ -- 174
+write$ -- 1976
+(There were 16 error messages)
