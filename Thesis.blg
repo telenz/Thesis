@@ -81,6 +81,7 @@ I was expecting a `,' or a `}'---line 2390 of file Thesis.bib
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "FIXME"
 Warning--empty author in bib:LEP_design_1984
 Warning--empty year in bib:TWIKI:PixelClusterSize
 Warning--empty publisher in bib:James:StaticticalMethods_2006
@@ -89,7 +90,7 @@ Warning--empty year in bib:CMS:DT_Thesis
 Warning--empty title in bib:Neyman_1937
 You've used 171 entries,
             2369 wiz_defined-function locations,
-            1869 strings with 43606 characters,
+            1871 strings with 43616 characters,
 and the built_in function-call counts, 50673 in all, are:
 = -- 6321
 > -- 997
