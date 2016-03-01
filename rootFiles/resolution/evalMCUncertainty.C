@@ -50,8 +50,8 @@ int evalMCUncertainty(){
   TCanvas *c   = 0 ;
   TCanvas *c11 = 0;
 
-  TString pathNameAk7 = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS/systematicUncertainties/scripts/root_files_MCUncertainty/ak7PFCHS_";
-  TString pathNameAk5 = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS/systematicUncertainties/root_files_FINAL_";
+  TString pathNameAk7 = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS_primary_analysis/systematicUncertainties/scripts/root_files_MCUncertainty/ak7PFCHS_";
+  TString pathNameAk5 = "/nfs/dust/cms/user/tlenz/JER_checkoutVersion/JERgammajet/plots_2012/PF_L1CHS_primary_analysis/systematicUncertainties/root_files_FINAL_";
 
   //pathNameAk7 = "root_files_MCUncertainty/ak7PFCHS_";
   //pathNameAk5 = "root_files_MCUncertainty/ak5PFCHS_";
@@ -238,10 +238,10 @@ int evalMCUncertainty(){
     Ratioak5 -> SetLineColor(1);
     Ratioak5 -> GetFunction("nameak5")->SetLineColor(1);
 
-    Ratioak7 -> SetMarkerColor(9);
+    Ratioak7 -> SetMarkerColor(433);
     Ratioak7 -> SetMarkerStyle(24);
-    Ratioak7 -> SetLineColor(9);
-    Ratioak7 -> GetFunction("nameak7")->SetLineColor(9);
+    Ratioak7 -> SetLineColor(433);
+    Ratioak7 -> GetFunction("nameak7")->SetLineColor(433);
 
     legend  = 0;
     legend = new TLegend(0.19,0.75,0.92,0.9);
