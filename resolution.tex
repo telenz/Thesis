@@ -73,7 +73,7 @@ In Fig~\ref{res:fig:FeynmanDiagrams}, all tree-level processes contributing to a
   \label{res:fig:FeynmanDiagrams}
 \end{figure}
 Due to momentum conservation, the jet and the photon are back to back in the transverse plane, and therefore, $\ptvec^{\,\,\gamma} \approx -\ptvec^{\,\,\text{true jet}}$. 
-Because of the high resolution of the electromagnetic calorimeter, photon energies can be measured very accurately (with an resolution between 1.4\% and 3.8\% in the barrel region for $\sqrt{s}=8\tev$ data~\cite{bib:CMS:PhotonIdentification_8TeV}).
+Because of the high resolution of the electromagnetic calorimeter, photon energies can be measured very accurately (with a resolution between 1.4\% and 3.8\% in the barrel region for $\sqrt{s}=8\tev$ data~\cite{bib:CMS:PhotonIdentification_8TeV}).
 Thus, they can serve as an excellent estimator for the true jet transverse-momentum.
 
 
@@ -228,7 +228,7 @@ To mitigate effects from pileup, an additional requirement on the  transverse mo
 Photons are reconstructed with the help of the ECAL (see also Section~\ref{subsec:PhotonReconstruction}).
 In order to exploit the high resolution of the ECAL in the barrel region, a maximum pseudorapidity of the photon of $|\eta^{\gamma}| < 1.3$ is demanded for the jet \pt resolution measurement.
 
-Furthermore, the resolution is determined for different ranges in photon \pt to avoid mixing of different prescales of the various triggers. 
+Furthermore, the resolution is determined for different ranges in photon \pt to avoid mixing the different prescales of the various triggers. 
 In Table~\ref{res:tab:PhotonPtBins} the applied binning is shown with the respective triggers contributing to each $\pt^{\gamma}$~bin.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[b]
@@ -429,7 +429,7 @@ This has two reasons.
 First and most important, only the photon and the parton are balanced in the transverse plane.
 The jet \pt can differ from the \pt of the original parton since the transverse momentum of a jet is defined as the sum of all particle transverse momenta that are clustered within a cone of certain size.
 The difference can be caused by several effects, including the clustering of noise and particles that don't belong to the hadron shower of the original parton as well as out-of-cone showering, \ie the non-clustering of particles originating from the original parton.
-Second, the photon \pt can be wrongly measured such that the momementum balance between the photon and the parton is spoiled. 
+Second, the photon \pt can be wrongly measured such that the momentum balance between the photon and the parton is spoiled. 
 These effects can lead to a residual imbalance between the photon \pt and the generator-level jet \pt at $\alpha=0$ (parameter $q$ in Eq.~\eqref{eq:imbalance}).
 
 Due to the existence of a residual imbalance $q$, it is not possible to simply use the measured resolution at $\alpha=0$ as an estimator of the intrinsic resolution $c$.
@@ -442,7 +442,7 @@ In the following the estimator of the intrinsic resolution (fit parameter $c$ fr
 
 For consistency, the same approach is used for simulated events.
 The fitted function of the measured resolution (green line) in Fig.~\ref{fig:AlphaDependenceOfResolutions} corresponds to the fit function of Eq.~\eqref{eq:total} with the parameter $q$ fixed to the value obtained from the imbalance fit (blue line).
-Finally, the dotted grey line is the total resolution with the analytic expression of function \eqref{eq:total} with the parameters set to the fit values of the intrinsic (red) and the imbalance fit (blue). 
+The dotted grey line is the total resolution with the analytic expression of function \eqref{eq:total} with the parameters set to the fit values of the intrinsic (red) and the imbalance fit (blue). 
 It can be nicely seen that the total resolution and the fit function of the measured resolution (green line) are well in agreement.
 This implies, that the assumed functional forms of the resolution components and the assumed convolution leads indeed to a good description of the measured resolution.
 Further validations of the methodology will be described in Section~\ref{res:sec:validation}.
@@ -689,7 +689,7 @@ The resulting uncertainties are almost negligible and ranges between $0.1-0.2\%$
 \label{res:ch:results}
 The data-to-simulation resolution scale factors \rhores are determined in $19.7\fbinv$ of $pp$-collision data at $\sqrt{s} = 8 \tev$ with the methodology described in Chapter~\ref{res:ch:methodology}.
 In each $\alpha$, \ptgamma and $|\etafirstjet|$~bin, the width of the 99\% truncated response histogram is determined in simulation and data.
-Afterwards, the extrapolation to zero additional jet activity is carried out, by fixing the imbalance $q$ in simulation and in data to the value extracted from the imbalance extrapolation in simulation.
+Afterwards, the extrapolation to zero additional jet activity is carried out by fixing the imbalance $q$ in simulation and in data to the value extracted from the imbalance extrapolation in simulation.
 Exemplary extrapolations for the imbalance, the intrinsic and the measured resolution in simulation and the measured resolution in data are shown in Fig.~\ref{res:fig:ExtrapolationsWithData}.
 \begin{figure}[!t]
  \centering
@@ -810,7 +810,7 @@ During the study, it was found that the jet transverse-momentum response depends
 This was not accounted for in previous analyses~\cite{bib:CMS:JERCPaper_2011,CMS:PAS:JETResolution_7TeV}.
 Therefore, a new method has been developed within this thesis to consistently deal with the distortion of the response distribution due to additional jets from initial and final state radiation (see Section~\ref{res:ch:methodology}).\\
 
-The resolution in data is found to be systematically larger than in simulation by around $7\%$ to $20\%$ throughout the investigated \etajet plane. 
+The resolution in data is found to be systematically larger than in simulation by around $7\%$ to $20\%$ throughout the investigated \etajet range. 
 A possible \ptjet dependence of the resolution scale factors \rhores is not visible. 
 Thus, the ratio is parametrised with a constant for each \etajet~bin.
 The accuracy of the measurement is dominated by systematic uncertainties, leading to a total uncertainty of 3\% to 8\%.

@@ -395,73 +395,6 @@ Y/}.
   doi:10.1007/JHEP07(2013)122}}.
 %%CITATION = ARXIV:1305.0491;%%.
 
-\bibitem{bib:Fermi}
-{ Fermi-LAT} Collaboration, ``{The Large Area Telescope on the Fermi Gamma-ray
-  Space Telescope Mission}'', {\em Astrophys. J.} { 697} (2009) 1071--1102,
-  \href{http://www.arXiv.org/abs/0902.1089}{{\tt arXiv:0902.1089}}.
-\href{http://dx.doi.org/10.1088/0004-637X/697/2/1071}{{\tt
-  doi:10.1088/0004-637X/697/2/1071}}.
-%%CITATION = ARXIV:0902.1089;%%.
-
-\bibitem{bib:HESS}
-{ HESS} Collaboration, ``{The Status of the H.E.S.S. project}'', {\em New
-  Astron. Rev.} { 48} (2004) 331--337,
-  \href{http://www.arXiv.org/abs/astro-ph/0403052}{{\tt
-  arXiv:astro-ph/0403052}}.
-\href{http://dx.doi.org/10.1016/j.newar.2003.12.004}{{\tt
-  doi:10.1016/j.newar.2003.12.004}}.
-%%CITATION = ASTRO-PH/0403052;%%.
-
-\bibitem{bib:Fermi_DM}
-{ Fermi-LAT} Collaboration, ``{Searching for Dark Matter Annihilation from
-  Milky Way Dwarf Spheroidal Galaxies with Six Years of Fermi Large Area
-  Telescope Data}'', {\em Phys. Rev. Lett.} { 115} (2015), no.~23, 231301,
-  \href{http://www.arXiv.org/abs/1503.02641}{{\tt arXiv:1503.02641}}.
-\href{http://dx.doi.org/10.1103/PhysRevLett.115.231301}{{\tt
-  doi:10.1103/PhysRevLett.115.231301}}.
-%%CITATION = ARXIV:1503.02641;%%.
-
-\bibitem{bib:HESS_DM}
-{ HESS} Collaboration, ``{Search for Photon-Linelike Signatures from Dark
-  Matter Annihilations with H.E.S.S.}'', {\em Phys. Rev. Lett.} { 110} (2013)
-  041301, \href{http://www.arXiv.org/abs/1301.1173}{{\tt arXiv:1301.1173}}.
-\href{http://dx.doi.org/10.1103/PhysRevLett.110.041301}{{\tt
-  doi:10.1103/PhysRevLett.110.041301}}.
-%%CITATION = ARXIV:1301.1173;%%.
-
-\bibitem{bib:IndirectSearches_Fan_2013}
-J.~Fan and M.~Reece, ``{In wino veritas? Indirect searches shed light on
-  neutralino dark matter}'', {\em JHEP} { 10} (2013) 124,
-  \href{http://www.arXiv.org/abs/1307.4400}{{\tt arXiv:1307.4400}}.
-\href{http://dx.doi.org/10.1007/JHEP10(2013)124}{{\tt
-  doi:10.1007/JHEP10(2013)124}}.
-%%CITATION = ARXIV:1307.4400;%%.
-
-\bibitem{bib:IndirectSearches_Cohen_2013}
-T.~Cohen, M.~Lisanti, A.~Pierce{ et~al.}, ``{Wino dark matter under siege}'',
-  {\em JCAP} { 1310} (2013) 061, \href{http://www.arXiv.org/abs/1307.4082}{{\tt
-  arXiv:1307.4082}}.
-\href{http://dx.doi.org/10.1088/1475-7516/2013/10/061}{{\tt
-  doi:10.1088/1475-7516/2013/10/061}}.
-%%CITATION = ARXIV:1307.4082;%%.
-
-\bibitem{bib:IndirectSearches_Hryczuk_2014}
-A.~Hryczuk, I.~Cholis, R.~Iengo{ et~al.}, ``{Indirect detection analysis: wino
-  dark matter case study}'', {\em JCAP} { 1407} (2014) 031,
-  \href{http://www.arXiv.org/abs/1401.6212}{{\tt arXiv:1401.6212}}.
-\href{http://dx.doi.org/10.1088/1475-7516/2014/07/031}{{\tt
-  doi:10.1088/1475-7516/2014/07/031}}.
-%%CITATION = ARXIV:1401.6212;%%.
-
-\bibitem{bib:IndirectSearches_Beneke_2015}
-M.~Beneke, C.~Hellmann, and P.~Ruiz-Femenia, ``{Heavy neutralino relic
-  abundance with Sommerfeld enhancements - a study of pMSSM scenarios}'', {\em
-  JHEP} { 03} (2015) 162, \href{http://www.arXiv.org/abs/1411.6930}{{\tt
-  arXiv:1411.6930}}.
-\href{http://dx.doi.org/10.1007/JHEP03(2015)162}{{\tt
-  doi:10.1007/JHEP03(2015)162}}.
-%%CITATION = ARXIV:1411.6930;%%.
-
 \bibitem{bib:LHC_machine_2008}
 L.~Evans and P.~Bryant, ``{LHC Machine}'', {\em JINST} { 3} (2008) S08001.
 \href{http://dx.doi.org/10.1088/1748-0221/3/08/S08001}{{\tt
@@ -604,6 +537,15 @@ https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013, Topic
 (1997).
 %%CITATION = CERN-LHCC-97-033;%%.
 
+\bibitem{bib:CMS:PhotonIdentification_8TeV}
+{ CMS} Collaboration, ``{Performance of photon reconstruction and
+  identification with the CMS detector in proton-proton collisions at $\sqrt{s}
+  = 8\tev$}'', {\em JINST} { 10} (2015), no.~08, P08010,
+  \href{http://www.arXiv.org/abs/1502.02702}{{\tt arXiv:1502.02702}}.
+\href{http://dx.doi.org/10.1088/1748-0221/10/08/P08010}{{\tt
+  doi:10.1088/1748-0221/10/08/P08010}}.
+%%CITATION = ARXIV:1502.02702;%%.
+
 \bibitem{bib:CMS:TDR_HCAL}
 { CMS} Collaboration, ``{The CMS hadron calorimeter project: Technical Design
   Report}'', {\em Technical Design Report} {
@@ -617,6 +559,14 @@ https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013, Topic
   \href{https://cds.cern.ch/record/343814}{CERN-LHCC-97-032,CMS-TDR-3}}
 (1997).
 %%CITATION = CERN-LHCC-97-032;%%.
+
+\bibitem{bib:CMS:HLT_Trigger}
+{ CMS Trigger and Data Acquisition Group} Collaboration, ``{The CMS high level
+  trigger}'', {\em Eur. Phys. J.} { C46} (2006) 605--667,
+  \href{http://www.arXiv.org/abs/hep-ex/0512077}{{\tt arXiv:hep-ex/0512077}}.
+\href{http://dx.doi.org/10.1140/epjc/s2006-02495-8}{{\tt
+  doi:10.1140/epjc/s2006-02495-8}}.
+%%CITATION = HEP-EX/0512077;%%.
 
 \bibitem{CMS-PAS-PFT-09-001}
 { CMS} Collaboration, ``Particle-Flow Event Reconstruction in CMS and
@@ -735,15 +685,6 @@ K.~Goebel, ``{Probing supersymmetry based on precise jet measurements at the
 \href{http://dx.doi.org/10.1088/1742-6596/404/1/012045}{{\tt
   doi:10.1088/1742-6596/404/1/012045}}.
 %%CITATION = 00462,404,012045;%%.
-
-\bibitem{bib:CMS:PhotonIdentification_8TeV}
-{ CMS} Collaboration, ``{Performance of photon reconstruction and
-  identification with the CMS detector in proton-proton collisions at $\sqrt{s}
-  = 8\tev$}'', {\em JINST} { 10} (2015), no.~08, P08010,
-  \href{http://www.arXiv.org/abs/1502.02702}{{\tt arXiv:1502.02702}}.
-\href{http://dx.doi.org/10.1088/1748-0221/10/08/P08010}{{\tt
-  doi:10.1088/1748-0221/10/08/P08010}}.
-%%CITATION = ARXIV:1502.02702;%%.
 
 \bibitem{bib:CMS:muon_recoEff}
 { CMS} Collaboration, ``{Performance of CMS muon reconstruction in pp collision
@@ -930,6 +871,14 @@ J.~Hisano, S.~Matsumoto, M.~M. Nojiri{ et~al.}, ``{Direct detection of the Wino
 \href{http://dx.doi.org/10.1103/PhysRevD.71.015007}{{\tt
   doi:10.1103/PhysRevD.71.015007}}.
 %%CITATION = HEP-PH/0407168;%%.
+
+\bibitem{bib:IndirectSearches_Cohen_2013}
+T.~Cohen, M.~Lisanti, A.~Pierce{ et~al.}, ``{Wino dark matter under siege}'',
+  {\em JCAP} { 1310} (2013) 061, \href{http://www.arXiv.org/abs/1307.4082}{{\tt
+  arXiv:1307.4082}}.
+\href{http://dx.doi.org/10.1088/1475-7516/2013/10/061}{{\tt
+  doi:10.1088/1475-7516/2013/10/061}}.
+%%CITATION = ARXIV:1307.4082;%%.
 
 \bibitem{bib:Moroi:DarkMatter_1999}
 T.~Moroi and L.~Randall, ``{Wino cold dark matter from anomaly mediated SUSY

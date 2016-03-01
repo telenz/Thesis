@@ -135,7 +135,7 @@ In each TEC, 9 disks between a z-position of $120\cm < z < 280\cm$ are contained
 Each of the TID comprises three disks between $60\cm < z < 110\cm$.
 
 In the barrel region, a single-point resolution between $23 - 52\mum$ in the $r-\phi$ plane and $230 - 530\mum$  in the z-direction is achieved.
-Together with the silicon pixel tracker, a relative momentum resolution of $2-3\%$ for 100\gev tracks up to a pseudorapitity of $\eta = 1.6$ is achieved~\cite{FIXME}.
+Together with the silicon pixel tracker, a relative momentum resolution of $2.8\%$ for 100\gev muons up to a pseudorapidity of $\eta = 1.4$ is achieved~\cite{bib:CMS:tracking_8TeV}.
 
 
 \subsection*{Energy measurements in the tracking system}
@@ -152,7 +152,7 @@ The electromagnetic calorimeter (ECAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_ECAL} 
 It measures the energy and position of a traversing particle.
 It is divided into a barrel part and two endcaps, which are at a distance of 314\cm from the vertex.
 Figure~\ref{fig:ECAL} depicts a schematic sketch of the electromagnetic calorimeter system in the transverse plane.
-\begin{figure}[!t]
+\begin{figure}[!b]
   \centering
       \includegraphics[width=0.65\textwidth]{figures/experiment/CMS/Figures_Experimental_Apparatus_ECALRapidity.png}
   \caption{A quarter section of the ECAL in the $r-z$ plane. Taken from~\cite{bib:CMS:TDR_2006}.}  
@@ -163,7 +163,7 @@ The ECAL endcaps~(EE) start at $|\eta|=1.653$ and reach up to $|\eta|=3.0$.
 In front of the endcaps, a preshower detector ($1.653<|\eta|<2.6$) is installed with the main task to identify neutral pions.
 It additionally improves the position measurement of electrons and photons.
 
-The EB and EE consist of lead tungstate (PbWO$_4$) scintillating crystals, 61200 in the barrel region and 7324 in each of the endcaps. 
+The EB and EE consist of lead tungstate (PbWO$_4$) scintillating crystals, 61\,200 in the barrel region and 7\,324 in each of the endcaps. 
 Their advantage is the short radiation length ($X_0=0.89\cm$) and a small Moli\`ere radius (2.2\cm).
 Thus particles deposit their energy on rather short distances and a compact design is possible.
 Since the ECAL (except for the preshower detector) lacks a longitudinal segmentation, the information on the shower development is limited.
@@ -176,8 +176,9 @@ The resolution of an energy measurement in the calorimeter can be expressed by
 \left( \frac{\sigma}{E} \right)^2 = \left( \frac{S}{\sqrt{E}} \right)^2 + \left( \frac{N}{E} \right)^2 +C^2,
 \end{equation}
 with $S$ referring to the stochastic term, $N$ to the noise term, and $C$ to a constant term.
-For the ECAL at CMS the parameters of Eq.~\eqref{eq:CaloResolution} are measured to $S=3.63\,\sqrt{\text{GeV}}$, $N=0.124\gev$, and $C=0.26$~\cite{bib:CMS:TDR_2006}. 
-These numbers lead to an energy resolution of around 0.4\% for an electron with $E \approx 200\gev$ and around 0.6\% for an electron with $E \approx 50\gev$.
+%For the ECAL at CMS the parameters of Eq.~\eqref{eq:CaloResolution} are measured to $S=3.63\,\sqrt{\text{GeV}}$, $N=0.124\gev$, and $C=0.26$~\cite{bib:CMS:TDR_2006}. 
+In~\cite{bib:CMS:PhotonIdentification_8TeV}, the photon energy resolution at 8\tev has been estimated at $1.4-3.8\%$ in the ECAL barrel region and at $3.0-4.5\%$ in the ECAL endcaps.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The hadronic calorimeter}
@@ -185,7 +186,7 @@ The hadronic calorimeter (HCAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_HCAL} of the 
 A schematic sketch is depicted in Fig.~\ref{fig:HCAL}.
 \begin{figure}[!b]
   \centering
-      \includegraphics[width=0.65\textwidth]{figures/experiment/CMS/fig_HCALdiagram_smaller_size.png}
+      \includegraphics[width=0.70\textwidth]{figures/experiment/CMS/fig_HCALdiagram_smaller_size.png}
   \caption{A quarter section of the CMS detector including the HCAL in a transverse view. Taken from~\cite{bib:CMS:experiment}.}  
   \label{fig:HCAL}
 \end{figure}
@@ -218,7 +219,7 @@ The HF is divided into 13 towers where almost all towers have a spread of $\Delt
 \section{The muon system}
 \label{sec:MuonSystem}
 The muon system~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_MuonSystem} is the outermost component of the CMS detector.
-It comprises three different types of gaseous detectors, mounted into the iron return yokes: drift tube (DT) chambers in the barrel region ($|\eta|<1.2$), cathode strip chambers (CSC) in the endcap region ($1.04<|\eta|<2.4$) and resistive plate chambers (RPC) in the barrel as well as the endcap region ($|\eta|<1.6$) (see Fig.~\ref{fig:MuonSystem} for a schematic sketch of the muon system).
+It comprises three different types of gaseous detectors, mounted into the iron return yokes: drift tube (DT) chambers in the barrel region ($|\eta|<1.2$), cathode strip chambers (CSC) in the endcap region ($1.04<|\eta|<2.4$), and resistive plate chambers (RPC) in the barrel as well as the endcap region ($|\eta|<1.6$) (see Fig.~\ref{fig:MuonSystem} for a schematic sketch of the muon system).
 \begin{figure}[!b]
   \centering
       \includegraphics[width=0.60\textwidth]{figures/experiment/CMS/Figures_Experimental_Apparatus_MuonDetector.png}
@@ -240,7 +241,7 @@ It is used for the level-1 trigger system as well.
 \section{The trigger system}
 \label{sec:TriggerSystem}
 Because of the impossibility of storing each event occurring at the CMS experiment (cf.~bunch crossing rate of 20\mhz), a multistage trigger system~\cite{bib:CMS:TDR_2006} is used to achieve a drastic reduction of recorded events by nearly six orders of magnitude.
-It comprises two main parts: a so-called level-1 (L1) trigger system and a high-level trigger (HLT) system.
+It comprises two main parts: a so-called level-1 (L1) trigger system and a high-level trigger (HLT)~\cite{bib:CMS:HLT_Trigger} system.
 
 The L1 triggers need to provide a very fast decision (3.2\mus, where around 1\mus is allocated to the actual L1 trigger calculations) whether an event shall be recorded or not.
 During this time, the recorded event data is held in buffers located close to the single detector components.
@@ -249,7 +250,7 @@ Objects used for these decisions are so-called ``trigger primitive'' objects: ph
 The design value of the number of events per second that pass this trigger stage is 100\khz.
 
 After a time of 3.2\mus, the stored data in the buffers close to the single detector components are transferred to the front-end readout buffers in case the event passed the L1-trigger requirements.
-By partial event reconstruction and the use of various detector signals (calorimeter, muon information followed by pixel information and full event reconstruction), higher event objects can be used to check whether HLT-trigger requirements are fulfilled.
+Starting from the L1 candidates, higher event objects are reconstructed which are used to check whether HLT-trigger requirements are fulfilled.
 On HLT level, the decision time amounts to 50\ms and a reduction from 100\khz to 100\hz of event recording is achieved.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -263,7 +264,7 @@ This is known as the particle-flow event reconstruction algorithm~\cite{CMS-PAS-
 In Fig.~\ref{fig:CMSslice}, a slice through the CMS detector is shown with the signatures of different particles indicated as coloured lines.
 
 In the next section an introduction to this algorithm is given, followed by the definition and classification of physics objects at the CMS experiment.
-\begin{figure}[!ht]
+\begin{figure}[!t]
   \centering
       \includegraphics[width=0.99\textwidth]{figures/experiment/ObjectReconstruction/slice_white_smaller_size.pdf}
   \caption{A radial slice through the CMS detector with several particle signatures indicated as coloured lines. Taken from~\cite{bib:Signatures_figure}.}  
