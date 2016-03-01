@@ -78,7 +78,7 @@ This makes \dedx  a very well discriminating variable.
   \caption{Comparison between the Bethe mean energy loss, restricted energy loss and the most probable energy loss described by the Landau-Vavilov-Bichsel function for muons for different values of absorber thickness of silicon. $T_{\text{cut}}$ refers to the maximal energy transfer for the restricted energy loss calculation. The absorber thickness is normalised to the absorber density $\rho$, thus $[x] = g \cdot cm^{-2}$. Taken from~\cite{bib:PDG_2014}.} 
   \label{fig:dEdx_Bethe_Landau}
 \end{figure}
-Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles due to the different velocity distributions.\\
+Thus, the energy loss per path length can be used to discriminate between SM particles and new heavy charged particles due to the different velocity distributions.%\\
 
 As said before, the most probable energy loss is much more stable compared to the Bethe mean energy loss.
 Still, combining only a few measurements of $\Delta E/\Delta x$ can also lead for $\Delta_p/dx$ to large fluctuations towards high \dedx values.
@@ -103,14 +103,13 @@ Every pixel was calibrated to the same response, so that the whole pixel tracker
 Unfortunately, due to various reasons, such as the imperfect constancy of the reference signal, or radiation and temperature induced changes, the energy calibration could not ensure a fully calibrated pixel tracker.
 
 This imperfection of the gain calibration can be seen in Fig.~\ref{fig:StabilityPlot_beforeCalibration}, where the mean of the harmonic-2 estimator $\langle\ihtwo \rangle$ for high-quality muon tracks with $\pt>45\gev$ over the full data-taking period in 2012 is shown.
-%\footnote{Required quality criteria: $\nhits \geq 8$; $\nhits^{\text{Pixel}} \geq 2$; Number of $\Delta E/\Delta x$ measurements $\geq 6$; $\chi^2/\ndof < 5$; high-purity tracks as defined in~\cite{bib:CMS:Tracking_2010}; vertex compatibility; $\sigma_{\pt}/\pt \leq 0.25$}
 Four different steps can be spotted.
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{Mean of all track's \dedx (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run.} 
+  \caption{Mean of all track's \dedx (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run (see Section~\ref{ch:LargeHadronCollider} for a definition).} 
   \label{fig:StabilityPlot_beforeCalibration}
 \end{figure}
 The first and the third steps correspond to changes in the settings of the tracker due to irradiation.
@@ -177,7 +176,7 @@ The calibration factor can then be used to scale every single measurement in a m
 \end{equation}
 The determination of the calibration factor is done for every of the five time intervals, shown in Fig.~\ref{fig:StabilityPlot_beforeCalibration} independently, in order to get rid of the time dependency. 
 The outcome of the application of the calibration factors to the single energy measurements in the pixel tracker can be seen in Fig.~\ref{fig:StabilityPlot_afterCalibration}.
-\begin{figure}[!b]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_afterCalibration_withoutStepFits_NEW.pdf}
@@ -215,7 +214,7 @@ c_{\text{absolute}} = \frac{\langle dE/dx_{\text{strip}} \rangle}{\langle dE/dx_
   \caption{Mean of all track's \dedx (harmonic-2 estimator) measured in the silicon strip detector over the full year 2012. The average most probable \dedx is $\ihtwo=3.303\,\mev/\cm$. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_Strip}
 \end{figure}
-This factor is then applied on top of $c_{\text{inter}}$ for all pixel modules.\\
+This factor is then applied on top of $c_{\text{inter}}$ for all pixel modules.
 
 Finally, an absolute calibration factor needs to be determined for the simulated samples, where the simulated pixel tracker is calibrated to the average \dedx of the silicon strip measured in data.
 
@@ -229,11 +228,7 @@ However, it was shown in \cite{bib:Quertenmont_2010} that a better discriminatio
 \ie determining the probability that the set of all $\Delta E/ \Delta x$ belonging to one track is actually compatible with the hypothetical probability distribution of a MIP.
 
 That a measured sample has been drawn from a specific distribution can be tested with the co-called Smirnov-Cram\'{e}r-von Mises test~\cite{bib:Anderson:CramerVonMises_1962,bib:James:StaticticalMethods_2006}.
-%It is deduced from the integral of the squared difference of the measured distribution $P_N(x)$ to the hypothesis distribution $P(x)$
 It is deduced from the integral of the squared difference of a measured distribution to a hypothesis distribution, 
-%\begin{equation}
-%I_s = \int\limits_{-\infty}^{\infty} \left[P_{N}(x)-P(x)\right]^2 dP(x)
-%\end{equation}
 and leads to a test statistics of~\cite{bib:Quertenmont_2010}
 \begin{equation}
 I_s = \frac{3}{N} \cdot \left( \frac{1}{12N} + \sum\limits_{i=1}^N \left[ P_i - \frac{2i-1}{2N} \right]^2 \right),
@@ -252,10 +247,6 @@ A value of \ias close to zero indicates good compatibility with the MIP hypothes
 The underlying probability distribution of the energy release for a given path length in the pixel tracker, which is used for the determination of P$_i$, is extracted from the same ``minimum bias'' sample used for the pixel energy calibration.
 In total 28 different templates each for a different given path length are created.
 In Fig.~\ref{fig:ProbabilityTemplate} the probability distribution template for the pixel tracker in data and simulation is shown.
-The corresponding templates for the energy release in the silicon strip detector were already built by  \cite{bib:Quertenmont_2010}.
-
-
-A comparison between the energy release by MIPs (\ias) in data and simulation for high-quality tracks with $p>5\gev$ and $|\eta|<2.1$ can be found in Fig.~\ref{fig:Data-MC-Dedx_MIPs}.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -265,7 +256,11 @@ A comparison between the energy release by MIPs (\ias) in data and simulation fo
   \caption{Cumulative probability for a MIP to release a $\Delta E/ \Delta x$ (y-axis) vs. the path length (x-axis) in data (left) and simulation (right) for the pixel tracker based on the ``minimum bias'' sample.}
   \label{fig:ProbabilityTemplate}
 \end{figure}
-\begin{figure}[!bt]
+The corresponding templates for the energy release in the silicon strip detector were already built by  \cite{bib:Quertenmont_2010}.
+
+
+A comparison between the energy release by MIPs (\ias) in data and simulation for high-quality tracks with $p>5\gev$ and $|\eta|<2.1$ can be found in Fig.~\ref{fig:Data-MC-Dedx_MIPs}.
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/PixelCalibration/htrackASmiSmallRange_log_MIPs.pdf}
@@ -333,17 +328,15 @@ This background suppression improvement is most pronounced for very tight cuts o
 
 \begin{figure}[!b]
   \centering 
-%  \vspace{50pt}
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/rocplot_wjets_mass_100GeV_ctau_5cm.pdf} 
-    \includegraphics[width=0.49\textwidth]{figures/analysis/rocplot_wjets_mass_100GeV_ctau_50cm.pdf} \\
-    \includegraphics[width=0.49\textwidth]{figures/analysis/rocplot_wjets_mass_500GeV_ctau_5cm.pdf} 
-    \includegraphics[width=0.49\textwidth]{figures/analysis/rocplot_wjets_mass_500GeV_ctau_50cm.pdf}
+    \includegraphics[width=0.45\textwidth]{figures/analysis/rocplot_wjets_mass_100GeV_ctau_5cm.pdf} 
+    \includegraphics[width=0.45\textwidth]{figures/analysis/rocplot_wjets_mass_100GeV_ctau_50cm.pdf} \\
+    \includegraphics[width=0.45\textwidth]{figures/analysis/rocplot_wjets_mass_500GeV_ctau_5cm.pdf} 
+    \includegraphics[width=0.45\textwidth]{figures/analysis/rocplot_wjets_mass_500GeV_ctau_50cm.pdf}
   \end{tabular}
   \caption{Signal selection efficiency vs. background selection efficiency with (red) and without (black) pixel information.
            Each point correspond to one selection cut in \ias.
            The figure is based on a simulated \WJets sample and a simulated signal sample with chargino-chargino production, both subject to a selection of high-quality tracks (without a selection on \nhits) with $\pt>10\gev$.}
-%  \vspace{40pt}
   \label{fig:ROCplots}
 \end{figure} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -184,6 +184,7 @@ A summary of the $Z\rightarrow e\bar{e}\,+\,\text{fake track}$ event selection c
 In Fig.~\ref{fig:Zpeak}, the invariant mass distribution $M_{\text{inv}}$ is shown for $Z\rightarrow \mu \bar{\mu}$ and $Z\rightarrow e \bar{e}$ events in simulation and data after the event-based selections described above (Tables~\ref{tab:FakeElectronSample} and~\ref{tab:FakeMuonSample}).
 \begin{figure}[!tb]
   \centering 
+  \vspace{20pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hMinvMuons_lin_chiTracksnoSelectionTightMuons.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hMinvElectrons_lin_chiTracksnoSelectionTightElectrons.pdf}
@@ -198,7 +199,6 @@ Whether this is indeed the case can be tested on simulated \Zlep events.
 As can be seen in Fig.~\ref{fig:BkgComposition}, a reasonable purity in fake tracks can be achieved by applying the candidate track selection on top of the \Zlep selection.
 \begin{figure}[!tb]
   \centering 
-  \vspace{20pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/ParticleCompositionInFakeCS_Mu.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Background/ParticleCompositionInFakeCS_Ele.pdf}
@@ -275,6 +275,9 @@ To enrich fake tracks, it is possible to invert the selection cuts on the number
 Figure~\ref{fig:NMissInnerAndMiddle} shows the distribution of the number of missing inner plus missing middle hits for fake and leptonic tracks in simulated \WJets events.
 It can be seen that this selection is enriched by fakes.
 The resulting purity of fakes in \fakeCR is about 98\% (see Fig.~\ref{fig:IasSRCRFakes}). 
+
+Additionally, it must be checked whether the \ias shape in \fakeCR is representative for the \ias shape in the signal region.
+As the exact definition of the signal region will be addressed during optimisation, this test is done for various \pt selection cuts.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
@@ -283,15 +286,9 @@ The resulting purity of fakes in \fakeCR is about 98\% (see Fig.~\ref{fig:IasSRC
   \caption{Normalised number of missing inner plus missing middle hits for fake and leptonic tracks for the full candidate track selection with the selection requirements on $N_{\text{miss}}^{\text{inner}}$ and $N_{\text{miss}}^{\text{middle}}$ removed. Trigger selection and QCD suppression cuts were removed to enhance the statistical precision.}
   \label{fig:NMissInnerAndMiddle}
 \end{figure}
-
-Additionally, it must be checked whether the \ias shape in \fakeCR is representative for the \ias shape in the signal region.
-As the exact definition of the signal region will be addressed during optimisation, this test is done for various \pt selection cuts.
-
-The comparison of the \ias shape of fake tracks can only be done with simulated events.
-Thus, simulated \WJets events are used to select fake tracks in both regions.
-A comparison of the shape for the candidate track selection and the \fakeCR is shown in Fig.~\ref{fig:IasSRCRFakes}.
 \begin{figure}[!b]
   \centering 
+\vspace{40pt}
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hASmi_fakes_ECalaoLe5_trackPtGt20.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hASmi_fakes_ECalaoLe5_trackPtGt40.pdf}
@@ -300,6 +297,11 @@ A comparison of the shape for the candidate track selection and the \fakeCR is s
            To enhance the statistical precision only the track-based selection is applied.}
   \label{fig:IasSRCRFakes}
 \end{figure}
+
+
+The comparison of the \ias shape of fake tracks can only be done with simulated events.
+Thus, simulated \WJets events are used to select fake tracks in both regions.
+A comparison of the shape for the candidate track selection and the \fakeCR is shown in Fig.~\ref{fig:IasSRCRFakes}.
 
 The \ias shape is almost identical in the signal and in the control region which makes the definition of the control region perfectly suited for estimating the \ias shape from \fakeCR in data.
 The remaining shape differences are taken into account as a systematic uncertainty (discussed in Section~\ref{sec:FakeIasUncertainty}).
