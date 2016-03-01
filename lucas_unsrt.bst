@@ -633,7 +633,7 @@ FUNCTION {format.pages.nopp}
 FUNCTION {format.volume}
 { volume empty$
     { "" }
-    { "{\bf " volume * "}" * }
+    { "{ " volume * "}" * }
   if$
 }
 

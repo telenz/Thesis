@@ -7,7 +7,7 @@ twoside=true,
 headsepline,     % Line under page header
 headings=normal,
 open=right,
-numbers=noenddot, % Otherwise there will be a dot after the chapter numbering in case letters are used somewhere e.g. in the appendix
+% numbers=noenddot, % Otherwise there will be a dot after the chapter numbering in case letters are used somewhere e.g. in the appendix
 a4paper,
 11pt
 ]{scrreprt} %report scrreprt
@@ -47,7 +47,7 @@ a4paper,
 % N.B.: floatpagefraction MUST be less than topfraction !!
 \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
 % remember to use [htp] or [htpb] for placement
-
+% \usepackage[titletoc,toc,title]{appendix}
 \usepackage{scrhack}
 \usepackage{afterpage}
 \usepackage{caption}
@@ -85,7 +85,6 @@ a4paper,
 \usepackage{bbm}
 \usepackage{amsfonts}
 \usepackage[utf8]{inputenc}
-
 % \usepackage{subfigure}
 % \usepackage{subfig}
 %\usepackage{hepnames}
@@ -236,7 +235,24 @@ a4paper,
 
 %Expand bookmark level
 % \hypersetup{bookmarksdepth=3	}
-
+\makeatletter
+\g@addto@macro\appendix{%
+  \renewcommand*{\chapterformat}{%
+    {\chapapp\nobreakspace\thechapter\autodot\enskip}%
+  }
+%   \renewcommand*{\chaptermarkformat}{%
+%     {\chapapp\nobreakspace\thechapter\autodot\enskip}%
+%   }
+%   \let\oldaddcontentsline\addcontentsline
+%   \newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{#1}{#2}{\chapapp\nobreakspace#3}}
+%   \let\oldchapter\chapter
+%   \renewcommand*\chapter[1]{%
+%     \let\addcontentsline\hackedaddcontentsline%
+%     \oldchapter{#1}%
+%     \let\addcontentsline\oldaddcontentsline%
+%   }
+}
+\makeatother
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -279,13 +295,11 @@ a4paper,
 \part{Summary} \label{part:Summary}
 \input{summary.tex}
 
-\newpage
-\thispagestyle{empty}
-\quad
-\cleardoublepage
-\thispagestyle{empty}
-
-\bookmarksetup{startatroot} \cleardoublepage  \appendix \addtocontents{toc}{\protect\vskip30pt} \input{Appendix/appendix_analysis.tex} \input{Appendix/appendix_resolution.tex}
+\newpage \thispagestyle{empty} \quad \cleardoublepage \thispagestyle{empty}
+\bookmarksetup{startatroot} \cleardoublepage  \appendix 
+\addtocontents{toc}{\protect\vskip30pt} 
+\addtocontents{titletoc}{\protect\renewcommand\protect\cftchappresnum{\appendixname\ }}
+\input{Appendix/appendix_analysis.tex} \input{Appendix/appendix_resolution.tex}
 
 % Add bibliography to TOC
 \cleardoublepage 

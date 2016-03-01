@@ -90,7 +90,7 @@ Warning--empty year in bib:CMS:DT_Thesis
 Warning--empty title in bib:Neyman_1937
 You've used 171 entries,
             2369 wiz_defined-function locations,
-            1871 strings with 43616 characters,
+            1870 strings with 43611 characters,
 and the built_in function-call counts, 50673 in all, are:
 = -- 6321
 > -- 997
