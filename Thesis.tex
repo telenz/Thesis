@@ -242,10 +242,10 @@ a4paper,
     {\chapapp\nobreakspace\thechapter . \enskip}%
   }
 }
-\makeatletter % necessary for using \@chapapp
-\renewcommand{\chaptermark}[1]{%
-  \markboth{\@chapapp\ \thechapter.\ #1}{}}
-\makeatother
+% \makeatletter % necessary for using \@chapapp
+% \renewcommand{\chaptermark}[1]{%
+%   \markboth{\@chapapp\ \thechapter.\ #1}{}}
+% \makeatother
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -288,7 +288,8 @@ a4paper,
 \part{Summary} \label{part:Summary}
 \input{summary.tex}
 
-\newpage \thispagestyle{empty} \quad \cleardoublepage \thispagestyle{empty}
+\part*{~}
+% \newpage \thispagestyle{empty} \quad \cleardoublepage \thispagestyle{empty}
 \bookmarksetup{startatroot} \cleardoublepage  \appendix 
 \addtocontents{toc}{\protect\vskip30pt} 
 \addtocontents{titletoc}{\protect\renewcommand\protect\cftchappresnum{\appendixname\ }}
@@ -302,7 +303,7 @@ a4paper,
 \bibliography{Thesis}
 
 
-%% No page numbers from here on
+% No page numbers from here on
 \part*{~}
 \ohead{~}
 \input{publication.tex}
