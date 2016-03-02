@@ -1,8 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Large Hadron Collider}
-\ref{ch:LargeHadronCollider}
+\label{ch:LargeHadronCollider}
 
 The Large Hadron Collider (LHC)~\cite{bib:LHC_machine_2008,bib:LHC_2004} is a particle accelerator installed in the former LEP~\cite{bib:LEP_design_1984} tunnel at CERN\footnote{European Organisation for Nuclear Research}.
 It is 26.7\km in circumference and consists of two separate rings, which are, in periods of operation, inhabited by two counter-circulating beams.
@@ -183,7 +183,7 @@ In~\cite{bib:CMS:PhotonIdentification_8TeV}, the photon energy resolution at 8\t
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The hadronic calorimeter}
-The hadronic calorimeter (HCAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_HCAL} of the CMS detector is splitted into four different detector modules: the hadron barrel (HB), the hadron outer (HO), the hadron endcap (HE) and the hadron forward (HF) calorimeters.
+The hadronic calorimeter (HCAL)~\cite{bib:CMS:TDR_2006,bib:CMS:TDR_HCAL} of the CMS detector is split into four different detector modules: the hadron barrel (HB), the hadron outer (HO), the hadron endcap (HE) and the hadron forward (HF) calorimeters.
 A schematic sketch is depicted in Fig.~\ref{fig:HCAL}.
 \begin{figure}[!b]
   \centering
@@ -545,7 +545,7 @@ The association criteria rely on spatial distances between the superclusters and
 \label{subsec:TauReconstruction}
 The tau reconstruction at CMS refers to the reconstruction of hadronically decaying taus (a fraction of around 65\% of taus decays hadronically).
 Leptonically decaying taus can be identified through the reconstruction of the muon or the electron in the final state.
-In the following a tau refers therefore to hadronically decaying taus only.
+In the following, ``tau''  therefore refers to hadronically decaying taus only.
 At CMS, the main algorithm used to identify and reconstruct taus is the so-called hadron plus strip algorithm (HPS)~\cite{bib:CMS:TauReconstruction_8TeV,bib:CMS:TauReconstruction_7TeV}, which is also used in this thesis.
 The description of the tau reconstruction algorithm within this thesis follows~\cite{bib:CMS:TauReconstruction_8TeV}.
 
@@ -554,7 +554,7 @@ First, reconstructed PF particles are combined in a way that they are compatible
 Second, multivariate techniques are used in order to discriminate the candidate taus against decays from gluon or quark jets and from muons and electrons. 
 The HPS algorithm starts from reconstructed jets with a radius parameter of $R=0.5$ and $\pt>14\gev$ and $|\eta|<2.5$.
 
-The successful identification of a tau requires the reconstruction of a neutral pion.
+The successful reconstruction of a specific decay mode of a tau requires the reconstruction of a neutral pion.
 A neutral pion is present in most of the hadronic decays and decays into two photons with a probability of $\sim 99\%$. 
 The photons in turn convert into electron pairs with a high probability inside the tracker volume.
 Therefore, photons and electrons are clustered into strips in the $\eta-\phi$ plane in order to identify possible $\pi^0$.
@@ -572,7 +572,7 @@ Furthermore, for all taus in this thesis, the discriminators used for the reduct
 Finally, a loose isolation criterion is imposed, which is calculated by the pileup corrected scalar sum of the transverse momentum of all charged particles and photons with a \pt larger than 0.5\gev in a cone of $R=0.5$ around the tau.
 
 \subsection{Reconstruction of missing transverse energy}
-The particle-flow missing transverse energy, PF \met, in an event is defined as the negative vectorial sum of all particle-flow particles' \pt.
+The particle-flow missing transverse energy, PF \met, in an event is defined as the negative vectorial sum of the \pt of all particle-flow particles.
 Thus - neglecting momentum mismeasurements - it refers to the transverse momentum of all only weakly interacting particles in the event.
 In order to avoid negative effects from \eg tracker inefficiencies, non-linear calorimeter responses, etc., \met can be measured more precisely by correcting the transverse momentum of all jets contained in an event with the jet energy corrections (see Section~\ref{sec:JetReconstruction}).
 
@@ -581,7 +581,7 @@ For a more detailed explanation of \met as well as for information on the perfor
 \section{Event cleaning}
 The two analyses described in this thesis are subject to an event cleaning procedure as recommended by the CMS collaboration~\cite{bib:CMS:EventCleaning}.
 It refers to the application of several filters to remove events with detector signals not caused by particles from the hard interaction. 
-In the following, the filters are listed and a short description will be given.
+In the following, the filters are listed and briefly described.
 \begin{description} 
 \item \textbf{HBHE noise filter:} This filter rejects anomalous HCAL noise in the barrel (HB) and in the endcap (HE). 
                                   The noise in the HCAL is mainly related to the hybrid photodiodes (HPD) and readout boxes (RBX). 
@@ -617,7 +617,7 @@ The generation of simulated samples is done with the help of Monte Carlo (MC) me
 MC techniques are used to randomly sample points according to a specified probability distribution.
 Software packages that simulate the hard interaction between two partons are referred to as matrix element generators.
 Within this thesis, \madgraph~\cite{bib:Madgraph_2014} or \pythiaSix~\cite{bib:Pyhtia6_2006} are used as matrix element generators.
-Which types of partons of the two colliding protons are involved in the primary interaction is specified by so-called parton distribution functions (PDFs).
+Which types of partons of the two colliding protons are involved in the hard interaction is specified by so-called parton distribution functions (PDFs).
 They describe the probability of a parton (up-quarks, down-quarks, gluons, sea quarks) to carry a certain energy fraction of the proton and thus define the probability for each parton to take part in the hard interaction process.
 In this thesis, all simulated samples are generated with the PDFs provided by the \cteq group~\cite{Pumplin:2002vw}.
 

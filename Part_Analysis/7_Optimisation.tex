@@ -12,11 +12,11 @@ This variable is, however, not considered in this analysis because the discrimin
 SUSY models with different chargino lifetimes and masses are characterised by different \pt and \ias distributions as well as different theoretical cross sections.
 Therefore, the usual search optimisation strategy that maximises $N_S/\Delta B$ ($N_S$ = number of signal events of model $S$, $\Delta B$ = background uncertainty) implies a potential fine-tuning on the specific SUSY cross sections.
 In order to keep the search as general as possible, a cross section independent optimisation is performed.
-This is achieved by a minimisation of the cross section for which a 5$\sigma$-discovery ($\kappa=5$) of the corresponding signal model is expected, \ie finding the optimal selection cuts for \pt and \ias for which the lowest possible cross section, $\sigma_{\text{min}}$, can be discovered
+This is achieved by a minimisation of the cross section for which a 5$\sigma$-discovery (significance $Z=5$) of the corresponding signal model is expected, \ie finding the optimal selection cuts for \pt and \ias for which the lowest possible cross section, $\sigma_{\text{min}}$, can be discovered
 \begin{align}
 \label{eq:optimisation}
 %\frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\Delta B} = \frac{\sigma_{\text{min}}\cdot \mathcal{L}}{\sqrt{ \left(\Delta B_{\text{stat}}\right)^2 + \left(\Delta B_{\text{sys}}\right)^2}} \geq 5.
-\kappa = \frac{\alpha_{\text{min}} \cdot N_S(\text{mass},\ctau,\pt^{\text{cut}}, \ias^{\text{cut}})}{\Delta B (\pt^{\text{cut}}, \ias^{\text{cut}})} = 5. && \text{with   } \alpha_{\text{min}} = \frac{\sigma_{\text{min}}}{\sigma_{S}}.
+Z = \frac{\alpha_{\text{min}} \cdot N_S(\text{mass},\ctau,\pt^{\text{cut}}, \ias^{\text{cut}})}{\Delta B (\pt^{\text{cut}}, \ias^{\text{cut}})} = 5. && \text{with   } \alpha_{\text{min}} = \frac{\sigma_{\text{min}}}{\sigma_{S}}.
 \end{align}
 The number of expected events $N_S$ of the signal model $S$ depends on the \pt and \ias selection cut as well as the mass and the lifetime of the chargino.
 The uncertainty on the background $\Delta B$ is dependent on the \pt and \ias cut, and takes into account the full systematic uncertainty as well as the statistical uncertainty on the background prediction which is defined as the 68\% one sided upper limit of a Poisson distribution with $\mu = N_B$ estimated with the Neyman construction~\cite{bib:Neyman_1937,bib:PDG_2014}.
@@ -31,14 +31,14 @@ The corresponding results are shown in Table~\ref{tab:optimisation}.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!h]
 \centering
-\caption{Optimal \pt and \ias selection cuts and the corresponding minimum cross section $\sigma_{\text{min}}$ that can be discovered with 5$\sigma$ significance for different signal models.
+\caption{Optimal \pt and \ias selection cuts and the corresponding minimum cross section $\sigma_{\text{min}}$ that can be discovered with 5$\sigma$ significance for signal models with different chargino masses and lifetimes.
          For some signal samples, an optimisation result is not available due to the limited size of these samples.}
 \label{tab:optimisation}
-\makebox[0.99\textwidth]{
+\resizebox{\textwidth}{!}{
 \begin{tabular}{c |c| c| c| c}
 \multicolumn{5}{c}{} \\
 \toprule
-Mass [\gev] & Lifetime \ctau [\cm] & Optimal \pt cut & Optimal \ias cut & $\sigma_{\text{min}}$ \\
+Mass [\gev] & Lifetime \ctau [\cm] & Optimal \pt cut [\gev] & Optimal \ias cut & $\sigma_{\text{min}}$ [\pb] \\
 \midrule
 100&                     1&                       30&                      0.05&                    61.596\\
 200&                     1&                       20&                      0.05&                    43.414\\
@@ -70,7 +70,7 @@ Additionally, signal models with longer chargino lifetimes have a more pronounce
 For high masses the highest search sensitivity is always achieved by a high \ias selection cut of 0.3.\\
 
 In order to visualise the mass and \ctau dependence of the optimal \pt and \ias selection, the optimisation results for two very different lifetimes (5\cm and 50\cm) and masses (100\gev and 500\gev) are shown in Fig.~\ref{fig:optimisation}, where the minimum cross section that is possible to discover is shown in the $\pt-\ias$ plane.
-For simplicity, general systematic uncertainties on the leptonic and the fake background of 100\% and 20\% respectively are imposed in the visualisation.
+For simplicity, general systematic uncertainties on the leptonic and the fake background of 100\% and 20\% respectively are used for the visualisation.
 Uncertainties arising from limited statistical precision of the samples used for the background estimation are propagated consistently into Eq.~\eqref{eq:optimisation}.
 \begin{figure}[!h]
   \centering 

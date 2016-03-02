@@ -12,7 +12,7 @@ The interpretation will then be done with statistical methods that allow for the
 The signal models used for this interpretation are listed in Section~\ref{sec:SignalSamples}.
 
 \section{Systematic uncertainties on the simulated signal samples}
-The systematic uncertainties on the number of signal events in the four signal regions are caused by uncertainties in the generation and simulation of signal events and the integrated luminosity of the considered data.
+The systematic uncertainties on the number of signal events in the four signal regions are caused by uncertainties in the generation and simulation of signal events and the integrated luminosity during the considered data-taking period.
 
 All systematic uncertainties are estimated for each signal model (cf. Section~\ref{sec:SignalSamples}) and each search bin separately.
 In the following, the sources of systematic uncertainties are discussed and the range of the corresponding uncertainty is given.
@@ -38,13 +38,13 @@ The HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 trigger with the higher MET th
 It is therefore emulated using HLT trigger information. 
 More details on the emulation of this trigger can be found in Appendix~\ref{app:TriggerEmulation}.
 
-The trigger uncertainty is assessed by comparing data-simulation differences of the trigger efficiency.
+The trigger uncertainty is assessed by comparing data to simulation differences of the trigger efficiency.
 This uncertainty has been quantified within~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN} by comparing simulated and measured trigger turn-on curves and determining weights for simulated events such that simulated and observed turn-on curves are compatible.
 In Fig.~\ref{fig:TriggerTurnOn}, the trigger turn-on curves, measured in data and in simulation are depicted.
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.55\textwidth]{figures/analysis_2/Interpretation/TriggerEfficiency.png} 
+    \includegraphics[width=0.47\textwidth]{figures/analysis_2/Interpretation/TriggerEfficiency.png} 
   \end{tabular}
   \caption{Trigger turn-on curves in data (black triangles) and simulation (red squares) as a function of PF \met (not taking into account the energy of the muons).}
   \label{fig:TriggerTurnOn}
@@ -55,10 +55,10 @@ These event weights are applied on the simulated signal samples in this analysis
 
 
 \subsection*{Jet energy scale}
-The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt and for data-simulation differences.
+The transverse momentum of all jets is corrected for non-uniformities in the energy response as a function of the jet $\eta$ and \pt and for data to simulation differences.
 The uncertainty on the jet energy scale (JES) is neatly described and quantified in~\cite{bib:CMS:JERCPaper_InPreparation}. 
 It arises from uncertainties on the measured jet response in data including jet fragmentation, jet flavour composition, etc.
-The JES correction is applied as a multiplicative factor on each jet's transverse momentum contained in an event.
+The JES correction is applied as a multiplicative factor on each jet transverse momentum contained in an event.
 The corresponding systematic uncertainty is assessed by an up- and downward variation of the correction factor within 1\,$\sigma$.
 The resulting uncertainties are of minor importance and range between $0.4-3.1\%$.
 
@@ -81,7 +81,7 @@ The resulting uncertainties on the signal efficiency for this search are between
 The distribution of the number of pileup interactions in simulation is reweighted to match the measured distribution in data.
 The distribution of the number of pileup interactions in data is estimated by the luminosity of each bunch crossing times the proton-proton inelastic cross section which is 69.4\mb~\cite{bib:CMS:PileupUtilities}.
 The uncertainty on the number of interactions thus consists of the uncertainty on the luminosity and the uncertainty on the cross section.
-To cover both sources, a variation of the inelastic cross section by plus/minus 5\% is done according to the recommendation by~\cite{bib:CMS:PileupSysUnc}.
+To cover both sources, a variation of the inelastic cross section by  $\pm 5\%$ is done according to the recommendation in~\cite{bib:CMS:PileupSysUnc}.
 
 For most of the signal models and signal regions, the signal efficiency is only affected by less than 1\% by the pileup reweighting uncertainty.
 If the statistical precision of the signal prediction in a specific search bin is low, the uncertainty can become significantly larger.
@@ -107,15 +107,15 @@ The uncertainties are of very similar size in the signal regions with different 
 No \ias dependence is considered.
 
 \subsection*{Simulation of \ias}
-An uncertainty on the simulation of \ias needs to be estimated in order to account for possible data-simulation differences for highly ionising particles.
+An uncertainty on the simulation of \ias needs to be estimated in order to account for possible data to simulation differences for highly ionising particles.
 The estimation of the \ias uncertainty is done following the methodology in~\cite{bib:CMS:HSCP_8TeV,bib:CMS:HSCP_8TeV_AN}.
 The \ias uncertainty can be assessed by comparing data and simulation differences of slow protons.
 Slow protons are highly ionising and can thus be used to determine the uncertainty in the high \ias region.
 
 In order to select slow protons, high quality tracks with a momentum smaller than 2.5\gev are selected.
 The \ias versus momentum distribution for the selected tracks is shown in Fig.~\ref{fig:IasVsMomentum}.
-The kaon and proton line are visible in both datasets. 
-The deuteron line is only visible in data, as deuteron's are not simulated.
+The kaon and proton lines are visible in both datasets. 
+The deuteron line is only visible in data, as deuterons are not simulated.
 All of these particles are highly ionising only at low momentum but become minimally ionising for higher momenta.
 Thus, they don't contribute to the SM background after the final analysis selection with $\pt>30\gev$.
 
@@ -123,7 +123,7 @@ In order to estimate data to simulation differences in \ias, two different slice
 A Gaussian function is fitted to the proton peak and the maximum difference of the mean of the fitted Gaussian between simulation and observed data is taken as systematic uncertainty.
 The \ias distribution for the two momentum ranges with the Gaussian fit is depicted in Fig.~\ref{fig:IasSlowProtons}.
 The systematic uncertainty is estimated to a value of 6\%.
-\begin{figure}[!h]
+\begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
     \includegraphics[width=0.49\textwidth]{figures/analysis/Interpretation/IasP_Data.pdf} 
@@ -144,8 +144,6 @@ The systematic uncertainty is estimated to a value of 6\%.
   \label{fig:IasSlowProtons}
 \end{figure} 
 
-%The size of the systematic uncertainty is also expected to cover the data-simulation difference for minimal ionisation.
-
 \subsection*{Simulation of the track reconstruction efficiency}
 One final source of uncertainty is the simulation of the track reconstruction efficiency.
 Possible differences of the reconstruction efficiency in simulation and data can lead to a different signal acceptance.
@@ -154,7 +152,7 @@ Therefore, a worst case estimation is done, comparing the track reconstruction e
 
 In data and simulation, well reconstructed muon tracks are selected and all hits after the third hit are removed.
 Afterwards the full track reconstruction is performed again.
-The relative difference of this track reconstruction efficiency in data and simulation is taken as systematic uncertainty. %($\epsilon = N_{\text{recon. trk matched to muon trk}}/N_{\text{selected muon trks}}$) 
+The relative difference of this track reconstruction efficiency in data and simulation is taken as systematic uncertainty.
 The track reconstruction efficiency is higher in simulation than in data and results in uncertainties between $4.6-6.0\%$.\\
 
 
@@ -165,12 +163,12 @@ An overview of the range of the uncertainties is given in Table~\ref{tab:SignalS
 In order to avoid an overestimation of the systematic uncertainties due to limited sizes of the samples (especially for low lifetimes like 1\cm), the corresponding signal sample with longer lifetime (100\cm) is used instead for determining the systematic uncertainty.
 This is possible for uncertainty sources, where the size is not affected by the lifetime of the chargino, including ISR, trigger efficiency, JES, JER, and PDF uncertainties.
 
-It can be seen, that major uncertainties are the simulation of the initial state radiation, of the calorimeter isolation, and of \ias.
+It can be seen, that major uncertainties are the simulation of initial state radiation, of calorimeter isolation, and of \ias.
 The high maximum value of the pileup uncertainty is caused by limited statistical precision.
 
 The systematic uncertainties on the simulated signal samples are considered as fully correlated among the four signal regions.
 
-\renewcommand{\arraystretch}{1.4}
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[!h] 
 \centering
 \caption{Ranges of systematic uncertainties on the simulated signal samples. Min and Max correspond to variations between different signal samples and search bins.}
@@ -254,7 +252,7 @@ that already appeared in Eq.~\eqref{eq:CLsb_CLb}.
 The parameters $\hat{\mu}$, $\hat{\delta}_b$ and $\hat{\delta}_s$ are fixed to the values that maximise the likelihood with respect to the observed data.
 Determining \CLsb and \CLb requires knowing the probability distributions of $q$ for the signal+background hypothesis (depending on $\mu$) and the background-only hypothesis ($\mu = 0$).  
 These distributions are determined by toy pseudo data with fixed values for $\delta_s$ and $\delta_b$.
-Finally, the signal strength $\mu$ is adjusted until \CLs - calculated based on $q$ - equals 0.05\%.
+Finally, the signal strength $\mu$ is adjusted until $\CLs$ - calculated based on $q$ - equals 0.05\%.
 Signal models are considered as excluded on a 95\% confidence level, if the signal strength is larger than the one found by the limit setting procedure.\\ 
 
 In this search, the systematic uncertainties on the background and the signal yields as well as the statistical uncertainty on the fake background are modelled with log-normal distributions, 
@@ -263,7 +261,7 @@ A log-normal distribution is used instead of a normal distribution to ensure tha
 The gamma distribution is well suited for statistical uncertainties arising from very limited statistical precision in control regions or in simulated samples that are used for the background estimation~\cite{bib:CMS:Combine}.
 
 Correlations between systematic uncertainties on the background expectation in different search bins are assumed as shown in Table~\ref{tab:BkgSysUncCorr}.
-\renewcommand{\arraystretch}{1.0}
+\renewcommand{\arraystretch}{1.2}
 \begin{table}[!b] 
 \centering
 \caption{Correlation of systematic and statistical uncertainties between the four different signal regions.

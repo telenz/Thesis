@@ -7,7 +7,7 @@ twoside=true,
 headsepline,     % Line under page header
 headings=normal,
 open=right,
-% numbers=noenddot, % Otherwise there will be a dot after the chapter numbering in case letters are used somewhere e.g. in the appendix
+numbers=noenddot, % Otherwise there will be a dot after the chapter numbering in case letters are used somewhere e.g. in the appendix
 a4paper,
 11pt
 ]{scrreprt} %report scrreprt
@@ -85,6 +85,8 @@ a4paper,
 \usepackage{bbm}
 \usepackage{amsfonts}
 \usepackage[utf8]{inputenc}
+% \usepackage{titlesec}
+% \usepackage[titletoc,title]{appendix}
 % \usepackage{subfigure}
 % \usepackage{subfig}
 %\usepackage{hepnames}
@@ -233,52 +235,40 @@ a4paper,
 \setlength{\cftsubsecindent}{5.2em}
 \setlength{\cftsubsubsecindent}{5.2em}
 
-%Expand bookmark level
-% \hypersetup{bookmarksdepth=3	}
+% Appendix title
 \makeatletter
 \g@addto@macro\appendix{%
   \renewcommand*{\chapterformat}{%
-    {\chapapp\nobreakspace\thechapter\autodot\enskip}%
+    {\chapapp\nobreakspace\thechapter . \enskip}%
   }
-%   \renewcommand*{\chaptermarkformat}{%
-%     {\chapapp\nobreakspace\thechapter\autodot\enskip}%
-%   }
-%   \let\oldaddcontentsline\addcontentsline
-%   \newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{#1}{#2}{\chapapp\nobreakspace#3}}
-%   \let\oldchapter\chapter
-%   \renewcommand*\chapter[1]{%
-%     \let\addcontentsline\hackedaddcontentsline%
-%     \oldchapter{#1}%
-%     \let\addcontentsline\oldaddcontentsline%
-%   }
 }
+\makeatletter % necessary for using \@chapapp
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\@chapapp\ \thechapter.\ #1}{}}
 \makeatother
-%ChapterHead
-% \renewcommand*{\chapterheadstartvskip}{\vspace*{0.5cm}}
-% \renewcommand*{\chapterheadendvskip}{\vspace{2cm}}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEWNEWNEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \pagenumbering{roman}
-% \input{titlepage.tex}
+\input{titlepage.tex}
 
-% \input{abstract.tex}
-% \input{Zusammenfassung.tex}
+\input{abstract.tex}
+\input{Zusammenfassung.tex}
 
 \tableofcontents \cleardoublepage
 
 
 \pagenumbering{arabic}		
 \setcounter{page}{1}
-% \part{Introduction}  \label{part:Introduction}
-% \input{introduction.tex}
+\part{Introduction}  \label{part:Introduction}
+\input{introduction.tex}
 
-% \part{The Standard Model and its supersymmetric extensions} \label{part:Theory}
-% \input{theory.tex}
+\part{The Standard Model and its supersymmetric extensions} \label{part:Theory}
+\input{theory.tex}
 
-% \part{Experimental setup: Collider, detector, and algorithms} \label{part:Experiment}
-% \input{experiment.tex}
+\part{Experimental setup: Collider, detector, and algorithms} \label{part:Experiment}
+\input{experiment.tex}
 
  \part{A search for highly ionising, short tracks at the CMS detector}  \label{part:analysis}
  \input{Part_Analysis/1_Motivation.tex}
@@ -292,17 +282,17 @@ a4paper,
  \input{Part_Analysis/9_Interpretation.tex}
  \input{Part_Analysis/10_Conclusion.tex}
 
-%  \part{Measurement of the jet transverse-momentum resolution} \label{part:resolution}
-%  \input{resolution.tex}
+ \part{Measurement of the jet transverse-momentum resolution} \label{part:resolution}
+ \input{resolution.tex}
 
-% \part{Summary} \label{part:Summary}
-% \input{summary.tex}
+\part{Summary} \label{part:Summary}
+\input{summary.tex}
 
-% \newpage \thispagestyle{empty} \quad \cleardoublepage \thispagestyle{empty}
-% \bookmarksetup{startatroot} \cleardoublepage  \appendix 
-% \addtocontents{toc}{\protect\vskip30pt} 
-% \addtocontents{titletoc}{\protect\renewcommand\protect\cftchappresnum{\appendixname\ }}
-% \input{Appendix/appendix_analysis.tex} \input{Appendix/appendix_resolution.tex}
+\newpage \thispagestyle{empty} \quad \cleardoublepage \thispagestyle{empty}
+\bookmarksetup{startatroot} \cleardoublepage  \appendix 
+\addtocontents{toc}{\protect\vskip30pt} 
+\addtocontents{titletoc}{\protect\renewcommand\protect\cftchappresnum{\appendixname\ }}
+\input{Appendix/appendix_analysis.tex} \input{Appendix/appendix_resolution.tex}
 
 % Add bibliography to TOC
 \cleardoublepage 
@@ -318,8 +308,8 @@ a4paper,
 \input{publication.tex}
 \cleardoublepage
 \input{erklaerung.tex}
-\cleardoublepage
-\input{danksagung.tex}
+% \cleardoublepage
+% \input{danksagung.tex}
 
 
 \end{document}

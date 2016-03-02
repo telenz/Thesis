@@ -8,7 +8,7 @@ One of these originates from an unreconstructed muon, the other one from an unre
 This implies, that the electron, muon, and tau vetos cannot reject all leptons because some are not properly reconstructed.
 Due to the limited size of the simulated \WJets dataset (15 times smaller than the number of events expected from \WJets processes during 2012 data taking), 
 it is not possible to rely on a full simulation-based estimation of the leptonic background.
-The underlying mechanism that a lepton can pass the lepton veto and the corresponding methods to estimate the leptonic background will be explained in detail in Section~\ref{sec:LeptonicBkg}.
+The methods to estimate the leptonic background and the underlying mechanism that allows a lepton to pass the lepton veto will be explained in detail in Section~\ref{sec:LeptonicBkg}.
 
 Furthermore, there is the possibility that a track is reconstructed out of a set of hits that do not originate from only one single particle.
 Such tracks are called ``fake tracks''. 
@@ -124,7 +124,7 @@ The $Z\rightarrow\mu\bar{\mu}\,+\,\text{fake track}$ selection is summarised in 
 \multirow{12}{*}{\makecell[l]{Event-based \\ selection}}       &  Two global muons with & $\pt>25\gev$ \\
                                                                &                        & $|\eta|<2.4$ \\
                                                                &                        & $\sum\limits_{\Delta R<0.4} \pt^{\text{PF particle}}/\pt(\mu)<0.12$ \\
-                                                               &                        & $\left.\frac{\chi^2}{ndof}\right\rvert_{\text{global track}}<10$ \\
+                                                               &                        & $\left.\frac{\chi^2}{\ndof}\right\rvert_{\text{global track}}<10$ \\
                                                                &                        & $|d0|<0.2\cm$  \\
                                                                &                        & $|dz|<0.5\cm$  \\
                                                                &                        & \makecell[l]{$\geq$ 1 hit in the muon detector\\ \hspace{0.3cm} considered in global fit}  \\
@@ -218,7 +218,7 @@ Thus, for the \Zlep datasets it is defined as the number of events passing the f
 \fakerate = \frac{N_{Z\rightarrow ll}^{\text{cand trk selection}}}{N_{Z\rightarrow ll}}
 \end{equation}
 Fake rates are determined independently for the $Z\rightarrow \mu\bar{\mu}\,+\,\text{fake}$ and $Z\rightarrow e\bar{e}\,+\,\text{fake}$ event selection and then averaged to obtain the final fake rate. 
-In Table~\ref{tab:FakeRateResults} the results of $N_{Z\rightarrow ll}^{\text{cand trk selection}}$, $N_{Z\rightarrow ll}$ and the resulting fake rate for the candidate track selection given in Table~\ref{tab:SummaryCuts} are presented.
+In Table~\ref{tab:FakeRateResults} the results of $N_{Z\rightarrow ll}^{\text{cand trk selection}}$, $N_{Z\rightarrow ll}$ and the resulting fake rate for the candidate track selection, given in Table~\ref{tab:SummaryCuts}, are presented.
 The averaged fake rate is thus $\left( 6.86 \pm 0.25 \right) \cdot 10^{-5}$.
 %The fake rate with the candidate track selection given in Table~\ref{tab:SummaryCuts} is $\left( 6.86 \pm 0.25 \right) \cdot 10^{-5}$. 
 This is not the final result as the optimisation in \pt will add an additional \pt selection cut to the candidate track selection.
@@ -302,7 +302,6 @@ As the exact definition of the signal region will be addressed during optimisati
 The comparison of the \ias shape of fake tracks can only be done with simulated events.
 Thus, simulated \WJets events are used to select fake tracks in both regions.
 A comparison of the shape for the candidate track selection and the \fakeCR is shown in Fig.~\ref{fig:IasSRCRFakes}.
-
 The \ias shape is almost identical in the signal and in the control region which makes the definition of the control region perfectly suited for estimating the \ias shape from \fakeCR in data.
 The remaining shape differences are taken into account as a systematic uncertainty (discussed in Section~\ref{sec:FakeIasUncertainty}).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -317,7 +316,6 @@ However, at least non-reconstructed electrons or taus should in principle deposi
 As muons don't deposit much energy in the calorimeters, this reasoning does not apply to them.
 All of the three lepton types behave like MIPs.
 Thus, they loose much less energy than hypothetical new heavy particles and can therefore be further discriminated by their ionisation loss in the tracker system.
-
 In the following, the sources of the three different leptonic backgrounds are characterised.
 
 \subsection*{Electrons}
@@ -325,12 +323,10 @@ To reject unreconstructed electrons, all tracks pointing to a dead or noisy ECAL
 By this selection, almost all electrons are efficiently rejected.
 
 However, there is still the possibility that an electron fails reconstruction and pass the signal candidate selection.
-This can happen either, if an electron do bremsstrahlung and the direction of the electron if significantly changed.
+This can happen, if an electron do bremsstrahlung and the direction of the electron if significantly changed.
 Thus, the energy deposits in the ECAL can possibly not be matched to the original electron.
 Alternatively, there is also the possibility that an electron track is pointing towards a non-working ECAL cell, that is not included in the dead and noisy ECAL cell veto.
-
-This possibility can be seen in the single event in the \WJets sample that pass the full signal candidate selection and where the candidate track can be matched to a generator-level electron. 
-%In the simulated \WJets sample only one simulated event remains that passes all signal candidate selection criteria and for which the candidate track can be matched to a generator-level electron.
+The latter possibility can be seen in the single event in the \WJets sample that pass the full signal candidate selection and where the candidate track can be matched to a generator-level electron. 
 This event is visualised in Fig.~\ref{fig:LostElectron} (left). 
 \begin{figure}[!t]
   \centering 
@@ -353,7 +349,7 @@ This event is visualised in Fig.~\ref{fig:LostElectron} (left).
           Right: Detailed view of the energy deposition in the ECAL towers in the direction of the electron track ($\phi - \eta$ plane).}
   \label{fig:LostElectron}
 \end{figure}
-The neutrino, only weakly interacting does not show any signature in the detector, whereas the electron ($\ptgen\simeq 90\gev$) leaves a track with $\pt\simeq 70\gev$ in the tracker. 
+The neutrino, only weakly interacting, does not show any signature in the detector, whereas the electron ($\ptgen\simeq 90\gev$) leaves a track with $\pt\simeq 70\gev$ in the tracker. 
 Only little ECAL energy deposits in the direction of the electron are visible. 
 This is caused by the fact that one of the corresponding ECAL crystal is not working properly and thus no energy deposition can be recorded (cf. Fig.~\ref{fig:LostElectron} (right)).
 An ISR jet ($\pt\simeq 230\gev$) causes the \met in the event. 
@@ -409,10 +405,10 @@ Due to the additional selection in \ias, muons can be efficiently suppressed.
 E.g. in the event shown in Fig.~\ref{fig:LostMuon}, the muon has an \ias value of about 0.007.\\
 \vspace{13pt}
 
-As for the fakes, the leptonic background estimation is splitted into two parts.
+As for the fakes, the leptonic background estimation is split into two parts.
 First, the estimation of the inclusive background without \ias information.
 Second, the estimation of the \ias shape for all three leptonic background sources.
-To have the possibility to make an optimisation in the two main discriminating variables \pt and \ias, the background estimation methods are designed to work for all different \pt and \ias selection cuts.
+To have the possibility to optimise the search in the two main discriminating variables \pt and \ias, the background estimation methods are designed to work for all different \pt and \ias selection cuts.
 
 \FloatBarrier
 \subsection{Inclusive leptonic background estimation}
@@ -526,7 +522,7 @@ This requirement ensures no overlap to the signal region.
 The validation test for the control region with $\ecalo>10\gev$ and $\nhits>6$ is shown in Table~\ref{tab:LeptonicClosure}.
 The predicted number of events by the leptonic background estimation is compatible with the observed data yield.\\
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[!h]
+\begin{table}[!b]
 \centering
 \caption{Validation test of leptonic background estimation. Left: $\ecalo>10\gev$ and $\nhits>6$. Right: $\ecalo>10\gev$, $\nhits>6$ and $\ias>0.2$. Only statistical uncertainties are included.}
 \label{tab:LeptonicClosure}
@@ -661,7 +657,7 @@ In order to enhance the statistical precision of the estimation, the selection r
 These variables are not expected to be correlated with the fake rate and thus should not affect it.
 That this is indeed the case, can be seen in Table~\ref{tab:FakeRateUnc}.
 
-The systematic uncertainty is estimated as the largest difference from one of the ratio $\fakerate^{\WJets}$/$\fakerate^{\Zlep}$ and its statistical uncertainty.
+The systematic uncertainty is estimated as the largest difference from one of the ratio $\fakerate^{\WJets}$/$\fakerate^{\Zlep}$ including its statistical uncertainty.
 For the candidate track selection, this is estimated to $\fakerate^{\WJets}/\fakerate^{\Zlep}$ $ =  0.96 \pm 0.16 $ leading to a systematic uncertainty on the fake rate of 20\%.
 
 \renewcommand{\arraystretch}{1.5}
@@ -691,8 +687,8 @@ For the estimation, information from simulated \WJets events is used.
 A comparison between the simulated \ias shape in the signal and in the control region can be seen in Fig.~\ref{fig:FakeIasUnc}.
 To enhance the statistical precision only track-based selection cuts are applied.
 
-The largest deviation from one of the ratio of the number of events in the signal region and the control region with its 1-sigma statistical uncertainty is taken as systematic uncertainty.
-For a signal region definition with $\pt>20\gev$ and $\ias>0.2$ this corresponds to an uncertainty of around 21\% and for a definition with $\pt>40\gev$ and $\ias>0.2$ of around 25\%.
+The largest deviation from one of the ratio of the number of events in the signal region and the control region including its 1-sigma statistical uncertainty is taken as systematic uncertainty.
+For a signal region definition with $\pt>20\gev$ and $\ias>0.2$ this corresponds to an uncertainty of around 21\% and for a definition with $\pt>40\gev$ and $\ias>0.2$ of around 25\% (cf. Fig.~\ref{fig:FakeIasUnc}).
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
@@ -737,7 +733,7 @@ The leptonic scale factors are calculated using simulated \Zlep events and real 
 Since only scaling factors are derived within simulation and data, no trigger is applied.
 This does not change the scaling factors since the requirements on the well reconstructed lepton are exactly the same for the numerator and denominator of Eqs.~\eqref{eq:ScaleFactorSys_Mu} and~\eqref{eq:ScaleFactorSys_Tau}.
 In Table~\ref{tab:ScaleFactorUncertainty}, the results of the event yields in the ``tag-and-probe'' control and signal regions as well as the corresponding lepton scale factor are depicted.
-The largest difference from unity of the ratio $\rho^{\text{lep}_i}_{\text{MC}}$/$\rho^{\text{lep}_i}_{\text{Data}}$ and its statistical uncertainty is taken as systematic uncertainty. 
+The largest difference from unity of the ratio $\rho^{\text{lep}_i}_{\text{MC}}$/$\rho^{\text{lep}_i}_{\text{Data}}$ including its statistical uncertainty is taken as systematic uncertainty. 
 This results for the signal candidate selection in an uncertainty of 69\% for the electron, 39\% for the muon and 79\% for the tau scale factor.
 
 \renewcommand{\arraystretch}{1.5}
@@ -771,8 +767,8 @@ This results for the signal candidate selection in an uncertainty of 69\% for th
 
 The uncertainty on lepton \ias shape is estimated by a comparison of the \ias shape in data and simulation in the lepton veto inverted control region.
 Figure~\ref{fig:LeptonIasUnc} shows the leptonic \ias distributions for all three lepton types in the lepton veto inverted control region in data and simulation.
-The largest difference from one  of the ratio (and its statistical uncertainty) of the number of events in the control region in data and simulation is taken as systematic uncertainty.
-This leads for example to uncertainties between $37\%-81\%$ for the signal candidate selection plus a selection requirement of $\ias>0.2$.
+The largest difference from one of the ratio including its statistical uncertainty of the number of events in the control region in data and simulation is taken as systematic uncertainty.
+This leads, for example, to uncertainties between $37\%-81\%$ for the signal candidate selection plus a selection requirement of $\ias>0.2$.
 
 \begin{figure}[!h]
   \centering 

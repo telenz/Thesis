@@ -73,7 +73,7 @@ They are needed to study the background inclusively in the variable \dedx.
  \ZlepJets ($\ell=e,\mu,\tau$)                 &   \madgraph5     &  3531.9       &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
  QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)      &   \pythia6      &  9374794.2    &  LO  \\%% & 44.3\\
 \bottomrule
-\multicolumn{4}{c}{} \\
+%\multicolumn{4}{c}{} 
 \end{tabular}}
 \end{table}  
 
@@ -108,14 +108,14 @@ However, a special treatment for long-lived particles is required for this analy
 In order to get a correct detector simulation of the energy loss of long-lived particles that decay after the beam pipe, the decay of the chargino cannot be simulated within \madgraph or \pythia but needs to be simulated within \geant.
 The decay mode of the chargino is also specified within \geant to a neutralino plus pion decay, $ \chipm \rightarrow \chiO\, \pi^{\pm}$.
 
-To reduce the required computing sources, the simulation is only done for a few lifetimes (\ctau = 1\cm, 5\cm, 10\cm, 50\cm, 100\cm, 1\,000\cm and 10\,000\cm).
+To reduce the required computing resources, the simulation is only done for a few lifetimes (\ctau = 1\cm, 5\cm, 10\cm, 50\cm, 100\cm, 1\,000\cm and 10\,000\cm).
 The lifetime is hereby not controlled by changing the mass gap between the chargino and the neutralino but is independently specified within \geant.
 In order to scan in a high resolution over the lifetime space, other lifetimes are generated using lifetime reweighting.
 The weight for each event depends on the individual proper lifetime of the chargino and is given by
 \begin{equation}
 w = \prod_{i=1}^n \frac{\tau^{\text{gen}}}{\tau^{\text{target}}}\cdot  \exp \left[ t_i \cdot \left( \frac{1}{\tau^{\text{gen}}} - \frac{1}{\tau^{\text{target}}} \right) \right] ,
 \end{equation}
-where $n$ is the  number of charginos in the event, $\tau^{\text{gen}}$ is the generated mean lifetime in the particle's rest frame and $t_i$ is the individual proper lifetime of the chargino. 
+where $n$ is the  number of charginos in the event, $\tau^{\text{gen}}$ is the generated mean lifetime in the particle rest frame and $t_i$ is the individual proper lifetime of the chargino. 
 The targeted mean lifetime is given by $\tau^{\text{target}}$. 
 A derivation of this formula can be found in Appendix~\ref{app:LifetimeReweighting}.
 Using this reweighting procedure a good coverage of the lifetime space can be achieved with lifetimes of $1\cm \leq \ctau \leq 10^4 \cm $. %\ctau = $a\cdot10^{n}$ for $n=0,1,2,3$ and $a=\left[1,9\right]$.

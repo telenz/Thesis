@@ -8,7 +8,7 @@ As already pointed out in the previous chapter, the inclusion of the pixel energ
 While the energy measurements in the silicon strip detector have already been calibrated as part of the search for long-lived charged particles \cite{bib:CMS:HSCP_8TeV}, no complete calibration has been done for the pixel silicon tracker so far.
 To increase the discrimination power of \dedx for short tracks, such a calibration procedure has therefore been performed within this PhD thesis.
 
-The CMS tracker system provides a measurement of the particle's energy loss for each hit in the tracker.
+The CMS tracker system provides a measurement of the particle energy loss for each hit in the tracker.
 This is done by measuring the current induced by the electron hole pairs produced during the ionisation of the silicon.
 A detailed introduction to the CMS tracker system and the energy measurement can be found in Section~\ref{sec:TrackingSystem}.
 
@@ -26,7 +26,7 @@ The mean energy loss per path length can be described with the Bethe formula \ci
 \end{equation}
 It is a function of the atomic number ($Z$), the atomic mass ($A$) of the absorber, and the mean excitation energy ($I$) which is 173\,eV for silicon~\cite{bib:NIST}.  
 $T_{\text{max}}$ represents the maximum energy transfer in a single collision.
-The relevant particle's properties are the velocity ($\beta$), the Lorentz factor ($\gamma$) and the charge (z) of the incident particle.
+The relevant particle properties are the velocity ($\beta$), the Lorentz factor ($\gamma$) and the charge (z) of the incident particle.
 The density correction $\delta( \beta \gamma )$ reduces the mean energy loss at high energies because of polarisation effects of the material. 
 %The constant factor K is $4\pi N_A r_e^2 m_e^2 c^2$ with $N_A$ being the Avogadro constant, $m_e$ the electron mass and $r_e$ the classical electron radius of 2.8\,fm.
 The factor K is constant and is 0.307 in units of $\mev\,$mol$^{-1}$cm$^2$.
@@ -49,7 +49,7 @@ The Landau distribution is a highly asymmetric distribution with a long tail tow
   \caption{Illustration of the shape of a Landau distribution. Parameters were chosen as $\mu=200$ and $\sigma=20$.} 
   \label{fig:landau}
 \end{figure}
-Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the particle's full energy.
+Theoretically it extends to infinite energies, however in nature the maximal deposited energy is of course limited by the full energy of the particle.
 
 Because of its strong asymmetry, measurements of the mean energy loss per path length $\langle \dedx \rangle$, consisting of only a few single measurements $\Delta E/ \Delta x $, are easily fluctuating towards high values.
 This makes the use of the mean energy loss described by the Bethe formula for the discrimination of new heavy particles problematic, because fluctuations to high values reduce the discrimination power against massive particles which release in general higher amounts of energy in matter.
@@ -73,7 +73,7 @@ This makes \dedx  a very well discriminating variable.
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.6\textwidth]{figures/analysis_2/dEdx_Bethe_Landau.png}
+  \includegraphics[width=0.58\textwidth]{figures/analysis_2/dEdx_Bethe_Landau.png}
   \end{tabular}
   \caption{Comparison between the Bethe mean energy loss, restricted energy loss and the most probable energy loss described by the Landau-Vavilov-Bichsel function for muons for different values of absorber thickness of silicon. $T_{\text{cut}}$ refers to the maximal energy transfer for the restricted energy loss calculation. The absorber thickness is normalised to the absorber density $\rho$, thus $[x] = g \cdot cm^{-2}$. Taken from~\cite{bib:PDG_2014}.} 
   \label{fig:dEdx_Bethe_Landau}
@@ -83,14 +83,13 @@ Thus, the energy loss per path length can be used to discriminate between SM par
 As said before, the most probable energy loss is much more stable compared to the Bethe mean energy loss.
 Still, combining only a few measurements of $\Delta E/\Delta x$ can also lead for $\Delta_p/dx$ to large fluctuations towards high \dedx values.
 In order to estimate experimentally the most probable \dedx value from only a few energy measurements, several ``estimators'' can be used that suppress a potential bias towards the high end without introducing a bias towards lower values~\cite{bib:Quertenmont_2010}.
-One of the estimators for determining a track's \dedx is the harmonic-2 estimator
+One of the estimators for determining the \dedx of a track is the harmonic-2 estimator
 \begin{equation}
 \ihtwo=\left( \frac{1}{N}\sum_{i=1}^{N}(\Delta E_i/\Delta x_i)^{-2} \right)^{-1/2},
 \label{eq:Harmonic2Estimator}
 \end{equation}
 where $\Delta E_i /\Delta x_i$ corresponds to the $\Delta E$ and $\Delta x$ measurement in the $i$th hit of the track. 
 This estimator is known to be robust and is not easily biased by large fluctuations in  $\Delta E/\Delta x$ because of the suppression by the power of minus two~\cite{bib:Quertenmont_2010}.
-%The harmonic mean of all $N$ measurements to the power of two is used as estimator for the MPV of the \dedx distribution of a particle.
 
 A further estimator of \dedx used for the discrimination of highly ionising particles will be introduced in Section~\ref{sec:Ias}.
 
@@ -109,7 +108,7 @@ Four different steps can be spotted.
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_beforeCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{Mean of all track's \dedx (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run (see Section~\ref{ch:LargeHadronCollider} for a definition).} 
+  \caption{Mean of all tracks' \dedx (harmonic-2 estimator) over the full year 2012. Only pixel hits are taken into account. Every data point corresponds to one run (see Section~\ref{ch:LargeHadronCollider} for a definition of a run).} 
   \label{fig:StabilityPlot_beforeCalibration}
 \end{figure}
 The first and the third steps correspond to changes in the settings of the tracker due to irradiation.
@@ -118,7 +117,7 @@ Unfortunately, although the gain calibration was adjusted (even with some delay)
 The variations of the \dedx measurement over time of around 15\% are too large to use \dedx without a further calibration. 
 
 The following sections explain the method of the gain calibration of the pixel silicon tracker which is performed for this analysis. 
-It is splitted into two sections. 
+It is split into two sections. 
 The first section is dedicated to the gain inter-calibration of the pixel tracker which ensures a homogeneous energy response of all tracker modules.
 In the second section, the absolute gain calibration is discussed. 
 This calibration step is needed to ensure that the measurement of the energy release of a particle can actually be translated to a correct physical value.
@@ -181,7 +180,7 @@ The outcome of the application of the calibration factors to the single energy m
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Pixel_afterCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{Mean of all track's \dedx (harmonic-2 estimator) over the full year 2012 after applying the calibration factors, resulting in an average \dedx of 3.51 MeV/cm. Only pixel hits are taken into account. Every data point corresponds to one run.} 
+  \caption{Mean of all tracks' \dedx (harmonic-2 estimator) over the full year 2012 after applying the calibration factors, resulting in an average \dedx of 3.51 MeV/cm. Only pixel hits are taken into account. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_afterCalibration}
 \end{figure}
 The variation over time is indeed eliminated, resulting in a maximal time variation of less than $\sim1$\%.
@@ -196,12 +195,12 @@ The relation between $\Delta E$ in ADC counts and the energy loss in eV is given
 \begin{equation}
 \Delta E\,[\ev] = c_{\text{inter}} \cdot \Delta E\,[\text{ADC}] \cdot \frac{N_e}{\text{ADC}} \cdot 3.61 \, \ev,
 \end{equation}
-where $N_e$/ADC is the number of electrons which correspond to one calibrated ADC count and 3.61\,\ev is the  mean energy needed to create one electron-hole pair in silicon at $-10\degree$C.
+where $N_e$/ADC is the number of electrons corresponding to one calibrated ADC count and 3.61\,\ev is the  mean energy needed to create one electron-hole pair in silicon at $-10\degree$C.
 Such an absolute gain calibration can be done with the help of several methods (all explained in \cite{bib:Quertenmont_2010}).
 The absolute calibration of the silicon pixel tracker can rely on the existing absolute calibration of the silicon strip detector.
-In \cite{bib:Quertenmont_2010}, the absolute gain calibration was done with the help of the most probable energy release per path length of muons, 
+In \cite{bib:Quertenmont_2010}, the absolute gain calibration was done with the help of the most probable \dedx of muons, 
 theoretically described by the Landau-Vavilov-Bichsel formula in Eq.~\eqref{eq:Landau_Vavilov_Bichsel}.  
-To calibrate the pixel tracker to the correct energy loss per path length it is therefore sufficient to determine one calibration factor to relate the average \dedx of all tracks in the pixel tracker as shown in 
+To calibrate the pixel tracker to the correct energy loss per path length, it is therefore sufficient to determine one calibration factor to relate the average \dedx of all tracks in the pixel tracker as shown in 
 Fig.~\ref{fig:StabilityPlot_afterCalibration} to the average measured \dedx in the strip tracker, shown in Fig.~\ref{fig:StabilityPlot_Strip} by
 \begin{equation}
 c_{\text{absolute}} = \frac{\langle dE/dx_{\text{strip}} \rangle}{\langle dE/dx_{\text{pixel}} \rangle} = \frac{3.303 \mev/\cm}{3.509 \mev/\cm} = 0.941.
@@ -211,7 +210,7 @@ c_{\text{absolute}} = \frac{\langle dE/dx_{\text{strip}} \rangle}{\langle dE/dx_
   \begin{tabular}{c}
   \includegraphics[width=0.49\textwidth]{figures/analysis/PixelCalibration/StabilityPlot_Strip_afterCalibration_withoutStepFits_NEW.pdf}
   \end{tabular}
-  \caption{Mean of all track's \dedx (harmonic-2 estimator) measured in the silicon strip detector over the full year 2012. The average most probable \dedx is $\ihtwo=3.303\,\mev/\cm$. Every data point corresponds to one run.} 
+  \caption{Mean of all tracks' \dedx (harmonic-2 estimator) measured in the silicon strip detector over the full year 2012. The average most probable \dedx is $\ihtwo=3.303\,\mev/\cm$. Every data point corresponds to one run.} 
   \label{fig:StabilityPlot_Strip}
 \end{figure}
 This factor is then applied on top of $c_{\text{inter}}$ for all pixel modules.
@@ -221,7 +220,7 @@ Finally, an absolute calibration factor needs to be determined for the simulated
 \section{Discrimination of highly-ionising particles}
 \label{sec:Ias}
 
-As mentioned before, it is difficult to find a robust estimator for the most probable energy loss of a particle, if only a few measurements of $\Delta E/ \Delta x$  along the particle's trajectory are available.
+As mentioned before, it is difficult to find a robust estimator for the most probable energy loss of a particle, if only a few measurements of $\Delta E/ \Delta x$  along the particle trajectory are available.
 The harmonic-2 estimator \ihtwo was already introduced in Section~\ref{sec:sub:MeasuringDeDx} in Eq.~\eqref{eq:Harmonic2Estimator}.
 It is known to be a robust estimator not easily affected by large fluctuations in $\Delta E/ \Delta x$.
 However, it was shown in \cite{bib:Quertenmont_2010} that a better discrimination between SM particles and possible new heavy particles can be achieved when using likelihood techniques,
