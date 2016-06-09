@@ -30,26 +30,6 @@ For the QCD sample \pythiaSix~\cite{bib:Pyhtia6_2006} is used for generation.
 All samples are then passed to \pythia6 to simulate the hadronisation and the showering. %, the underlying event and the beam remnants.
 The interactions between the particles and the detector material is simulated using \geant~\cite{bib:Geant4_2003,bib:Geant4_2006}.
 
-%\renewcommand{\arraystretch}{1.5}
-%\begin{table}[!h]
-%\centering
-%\caption{Available Standard Model background samples containing $\Delta E/\Delta x$ information that are used for background estimation studies.}
-%\label{tab:SMsamples_RECO}
-%\makebox[0.99\textwidth]{
-%\begin{tabular}{lll}
-%\multicolumn{3}{c}{} \\
-%\toprule
-% Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}^{\text{cross section}}$ \\%& Size $\left[\text{TB}\right]$\\
-%\midrule
-% \WJets                                                &  36703.2      &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
-% \ttbarJets                                            &  245.8        &  NNLO \cite{bib:ttbar:Czakon_2013}\\%& 55.9 \\
-% \ZlepJets ($\ell=e,\mu,\tau$)                         &  3531.9       &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
-% QCD ($50\gev<\hat{p}_{\text{T}}<1400\gev$)               &  9374794.2    &  LO  \\%% & 44.3\\
-%\bottomrule
-%\multicolumn{3}{c}{} \\
-%\end{tabular}}
-%\end{table}
-
 Due to the size of the samples (between 5 and 70\,TB per sample) a reduction is required in order to limit the storage space requirements.
 This is achieved by selecting only events which contain at least one jet with a minimum transverse momentum of $\pt>60\gev$.
 
@@ -77,33 +57,11 @@ They are needed to study the background inclusively in the variable \dedx.
 \end{tabular}}
 \end{table}  
 
-%They are listed in Table~\ref{tab:SMsamples_AOD}.
-%\renewcommand{\arraystretch}{1.5}
-%\begin{table}[!h]
-%\centering
-%\caption{Standard Model background samples without $\Delta E/\Delta x$ information.}
-%\label{tab:SMsamples_AOD}
-%\makebox[0.99\textwidth]{
-%\begin{tabular}{lll}
-%\multicolumn{3}{c}{} \\
-%\toprule
-% Process & Cross section $\left[\pb\right]$ & $\mathcal{O}_{\text{calculation}}$ \\%& Size $\left[\text{TB}\right]$\\
-%\midrule
-%\WJets                                             &  36703.2    &  NNLO \cite{bib:FEWZ} \\%& 70.4 \\
-%\ZlepJets ($\ell=e,\mu,\tau$)                      &  3531.9     &  NNLO \cite{bib:FEWZ} \\%& 5.1  \\
-%\bottomrule
-%\multicolumn{3}{c}{} \\
-%\end{tabular}}
-%\end{table}  
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Signal samples}
 \label{sec:SignalSamples}
 For the investigation of a possible SUSY signal, events containing either chargino pair production $q\bar{q} \rightarrow \chipm \chimp$ or chargino neutralino production $q\bar{q} \rightarrow \chipm \chiO$ are simulated within this thesis. 
 The simulation of the samples is done as described in Section~\ref{sec:SMSamples} for the \WJets sample.
-%The simulation is done with the matrix-element event generator \madgraphFive~\cite{bib:Madgraph_2014}.
-%The parton showering and hadronisation processes are then simulated with \pythiaSix~\cite{bib:Pyhtia6_2006}.
-%Finally, the interactions of the generator-level particles with the detector material are simulated  with \geant~\cite{bib:Geant4_2003,bib:Geant4_2006}.
 However, a special treatment for long-lived particles is required for this analysis.
 In order to get a correct detector simulation of the energy loss of long-lived particles that decay after the beam pipe, the decay of the chargino cannot be simulated within \madgraph or \pythia but needs to be simulated within \geant.
 The decay mode of the chargino is also specified within \geant to a neutralino plus pion decay, $ \chipm \rightarrow \chiO\, \pi^{\pm}$.
@@ -123,7 +81,7 @@ Figure~\ref{fig:LifetimeReweighting} shows the exponential distribution of the i
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/10cm.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Samples/10cm.pdf}
   \end{tabular}
   \caption{Normalised distribution of the proper individual lifetime $d_{\text{lab}}/\left(\beta\gamma \right)$ of all charginos contained in a signal sample with a generated lifetime of $c\tau^{\text{gen}}=50\cm$ reweighted to a lifetime of $c\tau^{\text{target}}=10\cm$. Fitting an exponential curve $a\cdot \exp\left[\frac{1}{c \tau } c t_i\right]$ yields $c\tau=\text{slope}^{-1}=10\cm$.}
   \label{fig:LifetimeReweighting}

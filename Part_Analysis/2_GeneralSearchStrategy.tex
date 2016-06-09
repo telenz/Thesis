@@ -16,8 +16,7 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-%    \includegraphics[width=0.70\textwidth]{figures/analysis/ChiChi_ProductionAndDecay.pdf}
-    \includegraphics[width=0.50\textwidth]{figures/analysis/ChiChi_ProductionAndDecay.pdf}
+    \includegraphics[width=0.50\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/ChiChi_ProductionAndDecay.pdf}
   \end{tabular}
   \caption{Feynman diagram of chargino pair production via gamma or $Z$-boson exchange and the subsequent decay via a virtual $W$-boson.}
   \label{fig:FeynmanDiagram}
@@ -26,9 +25,9 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.26\textwidth]{figures/analysis/ChiChi_GammaZ.pdf}
-    \includegraphics[width=0.26\textwidth]{figures/analysis/ChiChi_Scalar.pdf}
-    \includegraphics[width=0.26\textwidth]{figures/analysis/ChiChi_Squark.pdf}
+    \includegraphics[width=0.26\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/ChiChi_GammaZ.pdf}
+    \includegraphics[width=0.26\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/ChiChi_Scalar.pdf}
+    \includegraphics[width=0.26\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/ChiChi_Squark.pdf}
   \end{tabular}
   \caption{Main tree-level diagrams for chargino pair production.}
   \label{fig:FeynmanDiagramProductionCharginoPair}
@@ -37,8 +36,8 @@ On tree-level, there exist two production mechanisms: the s-channel $W$-boson ex
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.26\textwidth]{figures/analysis/ChiChi0_WBoson.pdf}
-    \includegraphics[width=0.26\textwidth]{figures/analysis/ChiChi0_Squark.pdf}
+    \includegraphics[width=0.26\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/ChiChi0_WBoson.pdf}
+    \includegraphics[width=0.26\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/ChiChi0_Squark.pdf}
   \end{tabular}
   \caption{Main tree-level diagrams for chargino neutralino production.}
   \label{fig:FeynmanDiagramProductionCharginoNeutralino}
@@ -82,8 +81,6 @@ Thus, the signature of chargino events consists of isolated, short tracks and th
 \end{figure}
 
 In case of R-parity conservation, one of the chargino decay products, the neutralino, is stable and weakly interacting, thus traversing the detector without leaving any further signature.
-%The missing transverse energy of the neutralino is balanced by the missing transverse energy of the second produced SUSY particle.
-%This is either a neutralino or the decay products of the chargino in events with chargino pairs. 
 
 The signature of the other decay product, the fermion pair, can in principle be used to select chargino events. 
 However, for mass-degenerate charginos, it can be very hard or even impossible to detect these fermions as will be explained in detail in the next paragraph.
@@ -94,19 +91,16 @@ The typical momentum of a pion originating from a chargino to neutralino decay i
 \begin{equation}
 p_{\pi}\sim \sqrt{ \left( m_{\chipm} - m_{\chiO} \right)^2 - m_{\pi}^2}.
 \end{equation}
-%As the \chipm is rather slow for higher masses this is a good approximation also in the detector rest frame.
 For a mass gap between \chipm and \chiO of 150\mev, the \pt distribution of the resulting pion peaks \mbox{at $\sim$ 100\,\mev} and ends at \mbox{\pt $\sim 400\,$\mev} in the laboratory frame (Fig.~\ref{fig:ptOfPions}).
 
 If the transverse momentum of a particle is very low, the particle trajectory is much more bended compared to a particle with higher \pt (see Fig.~\ref{fig:KinkedTrack} for illustration).
 \begin{figure}[!b]
   \centering 
-% \vspace{10pt}
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/PtOfPions.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/PtOfPions.pdf}
   \end{tabular}
   \caption{Transverse momentum distribution of pions coming from chargino decays into neutralinos with a mass gap of $\Delta m_{\chipm\chiO}=150\mev$.}
   \label{fig:ptOfPions}
-%\vspace{80pt}
 \end{figure} 
 Due to this bending, the track reconstruction efficiency of particles with a transverse momentum below 1\gev decreases rapidly, reaching around 40\% for isolated pions with a \pt of 100\mev~\cite{bib:CMS:tracking_8TeV}. 
 Furthermore, for pions that are not produced in the primary vertex, this reconstruction efficiency will be even smaller.
@@ -114,8 +108,7 @@ It is therefore impossible to rely on a reconstruction of the fermionic chargino
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \frame{\includegraphics[width=0.4\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/BendedPionTrack.png}}
-    %\frame{\includegraphics[width=0.30\textwidth]{figures/analysis/KinkedTrackZoom_Quadrat.png}}
+    \hspace{15pt} \frame{\includegraphics[width=0.39\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/BendedPionTrack.png}}
   \end{tabular}
   \caption{Cross-sectional view of the silicon strip tracker (green lines) and silicon pixel tracker (grey lines). A simulated chargino track (black line) decays to a pion (bended blue line) with a \pt of $\sim 85\mev$ and a neutralino (not visible).}
   \label{fig:KinkedTrack}
@@ -137,9 +130,10 @@ Therefore, charginos can be identified by selecting high \pt tracks due to their
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.49\textwidth]{figures/analysis_2/MotivationAndGeneralSearchStrategy/hgenPtChiMiddleBinning_log.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/hgenPtChiMiddleBinning_log.pdf}
   \end{tabular}
-  \caption{Normalised distribution of the generator-level chargino transverse momentum for two different signal models. No selection is applied.} 
+  \caption{Normalised distribution of the generator-level chargino transverse momentum for two different signal models. No selection is applied.
+           More information on the generation of the simulated signal samples can be found in Section~\ref{sec:SignalSamples}.} 
   \label{fig:TrackPt_2Signal_noSelection_normalized}
 \end{figure}
 Furthermore, the energy loss per path length (\dedx) depends quadratically on the particle mass for low velocities ($0.2<\beta\gamma<0.9$):
@@ -172,8 +166,8 @@ In Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (left), the normalised di
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-  \includegraphics[width=0.49\textwidth]{figures/analysis_2/MotivationAndGeneralSearchStrategy/htrackNValid_log_chiTracksnoSelection.pdf}
-  \includegraphics[width=0.49\textwidth]{figures/analysis_2/MotivationAndGeneralSearchStrategy/RecoEffTracksZoom.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/htrackNValid_log_chiTracksnoSelection.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/MotivationAndGeneralSearchStrategy/RecoEffTracksZoom.pdf}
   \end{tabular}
   \caption{Left: Number of measurements in the tracker system \nhits for four different signal lifetimes.
            Right: Probability to reconstruct a chargino track (z-axis) in dependency of the chargino decay point in $z$-direction and radial direction $\rho = \sqrt{x^2 + y^2}$ (x- and y-axis).
@@ -182,7 +176,6 @@ In Fig.~\ref{fig:NHits_2Signal_noSelection_normalized} (left), the normalised di
 \end{figure}
 Since a minimum number of three hits is required for track reconstruction, there are no tracks with $\nhits<3$.
 It can be seen, that the distribution peaks at the minimal possible value of $\nhits=3$ for lower lifetimes.
-%For higher lifetimes ($\ctau=50\cm$) the distribution shifts to higher values with a second peak at $\nhits\sim17$.
 For a lifetime of $\ctau=100\cm$, a second peak at $\sim$17 hits appears corresponding to the number of measurements when crossing all pixel barrel (3) and strip inner and outer barrel (6 from stereo and 8 from normal) layers.
 However, a notable fraction of $\sim$ 40\% of chargino tracks still has a number of measurements of $\nhits<8$. 
 

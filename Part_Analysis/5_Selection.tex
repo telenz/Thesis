@@ -22,9 +22,6 @@ On HLT level, they further require at least one particle-flow jet within the pse
 Finally, no more than 95\% of the jet energy must be carried by neutral hadrons.
 The HLTMonoCentralPFJet80\_PFMETnoMu95\_NHEF0p95 trigger was active during Run\,A and Run\,B in 2012 data taking, whereas HLTMonoCentralPFJet80\_PFMETnoMu105\_NHEF0p95 was in place during Run\,C and Run\,D in 2012.
 
-%
-%To consider the event in the analysis, at least one of them must have fired.
-%In Table~\ref{tab:triggers} the three triggers are listed together with the corresponding recorded integrated luminosity in the time when they were active.
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[!t]
 \centering
@@ -72,32 +69,6 @@ The events that were selected by the described triggers are available in the MET
 Again, because of the size of the datasets ($\sim150\,$TB in total), a reduction of the size is achieved by selecting only events where one of the used triggers fires and that contains at least one jet with a minimum \pt of 50\gev.
 This reduction in size of almost 80\% is necessary to make this analysis technically feasible.
 
-
-%In addition, the analysis makes use of the datasets listed in Table~\ref{tab:ControlSamples}.
-%These datasets are used for background estimation purposes and the estimation of their associated systematic uncertainties.
-%\renewcommand{\arraystretch}{1.5}
-%\begin{table}[!hbt]
-%\centering
-%\caption{Further datasets used for background estimation.}
-%\label{tab:ControlSamples}
-%\makebox[0.99\textwidth]{
-%\begin{tabular}{lr}
-%\multicolumn{2}{c}{} \\
-%\toprule
-%Dataset  & Luminosity [\fbinv]   \\
-%\midrule
-%/SingleMu/Run2012A-22Jan2013-v1/AOD        &  0.876 \\
-%/SingleMu/Run2012B-22Jan2013-v1/AOD        &  4.405 \\
-%/SingleMu/Run2012C-22Jan2013-v1/AOD        &  7.040 \\
-%/SingleMu/Run2012D-22Jan2013-v1/AOD        &  7.369 \\ 
-%\midrule
-%/SingleElectron/Run2012A-22Jan2013-v1/AOD  &  0.876 \\
-%/SingleElectron/Run2012B-22Jan2013-v1/AOD  &  4.412 \\
-%/SingleElectron/Run2012C-22Jan2013-v1/AOD  &  7.050 \\
-%/SingleElectron/Run2012D-22Jan2013-v1/AOD  &  7.368 \\
-%\bottomrule
-%\end{tabular}}
-%\end{table}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Selection of signal candidate events}
 \label{sec:AnalysisSelection}
@@ -117,7 +88,6 @@ This selection includes requirements on the position of the vertex with respect 
 \item The position of the vertex along the beam line must be within 24\cm with respect to the nominal interaction point: \mbox{$|dz| \leq 24\cm$.}
 \item The position in the transverse direction must be within 2\cm with respect to the nominal interaction point: \mbox{$|d0| \leq 2\cm$.}\\
 \end{itemize}
-%After these selection cuts are applied the remaining events are subjected to a further preselection.\\
 
 To maximise the signal acceptance, the trigger related selection cuts are chosen close to the trigger thresholds (see Section~\ref{sec:DatasetsAndTriggers}).
 In Fig.~\ref{fig:SignalMET+SignalJetPt}, the distributions of \met and the transverse momentum of the leading jet, \ptfirstjet, are shown for different signal models.
@@ -162,8 +132,8 @@ Figure~\ref{fig:QCDcuts} shows the maximum $\Delta\phi$ of any of two jets ($\pt
 \begin{figure}[!t]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiMaxbeforeCut_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiJetMetMinbeforeCut_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiMaxbeforeCut_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTrackstriggerRequirementsTrigger_2Signals_FullBkg/hDeltaPhiJetMetMinbeforeCut_lin.pdf}
   \end{tabular}
   \caption{Maximum $\Delta \phi$ between any of two jets (left) and the minimum $\Delta \phi$  between the \met vector and any of the two leading jets (right) normalised to unit area after trigger selection.
            Only jets with $\pt>20\gev$ and $|\eta|<4.5$ are considered.}
@@ -196,8 +166,8 @@ In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two qua
   \centering 
 \vspace{20pt}
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostInner_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostMid_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackNLostInner_lin.pdf}
   \end{tabular}
   \caption{Normalised number of missing middle (left) and inner (right) hits of background and signal tracks after trigger selection and QCD suppression cuts (a.u. refers to normalised number of events).}
   \label{fig:LostHits}
@@ -205,8 +175,8 @@ In Figs.~\ref{fig:LostHits} and~\ref{fig:d0_dz}, the power of the latter two qua
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackd0_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackdz_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackd0_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksQCDsupressionTrigger_2Signals_FullBkg/htrackdz_lin.pdf}
   \end{tabular}
   \caption{Absolute value of the radial (left) and longitudinal (right) distance between the track and the primary vertex after trigger selection and QCD-multijet suppression cuts. 
            All events with a candidate track with a radial (longitudinal) distance larger than 0.2\cm (5\cm) are contained in the last bin.}
@@ -241,11 +211,11 @@ The discrimination power of the lepton and jet vetos is shown in Fig.~\ref{fig:T
   \centering 
   \vspace{25pt}
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/htrackdRminElec_log.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/htrackdRminMuon_log.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminElec_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminMuon_log.pdf}\\
 
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/htrackdRminTau_log.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/htrackdRminJet_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminTau_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/htrackdRminJet_log.pdf}
   \end{tabular}
   \caption{The minimum $\Delta R$ between the candidate track and a reconstructed electron (top left), muon (top right), tau (bottom left) or jet (bottom right) 
            after the event-based selection and the high-quality, kinematic and lepton/jet veto selection of the candidate track selection but without the one shown in the corresponding plot (``N-1 plot''). 
@@ -271,7 +241,7 @@ A list of the ECAL intermodule gaps, which is supplied centrally by CMS, is give
   \vspace{10pt}
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis/DeadECALMap2.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/DeadECALMap2.pdf}
   \end{tabular}
   \caption{Visualisation of dead and noisy ECAL cells in the detector $\phi - \eta$ plane according to~\cite{bib:CMS:DT_Thesis,bib:CMS:DT_8TeV_AN}.
            The radius of the dots correspond to $\Delta R=0.05$.}
@@ -346,8 +316,8 @@ The discrimination power of these two variables is shown in Fig.~\ref{fig:TrackI
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackIsolation_lin.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackCaloIsolation_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackIsolation_lin.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksCandidateSelectionTrigger_2Signals_FullBkg/htrackCaloIsolation_lin.pdf}
   \end{tabular}
   \caption{Track isolation (left) and calorimeter energy deposits (right) of the candidate track after the full previous selection. 
            All events with a track isolation or a calorimeter energy deposit larger than the range shown in the figures are contained in the last bin.}
@@ -461,12 +431,11 @@ In Fig.~\ref{fig:PtAndIasAfterFullPreselection}, the distribution of the remaini
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts_Wjets/htrackPtSmallRangeCoarseBinning_log.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts_Wjets/htrackASmiSmallRange_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts_Wjets/htrackPtSmallRangeCoarseBinning_log.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/AnalysisSelection/chiTracksfullSelectionNoTriggerCuts_Wjets/htrackASmiSmallRange_log.pdf}
   \end{tabular}
   \caption{Candidate track \pt (left) and \ias (right) after the full signal candidate selection for signal and $\WJets$ events. 
            Because of the low statistical precision of the $\WJets$ sample, the trigger selection is not applied.
-           %This does not influence the shape of the distributions since \met and \ptfirstjet are not expected to be correlated with the track characteristics.
            }
   \label{fig:PtAndIasAfterFullPreselection}
 \end{figure}

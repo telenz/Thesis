@@ -27,7 +27,6 @@ Afterwards, the efficiency of a \dedx selection for the fake and leptonic backgr
 
 Finally, the final signal regions are determined within an optimisation procedure.
 This optimisation is carried out in the track variables \pt and \dedx (see Chapter~\ref{ch:Optimisation}) to ensure an ideal selection for the search for short and  highly ionising tracks.
-%The limited quality of the \dedx simulation enforces anyways a data-based background estimation method.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,7 +41,7 @@ This can be seen in Fig.~\ref{fig:NValidFakes}, where the normalised distributio
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.48\textwidth]{figures/analysis_2/Background/NValidForFakes_chiTracksfullSelectionNoTriggerCuts.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/Background/NValidForFakes_chiTracksfullSelectionNoQCDCutsNoTrigger.pdf}
   \end{tabular}
   \caption{Normalised distribution of the number of hits for fake tracks in the simulated \WJets sample. To increase the statistical precision, only the candidate track selection from Table~\ref{tab:SummaryCuts} is applied.}
   \label{fig:NValidFakes}
@@ -73,7 +72,7 @@ Thus, it is possible to determine \fakerate with the help of one SM process and 
 
 The inclusive fake background is estimated with the help of $Z\rightarrow\mu\bar{\mu}$ and $Z\rightarrow e\bar{e}$ events from data.
 \Zlep events can be selected with high purity by requiring two well reconstructed muons or electrons that are opposite in charge and for which the invariant mass is around the $Z$-boson mass of $\sim90\gev$.
-As these events do not contain further leptons from the hard interaction (processes with a further lepton are negligible), any additional track is either a constituent of an ISR jet, a soft particle from pileup events or is a fake. %, reconstructed out of a combination of hits from several soft particles.
+As these events do not contain further leptons from the hard interaction (processes with a further lepton are negligible), any additional track is either a constituent of an ISR jet, a soft particle from pileup events or is a fake. 
 Since the candidate track selection requires a track with a $\pt>20\gev$ that is no lepton or jet, it suppresses ISR jets and soft tracks from the underlying event.
 Thus, applying the track-based signal candidate selection on \Zlep events selects fake tracks with high purity.
 
@@ -186,8 +185,8 @@ In Fig.~\ref{fig:Zpeak}, the invariant mass distribution $M_{\text{inv}}$ is sho
   \centering 
   \vspace{20pt}
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hMinvMuons_lin_chiTracksnoSelectionTightMuons.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hMinvElectrons_lin_chiTracksnoSelectionTightElectrons.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hMinvMuons_lin_chiTracksnoSelectionTightMuons.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hMinvElectrons_lin_chiTracksnoSelectionTightElectrons.pdf}
   \end{tabular}
   \caption{The invariant mass of the two selected muons (left) and the two selected electrons (right) after the event-based selection from Tables~\ref{tab:FakeElectronSample} and~\ref{tab:FakeMuonSample}, respectively.}
   \label{fig:Zpeak}
@@ -281,7 +280,7 @@ As the exact definition of the signal region will be addressed during optimisati
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/NLostInnerPlusMiddleForAllBkg_chiTracksfullSelectionNoQCDCutsNoTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/NLostInnerPlusMiddleForAllBkg_chiTracksfullSelectionNoQCDCutsNoTrigger.pdf}
   \end{tabular}
   \caption{Normalised number of missing inner plus missing middle hits for fake and leptonic tracks for the full candidate track selection with the selection requirements on $N_{\text{miss}}^{\text{inner}}$ and $N_{\text{miss}}^{\text{middle}}$ removed. Trigger selection and QCD suppression cuts were removed to enhance the statistical precision.}
   \label{fig:NMissInnerAndMiddle}
@@ -290,8 +289,8 @@ As the exact definition of the signal region will be addressed during optimisati
   \centering 
 \vspace{40pt}
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hASmi_fakes_ECalaoLe5_trackPtGt20.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hASmi_fakes_ECalaoLe5_trackPtGt40.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hASmi_fakes_ECalaoLe5_trackPtGt20.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hASmi_fakes_ECalaoLe5_trackPtGt40.pdf}
   \end{tabular}
   \caption{Comparison of the \ias shape between \fakeCR and the signal region for two different track \pt selections of $\pt>20\gev$ (left) and $\pt>40\gev$ (right). 
            To enhance the statistical precision only the track-based selection is applied.}
@@ -333,15 +332,12 @@ This event is visualised in Fig.~\ref{fig:LostElectron} (left).
   \begin{tabular}{c}
   \begin{minipage}[c]{0.49\textwidth}
   \centering
-  \includegraphics[width=0.99\textwidth]{figures/analysis/Electron_lumi_279317_event_111637553.png}
+  \includegraphics[width=0.99\textwidth]{figures/analysis/Background/Electron_lumi_279317_event_111637553.png}
   \end{minipage} 
   \begin{minipage}[c]{0.49\textwidth}
   \centering
-  \includegraphics[width=0.99\textwidth]{figures/analysis_2/Background/TowerDetailViewZoom.png}
+  \includegraphics[width=0.99\textwidth]{figures/analysis/Background/TowerDetailViewZoom.png}
   \end{minipage} 
-    %\includegraphics[width=0.49\textwidth]{figures/analysis/Electron_lumi_279317_event_111637553.png}
-    %\raisebox{-0.5\height}{\includegraphics[height=1in]{TowerDetailViewZoom.png}}
-    %\includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/TowerDetailViewZoom.png}
   \end{tabular}
  \caption{Left: Visualisation of a $W\rightarrow e\nu_e$ event contributing to the SM background. 
           In light blue, generator-level particles including \lel and \nue of the \W-boson decay are shown. 
@@ -476,9 +472,9 @@ The most natural control region, being the lepton veto inverted control region, 
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_Electrons_MCCR_MCSR.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_Taus_MCCR_MCSR.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_Muons_MCCR_MCSR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_Electrons_MCCR_MCSR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_Taus_MCCR_MCSR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_Muons_MCCR_MCSR.pdf}
   \end{tabular}
   \caption{Normalised \ias distribution for electrons (left), pions from the tau decay (middle) and muons (right) in the signal region (red) and the lepton veto inverted control region (black).}
   \label{fig:LeptonIasDist}
@@ -493,9 +489,9 @@ However, the corresponding bias is still smaller than the differences of the \ia
 \begin{figure}[!tb]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_Electrons_MCCR_DataCR.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_Taus_MCCR_DataCR.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_Muons_MCCR_DataCR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_Electrons_MCCR_DataCR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_Taus_MCCR_DataCR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_Muons_MCCR_DataCR.pdf}
   \end{tabular}
   \caption{Normalised \ias distribution for electrons (left), pions from the tau decay (middle) and muons (right) in the lepton veto inverted control region from simulated events (black) and data (red).}
   \label{fig:LeptonIasDistData}
@@ -572,7 +568,7 @@ This can thus lead to an overprediction of the fake contribution in the high \ec
 \begin{figure}[!b]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/IasForFakes_chiTrackspreselectionNoTrigger.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/IasForFakes_chiTrackspreselectionNoTrigger.pdf}
   \end{tabular}
   \caption{Comparison of the \ias shape of fake tracks with high calorimeter energy deposits (red) and low calorimeter energy deposits (black) in simulation.
            To enhance the statistical precision, no trigger selection is applied.}
@@ -692,8 +688,8 @@ For a signal region definition with $\pt>20\gev$ and $\ias>0.2$ this corresponds
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hASmi_SRbinning_fakes_ECalaoLe5_trackPtGt20.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/analysis_2/Background/hASmi_SRbinning_fakes_ECalaoLe5_trackPtGt40.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hASmi_SRbinning_fakes_ECalaoLe5_trackPtGt20.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/Background/hASmi_SRbinning_fakes_ECalaoLe5_trackPtGt40.pdf}
   \end{tabular}
   \caption{Normalised distributions of the \ias shape of fake tracks in the signal and control region of simulated \WJets events with a \pt selection of 20\gev (left) and a 40\gev (right).}
   \label{fig:FakeIasUnc}
@@ -726,7 +722,6 @@ and for electrons and taus
 \rho^{e,\tau} = \frac{N_{\text{SR}}^{\text{T\&P}e,\tau}}{N_{\text{CR, }e,\tau \text{ veto inverted } \cancel{\ecalo<5\gev}}^{\text{T\&P}}}.
 \end{equation}
 
-%As candidate tracks originating from leptons anyway have almost ever \nhits grater five, this does not bias the result (see Fig.~\ref{}).
 The selection requirements for the three tag-and-probe samples are listed in Tables~\ref{tab:MuonTagAndProbeSample},~\ref{tab:TauTagAndProbeSample} and~\ref{tab:ElectronTagAndProbeSample} in Appendix~\ref{app:TagAndProbeRequirements}.
 
 The leptonic scale factors are calculated using simulated \Zlep events and real data from the single-muon and single-electron samples listed in Table~\ref{tab:ElectronMuonCRDatasets}.
@@ -773,9 +768,9 @@ This leads, for example, to uncertainties between $37\%-81\%$ for the signal can
 \begin{figure}[!h]
   \centering 
   \begin{tabular}{c}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_SRbinning_Electrons_MCCR_DataCR.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_SRbinning_Taus_MCCR_DataCR.pdf}
-    \includegraphics[width=0.33\textwidth]{figures/analysis_2/Background/hASmi_SRbinning_Muons_MCCR_DataCR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_SRbinning_Electrons_MCCR_DataCR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_SRbinning_Taus_MCCR_DataCR.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/analysis/Background/hASmi_SRbinning_Muons_MCCR_DataCR.pdf}
   \end{tabular}
   \caption{Normalised distributions of the lepton \ias distributions in the lepton veto inverted control region for data (red) and simulation (black) for all three lepton types. 
            The event-based selection requirements and the calorimeter isolation requirement are removed to enhance the statistical precision.}

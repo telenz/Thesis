@@ -326,6 +326,10 @@ int plotParticleCompositionInFakeCS(){
   muFakeControlRegion.histo->Scale(1./muFakeControlRegion.histo->Integral());
   eleFakeControlRegion.histo->Scale(1./eleFakeControlRegion.histo->Integral());
   // ***********************************************************************************************************
+  TText* text = new TText(.75,.95,"Simulation");
+  text -> SetNDC();
+  text -> SetTextSize(0.045);
+
   TCanvas *c1 = new TCanvas();
   muFakeControlRegion.histo->SetMaximum(1.);
   muFakeControlRegion.histo->SetMinimum(0.);
@@ -334,6 +338,7 @@ int plotParticleCompositionInFakeCS(){
   info-> SetNDC();
   TString AuxString = "Z#rightarrow#mu#mu";
   info->DrawLatex(0.65,0.8,AuxString);
+  text -> Draw("same");
   c1->SaveAs("plots/ParticleCompositionInFakeCS_Mu.pdf");
 
   TCanvas *c2 = new TCanvas();
@@ -342,6 +347,7 @@ int plotParticleCompositionInFakeCS(){
   eleFakeControlRegion.histo->SetMinimum(0.);
   eleFakeControlRegion.histo->Draw("e");
   info->DrawLatex(0.65,0.8,"Z#rightarrowee");
+  text -> Draw("same");
   c2->SaveAs("plots/ParticleCompositionInFakeCS_Ele.pdf");
   
   return 0;
