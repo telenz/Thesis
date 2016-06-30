@@ -1018,7 +1018,9 @@ J.~D. Brinson, ``{A search for disappearing tracks in proton-proton collisions
 
 \bibitem{bib:CMS:DT_8TeV_AN}
 {J. Brinson, C. Hill, and W. Wulsin}, ``Search for disappearing tracks'', {\em
-  CMS Analysis Note} { CMS-AN-12-400} (2014). Internal documentation.
+  CMS Analysis Note} {
+  \href{http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2012_400_v12%
+.pdf}{CMS-AN-12-400}}.
 
 \bibitem{bib:CMS:Tracking_7TeV_PAS}
 { CMS} Collaboration, ``{Tracking and Primary Vertex Results in First 7\tev
