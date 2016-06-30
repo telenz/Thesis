@@ -409,8 +409,10 @@ O.~S. Bruning, P.~Collier, P.~Lebrun{ et~al.}, ``{LHC Design Report Vol.1: The
 %%CITATION = CERN-2004-003-V1;%%.
 
 \bibitem{bib:LEP_design_1984}
-
-``{LEP Design Report: Vol.2. The LEP Main Ring}'',.
+``{LEP Design Report: Vol.2. The LEP Main Ring}''.
+\newblock CERN,
+1984.
+\newblock
 %%CITATION = CERN-LEP-84-01;%%.
 
 \bibitem{bib:CERNBrochure}
@@ -525,7 +527,7 @@ L.~Taylor, ``Silicon Pixels''.
 
 \bibitem{bib:TWIKI:PixelClusterSize}
 {CMS Collaboration}, ``Pixel Performance plots for 2012 data and simulation'',
-  {\em Public CMS Wiki}.
+  {\em Public CMS Wiki} (2015).
   \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013}{%
 https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2013, Topic
   revision: r22}.
@@ -971,7 +973,8 @@ F.~James, ``{Statistical methods in experimental physics}''.
 %%CITATION = ISBN-9789812567956;%%.
 
 \bibitem{bib:DataFormats}
-{CMS Collaboration}, ``Data Formats and Data Tiers'', {\em Public CMS Wiki}.
+{CMS Collaboration}, ``Data Formats and Data Tiers'', {\em Public CMS Wiki}
+  (2015).
   \href{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats}{ht%
 tps://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookDataFormats, Topic
   revision: r30}.
@@ -1011,7 +1014,7 @@ B.~Fuks, M.~Klasen, D.~R. Lamprea{ et~al.}, ``{Precision predictions for
 \bibitem{bib:CMS:DT_Thesis}
 J.~D. Brinson, ``{A search for disappearing tracks in proton-proton collisions
   at $\sqrt{s}=8\tev$}''.
-\newblock PhD thesis, Ohio State University.
+\newblock PhD thesis, Ohio State University, 2015.
 \newblock
 \url{https://inspirehep.net/record/1381347/files/CERN-THESIS-2015-030.pdf}.
 %%CITATION = CERN-THESIS-2015-030;%%.
@@ -1020,7 +1023,7 @@ J.~D. Brinson, ``{A search for disappearing tracks in proton-proton collisions
 {J. Brinson, C. Hill, and W. Wulsin}, ``Search for disappearing tracks'', {\em
   CMS Analysis Note} {
   \href{http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2012_400_v12%
-.pdf}{CMS-AN-12-400}}.
+.pdf}{CMS-AN-12-400}} (2014). Internal documentation.
 
 \bibitem{bib:CMS:Tracking_7TeV_PAS}
 { CMS} Collaboration, ``{Tracking and Primary Vertex Results in First 7\tev
