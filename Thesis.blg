@@ -6,122 +6,104 @@ Repeated entry---line 83 of file Thesis.bib
  : @inproceedings{bib:Signatures_figure
  :                                     ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 431 of file Thesis.bib
- :   
- :   year    = {2015}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 1451 of file Thesis.bib
+You're missing a field name---line 1452 of file Thesis.bib
  : 
  : %  title   = {Jet Identification},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1508 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1509 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-JME-10-014",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1539 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1540 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SMP-14-002",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1574 of file Thesis.bib
+You're missing a field name---line 1575 of file Thesis.bib
  : 
  : %   author  = "{F. Pandolfi, D. del Re, M. Voutilainen}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1583 of file Thesis.bib
+You're missing a field name---line 1584 of file Thesis.bib
  : 
  : %   author  = "{F. Pandolfi, D. del Re, M. Voutilainen}",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1599 of file Thesis.bib
- :   
- :   year    = {2015}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 1707 of file Thesis.bib
+You're missing a field name---line 1708 of file Thesis.bib
  :       
  :       %note           = "[,11(2002)]",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1821 of file Thesis.bib
+You're missing a field name---line 1822 of file Thesis.bib
  : 
  : %      author         = "CMS Collaboration",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1849 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1850 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-LUM-13-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1876 of file Thesis.bib
+I was expecting a `,' or a `}'---line 1877 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-003",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2048 of file Thesis.bib
+I was expecting a `,' or a `}'---line 2049 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-005",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2060 of file Thesis.bib
+I was expecting a `,' or a `}'---line 2061 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-TRK-10-001",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2382 of file Thesis.bib
- :  volume  = "\href{http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2012_400_v12.pdf}{CMS-AN-12-400}",
- :                                                                                                               ,
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2395 of file Thesis.bib
+I was expecting a `,' or a `}'---line 2397 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-EXO-13-006",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 2405 of file Thesis.bib
+I was expecting a `,' or a `}'---line 2407 of file Thesis.bib
  :       
  :       reportNumber   = "CMS-PAS-SUS-12-030",
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--empty author in bib:LEP_design_1984
-Warning--empty year in bib:TWIKI:PixelClusterSize
+Warning--empty author and editor in bib:LEP_design_1984
 Warning--empty publisher in bib:James:StaticticalMethods_2006
-Warning--empty year in bib:DataFormats
-Warning--empty year in bib:CMS:DT_Thesis
-Warning--empty year in bib:CMS:DT_8TeV_AN
 Warning--empty title in bib:Neyman_1937
 You've used 165 entries,
             2369 wiz_defined-function locations,
-            1812 strings with 42145 characters,
-and the built_in function-call counts, 48478 in all, are:
-= -- 6034
+            1813 strings with 42149 characters,
+and the built_in function-call counts, 48539 in all, are:
+= -- 6048
 > -- 953
 < -- 0
 + -- 376
 - -- 211
-* -- 3515
-:= -- 6196
-add.period$ -- 439
+* -- 3514
+:= -- 6208
+add.period$ -- 441
 call.type$ -- 165
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 172
-duplicate$ -- 2924
-empty$ -- 5050
+cite$ -- 168
+duplicate$ -- 2929
+empty$ -- 5058
 format.name$ -- 171
-if$ -- 13329
+if$ -- 13349
 int.to.chr$ -- 0
 int.to.str$ -- 165
-missing$ -- 434
-newline$ -- 799
+missing$ -- 432
+newline$ -- 801
 num.names$ -- 101
-pop$ -- 885
+pop$ -- 883
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1517
+skip$ -- 1519
 stack$ -- 0
 substring$ -- 1758
 swap$ -- 969
@@ -129,8 +111,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
+warning$ -- 3
 while$ -- 244
 width$ -- 168
-write$ -- 1895
-(There were 17 error messages)
+write$ -- 1904
+(There were 14 error messages)
